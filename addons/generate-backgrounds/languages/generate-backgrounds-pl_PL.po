@@ -1,0 +1,195 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Backgrounds\n"
+"POT-Creation-Date: 2016-04-02 21:12+0200\n"
+"PO-Revision-Date: 2016-05-12 18:28+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Last-Translator: Krzysztof Grochocki <contact@beherit.pl>\n"
+"Language: pl\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/controls.php:65
+msgid "Select Image"
+msgstr "Wybierz obraz"
+
+#: functions/controls.php:65
+msgid "Use Image"
+msgstr "Użyj obraz"
+
+#: functions/controls.php:65
+msgid "Upload"
+msgstr "Wyślij"
+
+#: functions/controls.php:66
+msgid "Remove"
+msgstr "Usuń"
+
+#: functions/functions.php:74
+msgid "Background Images"
+msgstr "Obrazy w tle"
+
+#: functions/functions.php:88
+msgid "Body"
+msgstr "Treść"
+
+#: functions/functions.php:126 functions/functions.php:272
+#: functions/functions.php:418 functions/functions.php:480
+#: functions/functions.php:542 functions/functions.php:604
+#: functions/functions.php:678 functions/functions.php:740
+#: functions/functions.php:802 functions/functions.php:876
+#: functions/functions.php:1022 functions/functions.php:1168
+#: functions/functions.php:1314
+msgid "Repeat"
+msgstr "Powtórz"
+
+#: functions/functions.php:127 functions/functions.php:273
+#: functions/functions.php:419 functions/functions.php:481
+#: functions/functions.php:543 functions/functions.php:605
+#: functions/functions.php:679 functions/functions.php:741
+#: functions/functions.php:803 functions/functions.php:877
+#: functions/functions.php:1023 functions/functions.php:1169
+#: functions/functions.php:1315
+msgid "Repeat x"
+msgstr "Powtórz x"
+
+#: functions/functions.php:128 functions/functions.php:274
+#: functions/functions.php:420 functions/functions.php:482
+#: functions/functions.php:544 functions/functions.php:606
+#: functions/functions.php:680 functions/functions.php:742
+#: functions/functions.php:804 functions/functions.php:878
+#: functions/functions.php:1024 functions/functions.php:1170
+#: functions/functions.php:1316
+msgid "Repeat y"
+msgstr "Powtórz y"
+
+#: functions/functions.php:129 functions/functions.php:275
+#: functions/functions.php:421 functions/functions.php:483
+#: functions/functions.php:545 functions/functions.php:607
+#: functions/functions.php:681 functions/functions.php:743
+#: functions/functions.php:805 functions/functions.php:879
+#: functions/functions.php:1025 functions/functions.php:1171
+#: functions/functions.php:1317
+msgid "No Repeat"
+msgstr "Nie powtarzaj"
+
+#: functions/functions.php:151 functions/functions.php:297
+#: functions/functions.php:901 functions/functions.php:1047
+#: functions/functions.php:1193 functions/functions.php:1339
+msgid "Size (Auto)"
+msgstr "Rozmiar (auto)"
+
+#: functions/functions.php:152 functions/functions.php:298
+#: functions/functions.php:902 functions/functions.php:1048
+#: functions/functions.php:1194 functions/functions.php:1340
+msgid "100% Width"
+msgstr "100% szerokości"
+
+#: functions/functions.php:153 functions/functions.php:299
+#: functions/functions.php:903 functions/functions.php:1049
+#: functions/functions.php:1195 functions/functions.php:1341
+msgid "Cover"
+msgstr "Wypełnij"
+
+#: functions/functions.php:154 functions/functions.php:300
+#: functions/functions.php:904 functions/functions.php:1050
+#: functions/functions.php:1196 functions/functions.php:1342
+msgid "Contain"
+msgstr "Dopasuj"
+
+#: functions/functions.php:176 functions/functions.php:322
+#: functions/functions.php:926 functions/functions.php:1072
+#: functions/functions.php:1218 functions/functions.php:1364
+msgid "Attachment"
+msgstr "Załącznik"
+
+#: functions/functions.php:177 functions/functions.php:323
+#: functions/functions.php:927 functions/functions.php:1073
+#: functions/functions.php:1219 functions/functions.php:1365
+msgid "Fixed"
+msgstr "Stała"
+
+#: functions/functions.php:178 functions/functions.php:324
+#: functions/functions.php:928 functions/functions.php:1074
+#: functions/functions.php:1220 functions/functions.php:1366
+msgid "Local"
+msgstr "W miejscu"
+
+#: functions/functions.php:179 functions/functions.php:325
+#: functions/functions.php:929 functions/functions.php:1075
+#: functions/functions.php:1221 functions/functions.php:1367
+msgid "Inherit"
+msgstr "Odziedzicz"
+
+#: functions/functions.php:203 functions/functions.php:349
+#: functions/functions.php:953 functions/functions.php:1099
+#: functions/functions.php:1245 functions/functions.php:1391
+msgid "Position"
+msgstr "Pozycja"
+
+#: functions/functions.php:230
+msgid "Header"
+msgstr "Nagłówek"
+
+#: functions/functions.php:376
+msgid "Navigation"
+msgstr "Nawigacja"
+
+#: functions/functions.php:438
+msgid "Navigation Item"
+msgstr "Element nawigacji"
+
+#: functions/functions.php:500
+msgid "Navigation Item Hover"
+msgstr "Element nawigacji po najechaniu"
+
+#: functions/functions.php:562
+msgid "Navigation Item Current"
+msgstr "Bieżący element nawigacji"
+
+#: functions/functions.php:636
+msgid "Sub-Navigation Item"
+msgstr "Element podmenu"
+
+#: functions/functions.php:698
+msgid "Sub-Navigation Item Hover"
+msgstr "Element podmenu po najechaniu"
+
+#: functions/functions.php:760
+msgid "Sub-Navigation Item Current"
+msgstr "Bieżący element podmenu"
+
+#: functions/functions.php:834
+msgid "Content"
+msgstr "Zawartość"
+
+#: functions/functions.php:980
+msgid "Sidebar Widgets"
+msgstr "Widgety paska bocznego"
+
+#: functions/functions.php:1126
+msgid "Footer Widget Area"
+msgstr "Obszar widgetów stopki"
+
+#: functions/functions.php:1272
+msgid "Footer Area"
+msgstr "Obszar stopki"
+
+#: functions/ie.php:11
+msgid "Export Backgrounds Customizer Settings"
+msgstr "Eksportuj ustawienia personalizacji tła"
+
+#: functions/ie.php:60
+msgid "Warning: This will delete your settings."
+msgstr "Uwaga: konfiguracja zostanie usunięta."
+
+#: functions/ie.php:62
+msgid "Delete Backgrounds Customizer Settings"
+msgstr "Usuń ustawienia personalizacji tła"

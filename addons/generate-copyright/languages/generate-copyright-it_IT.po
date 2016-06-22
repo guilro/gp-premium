@@ -1,0 +1,122 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Copyright\n"
+"POT-Creation-Date: 2016-01-13 10:34-0800\n"
+"PO-Revision-Date: 2016-01-13 10:34-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/functions.php:16
+msgid "Copyright"
+msgstr "Copyright"
+
+#: functions/functions.php:20
+msgid ""
+"Use <code>%current_year%</code> to include the current year dynamically."
+msgstr ""
+"Utilizza <code>%current_year%</code> per includere dinamicamente l'anno "
+"corrente."
+
+#: functions/functions.php:21
+msgid "Use <code>%copy%</code> to include the copyright symbol."
+msgstr "Utilizza <code>%copy%</code> per includere il simbolo di copyright."
+
+#: functions/functions.php:22
+msgid "HTML is allowed."
+msgstr "HTML consentito"
+
+#: functions/functions.php:23
+msgid "Shortcodes are allowed."
+msgstr "Puoi utilizzare i Shortcodes"
+
+#: functions/functions.php:28
+msgid "Save Copyright"
+msgstr "Salvare il Copyright"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+#~ msgstr ""
+#~ "C'è una nuova versione disponibile di %1$s . <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">Vedi i dettagli della  versione %3$s </a>."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+#~ "\">update now</a>."
+#~ msgstr ""
+#~ "C’è una nuova versione di %1$s disponibile. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">Vedi i dettagli della versione %3$s </a> o <a "
+#~ "href=“%4$s”>aggiorna ora</a>."
+
+#~ msgid "You do not have permission to install plugin updates"
+#~ msgstr "Non hai il permesso di installare gli aggiornamenti dei plugin"
+
+#~ msgid "Error"
+#~ msgstr "Errore"
+
+#~ msgid ""
+#~ "Want updates served directly to your Dashboard? Activate the email you "
+#~ "purchased your add-ons with here."
+#~ msgstr ""
+#~ "Vuoi aggiornamenti serviti direttamente sulla tua Dashboard? Inserisci e "
+#~ "attiva l'e-mail con la quale sono stati acquistati i componenti "
+#~ "aggiuntivi."
+
+#~ msgid "Email"
+#~ msgstr "E-mail"
+
+#~ msgid "Deactivate Email"
+#~ msgstr "Disattivare Email"
+
+#~ msgid "Activate Email"
+#~ msgstr "Attiva-mail"
+
+#~ msgid "Save Email"
+#~ msgstr "Salva E-mail"
+
+#~ msgid "Enable All Updates"
+#~ msgstr "Abilita tutti gli aggiornamenti"
+
+#~ msgid "Disable Updates"
+#~ msgstr "Disattiva Aggiornamenti"
+
+#~ msgid "Enable Updates"
+#~ msgstr "Abilita Aggiornamenti"
+
+#~ msgid "Email activation failed. This email does not exist in our records."
+#~ msgstr ""
+#~ "Attivazione E-mail fallita. Questa email non esiste nei nostri archivi."
+
+#~ msgid "Email activated."
+#~ msgstr "Email attivata."
+
+#~ msgid "Email deactivated."
+#~ msgstr "Email disattivata."
+
+#~ msgid "License failed."
+#~ msgstr "Licenza non riuscita."
+
+#~ msgid "License activated."
+#~ msgstr "Licenza attivata."
+
+#~ msgid "Licenses activated."
+#~ msgstr "Licenze attivate."
+
+#~ msgid "Deactivation failed."
+#~ msgstr "Disattivazione non riuscita."
+
+#~ msgid "License deactivated."
+#~ msgstr "Licenza disattivata."

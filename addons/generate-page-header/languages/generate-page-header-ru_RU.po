@@ -1,0 +1,663 @@
+# Translation by Alexey Chumakov, 2015
+# Feel free to forward any issues or suggestions on translation to Alexey Chumakov
+# (**) comments indicate places for future improvement.
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Page Header\n"
+"POT-Creation-Date: 2015-05-19 22:23+0300\n"
+"PO-Revision-Date: 2015-05-20 19:57+0300\n"
+"Last-Translator: Alexey Chumakov <alex@chumakov.ru>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8\n"
+"X-Poedit-Basepath: ..\\..\\..\\\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: addons\\generate-page-header\n"
+"X-Poedit-SearchPath-1: inc\n"
+"X-Poedit-SearchPathExcluded-0: addons\\generate-page-header\\inc\\admin-page-"
+"framework\n"
+
+#: inc/admin-options.php:72 inc/admin-options.php:140
+msgid "Blog Page Header"
+msgstr "Шапка страницы блога"
+
+#: inc/admin-options.php:74
+msgid "Add a page header to your blog."
+msgstr "Добавьте шапку страницы в блог."
+
+#: inc/admin-options.php:75
+msgid ""
+"This will only show up on the page you have set as your \"Posts Page\". To "
+"add a page header to specific pages, use the metabox included while adding "
+"your content."
+msgstr ""
+"Она будет выводиться только на странице, назначенной \"страницей записей\". "
+"Чтобы поместить шапку на определенные страницы, используйте соответствующий "
+"функциональный модуль на экране редактирования."
+
+#: inc/admin-options.php:79
+msgid "Publish"
+msgstr "Опубликовать"
+
+#: inc/admin-options.php:81
+msgid "Save Settings"
+msgstr "Сохранить настройки"
+
+#: inc/admin-options.php:143
+msgid ""
+"Use these options to add a page header to your Blog. Add page headers to "
+"your pages by using the metabox while editing them."
+msgstr ""
+"Используйте эти параметры для добавления шапки страницы на страницу блога. "
+"Добавляйте шапку на определенные страницы через соответствующий "
+"функциональный модуль при их редактировании."
+
+#: inc/admin-options.php:148
+msgid "Image Options"
+msgstr "Параметры изображения"
+
+#: inc/admin-options.php:149
+msgid "Upload an image to use in your page header"
+msgstr "Загрузить изображение для использования в шапке страницы"
+
+#: inc/admin-options.php:154 inc/functions.php:780
+msgid "Image"
+msgstr "Изображение"
+
+#: inc/admin-options.php:155
+msgid "Upload an image to be used as your page header."
+msgstr "Загрузить изображение для шапки страницы"
+
+#: inc/admin-options.php:160 inc/functions.php:800
+msgid "Page Header Link"
+msgstr "Ссылка для шапки страницы"
+
+#: inc/admin-options.php:161
+msgid "Make your page header image clickable by adding a URL. (optional)"
+msgstr ""
+"Сделать изображение шапки страницы кликабельным, добавив URL (необязательно)"
+
+#: inc/admin-options.php:167 inc/functions.php:805
+msgid "Hard Crop"
+msgstr "Жесткая обрезка"
+
+#: inc/admin-options.php:168
+msgid "Turn hard cropping or of off."
+msgstr "Включить или выключить жесткую обрезку"
+
+#: inc/admin-options.php:172 inc/admin-options.php:225
+#: inc/admin-options.php:236 inc/admin-options.php:247
+#: inc/admin-options.php:258 inc/admin-options.php:269
+#: inc/admin-options.php:280 inc/functions.php:808
+msgid "Enable"
+msgstr "Включить"
+
+#: inc/admin-options.php:173 inc/admin-options.php:226
+#: inc/admin-options.php:237 inc/admin-options.php:248
+#: inc/admin-options.php:259 inc/admin-options.php:270
+#: inc/admin-options.php:281 inc/functions.php:807
+msgid "Disable"
+msgstr "Выключить"
+
+#: inc/admin-options.php:194 inc/functions.php:833
+msgid "Image Width"
+msgstr "Ширина изображения"
+
+#: inc/admin-options.php:195
+msgid "Choose your image width in pixels. (integer only, default is 1200)"
+msgstr ""
+"Укажите ширину изображения в пикселах (только целое число, по умолчанию 1200)"
+
+#: inc/admin-options.php:201 inc/functions.php:838
+msgid "Image Height"
+msgstr "Высота изображения"
+
+#: inc/admin-options.php:202
+msgid ""
+"Choose your image height in pixels. Use \"0\" or leave blank to calculate "
+"height based on width. (integer only, default is 0) "
+msgstr ""
+"Укажите высоту изображения в пикселах. Используйте \"0\" или оставьте "
+"пустой, чтобы рассчитать высоту на основе ширины (только целое, по умолчанию "
+"0)."
+
+#: inc/admin-options.php:208
+msgid "Content Options"
+msgstr "Параметры содержимого"
+
+#: inc/admin-options.php:209
+msgid "Add content to your page header"
+msgstr "Добавить содержимое в шапку страницы"
+
+#: inc/admin-options.php:214 inc/functions.php:781 inc/functions.php:847
+msgid "Content"
+msgstr "Содержимое"
+
+#: inc/admin-options.php:215
+msgid "Add your content to the page header. HTML and shortcodes allowed."
+msgstr ""
+"Добавьте свое содержимое в шапку страницы. Можно использовать HTML и "
+"сокращенные коды."
+
+#: inc/admin-options.php:220
+msgid "Add Paragraphs"
+msgstr "Добавление тегов абзаца"
+
+#: inc/admin-options.php:221
+msgid "Wrap your text in paragraph tags automatically."
+msgstr "Автоматически заключить текст в теги абзаца"
+
+#: inc/admin-options.php:231
+msgid "Add Padding"
+msgstr "Добавление отступов"
+
+#: inc/admin-options.php:232
+msgid "Add padding around your content."
+msgstr "Добавить отступы вокруг содержимого"
+
+#: inc/admin-options.php:242
+msgid "Image Background"
+msgstr "Изображение как фон"
+
+#: inc/admin-options.php:243
+msgid ""
+"Use the image uploaded above as a background image for your content. "
+"(requires image uploaded above)"
+msgstr ""
+"Использовать загруженное изображение как фон для содержимого (требуется "
+"загрузить изображение выше)"
+
+#: inc/admin-options.php:253
+msgid "Parallax Background"
+msgstr "Параллаксный фон"
+
+#: inc/admin-options.php:254
+msgid ""
+"Add a cool parallax effect to your background image. (requires the image "
+"background option to be checked)"
+msgstr ""
+"Добавить крутой параллаксный эффект к фоновому изображению (флажок "
+"\"Использовать как фон\" нужно включить)"
+
+#: inc/admin-options.php:264
+msgid "Full Screen"
+msgstr "На весь экран"
+
+#: inc/admin-options.php:265
+msgid "Make your page header content area full screen."
+msgstr "Расширить область содержимого вашей шапки страницы на весь экран"
+
+#: inc/admin-options.php:275
+msgid "Vertical Center"
+msgstr "Вертикальная центровка"
+
+#: inc/admin-options.php:276
+msgid "Center your page header content vertically."
+msgstr "Центровать содержимое шапки страницы по вертикали"
+
+#: inc/admin-options.php:286
+msgid "Container Type"
+msgstr "Тип блока"
+
+#: inc/admin-options.php:287
+msgid "Choose whether the page header is contained or fluid."
+msgstr "Выберите ограниченный или резиновый вариант шапки страницы"
+
+#: inc/admin-options.php:291 inc/functions.php:879
+msgid "Contained"
+msgstr "Ограниченный"
+
+#: inc/admin-options.php:292 inc/functions.php:880
+msgid "Fluid"
+msgstr "Резиновый"
+
+#: inc/admin-options.php:297
+msgid "Text Alignment"
+msgstr "Выравнивание текста"
+
+#: inc/admin-options.php:298
+msgid "Choose the horizontal alignment of your content."
+msgstr "Выберите вариант выравнивания содержимого по горизонтали"
+
+#: inc/admin-options.php:302 inc/functions.php:889
+msgid "Left"
+msgstr "Влево"
+
+#: inc/admin-options.php:303 inc/functions.php:890
+msgid "Center"
+msgstr "По центру"
+
+#: inc/admin-options.php:304 inc/functions.php:891
+msgid "Right"
+msgstr "Вправо"
+
+#: inc/admin-options.php:309
+msgid "Top/Bottom Padding"
+msgstr "Отступ сверху/снизу"
+
+#: inc/admin-options.php:310
+msgid ""
+"Choose your content padding in pixels. This will add space above and below "
+"your content. (integer only) "
+msgstr ""
+"Укажите величину отступа контента в пикселах. Это приведет к добавлению "
+"отступа над и под вашим содержимым (только целое число)"
+
+#: inc/admin-options.php:316
+msgid "Background Color"
+msgstr "Цвет фона"
+
+#: inc/admin-options.php:322
+msgid "Text Color"
+msgstr "Цвет текста"
+
+#: inc/admin-options.php:328
+msgid "Link Color"
+msgstr "Цвет ссылок"
+
+#: inc/admin-options.php:334
+msgid "Link Hover Color"
+msgstr "Цвет ссылок — наведение"
+
+#: inc/cmb2/CMB2.php:122 inc/cmb2/includes/CMB2.php:112
+msgid "Metabox configuration is required to have an ID parameter"
+msgstr "Для конфигурации модуля требуется параметр ID"
+
+#: inc/cmb2/CMB2.php:311 inc/cmb2/includes/CMB2.php:302
+msgid "Click to toggle"
+msgstr "Нажмите для переключения"
+
+#: inc/cmb2/includes/CMB2_Ajax.php:37
+msgid "Please Try Again"
+msgstr "Попробуйте еще раз"
+
+#: inc/cmb2/includes/CMB2_Ajax.php:133
+msgid "Remove Embed"
+msgstr "Убрать встраивание"
+
+#: inc/cmb2/includes/CMB2_Ajax.php:137
+#, php-format
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr "Не найдено результатов oEmbed для %s. Дополнительные сведения — "
+
+#: inc/cmb2/includes/CMB2_Field.php:885
+msgid "Add Group"
+msgstr "Добавить группу"
+
+#: inc/cmb2/includes/CMB2_Field.php:886
+msgid "Remove Group"
+msgstr "Убрать группу"
+
+#: inc/cmb2/includes/CMB2_Field.php:908 inc/cmb2/includes/CMB2_Field.php:912
+msgid "None"
+msgstr "Нет"
+
+#: inc/cmb2/includes/CMB2_Types.php:294
+msgid "Add Row"
+msgstr "Добавить ряд"
+
+#: inc/cmb2/includes/CMB2_Types.php:353 inc/cmb2/includes/CMB2_Types.php:986
+#: inc/cmb2/includes/CMB2_hookup.php:183
+msgid "Remove"
+msgstr "Удалить"
+
+#: inc/cmb2/includes/CMB2_Types.php:722 inc/cmb2/includes/CMB2_Types.php:770
+msgid "No terms"
+msgstr "Нет терминов"
+
+#: inc/cmb2/includes/CMB2_Types.php:835
+msgid "Add or Upload Files"
+msgstr "Добавить или загрузить файлы"
+
+#: inc/cmb2/includes/CMB2_Types.php:893
+msgid "Add or Upload File"
+msgstr "Добавить или загрузить файл"
+
+#: inc/cmb2/includes/CMB2_Types.php:967 inc/cmb2/includes/CMB2_hookup.php:182
+msgid "Remove Image"
+msgstr "Убрать изображение"
+
+#: inc/cmb2/includes/CMB2_Types.php:981 inc/cmb2/includes/CMB2_hookup.php:184
+msgid "File:"
+msgstr "Файл:"
+
+#: inc/cmb2/includes/CMB2_Types.php:984 inc/cmb2/includes/CMB2_hookup.php:185
+msgid "Download"
+msgstr "Скачать"
+
+#: inc/cmb2/includes/CMB2_hookup.php:128 inc/cmb2/includes/CMB2_hookup.php:165
+msgid "Clear"
+msgstr "Очистить"
+
+#: inc/cmb2/includes/CMB2_hookup.php:129
+msgid "Default"
+msgstr "По умолчанию"
+
+#: inc/cmb2/includes/CMB2_hookup.php:130
+msgid "Select Color"
+msgstr "Выбрать цвет"
+
+#: inc/cmb2/includes/CMB2_hookup.php:131
+msgid "Current Color"
+msgstr "Текущий цвет"
+
+#: inc/cmb2/includes/CMB2_hookup.php:155
+msgid "mm/dd/yy"
+msgstr "dd.mm.yy"
+
+#: inc/cmb2/includes/CMB2_hookup.php:156
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr "Воскресенье, Понедельник, Вторник, Среда, Четверг, Пятница, Суббота"
+
+#: inc/cmb2/includes/CMB2_hookup.php:157
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr "Вс, Пн, Вт, Ср, Чт, Пт, Сб"
+
+#: inc/cmb2/includes/CMB2_hookup.php:158
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr "Вск, Пнд, Втр, Срд, Чтв, Птн, Суб"
+
+#: inc/cmb2/includes/CMB2_hookup.php:159
+msgid ""
+"January, February, March, April, May, June, July, August, September, "
+"October, November, December"
+msgstr ""
+"Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, "
+"Ноябрь, Декабрь"
+
+#: inc/cmb2/includes/CMB2_hookup.php:160
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr "Янв, Фев, Мар, Апр, Май, Июн, Июл, Авг, Сен, Окт, Ноя, Дек"
+
+#: inc/cmb2/includes/CMB2_hookup.php:161
+msgid "Next"
+msgstr "Следующее"
+
+#: inc/cmb2/includes/CMB2_hookup.php:162
+msgid "Prev"
+msgstr "Пред"
+
+#: inc/cmb2/includes/CMB2_hookup.php:163
+msgid "Today"
+msgstr "Сегодня"
+
+#: inc/cmb2/includes/CMB2_hookup.php:164 inc/cmb2/includes/CMB2_hookup.php:174
+msgid "Done"
+msgstr "Выполнено"
+
+#: inc/cmb2/includes/CMB2_hookup.php:168
+msgid "Choose Time"
+msgstr "Укажите время"
+
+#: inc/cmb2/includes/CMB2_hookup.php:169
+msgid "Time"
+msgstr "Время"
+
+#: inc/cmb2/includes/CMB2_hookup.php:170
+msgid "Hour"
+msgstr "Час"
+
+#: inc/cmb2/includes/CMB2_hookup.php:171
+msgid "Minute"
+msgstr "Минута"
+
+#: inc/cmb2/includes/CMB2_hookup.php:172
+msgid "Second"
+msgstr "Секунда"
+
+#: inc/cmb2/includes/CMB2_hookup.php:173
+msgid "Now"
+msgstr "Сейчас"
+
+#: inc/cmb2/includes/CMB2_hookup.php:175
+msgid "hh:mm TT"
+msgstr "HH:mm"
+
+#: inc/cmb2/includes/CMB2_hookup.php:181
+msgid "Use this file"
+msgstr "Использовать этот файл"
+
+#: inc/cmb2/includes/CMB2_hookup.php:186
+msgid "Select / Deselect All"
+msgstr "Выделить все / снять выделение"
+
+#: inc/cmb2/includes/helper-functions.php:254
+msgid "Save"
+msgstr "Сохранить"
+
+#: inc/functions.php:620 inc/functions.php:1211
+msgid "Page Header"
+msgstr "Шапка страницы"
+
+#: inc/functions.php:792 inc/functions.php:794
+msgid "Page Header Image"
+msgstr "Изображение для шапки страницы"
+
+#: inc/functions.php:794
+msgid "Insert Image"
+msgstr "Вставить изображение"
+
+#: inc/functions.php:795
+msgid "Add Image"
+msgstr "Добавить изображение"
+
+#: inc/functions.php:840
+msgid "Use \"0\" or leave blank to calculate height based on width."
+msgstr ""
+"Укажите \"0\" или оставьте пустым для вычисления высоты на основе ширины."
+
+#: inc/functions.php:849
+msgid "HTML and shortcodes allowed."
+msgstr "Можно использовать HTML и сокращенные коды."
+
+#: inc/functions.php:852
+msgid "Automatically add paragraphs"
+msgstr "Автоматически добавить теги абзаца"
+
+#: inc/functions.php:855
+msgid "Add padding"
+msgstr "Добавить отступы"
+
+#: inc/functions.php:859
+msgid "Use image (from image tab) as a background image?"
+msgstr "Использовать изображение (с вкладки \"Изображение\") в качестве фона"
+
+#: inc/functions.php:865
+msgid "Add parallax effect to background image?"
+msgstr "Добавить параллаксный эффект к фоновому изображению"
+
+#: inc/functions.php:869
+msgid "Make background image full screen?"
+msgstr "Растянуть изображение на весь экран"
+
+#: inc/functions.php:873
+msgid "Center your content vertically?"
+msgstr "Центровать содержимое по вертикали"
+
+#: inc/functions.php:877
+msgid "Container type"
+msgstr "Тип блока"
+
+#: inc/functions.php:887
+msgid "Text alignment"
+msgstr "Выравнивание текста"
+
+#: inc/functions.php:896
+msgid "Top/Bottom padding"
+msgstr "Отступы сверху/снизу"
+
+#: inc/functions.php:901
+msgid "Background color"
+msgstr "Цвет фона"
+
+#: inc/functions.php:906
+msgid "Text color"
+msgstr "Цвет текста"
+
+#: inc/functions.php:911
+msgid "Link color"
+msgstr "Цвет ссылок"
+
+#: inc/functions.php:916
+msgid "Link color hover"
+msgstr "Цвет ссылок — наведение"
+
+#: inc/functions.php:924
+msgid "Add to blog excerpt (if no Featured Image is set)"
+msgstr "Добавить к цитате записи (если не задана миниатюра записи)"
+
+#: inc/functions.php:1235
+msgid "Page Header Position"
+msgstr "Положение шапки страницы"
+
+#: inc/functions.php:1238 inc/functions.php:1268
+msgid "Above Content Area"
+msgstr "Над областью содержимого"
+
+#: inc/functions.php:1239 inc/functions.php:1269
+msgid "Inside Content Area"
+msgstr "Внутри области содержимого"
+
+#: inc/functions.php:1265
+msgid "Single Post Header Position"
+msgstr "Положение шапки записи"
+
+#: inc/functions.php:1270
+msgid "Below Post Title"
+msgstr "Под заголовком записи"
+
+#: inc/ie.php:14
+msgid "Warning: This will delete your settings."
+msgstr "Внимание: ваши настройки будут удалены."
+
+#: inc/ie.php:16
+msgid "Delete Page Header Customizer Settings"
+msgstr "Удалить настройки шапки страницы"
+
+#: inc/ie.php:53
+msgid "Export Page Header Customizer Settings"
+msgstr "Экспортировать настройки шапки страницы"
+
+#: ~inc/EDD_SL_Plugin_Updater.php:177
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"Доступна новая версия %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+"\"%2$s\">Посмотреть подробности %3$s</a>."
+
+#: ~inc/EDD_SL_Plugin_Updater.php:184
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"Доступна новая версия %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+"\"%2$s\">Посмотреть подробности %3$s</a> или <a href=\"%4$s\">обновить "
+"сейчас</a>."
+
+#: ~inc/EDD_SL_Plugin_Updater.php:324
+msgid "You do not have permission to install plugin updates"
+msgstr "У вас нет прав для установки обновлений плагинов"
+
+#: ~inc/EDD_SL_Plugin_Updater.php:324
+msgid "Error"
+msgstr "Ошибка"
+
+#: ~inc/activation.php:11
+msgid "Add-on deactivated."
+msgstr "Дополнение деактивировано."
+
+#: ~inc/activation.php:15
+msgid "Add-on activated."
+msgstr "Дополнение активировано."
+
+#: ~inc/activation.php:63
+msgid "GP Premium"
+msgstr "Дополнения GP Premium"
+
+#: ~inc/activation.php:88
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: ~inc/activation.php:100
+msgid "Activate"
+msgstr "Активировать"
+
+#: ~inc/verification.php:39
+msgid ""
+"Want updates served directly to your Dashboard? Activate the email you "
+"purchased your add-ons with here."
+msgstr ""
+"Хотите, чтобы обновления подавались прямо в консоль? Активируйте адрес "
+"email, указанный при покупке дополнений."
+
+#: ~inc/verification.php:51 ~inc/verification.php:65
+msgid "Email"
+msgstr "Email"
+
+#: ~inc/verification.php:58
+msgid "Deactivate Email"
+msgstr "Деактивировать адрес"
+
+#: ~inc/verification.php:70
+msgid "Activate Email"
+msgstr "Активировать адрес"
+
+#: ~inc/verification.php:83
+msgid "Save Email"
+msgstr "Сохранить адрес"
+
+#: ~inc/verification.php:94
+msgid "Enable All Updates"
+msgstr "Включить все обновления"
+
+#: ~inc/verification.php:154
+msgid "Disable Updates"
+msgstr "Отключить обновления"
+
+#: ~inc/verification.php:164
+msgid "Enable Updates"
+msgstr "Включить обновления"
+
+#: ~inc/verification.php:750
+msgid "Email activation failed. This email does not exist in our records."
+msgstr "Активация адреса не удалась. Этого адреса нет в наших записях."
+
+#: ~inc/verification.php:754
+msgid "Email activated."
+msgstr "Адрес активирован."
+
+#: ~inc/verification.php:758
+msgid "Email deactivated."
+msgstr "Адрес деактивирован."
+
+#: ~inc/verification.php:762
+msgid "License failed."
+msgstr "Сбой лицензии."
+
+#: ~inc/verification.php:766
+msgid "License activated."
+msgstr "Лицензия активирована."
+
+#: ~inc/verification.php:770
+msgid "Licenses activated."
+msgstr "Лицензии активированы."
+
+#: ~inc/verification.php:774
+msgid "Deactivation failed."
+msgstr "Сбой деактивации."
+
+#: ~inc/verification.php:778
+msgid "License deactivated."
+msgstr "Лицензия деактивирована."

@@ -1,0 +1,285 @@
+# Translation by Alexey Chumakov, 2015
+# Feel free to forward any issues or suggestions on translation to Alexey Chumakov
+# (**) comments indicate places for future improvement.
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Sections\n"
+"POT-Creation-Date: 2015-05-19 22:22+0300\n"
+"PO-Revision-Date: 2015-05-20 19:57+0300\n"
+"Last-Translator: Alexey Chumakov <alex@chumakov.ru>\n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8\n"
+"X-Poedit-Basepath: ..\\..\\..\\\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: addons\\generate-sections\n"
+"X-Poedit-SearchPath-1: inc\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: addons\\generate-sections\\inc\\acf\n"
+
+# (**) разделы?
+#: inc/generate-sections.php:206
+msgid "Use Sections"
+msgstr "Использовать секции"
+
+#: inc/generate-sections.php:217
+msgid "Sections"
+msgstr "Секции"
+
+#: inc/generate-sections.php:292
+msgid "Error: Content already detected in default editor."
+msgstr "Ошибка: в редакторе по умолчанию уже есть содержимое."
+
+#: inc/generate-sections.php:293
+msgid ""
+"Please activate the \"Visual\" tab in your main editor before transferring "
+"content."
+msgstr ""
+"Пожалуйста, до переноса содержимого откройте вкладку \"Визуально\" "
+"основного редактора."
+
+#: inc/templates/generate-sections-page-template.php:82
+msgid "No sections added!"
+msgstr "Не добавлено ни одной секции."
+
+#: inc/wpalchemy/repeating-textarea.php:13
+msgid "Click to remove"
+msgstr "Нажмите, чтобы убрать"
+
+#: inc/wpalchemy/repeating-textarea.php:14
+msgid "Click to toggle"
+msgstr "Нажмите, чтобы свернуть/развернуть"
+
+#: inc/wpalchemy/repeating-textarea.php:15
+msgid "Click and drag to sort"
+msgstr "Нажмите и тащите, чтобы упорядочить"
+
+#: inc/wpalchemy/repeating-textarea.php:18
+msgid "Section"
+msgstr "Секция"
+
+# (**) check what is the box
+#: inc/wpalchemy/repeating-textarea.php:37
+msgid "Box Type"
+msgstr "Тип блока"
+
+#: inc/wpalchemy/repeating-textarea.php:41
+#: inc/wpalchemy/repeating-textarea.php:54
+msgid "Fluid"
+msgstr "Резиновый"
+
+#: inc/wpalchemy/repeating-textarea.php:42
+#: inc/wpalchemy/repeating-textarea.php:53
+msgid "Contained"
+msgstr "Ограниченный"
+
+# (**) check box name
+#: inc/wpalchemy/repeating-textarea.php:49
+msgid "Inner Box Type"
+msgstr "Тип внутреннего блока"
+
+#: inc/wpalchemy/repeating-textarea.php:61
+msgid "Custom Classes"
+msgstr "Настраиваемые классы"
+
+#: inc/wpalchemy/repeating-textarea.php:70
+msgid "Top Padding"
+msgstr "Отступ сверху"
+
+#: inc/wpalchemy/repeating-textarea.php:79
+msgid "Bottom Padding"
+msgstr "Отступ снизу"
+
+#: inc/wpalchemy/repeating-textarea.php:92
+msgid "Background Color"
+msgstr "Цвет фона"
+
+#: inc/wpalchemy/repeating-textarea.php:100
+#: inc/wpalchemy/repeating-textarea.php:112
+msgid "Background Image"
+msgstr "Фоновое изображение"
+
+#: inc/wpalchemy/repeating-textarea.php:112
+msgid "Upload"
+msgstr "Загрузить"
+
+#: inc/wpalchemy/repeating-textarea.php:114
+msgid "Remove"
+msgstr "Убрать"
+
+#: inc/wpalchemy/repeating-textarea.php:121
+msgid "Parallax Effect"
+msgstr "Эффект параллакса"
+
+#: inc/wpalchemy/repeating-textarea.php:124
+msgid "Disable"
+msgstr "Отключить"
+
+#: inc/wpalchemy/repeating-textarea.php:125
+msgid "Enable"
+msgstr "Включить"
+
+#: inc/wpalchemy/repeating-textarea.php:135
+msgid "Text Color"
+msgstr "Цвет текста"
+
+#: inc/wpalchemy/repeating-textarea.php:144
+msgid "Link Color"
+msgstr "Цвет ссылок"
+
+#: inc/wpalchemy/repeating-textarea.php:153
+msgid "Link Color Hover"
+msgstr "Цвет ссылок — наведение"
+
+#: inc/wpalchemy/repeating-textarea.php:172
+msgid "Visual"
+msgstr "Визуально"
+
+#: inc/wpalchemy/repeating-textarea.php:173
+msgctxt "Name for the Text editor tab (formerly HTML)"
+msgid "Text"
+msgstr "Текст"
+
+#: inc/wpalchemy/repeating-textarea.php:192
+msgid "Add Section"
+msgstr "Добавить секцию"
+
+#: inc/wpalchemy/repeating-textarea.php:193
+msgid "Remove Sections"
+msgstr "Удалить секции"
+
+#: inc/wpalchemy/use-sections.php:6
+msgid "No"
+msgstr "Нет"
+
+#: inc/wpalchemy/use-sections.php:7
+msgid "Yes"
+msgstr "Да"
+
+#: inc/wpalchemy/use-sections.php:11
+msgid "Send sections to default editor"
+msgstr "Отправить в редактор по умолчанию"
+
+#: ~inc/EDD_SL_Plugin_Updater.php:177
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"Доступна новая версия %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+"\"%2$s\">Посмотреть подробности %3$s</a>."
+
+#: ~inc/EDD_SL_Plugin_Updater.php:184
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"Доступна новая версия %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+"\"%2$s\">Посмотреть подробности %3$s</a> или <a href=\"%4$s\">обновить "
+"сейчас</a>."
+
+#: ~inc/EDD_SL_Plugin_Updater.php:324
+msgid "You do not have permission to install plugin updates"
+msgstr "У вас нет прав для установки обновлений плагинов"
+
+#: ~inc/EDD_SL_Plugin_Updater.php:324
+msgid "Error"
+msgstr "Ошибка"
+
+#: ~inc/activation.php:11
+msgid "Add-on deactivated."
+msgstr "Дополнение деактивировано."
+
+#: ~inc/activation.php:15
+msgid "Add-on activated."
+msgstr "Дополнение активировано."
+
+#: ~inc/activation.php:63
+msgid "GP Premium"
+msgstr "Дополнения GP Premium"
+
+#: ~inc/activation.php:88
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: ~inc/activation.php:100
+msgid "Activate"
+msgstr "Активировать"
+
+#: ~inc/verification.php:39
+msgid ""
+"Want updates served directly to your Dashboard? Activate the email you "
+"purchased your add-ons with here."
+msgstr ""
+"Хотите, чтобы обновления подавались прямо в консоль? Активируйте адрес "
+"email, указанный при покупке дополнений."
+
+#: ~inc/verification.php:51 ~inc/verification.php:65
+msgid "Email"
+msgstr "Email"
+
+#: ~inc/verification.php:58
+msgid "Deactivate Email"
+msgstr "Деактивировать адрес"
+
+#: ~inc/verification.php:70
+msgid "Activate Email"
+msgstr "Активировать адрес"
+
+#: ~inc/verification.php:83
+msgid "Save Email"
+msgstr "Сохранить адрес"
+
+#: ~inc/verification.php:94
+msgid "Enable All Updates"
+msgstr "Включить все обновления"
+
+#: ~inc/verification.php:154
+msgid "Disable Updates"
+msgstr "Отключить обновления"
+
+#: ~inc/verification.php:164
+msgid "Enable Updates"
+msgstr "Включить обновления"
+
+#: ~inc/verification.php:750
+msgid "Email activation failed. This email does not exist in our records."
+msgstr "Активация адреса не удалась. Этого адреса нет в наших записях."
+
+#: ~inc/verification.php:754
+msgid "Email activated."
+msgstr "Адрес активирован."
+
+#: ~inc/verification.php:758
+msgid "Email deactivated."
+msgstr "Адрес деактивирован."
+
+#: ~inc/verification.php:762
+msgid "License failed."
+msgstr "Сбой лицензии."
+
+#: ~inc/verification.php:766
+msgid "License activated."
+msgstr "Лицензия активирована."
+
+#: ~inc/verification.php:770
+msgid "Licenses activated."
+msgstr "Лицензии активированы."
+
+#: ~inc/verification.php:774
+msgid "Deactivation failed."
+msgstr "Сбой деактивации."
+
+#: ~inc/verification.php:778
+msgid "License deactivated."
+msgstr "Лицензия деактивирована."

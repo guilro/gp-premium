@@ -1,0 +1,280 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Blog\n"
+"POT-Creation-Date: 2016-01-13 10:33-0800\n"
+"PO-Revision-Date: 2016-01-13 10:33-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/customizer.php:16
+msgid "Blog"
+msgstr "Blog"
+
+#: functions/customizer.php:31
+msgid "Blog Content"
+msgstr "Contenuto del blog"
+
+#: functions/customizer.php:49
+msgid "Excerpt Length"
+msgstr "Lunghezza estratto"
+
+#: functions/customizer.php:67
+msgid "Read more label"
+msgstr "Etichetta Pulsante Leggi Tutto"
+
+#: functions/customizer.php:80 functions/customizer.php:104
+msgid "Masonry"
+msgstr "Masonry"
+
+#: functions/customizer.php:107 functions/customizer.php:561
+#: functions/customizer.php:623
+msgid "Enable"
+msgstr "Abilita"
+
+#: functions/customizer.php:108 functions/customizer.php:562
+#: functions/customizer.php:624
+msgid "Disable"
+msgstr "Disabilita"
+
+#: functions/customizer.php:134
+msgid "Masonry Block Width"
+msgstr "Larghezza del blocco Masonry"
+
+#: functions/customizer.php:137 functions/customizer.php:168
+#: functions/masonry.php:94
+msgid "Small"
+msgstr "Piccolo"
+
+#: functions/customizer.php:138 functions/customizer.php:169
+#: functions/masonry.php:95
+msgid "Medium"
+msgstr "Medio"
+
+#: functions/customizer.php:139 functions/customizer.php:170
+#: functions/masonry.php:96
+msgid "Large"
+msgstr "Grande"
+
+#: functions/customizer.php:165
+msgid "Masonry Most Recent Width"
+msgstr ""
+
+#: functions/customizer.php:189
+msgid "Masonry Load More Text"
+msgstr ""
+
+#: functions/customizer.php:207
+msgid "Masonry Loading Text"
+msgstr ""
+
+#: functions/customizer.php:220 functions/customizer.php:244
+msgid "Post Image"
+msgstr "Immagine Articolo"
+
+#: functions/customizer.php:247 functions/customizer.php:382
+#: functions/customizer.php:412 functions/customizer.php:442
+#: functions/customizer.php:472 functions/customizer.php:502
+msgid "Show"
+msgstr "Mostra"
+
+#: functions/customizer.php:248 functions/customizer.php:383
+#: functions/customizer.php:413 functions/customizer.php:443
+#: functions/customizer.php:473 functions/customizer.php:503
+msgid "Hide"
+msgstr "Nascondi"
+
+#: functions/customizer.php:274
+msgid "Post Image Position"
+msgstr "Posizione dell’immagine post."
+
+#: functions/customizer.php:277
+msgid "Below Header"
+msgstr "Sotto la testata"
+
+#: functions/customizer.php:278
+msgid "Above Header"
+msgstr "Sopra la testata"
+
+#: functions/customizer.php:304
+msgid "Post Image Alignment"
+msgstr "Allineamento dell'immagine del Post"
+
+#: functions/customizer.php:307
+msgid "Center"
+msgstr "Centra"
+
+#: functions/customizer.php:308
+msgid "Left"
+msgstr "Sinistra"
+
+#: functions/customizer.php:309
+msgid "Right"
+msgstr "Destra"
+
+#: functions/customizer.php:330
+msgid "Post Image Width"
+msgstr "Larghezza dell'immagine del Post"
+
+#: functions/customizer.php:334 functions/customizer.php:356
+msgid "Auto"
+msgstr "Automatico"
+
+#: functions/customizer.php:352
+msgid "Post Image Height"
+msgstr "Altezza dell'immagine del Post"
+
+#: functions/customizer.php:379
+msgid "Date"
+msgstr "Data"
+
+#: functions/customizer.php:409
+msgid "Author"
+msgstr "Autore"
+
+#: functions/customizer.php:439
+msgid "Categories"
+msgstr "Categorie"
+
+#: functions/customizer.php:469
+msgid "Tags"
+msgstr "Tags"
+
+#: functions/customizer.php:499
+msgid "Comment Link"
+msgstr "Link Aggiungi Commento"
+
+#: functions/customizer.php:517 functions/customizer.php:588
+msgid "Columns"
+msgstr ""
+
+#: functions/customizer.php:532
+msgid "Masonry is enabled. These settings will be ignored."
+msgstr ""
+
+#: functions/customizer.php:558
+msgid "Column Layout"
+msgstr ""
+
+#: functions/customizer.php:620
+msgid "First Post Full Width"
+msgstr ""
+
+#: functions/defaults.php:10
+msgid "Read more..."
+msgstr "Letti tutto"
+
+#: functions/defaults.php:14
+msgid "+ More"
+msgstr "+ Altro"
+
+#: functions/defaults.php:15
+msgid "Loading..."
+msgstr ""
+
+#: functions/ie.php:14
+msgid "Warning: This will delete your settings."
+msgstr "Attenzione: questo cancellerà le impostazioni."
+
+#: functions/ie.php:16
+msgid "Delete Blog Customizer Settings"
+msgstr "Elimina le modifiche apportate al \"Blog Customizer\""
+
+#: functions/ie.php:53
+msgid "Export Blog Customizer Settings"
+msgstr "Esporta le Configurazioni del \"Blog Customizer\""
+
+#: functions/masonry.php:60 functions/masonry.php:91
+msgid "Masonry Post Width"
+msgstr ""
+
+#: functions/masonry.php:93
+msgid "Global setting"
+msgstr "Impostazioni globali"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+#~ msgstr ""
+#~ "C'è una nuova versione disponibile di %1$s . <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">Vedi i dettagli della  versione %3$s </a>."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+#~ "\">update now</a>."
+#~ msgstr ""
+#~ "C’è una nuova versione di %1$s disponibile. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">Vedi i dettagli della versione %3$s </a> o <a "
+#~ "href=“%4$s”>aggiorna ora</a>."
+
+#~ msgid "You do not have permission to install plugin updates"
+#~ msgstr "Non hai il permesso di installare gli aggiornamenti dei plugin"
+
+#~ msgid "Error"
+#~ msgstr "Errore"
+
+#~ msgid ""
+#~ "Want updates served directly to your Dashboard? Activate the email you "
+#~ "purchased your add-ons with here."
+#~ msgstr ""
+#~ "Vuoi aggiornamenti serviti direttamente sulla tua Dashboard? Inserisci e "
+#~ "attiva l'e-mail con la quale sono stati acquistati i componenti "
+#~ "aggiuntivi."
+
+#~ msgid "Email"
+#~ msgstr "E-mail"
+
+#~ msgid "Deactivate Email"
+#~ msgstr "Disattivare Email"
+
+#~ msgid "Activate Email"
+#~ msgstr "Attiva-mail"
+
+#~ msgid "Save Email"
+#~ msgstr "Salva E-mail"
+
+#~ msgid "Enable All Updates"
+#~ msgstr "Abilita tutti gli aggiornamenti"
+
+#~ msgid "Disable Updates"
+#~ msgstr "Disattiva Aggiornamenti"
+
+#~ msgid "Enable Updates"
+#~ msgstr "Abilita Aggiornamenti"
+
+#~ msgid "Email activation failed. This email does not exist in our records."
+#~ msgstr ""
+#~ "Attivazione E-mail fallita. Questa email non esiste nei nostri archivi."
+
+#~ msgid "Email activated."
+#~ msgstr "Email attivato."
+
+#~ msgid "Email deactivated."
+#~ msgstr "Email disattivato."
+
+#~ msgid "License failed."
+#~ msgstr "Licenza non riuscita."
+
+#~ msgid "License activated."
+#~ msgstr "Licenza attivata."
+
+#~ msgid "Licenses activated."
+#~ msgstr "Licenze attivate."
+
+#~ msgid "Deactivation failed."
+#~ msgstr "Disattivazione non riuscita."
+
+#~ msgid "License deactivated."
+#~ msgstr "Licenza disattivata."

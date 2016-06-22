@@ -1,0 +1,237 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Secondary Navigation\n"
+"POT-Creation-Date: 2016-04-03 16:58+0200\n"
+"PO-Revision-Date: 2016-05-12 19:00+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Last-Translator: Krzysztof Grochocki <contact@beherit.pl>\n"
+"Language: pl_PL\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/functions.php:7
+msgid "Secondary Menu"
+msgstr "Drugie menu"
+
+#: functions/functions.php:97 functions/functions.php:109
+msgid "Secondary Navigation"
+msgstr "Druga nawigacja"
+
+#: functions/functions.php:126
+msgid "Mobile Label"
+msgstr "Etykieta mobilna"
+
+#: functions/functions.php:151
+msgid "Navigation Layout"
+msgstr "Układ nawigacji"
+
+#: functions/functions.php:154
+msgid "Fluid / Full Width"
+msgstr "Pływające / pełna szerokość"
+
+#: functions/functions.php:155
+msgid "Contained"
+msgstr "W pojemniku"
+
+#: functions/functions.php:181
+msgid "Navigation Position"
+msgstr "Pozycja nawigacji"
+
+#: functions/functions.php:184
+msgid "Below Header"
+msgstr "Poniżej nagłówka"
+
+#: functions/functions.php:185
+msgid "Above Header"
+msgstr "Ponad nagłówkiem"
+
+#: functions/functions.php:186
+msgid "Float Right"
+msgstr "Wyrównane do prawej"
+
+#: functions/functions.php:187
+msgid "Left Sidebar"
+msgstr "Lewy pasek boczny"
+
+#: functions/functions.php:188
+msgid "Right Sidebar"
+msgstr "Prawy pasek boczny"
+
+#: functions/functions.php:189
+msgid "No Navigation"
+msgstr "Bez nawigacji"
+
+#: functions/functions.php:215
+msgid "Navigation Alignment"
+msgstr "Wyrównanie nawigacji"
+
+#: functions/functions.php:218
+msgid "Left"
+msgstr "Do lewej"
+
+#: functions/functions.php:219
+msgid "Center"
+msgstr "Do środka"
+
+#: functions/functions.php:220
+msgid "Right"
+msgstr "Do prawej"
+
+#: functions/functions.php:236
+msgid "Secondary Navigation Spacing"
+msgstr "Odstępy drugiej nawigacji"
+
+#: functions/functions.php:249
+msgid "Secondary Menu Items"
+msgstr "Elementy drugiego menu"
+
+#: functions/functions.php:250
+msgid "These options control the size of your secondary menu items."
+msgstr "Te opcje określają rozmiar elementów drugiego menu."
+
+#: functions/functions.php:254
+msgid "Left/Right Spacing"
+msgstr "Odstępy z lewej/z prawej"
+
+#: functions/functions.php:255
+msgid "Height"
+msgstr "Wysokość"
+
+#: functions/functions.php:321
+msgid "Secondary Sub-menu Item Height"
+msgstr "Wysokość podmenu w drugim menu"
+
+#: functions/functions.php:322
+msgid "The top and bottom spacing of secondary sub-menu items."
+msgstr "Odstępy górny i dolny elementów drugiego menu"
+
+#: functions/functions.php:359
+msgid "Secondary Navigation Colors"
+msgstr "Kolory drugiego menu"
+
+#: functions/functions.php:371 functions/functions.php:450
+msgid "Background"
+msgstr "Tło"
+
+#: functions/functions.php:377 functions/functions.php:456
+msgid "Text"
+msgstr "Tekst"
+
+#: functions/functions.php:383 functions/functions.php:462
+msgid "Background Hover"
+msgstr "Tło po najechaniu"
+
+#: functions/functions.php:389 functions/functions.php:468
+msgid "Text Hover"
+msgstr "Tekst po najechaniu"
+
+#: functions/functions.php:395 functions/functions.php:474
+msgid "Background Current"
+msgstr "Bieżące tło"
+
+#: functions/functions.php:401 functions/functions.php:480
+msgid "Text Current"
+msgstr "Bieżący tekst"
+
+#: functions/functions.php:438
+msgid "Secondary Sub-Navigation Colors"
+msgstr "Kolory podmenu drugiego menu"
+
+#: functions/functions.php:517
+msgid "Secondary Navigation Typography"
+msgstr "Typografia drugiego menu"
+
+#: functions/functions.php:539
+msgid "Secondary navigation"
+msgstr "Nawigacja drugiego menu"
+
+#: functions/functions.php:560
+msgid "Font weight"
+msgstr "Waga czcionki"
+
+#: functions/functions.php:582
+msgid "Text transform"
+msgstr "Przekształcenie tekstu"
+
+#: functions/functions.php:605
+msgid "Font size"
+msgstr "Rozmiar czcionki"
+
+#: functions/functions.php:623
+msgid "Secondary Background Images"
+msgstr "Obrazki tła drugiego menu"
+
+#: functions/functions.php:641
+msgid "Navigation"
+msgstr "Nawigacja"
+
+#: functions/functions.php:683 functions/functions.php:745
+#: functions/functions.php:807 functions/functions.php:869
+#: functions/functions.php:943 functions/functions.php:1005
+#: functions/functions.php:1067
+msgid "Repeat"
+msgstr "Powtórz"
+
+#: functions/functions.php:684 functions/functions.php:746
+#: functions/functions.php:808 functions/functions.php:870
+#: functions/functions.php:944 functions/functions.php:1006
+#: functions/functions.php:1068
+msgid "Repeat x"
+msgstr "Powtórz x"
+
+#: functions/functions.php:685 functions/functions.php:747
+#: functions/functions.php:809 functions/functions.php:871
+#: functions/functions.php:945 functions/functions.php:1007
+#: functions/functions.php:1069
+msgid "Repeat y"
+msgstr "Powtórz y"
+
+#: functions/functions.php:686 functions/functions.php:748
+#: functions/functions.php:810 functions/functions.php:872
+#: functions/functions.php:946 functions/functions.php:1008
+#: functions/functions.php:1070
+msgid "No Repeat"
+msgstr "Nie powtarzaj"
+
+#: functions/functions.php:703
+msgid "Navigation Item"
+msgstr "Element nawigacji"
+
+#: functions/functions.php:765
+msgid "Navigation Item Hover"
+msgstr "Element nawigacji po najechaniu"
+
+#: functions/functions.php:827
+msgid "Navigation Item Current"
+msgstr "Bieżący element nawigacji"
+
+#: functions/functions.php:901
+msgid "Sub-Navigation Item"
+msgstr "Element podmenu"
+
+#: functions/functions.php:963
+msgid "Sub-Navigation Item Hover"
+msgstr "Element podmenu po najechaniu"
+
+#: functions/functions.php:1025
+msgid "Sub-Navigation Item Current"
+msgstr "Bieżący element podmenu"
+
+#: functions/ie.php:14
+msgid "Warning: This will delete your settings."
+msgstr "Uwaga: Ustawienia zostaną usunięte."
+
+#: functions/ie.php:16
+msgid "Delete Secondary Navigation Customizer Settings"
+msgstr "Usuń ustawienia drugiego menu nawigacyjnego"
+
+#: functions/ie.php:52
+msgid "Export Secondary Navigation Customizer Settings"
+msgstr "Eksportuj ustawienia drugiego menu nawigacyjnego"

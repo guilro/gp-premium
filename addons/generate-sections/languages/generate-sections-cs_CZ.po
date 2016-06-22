@@ -1,0 +1,235 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Sections\n"
+"POT-Creation-Date: 2015-10-12 16:03+0200\n"
+"PO-Revision-Date: 2015-10-17 22:55+0200\n"
+"Last-Translator: Foxtrot <foxtrot@foxtrot.me>\n"
+"Language-Team: \n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: inc/acf\n"
+
+#: functions/generate-sections.php:218
+msgid "Use Sections"
+msgstr "Použít sekce"
+
+#: functions/generate-sections.php:229
+msgid "Sections"
+msgstr "Sekce"
+
+#: functions/generate-sections.php:306
+msgid "Error: Content already detected in default editor."
+msgstr "Chyba: Obsah již detekován ve výchozím editoru."
+
+#: functions/generate-sections.php:307
+msgid ""
+"Please activate the \"Visual\" tab in your main editor before transferring "
+"content."
+msgstr ""
+"Prosím aktivujte záložku \"Vizuální\" ve vašem hlavním editoru než budete "
+"přenášet obsah."
+
+#: functions/templates/generate-sections-page-template.php:84
+msgid "No sections added!"
+msgstr "Nebyly přidány žádné sekce!"
+
+#: functions/wpalchemy/repeating-textarea.php:13
+msgid "Click to remove"
+msgstr "Kliknutím odstranit"
+
+#: functions/wpalchemy/repeating-textarea.php:14
+msgid "Click to toggle"
+msgstr "Kliknutím rozbalit/sbalit"
+
+#: functions/wpalchemy/repeating-textarea.php:15
+msgid "Click and drag to sort"
+msgstr "Kliknutím a tažením seřadit"
+
+#: functions/wpalchemy/repeating-textarea.php:18
+msgid "Section"
+msgstr "Sekce"
+
+#: functions/wpalchemy/repeating-textarea.php:37
+msgid "Box Type"
+msgstr "Typ prostoru"
+
+#: functions/wpalchemy/repeating-textarea.php:41
+#: functions/wpalchemy/repeating-textarea.php:54
+msgid "Fluid"
+msgstr "Proměnlivý"
+
+#: functions/wpalchemy/repeating-textarea.php:42
+#: functions/wpalchemy/repeating-textarea.php:53
+msgid "Contained"
+msgstr "Omezený"
+
+#: functions/wpalchemy/repeating-textarea.php:49
+msgid "Inner Box Type"
+msgstr "Typ vnitřního prostoru"
+
+#: functions/wpalchemy/repeating-textarea.php:61
+msgid "Custom Classes"
+msgstr "Vlastní třídy"
+
+#: functions/wpalchemy/repeating-textarea.php:78
+msgid "Top Padding"
+msgstr "Vrchní odsazení"
+
+#: functions/wpalchemy/repeating-textarea.php:87
+msgid "Bottom Padding"
+msgstr "Spodní odsazení"
+
+#: functions/wpalchemy/repeating-textarea.php:100
+msgid "Background Color"
+msgstr "Barva pozadí"
+
+#: functions/wpalchemy/repeating-textarea.php:108
+#: functions/wpalchemy/repeating-textarea.php:120
+msgid "Background Image"
+msgstr "Obrázek na pozadí"
+
+#: functions/wpalchemy/repeating-textarea.php:120
+msgid "Upload"
+msgstr "Nahrát"
+
+#: functions/wpalchemy/repeating-textarea.php:122
+msgid "Remove"
+msgstr "Odstranit"
+
+#: functions/wpalchemy/repeating-textarea.php:129
+msgid "Parallax Effect"
+msgstr "Paralaxový efekt"
+
+#: functions/wpalchemy/repeating-textarea.php:132
+msgid "Disable"
+msgstr "Zakázat"
+
+#: functions/wpalchemy/repeating-textarea.php:133
+msgid "Enable"
+msgstr "Povolit"
+
+#: functions/wpalchemy/repeating-textarea.php:143
+msgid "Text Color"
+msgstr "Barva textu"
+
+#: functions/wpalchemy/repeating-textarea.php:152
+msgid "Link Color"
+msgstr "Barva odkazu"
+
+#: functions/wpalchemy/repeating-textarea.php:161
+msgid "Link Color Hover"
+msgstr "Barva odkazu při přejetí kurzorem myši"
+
+#: functions/wpalchemy/repeating-textarea.php:180
+msgid "Visual"
+msgstr "Vizuální"
+
+#: functions/wpalchemy/repeating-textarea.php:181
+msgctxt "Name for the Text editor tab (formerly HTML)"
+msgid "Text"
+msgstr "Textový"
+
+#: functions/wpalchemy/repeating-textarea.php:200
+msgid "Add Section"
+msgstr "Přidat sekci"
+
+#: functions/wpalchemy/repeating-textarea.php:201
+msgid "Remove Sections"
+msgstr "Odebrat sekce"
+
+#: functions/wpalchemy/use-sections.php:6
+msgid "No"
+msgstr "Ne"
+
+#: functions/wpalchemy/use-sections.php:7
+msgid "Yes"
+msgstr "Ano"
+
+#: functions/wpalchemy/use-sections.php:11
+msgid "Send sections to default editor"
+msgstr "Poslat sekce do výchozího editoru"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+#~ msgstr ""
+#~ "Je dostupná nová verze %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+#~ "\"%2$s\">Zobrazit podrobnosti o verzi %3$s</a>."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+#~ "\">update now</a>."
+#~ msgstr ""
+#~ "Je dostupná nová verze %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+#~ "\"%2$s\">Zobrazit podrobnosti o verzi %3$s</a> nebo <a href=\"%4$s"
+#~ "\">aktualizovat nyní</a>."
+
+#~ msgid "You do not have permission to install plugin updates"
+#~ msgstr "Nemáte oprávnění k instalaci aktualizací pluginů"
+
+#~ msgid "Error"
+#~ msgstr "Chyba"
+
+#~ msgid ""
+#~ "Want updates served directly to your Dashboard? Activate the email you "
+#~ "purchased your add-ons with here."
+#~ msgstr ""
+#~ "Chcete aktualizace dodávat přímo do vaší Nástěnky? Aktivujte zde email, "
+#~ "kterým jste zakoupili vaše doplňky."
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Deactivate Email"
+#~ msgstr "Deaktivovat email"
+
+#~ msgid "Activate Email"
+#~ msgstr "Aktivovat email"
+
+#~ msgid "Save Email"
+#~ msgstr "Uložit email"
+
+#~ msgid "Enable All Updates"
+#~ msgstr "Povolit všechny aktualizace"
+
+#~ msgid "Disable Updates"
+#~ msgstr "Zakázat aktualizace"
+
+#~ msgid "Enable Updates"
+#~ msgstr "Povolit aktualizace"
+
+#~ msgid "Email activation failed. This email does not exist in our records."
+#~ msgstr "Aktivace emailu selhala. Tento email v našich záznamech neexistuje."
+
+#~ msgid "Email activated."
+#~ msgstr "Email aktivován."
+
+#~ msgid "Email deactivated."
+#~ msgstr "Email deaktivován."
+
+#~ msgid "License failed."
+#~ msgstr "Licence selhala."
+
+#~ msgid "License activated."
+#~ msgstr "Licence aktivována."
+
+#~ msgid "Licenses activated."
+#~ msgstr "Licence aktivovány."
+
+#~ msgid "Deactivation failed."
+#~ msgstr "Deaktivace selhala."
+
+#~ msgid "License deactivated."
+#~ msgstr "Licence deaktivována."

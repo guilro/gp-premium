@@ -1,0 +1,280 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Hooks\n"
+"POT-Creation-Date: 2016-02-22 20:45+0100\n"
+"PO-Revision-Date: 2016-02-22 20:46+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/functions.php:58 functions/functions.php:83
+#: functions/functions.php:365
+msgid "GP Hooks"
+msgstr "GP Hooks"
+
+#: functions/functions.php:99
+msgid "wp_head"
+msgstr "wp_head"
+
+#: functions/functions.php:107
+msgid "Before Header"
+msgstr "Vor Kopfbereich"
+
+#: functions/functions.php:115
+msgid "Before Header Content"
+msgstr "Vor dem Inhalt des Kopfbereichs"
+
+#: functions/functions.php:123
+msgid "After Header Content"
+msgstr "Nach dem Inhalt des Kopfbereichs"
+
+#: functions/functions.php:131
+msgid "After Header"
+msgstr "Nach Kopfbereich"
+
+#: functions/functions.php:139
+msgid "Inside Content Container"
+msgstr "Im Inhaltsbereich"
+
+#: functions/functions.php:147
+msgid "Before Content"
+msgstr "Vor Inhalt"
+
+#: functions/functions.php:155
+msgid "After Entry Title"
+msgstr "Nach Seitentitel"
+
+#: functions/functions.php:163
+msgid "After Content"
+msgstr "Nach Inhalt"
+
+#: functions/functions.php:171
+msgid "Before Right Sidebar Content"
+msgstr "Vor rechter Seitenleiste"
+
+#: functions/functions.php:179
+msgid "After Right Sidebar Content"
+msgstr "Nach rechter Seitenleiste"
+
+#: functions/functions.php:187
+msgid "Before Left Sidebar Content"
+msgstr "Vor Inhalt der linken Seitenleiste"
+
+#: functions/functions.php:195
+msgid "After Left Sidebar Content"
+msgstr "Nach Inhalt der linken Seitenleiste"
+
+#: functions/functions.php:203
+msgid "Before Footer"
+msgstr "Vor Fußbereich"
+
+#: functions/functions.php:211
+msgid "After Footer Widgets"
+msgstr "Nach dem Footer-Widgets"
+
+#: functions/functions.php:219
+msgid "Before Footer Content"
+msgstr "Vor Inhalt des Fußbereichs"
+
+#: functions/functions.php:227
+msgid "After Footer Content"
+msgstr "Nach Inhalt des Fußbereichs"
+
+#: functions/functions.php:235
+msgid "wp_footer"
+msgstr "wp_footer"
+
+#: functions/functions.php:318
+msgid "Execute PHP"
+msgstr "PHP ausführen"
+
+#: functions/functions.php:319
+msgid "Disable Hook"
+msgstr "Deaktiviere Hook"
+
+#: functions/functions.php:367
+msgid ""
+"Use these fields to insert anything you like throughout GeneratePress. "
+"Shortcodes are allowed, and you can even use PHP if you check the Execute "
+"PHP checkboxes."
+msgstr ""
+"Verwenden Sie diese Felder zum einfügen, von was auch immer, in "
+"GeneratePress. Shortcodes sind erlaubt, und Sie können sogar PHP verwenden, "
+"wenn Sie die Ausführung von PHP erlaubt ist."
+
+#: functions/functions.php:369
+msgid "Show all"
+msgstr "Alle anzeigen"
+
+#: functions/functions.php:380
+msgid "Save Hooks"
+msgstr "Speichere Hooks"
+
+#: functions/functions.php:450
+msgid "Hooks saved."
+msgstr "Hooks gespeichert."
+
+#: functions/ie.php:56
+msgid "Export GP Hooks"
+msgstr "Exportiere GP Hooks"
+
+#: functions/ie.php:106
+msgid "Warning: This will delete your settings."
+msgstr "Warnung: Ihre Einstellungen werden gelöscht."
+
+#: functions/ie.php:108
+msgid "Delete GP Hooks"
+msgstr "Lösche GP Hooks"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+#~ msgstr ""
+#~ "Es ist eine neue Version von %1$sverfügbar. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">Zeige Details der Version %3$s </a>."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+#~ "\">update now</a>."
+#~ msgstr ""
+#~ "Es ist eine neue Version von %1$s verfügbar. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">Zeige Details zu Version %3$s </a> oder <a "
+#~ "href=\"%4$s\">aktualisiere jetzt.</a>."
+
+#~ msgid "You do not have permission to install plugin updates"
+#~ msgstr "Sie haben keine Berechtigung Plugin-Updates zu installieren"
+
+#~ msgid "Error"
+#~ msgstr "Fehler"
+
+#~ msgid "Save Settings"
+#~ msgstr "Einstellungen speichern"
+
+#~ msgid ""
+#~ "Want updates served directly to your Dashboard? Activate the email you "
+#~ "purchased your add-ons with here."
+#~ msgstr ""
+#~ "Möchtest Du die Updates direkt auf dem Dashboard? Aktiviere Deine E-Mail "
+#~ "mit der Du bezahlt hast."
+
+#~ msgid "Email"
+#~ msgstr "E-Mail"
+
+#~ msgid "Deactivate Email"
+#~ msgstr "E-Mail deaktivieren"
+
+#~ msgid "Activate Email"
+#~ msgstr "E-Mail aktivieren"
+
+#~ msgid "Save Email"
+#~ msgstr "E-Mail speichern"
+
+#~ msgid "Enable All Updates"
+#~ msgstr "Alle Updates aktivieren"
+
+#~ msgid "Disable Updates"
+#~ msgstr "Updates deaktivieren"
+
+#~ msgid "Enable Updates"
+#~ msgstr "Updates aktivieren"
+
+#~ msgid "Email activation failed. This email does not exist in our records."
+#~ msgstr ""
+#~ "Email-Aktivierung ist fehlgeschlagen. Diese e-Mail ist nicht in unseren "
+#~ "Aufzeichnungen vorhanden."
+
+#~ msgid "Email activated."
+#~ msgstr "E-Mail aktiviert."
+
+#~ msgid "Email deactivated."
+#~ msgstr "E-Mail deaktiviert."
+
+#~ msgid "License failed."
+#~ msgstr "Lizenz ungültig oder nicht vorhanden."
+
+#~ msgid "License activated."
+#~ msgstr "Lizenz aktiviert."
+
+#~ msgid "Licenses activated."
+#~ msgstr "Lizenzen aktiviert."
+
+#~ msgid "Deactivation failed."
+#~ msgstr "Deaktivierung ist fehlgeschlagen."
+
+#~ msgid "License deactivated."
+#~ msgstr "Lizenz deaktiviert."
+
+#~ msgid "GeneratePress Hooks"
+#~ msgstr "GeneratePress Hooks"
+
+#~ msgid "verified"
+#~ msgstr "bestätigt"
+
+#~ msgid "Deactivate"
+#~ msgstr "Deaktivieren"
+
+#~ msgid "unverified"
+#~ msgstr "Ungeprüft"
+
+#~ msgid "Activate"
+#~ msgstr "Aktivieren"
+
+#~ msgid "Deactivate License"
+#~ msgstr "Lizenz deaktivieren"
+
+#~ msgid "active"
+#~ msgstr "aktiv"
+
+#~ msgid "Activate License"
+#~ msgstr "Lizenz aktivieren"
+
+#~ msgid "inactive"
+#~ msgstr "inaktiv"
+
+#~ msgid "Generate Hooks License Key"
+#~ msgstr "Generate Hooks Lizenz-Schlüssel generieren"
+
+#~ msgid ""
+#~ "Activate your addons by entering the email you purchased them with below. "
+#~ "Save and verify, then your purchased addons will appear below for "
+#~ "activation."
+#~ msgstr ""
+#~ "Aktivieren Sie Ihre Addons durch Eingabe der e-Mail, die Sie beim Kauf "
+#~ "genutzt haben. Speichern Sie zur Überprüfung und anschließend stehen die "
+#~ "gekauften Addons zur Verfügung."
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "Action"
+#~ msgstr "Aktion"
+
+#~ msgid "Refresh"
+#~ msgstr "Aktualisieren"
+
+#~ msgid "Verify Email"
+#~ msgstr "E-Mail bestätigen"
+
+#~ msgid "Activate All"
+#~ msgstr "Alle aktivieren"
+
+#~ msgid "Product"
+#~ msgstr "Produkt"
+
+#~ msgid "Version"
+#~ msgstr "Version"
+
+#~ msgid "Once Every 3 Days"
+#~ msgstr "Einmal alle 3 Tage"

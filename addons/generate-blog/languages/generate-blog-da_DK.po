@@ -1,0 +1,119 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Blog\n"
+"POT-Creation-Date: 2014-10-14 12:15-0800\n"
+"PO-Revision-Date: 2015-03-14 09:44+0100\n"
+"Last-Translator: Bjørn Seaton <sangkursus@etheltliv.dk>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: da_DK\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: inc/functions.php:10
+msgid "Read more..."
+msgstr "Læs mere..."
+
+#: inc/functions.php:14
+msgid "+ More"
+msgstr "+ Mere"
+
+#: inc/functions.php:44
+msgid "Excerpt Length"
+msgstr "Længde af Uddrag"
+
+#: inc/functions.php:62
+msgid "Read more label"
+msgstr "Læs mere etiket"
+
+#: inc/functions.php:87
+msgid "Masonry"
+msgstr "Murværk"
+
+#: inc/functions.php:90
+msgid "Enable"
+msgstr "Aktivér"
+
+#: inc/functions.php:91
+msgid "Disable"
+msgstr "Deaktivér"
+
+#: inc/functions.php:117
+msgid "Masonry Block Width"
+msgstr "Murværk blokbredde"
+
+#: inc/functions.php:120 inc/functions.php:151 inc/functions.php:566
+msgid "Small"
+msgstr "Lille"
+
+#: inc/functions.php:121 inc/functions.php:152 inc/functions.php:567
+msgid "Medium"
+msgstr "Medium"
+
+#: inc/functions.php:122 inc/functions.php:153 inc/functions.php:568
+msgid "Large"
+msgstr "Stor"
+
+#: inc/functions.php:148
+msgid "Masonry Most Recent Width"
+msgstr "Murværk Mest Nylige Bredde"
+
+#: inc/functions.php:172
+msgid "Masonry Load More Text"
+msgstr "Murværk Hent Flere Tekst"
+
+#: inc/functions.php:190
+msgid "Masonry Loading Text"
+msgstr "Murværk Indlæser Tekst"
+
+#: inc/functions.php:215
+msgid "Post Image"
+msgstr "Indlægsbillede"
+
+#: inc/functions.php:218 inc/functions.php:248 inc/functions.php:278
+#: inc/functions.php:308 inc/functions.php:338
+msgid "Show"
+msgstr "Vis"
+
+#: inc/functions.php:219 inc/functions.php:249 inc/functions.php:279
+#: inc/functions.php:309 inc/functions.php:339
+msgid "Hide"
+msgstr "Skjul"
+
+#: inc/functions.php:245
+msgid "Date"
+msgstr "Dato"
+
+#: inc/functions.php:275
+msgid "Author"
+msgstr "Forfatter"
+
+#: inc/functions.php:305
+msgid "Categories"
+msgstr "Kategorier"
+
+#: inc/functions.php:335
+msgid "Comment Link"
+msgstr "Kommentar Link"
+
+#: inc/functions.php:532 inc/functions.php:563
+msgid "Masonry Post Width"
+msgstr "Murværk indlægsbredde"
+
+#: inc/functions.php:565
+msgid "Global setting"
+msgstr "Global indstillinger"
+
+#: inc/ie.php:14
+msgid "Delete Blog Customizer Settings"
+msgstr "Slet tilpassede indstillinger for Blog"
+
+#: inc/ie.php:51
+msgid "Export Blog Customizer Settings"
+msgstr "Eksporter tilpassede indstillinger for Blog"

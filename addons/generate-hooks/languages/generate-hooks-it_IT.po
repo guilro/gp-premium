@@ -1,0 +1,195 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Hooks\n"
+"POT-Creation-Date: 2016-01-13 19:43+0100\n"
+"PO-Revision-Date: 2016-01-13 19:56+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language: it_IT\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/functions.php:58 functions/functions.php:83
+#: functions/functions.php:365
+msgid "GP Hooks"
+msgstr "GP Hook"
+
+#: functions/functions.php:99
+msgid "wp_head"
+msgstr "wp_head"
+
+#: functions/functions.php:107
+msgid "Before Header"
+msgstr "Prima della  intestazione"
+
+#: functions/functions.php:115
+msgid "Before Header Content"
+msgstr "Prima del Contenuto dell'Intestazione"
+
+#: functions/functions.php:123
+msgid "After Header Content"
+msgstr "Dopo il contenuto dell'intestazione"
+
+#: functions/functions.php:131
+msgid "After Header"
+msgstr "Dopo l’intestazione"
+
+#: functions/functions.php:139
+msgid "Inside Content Container"
+msgstr "All'Interno del Contenitore del Contenuto"
+
+#: functions/functions.php:147
+msgid "Before Content"
+msgstr "Prima del Contenuto"
+
+#: functions/functions.php:155
+msgid "After Entry Title"
+msgstr "Dopo il titolo dell'Articolo (Entry)"
+
+#: functions/functions.php:163
+msgid "After Content"
+msgstr "Dopo il Contenuto"
+
+#: functions/functions.php:171
+msgid "Before Right Sidebar Content"
+msgstr "Prima del Contenuto della Barra laterale Destra"
+
+#: functions/functions.php:179
+msgid "After Right Sidebar Content"
+msgstr "Dopo il contenuto della barra laterale Destra"
+
+#: functions/functions.php:187
+msgid "Before Left Sidebar Content"
+msgstr "Prima del Contenuto della Barra laterale Sinistra"
+
+#: functions/functions.php:195
+msgid "After Left Sidebar Content"
+msgstr "Dopo il contenuto della barra laterale Sinistra"
+
+#: functions/functions.php:203
+msgid "Before Footer"
+msgstr "Prima del pié di pagina (Footer)"
+
+#: functions/functions.php:211
+msgid "After Footer Widgets"
+msgstr "Dopo i Widgets del pié di pagina (Footer)"
+
+#: functions/functions.php:219
+msgid "Before Footer Content"
+msgstr "Prima del Contenuto del pié di pagina (footer)"
+
+#: functions/functions.php:227
+msgid "After Footer Content"
+msgstr "Dopo il Contenuto del pié di pagina (Footer)"
+
+#: functions/functions.php:235
+msgid "wp_footer"
+msgstr "wp_footer"
+
+#: functions/functions.php:318
+msgid "Execute PHP"
+msgstr "Eseguire PHP"
+
+#: functions/functions.php:319
+msgid "Disable Hook"
+msgstr "Disabilita hook"
+
+#: functions/functions.php:367
+msgid ""
+"Use these fields to insert anything you like throughout GeneratePress. "
+"Shortcodes are allowed, and you can even use PHP if you check the Execute "
+"PHP checkboxes."
+msgstr ""
+"Utilizza questi campi per espandere e inserire qualsiasi contenuto "
+"all'interno di GeneratePress. Puoi utilizzare Shortcodes così come "
+"eseguire del codice PHP se spunti l'apposita casella."
+
+#: functions/functions.php:369
+msgid "Show all"
+msgstr "Mostra tutto"
+
+#: functions/functions.php:380
+msgid "Save Hooks"
+msgstr "Salva i Hooks"
+
+#: functions/functions.php:450
+msgid "Hooks saved."
+msgstr "Hooks salvati"
+
+#: functions/ie.php:56
+msgid "Export GP Hooks"
+msgstr "Esporta gli Hooks"
+
+#: functions/ie.php:106
+msgid "Warning: This will delete your settings."
+msgstr "Attenzione: Questo cancellerà le tue impostazioni."
+
+#: functions/ie.php:108
+msgid "Delete GP Hooks"
+msgstr "Elimina GP Hooks"
+
+#: inc/EDD_SL_Plugin_Updater.php:181
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"C'è una nuova versione disponibile di %1$s . <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">Vedi i dettagli della  versione %3$s </a>."
+
+#: inc/EDD_SL_Plugin_Updater.php:188
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"C’è una nuova versione di %1$s disponibile. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">Vedi i dettagli della versione %3$s </a> o <a "
+"href=“%4$s”>aggiorna ora</a>."
+
+#: inc/EDD_SL_Plugin_Updater.php:326
+msgid "You do not have permission to install plugin updates"
+msgstr "Non hai il permesso di installare gli aggiornamenti dei plugin"
+
+#: inc/EDD_SL_Plugin_Updater.php:326
+msgid "Error"
+msgstr "Errore"
+
+#: inc/verify.php:84
+msgid "License failed."
+msgstr "Licenza non riuscita."
+
+#: inc/verify.php:88
+msgid "License activated."
+msgstr "Licenza attivata."
+
+#: inc/verify.php:92
+msgid "License deactivated."
+msgstr "Licenza disattivata."
+
+#: inc/verify.php:109
+#, php-format
+msgid "Updates %s"
+msgstr "Aggiornamenti %s"
+
+#: inc/verify.php:109
+msgid "Help"
+msgstr "Aiuto"
+
+#: inc/verify.php:134
+msgid "License Key"
+msgstr "Chiave Licenza"
+
+#: inc/verify.php:139
+msgid "Update"
+msgstr "Aggiorna"

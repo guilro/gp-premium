@@ -1,0 +1,193 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Hooks\n"
+"POT-Creation-Date: 2014-08-04 08:59-0800\n"
+"PO-Revision-Date: 2015-03-14 10:05+0100\n"
+"Last-Translator: Bjørn Seaton <sangkursus@etheltliv.dk>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: da_DK\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: generate-hooks.php:90 generate-hooks.php:125
+msgid "GP Hooks"
+msgstr "GP hooks"
+
+#: generate-hooks.php:141
+msgid "wp_head"
+msgstr "wp_head"
+
+#: generate-hooks.php:150
+msgid "Before Header"
+msgstr "Før sidehoved"
+
+#: generate-hooks.php:159
+msgid "Before Header Content"
+msgstr "Før sidehovedindhold"
+
+#: generate-hooks.php:168
+msgid "After Header Content"
+msgstr "Efter sidehovedindhold"
+
+#: generate-hooks.php:177
+msgid "After Header"
+msgstr "Efter sidehoved"
+
+#: generate-hooks.php:186
+msgid "Before Content"
+msgstr "Før indhold"
+
+#: generate-hooks.php:195
+msgid "After Entry Title"
+msgstr "Efter indlægstitel"
+
+#: generate-hooks.php:204
+msgid "After Content"
+msgstr "Efter indhold"
+
+#: generate-hooks.php:213
+msgid "Before Right Sidebar Content"
+msgstr "Før Højre Sidebars Indhold"
+
+#: generate-hooks.php:222
+msgid "After Right Sidebar Content"
+msgstr "Efter Højre Sidebars Indhold"
+
+#: generate-hooks.php:231
+msgid "Before Left Sidebar Content"
+msgstr "Før Venstre Sidebars Indhold"
+
+#: generate-hooks.php:240
+msgid "After Left Sidebar Content"
+msgstr "Efter Venstre Sidebars Indhold"
+
+#: generate-hooks.php:249
+msgid "Before Footer"
+msgstr "Før sidefod"
+
+#: generate-hooks.php:258
+msgid "Before Footer Content"
+msgstr "Før sidefodsindhold"
+
+#: generate-hooks.php:267
+msgid "After Footer Content"
+msgstr "Efter sidefodsindhold"
+
+#: generate-hooks.php:276
+msgid "wp_footer"
+msgstr "wp_footer"
+
+#: generate-hooks.php:362
+msgid "Execute PHP"
+msgstr "Afvikl PHP"
+
+#: generate-hooks.php:403
+msgid "GeneratePress Hooks"
+msgstr "GeneratePress Hooks"
+
+#: generate-hooks.php:404
+msgid ""
+"Use these fields to insert anything you like throughout GeneratePress. "
+"Shortcodes are allowed, and you can even use PHP if you check the Execute "
+"PHP checkboxes."
+msgstr ""
+"Brug disse felter til at indsætte hvad du vil igennem GeneratePress. "
+"Shortcodes er tilladte, og du kan endda bruge PHP hvis du afkrydser Afvikl "
+"PHP kasserne."
+
+#: generate-hooks.php:406
+msgid "Show all"
+msgstr "Vis alle"
+
+#: generate-hooks.php:437
+msgid "Save Settings"
+msgstr "Gem indstillinger"
+
+#: inc/activation.php:39 inc/verification.php:44
+msgid "verified"
+msgstr "verificeret"
+
+#: inc/activation.php:43 inc/verification.php:56
+msgid "Deactivate"
+msgstr "Deaktiver"
+
+#: inc/activation.php:55 inc/verification.php:46
+msgid "unverified"
+msgstr "ikke-verificeret"
+
+#: inc/activation.php:59
+msgid "Activate"
+msgstr "Aktiver"
+
+#: inc/old-license.php:14
+msgid "Deactivate License"
+msgstr "Deaktiver Licens"
+
+#: inc/old-license.php:15
+msgid "active"
+msgstr "aktiv"
+
+#: inc/old-license.php:18
+msgid "Activate License"
+msgstr "Aktiver Licens"
+
+#: inc/old-license.php:19
+msgid "inactive"
+msgstr "inaktiv"
+
+#: inc/old-license.php:23
+msgid "Generate Hooks License Key"
+msgstr "Generate Hooks Licensnøgle"
+
+#: inc/verification.php:15
+msgid ""
+"Activate your addons by entering the email you purchased them with below. "
+"Save and verify, then your purchased addons will appear below for activation."
+msgstr ""
+"Aktiver dine addons ved at indtaste den email du købte dem fra forneden. Gem "
+"og verificer, og så vises dine købte addons forneden hvor de kan aktiveres."
+
+#: inc/verification.php:21
+msgid "Email"
+msgstr "Email"
+
+#: inc/verification.php:22 inc/verification.php:77 inc/verification.php:86
+msgid "Status"
+msgstr "Status"
+
+#: inc/verification.php:23 inc/verification.php:78 inc/verification.php:87
+msgid "Action"
+msgstr "Handling"
+
+#: inc/verification.php:57
+msgid "Refresh"
+msgstr "Genindlæs"
+
+#: inc/verification.php:60
+msgid "Verify Email"
+msgstr "Verificér Email"
+
+#: inc/verification.php:70
+msgid "Activate All"
+msgstr "Aktiver Alle"
+
+#: inc/verification.php:75 inc/verification.php:84
+msgid "Product"
+msgstr "Produkt"
+
+#: inc/verification.php:76 inc/verification.php:85
+msgid "Version"
+msgstr "Version"
+
+#: inc/verification.php:321
+msgid "Once Every 3 Days"
+msgstr "En gang hver 3. dag"

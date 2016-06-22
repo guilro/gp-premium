@@ -1,0 +1,162 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Sections\n"
+"POT-Creation-Date: 2016-01-13 10:30-0800\n"
+"PO-Revision-Date: 2016-05-12 18:25+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
+"Last-Translator: Krzysztof Grochocki <contact@beherit.pl>\n"
+"Language: pl\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: inc/acf\n"
+
+#: functions/generate-sections.php:226
+msgid "Use Sections"
+msgstr "Używaj sekcji"
+
+#: functions/generate-sections.php:237
+msgid "Sections"
+msgstr "Sekcje"
+
+#: functions/generate-sections.php:314
+msgid "Error: Content already detected in default editor."
+msgstr "Błąd: treść jest już obecna w domyślnym edytorze."
+
+#: functions/generate-sections.php:315
+msgid ""
+"Please activate the \"Visual\" tab in your main editor before transferring "
+"content."
+msgstr ""
+"Aktywuj zakładkę \"Wizualny\" w swoim głównym edytorze przed "
+"przeniesieniem zawartości."
+
+#: functions/templates/generate-sections-page-template.php:96
+msgid "No sections added!"
+msgstr "Nie dodano sekcji!"
+
+#: functions/wpalchemy/repeating-textarea.php:13
+msgid "Click to remove"
+msgstr "Kliknij aby usunąć"
+
+#: functions/wpalchemy/repeating-textarea.php:14
+msgid "Click to toggle"
+msgstr "Kliknij aby przełączyć"
+
+#: functions/wpalchemy/repeating-textarea.php:15
+msgid "Click and drag to sort"
+msgstr "Kliknij i przeciągnij aby posortować"
+
+#: functions/wpalchemy/repeating-textarea.php:18
+msgid "Section"
+msgstr "Sekcja"
+
+#: functions/wpalchemy/repeating-textarea.php:37
+msgid "Box Type"
+msgstr "Typ opakowania"
+
+#: functions/wpalchemy/repeating-textarea.php:41
+#: functions/wpalchemy/repeating-textarea.php:54
+msgid "Fluid"
+msgstr "Cała szerokość"
+
+#: functions/wpalchemy/repeating-textarea.php:42
+#: functions/wpalchemy/repeating-textarea.php:53
+msgid "Contained"
+msgstr "W pojemniku"
+
+#: functions/wpalchemy/repeating-textarea.php:49
+msgid "Inner Box Type"
+msgstr "Rodzaj opakowania wewnętrznego"
+
+#: functions/wpalchemy/repeating-textarea.php:61
+msgid "Custom Classes"
+msgstr "Własne klasy"
+
+#: functions/wpalchemy/repeating-textarea.php:78
+msgid "Top Padding"
+msgstr "Odstęp od góry"
+
+#: functions/wpalchemy/repeating-textarea.php:87
+msgid "Bottom Padding"
+msgstr "Odstęp na dole"
+
+#: functions/wpalchemy/repeating-textarea.php:100
+msgid "Background Color"
+msgstr "Kolor tła"
+
+#: functions/wpalchemy/repeating-textarea.php:108
+#: functions/wpalchemy/repeating-textarea.php:120
+msgid "Background Image"
+msgstr "Obrazek tła"
+
+#: functions/wpalchemy/repeating-textarea.php:120
+msgid "Upload"
+msgstr "Wczytaj"
+
+#: functions/wpalchemy/repeating-textarea.php:122
+msgid "Remove"
+msgstr "Usuń"
+
+#: functions/wpalchemy/repeating-textarea.php:129
+msgid "Parallax Effect"
+msgstr "Efekt paralaksy"
+
+#: functions/wpalchemy/repeating-textarea.php:132
+msgid "Disable"
+msgstr "Wyłącz"
+
+#: functions/wpalchemy/repeating-textarea.php:133
+msgid "Enable"
+msgstr "Włącz"
+
+#: functions/wpalchemy/repeating-textarea.php:143
+msgid "Text Color"
+msgstr "Kolor tekstu"
+
+#: functions/wpalchemy/repeating-textarea.php:152
+msgid "Link Color"
+msgstr "Kolor odnośnika"
+
+#: functions/wpalchemy/repeating-textarea.php:161
+msgid "Link Color Hover"
+msgstr "Kolor odnośnika po najechaniu"
+
+#: functions/wpalchemy/repeating-textarea.php:180
+msgid "Visual"
+msgstr "Wizualny"
+
+#: functions/wpalchemy/repeating-textarea.php:181
+msgctxt "Name for the Text editor tab (formerly HTML)"
+msgid "Text"
+msgstr "Tekstowy"
+
+#: functions/wpalchemy/repeating-textarea.php:200
+msgid "Add Section"
+msgstr "Dodaj sekcję"
+
+#: functions/wpalchemy/repeating-textarea.php:201
+msgid "Remove Sections"
+msgstr "Usuń sekcje"
+
+#: functions/wpalchemy/use-sections.php:6
+msgid "No"
+msgstr "Nie"
+
+#: functions/wpalchemy/use-sections.php:7
+msgid "Yes"
+msgstr "Tak"
+
+#: functions/wpalchemy/use-sections.php:11
+msgid "Send sections to default editor"
+msgstr "Wyślij sekcje do domyślnego edytora"

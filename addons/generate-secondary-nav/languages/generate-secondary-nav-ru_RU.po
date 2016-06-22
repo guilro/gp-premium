@@ -1,0 +1,362 @@
+# Translation by Alexey Chumakov, 2015
+# Feel free to forward any issues or suggestions on translation to Alexey Chumakov
+# (**) comments indicate places for future improvement.
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Secondary Navigation\n"
+"POT-Creation-Date: 2015-05-19 22:23+0300\n"
+"PO-Revision-Date: 2015-05-20 19:57+0300\n"
+"Last-Translator: Alexey Chumakov <alex@chumakov.ru>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8\n"
+"X-Poedit-Basepath: ..\\..\\..\\\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: addons\\generate-secondary-nav\n"
+"X-Poedit-SearchPath-1: inc\n"
+
+#: inc/functions.php:7
+msgid "Secondary Menu"
+msgstr "Дополнительное меню"
+
+#: inc/functions.php:97 inc/functions.php:109
+msgid "Secondary Navigation"
+msgstr "Дополнительное меню"
+
+#: inc/functions.php:126
+msgid "Mobile Label"
+msgstr "Метка для мобильных"
+
+#: inc/functions.php:151
+msgid "Navigation Layout"
+msgstr "Компоновка меню"
+
+#: inc/functions.php:154
+msgid "Fluid / Full Width"
+msgstr "Резиновая / во всю ширину"
+
+#: inc/functions.php:155
+msgid "Contained"
+msgstr "Ограниченная"
+
+#: inc/functions.php:181
+msgid "Navigation Position"
+msgstr "Расположение"
+
+#: inc/functions.php:184
+msgid "Below Header"
+msgstr "Под шапкой"
+
+#: inc/functions.php:185
+msgid "Above Header"
+msgstr "Над шапкой"
+
+#: inc/functions.php:186
+msgid "Float Right"
+msgstr "Плавающее вправо"
+
+#: inc/functions.php:187
+msgid "Left Sidebar"
+msgstr "В левом боковике"
+
+#: inc/functions.php:188
+msgid "Right Sidebar"
+msgstr "В правом боковике"
+
+#: inc/functions.php:189
+msgid "No Navigation"
+msgstr "Без меню"
+
+#: inc/functions.php:215
+msgid "Navigation Alignment"
+msgstr "Выранивание"
+
+#: inc/functions.php:218
+msgid "Left"
+msgstr "Влево"
+
+#: inc/functions.php:219
+msgid "Center"
+msgstr "По центру"
+
+#: inc/functions.php:220
+msgid "Right"
+msgstr "Вправо"
+
+#: inc/functions.php:236
+msgid "Secondary Navigation Spacing"
+msgstr "Размеры доп. меню"
+
+#: inc/functions.php:249
+msgid "Secondary Menu Items"
+msgstr "Пункты дополнительного меню"
+
+#: inc/functions.php:250
+msgid "These options control the size of your secondary menu items."
+msgstr "Эти параметры устанавливают размер пунктов дополнительного меню"
+
+#: inc/functions.php:254
+msgid "Left/Right Spacing"
+msgstr "Отступы слева/справа"
+
+#: inc/functions.php:255
+msgid "Height"
+msgstr "Высота"
+
+#: inc/functions.php:321
+msgid "Secondary Sub-menu Item Height"
+msgstr "Высота пункта"
+
+#: inc/functions.php:322
+msgid "The top and bottom spacing of secondary sub-menu items."
+msgstr "Верхний и нижний отступ в пунктах дополнительного подменю"
+
+#: inc/functions.php:359
+msgid "Secondary Navigation Colors"
+msgstr "Цвета доп. меню"
+
+#: inc/functions.php:371 inc/functions.php:450
+msgid "Background"
+msgstr "Фон"
+
+#: inc/functions.php:377 inc/functions.php:456
+msgid "Text"
+msgstr "Текст"
+
+#: inc/functions.php:383 inc/functions.php:462
+msgid "Background Hover"
+msgstr "Фон — наведение"
+
+#: inc/functions.php:389 inc/functions.php:468
+msgid "Text Hover"
+msgstr "Текст — наведение"
+
+#: inc/functions.php:395 inc/functions.php:474
+msgid "Background Current"
+msgstr "Фон — текущий"
+
+#: inc/functions.php:401 inc/functions.php:480
+msgid "Text Current"
+msgstr "Текст — текущий"
+
+#: inc/functions.php:438
+msgid "Secondary Sub-Navigation Colors"
+msgstr "Цвета подменю"
+
+#: inc/functions.php:517
+msgid "Secondary Navigation Typography"
+msgstr "Шрифты доп. меню"
+
+#: inc/functions.php:539
+msgid "Secondary navigation"
+msgstr "Дополнительное меню"
+
+#: inc/functions.php:560
+msgid "Font weight"
+msgstr "Насыщенность"
+
+#: inc/functions.php:582
+msgid "Text transform"
+msgstr "Эффект"
+
+#: inc/functions.php:605
+msgid "Font size"
+msgstr "Размер"
+
+#: inc/functions.php:623
+msgid "Secondary Background Images"
+msgstr "Фоны доп. меню"
+
+#: inc/functions.php:641
+msgid "Navigation"
+msgstr "Меню"
+
+# (**) check with content
+#: inc/functions.php:683 inc/functions.php:745 inc/functions.php:807
+#: inc/functions.php:869 inc/functions.php:943 inc/functions.php:1005
+#: inc/functions.php:1067
+msgid "Repeat"
+msgstr "Повторять"
+
+#: inc/functions.php:684 inc/functions.php:746 inc/functions.php:808
+#: inc/functions.php:870 inc/functions.php:944 inc/functions.php:1006
+#: inc/functions.php:1068
+msgid "Repeat x"
+msgstr "Горизонтально"
+
+#: inc/functions.php:685 inc/functions.php:747 inc/functions.php:809
+#: inc/functions.php:871 inc/functions.php:945 inc/functions.php:1007
+#: inc/functions.php:1069
+msgid "Repeat y"
+msgstr "Вертикально"
+
+#: inc/functions.php:686 inc/functions.php:748 inc/functions.php:810
+#: inc/functions.php:872 inc/functions.php:946 inc/functions.php:1008
+#: inc/functions.php:1070
+msgid "No Repeat"
+msgstr "Не повторять"
+
+#: inc/functions.php:703
+msgid "Navigation Item"
+msgstr "Пункт меню"
+
+#: inc/functions.php:765
+msgid "Navigation Item Hover"
+msgstr "Пункт меню — наведение"
+
+#: inc/functions.php:827
+msgid "Navigation Item Current"
+msgstr "Пункт меню — текущий"
+
+#: inc/functions.php:901
+msgid "Sub-Navigation Item"
+msgstr "Пункт подменю"
+
+#: inc/functions.php:963
+msgid "Sub-Navigation Item Hover"
+msgstr "Пункт подменю — наведение"
+
+#: inc/functions.php:1025
+msgid "Sub-Navigation Item Current"
+msgstr "Пункт подменю — текущий"
+
+# (**) for reader mode
+#: inc/functions.php:1277
+msgid "Skip to content"
+msgstr "Перейти к тексту"
+
+#: inc/ie.php:14
+msgid "Warning: This will delete your settings."
+msgstr "Внимание: ваши настройки будут удалены."
+
+#: inc/ie.php:16
+msgid "Delete Secondary Navigation Customizer Settings"
+msgstr "Удалить настройки дополнительного меню"
+
+#: inc/ie.php:52
+msgid "Export Secondary Navigation Customizer Settings"
+msgstr "Экспортировать настройки дополнительного меню"
+
+#: ~inc/EDD_SL_Plugin_Updater.php:177
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"Доступна новая версия %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+"\"%2$s\">Посмотреть подробности %3$s</a>."
+
+#: ~inc/EDD_SL_Plugin_Updater.php:184
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"Доступна новая версия %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+"\"%2$s\">Посмотреть подробности %3$s</a> или <a href=\"%4$s\">обновить "
+"сейчас</a>."
+
+#: ~inc/EDD_SL_Plugin_Updater.php:324
+msgid "You do not have permission to install plugin updates"
+msgstr "У вас нет прав для установки обновлений плагинов"
+
+#: ~inc/EDD_SL_Plugin_Updater.php:324
+msgid "Error"
+msgstr "Ошибка"
+
+#: ~inc/activation.php:11
+msgid "Add-on deactivated."
+msgstr "Дополнение деактивировано."
+
+#: ~inc/activation.php:15
+msgid "Add-on activated."
+msgstr "Дополнение активировано."
+
+#: ~inc/activation.php:63
+msgid "GP Premium"
+msgstr "Дополнения GP Premium"
+
+#: ~inc/activation.php:88
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: ~inc/activation.php:100
+msgid "Activate"
+msgstr "Активировать"
+
+#: ~inc/verification.php:39
+msgid ""
+"Want updates served directly to your Dashboard? Activate the email you "
+"purchased your add-ons with here."
+msgstr ""
+"Хотите, чтобы обновления подавались прямо в консоль? Активируйте адрес "
+"email, указанный при покупке дополнений."
+
+#: ~inc/verification.php:51 ~inc/verification.php:65
+msgid "Email"
+msgstr "Email"
+
+#: ~inc/verification.php:58
+msgid "Deactivate Email"
+msgstr "Деактивировать адрес"
+
+#: ~inc/verification.php:70
+msgid "Activate Email"
+msgstr "Активировать адрес"
+
+#: ~inc/verification.php:83
+msgid "Save Email"
+msgstr "Сохранить адрес"
+
+#: ~inc/verification.php:94
+msgid "Enable All Updates"
+msgstr "Включить все обновления"
+
+#: ~inc/verification.php:154
+msgid "Disable Updates"
+msgstr "Отключить обновления"
+
+#: ~inc/verification.php:164
+msgid "Enable Updates"
+msgstr "Включить обновления"
+
+#: ~inc/verification.php:750
+msgid "Email activation failed. This email does not exist in our records."
+msgstr "Активация адреса не удалась. Этого адреса нет в наших записях."
+
+#: ~inc/verification.php:754
+msgid "Email activated."
+msgstr "Адрес активирован."
+
+#: ~inc/verification.php:758
+msgid "Email deactivated."
+msgstr "Адрес деактивирован."
+
+#: ~inc/verification.php:762
+msgid "License failed."
+msgstr "Сбой лицензии."
+
+#: ~inc/verification.php:766
+msgid "License activated."
+msgstr "Лицензия активирована."
+
+#: ~inc/verification.php:770
+msgid "Licenses activated."
+msgstr "Лицензии активированы."
+
+#: ~inc/verification.php:774
+msgid "Deactivation failed."
+msgstr "Сбой деактивации."
+
+#: ~inc/verification.php:778
+msgid "License deactivated."
+msgstr "Лицензия деактивирована."

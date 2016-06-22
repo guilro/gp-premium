@@ -1,0 +1,282 @@
+# Translation by Alexey Chumakov, 2015
+# Feel free to forward any issues or suggestions on translation to Alexey Chumakov
+# (**) comments indicate places for future improvement.
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Spacing\n"
+"POT-Creation-Date: 2015-05-19 22:21+0300\n"
+"PO-Revision-Date: 2015-05-20 14:54+0300\n"
+"Last-Translator: Alexey Chumakov <alex@chumakov.ru>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8\n"
+"X-Poedit-Basepath: ..\\..\\..\\\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: addons\\generate-spacing\n"
+"X-Poedit-SearchPath-1: inc\n"
+
+#: inc/functions.php:58
+msgid "Element Spacing"
+msgstr "Отступы между элементами"
+
+#: inc/functions.php:61
+msgid "Change the spacing for various elements using pixels."
+msgstr "Изменение расстояний между различными элементами в пикселах."
+
+#: inc/functions.php:83
+msgid "Header"
+msgstr "Шапка"
+
+#: inc/functions.php:85 inc/functions.php:116 inc/functions.php:147
+#: inc/functions.php:178 inc/functions.php:209
+msgid "Top"
+msgstr "Сверху"
+
+#: inc/functions.php:86 inc/functions.php:117 inc/functions.php:148
+#: inc/functions.php:179 inc/functions.php:210
+msgid "Right"
+msgstr "Справа"
+
+#: inc/functions.php:87 inc/functions.php:118 inc/functions.php:149
+#: inc/functions.php:180 inc/functions.php:211
+msgid "Bottom"
+msgstr "Снизу"
+
+#: inc/functions.php:88 inc/functions.php:119 inc/functions.php:150
+#: inc/functions.php:181 inc/functions.php:212
+msgid "Left"
+msgstr "Слева"
+
+#: inc/functions.php:114
+msgid "Content"
+msgstr "Содержимое"
+
+#: inc/functions.php:145
+msgid "Sidebar Widgets"
+msgstr "Виджеты боковика"
+
+#: inc/functions.php:176
+msgid "Footer Widget Area"
+msgstr "Область виджетов футера"
+
+#: inc/functions.php:207
+msgid "Footer"
+msgstr "Футер"
+
+#: inc/functions.php:384
+msgid "Separating Space"
+msgstr "Разделитель"
+
+#: inc/functions.php:385
+msgid ""
+"The spacing between elements when \"Content Layout\" is set to \"Separate "
+"Containers\"."
+msgstr ""
+"Расстояние между элементами, когда \"Компоновка содержимого\" — "
+"\"Отдельные блоки\"."
+
+#: inc/functions.php:432
+msgid "Primary Menu Items"
+msgstr "Пункты основного меню"
+
+#: inc/functions.php:433
+msgid "These options control the size of your menu items."
+msgstr "Эти параметры задают размер пунктов меню."
+
+#: inc/functions.php:437
+msgid "Left/Right Spacing"
+msgstr "Отступы слева/справа"
+
+#: inc/functions.php:438
+msgid "Height"
+msgstr "Высота"
+
+#: inc/functions.php:504
+msgid "Sub-menu Item Height"
+msgstr "Высота пункта подменю"
+
+#: inc/functions.php:505
+msgid "The top and bottom spacing of sub-menu items."
+msgstr "Верхний/нижний отступ пунктов подменю"
+
+#: inc/functions.php:551
+msgid "Sidebar Widths"
+msgstr "Ширина боковиков"
+
+# Or doesn't fit
+#: inc/functions.php:579
+msgid "Left Sidebar"
+msgstr "Левый"
+
+#: inc/functions.php:582 inc/functions.php:618
+msgid "15%"
+msgstr "15%"
+
+#: inc/functions.php:583 inc/functions.php:619
+msgid "20%"
+msgstr "20%"
+
+#: inc/functions.php:584 inc/functions.php:620
+msgid "25%"
+msgstr "25%"
+
+#: inc/functions.php:585 inc/functions.php:621
+msgid "30%"
+msgstr "30%"
+
+#: inc/functions.php:586 inc/functions.php:622
+msgid "35%"
+msgstr "35%"
+
+#: inc/functions.php:587 inc/functions.php:623
+msgid "40%"
+msgstr "40%"
+
+#: inc/functions.php:588 inc/functions.php:624
+msgid "45%"
+msgstr "45%"
+
+#: inc/functions.php:589 inc/functions.php:625
+msgid "50%"
+msgstr "50%"
+
+# Or doesn't fit
+#: inc/functions.php:615
+msgid "Right Sidebar"
+msgstr "Правый"
+
+#: inc/ie.php:15
+msgid "Warning: This will delete your settings."
+msgstr "Внимание: ваши настройки будут удалены."
+
+#: inc/ie.php:17
+msgid "Delete Spacing Customizer Settings"
+msgstr "Удалить настройки отступов"
+
+#: inc/ie.php:54
+msgid "Export Spacing Customizer Settings"
+msgstr "Экспортировать настройки отступов"
+
+#: ~inc/EDD_SL_Plugin_Updater.php:177
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"Доступна новая версия %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+"\"%2$s\">Посмотреть подробности %3$s</a>."
+
+#: ~inc/EDD_SL_Plugin_Updater.php:184
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"Доступна новая версия %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+"\"%2$s\">Посмотреть подробности %3$s</a> или <a href=\"%4$s\">обновить "
+"сейчас</a>."
+
+#: ~inc/EDD_SL_Plugin_Updater.php:324
+msgid "You do not have permission to install plugin updates"
+msgstr "У вас нет прав для установки обновлений плагинов"
+
+#: ~inc/EDD_SL_Plugin_Updater.php:324
+msgid "Error"
+msgstr "Ошибка"
+
+#: ~inc/activation.php:11
+msgid "Add-on deactivated."
+msgstr "Дополнение деактивировано."
+
+#: ~inc/activation.php:15
+msgid "Add-on activated."
+msgstr "Дополнение активировано."
+
+#: ~inc/activation.php:63
+msgid "GP Premium"
+msgstr "Дополнения GP Premium"
+
+#: ~inc/activation.php:88
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: ~inc/activation.php:100
+msgid "Activate"
+msgstr "Активировать"
+
+#: ~inc/verification.php:39
+msgid ""
+"Want updates served directly to your Dashboard? Activate the email you "
+"purchased your add-ons with here."
+msgstr ""
+"Хотите, чтобы обновления подавались прямо в консоль? Активируйте адрес "
+"email, указанный при покупке дополнений."
+
+#: ~inc/verification.php:51 ~inc/verification.php:65
+msgid "Email"
+msgstr "Email"
+
+#: ~inc/verification.php:58
+msgid "Deactivate Email"
+msgstr "Деактивировать адрес"
+
+#: ~inc/verification.php:70
+msgid "Activate Email"
+msgstr "Активировать адрес"
+
+#: ~inc/verification.php:83
+msgid "Save Email"
+msgstr "Сохранить адрес"
+
+#: ~inc/verification.php:94
+msgid "Enable All Updates"
+msgstr "Включить все обновления"
+
+#: ~inc/verification.php:154
+msgid "Disable Updates"
+msgstr "Отключить обновления"
+
+#: ~inc/verification.php:164
+msgid "Enable Updates"
+msgstr "Включить обновления"
+
+#: ~inc/verification.php:750
+msgid "Email activation failed. This email does not exist in our records."
+msgstr "Активация адреса не удалась. Этого адреса нет в наших записях."
+
+#: ~inc/verification.php:754
+msgid "Email activated."
+msgstr "Адрес активирован."
+
+#: ~inc/verification.php:758
+msgid "Email deactivated."
+msgstr "Адрес деактивирован."
+
+#: ~inc/verification.php:762
+msgid "License failed."
+msgstr "Сбой лицензии."
+
+#: ~inc/verification.php:766
+msgid "License activated."
+msgstr "Лицензия активирована."
+
+#: ~inc/verification.php:770
+msgid "Licenses activated."
+msgstr "Лицензии активированы."
+
+#: ~inc/verification.php:774
+msgid "Deactivation failed."
+msgstr "Сбой деактивации."
+
+#: ~inc/verification.php:778
+msgid "License deactivated."
+msgstr "Лицензия деактивирована."

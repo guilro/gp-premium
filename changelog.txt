@@ -1,0 +1,413 @@
+== changelog ==
+
+= 1.2.86 =
+* Blog: Allow resizer to upscale images
+* Page Header: Allow resizer to upscale images
+* Sections: Fix issue with images enlarging in Sections
+
+= 1.2.85 =
+* Blog: Fix cropping when Photon is being used
+* Page Header: Fix cropping when Photon is being used
+
+= 1.2.84 =
+* Blog: Fix bug where two columns appear briefly at 768px width
+* Blog: Change image resizer to more lightweight option
+* Blog: Fix uneven spacing at the bottom of blog posts in columns
+* Sections: Apply the_content filter once to the whole sections page to avoid multiple sharing icons being added by plugins etc..
+* Page Header: Change image resizer to more lightweight option
+* Page Header: Add apply image sizes button to the Blog Page Header crop options
+* Translations: Czech translations updated - thanks Ondrej!
+* Translations: Polish translations updated - thanks Krzysztof!
+
+= 1.2.83 =
+* Blog: Fix bug where full width post wasn't displaying in columns
+* Blog: Add a check for the blog content customizer control in the theme to prevent warning
+* Blog: Add button to apply post image sizes in the Customizer to prevent unnecessary images being created
+
+= 1.2.82 =
+* Blog: Improve masonry width logic
+* Blog: Improve proportional image resizing
+* Blog: Switch to a better image resizer
+* Spacing: Add spacing for dropdown menu toggle and mobile items in the navigation
+* Colors: Fix text-domain for "Colors" panel to allow it to be translated
+* Colors: Add focus style to buttons
+* Sections: Replace the_content filter with Sections specific filter to avoid plugins adding icons and other content into each section
+* Page Header: Add background image as the video placeholder if it can't be loaded (mobile devices etc..)
+* Page Header: Switch to a better image resizer
+* Typography: Adjust label size in Typography sections in Customizer for longer translations
+* Polish translations added - thanks, Paul!
+
+= 1.2.81 =
+* Page Header: Fix javascript bug in Safari
+
+= 1.2.80 =
+* Page Header: Fix iOS bug with parallax background image
+* Page Header: Move "Appearance > Blog Page Header" to "Customize > Page Header > Blog"
+* Page Header: Adjust proportional resizing
+* Page Header: Add generate_page_header_featured_image filter to force usage of the featured image over the custom field
+* Page Header: Add option to merge site header and page header with a transparent navigation
+* Page Header: Add option to include a video background in your page header
+* Page Header: Add option to replace your logo/header on individual pages/posts
+* Page Header: Improve metabox saving to prevent empty values in the database
+* Page Header: Minify parallax JS
+* Typography: Add input fields to font sizes to manually adjust them without slider
+* Typography: Adjust separators in Customizer
+* Typography: Add mobile font sizes for the main title, H1 and H2
+* Menu Plus: Adjust navigation width with container width in Customizer
+* Menu Plus: Fix sticky navigation spacer width
+* Menu Plus: Navigation float right aligns sticky menu items to the right
+* Menu Plus: Add new dropdown arrows to slideout menu
+* Menu Plus: New Feature: Mobile Header
+* Menu Plus: Separate options into panels
+* Menu Plus: Close slideout menu with escape key
+* Secondary Nav: Fix separator spacing below secondary navigation in the widget area
+* Secondary Nav: Add support for navigation click dropdown
+* Secondary Nav: Minify CSS and JS
+* Blog: Fix category/author page header when columns are set
+* Blog: Remove generate_blog_activate_masonry function and bundle it in with generate_blog_get_masonry function
+* Blog: Turn off masonry if we're on WooCommerce search results
+* Blog: Turn off columns if we're on WooCommerce search results
+* Blog: Minify CSS and JS
+* Colors: Add focus styles to navigation
+* Backgrounds: Add separators in Customizer
+* Backgrounds: Fix doubling up background images in the content when One Container is set
+* Spacing: Add separators in Customizer
+* Sections: Improve editor handling when visual editor is turned off
+* Sections: Use excerpt metabox on archives/blog if Sections is in use in single post
+* Sections: Fix bug where archives/blog loses layout if most recent post is using Sections
+* Sections: Minify CSS and JS
+* Disable Elements: Improve metabox saving to prevent empty values in the database
+* Italian translations added for all add-ons - thank you Roberto!
+* German translations updated for all add-ons - thank you Daniel!
+
+(12/22/2015) - 1.2.79
+* Spacing: Add function_exists in case GP theme isn't activated
+
+(12/21/2015) - 1.2.78
+* Backgrounds: Fix bug where navigation background image was showing in sub-navigation as well
+* Backgrounds: Optimize CSS
+* Colors: Optimize CSS
+* Secondary Nav: Remove unnecessary CSS from <head>
+* Spacing: Optimize CSS
+* Typography: Optimize CSS
+* Menu Plus: Fix slideout menu glitch when menu item has # as URL
+* Menu Plus: Improve sticky functionality and display
+* Menu Plus: Update sticky menu width when navigation is container and layout is updated
+* Menu Plus: Improve slideout menu transition
+* Blog: Add filter to add post types for the masonry width metabox: generate_blog_masonry_metabox
+* Blog: Add option to set posts as equal height columns
+* Blog: Update masonry when layout is changed in Customizer
+* Blog: Add safeguard in case people type Auto in post image sizes
+* Sections: Add support for password protected pages and Sections
+* Spacing: Remove widget padding if one container is set
+* Spacing: Right and left content padding now affects content area when One Container is set
+* Page Header: Fix proportional resizing
+* Updater functionality improved
+
+(11/29/2015) - 1.2.77
+* Blog: Fix warning when post image width is set without a height
+
+(11/27/2015) - 1.2.76
+* Menu Plus: Don't display sticky menu logo if sticky menu is disabled
+
+(11/27/2015) - 1.2.75
+* Czech translations added to all add-ons - thanks Ondrej!
+* Slovak translation added to GP Premium - thanks Jan!
+* Move from email activation to license key activation
+* Menu Plus: Add ability to add menu item with slider-exit class to exit the slideout menu
+* Menu Plus: Add generate_after_slideout_navigation hook
+* Menu Plus: Adjust mobile search item selector to include ability for more items to be added
+* Menu Plus: Fix slideout menu on Windows phones
+* Menu Plus: Reduce amount of CSS shown in the <head> section
+* Blog: Use array for image resizer instead of string
+* Blog: Show date and author on single post even if content title is hidden
+* Hooks: Move before header hook content above navigation when set to above header
+* Colors: Adjust mobile search item selector to include ability for more items to be added
+* Colors: Reduce amount of CSS shown in the <head> section
+* Spacing: Adjust mobile search item selector to include ability for more items to be added
+* Spacing: Reduce amount of CSS shown in the <head> section
+* Sections: Allow sidebars to display on with Sections if generate_sections_sidebars filter is set to true
+* Sections: Make adjustment to ensure compatibility with PHP7
+* Disable Elements: Disabling the site navigation also disbale the sticky navigation if Menu Plus is activated
+* Typography: Reduce amount of CSS shown in the <head> section
+* Backgrounds: Reduce amount of CSS shown in the <head> section
+* Page Header: Reduce CSS shown in <head> section if there's no page header content
+* Secondary Nav: Reduce amount of CSS shown in the <head> section
+
+(10/30/2015) - 1.2.74
+* Menu Plus: Fix mobile menu overlap with search icon when sticky effect set to "none"
+
+(10/29/2015) - 1.2.73
+* Blog: Allow post image cropping to have proportional width based on height
+* Blog: Hiding the date, author, categories, tags and comments link fully removes them (requires GP 1.3.18)
+* Typography: Add font size controller for footer/copyright
+* Page Header: Fix full screen issue when refreshing half way down the screen
+* Colors: Fix missing placeholder text in Edge browser
+* Colors: Adjust mobile search item selector
+* Menu Plus: Change "hamburger" icon to close icon on slideout menu open
+* Menu Plus: Fix bug where mobile only sticky menu was appear on desktop when set to fade
+* Menu Plus: Fix background image issue when slideout menu is enabled
+* Menu Plus: Add classes to <body> element for site logo in navigation/sticky navigation
+* Menu Plus: Add styling for mobile search item
+* Menu Plus: Replace slideout menu script with a more lightweight, efficient one
+* Disable Elements: Disabling the headline/title fully removes it from the code (requires GP 1.3.18)
+* Spacing: Add styling for mobile search item
+
+(10/3/2015) - 1.2.72
+* Blog: Fix masonry on tablet orientation change
+* Blog: Fix masonry on search results page
+* Menu Plus: Fix sticky menu bug when navigation is in sidebar
+* Menu Plus: Remove empty javascript element if slideout menu is disabled
+* Menu Plus: Fix sticky menu bug when mobile menu is toggled
+* Menu Plus: Delay sticky script from initializing until all other scripts are done
+* Page Header: Add microdata to page header image
+* Spacing: Fix mobile search spacing
+* Sections: Add generate_sections_default_padding_top and generate_sections_default_padding_bottom filters for the default padding
+
+
+(9/16/2015) - 1.2.71
+* Menu Plus: Fix empty alert
+
+
+(9/14/2015) - 1.2.70
+* Menu Plus: German translation added (thank you, Daniel!)
+* Disable Elements: Disable post image on single template if set
+* Spacing: Adjust spacing for mobile search
+* Typography: Range slider settings adjusted
+* Sections: Fix Add Media button when in Text editor
+* Menu Plus: Fix conflict with navigation search in mobile menu
+* Page Header: Fix mobile bug on Chrome with full height page headers
+* Menu Plus: Fix Secondary Navigation dropdown issue when slideout menu is enabled
+
+
+(8/24/2015) - 1.2.69
+* Menu Plus: Sticky Menu Slide was showing up behind content
+* Menu Plus: Remove notices if GP isn't activated
+* Page Header: Remove notice if GP isn't activated
+
+
+(8/22/2015) - 1.2.68
+* Blog: Remove masonry load more button if linked directly to last page
+* Sections: Fix issue with sections displaying on IE8
+* Sections: Add new filter to allow sections on any post type you like: generate_sections_post_types
+* Page Header: Add new filter to allow page header link to open in new tab: generate_page_header_target
+* Menu Plus: Fix error when using Jetpack's Mobile Theme
+* Menu Plus: Improve fade transition
+* Colors: Fix mobile menu text hover
+* GP Premium: Activate/Deactivate multiple add-ons at once
+
+
+(8/6/2015) - 1.2.67
+* Disable Elements: Disable post image now works without Page Header being activated
+* Menu+: Fix bug where hidden navigation clone was conflicting with secondary navigation
+* Secondary Nav: Mobile menu toggle changed from <h3> to <button>
+	+ If you've used h3.menu-toggle in any custom CSS, you'll need to adjust it (.menu-toggle is fine)
+
+
+(8/2/2015) - 1.2.66
+* Menu+: Smoothen slideout transitions
+* Menu+: Add "generate_menu_slideout_effect" filter
+* Menu+: Add "generate_menu_slideout_position" filter
+* Menu+: Fix alignment issue with float right contained sticky menu
+* Menu+: Show sticky menu on mobile only, desktop only or both
+* Menu+: Various tweaks
+* Blog: Add jump to anchor when using read more tag
+
+
+(8/1/2015) - 1.2.65
+* Menu Plus: Added to GP Premium
+* Blog: Run image resizer on front-end only
+* Page Header: Run image resizier on front-end only
+* Page Header: Run cmb2 only if it hasn't already been initialized
+* Blog: Remove float on floated post images on mobile
+* All: Email/add-on activation improved
+
+
+(7/13/2015) - 1.2.64
+* Blog: If the read more input is empty, don't include markup in post
+* Blog: fix masonry horizontal scroll on mobile (no sidebars)
+* Blog: Fix post image (float left or right) margin on mobile
+* Secondary Nav: Adjust mobile breakpoint
+* Secondary Nav: Fix secondary navigation font bug
+* Typography: Fix weird Google Font rendering bug
+* Sections: Fix bug where paragraphs were being stripped
+* Sections: Fix shortcode bug
+
+
+(6/28/2015) - 1.2.63
+* Typography + Spacing: Italian translations added (thanks, Roberto!!)
+* Allow shortcodes in text widgets
+* Typography: Fix bug where variants weren't registering
+
+
+(6/25/2015) - 1.2.62
+* All add-ons - French translations updated (thanks, Philippe!!)
+* All add-ons - Russian translations added (thanks, Alexey!!)
+* Page Header: Improve fullscreen height and vertical center functionality
+* Secondary Nav: Wrap mobile menu in span
+* Sections: Fix some weird CSS styling in editor
+* Secondary Nav: Updated mobile breakpoint to 767px 
+* Sections: Add generate_sections_parallax_speed filter to change the speed of parallax effect
+* Blog: Add new filter: generate_blog_activate_masonry - this checks whether we should activate masonry or not
+* Blog: Add code to allow Google Analtyics to track masonry load more as pageviews
+* Typography: Major update! Values changed to allow future Google Font additions/changes - please backup before updating.
+
+
+(5/20/2015) - 1.2.61
+* Sections: Fix spacing bug while using one container
+* Typography: Fix subset issue
+* Translation files updated
+* Blog: Add class to read more paragraph container
+* Secondary Nav: Fix background image upload controls
+* Blog: Fix broken translation strings
+* Sections: Add ability to use Sections on posts
+
+
+(5/16/2015) - 1.2.6
+* Page Header: Performance improvements
+* Page Header: GP_IMAGE_RESIZER constant added to give option to disable automatic thumbnail regeneration
+* Page Header: Crop position removed for now
+* French translations updated (thanks, Philippe!!)
+* Copyright: Fix bug where copyright was being removed when email was saved
+
+
+(5/13/2015) - 1.2.5
+* Hooks: Fix bug where Inside Content Container wasn't showing up
+
+
+(5/6/2015) - 1.2.4
+* Page Header: Add function_exists() functions to admin-options.php to stop error when standalone and GP Premium are activated.
+* Sections: Fix bug where sidebar padding wasn't working with one container set
+* Sections: Improve editor when visual editor disabled
+* Page Header: Fix bug in parallax.js
+* German language updated through all add-ons (thanks, Daniel!!)
+* Blog: Disallow masonry on any post types but the core "post" type
+* Sections: Remove background color on sections pages when one container is set.
+* Page Header: Remove empty space on attachment page
+* Import/Export: Delete GP Hooks specific import - no longer needed
+* Hooks: Add option to disable individual hooks
+* Hooks: Move options to one table - reduces queries
+* Typography: Widget content size option added
+* Sections: Fix bug dealing with sidebar layouts
+* Email activation performance increased
+
+
+(4/14/2015) - 1.2.3
+* Sections: Fix language path
+* All add-ons: Update language files
+* Sections: Remove wp_enqueue_media() call which was breaking featured image
+
+
+(4/12/2015) - 1.2.2
+* Spacing: Fix bug where sidebar padding wasn't working with one container set
+* Sections: Fix error relating to old version of PHP
+
+
+(4/11/2015) -1.2.1
+* Sections: Fix bug where HTML was being stripped
+
+
+(4/9/2015) - 1.2
+* German translations added (thank you Daniel!!)
+* Page Header & Blog: remove bfi_thumb and use WordPress resizer (reduced memory usage)
+* Typography: Group typography options into areas
+* Typography: Comic Sans MS added to font list
+* Colors: French translation updated
+* Spacing: French translation updated
+* Blog: French translation updated
+* Copyright: French translation updated
+* Copyright: Save button added below textarea
+* Typography: French translation added
+* Secondary Nav: Mobile breakpoint removed from mobile.css and added to enqueue function
+* Sections: Introducing Generate Sections
+* Page Header: Fix bug where add paragraphs doesn't work on Blog Header
+* Import/Export: Ability to import/export GP Hooks added
+* Hooks: Ability to import/export GP Hooks added
+* Page Header: Disable parallax on mobile
+* Blog: Show next/prev links even when everything else is hidden
+* Blog: Masonry improved
+
+
+(1/28/2015) - 1.1
+* Spacing: French translation added
+* Copyright: French translation added
+* Blog: French translation added
+* Blog: Choosing medium as the masonry block width gives items 50% width.
+* Blog: Masonry re-written to perform better
+* Page Header: New options page added (Appearance > Blog Page Header) - add a page header to your blog
+* Page Header: Better parallax effect added to page header background
+* Page Header: Resizing image turned it to PNG and increased file size
+* Page Header: Added option to enable full screen background image
+* Page Header: Added option to vertically center content
+* Colors: Color options added for H1, H2 and H3 elements
+* Typography: Font fallback set - use generate_fallback_font filter to change it
+
+
+(12/15/2014) - 1.0
+* Blog: Adjustments made to alignment CSS to work with W3 Total Cache
+* Typography: More fonts added
+* Typography: Filter added to subset
+* Colors: French translation added
+
+
+(11/17/2014) - 0.9
+* Blog: Applied post image position to images using Page Header addon
+
+
+(11/17/2014) - 0.8
+* Blog: Hiding post images works again
+
+
+(11/16/2014) - 0.7
+* Page Header: Option to add background color
+* Page Header: Background image no longer required for other options
+* Page Header: Image resizer now uses BFI Thumb
+* Page Header: Option to move post header below the title
+* Secondary Nav: Mobile breakpoint increased to include tablets
+* Secondary Nav: Fix bug causing Trebuchet MS not to work
+* Secondary Nav: Remove secondary navigation element if no menu is set
+* Colors: Navigation current text color wasn't working while navigation floating right
+* Colors: Change color of placeholder text to text color
+* Blog: Add option to hide tags
+* Blog: Choose alignment of post image
+* Blog: Choose size of post image
+* Hooks: Added inside main content container hook
+
+
+(10/27/2014) - 0.6
+* Typography: Fix bug with non Google fonts calling to Google
+
+
+(10/20/2014) - 0.5
+* Disable Elements: Fix bug applying latest post setting to blog
+* Backgrounds: Upload buttons now use Media Library
+* Blog: Fix masonry spacing issues
+* Page Header: Code cleanup
+
+
+(10/11/2014) - 0.4
+* Copyright: Allow shortcodes in Copyright
+* Copyright: Changed copyright field to textarea
+* Blog: Fix mobile bug in masonry blog on iPhone
+* Spacing: Change separator spacing from padding to margin
+* Translation files updated
+
+
+(10/2/2014) - 0.3
+* Blog: Not able to hide author on single posts
+* Backgrounds: Background images double in content if One Container is set
+* GP Hooks: Add After Footer Widgets to GP Hooks
+* Secondary Nav: Option to change "Menu" label on mobile secondary navigation
+* Page Header: buddypress fix
+
+
+(9/17/2014) - 0.2
+* Make Google Fonts call more robust
+* Fix secondary navigation link color when floating right
+* Background image options added to secondary navigation
+* File structures cleaned up
+* Masonry width and most recent post masonry width options added
+
+
+(9/7/2014) - 0.1
+Initial Release

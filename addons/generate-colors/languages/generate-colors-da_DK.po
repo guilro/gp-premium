@@ -1,0 +1,265 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Colors\n"
+"POT-Creation-Date: 2014-09-01 17:17-0800\n"
+"PO-Revision-Date: 2015-03-14 11:09+0100\n"
+"Last-Translator: Bjørn Seaton <sangkursus@etheltliv.dk>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: da_DK\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: generate-colors.php:121
+msgid "Colors"
+msgstr "Farver"
+
+#: generate-colors.php:133
+msgid "Header Colors"
+msgstr "Sidehoved Farver"
+
+#: generate-colors.php:145 generate-colors.php:222 generate-colors.php:299
+#: generate-colors.php:375 generate-colors.php:476 generate-colors.php:547
+#: generate-colors.php:618
+msgid "Background"
+msgstr "Baggrund"
+
+#: generate-colors.php:151 generate-colors.php:228 generate-colors.php:305
+#: generate-colors.php:381 generate-colors.php:482 generate-colors.php:553
+#: generate-colors.php:624
+msgid "Text"
+msgstr "Tekst"
+
+#: generate-colors.php:157 generate-colors.php:387 generate-colors.php:488
+#: generate-colors.php:559 generate-colors.php:630
+msgid "Link"
+msgstr "Link"
+
+#: generate-colors.php:163 generate-colors.php:393 generate-colors.php:494
+#: generate-colors.php:565 generate-colors.php:636
+msgid "Link Hover"
+msgstr "Link Hover"
+
+#: generate-colors.php:169
+msgid "Site Title"
+msgstr "Sitetitel"
+
+#: generate-colors.php:175
+msgid "Tagline"
+msgstr "Tagline"
+
+#: generate-colors.php:210
+msgid "Navigation Colors"
+msgstr "Navigationens Farver"
+
+#: generate-colors.php:234 generate-colors.php:311
+msgid "Background Hover"
+msgstr "Baggrund Hover"
+
+#: generate-colors.php:240 generate-colors.php:317
+msgid "Text Hover"
+msgstr "Tekst Hover"
+
+#: generate-colors.php:246 generate-colors.php:323
+msgid "Background Current"
+msgstr "Baggrund Current"
+
+#: generate-colors.php:252 generate-colors.php:329
+msgid "Text Current"
+msgstr "Tekst Current"
+
+#: generate-colors.php:287
+msgid "Sub-Navigation Colors"
+msgstr "Undernavigationens Farver"
+
+#: generate-colors.php:363
+msgid "Content Colors"
+msgstr "Indholdsfarver"
+
+#: generate-colors.php:399
+msgid "Content Title"
+msgstr "Indholdstitel"
+
+#: generate-colors.php:405
+msgid "Blog Post Title"
+msgstr "Blogindlægstitel"
+
+#: generate-colors.php:411
+msgid "Blog Post Title Hover"
+msgstr "Blogindlægstitel Hover"
+
+#: generate-colors.php:417
+msgid "Entry Meta Text"
+msgstr "Indlægs metatekst"
+
+#: generate-colors.php:423
+msgid "Entry Meta Links"
+msgstr "Indlægs metalinks"
+
+#: generate-colors.php:429
+msgid "Entry Meta Links Hover"
+msgstr "Indlægs metalinks Hover"
+
+#: generate-colors.php:464
+msgid "Sidebar Widget Colors"
+msgstr "Sidebar Widget Farver"
+
+#: generate-colors.php:500 generate-colors.php:571
+msgid "Widget Title"
+msgstr "Widget titel"
+
+#: generate-colors.php:535
+msgid "Footer Widget Colors"
+msgstr "Sidefod Widget farver"
+
+#: generate-colors.php:606
+msgid "Footer Colors"
+msgstr "Sidefodsfarver"
+
+#: generate-colors.php:671
+msgid "Form Colors"
+msgstr "Formularfarver"
+
+#: generate-colors.php:683
+msgid "Form Background"
+msgstr "Formularbaggrund"
+
+#: generate-colors.php:689
+msgid "Form Text"
+msgstr "Formular tekst"
+
+#: generate-colors.php:695
+msgid "Form Background Focus/Hover"
+msgstr "Formularbagrgund Fokus/Hover"
+
+#: generate-colors.php:701
+msgid "Form Text Focus/Hover"
+msgstr "Formulartekst Fokus/Hover"
+
+#: generate-colors.php:707
+msgid "Form Border"
+msgstr "Formular kant"
+
+#: generate-colors.php:713
+msgid "Form Border Focus/Hover"
+msgstr "Formular kant Fokus/Hover"
+
+#: generate-colors.php:719
+msgid "Form Button"
+msgstr "Formularknap"
+
+#: generate-colors.php:725
+msgid "Form Button Focus/Hover"
+msgstr "Formularknap Fokus/Hover"
+
+#: generate-colors.php:731
+msgid "Form Button Text"
+msgstr "Formular knaptekst"
+
+#: generate-colors.php:737
+msgid "Form Button Text Focus/Hover"
+msgstr "Formularknaptekst Fokus/Hover"
+
+#: inc/activation.php:43 inc/verification.php:44
+msgid "verified"
+msgstr "verificeret"
+
+#: inc/activation.php:47 inc/verification.php:56
+msgid "Deactivate"
+msgstr "Deaktiver"
+
+#: inc/activation.php:59 inc/verification.php:46
+msgid "unverified"
+msgstr "ikke-verificeret"
+
+#: inc/activation.php:63
+msgid "Activate"
+msgstr "Aktiver"
+
+#: inc/helper.php:64
+msgid "Colors Installed"
+msgstr "Farver installeret"
+
+#: inc/helper.php:65
+msgid "Please enter your license key in order to use this plugin."
+msgstr "Indtast venligst din licensnøgle for at bruge dette plugin."
+
+#: inc/old-activation.php:17
+msgid "Deactivate Email"
+msgstr "Deaktiver Email"
+
+#: inc/old-activation.php:18 inc/old-license.php:16
+msgid "active"
+msgstr "aktiv"
+
+#: inc/old-activation.php:21
+msgid "Activate Email"
+msgstr "Aktiver Email"
+
+#: inc/old-activation.php:22 inc/old-license.php:20
+msgid "inactive"
+msgstr "inaktiv"
+
+#: inc/old-license.php:15
+msgid "Deactivate License"
+msgstr "Deaktiver Licens"
+
+#: inc/old-license.php:19
+msgid "Activate License"
+msgstr "Aktiver Licens"
+
+#: inc/old-license.php:24
+msgid "Generate Colors License Key"
+msgstr "Generate Farver Licensnøgle"
+
+#: inc/verification.php:15
+msgid ""
+"Activate your addons by entering the email you purchased them with below. "
+"Save and verify, then your purchased addons will appear below for activation."
+msgstr ""
+"Aktiver dine addons ved at indtaste den email du købte dem fra forneden. Gem "
+"og verificer, og så vises dine købte addons forneden hvor de kan aktiveres."
+
+#: inc/verification.php:21
+msgid "Email"
+msgstr "Email"
+
+#: inc/verification.php:22 inc/verification.php:77 inc/verification.php:86
+msgid "Status"
+msgstr "Status"
+
+#: inc/verification.php:23 inc/verification.php:78 inc/verification.php:87
+msgid "Action"
+msgstr "Handling"
+
+#: inc/verification.php:57
+msgid "Refresh"
+msgstr "Genindlæs"
+
+#: inc/verification.php:60
+msgid "Verify Email"
+msgstr "Verificer Email"
+
+#: inc/verification.php:70
+msgid "Activate All"
+msgstr "Aktiver alle"
+
+#: inc/verification.php:75 inc/verification.php:84
+msgid "Product"
+msgstr "Produkt"
+
+#: inc/verification.php:76 inc/verification.php:85
+msgid "Version"
+msgstr "Version"
+
+#: inc/verification.php:334
+msgid "Once Every 3 Days"
+msgstr "En gang hver 3. dag"

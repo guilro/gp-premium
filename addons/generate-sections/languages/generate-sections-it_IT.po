@@ -1,0 +1,218 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Sections\n"
+"POT-Creation-Date: 2016-01-13 10:28-0800\n"
+"PO-Revision-Date: 2016-01-18 17:22+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"Language: it_IT\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: inc/acf\n"
+
+#: functions/generate-sections.php:226
+msgid "Use Sections"
+msgstr "Utilizzare \"Sezioni\""
+
+#: functions/generate-sections.php:237
+msgid "Sections"
+msgstr "Sezioni"
+
+#: functions/generate-sections.php:314
+msgid "Error: Content already detected in default editor."
+msgstr "Errore: C'è del contenuto nell'editor di wordpress"
+
+#: functions/generate-sections.php:315
+msgid ""
+"Please activate the \"Visual\" tab in your main editor before transferring "
+"content."
+msgstr ""
+"Attivare il tab \"Visuale\" nel tuo editor principale prima di trasferire "
+"il contenuto"
+
+#: functions/templates/generate-sections-page-template.php:96
+msgid "No sections added!"
+msgstr "Nessuna sezione aggiunta!"
+
+#: functions/wpalchemy/repeating-textarea.php:13
+msgid "Click to remove"
+msgstr "Fare clic per rimuovere"
+
+#: functions/wpalchemy/repeating-textarea.php:14
+msgid "Click to toggle"
+msgstr "Clicca per attivare"
+
+#: functions/wpalchemy/repeating-textarea.php:15
+msgid "Click and drag to sort"
+msgstr "Fare clic e trascinare per ordinare"
+
+#: functions/wpalchemy/repeating-textarea.php:18
+msgid "Section"
+msgstr "Sezione"
+
+#: functions/wpalchemy/repeating-textarea.php:37
+msgid "Box Type"
+msgstr "Tipo di contenitore"
+
+#: functions/wpalchemy/repeating-textarea.php:41
+#: functions/wpalchemy/repeating-textarea.php:54
+msgid "Fluid"
+msgstr "Fluida "
+
+#: functions/wpalchemy/repeating-textarea.php:42
+#: functions/wpalchemy/repeating-textarea.php:53
+msgid "Contained"
+msgstr "Contenuta"
+
+#: functions/wpalchemy/repeating-textarea.php:49
+msgid "Inner Box Type"
+msgstr "Tipo di contenitore interno"
+
+#: functions/wpalchemy/repeating-textarea.php:61
+msgid "Custom Classes"
+msgstr "Classe CSS"
+
+#: functions/wpalchemy/repeating-textarea.php:78
+msgid "Top Padding"
+msgstr "Spaziatura (padding) Superiore"
+
+#: functions/wpalchemy/repeating-textarea.php:87
+msgid "Bottom Padding"
+msgstr "Spaziatura (padding) Inferiore"
+
+#: functions/wpalchemy/repeating-textarea.php:100
+msgid "Background Color"
+msgstr "Colore dello sfondo"
+
+#: functions/wpalchemy/repeating-textarea.php:108
+#: functions/wpalchemy/repeating-textarea.php:120
+msgid "Background Image"
+msgstr "Immagine di sfondo"
+
+#: functions/wpalchemy/repeating-textarea.php:120
+msgid "Upload"
+msgstr "Carica"
+
+#: functions/wpalchemy/repeating-textarea.php:122
+msgid "Remove"
+msgstr "Rimuovi "
+
+#: functions/wpalchemy/repeating-textarea.php:129
+msgid "Parallax Effect"
+msgstr "Effetto Parallax"
+
+#: functions/wpalchemy/repeating-textarea.php:132
+msgid "Disable"
+msgstr "Disabilita"
+
+#: functions/wpalchemy/repeating-textarea.php:133
+msgid "Enable"
+msgstr "Abilita"
+
+#: functions/wpalchemy/repeating-textarea.php:143
+msgid "Text Color"
+msgstr "Colore del testo"
+
+#: functions/wpalchemy/repeating-textarea.php:152
+msgid "Link Color"
+msgstr "Colore dei links"
+
+#: functions/wpalchemy/repeating-textarea.php:161
+msgid "Link Color Hover"
+msgstr "Colore dei link al passaggio del mouse"
+
+#: functions/wpalchemy/repeating-textarea.php:180
+msgid "Visual"
+msgstr "Visuale"
+
+#: functions/wpalchemy/repeating-textarea.php:181
+msgctxt "Name for the Text editor tab (formerly HTML)"
+msgid "Text"
+msgstr "Testo [Riferito al Editore di Testo(prima chiamato HTML)]"
+
+#: functions/wpalchemy/repeating-textarea.php:200
+msgid "Add Section"
+msgstr "Aggiungi Sezione"
+
+#: functions/wpalchemy/repeating-textarea.php:201
+msgid "Remove Sections"
+msgstr "Rimuovere le sezioni"
+
+#: functions/wpalchemy/use-sections.php:6
+msgid "No"
+msgstr "No"
+
+#: functions/wpalchemy/use-sections.php:7
+msgid "Yes"
+msgstr "Si"
+
+#: functions/wpalchemy/use-sections.php:11
+msgid "Send sections to default editor"
+msgstr "Inviare sezione al editor di wordpress"
+
+#: inc/EDD_SL_Plugin_Updater.php:181
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"C'è una nuova versione disponibile di %1$s . <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">Vedi i dettagli della  versione %3$s </a>."
+
+#: inc/EDD_SL_Plugin_Updater.php:188
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"C’è una nuova versione di %1$s disponibile. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">Vedi i dettagli della versione %3$s </a> o <a "
+"href=“%4$s”>aggiorna ora</a>."
+
+#: inc/EDD_SL_Plugin_Updater.php:326
+msgid "You do not have permission to install plugin updates"
+msgstr "Non hai il permesso di installare gli aggiornamenti dei plugin"
+
+#: inc/EDD_SL_Plugin_Updater.php:326
+msgid "Error"
+msgstr "Errore"
+
+#: inc/verify.php:84
+msgid "License failed."
+msgstr "Licenza non riuscita."
+
+#: inc/verify.php:88
+msgid "License activated."
+msgstr "Licenza attivata."
+
+#: inc/verify.php:92
+msgid "License deactivated."
+msgstr "Licenza disattivata."
+
+#: inc/verify.php:109
+#, php-format
+msgid "Updates %s"
+msgstr "Aggiornamenti %s"
+
+#: inc/verify.php:109
+msgid "Help"
+msgstr "Aiuto"
+
+#: inc/verify.php:134
+msgid "License Key"
+msgstr "Chiave Licenza"
+
+#: inc/verify.php:139
+msgid "Update"
+msgstr "Aggiorna"

@@ -1,0 +1,137 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GP Premium\n"
+"POT-Creation-Date: 2015-05-20 09:31-0800\n"
+"PO-Revision-Date: 2015-11-10 10:55+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Last-Translator: \n"
+"Language: sk_SK\n"
+"X-Poedit-SearchPath-0: inc\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: inc/EDD_SL_Plugin_Updater.php:177
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"K dispozícii je nová verzia %1$s. <a target=\"_blank\" class=\"thickbox\" "
+"href=\"%2$s\">Zobraziť detaily %3$s verzie</a>."
+
+#: inc/EDD_SL_Plugin_Updater.php:184
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"K dispozícii je nová verzia%1$s. <a target=\"_blank\" class=\"thickbox\" "
+"href=\"%2$s\">Zobraziť detaily%3$s verzie</a , alebo <a href=\"%4$s"
+"\">aktualizovať teraz</a> ."
+
+#: inc/EDD_SL_Plugin_Updater.php:324
+msgid "You do not have permission to install plugin updates"
+msgstr "Nemáte oprávnenie na inštaláciu aktualizácií pluginu"
+
+#: inc/EDD_SL_Plugin_Updater.php:324
+msgid "Error"
+msgstr "Chyba"
+
+#: inc/activation.php:11
+msgid "Add-on deactivated."
+msgstr "Doplnok vypnutý."
+
+#: inc/activation.php:15
+msgid "Add-on activated."
+msgstr "Doplnok aktivovaný."
+
+#: inc/activation.php:63
+msgid "GP Premium"
+msgstr "GP Premium"
+
+#: inc/activation.php:88
+msgid "Deactivate"
+msgstr "Deaktivovať"
+
+#: inc/activation.php:100
+msgid "Activate"
+msgstr "Aktivovať"
+
+#: inc/verification.php:39
+msgid ""
+"Want updates served directly to your Dashboard? Activate the email you "
+"purchased your add-ons with here."
+msgstr ""
+"Chcete aby sa vám aktualizácie zobrazovali priamo na vašej nástenke? "
+"Aktivujte si e-mail na ktorý ste si zakúpili licenciu."
+
+#: inc/verification.php:51 inc/verification.php:65
+msgid "Email"
+msgstr "E-mail"
+
+#: inc/verification.php:58
+msgid "Deactivate Email"
+msgstr "Deaktivácia E-mailu"
+
+#: inc/verification.php:70
+msgid "Activate Email"
+msgstr "Aktivácia E-mailu"
+
+#: inc/verification.php:83
+msgid "Save Email"
+msgstr "Uloženie E-mailu"
+
+#: inc/verification.php:94
+msgid "Enable All Updates"
+msgstr "Povoliť všetky aktualizácie."
+
+#: inc/verification.php:154
+msgid "Disable Updates"
+msgstr "Vypnutie aktualizácií"
+
+#: inc/verification.php:164
+msgid "Enable Updates"
+msgstr "Povolenie aktualizácii"
+
+#: inc/verification.php:750
+msgid "Email activation failed. This email does not exist in our records."
+msgstr ""
+"Aktivácia emailu zlyhala. Tento email neexistuje v našich záznamoch."
+
+#: inc/verification.php:754
+msgid "Email activated."
+msgstr "Email aktivovaný."
+
+#: inc/verification.php:758
+msgid "Email deactivated."
+msgstr "Email deaktivovaný."
+
+#: inc/verification.php:762
+msgid "License failed."
+msgstr "Chyba licencie."
+
+#: inc/verification.php:766
+msgid "License activated."
+msgstr "Licencia aktivovaná."
+
+#: inc/verification.php:770
+msgid "Licenses activated."
+msgstr "Licencie aktivované."
+
+#: inc/verification.php:774
+msgid "Deactivation failed."
+msgstr "Deaktivácia zlyhala. "
+
+#: inc/verification.php:778
+msgid "License deactivated."
+msgstr "Licencia deaktivovaná. "

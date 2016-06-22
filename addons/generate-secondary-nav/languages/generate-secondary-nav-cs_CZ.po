@@ -1,0 +1,316 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Secondary Navigation\n"
+"POT-Creation-Date: 2015-10-12 16:02+0200\n"
+"PO-Revision-Date: 2015-10-12 16:54+0200\n"
+"Last-Translator: Foxtrot <foxtrot@foxtrot.me>\n"
+"Language-Team: \n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.5\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/functions.php:7
+msgid "Secondary Menu"
+msgstr "Sekundární menu"
+
+#: functions/functions.php:97 functions/functions.php:109
+msgid "Secondary Navigation"
+msgstr "Sekundární navigace"
+
+#: functions/functions.php:126
+msgid "Mobile Label"
+msgstr "Mobilní název"
+
+#: functions/functions.php:151
+msgid "Navigation Layout"
+msgstr "Rozvržení navigace"
+
+#: functions/functions.php:154
+msgid "Fluid / Full Width"
+msgstr "Proměnlivá / Plná šířka"
+
+#: functions/functions.php:155
+msgid "Contained"
+msgstr "Omezená"
+
+#: functions/functions.php:181
+msgid "Navigation Position"
+msgstr "Pozice navigace"
+
+#: functions/functions.php:184
+msgid "Below Header"
+msgstr "Pod hlavičkou"
+
+#: functions/functions.php:185
+msgid "Above Header"
+msgstr "Nad hlavičkou"
+
+#: functions/functions.php:186
+msgid "Float Right"
+msgstr "Plovoucí vpravo"
+
+#: functions/functions.php:187
+msgid "Left Sidebar"
+msgstr "Levý postranní panel"
+
+#: functions/functions.php:188
+msgid "Right Sidebar"
+msgstr "Pravý postranní panel"
+
+#: functions/functions.php:189
+msgid "No Navigation"
+msgstr "Bez navigace"
+
+#: functions/functions.php:215
+msgid "Navigation Alignment"
+msgstr "Zarovnání navigace"
+
+#: functions/functions.php:218
+msgid "Left"
+msgstr "Doleva"
+
+#: functions/functions.php:219
+msgid "Center"
+msgstr "Doprostřed"
+
+#: functions/functions.php:220
+msgid "Right"
+msgstr "Doprava"
+
+#: functions/functions.php:236
+msgid "Secondary Navigation Spacing"
+msgstr "Rozestupy sekundární navigace"
+
+#: functions/functions.php:249
+msgid "Secondary Menu Items"
+msgstr "Položky sekundární navigace"
+
+#: functions/functions.php:250
+msgid "These options control the size of your secondary menu items."
+msgstr "Tato nastavení ovládají velikost vašich položek sekundárního menu."
+
+#: functions/functions.php:254
+msgid "Left/Right Spacing"
+msgstr "Pravé/Levé rozestupy"
+
+#: functions/functions.php:255
+msgid "Height"
+msgstr "Výška"
+
+#: functions/functions.php:321
+msgid "Secondary Sub-menu Item Height"
+msgstr "Výška položek sekundárního pod-menu"
+
+#: functions/functions.php:322
+msgid "The top and bottom spacing of secondary sub-menu items."
+msgstr "Horní a spodní rozestupy položek sekundárního pod-menu"
+
+#: functions/functions.php:359
+msgid "Secondary Navigation Colors"
+msgstr "Barvy sekundární navigace"
+
+#: functions/functions.php:371 functions/functions.php:450
+msgid "Background"
+msgstr "Pozadí"
+
+#: functions/functions.php:377 functions/functions.php:456
+msgid "Text"
+msgstr "Text"
+
+#: functions/functions.php:383 functions/functions.php:462
+msgid "Background Hover"
+msgstr "Pozadí při přejetí myší"
+
+#: functions/functions.php:389 functions/functions.php:468
+msgid "Text Hover"
+msgstr "Text při přejetí myší"
+
+#: functions/functions.php:395 functions/functions.php:474
+msgid "Background Current"
+msgstr "Aktuální pozadí"
+
+#: functions/functions.php:401 functions/functions.php:480
+msgid "Text Current"
+msgstr "Aktuální text"
+
+#: functions/functions.php:438
+msgid "Secondary Sub-Navigation Colors"
+msgstr "Barvy sekundární pod-navigace"
+
+#: functions/functions.php:517
+msgid "Secondary Navigation Typography"
+msgstr "Typografie sekundární navigace"
+
+#: functions/functions.php:539
+msgid "Secondary navigation"
+msgstr "Sekundární navigace"
+
+#: functions/functions.php:560
+msgid "Font weight"
+msgstr "Tloušťka písma"
+
+#: functions/functions.php:582
+msgid "Text transform"
+msgstr "Transformace textu"
+
+#: functions/functions.php:605
+msgid "Font size"
+msgstr "Velikost písma"
+
+#: functions/functions.php:623
+msgid "Secondary Background Images"
+msgstr "Obrázky na sekundárním pozadí"
+
+#: functions/functions.php:641
+msgid "Navigation"
+msgstr "Navigace"
+
+#: functions/functions.php:683 functions/functions.php:745
+#: functions/functions.php:807 functions/functions.php:869
+#: functions/functions.php:943 functions/functions.php:1005
+#: functions/functions.php:1067
+msgid "Repeat"
+msgstr "Opakovat"
+
+#: functions/functions.php:684 functions/functions.php:746
+#: functions/functions.php:808 functions/functions.php:870
+#: functions/functions.php:944 functions/functions.php:1006
+#: functions/functions.php:1068
+msgid "Repeat x"
+msgstr "Opakovat x"
+
+#: functions/functions.php:685 functions/functions.php:747
+#: functions/functions.php:809 functions/functions.php:871
+#: functions/functions.php:945 functions/functions.php:1007
+#: functions/functions.php:1069
+msgid "Repeat y"
+msgstr "Opakovat y"
+
+#: functions/functions.php:686 functions/functions.php:748
+#: functions/functions.php:810 functions/functions.php:872
+#: functions/functions.php:946 functions/functions.php:1008
+#: functions/functions.php:1070
+msgid "No Repeat"
+msgstr "Neopakovat"
+
+#: functions/functions.php:703
+msgid "Navigation Item"
+msgstr "Položka navigace"
+
+#: functions/functions.php:765
+msgid "Navigation Item Hover"
+msgstr "Položka navigace při přejetí myší"
+
+#: functions/functions.php:827
+msgid "Navigation Item Current"
+msgstr "Aktuální položka navigace"
+
+#: functions/functions.php:901
+msgid "Sub-Navigation Item"
+msgstr "Položka pod-navigace"
+
+#: functions/functions.php:963
+msgid "Sub-Navigation Item Hover"
+msgstr "Položka pod-navigace při přejetí myší"
+
+#: functions/functions.php:1025
+msgid "Sub-Navigation Item Current"
+msgstr "Aktuální položka pod-navigace"
+
+#: functions/ie.php:14
+msgid "Warning: This will delete your settings."
+msgstr "Varování: Toto smaže vaše nastavení."
+
+#: functions/ie.php:16
+msgid "Delete Secondary Navigation Customizer Settings"
+msgstr "Smazat nastavení Přizpůsobení pro Sekundární navigaci"
+
+#: functions/ie.php:52
+msgid "Export Secondary Navigation Customizer Settings"
+msgstr "Exportovat nastavení Přizpůsobení pro Sekundární navigaci"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+#~ msgstr ""
+#~ "Je dostupná nová verze %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+#~ "\"%2$s\">Zobrazit podrobnosti o verzi %3$s</a>."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+#~ "\">update now</a>."
+#~ msgstr ""
+#~ "Je dostupná nová verze %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+#~ "\"%2$s\">Zobrazit podrobnosti o verzi %3$s</a> nebo <a href=\"%4$s"
+#~ "\">aktualizovat nyní</a>."
+
+#~ msgid "You do not have permission to install plugin updates"
+#~ msgstr "Nemáte oprávnění k instalaci aktualizací pluginů"
+
+#~ msgid "Error"
+#~ msgstr "Chyba"
+
+#~ msgid "Skip to content"
+#~ msgstr "Přeskočit na obsah"
+
+#~ msgid ""
+#~ "Want updates served directly to your Dashboard? Activate the email you "
+#~ "purchased your add-ons with here."
+#~ msgstr ""
+#~ "Chcete aktualizace dodávat přímo do vaší Nástěnky? Aktivujte zde email, "
+#~ "kterým jste zakoupili vaše doplňky."
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Deactivate Email"
+#~ msgstr "Deaktivovat email"
+
+#~ msgid "Activate Email"
+#~ msgstr "Aktivovat email"
+
+#~ msgid "Save Email"
+#~ msgstr "Uložit email"
+
+#~ msgid "Enable All Updates"
+#~ msgstr "Povolit všechny aktualizace"
+
+#~ msgid "Disable Updates"
+#~ msgstr "Zakázat aktualizace"
+
+#~ msgid "Enable Updates"
+#~ msgstr "Povolit aktualizace"
+
+#~ msgid "Email activation failed. This email does not exist in our records."
+#~ msgstr "Aktivace emailu selhala. Tento email v našich záznamech neexistuje."
+
+#~ msgid "Email activated."
+#~ msgstr "Email aktivován."
+
+#~ msgid "Email deactivated."
+#~ msgstr "Email deaktivován."
+
+#~ msgid "License failed."
+#~ msgstr "Licence selhala."
+
+#~ msgid "License activated."
+#~ msgstr "Licence aktivována."
+
+#~ msgid "Licenses activated."
+#~ msgstr "Licence aktivovány."
+
+#~ msgid "Deactivation failed."
+#~ msgstr "Deaktivace selhala."
+
+#~ msgid "License deactivated."
+#~ msgstr "Licence deaktivována."

@@ -1,0 +1,7 @@
+{
+  "name": "guilro/gp-premium",
+  "type": "wordpress-plugin",
+  "require": {
+    "composer/installers": "^1.0.6"
+  }
+}

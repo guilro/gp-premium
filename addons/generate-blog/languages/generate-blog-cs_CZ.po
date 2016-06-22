@@ -1,0 +1,320 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Blog\n"
+"POT-Creation-Date: 2016-05-07 14:28+0200\n"
+"PO-Revision-Date: 2016-05-07 14:33+0200\n"
+"Last-Translator: Foxtrot <foxtrot@foxtrot.me>\n"
+"Language-Team: \n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/controls.php:24
+msgid "Apply image sizes"
+msgstr "Použít velikost obrázku"
+
+#: functions/customizer.php:16
+msgid "Blog"
+msgstr "Blog"
+
+#: functions/customizer.php:33
+msgid "Blog Content"
+msgstr "Obsah blogu"
+
+#: functions/customizer.php:51
+msgid "Excerpt Length"
+msgstr "Délka úryvku"
+
+#: functions/customizer.php:69
+msgid "Read more label"
+msgstr "Označení \"číst dál\""
+
+#: functions/customizer.php:82 functions/customizer.php:106
+msgid "Masonry"
+msgstr "Zeď"
+
+#: functions/customizer.php:109 functions/customizer.php:576
+#: functions/customizer.php:638
+msgid "Enable"
+msgstr "Povolit"
+
+#: functions/customizer.php:110 functions/customizer.php:577
+#: functions/customizer.php:639
+msgid "Disable"
+msgstr "Zakázat"
+
+#: functions/customizer.php:136
+msgid "Masonry Block Width"
+msgstr "Šířka bloků zdi"
+
+#: functions/customizer.php:139 functions/customizer.php:170
+#: functions/masonry.php:82
+msgid "Small"
+msgstr "Malá"
+
+#: functions/customizer.php:140 functions/customizer.php:171
+#: functions/masonry.php:83
+msgid "Medium"
+msgstr "Střední"
+
+#: functions/customizer.php:141 functions/customizer.php:172
+#: functions/masonry.php:84
+msgid "Large"
+msgstr "Velká"
+
+#: functions/customizer.php:167
+msgid "Masonry Most Recent Width"
+msgstr "Šířka zdi s nejnovějšími příspěvky"
+
+#: functions/customizer.php:191
+msgid "Masonry Load More Text"
+msgstr "Text pro načtení více zdi"
+
+#: functions/customizer.php:209
+msgid "Masonry Loading Text"
+msgstr "Text při načítání zdi"
+
+#: functions/customizer.php:222 functions/customizer.php:246
+msgid "Post Image"
+msgstr "Obrázek příspěvku"
+
+#: functions/customizer.php:249 functions/customizer.php:397
+#: functions/customizer.php:427 functions/customizer.php:457
+#: functions/customizer.php:487 functions/customizer.php:517
+msgid "Show"
+msgstr "Zobrazit"
+
+#: functions/customizer.php:250 functions/customizer.php:398
+#: functions/customizer.php:428 functions/customizer.php:458
+#: functions/customizer.php:488 functions/customizer.php:518
+msgid "Hide"
+msgstr "Skrýt"
+
+#: functions/customizer.php:276
+msgid "Post Image Position"
+msgstr "Umístění obrázku příspěvku"
+
+#: functions/customizer.php:279
+msgid "Below Header"
+msgstr "Pod hlavičkou"
+
+#: functions/customizer.php:280
+msgid "Above Header"
+msgstr "Nad hlavičkou"
+
+#: functions/customizer.php:306
+msgid "Post Image Alignment"
+msgstr "Zarovnání obrázku příspěvku"
+
+#: functions/customizer.php:309
+msgid "Center"
+msgstr "Doprostřed"
+
+#: functions/customizer.php:310
+msgid "Left"
+msgstr "Doleva"
+
+#: functions/customizer.php:311
+msgid "Right"
+msgstr "Doprava"
+
+#: functions/customizer.php:332
+msgid "Post Image Width"
+msgstr "Šířka obrázku příspěvku"
+
+#: functions/customizer.php:336 functions/customizer.php:359
+msgid "Auto"
+msgstr "Automaticky"
+
+#: functions/customizer.php:355
+msgid "Post Image Height"
+msgstr "Výška obrázku příspěvku"
+
+#: functions/customizer.php:394
+msgid "Date"
+msgstr "Datum"
+
+#: functions/customizer.php:424
+msgid "Author"
+msgstr "Autor"
+
+#: functions/customizer.php:454
+msgid "Categories"
+msgstr "Rubriky"
+
+#: functions/customizer.php:484
+msgid "Tags"
+msgstr "Štítky"
+
+#: functions/customizer.php:514
+msgid "Comment Link"
+msgstr "Odkaz na komentáře"
+
+#: functions/customizer.php:532 functions/customizer.php:603
+msgid "Columns"
+msgstr "Sloupce"
+
+#: functions/customizer.php:547
+msgid "Masonry is enabled. These settings will be ignored."
+msgstr "Zeď je povolena. Tato nastavení budou ignorována."
+
+#: functions/customizer.php:573
+msgid "Column Layout"
+msgstr "Rozvržení sloupců"
+
+#: functions/customizer.php:635
+msgid "First Post Full Width"
+msgstr "První příspěvek s plnou šířkou"
+
+#: functions/defaults.php:10
+msgid "Read more..."
+msgstr "Číst dál..."
+
+#: functions/defaults.php:14
+msgid "+ More"
+msgstr "+ Více"
+
+#: functions/defaults.php:15
+msgid "Loading..."
+msgstr "Načítání..."
+
+#: functions/ie.php:14
+msgid "Warning: This will delete your settings."
+msgstr "Varování: Toto smaže vaše nastavení."
+
+#: functions/ie.php:16
+msgid "Delete Blog Customizer Settings"
+msgstr "Smazat nastavení Přizpůsobení pro Blog"
+
+#: functions/ie.php:53
+msgid "Export Blog Customizer Settings"
+msgstr "Exportovat nastavení Přizpůsobení pro Blog"
+
+#: functions/masonry.php:52 functions/masonry.php:79
+msgid "Masonry Post Width"
+msgstr "Šířka zdi s příspěvky"
+
+#: functions/masonry.php:81
+msgid "Global setting"
+msgstr "Globální nastavení"
+
+#: inc/EDD_SL_Plugin_Updater.php:189
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr ""
+"Je dostupná nová verze %1$s. %2$sZobrazit podrobnosti o verzi %3$s %4$s."
+
+#: inc/EDD_SL_Plugin_Updater.php:197
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+"Je dostupná nová verze %1$s. %2$sZobrazit podrobnosti o verzi %3$s %4$s nebo "
+"%5$saktualizovat nyní%6$s."
+
+#: inc/EDD_SL_Plugin_Updater.php:340
+msgid "You do not have permission to install plugin updates"
+msgstr "Nemáte oprávnění k instalaci aktualizací pluginů"
+
+#: inc/EDD_SL_Plugin_Updater.php:340
+msgid "Error"
+msgstr "Chyba"
+
+#: inc/verify.php:84
+msgid "License failed."
+msgstr "Licence selhala."
+
+#: inc/verify.php:88
+msgid "License activated."
+msgstr "Licence aktivována."
+
+#: inc/verify.php:92
+msgid "License deactivated."
+msgstr "Licence deaktivována."
+
+#: inc/verify.php:109
+#, php-format
+msgid "Updates %s"
+msgstr "Aktualizace %s"
+
+#: inc/verify.php:109
+msgid "Help"
+msgstr "Nápověda"
+
+#: inc/verify.php:134
+msgid "License Key"
+msgstr "Licenční klíč"
+
+#: inc/verify.php:139
+msgid "Update"
+msgstr "Aktualizovat"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+#~ msgstr ""
+#~ "Je dostupná nová verze %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+#~ "\"%2$s\">Zobrazit podrobnosti o verzi %3$s</a>."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+#~ "\">update now</a>."
+#~ msgstr ""
+#~ "Je dostupná nová verze %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+#~ "\"%2$s\">Zobrazit podrobnosti o verzi %3$s</a> nebo <a href=\"%4$s"
+#~ "\">aktualizovat nyní</a>."
+
+#~ msgid ""
+#~ "Want updates served directly to your Dashboard? Activate the email you "
+#~ "purchased your add-ons with here."
+#~ msgstr ""
+#~ "Chcete aktualizace dodávat přímo do vaší Nástěnky? Aktivujte zde email, "
+#~ "kterým jste zakoupili vaše doplňky."
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Deactivate Email"
+#~ msgstr "Deaktivovat email"
+
+#~ msgid "Activate Email"
+#~ msgstr "Aktivovat email"
+
+#~ msgid "Save Email"
+#~ msgstr "Uložit email"
+
+#~ msgid "Enable All Updates"
+#~ msgstr "Povolit všechny aktualizace"
+
+#~ msgid "Disable Updates"
+#~ msgstr "Zakázat aktualizace"
+
+#~ msgid "Enable Updates"
+#~ msgstr "Povolit aktualizace"
+
+#~ msgid "Email activation failed. This email does not exist in our records."
+#~ msgstr "Aktivace emailu selhala. Tento email v našich záznamech neexistuje."
+
+#~ msgid "Email activated."
+#~ msgstr "Email aktivován."
+
+#~ msgid "Email deactivated."
+#~ msgstr "Email deaktivován."
+
+#~ msgid "Licenses activated."
+#~ msgstr "Licence aktivovány."
+
+#~ msgid "Deactivation failed."
+#~ msgstr "Deaktivace selhala."

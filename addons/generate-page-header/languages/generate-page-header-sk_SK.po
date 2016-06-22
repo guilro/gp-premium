@@ -1,0 +1,540 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Page Header\n"
+"POT-Creation-Date: 2016-03-22 13:29-0700\n"
+"PO-Revision-Date: 2016-03-22 13:29-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sk_SK\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/customizer.php:11
+msgid "Blog Page Header"
+msgstr ""
+
+#: functions/customizer.php:20 functions/functions.php:916
+msgid "Image Settings"
+msgstr ""
+
+#: functions/customizer.php:40
+msgid "Image"
+msgstr "Obrázok"
+
+#: functions/customizer.php:41
+msgid "Upload an image to be used as your page header."
+msgstr ""
+
+#: functions/customizer.php:61 functions/functions.php:939
+msgid "Page Header Link"
+msgstr "Odkaz na stránku:"
+
+#: functions/customizer.php:62
+msgid "Make your page header image clickable by adding a URL. (optional)"
+msgstr ""
+
+#: functions/customizer.php:85 functions/functions.php:944
+msgid "Hard Crop"
+msgstr "Orezať náhľad"
+
+#: functions/customizer.php:86
+msgid "Turn hard cropping or of off."
+msgstr ""
+
+#: functions/customizer.php:89 functions/customizer.php:285
+#: functions/customizer.php:310 functions/customizer.php:335
+#: functions/customizer.php:360 functions/customizer.php:385
+#: functions/customizer.php:410 functions/customizer.php:603
+#: functions/customizer.php:669 functions/functions.php:947
+msgid "Enable"
+msgstr "Aktivovať"
+
+#: functions/customizer.php:90 functions/customizer.php:286
+#: functions/customizer.php:311 functions/customizer.php:336
+#: functions/customizer.php:361 functions/customizer.php:386
+#: functions/customizer.php:411 functions/customizer.php:604
+#: functions/customizer.php:670 functions/functions.php:946
+msgid "Disable"
+msgstr "Zakázať"
+
+#: functions/customizer.php:111 functions/functions.php:953
+msgid "Image Width"
+msgstr "Šířka obrázku"
+
+#: functions/customizer.php:112
+msgid "Choose your image width in pixels. (integer only, default is 1200)"
+msgstr ""
+
+#: functions/customizer.php:133 functions/functions.php:958
+msgid "Image Height"
+msgstr "Výška obrázku"
+
+#: functions/customizer.php:134
+msgid ""
+"Choose your image height in pixels. Use \"0\" or leave blank for "
+"proportional resizing. (integer only, default is 0) "
+msgstr ""
+
+#: functions/customizer.php:147 functions/functions.php:917
+msgid "Video Settings"
+msgstr ""
+
+#: functions/customizer.php:166
+msgid "Video Background URL (MP4 only)"
+msgstr ""
+
+#: functions/customizer.php:187
+msgid "Video Background URL (OGV only)"
+msgstr ""
+
+#: functions/customizer.php:208
+msgid "Video Background URL (WEBM only)"
+msgstr ""
+
+#: functions/customizer.php:229
+msgid "Overlay Color"
+msgstr ""
+
+#: functions/customizer.php:241 functions/functions.php:918
+msgid "Content Settings"
+msgstr ""
+
+#: functions/customizer.php:260 functions/functions.php:993
+msgid "Content"
+msgstr "Obsah"
+
+#: functions/customizer.php:261
+msgid "Add your content to the page header. HTML and shortcodes allowed."
+msgstr ""
+
+#: functions/customizer.php:281
+msgid "Add Paragraphs"
+msgstr ""
+
+#: functions/customizer.php:282
+msgid "Wrap your text in paragraph tags automatically."
+msgstr ""
+
+#: functions/customizer.php:306
+msgid "Add Padding"
+msgstr ""
+
+#: functions/customizer.php:307
+msgid "Add padding around your content."
+msgstr ""
+
+#: functions/customizer.php:331
+msgid "Image Background"
+msgstr ""
+
+#: functions/customizer.php:332
+msgid ""
+"Use the image uploaded above as a background image for your content. "
+"(requires image uploaded above)"
+msgstr ""
+
+#: functions/customizer.php:356
+msgid "Parallax Background"
+msgstr ""
+
+#: functions/customizer.php:357
+msgid ""
+"Add a cool parallax effect to your background image. (requires the image "
+"background option to be checked)"
+msgstr ""
+
+#: functions/customizer.php:381
+msgid "Full Screen"
+msgstr ""
+
+#: functions/customizer.php:382
+msgid "Make your page header content area full screen."
+msgstr ""
+
+#: functions/customizer.php:406
+msgid "Vertical Center"
+msgstr ""
+
+#: functions/customizer.php:407
+msgid "Center your page header content vertically."
+msgstr ""
+
+#: functions/customizer.php:431
+msgid "Container Type"
+msgstr ""
+
+#: functions/customizer.php:432
+msgid "Choose whether the page header is contained or fluid."
+msgstr ""
+
+#: functions/customizer.php:435 functions/functions.php:1029
+msgid "Contained"
+msgstr "Obsiahnuté"
+
+#: functions/customizer.php:436 functions/functions.php:1030
+msgid "Fluid"
+msgstr "Pohyblivá / plná šírka"
+
+#: functions/customizer.php:456
+msgid "Text Alignment"
+msgstr ""
+
+#: functions/customizer.php:457
+msgid "Choose the horizontal alignment of your content."
+msgstr ""
+
+#: functions/customizer.php:460 functions/functions.php:1037
+msgid "Left"
+msgstr "Vľavo"
+
+#: functions/customizer.php:461 functions/functions.php:1038
+msgid "Center"
+msgstr "Na stred"
+
+#: functions/customizer.php:462 functions/functions.php:1039
+msgid "Right"
+msgstr "Vpravo"
+
+#: functions/customizer.php:482
+msgid "Top/Bottom Padding"
+msgstr ""
+
+#: functions/customizer.php:483
+msgid ""
+"Choose your content padding in pixels. This will add space above and below "
+"your content. (integer only) "
+msgstr ""
+
+#: functions/customizer.php:504
+msgid "Background Color"
+msgstr ""
+
+#: functions/customizer.php:525
+msgid "Text Color"
+msgstr ""
+
+#: functions/customizer.php:546
+msgid "Link Color"
+msgstr ""
+
+#: functions/customizer.php:567
+msgid "Link Color Hover"
+msgstr ""
+
+#: functions/customizer.php:580 functions/functions.php:922
+msgid "Advanced Settings"
+msgstr ""
+
+#: functions/customizer.php:599 functions/functions.php:1089
+msgid "Merge with site header"
+msgstr ""
+
+#: functions/customizer.php:623 functions/functions.php:1094
+msgid "Site title"
+msgstr ""
+
+#: functions/customizer.php:644 functions/functions.php:1099
+msgid "Site tagline"
+msgstr ""
+
+#: functions/customizer.php:665 functions/functions.php:1104
+msgid "Transparent navigation"
+msgstr ""
+
+#: functions/customizer.php:690 functions/functions.php:1109
+msgid "Navigation text"
+msgstr ""
+
+#: functions/customizer.php:711 functions/functions.php:1114
+msgid "Navigation background hover"
+msgstr ""
+
+#: functions/customizer.php:732 functions/functions.php:1119
+msgid "Navigation text hover"
+msgstr ""
+
+#: functions/customizer.php:753 functions/functions.php:1124
+msgid "Navigation background current"
+msgstr ""
+
+#: functions/customizer.php:774 functions/functions.php:1129
+msgid "Navigation text current"
+msgstr ""
+
+#: functions/customizer.php:787 functions/customizer.php:807
+msgid "Logo"
+msgstr ""
+
+#: functions/customizer.php:808
+msgid "Replace your logo on the blog."
+msgstr ""
+
+#: functions/functions.php:853
+msgid "Page Header"
+msgstr "Hlavička stránky"
+
+#: functions/functions.php:920
+msgid "Logo Settings"
+msgstr ""
+
+#: functions/functions.php:931 functions/functions.php:933
+msgid "Page Header Image"
+msgstr "Obrázok stránky hlavičky"
+
+#: functions/functions.php:933 functions/functions.php:1081
+msgid "Insert Image"
+msgstr ""
+
+#: functions/functions.php:934 functions/functions.php:1082
+msgid "Add Image"
+msgstr "Pridať obrázok"
+
+#: functions/functions.php:960
+msgid "Use \"0\" or leave blank for proportional resizing."
+msgstr ""
+
+#: functions/functions.php:966
+msgid "Video background - MP4 file only"
+msgstr ""
+
+#: functions/functions.php:968 functions/functions.php:975
+#: functions/functions.php:982
+msgid "Page Header Video"
+msgstr ""
+
+#: functions/functions.php:968 functions/functions.php:975
+#: functions/functions.php:982
+msgid "Insert Video"
+msgstr ""
+
+#: functions/functions.php:969 functions/functions.php:976
+#: functions/functions.php:983
+msgid "Add Video"
+msgstr ""
+
+#: functions/functions.php:973
+msgid "Video background - OGV file only"
+msgstr ""
+
+#: functions/functions.php:980
+msgid "Video background - WEBM file only"
+msgstr ""
+
+#: functions/functions.php:987
+msgid "Overlay color"
+msgstr ""
+
+#: functions/functions.php:995
+msgid "HTML and shortcodes allowed."
+msgstr "HTML a shortcodes povoliť."
+
+#: functions/functions.php:1000
+msgid "Automatically add paragraphs"
+msgstr "Automaticky pridať nové slová do zoznamu na dopĺňanie"
+
+#: functions/functions.php:1003
+msgid "Add padding"
+msgstr "Pridať vnútorné medzery (padding)"
+
+#: functions/functions.php:1006
+msgid "Add background image"
+msgstr ""
+
+#: functions/functions.php:1009
+msgid "Parallax effect"
+msgstr ""
+
+#: functions/functions.php:1012
+msgid "Fullscreen"
+msgstr ""
+
+#: functions/functions.php:1015
+msgid "Vertical center content"
+msgstr ""
+
+#: functions/functions.php:1020
+msgid "Add to blog excerpt"
+msgstr ""
+
+#: functions/functions.php:1027
+msgid "Container type"
+msgstr ""
+
+#: functions/functions.php:1035
+msgid "Text alignment"
+msgstr "Zarovnanie textu"
+
+#: functions/functions.php:1044
+msgid "Top/Bottom padding"
+msgstr "Horné alebo Dolné odsadenie"
+
+#: functions/functions.php:1050
+msgid "Background color"
+msgstr ""
+
+#: functions/functions.php:1055
+msgid "Text color"
+msgstr "Farba textu"
+
+#: functions/functions.php:1060
+msgid "Link color"
+msgstr "Farba prepojenia"
+
+#: functions/functions.php:1065
+msgid "Link color hover"
+msgstr "Farba normálneho odkazu"
+
+#: functions/functions.php:1079 functions/functions.php:1081
+msgid "Header / Logo"
+msgstr ""
+
+#: functions/functions.php:1621
+msgid "Page Header Position"
+msgstr "Pozícia stránky hlavičky"
+
+#: functions/functions.php:1624 functions/functions.php:1654
+msgid "Above Content Area"
+msgstr "Nad oblasť obsahu"
+
+#: functions/functions.php:1625 functions/functions.php:1655
+msgid "Inside Content Area"
+msgstr "Vnútorná oblasť obsahu"
+
+#: functions/functions.php:1651
+msgid "Single Post Header Position"
+msgstr "Jediný príspevok pozícia hlavičky"
+
+#: functions/functions.php:1656
+msgid "Below Post Title"
+msgstr ""
+
+#: functions/ie.php:14
+msgid "Warning: This will delete your settings."
+msgstr ""
+
+#: functions/ie.php:16
+msgid "Delete Page Header Customizer Settings"
+msgstr "Odstrániť Customizer nastavenie stránky hlavičky"
+
+#: functions/ie.php:53
+msgid "Export Page Header Customizer Settings"
+msgstr "Exportovať nastavenie stránky hlavičky Customizer"
+
+#: inc/EDD_SL_Plugin_Updater.php:186
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+
+#: inc/EDD_SL_Plugin_Updater.php:193
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+
+#: inc/EDD_SL_Plugin_Updater.php:334
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+
+#: inc/EDD_SL_Plugin_Updater.php:334
+msgid "Error"
+msgstr ""
+
+#: inc/verify.php:84
+msgid "License failed."
+msgstr ""
+
+#: inc/verify.php:88
+msgid "License activated."
+msgstr ""
+
+#: inc/verify.php:92
+msgid "License deactivated."
+msgstr ""
+
+#: inc/verify.php:109
+#, php-format
+msgid "Updates %s"
+msgstr ""
+
+#: inc/verify.php:109
+msgid "Help"
+msgstr ""
+
+#: inc/verify.php:134
+msgid "License Key"
+msgstr ""
+
+#: inc/verify.php:139
+msgid "Update"
+msgstr ""
+
+#~ msgid ""
+#~ "Note: You've chosen content to show as your page header. Remove the "
+#~ "content and save to use the image below."
+#~ msgstr ""
+#~ "Poznámka: Ste vybrali obsah Zobraziť ako hlavičky stránky. Odstránenie "
+#~ "obsahu a uložiť použiť obrázok nižšie."
+
+#~ msgid "Image Crop Position"
+#~ msgstr "Pozícia:"
+
+#~ msgid "Top left"
+#~ msgstr "Vľavo hore"
+
+#~ msgid "Top right"
+#~ msgstr "Vpravo hore"
+
+#~ msgid "Bottom left"
+#~ msgstr "Vľavo dole"
+
+#~ msgid "Bottom right"
+#~ msgstr "Vpravo dole"
+
+#~ msgid "Use image (from image tab) as a background image?"
+#~ msgstr "Obraz (z obraz kartu) použiť ako obrázok na pozadí?"
+
+#~ msgid "Background type"
+#~ msgstr "Typ pozadia"
+
+#~ msgid "Add parallax effect?"
+#~ msgstr "Pridať efekt paralaxy?"
+
+#~ msgid "Add to blog excerpt (if no Featured Image is set)"
+#~ msgstr "Pridať blog výpis (ak nie najlepšie Image je nastavené)"
+
+#~ msgid "verified"
+#~ msgstr "overený"
+
+#~ msgid "Deactivate"
+#~ msgstr "Deaktivovať"
+
+#~ msgid "unverified"
+#~ msgstr "neoverené"
+
+#~ msgid "Activate"
+#~ msgstr "Aktivovať"
+
+#~ msgid "Deactivate License"
+#~ msgstr "Deaktivovať licencie"
+
+#~ msgid "active"
+#~ msgstr "aktívny"
+
+#~ msgid "Activate License"
+#~ msgstr "Aktivácia licencie"
+
+#~ msgid "inactive"
+#~ msgstr "neaktívny"

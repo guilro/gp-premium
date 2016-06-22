@@ -1,0 +1,191 @@
+.slideout-navigation {
+	width: 230px;
+	visibility: hidden;
+	overflow: auto;
+	height: 100% !important;
+	-webkit-overflow-scrolling: touch;
+	-webkit-box-shadow: 2px 0px 2px -2px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 2px 0px 2px -2px rgba(0, 0, 0, 0.1);
+	box-shadow: 2px 0px 2px -2px rgba(0, 0, 0, 0.1);
+	-moz-transition:visibility 0s linear 0.3s, transform 0.3s;
+	-webkit-transition:visibility 0s linear 0.3s, transform 0.3s;
+	transition:visibility 0s linear 0.3s, transform 0.3s;
+	-moz-transform: translateX(-100%);
+	-webkit-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+
+.slide-opened .slideout-navigation {
+	-moz-transition:transform 0.3s;
+	-webkit-transition:transform 0.3s;
+	transition:transform 0.3s;
+}
+
+html.slide-opened, body.slide-opened {
+	overflow: hidden;
+}
+
+.slideout-overlay {
+	display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9998;
+}
+
+@media (min-width: 400px) {
+	.slideout-navigation {
+		width: 270px;
+	}
+}
+
+.slideout-navigation .slideout-menu {
+	display: block;
+}
+
+#generate-slideout-menu {
+	z-index: 100000;
+}
+#generate-slideout-menu .slideout-menu > li {
+	float: none;
+	width: 100%;
+	text-align: left;
+}
+
+#generate-slideout-menu .menu-toggle {
+	display: none;
+}
+
+#generate-slideout-menu.main-navigation ul {
+	display: block;
+}
+
+#generate-slideout-menu.main-navigation ul ul {
+	display: none;
+}
+
+@media ( min-width: 769px ) {
+	.sf-menu > li.slideout-toggle {
+		float: right;
+	}
+	.gen-sidebar-nav .sf-menu > li.slideout-toggle {
+		float: none;
+	}
+}
+
+#generate-slideout-menu.main-navigation.toggled .main-nav > ul {
+	display: block;
+}
+	
+#generate-slideout-menu.main-navigation ul li:hover > ul {
+	display: none;
+}
+#generate-slideout-menu .slideout-menu li:hover > ul, 
+#generate-slideout-menu .slideout-menu li.sfHover > ul {
+	display: none;
+}
+	
+#generate-slideout-menu .sub-menu.toggled-on,
+#generate-slideout-menu .children.toggled-on {
+	display: block !important;
+}
+	
+#generate-slideout-menu.main-navigation .main-nav ul li .dropdown-toggle {
+	display: block;
+}
+	
+#generate-slideout-menu.main-navigation li a.dropdown-toggle {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#generate-slideout-menu .slideout-menu .menu-item-has-children > a:first-child,
+#generate-slideout-menu .slideout-menu .page_item_has_children > a:first-child {
+	padding-right: 1em;
+}
+#generate-slideout-menu .slideout-menu .menu-item-has-children > a:first-child:after,
+#generate-slideout-menu .slideout-menu .page_item_has_children > a:first-child:after {
+	display: none;
+}
+
+#generate-slideout-menu .slideout-menu > li {
+	float: none;
+	clear: both;
+}
+
+#generate-slideout-menu.main-navigation .main-nav ul ul {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.slideout-toggle a:before {
+	content: "\f0c9";
+	font-family: FontAwesome;
+	line-height: 1em;
+}
+
+.sticky-menu-no-transition.pushable > .pusher {
+	overflow: visible;
+}
+
+#generate-slideout-menu li.menu-item-float-right {
+	float: none !important;
+	display: inline-block;
+	width: auto;
+}
+
+.main-navigation .menu-toggle.opened:before,
+.slideout-toggle.opened a:before {
+	content: "\f00d";
+	font-family: FontAwesome;
+}
+
+/* Backwards compatibility until Slideout is updated */
+.slideout-mobile.dropdown-hover .slideout-navigation .dropdown-menu-toggle,
+.slideout-both.dropdown-hover .slideout-navigation .dropdown-menu-toggle {
+	display: block;
+}
+
+#generate-slideout-menu .slideout-menu .menu-item-has-children>a:first-child {
+	padding-right: 0;
+}
+
+.dropdown-click #generate-slideout-menu.main-navigation .main-nav ul li .dropdown-toggle {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.slideout-desktop .slideout-toggle {
+		display:none !important;
+	}
+	/* Backwards compatibility until Slideout is updated */
+	.slideout-mobile.dropdown-hover .dropdown-menu-toggle,
+	.slideout-both.dropdown-hover .dropdown-menu-toggle {
+		display: block;
+	}
+	
+	.slideout-mobile.dropdown-hover .dropdown-toggle,
+	.slideout-both.dropdown-hover .dropdown-toggle {
+		display: none !important;
+	}
+	
+	.slideout-mobile.dropdown-hover .secondary-navigation .main-nav ul li.menu-item-has-children a,
+	.slideout-both.dropdown-hover .secondary-navigation .main-nav ul li.menu-item-has-children a {
+		padding-right: 0;
+	}
+	
+	.slideout-mobile.dropdown-click .secondary-navigation ul li.sfHover > ul,
+	.slideout-both.dropdown-click .secondary-navigation ul li.sfHover > ul {
+		display: block;
+	}
+	
+	.dropdown-click .secondary-navigation .main-nav ul li .dropdown-toggle {
+		display: none;
+	}
+}
