@@ -1,0 +1,148 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Typography\n"
+"POT-Creation-Date: 2014-08-04 09:00-0800\n"
+"PO-Revision-Date: 2015-02-17 11:58+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: customizer/google-font-dropdown-custom-control.php:50
+msgid "Font family"
+msgstr "Famille de polices"
+
+#: generate-fonts.php:109
+msgid "Typography"
+msgstr "Typographie"
+
+#: generate-fonts.php:151 generate-fonts.php:238 generate-fonts.php:325
+#: generate-fonts.php:412 generate-fonts.php:499 generate-fonts.php:557
+#: generate-fonts.php:575 generate-fonts.php:593
+msgid "Font weight"
+msgstr "Largeur du texte"
+
+#: generate-fonts.php:173 generate-fonts.php:260 generate-fonts.php:347
+#: generate-fonts.php:434 generate-fonts.php:521 generate-fonts.php:561
+#: generate-fonts.php:579 generate-fonts.php:597
+msgid "Text transform"
+msgstr "Apparence du texte"
+
+#: generate-fonts.php:195 generate-fonts.php:282 generate-fonts.php:369
+#: generate-fonts.php:456 generate-fonts.php:543
+msgid "Font size"
+msgstr "Taille de la police"
+
+#: generate-fonts.php:553
+msgid "Heading 1 (H1)"
+msgstr "Titre 1 (H1)"
+
+#: generate-fonts.php:565 generate-fonts.php:583 generate-fonts.php:601
+msgid "Font-size"
+msgstr "Taille de la police"
+
+#: generate-fonts.php:571
+msgid "Heading 2 (H2)"
+msgstr "Titre 2 (H2)"
+
+#: generate-fonts.php:589
+msgid "Heading 3 (H3)"
+msgstr "Titre 3 (H3)"
+
+#: inc/activation.php:39 inc/verification.php:44
+msgid "verified"
+msgstr "Vérifié"
+
+#: inc/activation.php:43 inc/verification.php:56
+msgid "Deactivate"
+msgstr "Désactiver"
+
+#: inc/activation.php:55 inc/verification.php:46
+msgid "unverified"
+msgstr "Non vérifié"
+
+#: inc/activation.php:59
+msgid "Activate"
+msgstr "Activé"
+
+#: inc/helper.php:64
+msgid "Typography Installed"
+msgstr "Typographie est installé"
+
+#: inc/helper.php:65
+msgid "Please enter your license key in order to use this plugin."
+msgstr "S'il vous plaît, entrez votre clé de licence afin d'utiliser ce plugin"
+
+#: inc/old-license.php:14
+msgid "Deactivate License"
+msgstr "Désactiver la licence"
+
+#: inc/old-license.php:15
+msgid "active"
+msgstr "Actif"
+
+#: inc/old-license.php:18
+msgid "Activate License"
+msgstr "Activer la licence"
+
+#: inc/old-license.php:19
+msgid "inactive"
+msgstr "Inactif"
+
+#: inc/old-license.php:23
+msgid "Generate Typography License Key"
+msgstr "Générer une clef de licence pour Typographie"
+
+#: inc/verification.php:15
+msgid ""
+"Activate your addons by entering the email you purchased them with below. "
+"Save and verify, then your purchased addons will appear below for activation."
+msgstr ""
+"Activez vos addons en entrant l'email que vous avez utilisé pour votre "
+"achat.  Vos plugins achetés apparaîtront ci-dessous pour l'activation. "
+
+#: inc/verification.php:21
+msgid "Email"
+msgstr "Email"
+
+#: inc/verification.php:22 inc/verification.php:77 inc/verification.php:86
+msgid "Status"
+msgstr "Status"
+
+#: inc/verification.php:23 inc/verification.php:78 inc/verification.php:87
+msgid "Action"
+msgstr "Action"
+
+#: inc/verification.php:57
+msgid "Refresh"
+msgstr "Rafraîchir"
+
+#: inc/verification.php:60
+msgid "Verify Email"
+msgstr "Vérifier le Email"
+
+#: inc/verification.php:70
+msgid "Activate All"
+msgstr "Tout activer"
+
+#: inc/verification.php:75 inc/verification.php:84
+msgid "Product"
+msgstr "Produit"
+
+#: inc/verification.php:76 inc/verification.php:85
+msgid "Version"
+msgstr "Version"
+
+#: inc/verification.php:321
+msgid "Once Every 3 Days"
+msgstr "Une fois tous les 3 jours"

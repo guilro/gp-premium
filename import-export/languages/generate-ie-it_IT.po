@@ -1,0 +1,130 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Import Export\n"
+"POT-Creation-Date: 2016-01-13 10:35-0800\n"
+"PO-Revision-Date: 2016-01-13 10:35-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/functions.php:8
+msgid "Import / Export"
+msgstr "Importa/Esporta"
+
+#: functions/functions.php:10
+#, php-format
+msgid ""
+"<strong>Export</strong> your settings set in the <a href=\"%s\">Customizer</"
+"a>."
+msgstr ""
+"<strong>Esportare</strong> le modifiche impostate nel <a href=\"%s"
+"\">Customizer</a>."
+
+#: functions/functions.php:15
+msgid "Export Default Customizer Settings"
+msgstr "Esportare le impostazioni di Default"
+
+#: functions/functions.php:23
+msgid ""
+"<strong>Import</strong> your settings by uploading your exported .json file."
+msgstr ""
+"<strong>Importa</strong> le tue impostazioni caricando il file JSON esportato"
+
+#: functions/functions.php:31
+msgid "Import Settings"
+msgstr "Importa Impostazioni"
+
+#: functions/functions.php:95
+msgid "Please upload a valid .json file"
+msgstr "Carica un file .json valido"
+
+#: functions/functions.php:101
+msgid "Please upload a file to import"
+msgstr "Carica un file da importare"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+#~ msgstr ""
+#~ "C'è una nuova versione disponibile di %1$s . <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">Vedi i dettagli della  versione %3$s </a>."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+#~ "\">update now</a>."
+#~ msgstr ""
+#~ "C’è una nuova versione di %1$s disponibile. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">Vedi i dettagli della versione %3$s </a> o <a "
+#~ "href=“%4$s”>aggiorna ora</a>."
+
+#~ msgid "You do not have permission to install plugin updates"
+#~ msgstr "Non hai il permesso di installare gli aggiornamenti dei plugin"
+
+#~ msgid "Error"
+#~ msgstr "Errore"
+
+#~ msgid ""
+#~ "Want updates served directly to your Dashboard? Activate the email you "
+#~ "purchased your add-ons with here."
+#~ msgstr ""
+#~ "Vuoi aggiornamenti serviti direttamente sulla tua Dashboard? Inserisci e "
+#~ "attiva l'e-mail con la quale sono stati acquistati i componenti "
+#~ "aggiuntivi."
+
+#~ msgid "Email"
+#~ msgstr "E-mail"
+
+#~ msgid "Deactivate Email"
+#~ msgstr "Disattivare Email"
+
+#~ msgid "Activate Email"
+#~ msgstr "Attiva-mail"
+
+#~ msgid "Save Email"
+#~ msgstr "Salva E-mail"
+
+#~ msgid "Enable All Updates"
+#~ msgstr "Abilita tutti gli aggiornamenti"
+
+#~ msgid "Disable Updates"
+#~ msgstr "Disattiva Aggiornamenti"
+
+#~ msgid "Enable Updates"
+#~ msgstr "Abilita Aggiornamenti"
+
+#~ msgid "Email activation failed. This email does not exist in our records."
+#~ msgstr ""
+#~ "Attivazione E-mail fallita. Questa email non esiste nei nostri archivi."
+
+#~ msgid "Email activated."
+#~ msgstr "Email attivata."
+
+#~ msgid "Email deactivated."
+#~ msgstr "Email disattivata."
+
+#~ msgid "License failed."
+#~ msgstr "Licenza non riuscita."
+
+#~ msgid "License activated."
+#~ msgstr "Licenza attivata."
+
+#~ msgid "Licenses activated."
+#~ msgstr "Licenze attivate."
+
+#~ msgid "Deactivation failed."
+#~ msgstr "Disattivazione non riuscita."
+
+#~ msgid "License deactivated."
+#~ msgstr "Licenza disattivata."

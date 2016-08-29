@@ -1,0 +1,322 @@
+# Translation by Alexey Chumakov, 2015
+# Feel free to forward any issues or suggestions on translation to Alexey Chumakov
+# (**) comments indicate places for future improvement.
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Blog\n"
+"POT-Creation-Date: 2015-05-20 14:34+0300\n"
+"PO-Revision-Date: 2015-05-20 19:56+0300\n"
+"Last-Translator: Alexey Chumakov <alex@chumakov.ru>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8\n"
+"X-Poedit-Basepath: ..\\..\\..\\\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: addons\\generate-blog\n"
+"X-Poedit-SearchPath-1: inc\n"
+
+#: addons\generate-blog/inc/generate-blog.php:10
+msgid "Read more..."
+msgstr "Подробнее..."
+
+#: addons\generate-blog/inc/generate-blog.php:14
+msgid "+ More"
+msgstr "+ Ещё"
+
+#: addons\generate-blog/inc/generate-blog.php:15
+msgid "Loading..."
+msgstr "Загрузка ..."
+
+#: addons\generate-blog/inc/generate-blog.php:138
+msgid "Blog"
+msgstr "Блог"
+
+#: addons\generate-blog/inc/generate-blog.php:153
+msgid "Blog Content"
+msgstr "Содержимое блога"
+
+#: addons\generate-blog/inc/generate-blog.php:171
+msgid "Excerpt Length"
+msgstr "Длина цитаты"
+
+#: addons\generate-blog/inc/generate-blog.php:189
+msgid "Read more label"
+msgstr "Метка \"ещё...\""
+
+#: addons\generate-blog/inc/generate-blog.php:202
+#: addons\generate-blog/inc/generate-blog.php:226
+msgid "Masonry"
+msgstr "Мозаика"
+
+#: addons\generate-blog/inc/generate-blog.php:229
+msgid "Enable"
+msgstr "Включить"
+
+#: addons\generate-blog/inc/generate-blog.php:230
+msgid "Disable"
+msgstr "Выключить"
+
+#: addons\generate-blog/inc/generate-blog.php:256
+msgid "Masonry Block Width"
+msgstr "Ширина блока"
+
+#: addons\generate-blog/inc/generate-blog.php:259
+#: addons\generate-blog/inc/generate-blog.php:290
+#: addons\generate-blog/inc/generate-blog.php:841
+msgid "Small"
+msgstr "Малый"
+
+#: addons\generate-blog/inc/generate-blog.php:260
+#: addons\generate-blog/inc/generate-blog.php:291
+#: addons\generate-blog/inc/generate-blog.php:842
+msgid "Medium"
+msgstr "Средний"
+
+#: addons\generate-blog/inc/generate-blog.php:261
+#: addons\generate-blog/inc/generate-blog.php:292
+#: addons\generate-blog/inc/generate-blog.php:843
+msgid "Large"
+msgstr "Большой"
+
+#: addons\generate-blog/inc/generate-blog.php:287
+msgid "Masonry Most Recent Width"
+msgstr "Ширина самых свежих"
+
+#: addons\generate-blog/inc/generate-blog.php:311
+msgid "Masonry Load More Text"
+msgstr "Текст \"ещё\" в мозаике"
+
+#: addons\generate-blog/inc/generate-blog.php:329
+msgid "Masonry Loading Text"
+msgstr "Текст загрузки мозаики"
+
+#: addons\generate-blog/inc/generate-blog.php:342
+#: addons\generate-blog/inc/generate-blog.php:366
+msgid "Post Image"
+msgstr "Изображение к записи"
+
+#: addons\generate-blog/inc/generate-blog.php:369
+#: addons\generate-blog/inc/generate-blog.php:504
+#: addons\generate-blog/inc/generate-blog.php:534
+#: addons\generate-blog/inc/generate-blog.php:564
+#: addons\generate-blog/inc/generate-blog.php:594
+#: addons\generate-blog/inc/generate-blog.php:624
+msgid "Show"
+msgstr "Показать"
+
+#: addons\generate-blog/inc/generate-blog.php:370
+#: addons\generate-blog/inc/generate-blog.php:505
+#: addons\generate-blog/inc/generate-blog.php:535
+#: addons\generate-blog/inc/generate-blog.php:565
+#: addons\generate-blog/inc/generate-blog.php:595
+#: addons\generate-blog/inc/generate-blog.php:625
+msgid "Hide"
+msgstr "Скрыть"
+
+#: addons\generate-blog/inc/generate-blog.php:396
+msgid "Post Image Position"
+msgstr "Положение изображения"
+
+#: addons\generate-blog/inc/generate-blog.php:399
+msgid "Below Header"
+msgstr "Под шапкой"
+
+#: addons\generate-blog/inc/generate-blog.php:400
+msgid "Above Header"
+msgstr "Над шапкой"
+
+#: addons\generate-blog/inc/generate-blog.php:426
+msgid "Post Image Alignment"
+msgstr "Выранивание изображения"
+
+#: addons\generate-blog/inc/generate-blog.php:429
+msgid "Center"
+msgstr "По центру"
+
+#: addons\generate-blog/inc/generate-blog.php:430
+msgid "Left"
+msgstr "Влево"
+
+#: addons\generate-blog/inc/generate-blog.php:431
+msgid "Right"
+msgstr "Вправо"
+
+#: addons\generate-blog/inc/generate-blog.php:452
+msgid "Post Image Width"
+msgstr "Ширина изображения"
+
+#: addons\generate-blog/inc/generate-blog.php:456
+#: addons\generate-blog/inc/generate-blog.php:478
+msgid "Auto"
+msgstr "Авто"
+
+#: addons\generate-blog/inc/generate-blog.php:474
+msgid "Post Image Height"
+msgstr "Высота изображения"
+
+#: addons\generate-blog/inc/generate-blog.php:501
+msgid "Date"
+msgstr "Дата"
+
+#: addons\generate-blog/inc/generate-blog.php:531
+msgid "Author"
+msgstr "Автор"
+
+#: addons\generate-blog/inc/generate-blog.php:561
+msgid "Categories"
+msgstr "Рубрики"
+
+#: addons\generate-blog/inc/generate-blog.php:591
+msgid "Tags"
+msgstr "Метки"
+
+# (**) check with content
+#: addons\generate-blog/inc/generate-blog.php:621
+msgid "Comment Link"
+msgstr "Ссылка \"комментировать\""
+
+#: addons\generate-blog/inc/generate-blog.php:807
+#: addons\generate-blog/inc/generate-blog.php:838
+msgid "Masonry Post Width"
+msgstr "Ширина записи в мозаике"
+
+# (**) check with content
+#: addons\generate-blog/inc/generate-blog.php:840
+msgid "Global setting"
+msgstr "По умолчанию"
+
+#: addons\generate-blog/inc/ie.php:14
+msgid "Warning: This will delete your settings."
+msgstr "Внимание: ваши настройки будут удалены."
+
+#: addons\generate-blog/inc/ie.php:16
+msgid "Delete Blog Customizer Settings"
+msgstr "Удалить настройки блога"
+
+#: addons\generate-blog/inc/ie.php:53
+msgid "Export Blog Customizer Settings"
+msgstr "Экспортировать настройки блога"
+
+#: inc/EDD_SL_Plugin_Updater.php:177
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"Доступна новая версия %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+"\"%2$s\">Посмотреть подробности %3$s</a>."
+
+#: inc/EDD_SL_Plugin_Updater.php:184
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"Доступна новая версия %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+"\"%2$s\">Посмотреть подробности %3$s</a> или <a href=\"%4$s\">обновить "
+"сейчас</a>."
+
+#: inc/EDD_SL_Plugin_Updater.php:324
+msgid "You do not have permission to install plugin updates"
+msgstr "У вас нет прав для установки обновлений плагинов"
+
+#: inc/EDD_SL_Plugin_Updater.php:324
+msgid "Error"
+msgstr "Ошибка"
+
+#: inc/activation.php:11
+msgid "Add-on deactivated."
+msgstr "Дополнение деактивировано."
+
+#: inc/activation.php:15
+msgid "Add-on activated."
+msgstr "Дополнение активировано."
+
+#: inc/activation.php:63
+msgid "GP Premium"
+msgstr "Дополнения GP Premium"
+
+#: inc/activation.php:88
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: inc/activation.php:100
+msgid "Activate"
+msgstr "Активировать"
+
+#: inc/verification.php:39
+msgid ""
+"Want updates served directly to your Dashboard? Activate the email you "
+"purchased your add-ons with here."
+msgstr ""
+"Хотите, чтобы обновления подавались прямо в консоль? Активируйте адрес "
+"email, указанный при покупке дополнений."
+
+#: inc/verification.php:51 inc/verification.php:65
+msgid "Email"
+msgstr "Email"
+
+#: inc/verification.php:58
+msgid "Deactivate Email"
+msgstr "Деактивировать адрес"
+
+#: inc/verification.php:70
+msgid "Activate Email"
+msgstr "Активировать адрес"
+
+#: inc/verification.php:83
+msgid "Save Email"
+msgstr "Сохранить адрес"
+
+#: inc/verification.php:94
+msgid "Enable All Updates"
+msgstr "Включить все обновления"
+
+#: inc/verification.php:154
+msgid "Disable Updates"
+msgstr "Отключить обновления"
+
+#: inc/verification.php:164
+msgid "Enable Updates"
+msgstr "Включить обновления"
+
+#: inc/verification.php:750
+msgid "Email activation failed. This email does not exist in our records."
+msgstr "Активация адреса не удалась. Этого адреса нет в наших записях."
+
+#: inc/verification.php:754
+msgid "Email activated."
+msgstr "Адрес активирован."
+
+#: inc/verification.php:758
+msgid "Email deactivated."
+msgstr "Адрес деактивирован."
+
+#: inc/verification.php:762
+msgid "License failed."
+msgstr "Сбой лицензии."
+
+#: inc/verification.php:766
+msgid "License activated."
+msgstr "Лицензия активирована."
+
+#: inc/verification.php:770
+msgid "Licenses activated."
+msgstr "Лицензии активированы."
+
+#: inc/verification.php:774
+msgid "Deactivation failed."
+msgstr "Сбой деактивации."
+
+#: inc/verification.php:778
+msgid "License deactivated."
+msgstr "Лицензия деактивирована."

@@ -1,0 +1,183 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Colors\n"
+"POT-Creation-Date: 2016-04-03 18:27+0200\n"
+"PO-Revision-Date: 2016-05-12 18:51+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Last-Translator: Krzysztof Grochocki <contact@beherit.pl>\n"
+"Language: pl_PL\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/functions.php:82
+msgid "Colors"
+msgstr "Kolory"
+
+#: functions/functions.php:94
+msgid "Header Colors"
+msgstr "Kolory nagłówka"
+
+#: functions/functions.php:106 functions/functions.php:183
+#: functions/functions.php:260 functions/functions.php:336
+#: functions/functions.php:455 functions/functions.php:526
+#: functions/functions.php:597
+msgid "Background"
+msgstr "Tło"
+
+#: functions/functions.php:112 functions/functions.php:189
+#: functions/functions.php:266 functions/functions.php:342
+#: functions/functions.php:461 functions/functions.php:532
+#: functions/functions.php:603
+msgid "Text"
+msgstr "Tekst"
+
+#: functions/functions.php:118 functions/functions.php:348
+#: functions/functions.php:467 functions/functions.php:538
+#: functions/functions.php:609
+msgid "Link"
+msgstr "Odnośnik"
+
+#: functions/functions.php:124 functions/functions.php:354
+#: functions/functions.php:473 functions/functions.php:544
+#: functions/functions.php:615
+msgid "Link Hover"
+msgstr "Odnośnik po najechaniu"
+
+#: functions/functions.php:130
+msgid "Site Title"
+msgstr "Tytuł witryny"
+
+#: functions/functions.php:136
+msgid "Tagline"
+msgstr "Opis witryny"
+
+#: functions/functions.php:171
+msgid "Navigation Colors"
+msgstr "Kolory nawigacji"
+
+#: functions/functions.php:195 functions/functions.php:272
+msgid "Background Hover"
+msgstr "Tło po najechaniu"
+
+#: functions/functions.php:201 functions/functions.php:278
+msgid "Text Hover"
+msgstr "Tekst po najechaniu"
+
+#: functions/functions.php:207 functions/functions.php:284
+msgid "Background Current"
+msgstr "Tło bieżacego wyboru"
+
+#: functions/functions.php:213 functions/functions.php:290
+msgid "Text Current"
+msgstr "Tekst bieżącego wyboru"
+
+#: functions/functions.php:248
+msgid "Sub-Navigation Colors"
+msgstr "Kolory podmenu"
+
+#: functions/functions.php:324
+msgid "Content Colors"
+msgstr "Kolory zawartości"
+
+#: functions/functions.php:360
+msgid "Content Title"
+msgstr "Tytuł zawartości"
+
+#: functions/functions.php:366
+msgid "Blog Post Title"
+msgstr "Tytuł wpisu na blogu"
+
+#: functions/functions.php:372
+msgid "Blog Post Title Hover"
+msgstr "Tytuł wpisu po najechaniu"
+
+#: functions/functions.php:378
+msgid "Entry Meta Text"
+msgstr "Kolor tekstów meta"
+
+#: functions/functions.php:384
+msgid "Entry Meta Links"
+msgstr "Kolor odnośników meta"
+
+#: functions/functions.php:390
+msgid "Entry Meta Links Hover"
+msgstr "Kolor odnośników meta po najechaniu"
+
+#: functions/functions.php:396
+msgid "Heading 1 (H1) Color"
+msgstr "Kolor nagłówka 1 (H1)"
+
+#: functions/functions.php:402
+msgid "Heading 2 (H2) Color"
+msgstr "Kolor nagłówka 2 (H2)"
+
+#: functions/functions.php:408
+msgid "Heading 3 (H3) Color"
+msgstr "Kolor nagłówka 3 (H3)"
+
+#: functions/functions.php:443
+msgid "Sidebar Widget Colors"
+msgstr "Kolory widgetów paska bocznego"
+
+#: functions/functions.php:479 functions/functions.php:550
+msgid "Widget Title"
+msgstr "Nazwa widgeta"
+
+#: functions/functions.php:514
+msgid "Footer Widget Colors"
+msgstr "Kolory widgetów w stopce"
+
+#: functions/functions.php:585
+msgid "Footer Colors"
+msgstr "Kolory stopki"
+
+#: functions/functions.php:650
+msgid "Form Colors"
+msgstr "Kolor formularza"
+
+#: functions/functions.php:662
+msgid "Form Background"
+msgstr "Tło formularza"
+
+#: functions/functions.php:668
+msgid "Form Text"
+msgstr "Tekst formularza"
+
+#: functions/functions.php:674
+msgid "Form Background Focus/Hover"
+msgstr "Tło formularza po wybraniu/najechaniu"
+
+#: functions/functions.php:680
+msgid "Form Text Focus/Hover"
+msgstr "Tekst formularza po wybraniu/najechaniu"
+
+#: functions/functions.php:686
+msgid "Form Border"
+msgstr "Krawędź formularza"
+
+#: functions/functions.php:692
+msgid "Form Border Focus/Hover"
+msgstr "Krawędź formularza po wybraniu/najechaniu"
+
+#: functions/functions.php:698
+msgid "Form Button"
+msgstr "Przycisk formularza"
+
+#: functions/functions.php:704
+msgid "Form Button Focus/Hover"
+msgstr "Przycisk formularza po wybraniu/najechaniu"
+
+#: functions/functions.php:710
+msgid "Form Button Text"
+msgstr "Tekst przycisku formularza"
+
+#: functions/functions.php:716
+msgid "Form Button Text Focus/Hover"
+msgstr "Tekst przycisku formularza po wybraniu/najechaniu"

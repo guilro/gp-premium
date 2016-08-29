@@ -1,0 +1,313 @@
+# Translation by Alexey Chumakov, 2015
+# Feel free to forward any issues or suggestions on translation to Alexey Chumakov
+# (**) comments indicate places for future improvement.
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Backgrounds\n"
+"POT-Creation-Date: 2015-05-19 22:29+0300\n"
+"PO-Revision-Date: 2015-05-20 19:56+0300\n"
+"Last-Translator: Alexey Chumakov <alex@chumakov.ru>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8\n"
+"X-Poedit-Basepath: ..\\..\\..\\\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: addons\\generate-backgrounds\n"
+"X-Poedit-SearchPath-1: inc\n"
+
+#: inc/controls.php:65
+msgid "Select Image"
+msgstr "Выбрать изображение"
+
+#: inc/controls.php:65
+msgid "Use Image"
+msgstr "Использовать изображение"
+
+#: inc/controls.php:65
+msgid "Upload"
+msgstr "Загрузить"
+
+#: inc/controls.php:66
+msgid "Remove"
+msgstr "Убрать"
+
+#: inc/functions.php:74
+msgid "Background Images"
+msgstr "Фоновые изображения"
+
+#: inc/functions.php:88
+msgid "Body"
+msgstr "Тело страницы"
+
+# (**)
+#: inc/functions.php:126 inc/functions.php:272 inc/functions.php:418
+#: inc/functions.php:480 inc/functions.php:542 inc/functions.php:604
+#: inc/functions.php:678 inc/functions.php:740 inc/functions.php:802
+#: inc/functions.php:876 inc/functions.php:1022 inc/functions.php:1168
+#: inc/functions.php:1314
+msgid "Repeat"
+msgstr "Повторять"
+
+# (**)
+#: inc/functions.php:127 inc/functions.php:273 inc/functions.php:419
+#: inc/functions.php:481 inc/functions.php:543 inc/functions.php:605
+#: inc/functions.php:679 inc/functions.php:741 inc/functions.php:803
+#: inc/functions.php:877 inc/functions.php:1023 inc/functions.php:1169
+#: inc/functions.php:1315
+msgid "Repeat x"
+msgstr "Горизонтально"
+
+# (**)
+#: inc/functions.php:128 inc/functions.php:274 inc/functions.php:420
+#: inc/functions.php:482 inc/functions.php:544 inc/functions.php:606
+#: inc/functions.php:680 inc/functions.php:742 inc/functions.php:804
+#: inc/functions.php:878 inc/functions.php:1024 inc/functions.php:1170
+#: inc/functions.php:1316
+msgid "Repeat y"
+msgstr "Вертикально"
+
+# (**)
+#: inc/functions.php:129 inc/functions.php:275 inc/functions.php:421
+#: inc/functions.php:483 inc/functions.php:545 inc/functions.php:607
+#: inc/functions.php:681 inc/functions.php:743 inc/functions.php:805
+#: inc/functions.php:879 inc/functions.php:1025 inc/functions.php:1171
+#: inc/functions.php:1317
+msgid "No Repeat"
+msgstr "Не повторять"
+
+# (**)
+#: inc/functions.php:151 inc/functions.php:297 inc/functions.php:901
+#: inc/functions.php:1047 inc/functions.php:1193 inc/functions.php:1339
+msgid "Size (Auto)"
+msgstr "По размеру (авто)"
+
+# (**)
+#: inc/functions.php:152 inc/functions.php:298 inc/functions.php:902
+#: inc/functions.php:1048 inc/functions.php:1194 inc/functions.php:1340
+msgid "100% Width"
+msgstr "100% ширина"
+
+# (**)
+#: inc/functions.php:153 inc/functions.php:299 inc/functions.php:903
+#: inc/functions.php:1049 inc/functions.php:1195 inc/functions.php:1341
+msgid "Cover"
+msgstr "Накрыть"
+
+# (**)
+#: inc/functions.php:154 inc/functions.php:300 inc/functions.php:904
+#: inc/functions.php:1050 inc/functions.php:1196 inc/functions.php:1342
+msgid "Contain"
+msgstr "Уместить"
+
+# (**)
+#: inc/functions.php:176 inc/functions.php:322 inc/functions.php:926
+#: inc/functions.php:1072 inc/functions.php:1218 inc/functions.php:1364
+msgid "Attachment"
+msgstr "Привязка"
+
+# (**)
+#: inc/functions.php:177 inc/functions.php:323 inc/functions.php:927
+#: inc/functions.php:1073 inc/functions.php:1219 inc/functions.php:1365
+msgid "Fixed"
+msgstr "Фиксированная"
+
+# (**)
+#: inc/functions.php:178 inc/functions.php:324 inc/functions.php:928
+#: inc/functions.php:1074 inc/functions.php:1220 inc/functions.php:1366
+msgid "Local"
+msgstr "Локальная"
+
+#: inc/functions.php:179 inc/functions.php:325 inc/functions.php:929
+#: inc/functions.php:1075 inc/functions.php:1221 inc/functions.php:1367
+msgid "Inherit"
+msgstr "Наследовать"
+
+#: inc/functions.php:203 inc/functions.php:349 inc/functions.php:953
+#: inc/functions.php:1099 inc/functions.php:1245 inc/functions.php:1391
+msgid "Position"
+msgstr "Позиция"
+
+#: inc/functions.php:230
+msgid "Header"
+msgstr "Шапка"
+
+#: inc/functions.php:376
+msgid "Navigation"
+msgstr "Меню"
+
+#: inc/functions.php:438
+msgid "Navigation Item"
+msgstr "Пункт меню"
+
+#: inc/functions.php:500
+msgid "Navigation Item Hover"
+msgstr "Пункт меню — наведение"
+
+#: inc/functions.php:562
+msgid "Navigation Item Current"
+msgstr "Пункт меню — текущий"
+
+# (**) check if it is OK to substitute nav with menu here
+#: inc/functions.php:636
+msgid "Sub-Navigation Item"
+msgstr "Пункт подменю"
+
+#: inc/functions.php:698
+msgid "Sub-Navigation Item Hover"
+msgstr "Пункт подменю — наведение"
+
+#: inc/functions.php:760
+msgid "Sub-Navigation Item Current"
+msgstr "Пункт подменю — текущий"
+
+#: inc/functions.php:834
+msgid "Content"
+msgstr "Содержимое"
+
+#: inc/functions.php:980
+msgid "Sidebar Widgets"
+msgstr "Виджеты боковика"
+
+#: inc/functions.php:1126
+msgid "Footer Widget Area"
+msgstr "Область виджетов футера"
+
+#: inc/functions.php:1272
+msgid "Footer Area"
+msgstr "Область футера"
+
+#: inc/ie.php:11
+msgid "Export Backgrounds Customizer Settings"
+msgstr "Экспортировать настройки фонов"
+
+#: inc/ie.php:60
+msgid "Warning: This will delete your settings."
+msgstr "Внимание: ваши настройки будут удалены."
+
+#: inc/ie.php:62
+msgid "Delete Backgrounds Customizer Settings"
+msgstr "Удалить настройки фонов"
+
+#: ~inc/EDD_SL_Plugin_Updater.php:177
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"Доступна новая версия %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+"\"%2$s\">Посмотреть подробности %3$s</a>."
+
+#: ~inc/EDD_SL_Plugin_Updater.php:184
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"Доступна новая версия %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+"\"%2$s\">Посмотреть подробности %3$s</a> или <a href=\"%4$s\">обновить "
+"сейчас</a>."
+
+#: ~inc/EDD_SL_Plugin_Updater.php:324
+msgid "You do not have permission to install plugin updates"
+msgstr "У вас нет прав для установки обновлений плагинов"
+
+#: ~inc/EDD_SL_Plugin_Updater.php:324
+msgid "Error"
+msgstr "Ошибка"
+
+#: ~inc/activation.php:11
+msgid "Add-on deactivated."
+msgstr "Дополнение деактивировано."
+
+#: ~inc/activation.php:15
+msgid "Add-on activated."
+msgstr "Дополнение активировано."
+
+#: ~inc/activation.php:63
+msgid "GP Premium"
+msgstr "Дополнения GP Premium"
+
+#: ~inc/activation.php:88
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: ~inc/activation.php:100
+msgid "Activate"
+msgstr "Активировать"
+
+#: ~inc/verification.php:39
+msgid ""
+"Want updates served directly to your Dashboard? Activate the email you "
+"purchased your add-ons with here."
+msgstr ""
+"Хотите, чтобы обновления подавались прямо в консоль? Активируйте адрес "
+"email, указанный при покупке дополнений."
+
+#: ~inc/verification.php:51 ~inc/verification.php:65
+msgid "Email"
+msgstr "Email"
+
+#: ~inc/verification.php:58
+msgid "Deactivate Email"
+msgstr "Деактивировать адрес"
+
+#: ~inc/verification.php:70
+msgid "Activate Email"
+msgstr "Активировать адрес"
+
+#: ~inc/verification.php:83
+msgid "Save Email"
+msgstr "Сохранить адрес"
+
+#: ~inc/verification.php:94
+msgid "Enable All Updates"
+msgstr "Включить все обновления"
+
+#: ~inc/verification.php:154
+msgid "Disable Updates"
+msgstr "Отключить обновления"
+
+#: ~inc/verification.php:164
+msgid "Enable Updates"
+msgstr "Включить обновления"
+
+#: ~inc/verification.php:750
+msgid "Email activation failed. This email does not exist in our records."
+msgstr "Активация адреса не удалась. Этого адреса нет в наших записях."
+
+#: ~inc/verification.php:754
+msgid "Email activated."
+msgstr "Адрес активирован."
+
+#: ~inc/verification.php:758
+msgid "Email deactivated."
+msgstr "Адрес деактивирован."
+
+#: ~inc/verification.php:762
+msgid "License failed."
+msgstr "Сбой лицензии."
+
+#: ~inc/verification.php:766
+msgid "License activated."
+msgstr "Лицензия активирована."
+
+#: ~inc/verification.php:770
+msgid "Licenses activated."
+msgstr "Лицензии активированы."
+
+#: ~inc/verification.php:774
+msgid "Deactivation failed."
+msgstr "Сбой деактивации."
+
+#: ~inc/verification.php:778
+msgid "License deactivated."
+msgstr "Лицензия деактивирована."

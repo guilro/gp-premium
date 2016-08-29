@@ -1,0 +1,102 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Copyright\n"
+"POT-Creation-Date: 2016-07-16 11:41-0700\n"
+"PO-Revision-Date: 2016-07-16 11:41-0700\n"
+"Last-Translator: Jamal <jjamal69@hotmail.com>\n"
+"Language-Team: Jamal <jjamal69@hotmail.com>\n"
+"Language: se\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/control.php:21
+msgid "<code>%current_year%</code> to update year automatically."
+msgstr ""
+"Skriv <code>%current_year%</code> för att dynamiskt visa nuvarande år."
+
+#: functions/control.php:22
+msgid "<code>%copy%</code> to include the copyright symbol."
+msgstr "Skriv <code>%copy%</code> för att använda upphövsrätt symbolen."
+
+#: functions/control.php:23
+msgid "HTML is allowed."
+msgstr "HTML är tillåtet."
+
+#: functions/control.php:24
+msgid "Shortcodes are allowed."
+msgstr "Shortcodes är tillåtna."
+
+#: functions/functions.php:8
+msgid "Copyright"
+msgstr "Copyright"
+
+#: inc/EDD_SL_Plugin_Updater.php:189
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr ""
+"Det finns en ny version av %1$s tillgänglig. %2$sSe version %3$s detaljer"
+"%4$s."
+
+#: inc/EDD_SL_Plugin_Updater.php:197
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+"Det finns en ny version av %1$s tillgänglig. %2$sSe version %3$s detaljer"
+"%4$s eller %5$suppdatera nu%6$s."
+
+#: inc/EDD_SL_Plugin_Updater.php:340
+msgid "You do not have permission to install plugin updates"
+msgstr "Du har inte behörighet för att uppdatera tillägg"
+
+#: inc/EDD_SL_Plugin_Updater.php:340
+msgid "Error"
+msgstr "Ett fel har uppstått"
+
+#: inc/verify.php:84
+msgid "License failed."
+msgstr "Registreringen misslyckades."
+
+#: inc/verify.php:88
+msgid "License activated."
+msgstr "Licens aktiverad."
+
+#: inc/verify.php:92
+msgid "License deactivated."
+msgstr "Licens avaktiverad."
+
+#: inc/verify.php:109
+#, php-format
+msgid "Updates %s"
+msgstr "Uppdateringar %s"
+
+#: inc/verify.php:109
+msgid "Help"
+msgstr "Hjälp"
+
+#: inc/verify.php:134
+msgid "License Key"
+msgstr "Licensnyckel"
+
+#: inc/verify.php:139
+msgid "Update"
+msgstr "Uppdatera"
+
+#~ msgid ""
+#~ "Use <code>%current_year%</code> to include the current year dynamically."
+#~ msgstr ""
+#~ "Skriv <code>%current_year%</code> för att dynamiskt visa nuvarande år."
+
+#~ msgid "Use <code>%copy%</code> to include the copyright symbol."
+#~ msgstr "Skriv <code>%copy%</code> för att använda upphövsrätt symbolen."

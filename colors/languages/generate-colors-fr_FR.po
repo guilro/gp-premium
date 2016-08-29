@@ -1,0 +1,272 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Colors\n"
+"POT-Creation-Date: 2014-12-15 11:02-0800\n"
+"PO-Revision-Date: 2015-05-21 18:44+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: inc/EDD_SL_Plugin_Updater.php:154
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"Ceci est une nouvelle version de %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>. "
+
+#: inc/EDD_SL_Plugin_Updater.php:161
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"Ceci est une nouvelle version de %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+
+#: inc/EDD_SL_Plugin_Updater.php:301
+msgid "You do not have permission to install plugin updates"
+msgstr "Vous n'avez pas la permission d'installer la mise-à-jour de ce plugin."
+
+#: inc/EDD_SL_Plugin_Updater.php:301
+msgid "Error"
+msgstr "Erreur"
+
+#: inc/functions.php:79
+msgid "Colors"
+msgstr "Couleurs"
+
+#: inc/functions.php:91
+msgid "Header Colors"
+msgstr "Couleur de l'en-tête"
+
+#: inc/functions.php:103 inc/functions.php:180 inc/functions.php:257
+#: inc/functions.php:333 inc/functions.php:434 inc/functions.php:505
+#: inc/functions.php:576
+msgid "Background"
+msgstr "Couleur du fond"
+
+#: inc/functions.php:109 inc/functions.php:186 inc/functions.php:263
+#: inc/functions.php:339 inc/functions.php:440 inc/functions.php:511
+#: inc/functions.php:582
+msgid "Text"
+msgstr "Couleur du texte"
+
+#: inc/functions.php:115 inc/functions.php:345 inc/functions.php:446
+#: inc/functions.php:517 inc/functions.php:588
+msgid "Link"
+msgstr "Couleur des liens"
+
+#: inc/functions.php:121 inc/functions.php:351 inc/functions.php:452
+#: inc/functions.php:523 inc/functions.php:594
+msgid "Link Hover"
+msgstr "Couleur d'un lien sélectionné"
+
+#: inc/functions.php:127
+msgid "Site Title"
+msgstr "Couleur du titre du site"
+
+#: inc/functions.php:133
+msgid "Tagline"
+msgstr "Couleur du descriptif"
+
+#: inc/functions.php:168
+msgid "Navigation Colors"
+msgstr "Couleur de la barre de navigation"
+
+#: inc/functions.php:192 inc/functions.php:269
+msgid "Background Hover"
+msgstr "Couleur de la sélection"
+
+#: inc/functions.php:198 inc/functions.php:275
+msgid "Text Hover"
+msgstr "Couleur du texte sélectionné"
+
+#: inc/functions.php:204 inc/functions.php:281
+msgid "Background Current"
+msgstr "Couleur de la sous-rubrique actuelle"
+
+#: inc/functions.php:210 inc/functions.php:287
+msgid "Text Current"
+msgstr "Couleur du texte de la sous-rubrique actuelle"
+
+#: inc/functions.php:245
+msgid "Sub-Navigation Colors"
+msgstr "Couleur de la barre de sous-navigation"
+
+#: inc/functions.php:321
+msgid "Content Colors"
+msgstr "Couleur des contenants"
+
+#: inc/functions.php:357
+msgid "Content Title"
+msgstr "Contenu du titre"
+
+#: inc/functions.php:363
+msgid "Blog Post Title"
+msgstr "Couleur des titres des articles des pages principales"
+
+#: inc/functions.php:369
+msgid "Blog Post Title Hover"
+msgstr "Couleur du titres des pages principales sélectionnées"
+
+#: inc/functions.php:375
+msgid "Entry Meta Text"
+msgstr "Couleur du méta texte"
+
+#: inc/functions.php:381
+msgid "Entry Meta Links"
+msgstr "Couleur des méta liens"
+
+#: inc/functions.php:387
+msgid "Entry Meta Links Hover"
+msgstr "Couleur du méta lien sélectionné"
+
+#: inc/functions.php:422
+msgid "Sidebar Widget Colors"
+msgstr "Couleur des widget de la barre latérale"
+
+#: inc/functions.php:458 inc/functions.php:529
+msgid "Widget Title"
+msgstr "Couleur du titre des widgets"
+
+#: inc/functions.php:493
+msgid "Footer Widget Colors"
+msgstr "Couleur des widget en bas de page"
+
+#: inc/functions.php:564
+msgid "Footer Colors"
+msgstr "Couleur du bas de page"
+
+#: inc/functions.php:629
+msgid "Form Colors"
+msgstr "Couleur de la zone de saisie"
+
+#: inc/functions.php:641
+msgid "Form Background"
+msgstr "Couleur du fond"
+
+#: inc/functions.php:647
+msgid "Form Text"
+msgstr "Couleur du texte"
+
+#: inc/functions.php:653
+msgid "Form Background Focus/Hover"
+msgstr "Couleur du fond sélectionné"
+
+#: inc/functions.php:659
+msgid "Form Text Focus/Hover"
+msgstr "Couleur du texte saisi"
+
+#: inc/functions.php:665
+msgid "Form Border"
+msgstr "Couleur du cadre"
+
+#: inc/functions.php:671
+msgid "Form Border Focus/Hover"
+msgstr "Couleur du cadre sélectionné"
+
+#: inc/functions.php:677
+msgid "Form Button"
+msgstr "Couleur des boutons"
+
+#: inc/functions.php:683
+msgid "Form Button Focus/Hover"
+msgstr "Couleur des boutons sélectionnés"
+
+#: inc/functions.php:689
+msgid "Form Button Text"
+msgstr "Couleur du texte des boutons"
+
+#: inc/functions.php:695
+msgid "Form Button Text Focus/Hover"
+msgstr "Couleur du texte des boutons sélectionnés"
+
+#~ msgid "verified"
+#~ msgstr "Vérifié"
+
+#~ msgid "Deactivate"
+#~ msgstr "Désactiver"
+
+#~ msgid "unverified"
+#~ msgstr "Non vérifié"
+
+#~ msgid "Activate"
+#~ msgstr "Activé"
+
+#~ msgid "Colors Installed"
+#~ msgstr "Couleurs est installé"
+
+#~ msgid "Please enter your license key in order to use this plugin."
+#~ msgstr ""
+#~ "S'il vous plait, entrez votre clé de licence afin d'utiliser ce plugin. "
+
+#~ msgid "Deactivate Email"
+#~ msgstr "Désactiver l'Email"
+
+#~ msgid "active"
+#~ msgstr "Actif"
+
+#~ msgid "Activate Email"
+#~ msgstr "Activer l'Email"
+
+#~ msgid "inactive"
+#~ msgstr "Inactif"
+
+#~ msgid "Deactivate License"
+#~ msgstr "Désactiver la licence"
+
+#~ msgid "Activate License"
+#~ msgstr "Activer la licence"
+
+#~ msgid "Generate Colors License Key"
+#~ msgstr "Générer une clef de licence pour Couleurs"
+
+#~ msgid ""
+#~ "Activate your addons by entering the email you purchased them with below. "
+#~ "Save and verify, then your purchased addons will appear below for "
+#~ "activation."
+#~ msgstr ""
+#~ "Activez vos addons en entrant l'email que vous avez utilisé pour votre "
+#~ "achat.  Vos plugins achetés apparaîtront ci-dessous pour l'activation. "
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "Action"
+#~ msgstr "Action"
+
+#~ msgid "Refresh"
+#~ msgstr "Rafraichir"
+
+#~ msgid "Verify Email"
+#~ msgstr "Vérifier le Email"
+
+#~ msgid "Activate All"
+#~ msgstr "Tout activer"
+
+#~ msgid "Product"
+#~ msgstr "Produit"
+
+#~ msgid "Version"
+#~ msgstr "Version"
+
+#~ msgid "Once Every 3 Days"
+#~ msgstr "Une fois tous les 3 jours"

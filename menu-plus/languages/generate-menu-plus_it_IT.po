@@ -1,0 +1,186 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Generate Menu Plus\n"
+"POT-Creation-Date: 2016-01-13 19:58+0100\n"
+"PO-Revision-Date: 2016-01-13 20:04+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: generate-menu-plus.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: it_IT\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: functions/generate-menu-plus.php:7 functions/generate-menu-plus.php:203
+msgid "Slideout Menu"
+msgstr "Menu a scomparsa (Slideout)"
+
+#: functions/generate-menu-plus.php:19
+msgid "Menu"
+msgstr "Menu"
+
+#: functions/generate-menu-plus.php:46
+msgid "Menu Plus"
+msgstr "Menu Plus"
+
+#: functions/generate-menu-plus.php:63
+msgid "Mobile Menu Label"
+msgstr "Etichetta del Menu Mobile"
+
+#: functions/generate-menu-plus.php:88
+msgid "Sticky Menu"
+msgstr "Menù Fisso (Sticky)"
+
+#: functions/generate-menu-plus.php:91 functions/generate-menu-plus.php:206
+msgid "Mobile only"
+msgstr "Solo per dispositivi mobili"
+
+#: functions/generate-menu-plus.php:92 functions/generate-menu-plus.php:207
+msgid "Desktop only"
+msgstr "Solo Desktop"
+
+#: functions/generate-menu-plus.php:93 functions/generate-menu-plus.php:208
+msgid "Both"
+msgstr "Entrambi"
+
+#: functions/generate-menu-plus.php:94 functions/generate-menu-plus.php:209
+msgid "Disable"
+msgstr "Disabilita"
+
+#: functions/generate-menu-plus.php:120
+msgid "Sticky Menu Effect"
+msgstr "Effetto di Menu Fisso (Sticky)"
+
+#: functions/generate-menu-plus.php:123
+msgid "Fade"
+msgstr "Sfuma"
+
+#: functions/generate-menu-plus.php:124
+msgid "Slide"
+msgstr "Slide"
+
+#: functions/generate-menu-plus.php:125
+msgid "None"
+msgstr "Nessuno"
+
+#: functions/generate-menu-plus.php:147
+msgid "Menu Logo"
+msgstr "Logo del Menù"
+
+#: functions/generate-menu-plus.php:172
+msgid "Menu Logo Position"
+msgstr "Posizione del  Logo sul Menù"
+
+#: functions/generate-menu-plus.php:175
+msgid "Sticky Only"
+msgstr "Solo nel Menù Fisso (Sticky)"
+
+#: functions/generate-menu-plus.php:176
+msgid "Sticky + Regular"
+msgstr "Fisso e Standard"
+
+#: functions/generate-menu-plus.php:177
+msgid "Regular Only"
+msgstr "Solo Standard"
+
+#: functions/generate-menu-plus.php:409
+msgid "Skip to content"
+msgstr "Vai al contenuto"
+
+#: functions/import-export.php:14
+msgid "Warning: This will delete your settings."
+msgstr "Attenzione: Questo cancellerà le tue impostazioni."
+
+#: functions/import-export.php:16
+msgid "Delete Menu Plus Customizer Settings"
+msgstr "Elimina le impostazioni del Menù Plus Customizer"
+
+#: functions/import-export.php:53
+msgid "Export Menu Plus Customizer Settings"
+msgstr "Esporta le impostazioni del Menu Plus Customizer"
+
+#: inc/EDD_SL_Plugin_Updater.php:181
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"C'è una nuova versione disponibile di %1$s . <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">Vedi i dettagli della  versione %3$s </a>."
+
+#: inc/EDD_SL_Plugin_Updater.php:188
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"C’è una nuova versione di %1$s disponibile. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">Vedi i dettagli della versione %3$s </a> o <a "
+"href=“%4$s”>aggiorna ora</a>."
+
+#: inc/EDD_SL_Plugin_Updater.php:326
+msgid "You do not have permission to install plugin updates"
+msgstr "Non hai il permesso di installare gli aggiornamenti dei plugin"
+
+#: inc/EDD_SL_Plugin_Updater.php:326
+msgid "Error"
+msgstr "Errore"
+
+#: inc/verify.php:84
+msgid "License failed."
+msgstr "Licenza non riuscita."
+
+#: inc/verify.php:88
+msgid "License activated."
+msgstr "Licenza attivata."
+
+#: inc/verify.php:92
+msgid "License deactivated."
+msgstr "Licenza disattivata."
+
+#: inc/verify.php:109
+#, php-format
+msgid "Updates %s"
+msgstr "Aggiornamenti %s"
+
+#: inc/verify.php:109
+msgid "Help"
+msgstr "Aiuto"
+
+#: inc/verify.php:134
+msgid "License Key"
+msgstr "Chiave Licenza"
+
+#: inc/verify.php:139
+msgid "Update"
+msgstr "Aggiorna"
+
+#. Plugin Name of the plugin/theme
+msgid "Generate Menu Plus"
+msgstr "Generare Menu Plus"
+
+#. Plugin URI of the plugin/theme
+msgid "http://generatepress.com"
+msgstr "http://generatepress.com"
+
+#. Description of the plugin/theme
+msgid "Add awesome new menu features to your GeneratePress menu"
+msgstr "Aggiungi nuove funzionalità al menù di GeneratePress"
+
+#. Author of the plugin/theme
+msgid "Tom Usborne"
+msgstr "Tom Usborne"
+
+#. Author URI of the plugin/theme
+msgid "http://edge22.com"
+msgstr "http://edge22.com"

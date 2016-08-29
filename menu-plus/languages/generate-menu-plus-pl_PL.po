@@ -1,0 +1,137 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Project-Id-Version: Generate Menu Plus\n"
+"POT-Creation-Date: 2016-04-02 10:56+0200\n"
+"PO-Revision-Date: 2016-05-12 18:45+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: generate-menu-plus.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: Krzysztof Grochocki <contact@beherit.pl>\n"
+"Language: pl\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: functions/generate-menu-plus.php:7 functions/generate-menu-plus.php:305
+#: functions/generate-menu-plus.php:329
+msgid "Slideout Menu"
+msgstr "Boczne menu"
+
+#: functions/generate-menu-plus.php:19 functions/generate-menu-plus.php:587
+msgid "Menu"
+msgstr "Menu"
+
+#: functions/generate-menu-plus.php:49
+msgid "Menu Plus"
+msgstr "Menu Plus"
+
+#: functions/generate-menu-plus.php:61
+msgid "General Settings"
+msgstr "Ustawienia ogólne"
+
+#: functions/generate-menu-plus.php:78
+msgid "Mobile Menu Label"
+msgstr "Etykieta menu mobilnego"
+
+#: functions/generate-menu-plus.php:90 functions/generate-menu-plus.php:114
+msgid "Sticky Menu"
+msgstr "Przyklejone menu"
+
+#: functions/generate-menu-plus.php:117 functions/generate-menu-plus.php:332
+msgid "Mobile only"
+msgstr "Tylko mobilne"
+
+#: functions/generate-menu-plus.php:118 functions/generate-menu-plus.php:333
+msgid "Desktop only"
+msgstr "Tylko desktop"
+
+#: functions/generate-menu-plus.php:119 functions/generate-menu-plus.php:334
+msgid "Both"
+msgstr "Oba"
+
+#: functions/generate-menu-plus.php:120 functions/generate-menu-plus.php:241
+#: functions/generate-menu-plus.php:292 functions/generate-menu-plus.php:335
+msgid "Disable"
+msgstr "Wyłącz"
+
+#: functions/generate-menu-plus.php:145
+msgid "Sticky Menu Effect"
+msgstr "Efekt przyklejonego menu"
+
+#: functions/generate-menu-plus.php:148
+msgid "Fade"
+msgstr "Zanikanie"
+
+#: functions/generate-menu-plus.php:149
+msgid "Slide"
+msgstr "Przesunięcie"
+
+#: functions/generate-menu-plus.php:150
+msgid "None"
+msgstr "Brak"
+
+#: functions/generate-menu-plus.php:171
+msgid "Menu Logo"
+msgstr "Logo menu"
+
+#: functions/generate-menu-plus.php:196
+msgid "Menu Logo Position"
+msgstr "Położenie loga menu"
+
+#: functions/generate-menu-plus.php:199
+msgid "Sticky Only"
+msgstr "Tylko przyklejone"
+
+#: functions/generate-menu-plus.php:200
+msgid "Sticky + Regular"
+msgstr "Przyklejone + zwykłe"
+
+#: functions/generate-menu-plus.php:201
+msgid "Regular Only"
+msgstr "Tylko zwykłe"
+
+#: functions/generate-menu-plus.php:214 functions/generate-menu-plus.php:238
+msgid "Mobile Header"
+msgstr "Nagłówek mobilny"
+
+#: functions/generate-menu-plus.php:242 functions/generate-menu-plus.php:291
+msgid "Enable"
+msgstr "Włącz"
+
+#: functions/generate-menu-plus.php:263
+msgid "Logo"
+msgstr "Logo"
+
+#: functions/generate-menu-plus.php:288
+msgid "Sticky Header"
+msgstr "Przyklejony nagłówek"
+
+#: functions/generate-menu-plus.php:630
+msgid "Skip to content"
+msgstr "Skocz do treści"
+
+#: functions/import-export.php:14
+msgid "Warning: This will delete your settings."
+msgstr "Uwaga: ustawienia zostaną usunięte."
+
+#: functions/import-export.php:16
+msgid "Delete Menu Plus Customizer Settings"
+msgstr "Usuń ustawienia konfiguracji Menu Plus"
+
+#: functions/import-export.php:53
+msgid "Export Menu Plus Customizer Settings"
+msgstr "Eksportuj ustawienia konfiguracji Menu Plus"
+
+#. Author of the plugin/theme
+msgid "Thomas Usborne"
+msgstr "Thomas Usborne"
+
+#. Author URI of the plugin/theme
+msgid "http://edge22.com"
+msgstr "http://edge22.com"

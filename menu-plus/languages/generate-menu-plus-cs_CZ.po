@@ -1,0 +1,225 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Menu Plus\n"
+"POT-Creation-Date: 2016-05-07 14:36+0200\n"
+"PO-Revision-Date: 2016-05-07 14:37+0200\n"
+"Last-Translator: Foxtrot <foxtrot@foxtrot.me>\n"
+"Language-Team: \n"
+"Language: cs_CZ\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: generate-menu-plus.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: functions/generate-menu-plus.php:7 functions/generate-menu-plus.php:305
+#: functions/generate-menu-plus.php:329
+msgid "Slideout Menu"
+msgstr "Vysouvací menu"
+
+#: functions/generate-menu-plus.php:19 functions/generate-menu-plus.php:587
+msgid "Menu"
+msgstr "Menu"
+
+#: functions/generate-menu-plus.php:49
+msgid "Menu Plus"
+msgstr "Menu plus"
+
+#: functions/generate-menu-plus.php:61
+msgid "General Settings"
+msgstr "Základní nastavení"
+
+#: functions/generate-menu-plus.php:78
+msgid "Mobile Menu Label"
+msgstr "Název mobilního menu"
+
+#: functions/generate-menu-plus.php:90 functions/generate-menu-plus.php:114
+msgid "Sticky Menu"
+msgstr "Přilepené menu"
+
+#: functions/generate-menu-plus.php:117 functions/generate-menu-plus.php:332
+msgid "Mobile only"
+msgstr "Pouze na mobilu"
+
+#: functions/generate-menu-plus.php:118 functions/generate-menu-plus.php:333
+msgid "Desktop only"
+msgstr "Pouze na počítači"
+
+#: functions/generate-menu-plus.php:119 functions/generate-menu-plus.php:334
+msgid "Both"
+msgstr "Obojí"
+
+#: functions/generate-menu-plus.php:120 functions/generate-menu-plus.php:241
+#: functions/generate-menu-plus.php:292 functions/generate-menu-plus.php:335
+msgid "Disable"
+msgstr "Zakázat"
+
+#: functions/generate-menu-plus.php:145
+msgid "Sticky Menu Effect"
+msgstr "Efekt přilepeného menu"
+
+#: functions/generate-menu-plus.php:148
+msgid "Fade"
+msgstr "Vyblednutí"
+
+#: functions/generate-menu-plus.php:149
+msgid "Slide"
+msgstr "Vysunutí"
+
+#: functions/generate-menu-plus.php:150
+msgid "None"
+msgstr "Žádný"
+
+#: functions/generate-menu-plus.php:171
+msgid "Menu Logo"
+msgstr "Logo menu"
+
+#: functions/generate-menu-plus.php:196
+msgid "Menu Logo Position"
+msgstr "Umístění loga menu"
+
+#: functions/generate-menu-plus.php:199
+msgid "Sticky Only"
+msgstr "Pouze přilepené"
+
+#: functions/generate-menu-plus.php:200
+msgid "Sticky + Regular"
+msgstr "Přilepené + normální"
+
+#: functions/generate-menu-plus.php:201
+msgid "Regular Only"
+msgstr "Pouze normální"
+
+#: functions/generate-menu-plus.php:214 functions/generate-menu-plus.php:238
+msgid "Mobile Header"
+msgstr "Mobilní hlavička"
+
+#: functions/generate-menu-plus.php:242 functions/generate-menu-plus.php:291
+msgid "Enable"
+msgstr "Povolit"
+
+#: functions/generate-menu-plus.php:263
+msgid "Logo"
+msgstr "Logo"
+
+#: functions/generate-menu-plus.php:288
+msgid "Sticky Header"
+msgstr "Přilepená hlavička"
+
+#: functions/generate-menu-plus.php:630
+msgid "Skip to content"
+msgstr "Přeskočit na obsah"
+
+#: functions/import-export.php:14
+msgid "Warning: This will delete your settings."
+msgstr "Varování: Toto smaže vaše nastavení."
+
+#: functions/import-export.php:16
+msgid "Delete Menu Plus Customizer Settings"
+msgstr "Smazat nastavení Přizpůsobení pro Menu Plus"
+
+#: functions/import-export.php:53
+msgid "Export Menu Plus Customizer Settings"
+msgstr "Exportovat nastavení Přizpůsobení pro Menu Plus"
+
+#. Author of the plugin/theme
+msgid "Thomas Usborne"
+msgstr "Thomas Usborne"
+
+#. Author URI of the plugin/theme
+msgid "http://edge22.com"
+msgstr "http://edge22.com"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+#~ msgstr ""
+#~ "Je dostupná nová verze %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+#~ "\"%2$s\">Zobrazit podrobnosti o verzi %3$s</a>."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+#~ "\">update now</a>."
+#~ msgstr ""
+#~ "Je dostupná nová verze %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+#~ "\"%2$s\">Zobrazit podrobnosti o verzi %3$s</a> nebo <a href=\"%4$s"
+#~ "\">aktualizovat nyní</a>."
+
+#~ msgid "You do not have permission to install plugin updates"
+#~ msgstr "Nemáte oprávnění k instalaci aktualizací pluginů"
+
+#~ msgid "Error"
+#~ msgstr "Chyba"
+
+#~ msgid ""
+#~ "Want updates served directly to your Dashboard? Activate the email you "
+#~ "purchased your add-ons with here."
+#~ msgstr ""
+#~ "Chcete aktualizace dodávat přímo do vaší Nástěnky? Aktivujte zde email, "
+#~ "kterým jste zakoupili vaše doplňky."
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Deactivate Email"
+#~ msgstr "Deaktivovat email"
+
+#~ msgid "Activate Email"
+#~ msgstr "Aktivovat email"
+
+#~ msgid "Save Email"
+#~ msgstr "Uložit email"
+
+#~ msgid "Enable All Updates"
+#~ msgstr "Povolit všechny aktualizace"
+
+#~ msgid "Disable Updates"
+#~ msgstr "Zakázat aktualizace"
+
+#~ msgid "Enable Updates"
+#~ msgstr "Povolit aktualizace"
+
+#~ msgid "Email activation failed. This email does not exist in our records."
+#~ msgstr "Aktivace emailu selhala. Tento email v našich záznamech neexistuje."
+
+#~ msgid "Email activated."
+#~ msgstr "Email aktivován."
+
+#~ msgid "Email deactivated."
+#~ msgstr "Email deaktivován."
+
+#~ msgid "License failed."
+#~ msgstr "Licence selhala."
+
+#~ msgid "License activated."
+#~ msgstr "Licence aktivována."
+
+#~ msgid "Licenses activated."
+#~ msgstr "Licence aktivovány."
+
+#~ msgid "Deactivation failed."
+#~ msgstr "Deaktivace selhala."
+
+#~ msgid "License deactivated."
+#~ msgstr "Licence deaktivována."
+
+#~ msgid "Generate Menu Plus"
+#~ msgstr "Generate Menu Plus"
+
+#~ msgid "http://generatepress.com"
+#~ msgstr "http://generatepress.com"
+
+#~ msgid "Add awesome new menu features to your GeneratePress menu"
+#~ msgstr "Přidejte úžasné nové funkce menu do vašeho GeneratePress menu."
+
+#~ msgid "Tom Usborne"
+#~ msgstr "Tom Usborne"

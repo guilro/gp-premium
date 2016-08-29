@@ -1,0 +1,274 @@
+#_generate_sections_metabox {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+}
+.generate-sections-enabled .send-to-editor {
+	display: none;
+}
+.generate-sections-enabled #postdivrich {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+}
+.generate-sections-enabled #_generate_sections_metabox {
+	opacity: 1;
+	height: auto;
+}
+.generate_sections_control .description {
+  display: none;
+}
+.generate_sections_control label {
+  display: block;
+  font-weight: bold;
+  margin: 6px;
+  margin-bottom: 0;
+  margin-top: 12px;
+}
+.generate_sections_control textarea,
+.generate_sections_control input[type='text'] {
+  margin-bottom: 3px;
+  width: 100%;
+  -moz-box-sizing: border-radius;
+  -webkit-box-sizing: border-radius;
+  box-sizing: border-radius;
+}
+.generate_sections_control .wp-sections-area {
+    border: 0 none;
+    box-sizing: border-box;
+    display: block;
+    font-family: Consolas,Monaco,monospace;
+    font-size: 13px;
+    line-height: 150%;
+    margin: 1px 0 0;
+    outline: 0 none;
+    padding: 10px;
+    resize: vertical;
+}
+.generate_sections_control h4 {
+  color: #999;
+  font-size: 1em;
+  margin: 15px 6px;
+  text-transform: uppercase;
+}
+.generate_sections_control .hidden {
+  display: none;
+}
+.generate_sections_control .warning {
+  color: red;
+}
+.generate_sections_control .dodelete-repeating_textareas {
+  float: right;
+}
+.generate_sections_control .wpa_loop {
+  clear: both;
+  margin-top: 1.625em;
+}
+.generate_sections_control .wpa_loop .wpa_group {
+  border: 1px solid #DFDFDF;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  margin: 6px 0px 8px;
+  overflow: hidden;
+  position: relative;
+  background: white;
+}
+.generate_sections_control .wpa_loop .wpa_group .handle {
+    min-height: 20px;
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 0;
+}
+.generate_sections_control .wpa_loop .wpa_group .group-control {
+  float: right;
+  width: 27px;
+  height: 30px;
+  color: #aaa;
+}
+.generate_sections_control .wpa_loop .wpa_group .group-control:hover {
+	color:#777;
+}
+.generate_sections_control .wpa_loop .wpa_group .group-control::after {
+  right: 12px;
+  font: 400 20px/1 dashicons;
+  speak: none;
+  display: inline-block;
+  padding: 8px 10px;
+  top: 0;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none!important;
+  content: '\f142';
+}
+.generate_sections_control .wpa_loop .wpa_group .group-control.dodelete {
+  float: right;
+}
+.generate_sections_control .wpa_loop .wpa_group .group-control.dodelete::after {
+	content: "\f335";
+}
+.generate_sections_control .wpa_loop .wpa_group .group-control.toggle::after {
+	content: "\f142";
+}
+.generate_sections_control .wpa_loop .wpa_group .closed .group-control.toggle::after {
+	content: "\f140";
+}	
+.generate_sections_control .wpa_loop .wpa_group .group-inside {
+  overflow: hidden;
+}
+.generate_sections_control .icon {
+  display: inline-block;
+}
+.generate_sections_control .icon::before,
+.generate_sections_control .icon::after {
+  font: 400 16px/1 dashicons;
+  vertical-align: middle;
+  speak: none;
+  display: inline-block;
+}
+.generate_sections_control .icon.delete::before {
+  content: "\f335";
+}
+.generate_sections_control .icon.add::before {
+  content: "\f132";
+}
+.generate_sections_control .icon.change::before {
+  content: "\f463";
+}
+.generate_sections_control .customEditor > .mce-container {
+  border: 1px solid #dedede;
+  clear: both;
+}
+.js .generate_sections_control {
+  /*
+	 * Repeating Groups
+	 */
+}
+.js .generate_sections_control .warning {
+  display: none;
+}
+.js .generate_sections_control .html-active .mce-container,
+.js .generate_sections_control .tmce-active .wp-editor-area {
+  display: none;
+}
+.js .generate_sections_control .group-wrap.closed .group-inside {
+  display: none;
+}
+.js .generate_sections_control .group-control {
+  cursor: pointer;
+}
+.js .generate_sections_control .togglebutton {
+  cursor: pointer;
+}
+.js .generate_sections_control .togglewrap {
+  display: none;
+}
+
+.group-inside .ui-sortable-placeholder {
+	line-height: 1.4em;
+	border: 3px dashed #DDD;
+}
+
+.generate-sortable::after {
+	content: "\f333" !important;
+	cursor: move;
+}
+
+.customEditor {
+	position: relative;
+	padding: 1em;
+}
+
+.customEditor .mce-wp-dfw,
+.customEditor .ed_button.qt-dfw {
+	display: none;
+}
+
+.group-inside .grid-container > div {
+	padding: .5em 1em;
+}
+		.group-inside label {
+			margin-left: 0;
+		}
+		#_generate_sections_metabox {
+			background: transparent;
+			border: 0;
+		}
+		#_generate_sections_metabox > .handlediv,
+		#_generate_sections_metabox > .hndle {
+			display: none;
+		}
+		#_generate_sections_metabox > .inside {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		
+		body.wp-admin .grid-container {
+			max-width: 100%;
+		}
+		
+		.box-type select,
+		.inner-box-type select,
+		.parallax-effect select,
+		.top-padding input,
+		.bottom-padding input {
+			width: 100%;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		
+		@media screen and (min-width: 769px) {
+			.grid-50 {
+				width: 50% !important;
+				float: left;
+			}
+			.grid-33 {
+				width: 33.333% !important;
+				float: left;
+			}
+			.grid-25 {
+				width: 25% !important;
+				float: left;
+			}
+			.grid-20 {
+				width: 20% !important;
+				float: left;
+			}
+			.grid-12 {
+				width: 12.5% !important;
+				float: left;
+				padding-left: 10px;
+				padding-right: 10px;
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			.top-border {
+				border-top: 1px solid #EFEFEF;
+			}
+			.bottom-border {
+				border-bottom: 1px solid #EFEFEF;
+			}
+			.border-right {
+				border-right: 1px solid #EFEFEF;
+			}
+			.border-left {
+				border-left: 1px solid #EFEFEF;
+			}
+		}
+		
+		.send-to-editor {
+			display: inline-block;
+			margin-top: 15px !important;
+		}
+		
+		@media screen and (max-width: 768px) {
+			.grid-50,
+			.grid-33,
+			.grid-25,
+			.grid-12 {
+				width: 100% !important;
+			}
+		}
+/*# sourceMappingURL=meta.css.map */

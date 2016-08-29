@@ -1,0 +1,302 @@
+# Translation by Alexey Chumakov, 2015
+# Feel free to forward any issues or suggestions on translation to Alexey Chumakov
+# (**) comments indicate places for future improvement.
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Colors\n"
+"POT-Creation-Date: 2015-05-19 22:27+0300\n"
+"PO-Revision-Date: 2015-05-20 14:50+0300\n"
+"Last-Translator: Alexey Chumakov <alex@chumakov.ru>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8\n"
+"X-Poedit-Basepath: ..\\..\\..\\\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: addons\\generate-colors\n"
+"X-Poedit-SearchPath-1: inc\n"
+
+#: inc/functions.php:82
+msgid "Colors"
+msgstr "Цвета"
+
+#: inc/functions.php:94
+msgid "Header Colors"
+msgstr "Цвета шапки"
+
+#: inc/functions.php:106 inc/functions.php:183 inc/functions.php:260
+#: inc/functions.php:336 inc/functions.php:455 inc/functions.php:526
+#: inc/functions.php:597
+msgid "Background"
+msgstr "Фон"
+
+#: inc/functions.php:112 inc/functions.php:189 inc/functions.php:266
+#: inc/functions.php:342 inc/functions.php:461 inc/functions.php:532
+#: inc/functions.php:603
+msgid "Text"
+msgstr "Текст"
+
+#: inc/functions.php:118 inc/functions.php:348 inc/functions.php:467
+#: inc/functions.php:538 inc/functions.php:609
+msgid "Link"
+msgstr "Ссылка"
+
+#: inc/functions.php:124 inc/functions.php:354 inc/functions.php:473
+#: inc/functions.php:544 inc/functions.php:615
+msgid "Link Hover"
+msgstr "Ссылка — наведение"
+
+#: inc/functions.php:130
+msgid "Site Title"
+msgstr "Название сайта"
+
+#: inc/functions.php:136
+msgid "Tagline"
+msgstr "Краткое описание"
+
+#: inc/functions.php:171
+msgid "Navigation Colors"
+msgstr "Цвета меню"
+
+#: inc/functions.php:195 inc/functions.php:272
+msgid "Background Hover"
+msgstr "Фон — наведение"
+
+#: inc/functions.php:201 inc/functions.php:278
+msgid "Text Hover"
+msgstr "Текст — наведение"
+
+#: inc/functions.php:207 inc/functions.php:284
+msgid "Background Current"
+msgstr "Фон — текущий"
+
+#: inc/functions.php:213 inc/functions.php:290
+msgid "Text Current"
+msgstr "Текст — текущий"
+
+#: inc/functions.php:248
+msgid "Sub-Navigation Colors"
+msgstr "Цвета подменю"
+
+#: inc/functions.php:324
+msgid "Content Colors"
+msgstr "Цвета содержимого"
+
+#: inc/functions.php:360
+msgid "Content Title"
+msgstr "Заголовок содержимого"
+
+#: inc/functions.php:366
+msgid "Blog Post Title"
+msgstr "Заголовок записи"
+
+#: inc/functions.php:372
+msgid "Blog Post Title Hover"
+msgstr "Заголовок записи — наведение"
+
+#: inc/functions.php:378
+msgid "Entry Meta Text"
+msgstr "Текст мета"
+
+#: inc/functions.php:384
+msgid "Entry Meta Links"
+msgstr "Ссылки мета"
+
+#: inc/functions.php:390
+msgid "Entry Meta Links Hover"
+msgstr "Ссылки мета — наведение"
+
+#: inc/functions.php:396
+msgid "Heading 1 (H1) Color"
+msgstr "Цвет заголовка 1 (H1)"
+
+#: inc/functions.php:402
+msgid "Heading 2 (H2) Color"
+msgstr "Цвет заголовка 2 (H2)"
+
+#: inc/functions.php:408
+msgid "Heading 3 (H3) Color"
+msgstr "Цвет заголовка 3 (H3)"
+
+#: inc/functions.php:443
+msgid "Sidebar Widget Colors"
+msgstr "Цвета виджетов боковика"
+
+#: inc/functions.php:479 inc/functions.php:550
+msgid "Widget Title"
+msgstr "Заголовок виджета"
+
+#: inc/functions.php:514
+msgid "Footer Widget Colors"
+msgstr "Цвета виджетов футера"
+
+#: inc/functions.php:585
+msgid "Footer Colors"
+msgstr "Цвета футера"
+
+#: inc/functions.php:650
+msgid "Form Colors"
+msgstr "Цвета форм"
+
+#: inc/functions.php:662
+msgid "Form Background"
+msgstr "Фон формы"
+
+#: inc/functions.php:668
+msgid "Form Text"
+msgstr "Текст формы"
+
+#: inc/functions.php:674
+msgid "Form Background Focus/Hover"
+msgstr "Фокус/наведение фона формы"
+
+#: inc/functions.php:680
+msgid "Form Text Focus/Hover"
+msgstr "Фокус/наведение текста формы"
+
+#: inc/functions.php:686
+msgid "Form Border"
+msgstr "Рамка формы"
+
+#: inc/functions.php:692
+msgid "Form Border Focus/Hover"
+msgstr "Фокус/наведение рамки формы"
+
+#: inc/functions.php:698
+msgid "Form Button"
+msgstr "Кнопка формы"
+
+#: inc/functions.php:704
+msgid "Form Button Focus/Hover"
+msgstr "Фокус/наведение кнопки формы"
+
+#: inc/functions.php:710
+msgid "Form Button Text"
+msgstr "Текст кнопки формы"
+
+#: inc/functions.php:716
+msgid "Form Button Text Focus/Hover"
+msgstr "Фокус/наведение текста кнопки формы"
+
+#: ~inc/EDD_SL_Plugin_Updater.php:177
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"Доступна новая версия %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+"\"%2$s\">Посмотреть подробности %3$s</a>."
+
+#: ~inc/EDD_SL_Plugin_Updater.php:184
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"Доступна новая версия %1$s. <a target=\"_blank\" class=\"thickbox\" href="
+"\"%2$s\">Посмотреть подробности %3$s</a> или <a href=\"%4$s\">обновить "
+"сейчас</a>."
+
+#: ~inc/EDD_SL_Plugin_Updater.php:324
+msgid "You do not have permission to install plugin updates"
+msgstr "У вас нет прав для установки обновлений плагинов"
+
+#: ~inc/EDD_SL_Plugin_Updater.php:324
+msgid "Error"
+msgstr "Ошибка"
+
+#: ~inc/activation.php:11
+msgid "Add-on deactivated."
+msgstr "Дополнение деактивировано."
+
+#: ~inc/activation.php:15
+msgid "Add-on activated."
+msgstr "Дополнение активировано."
+
+#: ~inc/activation.php:63
+msgid "GP Premium"
+msgstr "Дополнения GP Premium"
+
+#: ~inc/activation.php:88
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: ~inc/activation.php:100
+msgid "Activate"
+msgstr "Активировать"
+
+#: ~inc/verification.php:39
+msgid ""
+"Want updates served directly to your Dashboard? Activate the email you "
+"purchased your add-ons with here."
+msgstr ""
+"Хотите, чтобы обновления подавались прямо в консоль? Активируйте адрес "
+"email, указанный при покупке дополнений."
+
+#: ~inc/verification.php:51 ~inc/verification.php:65
+msgid "Email"
+msgstr "Email"
+
+#: ~inc/verification.php:58
+msgid "Deactivate Email"
+msgstr "Деактивировать адрес"
+
+#: ~inc/verification.php:70
+msgid "Activate Email"
+msgstr "Активировать адрес"
+
+#: ~inc/verification.php:83
+msgid "Save Email"
+msgstr "Сохранить адрес"
+
+#: ~inc/verification.php:94
+msgid "Enable All Updates"
+msgstr "Включить все обновления"
+
+#: ~inc/verification.php:154
+msgid "Disable Updates"
+msgstr "Отключить обновления"
+
+#: ~inc/verification.php:164
+msgid "Enable Updates"
+msgstr "Включить обновления"
+
+#: ~inc/verification.php:750
+msgid "Email activation failed. This email does not exist in our records."
+msgstr "Активация адреса не удалась. Этого адреса нет в наших записях."
+
+#: ~inc/verification.php:754
+msgid "Email activated."
+msgstr "Адрес активирован."
+
+#: ~inc/verification.php:758
+msgid "Email deactivated."
+msgstr "Адрес деактивирован."
+
+#: ~inc/verification.php:762
+msgid "License failed."
+msgstr "Сбой лицензии."
+
+#: ~inc/verification.php:766
+msgid "License activated."
+msgstr "Лицензия активирована."
+
+#: ~inc/verification.php:770
+msgid "Licenses activated."
+msgstr "Лицензии активированы."
+
+#: ~inc/verification.php:774
+msgid "Deactivation failed."
+msgstr "Сбой деактивации."
+
+#: ~inc/verification.php:778
+msgid "License deactivated."
+msgstr "Лицензия деактивирована."

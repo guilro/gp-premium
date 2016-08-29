@@ -1,0 +1,263 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Secondary Navigation\n"
+"POT-Creation-Date: 2015-01-18 15:32-0800\n"
+"PO-Revision-Date: 2015-05-22 18:35+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: inc/EDD_SL_Plugin_Updater.php:154
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"Ceci est une nouvelle version de %1$s disponible. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>. "
+
+#: inc/EDD_SL_Plugin_Updater.php:161
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"Ceci est une nouvelle version de %1$s disponible. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+
+#: inc/EDD_SL_Plugin_Updater.php:301
+msgid "You do not have permission to install plugin updates"
+msgstr "Vous n'avez pas la permission d'installer la mise-à-jour de ce plugin."
+
+#: inc/EDD_SL_Plugin_Updater.php:301
+msgid "Error"
+msgstr "Erreur"
+
+#: inc/functions.php:7
+msgid "Secondary Menu"
+msgstr "Second menu"
+
+#: inc/functions.php:97 inc/functions.php:109
+msgid "Secondary Navigation"
+msgstr "Seconde barre de navigation"
+
+#: inc/functions.php:126
+msgid "Mobile Label"
+msgstr "Étiquette mobile"
+
+#: inc/functions.php:151
+msgid "Navigation Layout"
+msgstr "Largeur de la seconde barre de navigation"
+
+#: inc/functions.php:154
+msgid "Fluid / Full Width"
+msgstr "Pleine largeur"
+
+#: inc/functions.php:155
+msgid "Contained"
+msgstr "Limité"
+
+#: inc/functions.php:181
+msgid "Navigation Position"
+msgstr "Emplacement de la seconde barre de navigation"
+
+#: inc/functions.php:184
+msgid "Below Header"
+msgstr "Sous la première barre de navigation"
+
+#: inc/functions.php:185
+msgid "Above Header"
+msgstr "Par dessus l'en-tête "
+
+#: inc/functions.php:186
+msgid "Float Right"
+msgstr "Flottante à droite"
+
+#: inc/functions.php:187
+msgid "Left Sidebar"
+msgstr "Barre latérale gauche"
+
+#: inc/functions.php:188
+msgid "Right Sidebar"
+msgstr "Barre latérale droite"
+
+#: inc/functions.php:189
+msgid "No Navigation"
+msgstr "Masquer la seconde barre de navigation"
+
+#: inc/functions.php:215
+msgid "Navigation Alignment"
+msgstr "Alignement de la navigation"
+
+#: inc/functions.php:218
+msgid "Left"
+msgstr "Gauche"
+
+#: inc/functions.php:219
+msgid "Center"
+msgstr "Centre"
+
+#: inc/functions.php:220
+msgid "Right"
+msgstr "Droite"
+
+#: inc/functions.php:236
+msgid "Secondary Navigation Spacing"
+msgstr "Espacement de la seconde barre de navigation "
+
+#: inc/functions.php:249
+msgid "Secondary Menu Items"
+msgstr "Éléments du second menu "
+
+#: inc/functions.php:250
+msgid "These options control the size of your secondary menu items."
+msgstr "Cette option contrôle la taille des éléments du second menu"
+
+#: inc/functions.php:254
+msgid "Left/Right Spacing"
+msgstr "Largeur"
+
+#: inc/functions.php:255
+msgid "Height"
+msgstr "Hauteur"
+
+#: inc/functions.php:321
+msgid "Secondary Sub-menu Item Height"
+msgstr "Taille des éléments du sous-menu secondaire "
+
+#: inc/functions.php:322
+msgid "The top and bottom spacing of secondary sub-menu items."
+msgstr "Espacement haut/bas des sous-menus secondaires"
+
+#: inc/functions.php:359
+msgid "Secondary Navigation Colors"
+msgstr "Couleurs de la barre de navigation secondaire "
+
+#: inc/functions.php:371 inc/functions.php:450
+msgid "Background"
+msgstr "Fond"
+
+#: inc/functions.php:377 inc/functions.php:456
+msgid "Text"
+msgstr "Texte"
+
+#: inc/functions.php:383 inc/functions.php:462
+msgid "Background Hover"
+msgstr "Rubrique sélectionnée"
+
+#: inc/functions.php:389 inc/functions.php:468
+msgid "Text Hover"
+msgstr "Texte sélectionné"
+
+#: inc/functions.php:395 inc/functions.php:474
+msgid "Background Current"
+msgstr "Sous-rubrique actuelle"
+
+#: inc/functions.php:401 inc/functions.php:480
+msgid "Text Current"
+msgstr "Texte courant"
+
+#: inc/functions.php:438
+msgid "Secondary Sub-Navigation Colors"
+msgstr "Couleurs de la sous-navigation secondaire"
+
+#: inc/functions.php:517
+msgid "Secondary Navigation Typography"
+msgstr "Typographie de la seconde barre de navigation "
+
+#: inc/functions.php:539
+msgid "Secondary navigation"
+msgstr "Seconde barre de navigation"
+
+#: inc/functions.php:560
+msgid "Font weight"
+msgstr "Largeur de la police "
+
+#: inc/functions.php:582
+msgid "Text transform"
+msgstr "Transformation du texte"
+
+#: inc/functions.php:605
+msgid "Font size"
+msgstr "Taille de police"
+
+#: inc/functions.php:623
+msgid "Secondary Background Images"
+msgstr "Intégration d'images dans la seconde barre de navigation"
+
+#: inc/functions.php:641
+msgid "Navigation"
+msgstr "Barre de navigation"
+
+#: inc/functions.php:683 inc/functions.php:745 inc/functions.php:807
+#: inc/functions.php:869 inc/functions.php:943 inc/functions.php:1005
+#: inc/functions.php:1067
+msgid "Repeat"
+msgstr "Répétition"
+
+#: inc/functions.php:684 inc/functions.php:746 inc/functions.php:808
+#: inc/functions.php:870 inc/functions.php:944 inc/functions.php:1006
+#: inc/functions.php:1068
+msgid "Repeat x"
+msgstr "Répétition x"
+
+#: inc/functions.php:685 inc/functions.php:747 inc/functions.php:809
+#: inc/functions.php:871 inc/functions.php:945 inc/functions.php:1007
+#: inc/functions.php:1069
+msgid "Repeat y"
+msgstr "Répétition y"
+
+#: inc/functions.php:686 inc/functions.php:748 inc/functions.php:810
+#: inc/functions.php:872 inc/functions.php:946 inc/functions.php:1008
+#: inc/functions.php:1070
+msgid "No Repeat"
+msgstr "Pas de répétition"
+
+#: inc/functions.php:703
+msgid "Navigation Item"
+msgstr "Boutons de navigation"
+
+#: inc/functions.php:765
+msgid "Navigation Item Hover"
+msgstr "Bouton sélectionné"
+
+#: inc/functions.php:827
+msgid "Navigation Item Current"
+msgstr "Rubrique actuelle"
+
+#: inc/functions.php:901
+msgid "Sub-Navigation Item"
+msgstr "Éléments de sous-navigation "
+
+#: inc/functions.php:963
+msgid "Sub-Navigation Item Hover"
+msgstr "Éléments de sous-navigation sélectionnés"
+
+#: inc/functions.php:1025
+msgid "Sub-Navigation Item Current"
+msgstr "Rubrique de sous-navigation actuelle"
+
+#: inc/functions.php:1277
+msgid "Skip to content"
+msgstr "Aller au contenu"
+
+#: inc/ie.php:14
+msgid "Delete Secondary Navigation Customizer Settings"
+msgstr "Supprimer les paramètres de la seconde barre de navigation"
+
+#: inc/ie.php:50
+msgid "Export Secondary Navigation Customizer Settings"
+msgstr "Exporter les paramètres de la seconde barre de navigation"

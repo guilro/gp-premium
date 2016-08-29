@@ -1,0 +1,214 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Sections\n"
+"POT-Creation-Date: 2015-04-04 15:43-0800\n"
+"PO-Revision-Date: 2016-02-04 20:18+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de_DE\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: inc/acf\n"
+
+#: inc/EDD_SL_Plugin_Updater.php:177
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+msgstr ""
+"Neue Version von %1$s verfügbar. <a target=\\“_blank\\“ class=\\“thickbox"
+"\\“ href=\\“%2$s\\“>Details zu Version %3$s anzeigen</a>."
+
+#: inc/EDD_SL_Plugin_Updater.php:184
+#, php-format
+msgid ""
+"There is a new version of %1$s available. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+"\">update now</a>."
+msgstr ""
+"Es ist eine neue Version von %1$s verfügbar. <a target=\"_blank\" class="
+"\"thickbox\" href=\"%2$s\">Zeige Details zu Version %3$s </a> oder <a "
+"href=\"%4$s\">aktualisiere jetzt.</a>."
+
+#: inc/EDD_SL_Plugin_Updater.php:324
+msgid "You do not have permission to install plugin updates"
+msgstr "Sie haben keine Berechtigung Plugin-Updates zu installieren"
+
+#: inc/EDD_SL_Plugin_Updater.php:324
+msgid "Error"
+msgstr "Fehler"
+
+#: inc/generate-sections.php:51
+#, php-format
+msgid "Click the \"%s\" button below to start creating your sections."
+msgstr ""
+"Klicken Sie auf den Button \"%s\" um mit dem Erstellen von Abschnitten zu "
+"beginnen."
+
+#: inc/generate-sections.php:379 inc/generate-sections.php:383
+msgid "Sections"
+msgstr "Abschnitte (Sections)"
+
+#: inc/generate-sections.php:395
+msgid "Add New"
+msgstr "Hinzufügen"
+
+#: inc/generate-sections.php:402
+msgid "Section"
+msgstr "Abschnitt (Section)"
+
+#: inc/generate-sections.php:407
+msgid "Box Type"
+msgstr "Box-Typ"
+
+#: inc/generate-sections.php:420 inc/generate-sections.php:449
+msgid "Contained"
+msgstr "Enthalten"
+
+#: inc/generate-sections.php:421 inc/generate-sections.php:450
+msgid "Fluid"
+msgstr "Fluid"
+
+#: inc/generate-sections.php:436
+msgid "Inner Box Type"
+msgstr "Innerer Box-Typ"
+
+#: inc/generate-sections.php:453
+msgid "contained"
+msgstr "enthalten"
+
+#: inc/generate-sections.php:465
+msgid "Custom Classes"
+msgstr "Eigene CSS-Klassen"
+
+#: inc/generate-sections.php:487
+msgid "Top Padding"
+msgstr "Oberer  Abstand"
+
+#: inc/generate-sections.php:511
+msgid "Bottom Padding"
+msgstr "Unterer Abstand"
+
+#: inc/generate-sections.php:535
+msgid "Background Color"
+msgstr "Hintergrundfarbe"
+
+#: inc/generate-sections.php:551
+msgid "Background Image"
+msgstr "Hintergrundbild"
+
+#: inc/generate-sections.php:576
+msgid "Parallax Effect"
+msgstr "Parallax Effekt"
+
+#: inc/generate-sections.php:589
+msgid "Enable"
+msgstr "Aktivieren"
+
+#: inc/generate-sections.php:590
+msgid "Disable"
+msgstr "Deaktivieren"
+
+#: inc/generate-sections.php:605
+msgid "Text Color"
+msgstr "Textfarbe"
+
+#: inc/generate-sections.php:621
+msgid "Link Color"
+msgstr "Linkfarbe"
+
+#: inc/generate-sections.php:637
+msgid "Link Color Hover"
+msgstr "Linkfarbe bei Mouse over"
+
+#: inc/generate-sections.php:653
+msgid "Content"
+msgstr "Inhalt"
+
+#: inc/generate-sections.php:696 inc/generate-sections.php:700
+msgid "Use Sections"
+msgstr "Nutze Abschnitt (Sections)"
+
+#: inc/templates/generate-sections-page-template.php:80
+msgid "No sections added!"
+msgstr "Keine Abschnitte hinzugefügt!"
+
+#: inc/verification.php:39
+msgid ""
+"Want updates served directly to your Dashboard? Activate the email you "
+"purchased your add-ons with here."
+msgstr ""
+"Möchtest Du die Updates direkt auf dem Dashboard? Aktiviere Deine E-Mail "
+"mit der Du bezahlt hast."
+
+#: inc/verification.php:47 inc/verification.php:61
+msgid "Email"
+msgstr "E-Mail"
+
+#: inc/verification.php:54
+msgid "Deactivate Email"
+msgstr "E-Mail deaktivieren"
+
+#: inc/verification.php:66
+msgid "Activate Email"
+msgstr "E-Mail aktivieren"
+
+#: inc/verification.php:79
+msgid "Save Email"
+msgstr "E-Mail speichern"
+
+#: inc/verification.php:90
+msgid "Enable All Updates"
+msgstr "Alle Updates aktivieren"
+
+#: inc/verification.php:342
+msgid "Email activation failed. This email does not exist in our records."
+msgstr ""
+"Email-Aktivierung ist fehlgeschlagen. Diese e-Mail ist nicht in unseren "
+"Aufzeichnungen vorhanden."
+
+#: inc/verification.php:346
+msgid "Email activated."
+msgstr "E-Mail aktiviert."
+
+#: inc/verification.php:350
+msgid "Email deactivated."
+msgstr "E-Mail deaktiviert."
+
+#: inc/verification.php:354
+msgid "License failed."
+msgstr "Lizenz ungültig oder nicht vorhanden."
+
+#: inc/verification.php:358
+msgid "License activated."
+msgstr "Lizenz aktiviert."
+
+#: inc/verification.php:362
+msgid "Licenses activated."
+msgstr "Lizenzen aktiviert."
+
+#: inc/verification.php:366
+msgid "Deactivation failed."
+msgstr "Deaktivierung ist fehlgeschlagen."
+
+#: inc/verification.php:370
+msgid "License deactivated."
+msgstr "Lizenz deaktiviert."
+
+#: inc/verification.php:405
+msgid "Disable Updates"
+msgstr "Updates deaktivieren"
+
+#: inc/verification.php:415
+msgid "Enable Updates"
+msgstr "Updates aktivieren"

@@ -1,0 +1,254 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Colors\n"
+"POT-Creation-Date: 2016-01-13 10:34-0800\n"
+"PO-Revision-Date: 2016-01-13 10:34-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/functions.php:82
+msgid "Colors"
+msgstr "Colori"
+
+#: functions/functions.php:94
+msgid "Header Colors"
+msgstr "Colori della testata"
+
+#: functions/functions.php:106 functions/functions.php:183
+#: functions/functions.php:260 functions/functions.php:336
+#: functions/functions.php:455 functions/functions.php:526
+#: functions/functions.php:597
+msgid "Background"
+msgstr "Sfondo"
+
+#: functions/functions.php:112 functions/functions.php:189
+#: functions/functions.php:266 functions/functions.php:342
+#: functions/functions.php:461 functions/functions.php:532
+#: functions/functions.php:603
+msgid "Text"
+msgstr "Testo"
+
+#: functions/functions.php:118 functions/functions.php:348
+#: functions/functions.php:467 functions/functions.php:538
+#: functions/functions.php:609
+msgid "Link"
+msgstr "Collegati"
+
+#: functions/functions.php:124 functions/functions.php:354
+#: functions/functions.php:473 functions/functions.php:544
+#: functions/functions.php:615
+msgid "Link Hover"
+msgstr "Link in modalità :hover"
+
+#: functions/functions.php:130
+msgid "Site Title"
+msgstr "Titolo del sito"
+
+#: functions/functions.php:136
+msgid "Tagline"
+msgstr "Slogan (Tagline)"
+
+#: functions/functions.php:171
+msgid "Navigation Colors"
+msgstr "Colore Menu"
+
+#: functions/functions.php:195 functions/functions.php:272
+msgid "Background Hover"
+msgstr "Sfondo in modalità :hover"
+
+#: functions/functions.php:201 functions/functions.php:278
+msgid "Text Hover"
+msgstr "Testo in modalità :hover"
+
+#: functions/functions.php:207 functions/functions.php:284
+msgid "Background Current"
+msgstr "Sfondo in modalità :current"
+
+#: functions/functions.php:213 functions/functions.php:290
+msgid "Text Current"
+msgstr "Testo :current"
+
+#: functions/functions.php:248
+msgid "Sub-Navigation Colors"
+msgstr "Colore Sotto-Menu"
+
+#: functions/functions.php:324
+msgid "Content Colors"
+msgstr "Colori del Contenuto"
+
+#: functions/functions.php:360
+msgid "Content Title"
+msgstr "Titolo contenuto"
+
+#: functions/functions.php:366
+msgid "Blog Post Title"
+msgstr "Titolo del Post del Blog"
+
+#: functions/functions.php:372
+msgid "Blog Post Title Hover"
+msgstr "Titolo del Post in modalità :hover"
+
+#: functions/functions.php:378
+msgid "Entry Meta Text"
+msgstr "Meta text"
+
+#: functions/functions.php:384
+msgid "Entry Meta Links"
+msgstr "Meta links"
+
+#: functions/functions.php:390
+msgid "Entry Meta Links Hover"
+msgstr "Meta links in modalità :hover"
+
+#: functions/functions.php:396
+msgid "Heading 1 (H1) Color"
+msgstr "Colore dei Titoli H1"
+
+#: functions/functions.php:402
+msgid "Heading 2 (H2) Color"
+msgstr "Colore dei Titoli H2"
+
+#: functions/functions.php:408
+msgid "Heading 3 (H3) Color"
+msgstr "Colore dei Titoli H3"
+
+#: functions/functions.php:443
+msgid "Sidebar Widget Colors"
+msgstr "Colore dei Widgets della Barra laterale"
+
+#: functions/functions.php:479 functions/functions.php:550
+msgid "Widget Title"
+msgstr "Titolo del Widget"
+
+#: functions/functions.php:514
+msgid "Footer Widget Colors"
+msgstr "Colore dei Widgets del piè di pagina (Footer Widgets)"
+
+#: functions/functions.php:585
+msgid "Footer Colors"
+msgstr "Colore del piè di pagina (Footer)"
+
+#: functions/functions.php:650
+msgid "Form Colors"
+msgstr "Colore dei Moduli (Form)"
+
+#: functions/functions.php:662
+msgid "Form Background"
+msgstr "Sfondo dei moduli (form)"
+
+#: functions/functions.php:668
+msgid "Form Text"
+msgstr "Testo del Modulo"
+
+#: functions/functions.php:674
+msgid "Form Background Focus/Hover"
+msgstr "Sfondo dei moduli nello stato attivo/hover"
+
+#: functions/functions.php:680
+msgid "Form Text Focus/Hover"
+msgstr "Testo dei moduli nello stato attivo/hover"
+
+#: functions/functions.php:686
+msgid "Form Border"
+msgstr "Bordo dei moduli"
+
+#: functions/functions.php:692
+msgid "Form Border Focus/Hover"
+msgstr "Bordo dei moduli in modalità attiva/hover"
+
+#: functions/functions.php:698
+msgid "Form Button"
+msgstr "Pulsanti dei moduli"
+
+#: functions/functions.php:704
+msgid "Form Button Focus/Hover"
+msgstr "Pulsanti dei moduli in modalità attiva/hover"
+
+#: functions/functions.php:710
+msgid "Form Button Text"
+msgstr "Testo nei pulsanti dei moduli"
+
+#: functions/functions.php:716
+msgid "Form Button Text Focus/Hover"
+msgstr "Testo sui pulsanti dei moduli inmodalità attiva/hover"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+#~ "\">update now</a>."
+#~ msgstr ""
+#~ "C’è una nuova versione di %1$s disponibile. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">Vedi i dettagli della versione %3$s </a> o <a "
+#~ "href=“%4$s”>aggiorna ora</a>."
+
+#~ msgid "You do not have permission to install plugin updates"
+#~ msgstr "Non hai il permesso di installare gli aggiornamenti dei plugin"
+
+#~ msgid "Error"
+#~ msgstr "Errore"
+
+#~ msgid ""
+#~ "Want updates served directly to your Dashboard? Activate the email you "
+#~ "purchased your add-ons with here."
+#~ msgstr ""
+#~ "Vuoi aggiornamenti serviti direttamente sulla tua Dashboard? Inserisci e "
+#~ "attiva l'e-mail con la quale sono stati acquistati i componenti "
+#~ "aggiuntivi."
+
+#~ msgid "Email"
+#~ msgstr "E-mail"
+
+#~ msgid "Deactivate Email"
+#~ msgstr "Disattivare Email"
+
+#~ msgid "Activate Email"
+#~ msgstr "Attiva-mail"
+
+#~ msgid "Save Email"
+#~ msgstr "Salva E-mail"
+
+#~ msgid "Enable All Updates"
+#~ msgstr "Abilita tutti gli aggiornamenti"
+
+#~ msgid "Email activation failed. This email does not exist in our records."
+#~ msgstr ""
+#~ "Attivazione E-mail fallita. Questa email non esiste nei nostri archivi."
+
+#~ msgid "Email activated."
+#~ msgstr "Email attivatq."
+
+#~ msgid "Email deactivated."
+#~ msgstr "Email disattivata."
+
+#~ msgid "License failed."
+#~ msgstr "Licenza non riuscita."
+
+#~ msgid "License activated."
+#~ msgstr "Licenza attivata."
+
+#~ msgid "Licenses activated."
+#~ msgstr "Licenze attivate."
+
+#~ msgid "Deactivation failed."
+#~ msgstr "Disattivazione non riuscita."
+
+#~ msgid "License deactivated."
+#~ msgstr "Licenza disattivata."
+
+#~ msgid "Disable Updates"
+#~ msgstr "Disattiva Aggiornamenti"
+
+#~ msgid "Enable Updates"
+#~ msgstr "Abilita Aggiornamenti"

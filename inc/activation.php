@@ -28,19 +28,19 @@ if ( ! function_exists( 'generate_super_package_addons' ) ) :
 	{
 		
 		$addons = array(
-			'Typography' => 'generate_package_typography',
-			'Colors' => 'generate_package_colors',
 			'Backgrounds' => 'generate_package_backgrounds',
-			'Page Header' => 'generate_package_page_header',
-			'Sections' => 'generate_package_sections',
-			'Import / Export' => 'generate_package_import_export',
+			'Blog' => 'generate_package_blog',
+			'Colors' => 'generate_package_colors',
 			'Copyright' => 'generate_package_copyright',
 			'Disable Elements' => 'generate_package_disable_elements',
-			'Blog' => 'generate_package_blog',
 			'Hooks' => 'generate_package_hooks',
-			'Spacing' => 'generate_package_spacing',
+			'Import / Export' => 'generate_package_import_export',
+			'Menu Plus' => 'generate_package_menu_plus',
+			'Page Header' => 'generate_package_page_header',
 			'Secondary Nav' => 'generate_package_secondary_nav',
-			'Menu Plus' => 'generate_package_menu_plus'
+			'Sections' => 'generate_package_sections',
+			'Spacing' => 'generate_package_spacing',
+			'Typography' => 'generate_package_typography'
 		);
 		
 		$customizer = array(
@@ -80,6 +80,7 @@ if ( ! function_exists( 'generate_super_package_addons' ) ) :
 									<option value="activate-selected"><?php _e( 'Activate' ) ;?></option>
 									<option value="deactivate-selected"><?php _e( 'Deactivate' ) ;?></option>
 								</select>
+								<?php wp_nonce_field( 'gp_premium_bulk_action_nonce', 'gp_premium_bulk_action_nonce' ); ?>
 								<input type="submit" style="font-weight:bold;" name="generate_multi_activate" class="mass-activate-button" value="<?php _e( 'Apply' ); ?>" />
 							</div>
 						</div>
@@ -96,14 +97,6 @@ if ( ! function_exists( 'generate_super_package_addons' ) ) :
 										<?php echo $k;?>
 									</div>
 									<div class="addon-action addon-addon-action" style="text-align:right;">
-										<!--<?php // if ( in_array( $k, $customizer ) && 'hidden' !== get_option( $v . '_visibility', '' ) ) : ?>
-											<?php // wp_nonce_field( $v . '_hide_customizer_nonce', $v . '_hide_customizer_nonce' ); ?>
-											<input type="submit" class="hide-customizer-button" name="<?php // echo $v;?>_hide_customizer" value="<?php // _e('Hide Customizer Options','generate');?>" title="<?php // _e('Done customizing with this add-on? Hide the options to speed up the Customizer.','generate');?>" />
-										<?php // endif; ?>
-										<?php // if ( in_array( $k, $customizer ) && 'hidden' == get_option( $v . '_visibility', '' ) ) : ?>
-											<?php // wp_nonce_field( $v . '_show_customizer_nonce', $v . '_show_customizer_nonce' ); ?>
-											<input type="submit" class="hide-customizer-button" name="<?php // echo $v;?>_show_customizer" value="<?php // _e('Show Customizer Options','generate');?>" title="<?php // _e('Need to use the Customizer options for this add-on? Show the options.','generate');?>" />
-										<?php // endif; ?>-->
 										<?php wp_nonce_field( $v . '_deactivate_nonce', $v . '_deactivate_nonce' ); ?>
 										<input type="submit" name="<?php echo $v;?>_deactivate_package" value="<?php _e( 'Deactivate' );?>"/>
 									</div>
@@ -182,9 +175,12 @@ endif;
 if ( ! function_exists( 'generate_multi_activate' ) ) :
 add_action( 'admin_init','generate_multi_activate' );
 function generate_multi_activate()
-{
+{	
 	// Deactivate selected
 	if ( isset( $_POST['generate_multi_activate'] ) ) {
+		if( ! check_admin_referer( 'gp_premium_bulk_action_nonce', 'gp_premium_bulk_action_nonce' ) ) 	
+			return; // get out if we didn't click the Activate button
+	
 		$name = ( isset( $_POST['generate_addon_checkbox'] ) ) ? $_POST['generate_addon_checkbox'] : '';
 		$option = ( isset( $_POST['generate_addon_checkbox'] ) ) ? $_POST['generate_mass_activate'] : '';
 

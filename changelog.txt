@@ -1,5 +1,45 @@
 == changelog ==
 
+= 1.2.89 =
+* Fix translations
+* GP Hooks: Add new filter: generate_hooks_capability - change the capability for users who can edit hooks
+* Disable Elements: Remove metabox from attachment post type
+* Page Header: Fix issue where merged header navigation colors weren't working
+* Page Header: Remove metabox from the attachment post type
+* Menu Plus: Fix sticky menu not unsticking if it's the very top element
+
+= 1.2.88 =
+* GP Premium: Cut down unnecessary folders to prevent update failures on some servers
+* Page Header: Add a new option in Advanced Settings: Place content behind header (sliders etc..)
+* Page Header: Fix header and navigation alignment in vertical centered page header when contained
+* Sections: Rename template file to shorter name
+* Typography: Rename control file to shorter name
+* Copyright: Fix/improve live preview of copyright in the Customizer
+* Blog: Show the read more label setting for both excerpt and full content settings
+* Menu Plus: Fix sticky menu stopping at the bottom of the Page Header
+* Menu Plus: Improve sticky menu experience
+* Menu Plus: Float sticky menu logo right when navigation is set to float left
+* Secondary Navigation: Adjust z-index
+
+= 1.2.87 =
+* Increase database sanitization/escaping and harden security throughout all add-ons
+* Backgrounds: Place options into sections inside Background Images panel
+* Blog: Add new filter to set the column count: generate_blog_get_column_count
+* Blog: Add title tag to read more link
+* Secondary Navigation: Fix spacing issue with dropdown menu arrow
+* Secondary Navigation: Remove Secondary Navigation panel
+* Secondary Navigation: Move sections into their applicable panels
+* Secondary Navigation: Add RTL language support
+* Spacing: Place options into sections inside Spacing panel
+* Spacing: Add RTL support
+* Copyright: Move copyright textarea into the Customizer
+* Copyright: Swedish translation added - thanks Jamal!
+* Page Header: Fix logo setting to work with new WordPress 4.5 custom_logo feature
+* Page Header: Vastly improved merged header option
+* Page Header: Move Blog Page Header panel into the Blog panel
+* Sections: Fix bug where first paragraph wasn't being correct wrapped in <p> tag
+* Menu Plus: Move options into Layout panel
+
 = 1.2.86 =
 * Blog: Allow resizer to upscale images
 * Page Header: Allow resizer to upscale images

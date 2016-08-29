@@ -1,0 +1,164 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Spacing\n"
+"POT-Creation-Date: 2016-04-03 16:52+0200\n"
+"PO-Revision-Date: 2016-05-12 18:18+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
+"Last-Translator: Krzysztof Grochocki <contact@beherit.pl>\n"
+"Language: pl_PL\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/functions.php:58
+msgid "Element Spacing"
+msgstr "Odstępy między elementami"
+
+#: functions/functions.php:61
+msgid "Change the spacing for various elements using pixels."
+msgstr "Zmień odstępy dla różnych elementów używając pikseli."
+
+#: functions/functions.php:83
+msgid "Header"
+msgstr "Nagłówek"
+
+#: functions/functions.php:85 functions/functions.php:116
+#: functions/functions.php:147 functions/functions.php:178
+#: functions/functions.php:209
+msgid "Top"
+msgstr "Góra"
+
+#: functions/functions.php:86 functions/functions.php:117
+#: functions/functions.php:148 functions/functions.php:179
+#: functions/functions.php:210
+msgid "Right"
+msgstr "Prawo"
+
+#: functions/functions.php:87 functions/functions.php:118
+#: functions/functions.php:149 functions/functions.php:180
+#: functions/functions.php:211
+msgid "Bottom"
+msgstr "Dół"
+
+#: functions/functions.php:88 functions/functions.php:119
+#: functions/functions.php:150 functions/functions.php:181
+#: functions/functions.php:212
+msgid "Left"
+msgstr "Lewo"
+
+#: functions/functions.php:114
+msgid "Content"
+msgstr "Zawartość"
+
+#: functions/functions.php:145
+msgid "Sidebar Widgets"
+msgstr "Widgety paska bocznego"
+
+#: functions/functions.php:176
+msgid "Footer Widget Area"
+msgstr "Obszar widgetów stopki"
+
+#: functions/functions.php:207
+msgid "Footer"
+msgstr "Stopka"
+
+#: functions/functions.php:384
+msgid "Separating Space"
+msgstr "Przestrzeń rozdzielająca"
+
+#: functions/functions.php:385
+msgid ""
+"The spacing between elements when \"Content Layout\" is set to \"Separate "
+"Containers\"."
+msgstr ""
+"Przerwa między elementami gdy \"układ zawartości\" jest ustawiony na "
+"\"oddzielne pojemniki\"."
+
+#: functions/functions.php:432
+msgid "Primary Menu Items"
+msgstr "Elementy podstawowego menu"
+
+#: functions/functions.php:433
+msgid "These options control the size of your menu items."
+msgstr "Te opcje kontrolują rozmiar elementów menu."
+
+#: functions/functions.php:437
+msgid "Left/Right Spacing"
+msgstr "Odstępy z lewej/prawej"
+
+#: functions/functions.php:438
+msgid "Height"
+msgstr "Wysokość"
+
+#: functions/functions.php:504
+msgid "Sub-menu Item Height"
+msgstr "Wysokość elementów podmenu"
+
+#: functions/functions.php:505
+msgid "The top and bottom spacing of sub-menu items."
+msgstr "Odstępy z góry i z dołu elementów podmenu."
+
+#: functions/functions.php:551
+msgid "Sidebar Widths"
+msgstr "Szerokości pasków bocznych"
+
+#: functions/functions.php:579
+msgid "Left Sidebar"
+msgstr "Lewy pasek boczny"
+
+#: functions/functions.php:582 functions/functions.php:618
+msgid "15%"
+msgstr "15%"
+
+#: functions/functions.php:583 functions/functions.php:619
+msgid "20%"
+msgstr "20%"
+
+#: functions/functions.php:584 functions/functions.php:620
+msgid "25%"
+msgstr "25%"
+
+#: functions/functions.php:585 functions/functions.php:621
+msgid "30%"
+msgstr "30%"
+
+#: functions/functions.php:586 functions/functions.php:622
+msgid "35%"
+msgstr "35%"
+
+#: functions/functions.php:587 functions/functions.php:623
+msgid "40%"
+msgstr "40%"
+
+#: functions/functions.php:588 functions/functions.php:624
+msgid "45%"
+msgstr "45%"
+
+#: functions/functions.php:589 functions/functions.php:625
+msgid "50%"
+msgstr "50%"
+
+#: functions/functions.php:615
+msgid "Right Sidebar"
+msgstr "Prawy pasek boczny"
+
+#: functions/ie.php:15
+msgid "Warning: This will delete your settings."
+msgstr "Uwaga: Ustawienia zostaną usunięte."
+
+#: functions/ie.php:17
+msgid "Delete Spacing Customizer Settings"
+msgstr "Usuń ustawienia odstępów"
+
+#: functions/ie.php:54
+msgid "Export Spacing Customizer Settings"
+msgstr "Eksportuj ustawienia odstępów"

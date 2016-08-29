@@ -1,0 +1,447 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Page Header\n"
+"POT-Creation-Date: 2016-04-02 11:10+0200\n"
+"PO-Revision-Date: 2016-05-12 19:28+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
+"Last-Translator: Krzysztof Grochocki <contact@beherit.pl>\n"
+"Language: pl\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: inc/admin-page-framework\n"
+
+#: functions/customizer.php:11
+msgid "Blog Page Header"
+msgstr "Nagłówek strony bloga"
+
+#: functions/customizer.php:20 functions/functions.php:916
+msgid "Image Settings"
+msgstr "Ustawienia obrazków"
+
+#: functions/customizer.php:40
+msgid "Image"
+msgstr "Obrazek"
+
+#: functions/customizer.php:41
+msgid "Upload an image to be used as your page header."
+msgstr "Prześlij obraz który ma być użyty jako nagłówek strony."
+
+#: functions/customizer.php:61 functions/functions.php:939
+msgid "Page Header Link"
+msgstr "Odnośnik nagłówka strony"
+
+#: functions/customizer.php:62
+msgid "Make your page header image clickable by adding a URL. (optional)"
+msgstr ""
+"Zrób klikalny obrazek nagłówka strony przez podanie adresu URL. "
+"(opcjonalne)"
+
+#: functions/customizer.php:85 functions/functions.php:944
+msgid "Hard Crop"
+msgstr "Twarde przycięcie"
+
+#: functions/customizer.php:86
+msgid "Turn hard cropping or of off."
+msgstr "Włącz/wyłącz twarde przycinanie."
+
+#: functions/customizer.php:89 functions/customizer.php:285
+#: functions/customizer.php:310 functions/customizer.php:335
+#: functions/customizer.php:360 functions/customizer.php:385
+#: functions/customizer.php:410 functions/customizer.php:603
+#: functions/customizer.php:669 functions/functions.php:947
+msgid "Enable"
+msgstr "Włącz"
+
+#: functions/customizer.php:90 functions/customizer.php:286
+#: functions/customizer.php:311 functions/customizer.php:336
+#: functions/customizer.php:361 functions/customizer.php:386
+#: functions/customizer.php:411 functions/customizer.php:604
+#: functions/customizer.php:670 functions/functions.php:946
+msgid "Disable"
+msgstr "Wyłącz"
+
+#: functions/customizer.php:111 functions/functions.php:953
+msgid "Image Width"
+msgstr "Szerokość obrazka"
+
+#: functions/customizer.php:112
+msgid "Choose your image width in pixels. (integer only, default is 1200)"
+msgstr ""
+"Podaj szerokość obrazka w pikselach. (tylko liczby całkowite, domyślnie "
+"1200)"
+
+#: functions/customizer.php:133 functions/functions.php:958
+msgid "Image Height"
+msgstr "Wysokość obrazka"
+
+#: functions/customizer.php:134
+msgid ""
+"Choose your image height in pixels. Use \"0\" or leave blank for "
+"proportional resizing. (integer only, default is 0) "
+msgstr ""
+"Wybierz wysokość obrazka w pikselach. Wpisz „0” lub zostaw puste dla "
+"zachowania proporcji. (tylko liczby całkowite, domyślnie 0)"
+
+#: functions/customizer.php:147 functions/functions.php:917
+msgid "Video Settings"
+msgstr "Ustawienia wideo"
+
+#: functions/customizer.php:166
+msgid "Video Background URL (MP4 only)"
+msgstr "Link do materiału wideo (tylko MP4)"
+
+#: functions/customizer.php:187
+msgid "Video Background URL (OGV only)"
+msgstr "Link do materiału wideo (tylko OGV)"
+
+#: functions/customizer.php:208
+msgid "Video Background URL (WEBM only)"
+msgstr "Link do materiału wideo (tylko WEBM)"
+
+#: functions/customizer.php:229
+msgid "Overlay Color"
+msgstr "Kolor przesłaniający"
+
+#: functions/customizer.php:241 functions/functions.php:918
+msgid "Content Settings"
+msgstr "Ustawienia zawartości"
+
+#: functions/customizer.php:260 functions/functions.php:993
+msgid "Content"
+msgstr "Zawartość"
+
+#: functions/customizer.php:261
+msgid "Add your content to the page header. HTML and shortcodes allowed."
+msgstr ""
+"Dodaj swoją treść do nagłówka strony. Dopuszczalny HTML i kody skrótowe."
+
+#: functions/customizer.php:281
+msgid "Add Paragraphs"
+msgstr "Dodaj akapity"
+
+#: functions/customizer.php:282
+msgid "Wrap your text in paragraph tags automatically."
+msgstr "Zawijaj automatycznie tekst w tagach akapitów."
+
+#: functions/customizer.php:306
+msgid "Add Padding"
+msgstr "Dodaj odstępy od krawędzi"
+
+#: functions/customizer.php:307
+msgid "Add padding around your content."
+msgstr "Dodaj odstępy od krawędzi wokół swojej zawartości."
+
+#: functions/customizer.php:331
+msgid "Image Background"
+msgstr "Tło obrazka"
+
+#: functions/customizer.php:332
+msgid ""
+"Use the image uploaded above as a background image for your content. "
+"(requires image uploaded above)"
+msgstr ""
+"Użyj obrazka załadowanego powyżej jako tła dla treści. (wymaga załadowania "
+"obrazka powyżej)"
+
+#: functions/customizer.php:356
+msgid "Parallax Background"
+msgstr "Efekt paralaksy tła"
+
+#: functions/customizer.php:357
+msgid ""
+"Add a cool parallax effect to your background image. (requires the image "
+"background option to be checked)"
+msgstr ""
+"Dodaje fajny efekt paralaksy do obrazka w tle. (wymaga aby opcja obrazka w "
+"tle była zaznaczona)"
+
+#: functions/customizer.php:381
+msgid "Full Screen"
+msgstr "Pełny ekran"
+
+#: functions/customizer.php:382
+msgid "Make your page header content area full screen."
+msgstr "Zamień zawartość nagłówka strony na pełen ekran"
+
+#: functions/customizer.php:406
+msgid "Vertical Center"
+msgstr "Wyśrodkuj pionowo"
+
+#: functions/customizer.php:407
+msgid "Center your page header content vertically."
+msgstr "Wypośrodkuj zawartość nagłówka strony względem pionu."
+
+#: functions/customizer.php:431
+msgid "Container Type"
+msgstr "Typ pojemnika"
+
+#: functions/customizer.php:432
+msgid "Choose whether the page header is contained or fluid."
+msgstr ""
+"Określ jaki ma być nagłówek strony - na całą szerokość czy w obrębie "
+"pojemnika"
+
+#: functions/customizer.php:435 functions/functions.php:1029
+msgid "Contained"
+msgstr "W obrębie pojemnika"
+
+#: functions/customizer.php:436 functions/functions.php:1030
+msgid "Fluid"
+msgstr "Cała szerokość"
+
+#: functions/customizer.php:456
+msgid "Text Alignment"
+msgstr "Wyrównanie tekstu"
+
+#: functions/customizer.php:457
+msgid "Choose the horizontal alignment of your content."
+msgstr "Wybierz poziome wyrównanie treści strony."
+
+#: functions/customizer.php:460 functions/functions.php:1037
+msgid "Left"
+msgstr "Do lewej"
+
+#: functions/customizer.php:461 functions/functions.php:1038
+msgid "Center"
+msgstr "Do środka"
+
+#: functions/customizer.php:462 functions/functions.php:1039
+msgid "Right"
+msgstr "Do prawej"
+
+#: functions/customizer.php:482
+msgid "Top/Bottom Padding"
+msgstr "Odstępy górne/dolne"
+
+#: functions/customizer.php:483
+msgid ""
+"Choose your content padding in pixels. This will add space above and below "
+"your content. (integer only) "
+msgstr ""
+"Wybierz odstępy od krawędzi dla treści strony. Opcja ta doda przestrzeń "
+"pponad i pod twoją zawartością. (tylko całkowite)"
+
+#: functions/customizer.php:504
+msgid "Background Color"
+msgstr "Kolor tła"
+
+#: functions/customizer.php:525
+msgid "Text Color"
+msgstr "Kolor tekstu"
+
+#: functions/customizer.php:546
+msgid "Link Color"
+msgstr "Kolor odnośnika"
+
+#: functions/customizer.php:567
+msgid "Link Color Hover"
+msgstr "Kolor odnośnika po najechaniu"
+
+#: functions/customizer.php:580 functions/functions.php:922
+msgid "Advanced Settings"
+msgstr "Ustawienia zaawansowane"
+
+#: functions/customizer.php:599 functions/functions.php:1089
+msgid "Merge with site header"
+msgstr "Scal z nagłówkiem strony"
+
+#: functions/customizer.php:623 functions/functions.php:1094
+msgid "Site title"
+msgstr "Tytuł witryny"
+
+#: functions/customizer.php:644 functions/functions.php:1099
+msgid "Site tagline"
+msgstr "Opis witryny"
+
+#: functions/customizer.php:665 functions/functions.php:1104
+msgid "Transparent navigation"
+msgstr "Nawigacja przeźroczysta"
+
+#: functions/customizer.php:690 functions/functions.php:1109
+msgid "Navigation text"
+msgstr "Tekst nawigacji"
+
+#: functions/customizer.php:711 functions/functions.php:1114
+msgid "Navigation background hover"
+msgstr "Tło nawigacji po najechaniu"
+
+#: functions/customizer.php:732 functions/functions.php:1119
+msgid "Navigation text hover"
+msgstr "Tekst nawigacji po najechaniu"
+
+#: functions/customizer.php:753 functions/functions.php:1124
+msgid "Navigation background current"
+msgstr "Bieżące tło nawigacji"
+
+#: functions/customizer.php:774 functions/functions.php:1129
+msgid "Navigation text current"
+msgstr "Tekst wybranej pozycji nawigacji"
+
+#: functions/customizer.php:787 functions/customizer.php:807
+msgid "Logo"
+msgstr "Logo"
+
+#: functions/customizer.php:808
+msgid "Replace your logo on the blog."
+msgstr "Zamień logo bloga."
+
+#: functions/functions.php:853
+msgid "Page Header"
+msgstr "Nagłówek strony"
+
+#: functions/functions.php:920
+msgid "Logo Settings"
+msgstr "Ustawienia logo"
+
+#: functions/functions.php:931 functions/functions.php:933
+msgid "Page Header Image"
+msgstr "Obraz w nagłówku strony"
+
+#: functions/functions.php:933 functions/functions.php:1081
+msgid "Insert Image"
+msgstr "Wstaw obrazek"
+
+#: functions/functions.php:934 functions/functions.php:1082
+msgid "Add Image"
+msgstr "Dodaj obrazek"
+
+#: functions/functions.php:960
+msgid "Use \"0\" or leave blank for proportional resizing."
+msgstr "Użyj \"0\" lub zostaw puste dla zachowania proporcji."
+
+#: functions/functions.php:966
+msgid "Video background - MP4 file only"
+msgstr "Wideo w tle - tylko pliki MP4"
+
+#: functions/functions.php:968 functions/functions.php:975
+#: functions/functions.php:982
+msgid "Page Header Video"
+msgstr "Wideo w nagłówku strony"
+
+#: functions/functions.php:968 functions/functions.php:975
+#: functions/functions.php:982
+msgid "Insert Video"
+msgstr "Wstaw wideo"
+
+#: functions/functions.php:969 functions/functions.php:976
+#: functions/functions.php:983
+msgid "Add Video"
+msgstr "Dodaj wideo"
+
+#: functions/functions.php:973
+msgid "Video background - OGV file only"
+msgstr "Wideo w tle - tylko pliki OGV"
+
+#: functions/functions.php:980
+msgid "Video background - WEBM file only"
+msgstr "Wideo w tle - tylko pliki WEBM"
+
+#: functions/functions.php:987
+msgid "Overlay color"
+msgstr "Kolor przesłaniający"
+
+#: functions/functions.php:995
+msgid "HTML and shortcodes allowed."
+msgstr "Dozwolony HTML i kody skrótowe"
+
+#: functions/functions.php:1000
+msgid "Automatically add paragraphs"
+msgstr "Automatycznie dodawaj paragrafy"
+
+#: functions/functions.php:1003
+msgid "Add padding"
+msgstr "Dodaj odstępy od krawędzi"
+
+#: functions/functions.php:1006
+msgid "Add background image"
+msgstr "Dodaj obrazek tła"
+
+#: functions/functions.php:1009
+msgid "Parallax effect"
+msgstr "Efekt paralaksy"
+
+#: functions/functions.php:1012
+msgid "Fullscreen"
+msgstr "Pełny ekran"
+
+#: functions/functions.php:1015
+msgid "Vertical center content"
+msgstr "Wypośrodkuj zawartość pionowo"
+
+#: functions/functions.php:1020
+msgid "Add to blog excerpt"
+msgstr "Dodaj do zajawki bloga"
+
+#: functions/functions.php:1027
+msgid "Container type"
+msgstr "Rodzaj kontenera"
+
+#: functions/functions.php:1035
+msgid "Text alignment"
+msgstr "Wyrównanie tekstu"
+
+#: functions/functions.php:1044
+msgid "Top/Bottom padding"
+msgstr "Górne/dolne odstępy od krawędzi"
+
+#: functions/functions.php:1050
+msgid "Background color"
+msgstr "Kolor tła"
+
+#: functions/functions.php:1055
+msgid "Text color"
+msgstr "Kolor tekstu"
+
+#: functions/functions.php:1060
+msgid "Link color"
+msgstr "Kolor odnośnika"
+
+#: functions/functions.php:1065
+msgid "Link color hover"
+msgstr "Kolor odnośnika po najechaniu"
+
+#: functions/functions.php:1079 functions/functions.php:1081
+msgid "Header / Logo"
+msgstr "Nagłówek / logo"
+
+#: functions/functions.php:1621
+msgid "Page Header Position"
+msgstr "Położenie nagłówka strony"
+
+#: functions/functions.php:1624 functions/functions.php:1654
+msgid "Above Content Area"
+msgstr "Ponad obszarem zawartości"
+
+#: functions/functions.php:1625 functions/functions.php:1655
+msgid "Inside Content Area"
+msgstr "Wewnątrz obszaru zawartości"
+
+#: functions/functions.php:1651
+msgid "Single Post Header Position"
+msgstr "Położenie nagłówka dla pojedynczego wpisu"
+
+#: functions/functions.php:1656
+msgid "Below Post Title"
+msgstr "Poniżej tytułu wpisu"
+
+#: functions/ie.php:14
+msgid "Warning: This will delete your settings."
+msgstr "Uwaga: ustawienia zostaną usunięte."
+
+#: functions/ie.php:16
+msgid "Delete Page Header Customizer Settings"
+msgstr "Usuń własne ustawienia nagłówka strony"
+
+#: functions/ie.php:53
+msgid "Export Page Header Customizer Settings"
+msgstr "Eksportuj własne ustawienia nagłówka strony"

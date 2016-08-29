@@ -1,0 +1,56 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Import Export\n"
+"POT-Creation-Date: 2016-04-03 16:47+0200\n"
+"PO-Revision-Date: 2016-05-12 18:32+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
+"Last-Translator: Krzysztof Grochocki <contact@beherit.pl>\n"
+"Language: pl_PL\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/functions.php:8
+msgid "Import / Export"
+msgstr "Import /Eksport"
+
+#: functions/functions.php:10
+#, php-format
+msgid ""
+"<strong>Export</strong> your settings set in the <a href=\"%s\">Customizer</"
+"a>."
+msgstr ""
+"<strong>Eksportuj</strong> swoją konfigurację zdefiniowaną w <a href=\"%s"
+"\">Personalizacji</a>."
+
+#: functions/functions.php:15
+msgid "Export Default Customizer Settings"
+msgstr "Eksportuj domyślne ustawienia Personalizacji"
+
+#: functions/functions.php:23
+msgid ""
+"<strong>Import</strong> your settings by uploading your exported .json file."
+msgstr ""
+"<strong>Zaimportuj</strong> swoje ustawienia przez wgranie wyeksportowanego "
+"pliku .json."
+
+#: functions/functions.php:31
+msgid "Import Settings"
+msgstr "Ustawienia importu"
+
+#: functions/functions.php:95
+msgid "Please upload a valid .json file"
+msgstr "Wgraj prawidłowy plik .json"
+
+#: functions/functions.php:101
+msgid "Please upload a file to import"
+msgstr "Wgraj plik do zaimportowania"
