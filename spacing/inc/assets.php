@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_spacing_init' ) ) :
 add_action('init', 'generate_spacing_init');
 function generate_spacing_init() {

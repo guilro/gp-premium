@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 /**
  * Load Image Resizer
  */
@@ -108,7 +111,7 @@ function generate_blog_post_image()
 				<?php if ( $image_atts && function_exists( 'GP_Resize' ) ) : ?>
 					<img src="<?php echo GP_Resize( $image_url[0], $image_atts[ 'width' ], $image_atts[ 'height' ], $crop, true, $upscale ); ?>" alt="<?php esc_attr( the_title() ); ?>" itemprop="image" />
 				<?php else :
-					the_post_thumbnail('full', array( 'itemprop' => 'image' ));
+					the_post_thumbnail( apply_filters( 'generate_page_header_default_size', 'full' ), array( 'itemprop' => 'image' ) );
 				endif; ?>
 			</a>
 		</div>

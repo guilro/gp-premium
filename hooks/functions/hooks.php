@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_execute_hooks' ) ) :
 function generate_execute_hooks( $id ) 
 {

@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 /**
  * Get the defaults
  */
@@ -46,9 +49,7 @@ function generate_blog_scripts() {
 	wp_add_inline_style( 'generate-style', generate_blog_columns_css() );
 	
 	if ( generate_blog_get_masonry() == 'true' ) :
-		wp_enqueue_script( 'jquery-masonry');
-		wp_enqueue_script( 'blog-scripts', plugin_dir_url( __FILE__ ) . 'js/scripts.min.js', array('jquery-masonry'), GENERATE_BLOG_VERSION, true );
-		wp_enqueue_script( 'blog-imagesloaded', plugin_dir_url( __FILE__ ) . 'js/imagesloaded.pkgd.min.js', array('blog-scripts'), GENERATE_BLOG_VERSION, true );
+		wp_enqueue_script( 'blog-scripts', plugin_dir_url( __FILE__ ) . 'js/scripts.min.js', array( 'jquery-masonry', 'imagesloaded' ), GENERATE_BLOG_VERSION, true );
 		wp_localize_script( 'blog-scripts', 'objectL10n', array(
 			'more'  => __( $generate_settings['masonry_load_more'],'generate-blog'),
 			'loading' => __( $generate_settings['masonry_loading'], 'generate-blog' ),

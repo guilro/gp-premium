@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_blog_get_columns' ) ) :
 function generate_blog_get_columns()
 {
@@ -92,6 +95,7 @@ function generate_blog_columns_css()
 		$return .= '.generate-columns-activated .generate-columns-container {margin-left:-' . $separator / 2 . 'px;margin-right:-' . $separator / 2 . 'px}';
 		$return .= '.generate-columns-activated .page-header,.generate-columns-activated .paging-navigation {margin-left:' . $separator / 2 . 'px;margin-right:' . $separator / 2 . 'px}';
 		$return .= '.generate-columns {padding-left:' . $separator / 2 . 'px;padding-right:' . $separator / 2 . 'px}';
+		$return .= '.separate-containers .site-main .generate-columns-container > .generate-columns {margin-bottom:' . $separator . 'px;}';
 		$return .= '@media (max-width: ' . ( $generate_settings['container_width'] + 10 ) . 'px) {.generate-columns-activated .generate-columns-container{margin-left:0;margin-right:0;}}';
 	endif;
 	

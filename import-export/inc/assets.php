@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_ie_init' ) ) :
 add_action('init', 'generate_ie_init');
 function generate_ie_init() {

@@ -34,17 +34,34 @@
 		margin-right: 10px;
 		margin-left: 10px;
 	}
-	.nav-float-left .mobile-header-navigation .mobile-header-logo {
+	.nav-float-left .mobile-header-navigation .mobile-header-logo,
+	.rtl .mobile-header-navigation .mobile-header-logo {
 		float: right;
 	}
-	.nav-float-left.mobile-header-logo .mobile-header-navigation .menu-toggle {
+	.nav-float-left.mobile-header-logo .mobile-header-navigation .menu-toggle,
+	.rtl.mobile-header-logo .mobile-header-navigation .menu-toggle {
 		float: left;
 	}
 	.mobile-header-logo .mobile-header-navigation .mobile-bar-items {
 		position: relative;
 		float: right;
 	}
-	.nav-search-enabled .mobile-header-navigation .menu-toggle {
+	.rtl.mobile-header-logo .mobile-header-navigation .mobile-bar-items {
+		float: left;
+	}
+	.nav-search-enabled:not(.rtl) .mobile-header-navigation .menu-toggle {
 		padding-right: 0;
+	}
+	.nav-search-enabled.rtl .mobile-header-navigation .menu-toggle {
+		padding-left: 0;
+	}
+	body:not(.mobile-header-logo) .mobile-header-navigation .mobile-bar-items {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	body:not(.mobile-header-logo).rtl .mobile-header-navigation .mobile-bar-items {
+		left: 0;
+		right: auto;
 	}
 }

@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_secondary_nav_init' ) ) :
 add_action('init', 'generate_secondary_nav_init');
 function generate_secondary_nav_init() {

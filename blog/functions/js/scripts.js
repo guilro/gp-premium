@@ -1,31 +1,31 @@
+function generate_blog_masonry() {
+	if ( typeof imagesLoaded !== 'undefined' ) {
+		jQuery('.masonry-container').imagesLoaded().done( function() {
+			jQuery('.masonry-container').masonry({
+				columnWidth: '.grid-sizer',
+				itemSelector: '.masonry-post',
+				stamp: '.page-header'
+			});
+		});
+	} else {
+		jQuery('.masonry-container').masonry({
+			columnWidth: '.grid-sizer',
+			itemSelector: '.masonry-post',
+			stamp: '.page-header'
+		});
+	}
+}
+
 if ( jQuery('.masonry-container')[0] ) {
+	
+	var widthTimer;
 
 	jQuery(document).ready(function () {
-		var $initiate = jQuery('.masonry-container').imagesLoaded( function() {
-			$container = jQuery('.masonry-container');
-			//setWidths();
-			if (jQuery($container).length) {
-				$container.masonry({
-					columnWidth: '.grid-sizer',
-					itemSelector: '.masonry-post',
-					stamp: '.page-header'
-				});
-			}
-		});
-
+		generate_blog_masonry();
 	});
 	
 	jQuery( window ).on( "orientationchange", function( event ) {
-		var $initiate = jQuery('.masonry-container').imagesLoaded( function() {
-			$container = jQuery('.masonry-container');
-			if (jQuery($container).length) {
-				$container.masonry({
-					columnWidth: '.grid-sizer',
-					itemSelector: '.masonry-post',
-					stamp: '.page-header'
-				});
-			}
-		});
+		generate_blog_masonry();
 	});
 
 	jQuery(function () {
@@ -45,7 +45,7 @@ if ( jQuery('.masonry-container')[0] ) {
 					var items = Array();
 					var $newItems = jQuery('.masonry-post', data);
 					//alert($newItems);
-					$newItems.imagesLoaded(function () {
+					$newItems.imagesLoaded().done(function () {
 						jQuery('.masonry-container').append($newItems).masonry('appended', $newItems );
 						jQuery(window).resize();
 

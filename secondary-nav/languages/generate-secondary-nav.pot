@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Generate Secondary Navigation\n"
-"POT-Creation-Date: 2016-01-13 10:30-0800\n"
+"POT-Creation-Date: 2016-10-08 03:16+0300\n"
 "PO-Revision-Date: 2015-05-19 10:39-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.9\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -19,222 +19,219 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: functions/functions.php:7
-msgid "Secondary Menu"
-msgstr ""
-
-#: functions/functions.php:97 functions/functions.php:109
+#: functions/customizer/backgrounds.php:15 functions/customizer/colors.php:16
+#: functions/customizer/spacing.php:16 functions/customizer/typography.php:15
+#: functions/functions.php:105 functions/functions.php:117
 msgid "Secondary Navigation"
 msgstr ""
 
-#: functions/functions.php:126
-msgid "Mobile Label"
-msgstr ""
-
-#: functions/functions.php:151
-msgid "Navigation Layout"
-msgstr ""
-
-#: functions/functions.php:154
-msgid "Fluid / Full Width"
-msgstr ""
-
-#: functions/functions.php:155
-msgid "Contained"
-msgstr ""
-
-#: functions/functions.php:181
-msgid "Navigation Position"
-msgstr ""
-
-#: functions/functions.php:184
-msgid "Below Header"
-msgstr ""
-
-#: functions/functions.php:185
-msgid "Above Header"
-msgstr ""
-
-#: functions/functions.php:186
-msgid "Float Right"
-msgstr ""
-
-#: functions/functions.php:187
-msgid "Left Sidebar"
-msgstr ""
-
-#: functions/functions.php:188
-msgid "Right Sidebar"
-msgstr ""
-
-#: functions/functions.php:189
-msgid "No Navigation"
-msgstr ""
-
-#: functions/functions.php:215
-msgid "Navigation Alignment"
-msgstr ""
-
-#: functions/functions.php:218
-msgid "Left"
-msgstr ""
-
-#: functions/functions.php:219
-msgid "Center"
-msgstr ""
-
-#: functions/functions.php:220
-msgid "Right"
-msgstr ""
-
-#: functions/functions.php:236
-msgid "Secondary Navigation Spacing"
-msgstr ""
-
-#: functions/functions.php:249
-msgid "Secondary Menu Items"
-msgstr ""
-
-#: functions/functions.php:250
-msgid "These options control the size of your secondary menu items."
-msgstr ""
-
-#: functions/functions.php:254
-msgid "Left/Right Spacing"
-msgstr ""
-
-#: functions/functions.php:255
-msgid "Height"
-msgstr ""
-
-#: functions/functions.php:321
-msgid "Secondary Sub-menu Item Height"
-msgstr ""
-
-#: functions/functions.php:322
-msgid "The top and bottom spacing of secondary sub-menu items."
-msgstr ""
-
-#: functions/functions.php:359
-msgid "Secondary Navigation Colors"
-msgstr ""
-
-#: functions/functions.php:371 functions/functions.php:450
-msgid "Background"
-msgstr ""
-
-#: functions/functions.php:377 functions/functions.php:456
-msgid "Text"
-msgstr ""
-
-#: functions/functions.php:383 functions/functions.php:462
-msgid "Background Hover"
-msgstr ""
-
-#: functions/functions.php:389 functions/functions.php:468
-msgid "Text Hover"
-msgstr ""
-
-#: functions/functions.php:395 functions/functions.php:474
-msgid "Background Current"
-msgstr ""
-
-#: functions/functions.php:401 functions/functions.php:480
-msgid "Text Current"
-msgstr ""
-
-#: functions/functions.php:438
-msgid "Secondary Sub-Navigation Colors"
-msgstr ""
-
-#: functions/functions.php:517
-msgid "Secondary Navigation Typography"
-msgstr ""
-
-#: functions/functions.php:539
-msgid "Secondary navigation"
-msgstr ""
-
-#: functions/functions.php:560
-msgid "Font weight"
-msgstr ""
-
-#: functions/functions.php:582
-msgid "Text transform"
-msgstr ""
-
-#: functions/functions.php:605
-msgid "Font size"
-msgstr ""
-
-#: functions/functions.php:623
-msgid "Secondary Background Images"
-msgstr ""
-
-#: functions/functions.php:641
+#: functions/customizer/backgrounds.php:44
 msgid "Navigation"
 msgstr ""
 
-#: functions/functions.php:683 functions/functions.php:745
-#: functions/functions.php:807 functions/functions.php:869
-#: functions/functions.php:943 functions/functions.php:1005
-#: functions/functions.php:1067
+#: functions/customizer/backgrounds.php:64
+#: functions/customizer/backgrounds.php:115
+#: functions/customizer/backgrounds.php:166
+#: functions/customizer/backgrounds.php:217
+#: functions/customizer/backgrounds.php:281
+#: functions/customizer/backgrounds.php:332
+#: functions/customizer/backgrounds.php:383
 msgid "Repeat"
 msgstr ""
 
-#: functions/functions.php:684 functions/functions.php:746
-#: functions/functions.php:808 functions/functions.php:870
-#: functions/functions.php:944 functions/functions.php:1006
-#: functions/functions.php:1068
+#: functions/customizer/backgrounds.php:65
+#: functions/customizer/backgrounds.php:116
+#: functions/customizer/backgrounds.php:167
+#: functions/customizer/backgrounds.php:218
+#: functions/customizer/backgrounds.php:282
+#: functions/customizer/backgrounds.php:333
+#: functions/customizer/backgrounds.php:384
 msgid "Repeat x"
 msgstr ""
 
-#: functions/functions.php:685 functions/functions.php:747
-#: functions/functions.php:809 functions/functions.php:871
-#: functions/functions.php:945 functions/functions.php:1007
-#: functions/functions.php:1069
+#: functions/customizer/backgrounds.php:66
+#: functions/customizer/backgrounds.php:117
+#: functions/customizer/backgrounds.php:168
+#: functions/customizer/backgrounds.php:219
+#: functions/customizer/backgrounds.php:283
+#: functions/customizer/backgrounds.php:334
+#: functions/customizer/backgrounds.php:385
 msgid "Repeat y"
 msgstr ""
 
-#: functions/functions.php:686 functions/functions.php:748
-#: functions/functions.php:810 functions/functions.php:872
-#: functions/functions.php:946 functions/functions.php:1008
-#: functions/functions.php:1070
+#: functions/customizer/backgrounds.php:67
+#: functions/customizer/backgrounds.php:118
+#: functions/customizer/backgrounds.php:169
+#: functions/customizer/backgrounds.php:220
+#: functions/customizer/backgrounds.php:284
+#: functions/customizer/backgrounds.php:335
+#: functions/customizer/backgrounds.php:386
 msgid "No Repeat"
 msgstr ""
 
-#: functions/functions.php:703
+#: functions/customizer/backgrounds.php:95
 msgid "Navigation Item"
 msgstr ""
 
-#: functions/functions.php:765
+#: functions/customizer/backgrounds.php:146
 msgid "Navigation Item Hover"
 msgstr ""
 
-#: functions/functions.php:827
+#: functions/customizer/backgrounds.php:197
 msgid "Navigation Item Current"
 msgstr ""
 
-#: functions/functions.php:901
+#: functions/customizer/backgrounds.php:232
+#: functions/customizer/colors.php:96
+msgid "Secondary Sub-Navigation"
+msgstr ""
+
+#: functions/customizer/backgrounds.php:261
 msgid "Sub-Navigation Item"
 msgstr ""
 
-#: functions/functions.php:963
+#: functions/customizer/backgrounds.php:312
 msgid "Sub-Navigation Item Hover"
 msgstr ""
 
-#: functions/functions.php:1025
+#: functions/customizer/backgrounds.php:363
 msgid "Sub-Navigation Item Current"
 msgstr ""
 
-#: functions/ie.php:14
+#: functions/customizer/colors.php:28 functions/customizer/colors.php:108
+msgid "Background"
+msgstr ""
+
+#: functions/customizer/colors.php:34 functions/customizer/colors.php:114
+msgid "Text"
+msgstr ""
+
+#: functions/customizer/colors.php:40 functions/customizer/colors.php:120
+msgid "Background Hover"
+msgstr ""
+
+#: functions/customizer/colors.php:46 functions/customizer/colors.php:126
+msgid "Text Hover"
+msgstr ""
+
+#: functions/customizer/colors.php:52 functions/customizer/colors.php:132
+msgid "Background Current"
+msgstr ""
+
+#: functions/customizer/colors.php:58 functions/customizer/colors.php:138
+msgid "Text Current"
+msgstr ""
+
+#: functions/customizer/spacing.php:35
+msgid "Secondary Menu Items"
+msgstr ""
+
+#: functions/customizer/spacing.php:57
+msgid "Left/Right Spacing"
+msgstr ""
+
+#: functions/customizer/spacing.php:80
+msgid "Height"
+msgstr ""
+
+#: functions/customizer/spacing.php:103
+msgid "Sub-Menu Item Height"
+msgstr ""
+
+#: functions/customizer/spacing.php:104
+msgid "The top and bottom spacing of sub-menu items."
+msgstr ""
+
+#: functions/customizer/typography.php:38
+msgid "Secondary navigation"
+msgstr ""
+
+#: functions/customizer/typography.php:105
+#: functions/customizer/typography.php:132
+msgid "Font weight"
+msgstr ""
+
+#: functions/customizer/typography.php:158
+#: functions/customizer/typography.php:178
+msgid "Text transform"
+msgstr ""
+
+#: functions/customizer/typography.php:204
+msgid "Font size"
+msgstr ""
+
+#: functions/functions.php:10
+msgid "Secondary Menu"
+msgstr ""
+
+#: functions/functions.php:135
+msgid "Mobile Menu Label"
+msgstr ""
+
+#: functions/functions.php:162
+msgid "Navigation Layout"
+msgstr ""
+
+#: functions/functions.php:165
+msgid "Fluid / Full Width"
+msgstr ""
+
+#: functions/functions.php:166
+msgid "Contained"
+msgstr ""
+
+#: functions/functions.php:194
+msgid "Navigation Position"
+msgstr ""
+
+#: functions/functions.php:197
+msgid "Below Header"
+msgstr ""
+
+#: functions/functions.php:198
+msgid "Above Header"
+msgstr ""
+
+#: functions/functions.php:199
+msgid "Float Right"
+msgstr ""
+
+#: functions/functions.php:200
+msgid "Left Sidebar"
+msgstr ""
+
+#: functions/functions.php:201
+msgid "Right Sidebar"
+msgstr ""
+
+#: functions/functions.php:202
+msgid "No Navigation"
+msgstr ""
+
+#: functions/functions.php:230
+msgid "Navigation Alignment"
+msgstr ""
+
+#: functions/functions.php:233
+msgid "Left"
+msgstr ""
+
+#: functions/functions.php:234
+msgid "Center"
+msgstr ""
+
+#: functions/functions.php:235
+msgid "Right"
+msgstr ""
+
+#: functions/ie.php:17
 msgid "Warning: This will delete your settings."
 msgstr ""
 
-#: functions/ie.php:16
+#: functions/ie.php:19
 msgid "Delete Secondary Navigation Customizer Settings"
 msgstr ""
 
-#: functions/ie.php:52
+#: functions/ie.php:55
 msgid "Export Secondary Navigation Customizer Settings"
 msgstr ""

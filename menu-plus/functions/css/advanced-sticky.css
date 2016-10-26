@@ -77,25 +77,12 @@
     width: auto;
 }
 
-.menu-logo-enabled .gen-sidebar-nav .main-navigation .sticky-logo {
-	display:none;
-}
-
-.menu-logo-enabled .nav-search-enabled .menu-toggle {
+.menu-logo-enabled.nav-search-enabled .navigation-clone .menu-toggle {
 	padding-right:0;
-}
-
-body.menu-logo-enabled  .menu-toggle li.search-item, 
-body.menu-logo-enabled  .menu-toggle li.search-item-disabled {
-	position:relative;
 }
 
 .main-navigation.navigation-clone {
 	box-shadow:0 2px 2px -2px rgba(0, 0, 0, .2);
-}
-
-.sticky-menu-logo .main-navigation .sticky-logo {
-	display: none;
 }
 
 .sticky-menu-logo .main-navigation.navigation-clone .sticky-logo {

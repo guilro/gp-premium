@@ -3,15 +3,18 @@
 Plugin Name: GP Premium
 Plugin URI: https://generatepress.com
 Description: The entire bundle of GeneratePress add-ons. To enable your needed add-ons, go to "Appearance > GeneratePress".
-Version: 1.2.89
-Author: Thomas Usborne
+Version: 1.2.91
+Author: Tom Usborne
 Author URI: https://tomusborne.com
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: gp-premium
 */
 
-define( 'GP_PREMIUM_VERSION', '1.2.89');
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+define( 'GP_PREMIUM_VERSION', '1.2.91');
 require plugin_dir_path( __FILE__ ) . 'inc/activation.php';
 
 if ( ! function_exists( 'generate_package_setup' ) ) :
@@ -29,43 +32,43 @@ function generate_premium_setup()
 }
 endif;
 
-if ( 'activated' == get_option( 'generate_package_backgrounds' ) )
+if ( 'activated' == get_option( 'generate_package_backgrounds' ) || defined( 'GENERATE_BACKGROUNDS' ) )
 	require plugin_dir_path( __FILE__ ) . 'backgrounds/generate-backgrounds.php';
 
-if ( 'activated' == get_option( 'generate_package_blog' ) )
+if ( 'activated' == get_option( 'generate_package_blog' ) || defined( 'GENERATE_BLOG' ) )
 	require plugin_dir_path( __FILE__ ) . 'blog/generate-blog.php';
 
-if ( 'activated' == get_option( 'generate_package_colors' ) )
+if ( 'activated' == get_option( 'generate_package_colors' ) || defined( 'GENERATE_COLORS' ) )
 	require plugin_dir_path( __FILE__ ) . 'colors/generate-colors.php';
 	
-if ( 'activated' == get_option( 'generate_package_copyright' ) )
+if ( 'activated' == get_option( 'generate_package_copyright' ) || defined( 'GENERATE_COPYRIGHT' ) )
 	require plugin_dir_path( __FILE__ ) . 'copyright/generate-copyright.php';
 	
-if ( 'activated' == get_option( 'generate_package_disable_elements' ) )
+if ( 'activated' == get_option( 'generate_package_disable_elements' ) || defined( 'GENERATE_DISABLE_ELEMENTS' ) )
 	require plugin_dir_path( __FILE__ ) . 'disable-elements/generate-disable-elements.php';
 	
-if ( 'activated' == get_option( 'generate_package_hooks' ) )
+if ( 'activated' == get_option( 'generate_package_hooks' ) || defined( 'GENERATE_HOOKS' ) )
 	require plugin_dir_path( __FILE__ ) . 'hooks/generate-hooks.php';
 	
-if ( 'activated' == get_option( 'generate_package_import_export' ) )
+if ( 'activated' == get_option( 'generate_package_import_export' ) || defined( 'GENERATE_IMPORT_EXPORT' ) )
 	require plugin_dir_path( __FILE__ ) . 'import-export/generate-ie.php';
 	
-if ( 'activated' == get_option( 'generate_package_page_header' ) )
+if ( 'activated' == get_option( 'generate_package_page_header' ) || defined( 'GENERATE_PAGE_HEADER' ) )
 	require plugin_dir_path( __FILE__ ) . 'page-header/generate-page-header.php';
 	
-if ( 'activated' == get_option( 'generate_package_secondary_nav' ) )
+if ( 'activated' == get_option( 'generate_package_secondary_nav' ) || defined( 'GENERATE_SECONDARY_NAV' ) )
 	require plugin_dir_path( __FILE__ ) . 'secondary-nav/generate-secondary-nav.php';
 	
-if ( 'activated' == get_option( 'generate_package_spacing' ) )
+if ( 'activated' == get_option( 'generate_package_spacing' ) || defined( 'GENERATE_SPACING' ) )
 	require plugin_dir_path( __FILE__ ) . 'spacing/generate-spacing.php';
 	
-if ( 'activated' == get_option( 'generate_package_typography' ) )
+if ( 'activated' == get_option( 'generate_package_typography' ) || defined( 'GENERATE_TYPOGRAPHY' ) )
 	require plugin_dir_path( __FILE__ ) . 'typography/generate-fonts.php';
 	
-if ( 'activated' == get_option( 'generate_package_sections' ) )
+if ( 'activated' == get_option( 'generate_package_sections' ) || defined( 'GENERATE_SECTIONS' ) )
 	require plugin_dir_path( __FILE__ ) . 'sections/generate-sections.php';
 	
-if ( 'activated' == get_option( 'generate_package_menu_plus' ) )
+if ( 'activated' == get_option( 'generate_package_menu_plus' ) || defined( 'GENERATE_MENU_PLUS' ) )
 	require plugin_dir_path( __FILE__ ) . 'menu-plus/generate-menu-plus.php';
 	
 if( !class_exists( 'EDD_SL_Plugin_Updater' ) ) {
@@ -77,12 +80,12 @@ add_action( 'admin_init', 'generate_premium_updater', 0 );
 function generate_premium_updater()
 {
 	// retrieve our license key from the DB
-	$license_key = trim( get_option( 'gen_premium_license_key' ) );
+	$license_key = get_option( 'gen_premium_license_key' );
 
 	// setup the updater
 	$edd_updater = new EDD_SL_Plugin_Updater( 'https://generatepress.com', __FILE__, array( 
 			'version' 	=> GP_PREMIUM_VERSION,
-			'license' 	=> $license_key,
+			'license' 	=> trim( $license_key ),
 			'item_name' => 'GP Premium',
 			'author' 	=> 'Tom Usborne',
 			'url'       => home_url()

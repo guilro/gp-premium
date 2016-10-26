@@ -1,18 +1,17 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'add_generate_page_header_meta_box' ) ) :
 /**
- *
- *
  * Generate the page header metabox
  * @since 0.1
- *
- *
  */
 add_action('add_meta_boxes', 'add_generate_page_header_meta_box');
 function add_generate_page_header_meta_box() { 
 	
-	
-	$post_types = get_post_types();
+	$args = array( 'public' => true );
+	$post_types = get_post_types( $args );
 	foreach ($post_types as $type) {
 		if ( 'attachment' !== $type ) {
 			add_meta_box(  
@@ -26,6 +25,32 @@ function add_generate_page_header_meta_box() {
 		}
 	}
 } 
+endif;
+
+if ( ! function_exists( 'generate_page_header_metabox_enqueue' ) ) :
+/**
+ * Add our metabox scripts
+ */
+add_action( 'admin_enqueue_scripts','generate_page_header_metabox_enqueue' );
+function generate_page_header_metabox_enqueue( $hook )
+{
+	// I prefer to enqueue the styles only on pages that are using the metaboxes
+	if( in_array( $hook, array( "post.php", "post-new.php" ) ) ){
+		$args = array( 'public' => true );
+		$post_types = get_post_types( $args );
+		
+		$screen = get_current_screen();
+		$post_type = $screen->id;
+
+		if ( in_array( $post_type, (array) $post_types ) ){
+			wp_enqueue_script('wp-color-picker');
+			wp_enqueue_style( 'wp-color-picker' );
+			wp_enqueue_style( 'generate-page-header-metabox', plugin_dir_url( __FILE__ ) . 'css/metabox.css', array(), GENERATE_PAGE_HEADER_VERSION ); 
+			wp_enqueue_script( 'generate-lc-switch', plugin_dir_url( __FILE__ ) . 'js/lc_switch.js', array( 'jquery' ), GENERATE_PAGE_HEADER_VERSION, false ); 
+			wp_enqueue_script( 'generate-page-header-metabox', plugin_dir_url( __FILE__ ) . 'js/metabox.js', array( 'jquery','generate-lc-switch', 'wp-color-picker' ), GENERATE_PAGE_HEADER_VERSION, false ); 
+		}
+	}
+}
 endif;
 
 if ( ! function_exists( 'show_generate_page_header_meta_box' ) ) :
@@ -54,6 +79,7 @@ function show_generate_page_header_meta_box( $post ) {
 	$stored_meta['_meta-generate-page-header-vertical-center'][0] = ( isset( $stored_meta['_meta-generate-page-header-vertical-center'][0] ) ) ? $stored_meta['_meta-generate-page-header-vertical-center'][0] : '';
 	$stored_meta['_meta-generate-page-header-image-background-alignment'][0] = ( isset( $stored_meta['_meta-generate-page-header-image-background-alignment'][0] ) ) ? $stored_meta['_meta-generate-page-header-image-background-alignment'][0] : '';
 	$stored_meta['_meta-generate-page-header-image-background-spacing'][0] = ( isset( $stored_meta['_meta-generate-page-header-image-background-spacing'][0] ) ) ? $stored_meta['_meta-generate-page-header-image-background-spacing'][0] : '';
+	$stored_meta['_meta-generate-page-header-image-background-spacing-unit'][0] = ( isset( $stored_meta['_meta-generate-page-header-image-background-spacing-unit'][0] ) ) ? $stored_meta['_meta-generate-page-header-image-background-spacing-unit'][0] : '';
 	$stored_meta['_meta-generate-page-header-image-background-text-color'][0] = ( isset( $stored_meta['_meta-generate-page-header-image-background-text-color'][0] ) ) ? $stored_meta['_meta-generate-page-header-image-background-text-color'][0] : '';
 	$stored_meta['_meta-generate-page-header-image-background-color'][0] = ( isset( $stored_meta['_meta-generate-page-header-image-background-color'][0] ) ) ? $stored_meta['_meta-generate-page-header-image-background-color'][0] : '';
 	$stored_meta['_meta-generate-page-header-image-background-link-color'][0] = ( isset( $stored_meta['_meta-generate-page-header-image-background-link-color'][0] ) ) ? $stored_meta['_meta-generate-page-header-image-background-link-color'][0] : '';
@@ -77,126 +103,138 @@ function show_generate_page_header_meta_box( $post ) {
 	}
 	$stored_meta['_meta-generate-page-header-logo'][0] = ( isset( $stored_meta['_meta-generate-page-header-logo'][0] ) ) ? $stored_meta['_meta-generate-page-header-logo'][0] : '';
 	$stored_meta['_meta-generate-page-header-logo-id'][0] = ( isset( $stored_meta['_meta-generate-page-header-logo-id'][0] ) ) ? $stored_meta['_meta-generate-page-header-logo-id'][0] : '';
-    
 	
+	$show_excerpt_option = ( has_post_thumbnail() ) ? 'style="display:none;"' : 'style="display:block;"';
 	?>
+	<script>
+		jQuery(document).ready(function($) {
+			
+			<?php if ( $stored_meta['_meta-generate-page-header-content'][0] == '' ) : ?>
+				$("li.generate-page-header-content-required, .content-settings-area").hide();
+			<?php else : ?>
+				$('#generate-tab-1').hide();
+				$('#generate-tab-2').show();
+				$('.generate-tabs-menu .content-settings').addClass('generate-current');
+				$('.generate-tabs-menu .image-settings').removeClass('generate-current');
+				$("li.generate-page-header-content-required, .content-settings-area").show();
+			<?php endif; ?>
+			
+		});
+	</script>
 	<div id="generate-tabs-container">
 		<ul class="generate-tabs-menu">
-			<li class="generate-current image-settings"><a class="button button-large" href="#generate-tab-1"><?php _e( 'Image Settings','generate-page-header' ); ?></a></li>
-			<li class="video-settings generate-page-header-content-required"><a class="button button-large" href="#generate-tab-2"><?php _e( 'Video Settings','generate-page-header' ); ?></a></li>
-			<li class="content-settings"><a class="button button-large" href="#generate-tab-3"><?php _e( 'Content Settings','generate-page-header' ); ?></a></li>
+			<li class="generate-current image-settings"><a href="#generate-tab-1"><?php _e( 'Image','generate-page-header' ); ?></a></li>
+			<li class="content-settings"><a href="#generate-tab-2"><?php _e( 'Content','generate-page-header' ); ?></a></li>
+			<li class="video-settings generate-page-header-content-required" style="display:none;"><a href="#generate-tab-3"><?php _e( 'Background Video','generate-page-header' ); ?></a></li>
 			<?php if ( generate_page_header_logo_exists() ) : ?>
-				<li class="logo-settings"><a class="button button-large" href="#generate-tab-4"><?php _e( 'Logo Settings','generate-page-header' ); ?></a></li>
+				<li class="logo-settings"><a href="#generate-tab-4"><?php _e( 'Logo','generate-page-header' ); ?></a></li>
 			<?php endif; ?>
-			<li class="advanced-settings generate-page-header-content-required"><a class="button button-large" href="<?php if ( generate_page_header_logo_exists() ) : ?>#generate-tab-5<?php else : ?>#generate-tab-4<?php endif; ?>"><?php _e( 'Advanced Settings','generate-page-header' ); ?></a></li>
+			<li class="advanced-settings generate-page-header-content-required" style="display:none"><a href="<?php if ( generate_page_header_logo_exists() ) : ?>#generate-tab-5<?php else : ?>#generate-tab-4<?php endif; ?>"><?php _e( 'Advanced','generate-page-header' ); ?></a></li>
+			<?php if ( 'post' == get_post_type() && !is_single() ) { ?>
+				<div class="show-in-excerpt" <?php echo $show_excerpt_option; ?>>
+					<p>
+						<label for="_meta-generate-page-header-add-to-excerpt"><strong><?php _e('Add to excerpt','generate-page-header');?></strong></label><br />
+						<input class="add-to-excerpt" type="checkbox" name="_meta-generate-page-header-add-to-excerpt" id="_meta-generate-page-header-add-to-excerpt" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-add-to-excerpt'] ) ) checked( $stored_meta['_meta-generate-page-header-add-to-excerpt'][0], 'yes' ); ?> />
+					</p>
+				</div>
+			<?php } ?>
 		</ul>
 		<div class="generate-tab">
 			<div id="generate-tab-1" class="generate-tab-content">
-				<div id="preview-image">
+				<?php 
+				$show_featured_image_message = ( has_post_thumbnail() && '' == $stored_meta['_meta-generate-page-header-image-id'][0] ) ? 'style="display:block;"' : 'style="display:none;"'; 
+				$remove_button = ( $stored_meta['_meta-generate-page-header-image'][0] != "") ? 'style="display:inline-block;"' : 'style="display:none;"';
+				$show_image_settings = ( has_post_thumbnail() || '' !== $stored_meta['_meta-generate-page-header-image-id'][0] ) ? 'style="display:block;"' : 'style="display: none;"';
+				$no_image_selected = ( ! has_post_thumbnail() && '' == $stored_meta['_meta-generate-page-header-image-id'][0] ) ? 'style="display:block;"' : 'style="display:none;"';
+				?>
+				<div class="featured-image-message" <?php echo $show_featured_image_message; ?>>
+					<p class="description">
+						<?php _e( 'Currently using your <a href="#" class="generate-featured-image">featured image</a>.','generate-page-header' ); ?>
+					</p>
+				</div>
+				<div id="preview-image" class="generate-page-header-image">
 					<?php if( $stored_meta['_meta-generate-page-header-image'][0] != "") { ?>
-						<img class="saved-image" src="<?php echo $stored_meta['_meta-generate-page-header-image'][0];?>" width="300" />
+						<img class="saved-image" src="<?php echo $stored_meta['_meta-generate-page-header-image'][0];?>" width="100" style="margin-bottom:12px;" />
 					<?php } ?>
 				</div>
-				<label for="upload_image" class="example-row-title"><strong><?php _e('Page Header Image','generate-page-header');?></strong></label><br />
-				<input style="width:350px" id="upload_image" type="text" name="_meta-generate-page-header-image" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-image'][0]); ?>" />			   
+				<input data-prev="true" id="upload_image" type="hidden" name="_meta-generate-page-header-image" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-image'][0]); ?>" />			   
 				<button class="generate-upload-file button" type="button" data-type="image" data-title="<?php _e( 'Page Header Image','generate-page-header' );?>" data-insert="<?php _e( 'Insert Image','generate-page-header'); ?>" data-prev="true">
-					<?php _e('Add Image','generate-page-header') ;?>
+					<?php _e('Choose Image','generate-page-header') ;?>
 				</button>
-				<input id="_meta-generate-page-header-image-id" type="hidden" name="_meta-generate-page-header-image-id" value="<?php echo $stored_meta['_meta-generate-page-header-image-id'][0]; ?>" />
-				
-				<p>
-					<label for="_meta-generate-page-header-image-link" class="example-row-title"><strong><?php _e('Page Header Link','generate-page-header');?></strong></label><br />
-					<input style="width:350px" placeholder="http://" id="_meta-generate-page-header-image-link" type="text" name="_meta-generate-page-header-image-link" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-image-link'][0]); ?>" />
-				</p>
-				
-				<p>
-					<label for="_meta-generate-page-header-enable-image-crop" class="example-row-title"><strong><?php _e('Hard Crop','generate-page-header');?></strong></label><br />
-					<select name="_meta-generate-page-header-enable-image-crop" id="_meta-generate-page-header-enable-image-crop">
-						<option value="" <?php selected( $stored_meta['_meta-generate-page-header-enable-image-crop'][0], '' ); ?>><?php _e('Disable','generate-page-header');?></option>
-						<option value="enable" <?php selected( $stored_meta['_meta-generate-page-header-enable-image-crop'][0], 'enable' ); ?>><?php _e('Enable','generate-page-header');?></option>
-					</select>
-				</p>
-				
-				<div id="crop-enabled" style="display:none">					
+				<button class="generate-page-header-remove-image button" type="button" <?php echo $remove_button; ?> data-input="#upload_image" data-input-id="#_meta-generate-page-header-image-id" data-prev=".generate-page-header-image">
+					<?php _e('Remove Image','generate-page-header') ;?>
+				</button>
+				<input class="image-id" id="_meta-generate-page-header-image-id" type="hidden" name="_meta-generate-page-header-image-id" value="<?php echo $stored_meta['_meta-generate-page-header-image-id'][0]; ?>" />
+				<div class="generate-page-header-set-featured-image" <?php echo $no_image_selected; ?>>
+					<p class="description"><?php _e( 'Or you can <a href="#">set the featured image</a>.','generate-page-header' ); ?></p>
+				</div>
+				<div class="page-header-image-settings" <?php echo $show_image_settings; ?>>
 					<p>
-						<label for="_meta-generate-page-header-image-width" class="example-row-title"><strong><?php _e('Image Width','generate-page-header');?></strong></label><br />
-						<input style="width:45px" type="text" name="_meta-generate-page-header-image-width" id="_meta-generate-page-header-image-width" value="<?php echo intval( $stored_meta['_meta-generate-page-header-image-width'][0] ); ?>" /><label for="_meta-generate-page-header-image-width"><span class="pixels">px</span></label>
+						<label for="_meta-generate-page-header-image-link" class="example-row-title"><strong><?php _e('Image link','generate-page-header');?></strong></label><br />
+						<input class="widefat" style="max-width:350px;" placeholder="http://" id="_meta-generate-page-header-image-link" type="text" name="_meta-generate-page-header-image-link" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-image-link'][0]); ?>" />
 					</p>
 					
 					<p>
-						<label for="_meta-generate-page-header-image-height" class="example-row-title"><strong><?php _e('Image Height','generate-page-header');?></strong></label><br />
-						<input placeholder="" style="width:45px" type="text" name="_meta-generate-page-header-image-height" id="_meta-generate-page-header-image-height" value="<?php echo intval( $stored_meta['_meta-generate-page-header-image-height'][0] ); ?>" /><label for="_meta-generate-page-header-image-height"><span class="pixels">px</span></label>
-						<span class="small"><?php _e('Use "0" or leave blank for proportional resizing.','generate-page-header');?></span>
+						<label for="_meta-generate-page-header-enable-image-crop" class="example-row-title"><strong><?php _e('Resize image','generate-page-header');?></strong></label><br />
+						<select name="_meta-generate-page-header-enable-image-crop" id="_meta-generate-page-header-enable-image-crop">
+							<option value="" <?php selected( $stored_meta['_meta-generate-page-header-enable-image-crop'][0], '' ); ?>><?php _e('Disable','generate-page-header');?></option>
+							<option value="enable" <?php selected( $stored_meta['_meta-generate-page-header-enable-image-crop'][0], 'enable' ); ?>><?php _e('Enable','generate-page-header');?></option>
+						</select>
 					</p>
+					
+					<div id="crop-enabled" style="display:none">					
+						<p>
+							<label for="_meta-generate-page-header-image-width" class="example-row-title"><strong><?php _e('Image width','generate-page-header');?></strong></label><br />
+							<input style="width:45px" type="text" name="_meta-generate-page-header-image-width" id="_meta-generate-page-header-image-width" value="<?php echo intval( $stored_meta['_meta-generate-page-header-image-width'][0] ); ?>" /><label for="_meta-generate-page-header-image-width"><span class="pixels">px</span></label>
+						</p>
+						
+						<p style="margin-bottom:0;">
+							<label for="_meta-generate-page-header-image-height" class="example-row-title"><strong><?php _e('Image height','generate-page-header');?></strong></label><br />
+							<input placeholder="" style="width:45px" type="text" name="_meta-generate-page-header-image-height" id="_meta-generate-page-header-image-height" value="<?php echo intval( $stored_meta['_meta-generate-page-header-image-height'][0] ); ?>" />
+							<label for="_meta-generate-page-header-image-height"><span class="pixels">px</span></label>
+							<span class="description" style="display:block;"><?php _e('Use "0" or leave blank for proportional resizing.','generate-page-header');?></span>
+						</p>
+					</div>
 				</div>
 			</div>
-			<div id="generate-tab-2" class="generate-tab-content generate-video-tab generate-page-header-content-required">
-				<p>
-					<label for="_meta-generate-page-header-video" class="example-row-title"><strong><?php _e('Video background - MP4 file only','generate-page-header');?></strong></label><br />
-					<input style="width:350px" id="_meta-generate-page-header-video" type="text" name="_meta-generate-page-header-video" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-video'][0]); ?>" />			   
-					<button class="generate-upload-file button" type="button" data-type="video" data-title="<?php _e( 'Page Header Video','generate-page-header' );?>" data-insert="<?php _e( 'Insert Video','generate-page-header'); ?>" data-prev="false">
-						<?php _e('Add Video','generate-page-header') ;?>
-					</button>
-				</p>
-				<p>
-					<label for="_meta-generate-page-header-video-ogv" class="example-row-title"><strong><?php _e('Video background - OGV file only','generate-page-header');?></strong></label><br />
-					<input style="width:350px" id="_meta-generate-page-header-video-ogv" type="text" name="_meta-generate-page-header-video-ogv" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-video-ogv'][0]); ?>" />			   
-					<button class="generate-upload-file button" type="button" data-type="video" data-title="<?php _e( 'Page Header Video','generate-page-header' );?>" data-insert="<?php _e( 'Insert Video','generate-page-header'); ?>" data-prev="false">
-						<?php _e('Add Video','generate-page-header') ;?>
-					</button>
-				</p>
-				<p>
-					<label for="_meta-generate-page-header-video-webm" class="example-row-title"><strong><?php _e('Video background - WEBM file only','generate-page-header');?></strong></label><br />
-					<input style="width:350px" id="_meta-generate-page-header-video-webm" type="text" name="_meta-generate-page-header-video-webm" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-video-webm'][0]); ?>" />			   
-					<button class="generate-upload-file button" type="button" data-type="video" data-title="<?php _e( 'Page Header Video','generate-page-header' );?>" data-insert="<?php _e( 'Insert Video','generate-page-header'); ?>" data-prev="false">
-						<?php _e('Add Video','generate-page-header') ;?>
-					</button>
-				</p>
-				<p>
-					<label for="_meta-generate-page-header-video-overlay" class="example-row-title"><strong><?php _e('Overlay color','generate-page-header');?></strong></label><br />
-					<input class="color-picker" style="width:45px" type="text" name="_meta-generate-page-header-video-overlay" id="_meta-generate-page-header-video-overlay" value="<?php echo $stored_meta['_meta-generate-page-header-video-overlay'][0]; ?>" />
-				</p>
-			</div>
-			<div id="generate-tab-3" class="generate-tab-content">
-				<p>
-					<label for="_meta-generate-page-header-content" class="example-row-title"><strong><?php _e('Content','generate-page-header');?></strong></label><br />
-					<textarea style="width:100%;min-height:200px;" name="_meta-generate-page-header-content" id="_meta-generate-page-header-content"><?php echo esc_html($stored_meta['_meta-generate-page-header-content'][0]); ?></textarea>
-					<span class="description"><?php _e('HTML and shortcodes allowed.','generate-page-header');?></span>
-				</p>
-				<div class="generate-page-header-content-required content-settings-area">
+			<div id="generate-tab-2" class="generate-tab-content">
+				
+				<textarea style="width:100%;min-height:200px;" name="_meta-generate-page-header-content" id="_meta-generate-page-header-content"><?php echo esc_html($stored_meta['_meta-generate-page-header-content'][0]); ?></textarea>
+				<p class="description" style="margin:0;"><?php _e('HTML and shortcodes allowed.','generate-page-header');?></p>
+				
+				<div class="generate-page-header-content-required content-settings-area" style="margin-top:12px;">
 					<div class="page-header-column">
 						<p>
-							<input type="checkbox" name="_meta-generate-page-header-content-autop" id="_meta-generate-page-header-content-autop" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-content-autop'] ) ) checked( $stored_meta['_meta-generate-page-header-content-autop'][0], 'yes' ); ?> /> <label for="_meta-generate-page-header-content-autop"><?php _e('Automatically add paragraphs','generate-page-header');?></label>
+							<label for="_meta-generate-page-header-content-autop"><strong><?php _e('Automatically add paragraphs','generate-page-header');?></strong></label><br />
+							<input type="checkbox" name="_meta-generate-page-header-content-autop" id="_meta-generate-page-header-content-autop" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-content-autop'] ) ) checked( $stored_meta['_meta-generate-page-header-content-autop'][0], 'yes' ); ?> /> 
 						</p>
 						<p>
-							<input type="checkbox" name="_meta-generate-page-header-content-padding" id="_meta-generate-page-header-content-padding" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-content-padding'] ) ) checked( $stored_meta['_meta-generate-page-header-content-padding'][0], 'yes' ); ?> /> <label for="_meta-generate-page-header-content-padding"><?php _e('Add padding','generate-page-header');?></label>
+							<label for="_meta-generate-page-header-content-padding"><?php _e('Add padding','generate-page-header');?></label><br />
+							<input type="checkbox" name="_meta-generate-page-header-content-padding" id="_meta-generate-page-header-content-padding" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-content-padding'] ) ) checked( $stored_meta['_meta-generate-page-header-content-padding'][0], 'yes' ); ?> /> 
 						</p>
 						<p>
-							<input class="image-background" type="checkbox" name="_meta-generate-page-header-image-background" id="_meta-generate-page-header-image-background" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-image-background'] ) ) checked( $stored_meta['_meta-generate-page-header-image-background'][0], 'yes' ); ?> /> <label for="_meta-generate-page-header-image-background"><?php _e('Add background image','generate-page-header');?></label>
+							<label for="_meta-generate-page-header-image-background"><?php _e('Add background image','generate-page-header');?></label><br />
+							<input class="image-background" type="checkbox" name="_meta-generate-page-header-image-background" id="_meta-generate-page-header-image-background" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-image-background'] ) ) checked( $stored_meta['_meta-generate-page-header-image-background'][0], 'yes' ); ?> /> 
 						</p>
 						<p class="parallax">
-							<input type="checkbox" name="_meta-generate-page-header-image-background-fixed" id="_meta-generate-page-header-image-background-fixed" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-image-background-fixed'] ) ) checked( $stored_meta['_meta-generate-page-header-image-background-fixed'][0], 'yes' ); ?> /> <label for="_meta-generate-page-header-image-background-fixed"><?php _e('Parallax effect','generate-page-header');?></label>
+							<label for="_meta-generate-page-header-image-background-fixed"><?php _e('Parallax effect','generate-page-header');?></label><br />
+							<input type="checkbox" name="_meta-generate-page-header-image-background-fixed" id="_meta-generate-page-header-image-background-fixed" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-image-background-fixed'] ) ) checked( $stored_meta['_meta-generate-page-header-image-background-fixed'][0], 'yes' ); ?> /> 
 						</p>
 						<p class="fullscreen">
-							<input type="checkbox" name="_meta-generate-page-header-full-screen" id="_meta-generate-page-header-full-screen" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-full-screen'] ) ) checked( $stored_meta['_meta-generate-page-header-full-screen'][0], 'yes' ); ?> /> <label for="_meta-generate-page-header-full-screen"><?php _e('Fullscreen','generate-page-header');?></label>
+							<label for="_meta-generate-page-header-full-screen"><?php _e('Fullscreen','generate-page-header');?></label><br />
+							<input type="checkbox" name="_meta-generate-page-header-full-screen" id="_meta-generate-page-header-full-screen" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-full-screen'] ) ) checked( $stored_meta['_meta-generate-page-header-full-screen'][0], 'yes' ); ?> /> 
 						</p>
 						<p class="vertical-center">
-							<input type="checkbox" name="_meta-generate-page-header-vertical-center" id="_meta-generate-page-header-vertical-center" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-vertical-center'] ) ) checked( $stored_meta['_meta-generate-page-header-vertical-center'][0], 'yes' ); ?> /> <label for="_meta-generate-page-header-vertical-center"><?php _e('Vertical center content','generate-page-header');?></label>
+							<label for="_meta-generate-page-header-vertical-center"><?php _e('Vertical center content','generate-page-header');?></label><br />
+							<input type="checkbox" name="_meta-generate-page-header-vertical-center" id="_meta-generate-page-header-vertical-center" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-vertical-center'] ) ) checked( $stored_meta['_meta-generate-page-header-vertical-center'][0], 'yes' ); ?> />
 						</p>
-						<?php if ( 'post' == get_post_type() && !is_single() ) { ?>
-							<div class="show-in-excerpt">
-								<p>
-									<input type="checkbox" name="_meta-generate-page-header-add-to-excerpt" id="_meta-generate-page-header-add-to-excerpt" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-add-to-excerpt'] ) ) checked( $stored_meta['_meta-generate-page-header-add-to-excerpt'][0], 'yes' ); ?> /> <label for="_meta-generate-page-header-add-to-excerpt"><?php _e('Add to blog excerpt','generate-page-header');?></label>
-								</p>
-							</div>
-						<?php } ?>
 					</div>
 					<div class="page-header-column">
 						<p>
 							<label for="_meta-generate-page-header-image-background-type" class="example-row-title"><strong><?php _e('Container type','generate-page-header');?></strong></label><br />
 							<select name="_meta-generate-page-header-image-background-type" id="_meta-generate-page-header-image-background-type">
 								<option value="" <?php selected( $stored_meta['_meta-generate-page-header-image-background-type'][0], '' ); ?>><?php _e('Contained','generate-page-header');?></option>
-								<option value="fluid" <?php selected( $stored_meta['_meta-generate-page-header-image-background-type'][0], 'fluid' ); ?>><?php _e('Fluid','generate-page-header');?></option>
+								<option value="fluid" <?php selected( $stored_meta['_meta-generate-page-header-image-background-type'][0], 'fluid' ); ?>><?php _e('Full width','generate-page-header');?></option>
 							</select>
 						</p>
 
@@ -211,7 +249,11 @@ function show_generate_page_header_meta_box( $post ) {
 						
 						<p>
 							<label for="_meta-generate-page-header-image-background-spacing" class="example-row-title"><strong><?php _e('Top/Bottom padding','generate-page-header');?></strong></label><br />
-							<input placeholder="" style="width:45px" type="text" name="_meta-generate-page-header-image-background-spacing" id="_meta-generate-page-header-image-background-spacing" value="<?php echo intval( $stored_meta['_meta-generate-page-header-image-background-spacing'][0] ); ?>" /><label for="_meta-generate-page-header-image-background-spacing"><span class="pixels">px</span></label>
+							<input placeholder="" style="width:45px" type="text" name="_meta-generate-page-header-image-background-spacing" id="_meta-generate-page-header-image-background-spacing" value="<?php echo $stored_meta['_meta-generate-page-header-image-background-spacing'][0]; ?>" />
+							<select name="_meta-generate-page-header-image-background-spacing-unit" id="_meta-generate-page-header-image-background-spacing-unit">
+								<option value="" <?php selected( $stored_meta['_meta-generate-page-header-image-background-spacing-unit'][0], '' ); ?>>px</option>
+								<option value="%" <?php selected( $stored_meta['_meta-generate-page-header-image-background-spacing-unit'][0], '%' ); ?>>%</option>
+							</select>
 						</p>
 					</div>
 					<div class="page-header-column last">
@@ -238,29 +280,67 @@ function show_generate_page_header_meta_box( $post ) {
 					<div class="clear"></div>
 				</div>
 			</div>
+			<div id="generate-tab-3" class="generate-tab-content generate-video-tab generate-page-header-content-required" style="display:none">
+				<p style="margin-top:0;">
+					<label for="_meta-generate-page-header-video" class="example-row-title"><strong><?php _e('MP4 file','generate-page-header');?></strong></label><br />
+					<input placeholder="http://" class="widefat" style="max-width:350px" id="_meta-generate-page-header-video" type="text" name="_meta-generate-page-header-video" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-video'][0]); ?>" />			   
+					<button class="generate-upload-file button" type="button" data-type="video" data-title="<?php _e( 'Page Header Video','generate-page-header' );?>" data-insert="<?php _e( 'Insert Video','generate-page-header'); ?>" data-prev="false">
+						<?php _e('Choose Video','generate-page-header') ;?>
+					</button>
+				</p>
+				<p>
+					<label for="_meta-generate-page-header-video-ogv" class="example-row-title"><strong><?php _e('OGV file','generate-page-header');?></strong></label><br />
+					<input placeholder="http://" class="widefat" style="max-width:350px" id="_meta-generate-page-header-video-ogv" type="text" name="_meta-generate-page-header-video-ogv" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-video-ogv'][0]); ?>" />			   
+					<button class="generate-upload-file button" type="button" data-type="video" data-title="<?php _e( 'Page Header Video','generate-page-header' );?>" data-insert="<?php _e( 'Insert Video','generate-page-header'); ?>" data-prev="false">
+						<?php _e('Choose Video','generate-page-header') ;?>
+					</button>
+				</p>
+				<p>
+					<label for="_meta-generate-page-header-video-webm" class="example-row-title"><strong><?php _e('WEBM file','generate-page-header');?></strong></label><br />
+					<input placeholder="http://" class="widefat" style="max-width:350px" id="_meta-generate-page-header-video-webm" type="text" name="_meta-generate-page-header-video-webm" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-video-webm'][0]); ?>" />			   
+					<button class="generate-upload-file button" type="button" data-type="video" data-title="<?php _e( 'Page Header Video','generate-page-header' );?>" data-insert="<?php _e( 'Insert Video','generate-page-header'); ?>" data-prev="false">
+						<?php _e('Choose Video','generate-page-header') ;?>
+					</button>
+				</p>
+				<p>
+					<label for="_meta-generate-page-header-video-overlay" class="example-row-title"><strong><?php _e('Overlay color','generate-page-header');?></strong></label><br />
+					<input class="color-picker" style="width:45px" type="text" name="_meta-generate-page-header-video-overlay" id="_meta-generate-page-header-video-overlay" value="<?php echo $stored_meta['_meta-generate-page-header-video-overlay'][0]; ?>" />
+				</p>
+			</div>
 			<?php if ( generate_page_header_logo_exists() ) : ?>
 				<div id="generate-tab-4" class="generate-tab-content">
-					<div id="preview-image">
+					<p class="description" style="margin-top:0;"><?php _e( 'Overwrite your site-wide logo/header on this page.','generate-page-header' ); ?></p>
+					<div id="preview-image" class="generate-logo-image">
 						<?php if( $stored_meta['_meta-generate-page-header-logo'][0] != "") { ?>
-							<img class="saved-image" src="<?php echo $stored_meta['_meta-generate-page-header-logo'][0];?>" width="100" />
+							<img class="saved-image" src="<?php echo $stored_meta['_meta-generate-page-header-logo'][0];?>" width="100" style="margin-bottom:12px;" />
 						<?php } ?>
 					</div>
-					<label for="_meta-generate-page-header-logo" class="example-row-title"><strong><?php _e('Header / Logo','generate-page-header');?></strong></label><br />
-					<input style="width:350px" id="_meta-generate-page-header-logo" type="text" name="_meta-generate-page-header-logo" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-logo'][0]); ?>" />			   
-					<button class="generate-upload-file button" type="button" data-type="image" data-title="<?php _e( 'Header / Logo','generate-page-header' );?>" data-insert="<?php _e( 'Insert Image','generate-page-header'); ?>" data-prev="true">
-						<?php _e('Add Image','generate-page-header') ;?>
+					<input style="width:350px" id="_meta-generate-page-header-logo" type="hidden" name="_meta-generate-page-header-logo" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-logo'][0]); ?>" />			   
+					<button class="generate-upload-file button" type="button" data-type="image" data-title="<?php _e( 'Header / Logo','generate-page-header' );?>" data-insert="<?php _e( 'Insert Logo','generate-page-header'); ?>" data-prev="true">
+						<?php _e('Choose Logo','generate-page-header') ;?>
 					</button>
-					<input id="_meta-generate-page-header-logo-id" type="hidden" name="_meta-generate-page-header-logo-id" value="<?php echo $stored_meta['_meta-generate-page-header-logo-id'][0]; ?>" />
+					<input class="image-id" id="_meta-generate-page-header-logo-id" type="hidden" name="_meta-generate-page-header-logo-id" value="<?php echo $stored_meta['_meta-generate-page-header-logo-id'][0]; ?>" />
+					<?php if( $stored_meta['_meta-generate-page-header-logo'][0] != "") {
+						$remove_button = 'style="display:inline-block;"';
+					} else {
+						$remove_button = 'style="display:none;"';
+					}
+					?>
+					<button class="generate-page-header-remove-image button" type="button" <?php echo $remove_button; ?> data-input="#_meta-generate-page-header-logo" data-input-id="_meta-generate-page-header-logo-id" data-prev=".generate-logo-image">
+						<?php _e('Remove Logo','generate-page-header') ;?>
+					</button>
 				</div>
 			<?php endif; ?>
-			<div id="<?php if ( generate_page_header_logo_exists() ) : ?>generate-tab-5<?php else : ?>generate-tab-4<?php endif; ?>" class="generate-tab-content generate-page-header-content-required">
-				<p>
-					<input type="checkbox" name="_meta-generate-page-header-combine" id="_meta-generate-page-header-combine" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-combine'] ) ) checked( $stored_meta['_meta-generate-page-header-combine'][0], 'yes' ); ?> /> <label for="_meta-generate-page-header-combine"><?php _e('Merge with site header','generate-page-header');?></label>
+			<div id="<?php if ( generate_page_header_logo_exists() ) : ?>generate-tab-5<?php else : ?>generate-tab-4<?php endif; ?>" class="generate-tab-content generate-page-header-content-required" style="display:none">
+				<p style="margin-top:0;">
+					<label for="_meta-generate-page-header-combine"><?php _e('Merge with site header','generate-page-header');?></label><br />
+					<input type="checkbox" name="_meta-generate-page-header-combine" id="_meta-generate-page-header-combine" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-combine'] ) ) checked( $stored_meta['_meta-generate-page-header-combine'][0], 'yes' ); ?> /> 
 				</p>
 				
 				<div class="combination-options">
 					<p class="absolute-position">
-						<input type="checkbox" name="_meta-generate-page-header-absolute-position" id="_meta-generate-page-header-absolute-position" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-absolute-position'] ) ) checked( $stored_meta['_meta-generate-page-header-absolute-position'][0], 'yes' ); ?> /> <label for="_meta-generate-page-header-absolute-position"><?php _e('Place content behind header (sliders etc..)','generate-page-header');?></label>
+						<label for="_meta-generate-page-header-absolute-position"><?php _e('Place content behind header (sliders etc..)','generate-page-header');?></label><br />
+						<input type="checkbox" name="_meta-generate-page-header-absolute-position" id="_meta-generate-page-header-absolute-position" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-absolute-position'] ) ) checked( $stored_meta['_meta-generate-page-header-absolute-position'][0], 'yes' ); ?> /> 
 					</p>
 				
 					<p>
@@ -274,7 +354,8 @@ function show_generate_page_header_meta_box( $post ) {
 					</p>
 					
 					<p>
-						<input type="checkbox" name="_meta-generate-page-header-transparent-navigation" id="_meta-generate-page-header-transparent-navigation" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-transparent-navigation'] ) ) checked( $stored_meta['_meta-generate-page-header-transparent-navigation'][0], 'yes' ); ?> /> <label for="_meta-generate-page-header-transparent-navigation"><?php _e('Transparent navigation','generate-page-header');?></label>
+						<label for="_meta-generate-page-header-transparent-navigation"><?php _e('Transparent navigation','generate-page-header');?></label><br />
+						<input type="checkbox" name="_meta-generate-page-header-transparent-navigation" id="_meta-generate-page-header-transparent-navigation" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-transparent-navigation'] ) ) checked( $stored_meta['_meta-generate-page-header-transparent-navigation'][0], 'yes' ); ?> /> 
 					</p>
 					
 					<div class="navigation-colors">
@@ -307,339 +388,6 @@ function show_generate_page_header_meta_box( $post ) {
 			</div>
 		</div>
 	</div>
-	<script>
-		(function(a){if("undefined"!=typeof a.fn.lc_switch)return!1;a.fn.lc_switch=function(d,f){a.fn.lcs_destroy=function(){a(this).each(function(){a(this).parents(".lcs_wrap").children().not("input").remove();a(this).unwrap()});return!0};a.fn.lcs_on=function(){a(this).each(function(){var b=a(this).parents(".lcs_wrap"),c=b.find("input");"function"==typeof a.fn.prop?b.find("input").prop("checked",!0):b.find("input").attr("checked",!0);b.find("input").trigger("lcs-on");b.find("input").trigger("lcs-statuschange");
-b.find(".lcs_switch").removeClass("lcs_off").addClass("lcs_on");if(b.find(".lcs_switch").hasClass("lcs_radio_switch")){var d=c.attr("name");b.parents("form").find("input[name="+d+"]").not(c).lcs_off()}});return!0};a.fn.lcs_off=function(){a(this).each(function(){var b=a(this).parents(".lcs_wrap");"function"==typeof a.fn.prop?b.find("input").prop("checked",!1):b.find("input").attr("checked",!1);b.find("input").trigger("lcs-off");b.find("input").trigger("lcs-statuschange");b.find(".lcs_switch").removeClass("lcs_on").addClass("lcs_off")});
-return!0};return this.each(function(){if(!a(this).parent().hasClass("lcs_wrap")){var b="undefined"==typeof d?"ON":d,c="undefined"==typeof f?"OFF":f,b=b?'<div class="lcs_label lcs_label_on">'+b+"</div>":"",c=c?'<div class="lcs_label lcs_label_off">'+c+"</div>":"",g=a(this).is(":disabled")?!0:!1,e=a(this).is(":checked")?!0:!1,e=""+(e?" lcs_on":" lcs_off");g&&(e+=" lcs_disabled");b='<div class="lcs_switch '+e+'"><div class="lcs_cursor"></div>'+b+c+"</div>";!a(this).is(":input")||"checkbox"!=a(this).attr("type")&&
-"radio"!=a(this).attr("type")||(a(this).wrap('<div class="lcs_wrap"></div>'),a(this).parent().append(b),a(this).parent().find(".lcs_switch").addClass("lcs_"+a(this).attr("type")+"_switch"))}})};a(document).ready(function(){a(document).delegate(".lcs_switch:not(.lcs_disabled)","click tap",function(d){a(this).hasClass("lcs_on")?a(this).hasClass("lcs_radio_switch")||a(this).lcs_off():a(this).lcs_on()});a(document).delegate(".lcs_wrap input","change",function(){a(this).is(":checked")?a(this).lcs_on():
-a(this).lcs_off()})})})(jQuery);
-
-		jQuery(document).ready(function($) {
-			$('.generate-tab-content input[type="checkbox"]').lc_switch('', '');
-			$(".generate-tabs-menu a").click(function(event) {
-				event.preventDefault();
-				$(this).parent().addClass("generate-current");
-				$(this).parent().siblings().removeClass("generate-current");
-				var tab = $(this).attr("href");
-				$(".generate-tab-content").not(tab).css("display", "none");
-				$(tab).fadeIn();
-			});
-			
-			$('#_meta-generate-page-header-content').bind('input change', function() {
-				$("li.generate-page-header-content-required, .content-settings-area").hide();
-
-				if ( this.value.length ) {
-					$("li.generate-page-header-content-required, .content-settings-area").show();
-				}
-			});
-		});
-		jQuery(window).load(function($) {
-			
-			<?php if ( $stored_meta['_meta-generate-page-header-content'][0] == '' ) : ?>
-				jQuery('#generate-tab-3').hide();
-				jQuery('.generate-tabs-menu .image-settings').addClass('generate-current');
-				jQuery('.generate-tabs-menu .content-settings').removeClass('generate-current');
-				jQuery("li.generate-page-header-content-required, .content-settings-area").hide();
-			<?php else : ?>
-				jQuery('#generate-tab-1').hide();
-				jQuery('#generate-tab-3').show();
-				jQuery('.generate-tabs-menu .content-settings').addClass('generate-current');
-				jQuery('.generate-tabs-menu .image-settings').removeClass('generate-current');
-				jQuery("li.generate-page-header-content-required, .content-settings-area").show();
-			<?php endif; ?>
-			
-			if ( jQuery('#_meta-generate-page-header-enable-image-crop').val() == 'enable' ) {
-				jQuery('#crop-enabled').show();
-			}
-            jQuery('#_meta-generate-page-header-enable-image-crop').change(function () {
-                if (jQuery(this).val() === 'enable') {
-                    jQuery('#crop-enabled').show();
-                } else {
-                    jQuery('#crop-enabled').hide();
-                }
-            });
-			
-			if ( jQuery('#_meta-generate-page-header-image-background').is(':checked')) {
-				jQuery('.parallax').show();
-			} else {
-				jQuery('.parallax').hide();
-			}
-			
-			jQuery('body').delegate('.image-background', 'lcs-statuschange', function() {
-				if (jQuery(this).is(":checked")) {
-                    jQuery('.parallax').show();
-                } else {
-                    jQuery('.parallax').hide();
-					jQuery('#_meta-generate-page-header-image-background-fixed').lcs_off();
-                }
-			});
-			
-			if ( jQuery('#_meta-generate-page-header-full-screen').is(':checked')) {
-				jQuery('.vertical-center').show();
-			} else {
-				jQuery('.vertical-center').hide();
-			}
-			
-			jQuery('body').delegate('#_meta-generate-page-header-full-screen', 'lcs-statuschange', function() {
-				if (jQuery(this).is(":checked")) {
-                    jQuery('.vertical-center').show();
-                } else {
-                    jQuery('.vertical-center').hide();
-					jQuery('#_meta-generate-page-header-vertical-center').lcs_off();
-                }
-			});
-			
-			if ( jQuery('#_meta-generate-page-header-transparent-navigation').is(':checked')) {
-				jQuery('.navigation-colors').show();
-			} else {
-				jQuery('.navigation-colors').hide();
-			}
-			
-			jQuery('body').delegate('#_meta-generate-page-header-transparent-navigation', 'lcs-statuschange', function() {
-				if (jQuery(this).is(":checked")) {
-                    jQuery('.navigation-colors').show();
-                } else {
-                    jQuery('.navigation-colors').hide();
-                }
-			});
-			
-			if ( jQuery('#_meta-generate-page-header-combine').is(':checked')) {
-				jQuery('.combination-options').show();
-			} else {
-				jQuery('.combination-options').hide();
-			}
-			
-			jQuery('body').delegate('#_meta-generate-page-header-combine', 'lcs-statuschange', function() {
-				if (jQuery(this).is(":checked")) {
-                    jQuery('.combination-options').show();
-                } else {
-                    jQuery('.combination-options').hide();
-                }
-			});
-			
-			if ( jQuery('#_meta-generate-page-header-image-background-type').val() == '' ) {
-				jQuery('.vertical-center').hide();
-				jQuery('.fullscreen').hide();
-			}
-            jQuery('#_meta-generate-page-header-image-background-type').change(function () {
-                if (jQuery(this).val() === '') {
-                    jQuery('.vertical-center').hide();
-					jQuery('#_meta-generate-page-header-vertical-center').lcs_off();
-					jQuery('.fullscreen').hide();
-					jQuery('#_meta-generate-page-header-full-screen').lcs_off();
-                } else {
-                    //jQuery('.vertical-center').show();
-					jQuery('.fullscreen').show();
-                }
-            });
-			
-			var $set_button = jQuery('.generate-upload-file');
-			/**
-			 * open the media manager
-			 */
-			$set_button.click(function (e) {
-				e.preventDefault();
-				
-				var $thisbutton = jQuery(this);
-				var frame = wp.media({
-					title : $thisbutton.data('title'),
-					multiple : false,
-					library : { type : $thisbutton.data('type') },
-					button : { text : $thisbutton.data('insert') }
-				});
-				// close event media manager
-				frame.on('select', function () {
-					var attachment = frame.state().get('selection').first().toJSON();
-					// set the file
-					//set_dfi(attachment.url);
-					$thisbutton.prev('input').val(attachment.url);
-					$thisbutton.next('input').val(attachment.id);
-					if ( $thisbutton.data('prev') === true ) {
-						$thisbutton.prev('input').prev('#preview-image').children('.saved-image').remove();
-						$thisbutton.prev('input').prev('#preview-image').append('<img src="' + attachment.url + '" width="100" class="saved-image" />');
-					}
-				});
-
-				// everthing is set open the media manager
-				frame.open();
-			});
-		});
-		jQuery(document).ready(function($) {
-			$('.color-picker').wpColorPicker();
-		});
-	</script>
-	
-	<style>
-		@media (min-width: 769px) {
-			.page-header-column {
-				width: 30%;
-				margin-right: 3%;
-				float: left;
-			}
-			.page-header-column.last {
-				margin-right: 0;
-			}
-		}
-		.generate-tab {
-			clear: both;
-		}
-		.generate-tabs-menu li {
-			display: inline-block;
-		}
-		.generate-tab-content {
-			display: none;
-		}
-
-		#generate-tab-1 {
-			display: block;   
-		}
-		
-		.generate-current a.button,
-		.generate-tabs-menu li a.button:focus{
-			background: #eee;
-			border-color: #999;
-			-webkit-box-shadow: inset 0 2px 5px -3px rgba(0,0,0,.5);
-			box-shadow: inset 0 2px 5px -3px rgba(0,0,0,.5);
-			-webkit-transform: translateY(1px);
-			-ms-transform: translateY(1px);
-			transform: translateY(1px);
-		}
-		
-		.lcs_wrap {
-			display: inline-block;	
-			direction: ltr;
-			height: 28px;
-			vertical-align: middle;
-		}
-		.lcs_wrap input {
-			display: none;	
-		}
-
-		.lcs_switch {
-			display: inline-block;	
-			position: relative;
-			width: 73px;
-			height: 28px;
-			border-radius: 30px;
-			background: #ddd;
-			overflow: hidden;
-			cursor: pointer;
-			
-			-webkit-transition: all .2s ease-in-out;  
-			-ms-transition: 	all .2s ease-in-out; 
-			transition: 		all .2s ease-in-out; 
-		}
-		.lcs_cursor {
-			display: inline-block;
-			position: absolute;
-			top: 3px;	
-			width: 22px;
-			height: 22px;
-			border-radius: 100%;
-			background: #fff;
-			box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.1);
-			z-index: 10;
-			
-			-webkit-transition: all .2s linear;  
-			-ms-transition: 	all .2s linear; 
-			transition: 		all .2s linear; 
-		}
-		.lcs_label {
-			font-family: "Trebuchet MS", Helvetica, sans-serif;
-			font-size: 12px;
-			letter-spacing: 1px;
-			line-height: 18px;
-			color: #fff;
-			font-weight: bold;
-			position: absolute;
-			width: 33px;
-			top: 5px;
-			overflow: hidden;
-			text-align: center;
-			opacity: 0;
-			
-			-webkit-transition: all .2s ease-in-out .1s;  
-			-ms-transition: 	all .2s ease-in-out .1s;   
-			transition: 		all .2s ease-in-out .1s;   
-		}
-		.lcs_label.lcs_label_on {
-			left: -70px;
-			z-index: 6;	
-		}
-		.lcs_label.lcs_label_off {
-			right: -70px;
-			z-index: 5;	
-		}
-
-
-		/* on */
-		.lcs_switch.lcs_on {
-			background: #75b936;
-			box-shadow: 0 0 2px #579022 inset;
-		}
-		.lcs_switch.lcs_on .lcs_cursor {
-			left: 48px;
-		}
-		.lcs_switch.lcs_on .lcs_label_on {
-			left: 10px;	
-			opacity: 1;
-		}
-
-
-		/* off */
-		.lcs_switch.lcs_off {
-			background: #b2b2b2;
-			box-shadow: 0px 0px 2px #a4a4a4 inset; 	
-		}
-		.lcs_switch.lcs_off .lcs_cursor {
-			left: 3px;
-		}
-		.lcs_switch.lcs_off .lcs_label_off {
-			right: 10px;
-			opacity: 1;	
-		}
-
-
-		/* disabled */
-		.lcs_switch.lcs_disabled {
-			opacity: 0.65;
-			filter: alpha(opacity=65);	
-			cursor: default;
-		}
-		
-		.choose-content-options span {
-			display:block;
-			color:#222;
-		}
-		.choose-content-options div {
-			margin-bottom:10px;
-			border-bottom:1px solid #DDD;
-			padding-bottom:10px;
-		}
-		.nav-tab.active {
-			border-bottom:1px solid #fff;
-			color:#124964;
-			background:#FFF;
-		}
-		.nav-tab {
-			margin-bottom: 0;
-			position:relative;
-			bottom: -1px;
-		}
-		#poststuff h2.nav-tab-wrapper {
-			padding: 0;
-		}
-		.nav-tab:focus {
-			outline: none;
-		}
-		h2.page-header .nav-tab {
-			font-size:15px;
-		}
-		.small {
-			display: block;
-			font-size: 11px;
-		}
-	</style>
     <?php
 }
 endif;
@@ -671,6 +419,7 @@ function save_generate_page_header_meta($post_id) {
 		'_meta-generate-page-header-image-background-type' => 'FILTER_SANITIZE_STRING',
 		'_meta-generate-page-header-image-background-alignment' => 'FILTER_SANITIZE_STRING',
 		'_meta-generate-page-header-image-background-spacing' => 'FILTER_SANITIZE_NUMBER_INT',
+		'_meta-generate-page-header-image-background-spacing-unit' => 'FILTER_SANITIZE_STRING',
 		'_meta-generate-page-header-image-background-color' => 'FILTER_SANITIZE_STRING',
 		'_meta-generate-page-header-image-background-text-color' => 'FILTER_SANITIZE_STRING',
 		'_meta-generate-page-header-image-background-link-color' => 'FILTER_SANITIZE_STRING',

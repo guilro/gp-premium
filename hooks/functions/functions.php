@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 /**
  * Insert Hooks
  */
@@ -10,8 +13,6 @@ function generate_hooks_setup()
 	// Just to verify that we're activated.
 }
 endif;
-
-if ( ! defined( 'ABSPATH' ) ) exit;
 
 if ( ! class_exists( 'Generate_Hooks_Settings' ) ) :
 class Generate_Hooks_Settings {
@@ -314,7 +315,7 @@ class Generate_Hooks_Settings {
 				if( isset( $option[$field['id'] . '_disable'] ) && 'true' == $option[$field['id'] . '_disable'] ){
 					$checked2 = 'checked="checked"';
 				}
-				$html .= '<textarea id="generate_hooks[' . esc_attr( $field['id'] ) . ']" name="generate_hooks[' . esc_attr( $field['id'] ) . ']" style="width:100%;height:200px;" placeholder="' . esc_attr( $field['description'] ) . '" type="checkbox" cols="" rows="">' . esc_textarea( $data ) . '</textarea>';
+				$html .= '<textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="generate_hooks[' . esc_attr( $field['id'] ) . ']" name="generate_hooks[' . esc_attr( $field['id'] ) . ']" style="width:100%;height:200px;" placeholder="' . esc_attr( $field['description'] ) . '" type="checkbox" cols="" rows="">' . esc_textarea( $data ) . '</textarea>';
 				$html .= '<div class="execute"><input type="checkbox" name="generate_hooks[' . esc_attr( $field['id'] ) . '_php]" id="generate_hooks[' . esc_attr( $field['id'] ) . '_php]" value="true" ' . $checked . ' /> <label for="generate_hooks[' . esc_attr( $field['id'] ) . '_php]">' . __('Execute PHP', 'generate-hooks') . '</label></div>';
 				$html .= '<div class="disable"><input type="checkbox" name="generate_hooks[' . esc_attr( $field['id'] ) . '_disable]" id="generate_hooks[' . esc_attr( $field['id'] ) . '_disable]" value="true" ' . $checked2 . ' /> <label for="generate_hooks[' . esc_attr( $field['id'] ) . '_disable]" class="disable">' . __('Disable Hook', 'generate-hooks') . '</label></div>';
 			break;

@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( !function_exists('generate_disable_elements') ) :
 /**
  * Remove the default disable_elements
@@ -70,7 +73,8 @@ if ( !function_exists('generate_add_de_meta_box') ) :
 add_action('add_meta_boxes', 'generate_add_de_meta_box');
 function generate_add_de_meta_box() {  
 		
-	$post_types = get_post_types();
+	$args = array( 'public' => true );
+	$post_types = get_post_types( $args );
 	foreach ($post_types as $type) {
 		if ( 'attachment' !== $type ) {
 			add_meta_box(  

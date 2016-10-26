@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_insert_import_export' ) ) :
 add_action('generate_options_items','generate_insert_import_export', 15);
 function generate_insert_import_export()

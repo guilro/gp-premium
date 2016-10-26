@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_page_header_area' ) ) :
 function generate_page_header_area($image_class, $content_class)
 {
@@ -80,8 +83,13 @@ function generate_page_header_area($image_class, $content_class)
 		$ext = ( ! empty( $page_header_image_custom ) ) ? pathinfo( $page_header_image_custom, PATHINFO_EXTENSION ) : false;
 		$video_options = array();
 		
-		if ( $ext ) $video_options[ 'posterType' ] = 'posterType:' . $ext;
+		if ( $ext ) 
+			$video_options[ 'posterType' ] = 'posterType:' . $ext;
+		else
+			$video_options[ 'posterType' ] = 'posterType: none';
+		
 		$video_options[ 'className' ] = 'className:generate-page-header-video';
+		$video_options[ 'loop' ] = apply_filters( 'generate_page_header_video_loop', true );
 		
 		$video = sprintf( ' data-vide-bg="%1$s" data-vide-options="%2$s"',
 			implode( ', ', array_filter( $video_output ) ),
@@ -254,7 +262,11 @@ function generate_page_header_area_start_container($image_class, $content_class)
 		$ext = ( ! empty( $page_header_image_custom ) ) ? pathinfo( $page_header_image_custom, PATHINFO_EXTENSION ) : false;
 		$video_options = array();
 		
-		if ( $ext ) $video_options[ 'posterType' ] = 'posterType:' . $ext;
+		if ( $ext ) 
+			$video_options[ 'posterType' ] = 'posterType:' . $ext;
+		else
+			$video_options[ 'posterType' ] = 'posterType: none';
+		
 		$video_options[ 'className' ] = 'className:generate-page-header-video';
 		
 		$video = sprintf( ' data-vide-bg="%1$s" data-vide-options="%2$s"',

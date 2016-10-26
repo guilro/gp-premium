@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 /**
  * These functions are needed for product activation
  * The functions below are the same throughout all addons
@@ -79,17 +82,30 @@ if ( ! function_exists( 'generate_license_errors' ) ) :
 */
 add_action( 'admin_notices', 'generate_license_errors' );
 function generate_license_errors() 
-{
-	if ( isset( $_GET['generate-message'] ) && 'license_failed' == $_GET['generate-message'] ) {
-		 add_settings_error( 'generate-license-notices', 'license_failed', __( 'License failed.', 'generate' ), 'error' );
+{	
+	
+	if ( isset( $_GET['generate-message'] ) && 'deactivation_passed' == $_GET['generate-message'] ) {
+		 add_settings_error( 'generate-license-notices', 'deactivation_passed', __( 'License deactivated.', 'gp-premium' ), 'updated' );
 	}
 	
 	if ( isset( $_GET['generate-message'] ) && 'license_activated' == $_GET['generate-message'] ) {
-		 add_settings_error( 'generate-license-notices', 'license_activated', __( 'License activated.', 'generate' ), 'updated' );
+		add_settings_error( 'generate-license-notices', 'license_activated', __( 'License activated.', 'gp-premium' ), 'updated' );
 	}
 	
-	if ( isset( $_GET['generate-message'] ) && 'deactivation_passed' == $_GET['generate-message'] ) {
-		 add_settings_error( 'generate-license-notices', 'deactivation_passed', __( 'License deactivated.', 'generate' ), 'updated' );
+	if ( isset( $_GET['sl_activation'] ) && ! empty( $_GET['message'] ) ) {
+
+		switch( $_GET['sl_activation'] ) {
+
+			case 'false':
+				$message = urldecode( $_GET['message'] );
+				add_settings_error( 'generate-license-notices', 'license_failed', $message, 'error' );
+				break;
+
+			case 'true':
+			default:
+				break;
+
+		}
 	}
 
 	settings_errors( 'generate-license-notices' );
@@ -131,7 +147,7 @@ function generate_add_license_key_field( $id, $download, $license_key_status, $l
 				<?php else : ?>
 					<span class="dashicons dashicons-no status" style="color:red;"></span>
 				<?php endif; ?>
-				<input spellcheck="false" class="license-key-input" id="generate_license_key_<?php echo $id;?>" name="generate_license_key_<?php echo $id;?>" type="text" value="<?php echo $license; ?>" placeholder="<?php _e( 'License Key', 'generate' ); ?>" title="<?php echo $download;?> <?php _e( 'License Key', 'generate' ); ?>" />
+				<input spellcheck="false" class="license-key-input" id="generate_license_key_<?php echo $id;?>" name="generate_license_key_<?php echo $id;?>" type="text" value="<?php echo $license; ?>" placeholder="<?php _e( 'License Key', 'gp-premium' ); ?>" title="<?php echo $download;?> <?php _e( 'License Key', 'gp-premium' ); ?>" />
 			</span>
 		</div>
 		<div class="grid-30 grid-parent">
@@ -205,15 +221,71 @@ function generate_process_license_key( $id, $download, $license_key_status, $lic
 			'sslverify' => false,
 			'body'      => $api_params
 		) );
+
+		// make sure the response came back okay
+		if ( is_wp_error( $license_response ) || 200 !== wp_remote_retrieve_response_code( $license_response ) ) {
+			$message = $license_response->get_error_message();
+		} else {
 		
-		// Error? Exit and give them a message.
-		if ( is_wp_error( $license_response ) ) {
-			wp_safe_redirect( admin_url('themes.php?page=generate-options&generate-message=license_failed' ) );
-			exit;
+			// Still here? Decode our response.
+			$license_data = json_decode( wp_remote_retrieve_body( $license_response ) );
+
+			if ( false === $license_data->success ) {
+
+				switch( $license_data->error ) {
+
+					case 'expired' :
+
+						$message = sprintf(
+							__( 'Your license key expired on %s.','gp-premium' ),
+							date_i18n( get_option( 'date_format' ), strtotime( $license_data->expires, current_time( 'timestamp' ) ) )
+						);
+						break;
+
+					case 'revoked' :
+
+						$message = __( 'Your license key has been disabled.','gp-premium' );
+						break;
+
+					case 'missing' :
+
+						$message = __( 'Invalid license.','gp-premium' );
+						break;
+
+					case 'invalid' :
+					case 'site_inactive' :
+
+						$message = __( 'Your license is not active for this URL.','gp-premium' );
+						break;
+
+					case 'item_name_mismatch' :
+
+						$message = sprintf( __( 'This appears to be an invalid license key for %s.','gp-premium' ), $download );
+						break;
+
+					case 'no_activations_left':
+
+						$message = __( 'Your license key has reached its activation limit.','gp-premium' );
+						break;
+
+					default :
+
+						$message = __( 'An error occurred, please try again.','gp-premium' );
+						break;
+				}
+
+			}
+
 		}
 		
-		// Still here? Decode our response.
-		$license_data = json_decode( wp_remote_retrieve_body( $license_response ) );
+		// Check if anything passed on a message constituting a failure
+		if ( ! empty( $message ) ) {
+			delete_option( $license_key_status );
+			$base_url = admin_url( 'themes.php?page=generate-options' );
+			$redirect = add_query_arg( array( 'sl_activation' => 'false', 'message' => urlencode( $message ) ), esc_url( $base_url ) );
+			wp_redirect( $redirect );
+			exit();
+		}
 		
 		// Update our license key status
 		update_option( $license_key_status, $license_data->license );

@@ -20,6 +20,9 @@
  *
  * @return str|array
  */
+ 
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 if( ! class_exists( 'GP_Resize' ) ) {
     class GP_Exception extends Exception {}

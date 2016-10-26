@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 /**
  * Set default options
  */
@@ -47,6 +50,10 @@ function generate_spacing_customize_register( $wp_customize ) {
 	require_once plugin_dir_path( __FILE__ ) . 'controls.php';
 
 	$defaults = generate_spacing_get_defaults();
+	
+	if ( method_exists( $wp_customize,'register_control_type' ) ) {
+		$wp_customize->register_control_type( 'Generate_Spacing_Customize_Control' );
+	}
 	
 	if ( class_exists( 'WP_Customize_Panel' ) ) :
 		if ( ! $wp_customize->get_panel( 'generate_spacing_panel' ) ) {
@@ -193,10 +200,6 @@ if ( !function_exists('generate_spacing_css') ) :
 				'line-height' => ( isset( $spacing_settings['menu_item_height'] ) ) ? $spacing_settings['menu_item_height'] . 'px' : null,
 			),
 			
-			'.nav-float-right .main-navigation .main-nav ul li a' => array(
-				'line-height' => ( isset( $spacing_settings['menu_item_height'] ) ) ? $spacing_settings['menu_item_height'] . 'px' : null,
-			),
-			
 			'.main-navigation .main-nav ul ul li a' => array(
 				'padding' => generate_padding_css( $spacing_settings[ 'sub_menu_item_height' ], $spacing_settings[ 'menu_item' ], $spacing_settings[ 'sub_menu_item_height' ], $spacing_settings[ 'menu_item' ] )
 			),
@@ -256,12 +259,12 @@ if ( !function_exists('generate_spacing_css') ) :
 				'margin' => generate_padding_css( $spacing_settings[ 'separator' ], '0', $spacing_settings[ 'separator' ], $spacing_settings[ 'separator' ] ),
 			),
 			
-			'.separate-containers .inside-right-sidebar, .inside-left-sidebar' => array(
+			'.separate-containers .inside-right-sidebar, .separate-containers .inside-left-sidebar' => array(
 				'margin-top' => ( isset( $spacing_settings['separator'] ) ) ? $spacing_settings['separator'] . 'px' : null,
 				'margin-bottom' => ( isset( $spacing_settings['separator'] ) ) ? $spacing_settings['separator'] . 'px' : null,
 			),
 			
-			'.separate-containers .widget, .separate-containers .hentry, .separate-containers .page-header, .widget-area .main-navigation' => array(
+			'.separate-containers .widget, .separate-containers .site-main > *, .separate-containers .page-header, .widget-area .main-navigation' => array(
 				'margin-bottom' => ( isset( $spacing_settings['separator'] ) ) ? $spacing_settings['separator'] . 'px' : null,
 			),
 			
@@ -424,5 +427,19 @@ function generate_spacing_sanitize_choices( $input, $setting ) {
 	// If the input is a valid key, return it;
 	// otherwise, return the default
 	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+}
+endif;
+
+if ( ! function_exists( 'generate_spacing_customizer_live_preview' ) ) :
+add_action( 'customize_preview_init', 'generate_spacing_customizer_live_preview' );
+function generate_spacing_customizer_live_preview()
+{
+	wp_enqueue_script( 
+		  'generate-spacing-customizer',
+		  trailingslashit( plugin_dir_url( __FILE__ ) ) . '/js/customizer.js',
+		  array( 'jquery','customize-preview' ),
+		  GENERATE_SPACING_VERSION,
+		  true
+	);
 }
 endif;

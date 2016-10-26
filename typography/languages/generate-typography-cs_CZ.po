@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Generate Typography\n"
-"POT-Creation-Date: 2016-05-07 14:58+0200\n"
-"PO-Revision-Date: 2016-05-07 14:59+0200\n"
+"POT-Creation-Date: 2016-07-24 22:05+0200\n"
+"PO-Revision-Date: 2016-07-24 22:05+0200\n"
 "Last-Translator: Foxtrot <foxtrot@foxtrot.me>\n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -18,15 +18,15 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: functions/customizer/google-font-dropdown-custom-control.php:34
+#: functions/customizer/control.php:34
 msgid "Default fonts"
 msgstr "Výchozí písma"
 
-#: functions/customizer/google-font-dropdown-custom-control.php:53
+#: functions/customizer/control.php:53
 msgid "Google fonts"
 msgstr "Google písma"
 
-#: functions/customizer/google-font-dropdown-custom-control.php:62
+#: functions/customizer/control.php:62
 msgid "Font family"
 msgstr "Rodina písem"
 
@@ -34,110 +34,127 @@ msgstr "Rodina písem"
 msgid "Typography"
 msgstr "Typografie"
 
-#: functions/functions.php:82
-msgid "Body Typography"
-msgstr "Typografie těla"
-
-#: functions/functions.php:104
+#: functions/functions.php:82 functions/functions.php:105
 msgid "Body"
 msgstr "Tělo"
 
-#: functions/functions.php:125 functions/functions.php:225
-#: functions/functions.php:312 functions/functions.php:412
-#: functions/functions.php:483 functions/functions.php:501
-#: functions/functions.php:519 functions/functions.php:670
+#: functions/functions.php:127 functions/functions.php:231
+#: functions/functions.php:322 functions/functions.php:426
+#: functions/functions.php:499 functions/functions.php:517
+#: functions/functions.php:535 functions/functions.php:692
 msgid "Font weight"
 msgstr "Tloušťka písma"
 
-#: functions/functions.php:147 functions/functions.php:247
-#: functions/functions.php:334 functions/functions.php:434
-#: functions/functions.php:487 functions/functions.php:505
-#: functions/functions.php:523 functions/functions.php:692
+#: functions/functions.php:150 functions/functions.php:254
+#: functions/functions.php:345 functions/functions.php:449
+#: functions/functions.php:503 functions/functions.php:521
+#: functions/functions.php:539 functions/functions.php:715
 msgid "Text transform"
 msgstr "Transformace textu"
 
-#: functions/functions.php:169 functions/functions.php:269
-#: functions/functions.php:356 functions/functions.php:456
-#: functions/functions.php:714
+#: functions/functions.php:173 functions/functions.php:277
+#: functions/functions.php:368 functions/functions.php:472
+#: functions/functions.php:738
 msgid "Font size"
 msgstr "Velikost písma"
 
-#: functions/functions.php:182
-msgid "Header Typography"
-msgstr "Typografie hlavičky"
+#: functions/functions.php:186
+msgid "Header"
+msgstr "Hlavička"
 
-#: functions/functions.php:204
+#: functions/functions.php:209
 msgid "Site title"
 msgstr "Název webu"
 
-#: functions/functions.php:291
+#: functions/functions.php:300
 msgid "Site tagline"
 msgstr "Popis webu"
 
-#: functions/functions.php:369
-msgid "Navigation Typography"
-msgstr "Typografie navigace"
+#: functions/functions.php:381
+msgid "Primary Navigation"
+msgstr "Primární navigace"
 
-#: functions/functions.php:391
+#: functions/functions.php:404
 msgid "Site navigation"
 msgstr "Navigace stránky"
 
-#: functions/functions.php:469
-msgid "Content Typography"
-msgstr "Typografie obsahu"
+#: functions/functions.php:485
+msgid "Content"
+msgstr "Obsah"
 
-#: functions/functions.php:479
+#: functions/functions.php:495
 msgid "Heading 1 (H1)"
 msgstr "Nadpis 1 (H1)"
 
-#: functions/functions.php:491 functions/functions.php:509
-#: functions/functions.php:527
+#: functions/functions.php:507 functions/functions.php:525
+#: functions/functions.php:543
 msgid "Font-size"
 msgstr "Velikost písma"
 
-#: functions/functions.php:497
+#: functions/functions.php:513
 msgid "Heading 2 (H2)"
 msgstr "Nadpis 2 (H2)"
 
-#: functions/functions.php:515
+#: functions/functions.php:531
 msgid "Heading 3 (H3)"
 msgstr "Nadpis 3 (H3)"
 
-#: functions/functions.php:627
-msgid "Widget Typography"
-msgstr "Typografie widgetu"
+#: functions/functions.php:647
+msgid "Widgets"
+msgstr "Widgety"
 
-#: functions/functions.php:649
+#: functions/functions.php:670
 msgid "Widget titles"
 msgstr "Názvy widgetů"
 
-#: functions/functions.php:735
+#: functions/functions.php:760
 msgid "Content font size"
 msgstr "Velikost písma obsahu"
 
-#: functions/functions.php:748
-msgid "Footer Typography"
-msgstr "Typografie patičky"
+#: functions/functions.php:773
+msgid "Footer"
+msgstr "Patička"
 
-#: functions/functions.php:769
+#: functions/functions.php:795
 msgid "Footer font size"
 msgstr "Velikostp písma patičky"
 
-#: functions/functions.php:782
-msgid "Mobile Typography"
-msgstr "Typografie na mobilu"
+#: functions/functions.php:808
+msgid "Mobile"
+msgstr "Mobil"
 
-#: functions/functions.php:802
+#: functions/functions.php:829
 msgid "Site title font size"
 msgstr "Velikost písma názvu stránky"
 
-#: functions/functions.php:822
+#: functions/functions.php:850
 msgid "H1 font size"
 msgstr "Velikost písma H1"
 
-#: functions/functions.php:842
+#: functions/functions.php:871
 msgid "H2 font size"
 msgstr "Velikost písma H2"
+
+#~ msgid "Body Typography"
+#~ msgstr "Typografie těla"
+
+#~ msgid "Header Typography"
+#~ msgstr "Typografie hlavičky"
+
+#~ msgid "Navigation Typography"
+#~ msgstr "Typografie navigace"
+
+#~ msgid "Content Typography"
+#~ msgstr "Typografie obsahu"
+
+#~ msgid "Widget Typography"
+#~ msgstr "Typografie widgetu"
+
+#~ msgid "Footer Typography"
+#~ msgstr "Typografie patičky"
+
+#~ msgid "Mobile Typography"
+#~ msgstr "Typografie na mobilu"
 
 #~ msgid ""
 #~ "There is a new version of %1$s available. <a target=\"_blank\" class="

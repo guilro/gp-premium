@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 $wp_customize->add_section(
 	// ID
 	'generate_spacing_sidebar',
@@ -36,7 +39,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['widget_top'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -59,7 +63,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['widget_right'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -82,7 +87,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['widget_bottom'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -105,7 +111,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['widget_left'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -130,7 +137,8 @@ $wp_customize->add_setting(
 	array(
 		'default' => $defaults['left_sidebar_width'],
 		'type' => 'option',
-		'sanitize_callback' => 'generate_spacing_sanitize_choices'
+		'sanitize_callback' => 'generate_spacing_sanitize_choices',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -169,7 +177,8 @@ $wp_customize->add_setting(
 	array(
 		'default' => $defaults['right_sidebar_width'],
 		'type' => 'option',
-		'sanitize_callback' => 'generate_spacing_sanitize_choices'
+		'sanitize_callback' => 'generate_spacing_sanitize_choices',
+		'transport' => 'postMessage'
 	)
 );
 

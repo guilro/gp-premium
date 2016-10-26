@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 $wp_customize->add_section(
 	// ID
 	'generate_spacing_content',
@@ -36,7 +39,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['content_top'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -59,7 +63,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['content_right'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -82,7 +87,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['content_bottom'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -105,7 +111,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['content_left'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -127,7 +134,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['separator'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 // CONTROLS
@@ -144,3 +152,4 @@ $wp_customize->add_control(
 		)
 	)
 );
+

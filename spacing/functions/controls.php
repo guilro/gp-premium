@@ -1,29 +1,46 @@
 <?php
-if ( class_exists( 'WP_Customize_Control' ) ) {
-	if ( ! class_exists( 'Generate_Spacing_Customize_Control' ) ) :
-		class Generate_Spacing_Customize_Control extends WP_Customize_Control {
-			public $type = 'spacing';
-			public $description = '';
-			public $secondary_description = '';
-			public function render_content() {
-				?>
-				<label>
-					<?php if ( ! empty( $this->label ) ) : ?>
-						<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-					<?php endif; ?>
-					<?php if ( ! empty( $this->description ) ) : ?>
-						<span class="description"><?php echo esc_html( $this->description ); ?></span>
-					<?php endif; ?>
-					<input type="text" style="text-align:center;" <?php $this->link(); ?> value="<?php echo absint( $this->value() );?>" />
-					<?php if ( ! empty( $this->secondary_description ) ) : ?>
-						<span class="description" style="text-align:left;display: block;"><?php echo esc_html( $this->secondary_description ); ?></span>
-					<?php endif; ?>
-				</label>
-				<?php
-			}
-		}
-	endif;
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Generate_Spacing_Customize_Control' ) ) :
+class Generate_Spacing_Customize_Control extends WP_Customize_Control {
+	public $type = 'spacing';
+	public $description = '';
+	public $secondary_description = '';
+	
+	public function enqueue() {
+		wp_enqueue_script( 'gp-spacing-customizer', plugin_dir_url( __FILE__ )  . '/js/spacing-customizer.js', array( 'customize-controls' ), GENERATE_FONT_VERSION, true );
+	}
+	
+	public function to_json() {
+		parent::to_json();
+		$this->json[ 'link' ] = $this->get_link();
+		$this->json[ 'value' ] = absint( $this->value() );
+		$this->json[ 'description' ] = esc_html( $this->description );
+		$this->json[ 'secondary_description' ] = esc_html( $this->secondary_description );
+	}
+	
+	public function content_template() {
+		?>
+		<label>
+			<# if ( data.label ) { #>
+				<span class="customize-control-title">{{ data.label }}</span>
+			<# } #>
+			
+			<# if ( data.description ) { #>
+				<span class="description">{{ data.description }}</span>
+			<# } #>
+			
+			<input class="generate-number-control" type="number" style="text-align: center;" {{{ data.link }}} value="{{{ data.value }}}" />
+		
+			<# if ( data.secondary_description ) { #>
+				<span class="description" style="text-align:left;display:block;">{{{ data.secondary_description }}}</span>
+			<# } #>
+		</label>
+		<?php
+	}
 }
+endif;
 	
 if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Generate_Spacing_Customize_Misc_Control' ) ) :
 class Generate_Spacing_Customize_Misc_Control extends WP_Customize_Control {

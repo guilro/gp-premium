@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Generate Secondary Navigation\n"
-"POT-Creation-Date: 2015-10-12 16:02+0200\n"
-"PO-Revision-Date: 2015-10-12 16:54+0200\n"
+"POT-Creation-Date: 2016-07-24 21:58+0200\n"
+"PO-Revision-Date: 2016-07-24 22:00+0200\n"
 "Last-Translator: Foxtrot <foxtrot@foxtrot.me>\n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 1.8.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -22,207 +22,189 @@ msgstr ""
 msgid "Secondary Menu"
 msgstr "Sekundární menu"
 
-#: functions/functions.php:97 functions/functions.php:109
+#: functions/functions.php:103 functions/functions.php:115
+#: functions/functions.php:252 functions/functions.php:361
+#: functions/functions.php:525 functions/functions.php:641
 msgid "Secondary Navigation"
 msgstr "Sekundární navigace"
 
-#: functions/functions.php:126
-msgid "Mobile Label"
-msgstr "Mobilní název"
+#: functions/functions.php:133
+msgid "Mobile Menu Label"
+msgstr "Název menu na mobilu"
 
-#: functions/functions.php:151
+#: functions/functions.php:159
 msgid "Navigation Layout"
 msgstr "Rozvržení navigace"
 
-#: functions/functions.php:154
+#: functions/functions.php:162
 msgid "Fluid / Full Width"
 msgstr "Proměnlivá / Plná šířka"
 
-#: functions/functions.php:155
+#: functions/functions.php:163
 msgid "Contained"
 msgstr "Omezená"
 
-#: functions/functions.php:181
+#: functions/functions.php:190
 msgid "Navigation Position"
 msgstr "Pozice navigace"
 
-#: functions/functions.php:184
+#: functions/functions.php:193
 msgid "Below Header"
 msgstr "Pod hlavičkou"
 
-#: functions/functions.php:185
+#: functions/functions.php:194
 msgid "Above Header"
 msgstr "Nad hlavičkou"
 
-#: functions/functions.php:186
+#: functions/functions.php:195
 msgid "Float Right"
 msgstr "Plovoucí vpravo"
 
-#: functions/functions.php:187
+#: functions/functions.php:196
 msgid "Left Sidebar"
 msgstr "Levý postranní panel"
 
-#: functions/functions.php:188
+#: functions/functions.php:197
 msgid "Right Sidebar"
 msgstr "Pravý postranní panel"
 
-#: functions/functions.php:189
+#: functions/functions.php:198
 msgid "No Navigation"
 msgstr "Bez navigace"
 
-#: functions/functions.php:215
+#: functions/functions.php:225
 msgid "Navigation Alignment"
 msgstr "Zarovnání navigace"
 
-#: functions/functions.php:218
+#: functions/functions.php:228
 msgid "Left"
 msgstr "Doleva"
 
-#: functions/functions.php:219
+#: functions/functions.php:229
 msgid "Center"
 msgstr "Doprostřed"
 
-#: functions/functions.php:220
+#: functions/functions.php:230
 msgid "Right"
 msgstr "Doprava"
 
-#: functions/functions.php:236
-msgid "Secondary Navigation Spacing"
-msgstr "Rozestupy sekundární navigace"
-
-#: functions/functions.php:249
+#: functions/functions.php:271
 msgid "Secondary Menu Items"
 msgstr "Položky sekundární navigace"
 
-#: functions/functions.php:250
-msgid "These options control the size of your secondary menu items."
-msgstr "Tato nastavení ovládají velikost vašich položek sekundárního menu."
-
-#: functions/functions.php:254
+#: functions/functions.php:292
 msgid "Left/Right Spacing"
 msgstr "Pravé/Levé rozestupy"
 
-#: functions/functions.php:255
+#: functions/functions.php:314
 msgid "Height"
 msgstr "Výška"
 
-#: functions/functions.php:321
-msgid "Secondary Sub-menu Item Height"
-msgstr "Výška položek sekundárního pod-menu"
+#: functions/functions.php:336
+msgid "Sub-Menu Item Height"
+msgstr "Výška položek sub-menu"
 
-#: functions/functions.php:322
-msgid "The top and bottom spacing of secondary sub-menu items."
-msgstr "Horní a spodní rozestupy položek sekundárního pod-menu"
+#: functions/functions.php:337
+msgid "The top and bottom spacing of sub-menu items."
+msgstr "Horní a dolní rozestupy položek sub-menu."
 
-#: functions/functions.php:359
-msgid "Secondary Navigation Colors"
-msgstr "Barvy sekundární navigace"
-
-#: functions/functions.php:371 functions/functions.php:450
+#: functions/functions.php:373 functions/functions.php:452
 msgid "Background"
 msgstr "Pozadí"
 
-#: functions/functions.php:377 functions/functions.php:456
+#: functions/functions.php:379 functions/functions.php:458
 msgid "Text"
 msgstr "Text"
 
-#: functions/functions.php:383 functions/functions.php:462
+#: functions/functions.php:385 functions/functions.php:464
 msgid "Background Hover"
 msgstr "Pozadí při přejetí myší"
 
-#: functions/functions.php:389 functions/functions.php:468
+#: functions/functions.php:391 functions/functions.php:470
 msgid "Text Hover"
 msgstr "Text při přejetí myší"
 
-#: functions/functions.php:395 functions/functions.php:474
+#: functions/functions.php:397 functions/functions.php:476
 msgid "Background Current"
 msgstr "Aktuální pozadí"
 
-#: functions/functions.php:401 functions/functions.php:480
+#: functions/functions.php:403 functions/functions.php:482
 msgid "Text Current"
 msgstr "Aktuální text"
 
-#: functions/functions.php:438
-msgid "Secondary Sub-Navigation Colors"
-msgstr "Barvy sekundární pod-navigace"
+#: functions/functions.php:440 functions/functions.php:918
+msgid "Secondary Sub-Navigation"
+msgstr "Sekundární sub-navigace"
 
-#: functions/functions.php:517
-msgid "Secondary Navigation Typography"
-msgstr "Typografie sekundární navigace"
-
-#: functions/functions.php:539
+#: functions/functions.php:548
 msgid "Secondary navigation"
 msgstr "Sekundární navigace"
 
-#: functions/functions.php:560
+#: functions/functions.php:570
 msgid "Font weight"
 msgstr "Tloušťka písma"
 
-#: functions/functions.php:582
+#: functions/functions.php:593
 msgid "Text transform"
 msgstr "Transformace textu"
 
-#: functions/functions.php:605
+#: functions/functions.php:617
 msgid "Font size"
 msgstr "Velikost písma"
 
-#: functions/functions.php:623
-msgid "Secondary Background Images"
-msgstr "Obrázky na sekundárním pozadí"
-
-#: functions/functions.php:641
+#: functions/functions.php:659
 msgid "Navigation"
 msgstr "Navigace"
 
-#: functions/functions.php:683 functions/functions.php:745
-#: functions/functions.php:807 functions/functions.php:869
-#: functions/functions.php:943 functions/functions.php:1005
-#: functions/functions.php:1067
+#: functions/functions.php:702 functions/functions.php:765
+#: functions/functions.php:828 functions/functions.php:891
+#: functions/functions.php:979 functions/functions.php:1042
+#: functions/functions.php:1105
 msgid "Repeat"
 msgstr "Opakovat"
 
-#: functions/functions.php:684 functions/functions.php:746
-#: functions/functions.php:808 functions/functions.php:870
-#: functions/functions.php:944 functions/functions.php:1006
-#: functions/functions.php:1068
+#: functions/functions.php:703 functions/functions.php:766
+#: functions/functions.php:829 functions/functions.php:892
+#: functions/functions.php:980 functions/functions.php:1043
+#: functions/functions.php:1106
 msgid "Repeat x"
 msgstr "Opakovat x"
 
-#: functions/functions.php:685 functions/functions.php:747
-#: functions/functions.php:809 functions/functions.php:871
-#: functions/functions.php:945 functions/functions.php:1007
-#: functions/functions.php:1069
+#: functions/functions.php:704 functions/functions.php:767
+#: functions/functions.php:830 functions/functions.php:893
+#: functions/functions.php:981 functions/functions.php:1044
+#: functions/functions.php:1107
 msgid "Repeat y"
 msgstr "Opakovat y"
 
-#: functions/functions.php:686 functions/functions.php:748
-#: functions/functions.php:810 functions/functions.php:872
-#: functions/functions.php:946 functions/functions.php:1008
-#: functions/functions.php:1070
+#: functions/functions.php:705 functions/functions.php:768
+#: functions/functions.php:831 functions/functions.php:894
+#: functions/functions.php:982 functions/functions.php:1045
+#: functions/functions.php:1108
 msgid "No Repeat"
 msgstr "Neopakovat"
 
-#: functions/functions.php:703
+#: functions/functions.php:722
 msgid "Navigation Item"
 msgstr "Položka navigace"
 
-#: functions/functions.php:765
+#: functions/functions.php:785
 msgid "Navigation Item Hover"
 msgstr "Položka navigace při přejetí myší"
 
-#: functions/functions.php:827
+#: functions/functions.php:848
 msgid "Navigation Item Current"
 msgstr "Aktuální položka navigace"
 
-#: functions/functions.php:901
+#: functions/functions.php:936
 msgid "Sub-Navigation Item"
 msgstr "Položka pod-navigace"
 
-#: functions/functions.php:963
+#: functions/functions.php:999
 msgid "Sub-Navigation Item Hover"
 msgstr "Položka pod-navigace při přejetí myší"
 
-#: functions/functions.php:1025
+#: functions/functions.php:1062
 msgid "Sub-Navigation Item Current"
 msgstr "Aktuální položka pod-navigace"
 
@@ -237,6 +219,33 @@ msgstr "Smazat nastavení Přizpůsobení pro Sekundární navigaci"
 #: functions/ie.php:52
 msgid "Export Secondary Navigation Customizer Settings"
 msgstr "Exportovat nastavení Přizpůsobení pro Sekundární navigaci"
+
+#~ msgid "Mobile Label"
+#~ msgstr "Mobilní název"
+
+#~ msgid "Secondary Navigation Spacing"
+#~ msgstr "Rozestupy sekundární navigace"
+
+#~ msgid "These options control the size of your secondary menu items."
+#~ msgstr "Tato nastavení ovládají velikost vašich položek sekundárního menu."
+
+#~ msgid "Secondary Sub-menu Item Height"
+#~ msgstr "Výška položek sekundárního pod-menu"
+
+#~ msgid "The top and bottom spacing of secondary sub-menu items."
+#~ msgstr "Horní a spodní rozestupy položek sekundárního pod-menu"
+
+#~ msgid "Secondary Navigation Colors"
+#~ msgstr "Barvy sekundární navigace"
+
+#~ msgid "Secondary Sub-Navigation Colors"
+#~ msgstr "Barvy sekundární pod-navigace"
+
+#~ msgid "Secondary Navigation Typography"
+#~ msgstr "Typografie sekundární navigace"
+
+#~ msgid "Secondary Background Images"
+#~ msgstr "Obrázky na sekundárním pozadí"
 
 #~ msgid ""
 #~ "There is a new version of %1$s available. <a target=\"_blank\" class="

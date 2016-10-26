@@ -51,3 +51,7 @@
 .generate-sections-enabled .entry-content {
 	text-align: center;
 }
+
+.separate-containers .site-main > .generate-sections-container {
+	margin-bottom: 0;
+}

@@ -1,8 +1,15 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_copyright_customize_register' ) ) :
 add_action( 'customize_register', 'generate_copyright_customize_register' );
 function generate_copyright_customize_register( $wp_customize ) {
 	require_once trailingslashit( dirname( __FILE__ ) ) . '/control.php';
+	
+	if ( method_exists( $wp_customize,'register_control_type' ) ) {
+		$wp_customize->register_control_type( 'Generate_Copyright_Textarea_Custom_Control' );
+	}
 	
 	$wp_customize->add_section( 'generate_copyright' , array(
 		'title' => __( 'Copyright', 'generate-copyright' ),
@@ -58,7 +65,7 @@ function generate_copyright_selective_refresh()
 	$new_copyright = get_theme_mod( 'generate_copyright' );
 	$new_copyright = str_replace( $options, $replace, get_theme_mod( 'generate_copyright' ) );
 	
-	return $new_copyright;
+	return do_shortcode( $new_copyright );
 }
 endif;
 
@@ -67,7 +74,7 @@ endif;
  * @since 0.1
  */
 if ( ! function_exists( 'generate_copyright_remove_default' ) ) :
-add_action('after_setup_theme','generate_copyright_remove_default');
+add_action('wp','generate_copyright_remove_default');
 function generate_copyright_remove_default()
 {
 	if ( get_theme_mod( 'generate_copyright' ) && '' !== get_theme_mod( 'generate_copyright' ) ) :
@@ -105,6 +112,7 @@ function generate_copyright_add_custom()
 }
 endif;
 
+if ( ! function_exists( 'generate_copyright_customizer_live_preview' ) ) :
 add_action( 'customize_preview_init', 'generate_copyright_customizer_live_preview' );
 function generate_copyright_customizer_live_preview()
 {
@@ -116,6 +124,7 @@ function generate_copyright_customizer_live_preview()
 		  true
 	);
 }
+endif;
 
 if ( ! function_exists( 'generate_update_copyright' ) ) :
 add_action( 'after_setup_theme', 'generate_update_copyright' );

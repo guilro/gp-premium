@@ -1,0 +1,135 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Disable Elements\n"
+"POT-Creation-Date: 2014-09-01 17:17-0800\n"
+"PO-Revision-Date: 2015-05-23 11:31+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: generate-disable-elements.php:93
+msgid "Disable Elements"
+msgstr "Désactiver Éléments"
+
+#: generate-disable-elements.php:186 generate-disable-elements.php:188
+msgid "Header"
+msgstr "En-tête"
+
+#: generate-disable-elements.php:190 generate-disable-elements.php:192
+msgid "Primary Navigation"
+msgstr "Barre de navigation primaire"
+
+#: generate-disable-elements.php:195 generate-disable-elements.php:197
+msgid "Secondary Navigation"
+msgstr "Barre de navigation secondaire"
+
+#: generate-disable-elements.php:200 generate-disable-elements.php:202
+msgid "Post Image / Page Header"
+msgstr "Post Image / En-tête de page "
+
+#: generate-disable-elements.php:204 generate-disable-elements.php:206
+msgid "Headline / Post Title"
+msgstr "Titre / Titre du post"
+
+#: generate-disable-elements.php:208 generate-disable-elements.php:210
+msgid "Footer"
+msgstr "Bas de page"
+
+#: inc/activation.php:43 inc/verification.php:44
+msgid "verified"
+msgstr "Vérifié"
+
+#: inc/activation.php:47 inc/verification.php:56
+msgid "Deactivate"
+msgstr "Désactiver"
+
+#: inc/activation.php:59 inc/verification.php:46
+msgid "unverified"
+msgstr "Non vérifié"
+
+#: inc/activation.php:63
+msgid "Activate"
+msgstr "Activé"
+
+#: inc/helper.php:64
+msgid "Disable Elements Installed"
+msgstr "Désactiver Éléments"
+
+#: inc/helper.php:65
+msgid "Please enter your license key in order to use this plugin."
+msgstr "S'il vous plaît, entrez votre clé de licence afin d'utiliser ce plugin"
+
+#: inc/old-license.php:14
+msgid "Deactivate License"
+msgstr "Désactiver la licence"
+
+#: inc/old-license.php:15
+msgid "active"
+msgstr "Actif"
+
+#: inc/old-license.php:18
+msgid "Activate License"
+msgstr "Activer la licence"
+
+#: inc/old-license.php:19
+msgid "inactive"
+msgstr "Inactif"
+
+#: inc/old-license.php:23
+msgid "Generate Disable Elements License Key"
+msgstr "Générer une clef de licence pour Éléments"
+
+#: inc/verification.php:15
+msgid ""
+"Activate your addons by entering the email you purchased them with below. "
+"Save and verify, then your purchased addons will appear below for activation."
+msgstr ""
+"Activez vos addons en entrant l'email que vous avez utilisé pour votre "
+"achat.  Vos plugins achetés apparaîtront ci-dessous pour l'activation"
+
+#: inc/verification.php:21
+msgid "Email"
+msgstr "Email"
+
+#: inc/verification.php:22 inc/verification.php:77 inc/verification.php:86
+msgid "Status"
+msgstr "Status"
+
+#: inc/verification.php:23 inc/verification.php:78 inc/verification.php:87
+msgid "Action"
+msgstr "Action"
+
+#: inc/verification.php:57
+msgid "Refresh"
+msgstr "Rafraîchir"
+
+#: inc/verification.php:60
+msgid "Verify Email"
+msgstr "Vérifier l'email"
+
+#: inc/verification.php:70
+msgid "Activate All"
+msgstr "Tout activer"
+
+#: inc/verification.php:75 inc/verification.php:84
+msgid "Product"
+msgstr "Produit"
+
+#: inc/verification.php:76 inc/verification.php:85
+msgid "Version"
+msgstr "Version"
+
+#: inc/verification.php:334
+msgid "Once Every 3 Days"
+msgstr "Une fois tous les 3 jours"

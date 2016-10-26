@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Generate Spacing\n"
-"POT-Creation-Date: 2015-10-12 16:03+0200\n"
-"PO-Revision-Date: 2015-10-12 16:03+0200\n"
+"POT-Creation-Date: 2016-07-24 22:00+0200\n"
+"PO-Revision-Date: 2016-07-24 22:05+0200\n"
 "Last-Translator: Foxtrot <foxtrot@foxtrot.me>\n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 1.8.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -18,63 +18,43 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: functions/functions.php:58
-msgid "Element Spacing"
-msgstr "Rozestupy prvků"
-
-#: functions/functions.php:61
-msgid "Change the spacing for various elements using pixels."
-msgstr "Změňte rozestupy různých prvků pomocí pixelů."
-
-#: functions/functions.php:83
-msgid "Header"
-msgstr "Hlavička"
-
-#: functions/functions.php:85 functions/functions.php:116
-#: functions/functions.php:147 functions/functions.php:178
-#: functions/functions.php:209
-msgid "Top"
-msgstr "Nahoře"
-
-#: functions/functions.php:86 functions/functions.php:117
-#: functions/functions.php:148 functions/functions.php:179
-#: functions/functions.php:210
-msgid "Right"
-msgstr "Vpravo"
-
-#: functions/functions.php:87 functions/functions.php:118
-#: functions/functions.php:149 functions/functions.php:180
-#: functions/functions.php:211
-msgid "Bottom"
-msgstr "Dole"
-
-#: functions/functions.php:88 functions/functions.php:119
-#: functions/functions.php:150 functions/functions.php:181
-#: functions/functions.php:212
-msgid "Left"
-msgstr "Vlevo"
-
-#: functions/functions.php:114
+#: functions/content-spacing.php:7
 msgid "Content"
 msgstr "Obsah"
 
-#: functions/functions.php:145
-msgid "Sidebar Widgets"
-msgstr "Postranní widgety"
+#: functions/content-spacing.php:26
+msgid "Content Padding"
+msgstr "Odsazení obsahu"
 
-#: functions/functions.php:176
-msgid "Footer Widget Area"
-msgstr "Oblast widgetů patičky"
+#: functions/content-spacing.php:48 functions/footer-spacing.php:48
+#: functions/footer-spacing.php:155 functions/header-spacing.php:47
+#: functions/sidebar-spacing.php:48
+msgid "Top"
+msgstr "Nahoře"
 
-#: functions/functions.php:207
-msgid "Footer"
-msgstr "Patička"
+#: functions/content-spacing.php:71 functions/footer-spacing.php:71
+#: functions/footer-spacing.php:178 functions/header-spacing.php:70
+#: functions/sidebar-spacing.php:71
+msgid "Right"
+msgstr "Vpravo"
 
-#: functions/functions.php:384
+#: functions/content-spacing.php:94 functions/footer-spacing.php:94
+#: functions/footer-spacing.php:201 functions/header-spacing.php:93
+#: functions/sidebar-spacing.php:94
+msgid "Bottom"
+msgstr "Dole"
+
+#: functions/content-spacing.php:117 functions/footer-spacing.php:117
+#: functions/footer-spacing.php:224 functions/header-spacing.php:116
+#: functions/sidebar-spacing.php:117
+msgid "Left"
+msgstr "Vlevo"
+
+#: functions/content-spacing.php:139
 msgid "Separating Space"
 msgstr "Oddělující mezera"
 
-#: functions/functions.php:385
+#: functions/content-spacing.php:143
 msgid ""
 "The spacing between elements when \"Content Layout\" is set to \"Separate "
 "Containers\"."
@@ -82,73 +62,33 @@ msgstr ""
 "Rozetupy použité mezi prvky, když je \"Rozvržení obsahu\" nastaveno na "
 "\"Oddělené prostory\"."
 
-#: functions/functions.php:432
-msgid "Primary Menu Items"
-msgstr "Položky primárního menu"
+#: functions/footer-spacing.php:7
+msgid "Footer"
+msgstr "Patička"
 
-#: functions/functions.php:433
-msgid "These options control the size of your menu items."
-msgstr "Tato nastavení ovládají velikost vašich položek menu."
+#: functions/footer-spacing.php:26
+msgid "Footer Widget Area Padding"
+msgstr "Odsazení oblasti widgetů patičky"
 
-#: functions/functions.php:437
-msgid "Left/Right Spacing"
-msgstr "Levé/Pravé rozestupy"
+#: functions/footer-spacing.php:133
+msgid "Footer Padding"
+msgstr "Odsazení patičky"
 
-#: functions/functions.php:438
-msgid "Height"
-msgstr "Výška"
+#: functions/functions.php:56
+msgid "Spacing"
+msgstr "Rozestupy"
 
-#: functions/functions.php:504
-msgid "Sub-menu Item Height"
-msgstr "Výška položek pod-menu"
+#: functions/functions.php:57
+msgid "Change the spacing for various elements using pixels."
+msgstr "Změňte rozestupy různých prvků pomocí pixelů."
 
-#: functions/functions.php:505
-msgid "The top and bottom spacing of sub-menu items."
-msgstr "Horní a dolní rozestupy položek pod-menu."
+#: functions/header-spacing.php:6
+msgid "Header"
+msgstr "Hlavička"
 
-#: functions/functions.php:551
-msgid "Sidebar Widths"
-msgstr "Šířky postranních panelů"
-
-#: functions/functions.php:579
-msgid "Left Sidebar"
-msgstr "Levý postranní panel"
-
-#: functions/functions.php:582 functions/functions.php:618
-msgid "15%"
-msgstr "15%"
-
-#: functions/functions.php:583 functions/functions.php:619
-msgid "20%"
-msgstr "20%"
-
-#: functions/functions.php:584 functions/functions.php:620
-msgid "25%"
-msgstr "25%"
-
-#: functions/functions.php:585 functions/functions.php:621
-msgid "30%"
-msgstr "30%"
-
-#: functions/functions.php:586 functions/functions.php:622
-msgid "35%"
-msgstr "35%"
-
-#: functions/functions.php:587 functions/functions.php:623
-msgid "40%"
-msgstr "40%"
-
-#: functions/functions.php:588 functions/functions.php:624
-msgid "45%"
-msgstr "45%"
-
-#: functions/functions.php:589 functions/functions.php:625
-msgid "50%"
-msgstr "50%"
-
-#: functions/functions.php:615
-msgid "Right Sidebar"
-msgstr "Pravý postranní panel"
+#: functions/header-spacing.php:25
+msgid "Header Padding"
+msgstr "Odsazení hlavičky"
 
 #: functions/ie.php:15
 msgid "Warning: This will delete your settings."
@@ -161,6 +101,102 @@ msgstr "Smazat nastavení Přizpůsobení pro Rozestupy"
 #: functions/ie.php:54
 msgid "Export Spacing Customizer Settings"
 msgstr "Exportovat nastavení Přizpůsobení pro Rozestupy"
+
+#: functions/navigation-spacing.php:7
+msgid "Primary Navigation"
+msgstr "Primární navigace"
+
+#: functions/navigation-spacing.php:26
+msgid "Primary Menu Items"
+msgstr "Položky primárního menu"
+
+#: functions/navigation-spacing.php:47
+msgid "Left/Right Spacing"
+msgstr "Levé/Pravé rozestupy"
+
+#: functions/navigation-spacing.php:69
+msgid "Height"
+msgstr "Výška"
+
+#: functions/navigation-spacing.php:91
+msgid "Sub-Menu Item Height"
+msgstr "Výška položek sub-menu"
+
+#: functions/navigation-spacing.php:92
+msgid "The top and bottom spacing of sub-menu items."
+msgstr "Horní a dolní rozestupy položek sub-menu."
+
+#: functions/sidebar-spacing.php:7
+msgid "Sidebars"
+msgstr "Postranní panely"
+
+#: functions/sidebar-spacing.php:26
+msgid "Widget Padding"
+msgstr "Odsazení widgetů"
+
+#: functions/sidebar-spacing.php:146
+msgid "Left Sidebar Width"
+msgstr "Šířka levého postranního panelu"
+
+#: functions/sidebar-spacing.php:149 functions/sidebar-spacing.php:186
+msgid "15%"
+msgstr "15%"
+
+#: functions/sidebar-spacing.php:150 functions/sidebar-spacing.php:187
+msgid "20%"
+msgstr "20%"
+
+#: functions/sidebar-spacing.php:151 functions/sidebar-spacing.php:188
+msgid "25%"
+msgstr "25%"
+
+#: functions/sidebar-spacing.php:152 functions/sidebar-spacing.php:189
+msgid "30%"
+msgstr "30%"
+
+#: functions/sidebar-spacing.php:153 functions/sidebar-spacing.php:190
+msgid "35%"
+msgstr "35%"
+
+#: functions/sidebar-spacing.php:154 functions/sidebar-spacing.php:191
+msgid "40%"
+msgstr "40%"
+
+#: functions/sidebar-spacing.php:155 functions/sidebar-spacing.php:192
+msgid "45%"
+msgstr "45%"
+
+#: functions/sidebar-spacing.php:156 functions/sidebar-spacing.php:193
+msgid "50%"
+msgstr "50%"
+
+#: functions/sidebar-spacing.php:183
+msgid "Right Sidebar Width"
+msgstr "Šířka pravého postranního panelu"
+
+#~ msgid "Element Spacing"
+#~ msgstr "Rozestupy prvků"
+
+#~ msgid "Sidebar Widgets"
+#~ msgstr "Postranní widgety"
+
+#~ msgid "Footer Widget Area"
+#~ msgstr "Oblast widgetů patičky"
+
+#~ msgid "These options control the size of your menu items."
+#~ msgstr "Tato nastavení ovládají velikost vašich položek menu."
+
+#~ msgid "Sub-menu Item Height"
+#~ msgstr "Výška položek pod-menu"
+
+#~ msgid "Sidebar Widths"
+#~ msgstr "Šířky postranních panelů"
+
+#~ msgid "Left Sidebar"
+#~ msgstr "Levý postranní panel"
+
+#~ msgid "Right Sidebar"
+#~ msgstr "Pravý postranní panel"
 
 #~ msgid ""
 #~ "There is a new version of %1$s available. <a target=\"_blank\" class="

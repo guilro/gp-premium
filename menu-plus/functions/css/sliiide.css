@@ -160,6 +160,10 @@ html.slide-opened, body.slide-opened {
 	display: none;
 }
 
+.rtl .slideout-navigation {
+	position: fixed;
+}
+
 @media (max-width: 768px) {
 	.slideout-desktop .slideout-toggle {
 		display:none !important;

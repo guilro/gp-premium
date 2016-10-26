@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Generate Colors\n"
-"POT-Creation-Date: 2015-10-12 15:55+0200\n"
-"PO-Revision-Date: 2015-10-12 15:55+0200\n"
+"POT-Creation-Date: 2016-07-24 21:32+0200\n"
+"PO-Revision-Date: 2016-07-24 21:39+0200\n"
 "Last-Translator: Foxtrot <foxtrot@foxtrot.me>\n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 1.8.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -23,32 +23,32 @@ msgid "Colors"
 msgstr "Barvy"
 
 #: functions/functions.php:94
-msgid "Header Colors"
-msgstr "Barvy hlavičky"
+msgid "Header"
+msgstr "Hlavička"
 
 #: functions/functions.php:106 functions/functions.php:183
 #: functions/functions.php:260 functions/functions.php:336
 #: functions/functions.php:455 functions/functions.php:526
-#: functions/functions.php:597
+#: functions/functions.php:698
 msgid "Background"
 msgstr "Pozadí"
 
 #: functions/functions.php:112 functions/functions.php:189
 #: functions/functions.php:266 functions/functions.php:342
 #: functions/functions.php:461 functions/functions.php:532
-#: functions/functions.php:603
+#: functions/functions.php:704
 msgid "Text"
 msgstr "Text"
 
 #: functions/functions.php:118 functions/functions.php:348
 #: functions/functions.php:467 functions/functions.php:538
-#: functions/functions.php:609
+#: functions/functions.php:710
 msgid "Link"
 msgstr "Odkaz"
 
 #: functions/functions.php:124 functions/functions.php:354
 #: functions/functions.php:473 functions/functions.php:544
-#: functions/functions.php:615
+#: functions/functions.php:716
 msgid "Link Hover"
 msgstr "Odkaz při přejetí myší"
 
@@ -61,8 +61,8 @@ msgid "Tagline"
 msgstr "Popis webu"
 
 #: functions/functions.php:171
-msgid "Navigation Colors"
-msgstr "Barvy navigace"
+msgid "Primary Navigation"
+msgstr "Primární navigace"
 
 #: functions/functions.php:195 functions/functions.php:272
 msgid "Background Hover"
@@ -81,12 +81,12 @@ msgid "Text Current"
 msgstr "Text aktuální položky"
 
 #: functions/functions.php:248
-msgid "Sub-Navigation Colors"
-msgstr "Barvy pod-navigace"
+msgid "Primary Sub-Navigation"
+msgstr "Primární sub-navigace"
 
 #: functions/functions.php:324
-msgid "Content Colors"
-msgstr "Barvy obsahu"
+msgid "Content"
+msgstr "Obsah"
 
 #: functions/functions.php:360
 msgid "Content Title"
@@ -125,64 +125,88 @@ msgid "Heading 3 (H3) Color"
 msgstr "Barva nadpisu 3 (H3)"
 
 #: functions/functions.php:443
-msgid "Sidebar Widget Colors"
-msgstr "Barvy widgetů postranního panelu"
+msgid "Sidebar Widgets"
+msgstr "Postranní widgety"
 
 #: functions/functions.php:479 functions/functions.php:550
 msgid "Widget Title"
 msgstr "Název widgetů"
 
 #: functions/functions.php:514
-msgid "Footer Widget Colors"
-msgstr "Barvy widgetů patičky"
+msgid "Footer Widgets"
+msgstr "Widgety patičky"
 
 #: functions/functions.php:585
-msgid "Footer Colors"
-msgstr "Barvy patičky"
+msgid "Forms"
+msgstr "Formuláře"
 
-#: functions/functions.php:650
-msgid "Form Colors"
-msgstr "Barvy formuláře"
-
-#: functions/functions.php:662
+#: functions/functions.php:597
 msgid "Form Background"
 msgstr "Pozadí formuláře"
 
-#: functions/functions.php:668
+#: functions/functions.php:603
 msgid "Form Text"
 msgstr "Text formuláře"
 
-#: functions/functions.php:674
+#: functions/functions.php:609
 msgid "Form Background Focus/Hover"
 msgstr "Pozadí formuláře při výběru/přejetí myší"
 
-#: functions/functions.php:680
+#: functions/functions.php:615
 msgid "Form Text Focus/Hover"
 msgstr "Text formuláře při výběru/přejetí myší"
 
-#: functions/functions.php:686
+#: functions/functions.php:621
 msgid "Form Border"
 msgstr "Hranice formuláře"
 
-#: functions/functions.php:692
+#: functions/functions.php:627
 msgid "Form Border Focus/Hover"
 msgstr "Hranice formuláře při výběru/přejetí myší"
 
-#: functions/functions.php:698
+#: functions/functions.php:633
 msgid "Form Button"
 msgstr "Tlačítko formuláře"
 
-#: functions/functions.php:704
+#: functions/functions.php:639
 msgid "Form Button Focus/Hover"
 msgstr "Tlačítko formuláře při výběru/přejetí myší"
 
-#: functions/functions.php:710
+#: functions/functions.php:645
 msgid "Form Button Text"
 msgstr "Text tlačítka formuláře"
 
-#: functions/functions.php:716
+#: functions/functions.php:651
 msgid "Form Button Text Focus/Hover"
 msgstr "Text tlačítka formuláře při výběru/přejetí myší"
+
+#: functions/functions.php:686
+msgid "Footer"
+msgstr "Patička"
+
+#~ msgid "Header Colors"
+#~ msgstr "Barvy hlavičky"
+
+#~ msgid "Navigation Colors"
+#~ msgstr "Barvy navigace"
+
+#~ msgid "Sub-Navigation Colors"
+#~ msgstr "Barvy pod-navigace"
+
+#~ msgid "Content Colors"
+#~ msgstr "Barvy obsahu"
+
+#~ msgid "Sidebar Widget Colors"
+#~ msgstr "Barvy widgetů postranního panelu"
+
+#~ msgid "Footer Widget Colors"
+#~ msgstr "Barvy widgetů patičky"
+
+#~ msgid "Footer Colors"
+#~ msgstr "Barvy patičky"
+
+#~ msgid "Form Colors"
+#~ msgstr "Barvy formuláře"
 
 #~ msgid ""
 #~ "There is a new version of %1$s available. <a target=\"_blank\" class="

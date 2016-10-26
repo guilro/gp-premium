@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Generate Page Header\n"
-"POT-Creation-Date: 2016-05-07 14:52+0200\n"
-"PO-Revision-Date: 2016-05-07 14:55+0200\n"
+"POT-Creation-Date: 2016-07-24 21:47+0200\n"
+"PO-Revision-Date: 2016-07-24 21:58+0200\n"
 "Last-Translator: Foxtrot <foxtrot@foxtrot.me>\n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -19,69 +19,76 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: inc/admin-page-framework\n"
 
-#: functions/customizer.php:11
+#: functions/controls.php:7
+msgid "Apply image sizes"
+msgstr "Použít velikosti obrázku"
+
+#: functions/customizer.php:13
 msgid "Blog Page Header"
 msgstr "Hlavička stránky blogu"
 
-#: functions/customizer.php:20 functions/functions.php:916
-msgid "Image Settings"
-msgstr "Nastavení obrázku"
+#: functions/customizer.php:29 functions/metabox.php:100
+#: functions/metabox.php:102
+msgid "Page Header Image"
+msgstr "Obrázek hlavičky stránky"
 
-#: functions/customizer.php:40
+#: functions/customizer.php:51
 msgid "Image"
 msgstr "Obrázek"
 
-#: functions/customizer.php:41
+#: functions/customizer.php:52
 msgid "Upload an image to be used as your page header."
 msgstr "Nahrajte obrázek, který bude použit jako vaše hlavička stránky."
 
-#: functions/customizer.php:61 functions/functions.php:939
+#: functions/customizer.php:72 functions/metabox.php:108
 msgid "Page Header Link"
 msgstr "Odkaz hlavičky stránky"
 
-#: functions/customizer.php:62
+#: functions/customizer.php:73
 msgid "Make your page header image clickable by adding a URL. (optional)"
 msgstr ""
 "Udělejte váš obrázek hlavičky stránky klikatelný přidáním URL. (volitelné)"
 
-#: functions/customizer.php:85 functions/functions.php:944
+#: functions/customizer.php:96 functions/metabox.php:113
 msgid "Hard Crop"
 msgstr "Oříznutí"
 
-#: functions/customizer.php:86
+#: functions/customizer.php:97
 msgid "Turn hard cropping or of off."
 msgstr "Zapněte nebo vypněte oříznutí."
 
-#: functions/customizer.php:89 functions/customizer.php:285
-#: functions/customizer.php:310 functions/customizer.php:335
-#: functions/customizer.php:360 functions/customizer.php:385
-#: functions/customizer.php:410 functions/customizer.php:603
-#: functions/customizer.php:669 functions/functions.php:947
+#: functions/customizer.php:100 functions/customizer.php:314
+#: functions/customizer.php:339 functions/customizer.php:364
+#: functions/customizer.php:389 functions/customizer.php:414
+#: functions/customizer.php:439 functions/customizer.php:634
+#: functions/customizer.php:658 functions/customizer.php:725
+#: functions/metabox.php:116
 msgid "Enable"
 msgstr "Povolit"
 
-#: functions/customizer.php:90 functions/customizer.php:286
-#: functions/customizer.php:311 functions/customizer.php:336
-#: functions/customizer.php:361 functions/customizer.php:386
-#: functions/customizer.php:411 functions/customizer.php:604
-#: functions/customizer.php:670 functions/functions.php:946
+#: functions/customizer.php:101 functions/customizer.php:315
+#: functions/customizer.php:340 functions/customizer.php:365
+#: functions/customizer.php:390 functions/customizer.php:415
+#: functions/customizer.php:440 functions/customizer.php:635
+#: functions/customizer.php:659 functions/customizer.php:726
+#: functions/metabox.php:115
 msgid "Disable"
 msgstr "Zakázat"
 
-#: functions/customizer.php:111 functions/functions.php:953
+#: functions/customizer.php:123 functions/metabox.php:122
 msgid "Image Width"
 msgstr "Šířka obrázku"
 
-#: functions/customizer.php:112
+#: functions/customizer.php:124
 msgid "Choose your image width in pixels. (integer only, default is 1200)"
 msgstr ""
 "Zvolte šířku vašeho obrázku v pixelech. (pouze celá čísla, výchozí je 1200)"
 
-#: functions/customizer.php:133 functions/functions.php:958
+#: functions/customizer.php:146 functions/metabox.php:127
 msgid "Image Height"
 msgstr "Výška obrázku"
 
-#: functions/customizer.php:134
+#: functions/customizer.php:147
 msgid ""
 "Choose your image height in pixels. Use \"0\" or leave blank for "
 "proportional resizing. (integer only, default is 0) "
@@ -90,61 +97,62 @@ msgstr ""
 "pro změnu velikosti se zachovám poměru stran. (pouze celá čísla, výchozí je "
 "0)"
 
-#: functions/customizer.php:147 functions/functions.php:917
-msgid "Video Settings"
-msgstr "Nastavení videa"
+#: functions/customizer.php:172 functions/metabox.php:137
+#: functions/metabox.php:144 functions/metabox.php:151
+msgid "Page Header Video"
+msgstr "Video hlavičky stránky"
 
-#: functions/customizer.php:166
+#: functions/customizer.php:193
 msgid "Video Background URL (MP4 only)"
 msgstr "URL videa na pozadí (pouze MP4)"
 
-#: functions/customizer.php:187
+#: functions/customizer.php:214
 msgid "Video Background URL (OGV only)"
 msgstr "URL videa na pozadí (pouze OGV)"
 
-#: functions/customizer.php:208
+#: functions/customizer.php:235
 msgid "Video Background URL (WEBM only)"
 msgstr "URL videa na pozadí (pouze WEBM)"
 
-#: functions/customizer.php:229
+#: functions/customizer.php:256
 msgid "Overlay Color"
 msgstr "Barva překrytí"
 
-#: functions/customizer.php:241 functions/functions.php:918
-msgid "Content Settings"
-msgstr "Nastavení obsahu"
+#: functions/customizer.php:268
+msgid "Page Header Content"
+msgstr "Obsah hlavičky stránky"
 
-#: functions/customizer.php:260 functions/functions.php:993
+#: functions/customizer.php:289 functions/metabox.php:162
 msgid "Content"
 msgstr "Obsah"
 
-#: functions/customizer.php:261
+#: functions/customizer.php:290
 msgid "Add your content to the page header. HTML and shortcodes allowed."
 msgstr ""
 "Přidejte váš obsah k hlavičce stránky. HTML a zkratky (shortcodes) jsou "
 "povoleny."
 
-#: functions/customizer.php:281
+#: functions/customizer.php:310
 msgid "Add Paragraphs"
 msgstr "Přidat odstavce"
 
-#: functions/customizer.php:282
+#: functions/customizer.php:311
 msgid "Wrap your text in paragraph tags automatically."
 msgstr "Zabalte váš text automaticky do tagů odstavců."
 
-#: functions/customizer.php:306
+#: functions/customizer.php:335
 msgid "Add Padding"
 msgstr "Přidat odsazení"
 
-#: functions/customizer.php:307
+#: functions/customizer.php:336
 msgid "Add padding around your content."
 msgstr "Přidejte odsazení okolo vašeho obsahu."
 
-#: functions/customizer.php:331
+#: functions/customizer.php:360
 msgid "Image Background"
 msgstr "Obrázek na pozadí"
 
-#: functions/customizer.php:332
+#: functions/customizer.php:361
 msgid ""
 "Use the image uploaded above as a background image for your content. "
 "(requires image uploaded above)"
@@ -152,11 +160,11 @@ msgstr ""
 "Použijte obrázek nahraný výše jako obrázek na pozadí pro váš obsah. "
 "(vyžaduje obrázek nahraný výše)"
 
-#: functions/customizer.php:356
+#: functions/customizer.php:385
 msgid "Parallax Background"
 msgstr "Paralaxní pozadí"
 
-#: functions/customizer.php:357
+#: functions/customizer.php:386
 msgid ""
 "Add a cool parallax effect to your background image. (requires the image "
 "background option to be checked)"
@@ -164,63 +172,63 @@ msgstr ""
 "Přidejte parádní paralaxový efekt k vašemu obrázku na pozadí. (vyžaduje "
 "zapnutí nastavení pozadí obrázku)"
 
-#: functions/customizer.php:381
+#: functions/customizer.php:410
 msgid "Full Screen"
 msgstr "Celá obrazovka"
 
-#: functions/customizer.php:382
+#: functions/customizer.php:411
 msgid "Make your page header content area full screen."
 msgstr "Udělejte obsahovou oblast vaší hlavičky stránky přes celou obrazovku."
 
-#: functions/customizer.php:406
+#: functions/customizer.php:435
 msgid "Vertical Center"
 msgstr "Vertikální vystředění"
 
-#: functions/customizer.php:407
+#: functions/customizer.php:436
 msgid "Center your page header content vertically."
 msgstr "Vystředí obsah vaší hlavičku stránky vertikálně."
 
-#: functions/customizer.php:431
+#: functions/customizer.php:460
 msgid "Container Type"
 msgstr "Typ prostoru"
 
-#: functions/customizer.php:432
+#: functions/customizer.php:461
 msgid "Choose whether the page header is contained or fluid."
 msgstr "Zvolte, jestli bude hlavička stránky omezená nebo proměnlivá."
 
-#: functions/customizer.php:435 functions/functions.php:1029
+#: functions/customizer.php:464 functions/metabox.php:198
 msgid "Contained"
 msgstr "Omezený"
 
-#: functions/customizer.php:436 functions/functions.php:1030
+#: functions/customizer.php:465 functions/metabox.php:199
 msgid "Fluid"
 msgstr "Proměnlivý"
 
-#: functions/customizer.php:456
+#: functions/customizer.php:485
 msgid "Text Alignment"
 msgstr "Zarovnání textu"
 
-#: functions/customizer.php:457
+#: functions/customizer.php:486
 msgid "Choose the horizontal alignment of your content."
 msgstr "Zvolte horizontální zarovnání vašeho obsahu."
 
-#: functions/customizer.php:460 functions/functions.php:1037
+#: functions/customizer.php:489 functions/metabox.php:206
 msgid "Left"
 msgstr "Doleva"
 
-#: functions/customizer.php:461 functions/functions.php:1038
+#: functions/customizer.php:490 functions/metabox.php:207
 msgid "Center"
 msgstr "Doprostřed"
 
-#: functions/customizer.php:462 functions/functions.php:1039
+#: functions/customizer.php:491 functions/metabox.php:208
 msgid "Right"
 msgstr "Doprava"
 
-#: functions/customizer.php:482
+#: functions/customizer.php:511
 msgid "Top/Bottom Padding"
 msgstr "Vrchní/Spodní odsazení"
 
-#: functions/customizer.php:483
+#: functions/customizer.php:512
 msgid ""
 "Choose your content padding in pixels. This will add space above and below "
 "your content. (integer only) "
@@ -228,208 +236,99 @@ msgstr ""
 "Zvolte odsazení vašeho obsahu v pixelech. Toto přidá mezeru nad a pod váš "
 "obsah. (pouze celá čísla)"
 
-#: functions/customizer.php:504
+#: functions/customizer.php:533
 msgid "Background Color"
 msgstr "Barva pozadí"
 
-#: functions/customizer.php:525
+#: functions/customizer.php:554
 msgid "Text Color"
 msgstr "Barva textu"
 
-#: functions/customizer.php:546
+#: functions/customizer.php:575
 msgid "Link Color"
 msgstr "Barva odkazu"
 
-#: functions/customizer.php:567
+#: functions/customizer.php:596
 msgid "Link Color Hover"
 msgstr "Barva odkazu při přejetí myší"
 
-#: functions/customizer.php:580 functions/functions.php:922
-msgid "Advanced Settings"
-msgstr "Rozšířené nastavení"
+#: functions/customizer.php:609
+msgid "Page Header Advanced"
+msgstr "Pokročilá hlavička stránky"
 
-#: functions/customizer.php:599 functions/functions.php:1089
+#: functions/customizer.php:630 functions/metabox.php:258
 msgid "Merge with site header"
 msgstr "Sloučit s hlavičkou stránky"
 
-#: functions/customizer.php:623 functions/functions.php:1094
+#: functions/customizer.php:654 functions/metabox.php:263
+msgid "Place content behind header (sliders etc..)"
+msgstr "Umístit obsah před hlavičky (slidery atd...)"
+
+#: functions/customizer.php:679 functions/metabox.php:267
 msgid "Site title"
 msgstr "Název webu"
 
-#: functions/customizer.php:644 functions/functions.php:1099
+#: functions/customizer.php:700 functions/metabox.php:272
 msgid "Site tagline"
 msgstr "Popis webu"
 
-#: functions/customizer.php:665 functions/functions.php:1104
+#: functions/customizer.php:721 functions/metabox.php:277
 msgid "Transparent navigation"
 msgstr "Průhledná navigace"
 
-#: functions/customizer.php:690 functions/functions.php:1109
+#: functions/customizer.php:746 functions/metabox.php:282
 msgid "Navigation text"
 msgstr "Text navigace"
 
-#: functions/customizer.php:711 functions/functions.php:1114
+#: functions/customizer.php:767 functions/metabox.php:287
 msgid "Navigation background hover"
 msgstr "Pozadí navigace při přejetí myší"
 
-#: functions/customizer.php:732 functions/functions.php:1119
+#: functions/customizer.php:788 functions/metabox.php:292
 msgid "Navigation text hover"
 msgstr "Text navigace při přejetí myší"
 
-#: functions/customizer.php:753 functions/functions.php:1124
+#: functions/customizer.php:809 functions/metabox.php:297
 msgid "Navigation background current"
 msgstr "Aktuální pozadí navigace"
 
-#: functions/customizer.php:774 functions/functions.php:1129
+#: functions/customizer.php:830 functions/metabox.php:302
 msgid "Navigation text current"
 msgstr "Aktuální text navigace"
 
-#: functions/customizer.php:787 functions/customizer.php:807
+#: functions/customizer.php:843
+msgid "Page Header Logo"
+msgstr "Logo hlavičky stránky"
+
+#: functions/customizer.php:865
 msgid "Logo"
 msgstr "Logo"
 
-#: functions/customizer.php:808
+#: functions/customizer.php:866
 msgid "Replace your logo on the blog."
 msgstr "Nahradit vaše logo na blogu."
 
-#: functions/functions.php:853
+#: functions/functions.php:548 functions/metabox.php:20
 msgid "Page Header"
 msgstr "Hlavička stránky"
 
-#: functions/functions.php:920
-msgid "Logo Settings"
-msgstr "Nastavení loga"
-
-#: functions/functions.php:931 functions/functions.php:933
-msgid "Page Header Image"
-msgstr "Obrázek hlavičky stránky"
-
-#: functions/functions.php:933 functions/functions.php:1081
-msgid "Insert Image"
-msgstr "Vložit obrázek"
-
-#: functions/functions.php:934 functions/functions.php:1082
-msgid "Add Image"
-msgstr "Přidat obrázek"
-
-#: functions/functions.php:960
-msgid "Use \"0\" or leave blank for proportional resizing."
-msgstr ""
-"Použijte \"0\" nebo nechte prázdné pro změnu velikosti se zachováním poměru "
-"stran."
-
-#: functions/functions.php:966
-msgid "Video background - MP4 file only"
-msgstr "Video pozadí - pouze MP4 soubory"
-
-#: functions/functions.php:968 functions/functions.php:975
-#: functions/functions.php:982
-msgid "Page Header Video"
-msgstr "Video hlavičky stránky"
-
-#: functions/functions.php:968 functions/functions.php:975
-#: functions/functions.php:982
-msgid "Insert Video"
-msgstr "Vložit video"
-
-#: functions/functions.php:969 functions/functions.php:976
-#: functions/functions.php:983
-msgid "Add Video"
-msgstr "Přidat video"
-
-#: functions/functions.php:973
-msgid "Video background - OGV file only"
-msgstr "Video pozadí - pouze OGV soubory"
-
-#: functions/functions.php:980
-msgid "Video background - WEBM file only"
-msgstr "Video pozadí - pouze WEBM soubory"
-
-#: functions/functions.php:987
-msgid "Overlay color"
-msgstr "Barva překryvu"
-
-#: functions/functions.php:995
-msgid "HTML and shortcodes allowed."
-msgstr "HTML a zkratky (shortcodes) jsou povoleny."
-
-#: functions/functions.php:1000
-msgid "Automatically add paragraphs"
-msgstr "Automaticky vytvářet odstavce"
-
-#: functions/functions.php:1003
-msgid "Add padding"
-msgstr "Přidat odsazení"
-
-#: functions/functions.php:1006
-msgid "Add background image"
-msgstr "Přidat obrázek na pozadí"
-
-#: functions/functions.php:1009
-msgid "Parallax effect"
-msgstr "Paralaxový efekt"
-
-#: functions/functions.php:1012
-msgid "Fullscreen"
-msgstr "Celá obrazovka"
-
-#: functions/functions.php:1015
-msgid "Vertical center content"
-msgstr "Vystředit obsah vertikálně"
-
-#: functions/functions.php:1020
-msgid "Add to blog excerpt"
-msgstr "Přidat k blogovému úryvku"
-
-#: functions/functions.php:1027
-msgid "Container type"
-msgstr "Typ prostoru"
-
-#: functions/functions.php:1035
-msgid "Text alignment"
-msgstr "Zarovnání textu"
-
-#: functions/functions.php:1044
-msgid "Top/Bottom padding"
-msgstr "Vrchní/Spodní odsazení"
-
-#: functions/functions.php:1050
-msgid "Background color"
-msgstr "Barva pozadí"
-
-#: functions/functions.php:1055
-msgid "Text color"
-msgstr "Barva textu"
-
-#: functions/functions.php:1060
-msgid "Link color"
-msgstr "Barva odkazu"
-
-#: functions/functions.php:1065
-msgid "Link color hover"
-msgstr "Barva odkazu při přejetí kurzorem myši"
-
-#: functions/functions.php:1079 functions/functions.php:1081
-msgid "Header / Logo"
-msgstr "Hlavička / Logo"
-
-#: functions/functions.php:1621
+#: functions/functions.php:576
 msgid "Page Header Position"
 msgstr "Umístění hlavičky stránky"
 
-#: functions/functions.php:1624 functions/functions.php:1654
+#: functions/functions.php:579 functions/functions.php:609
 msgid "Above Content Area"
 msgstr "Nad oblastí obsahu"
 
-#: functions/functions.php:1625 functions/functions.php:1655
+#: functions/functions.php:580 functions/functions.php:610
 msgid "Inside Content Area"
 msgstr "Uvnitř oblasti obsahu"
 
-#: functions/functions.php:1651
+#: functions/functions.php:606
 msgid "Single Post Header Position"
 msgstr "Umístění hlavičky příspěvku"
 
-#: functions/functions.php:1656
+#: functions/functions.php:611
 msgid "Below Post Title"
 msgstr "Pod názvem příspěvku"
 
@@ -444,6 +343,130 @@ msgstr "Smazat nastavení Přizpůsobení pro Hlavičku stránky"
 #: functions/ie.php:53
 msgid "Export Page Header Customizer Settings"
 msgstr "Exportovat nastavení Přizpůsobení pro Hlavičku stránky"
+
+#: functions/metabox.php:85
+msgid "Image Settings"
+msgstr "Nastavení obrázku"
+
+#: functions/metabox.php:86
+msgid "Video Settings"
+msgstr "Nastavení videa"
+
+#: functions/metabox.php:87
+msgid "Content Settings"
+msgstr "Nastavení obsahu"
+
+#: functions/metabox.php:89
+msgid "Logo Settings"
+msgstr "Nastavení loga"
+
+#: functions/metabox.php:91
+msgid "Advanced Settings"
+msgstr "Rozšířené nastavení"
+
+#: functions/metabox.php:102 functions/metabox.php:250
+msgid "Insert Image"
+msgstr "Vložit obrázek"
+
+#: functions/metabox.php:103 functions/metabox.php:251
+msgid "Add Image"
+msgstr "Přidat obrázek"
+
+#: functions/metabox.php:129
+msgid "Use \"0\" or leave blank for proportional resizing."
+msgstr ""
+"Použijte \"0\" nebo nechte prázdné pro změnu velikosti se zachováním poměru "
+"stran."
+
+#: functions/metabox.php:135
+msgid "Video background - MP4 file only"
+msgstr "Video pozadí - pouze MP4 soubory"
+
+#: functions/metabox.php:137 functions/metabox.php:144
+#: functions/metabox.php:151
+msgid "Insert Video"
+msgstr "Vložit video"
+
+#: functions/metabox.php:138 functions/metabox.php:145
+#: functions/metabox.php:152
+msgid "Add Video"
+msgstr "Přidat video"
+
+#: functions/metabox.php:142
+msgid "Video background - OGV file only"
+msgstr "Video pozadí - pouze OGV soubory"
+
+#: functions/metabox.php:149
+msgid "Video background - WEBM file only"
+msgstr "Video pozadí - pouze WEBM soubory"
+
+#: functions/metabox.php:156
+msgid "Overlay color"
+msgstr "Barva překryvu"
+
+#: functions/metabox.php:164
+msgid "HTML and shortcodes allowed."
+msgstr "HTML a zkratky (shortcodes) jsou povoleny."
+
+#: functions/metabox.php:169
+msgid "Automatically add paragraphs"
+msgstr "Automaticky vytvářet odstavce"
+
+#: functions/metabox.php:172
+msgid "Add padding"
+msgstr "Přidat odsazení"
+
+#: functions/metabox.php:175
+msgid "Add background image"
+msgstr "Přidat obrázek na pozadí"
+
+#: functions/metabox.php:178
+msgid "Parallax effect"
+msgstr "Paralaxový efekt"
+
+#: functions/metabox.php:181
+msgid "Fullscreen"
+msgstr "Celá obrazovka"
+
+#: functions/metabox.php:184
+msgid "Vertical center content"
+msgstr "Vystředit obsah vertikálně"
+
+#: functions/metabox.php:189
+msgid "Add to blog excerpt"
+msgstr "Přidat k blogovému úryvku"
+
+#: functions/metabox.php:196
+msgid "Container type"
+msgstr "Typ prostoru"
+
+#: functions/metabox.php:204
+msgid "Text alignment"
+msgstr "Zarovnání textu"
+
+#: functions/metabox.php:213
+msgid "Top/Bottom padding"
+msgstr "Vrchní/Spodní odsazení"
+
+#: functions/metabox.php:219
+msgid "Background color"
+msgstr "Barva pozadí"
+
+#: functions/metabox.php:224
+msgid "Text color"
+msgstr "Barva textu"
+
+#: functions/metabox.php:229
+msgid "Link color"
+msgstr "Barva odkazu"
+
+#: functions/metabox.php:234
+msgid "Link color hover"
+msgstr "Barva odkazu při přejetí kurzorem myši"
+
+#: functions/metabox.php:248 functions/metabox.php:250
+msgid "Header / Logo"
+msgstr "Hlavička / Logo"
 
 #~ msgid ""
 #~ "There is a new version of %1$s available. <a target=\"_blank\" class="

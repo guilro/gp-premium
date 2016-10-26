@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 add_action( 'after_setup_theme', 'generate_secondary_nav_setup' );
 if ( ! function_exists( 'generate_secondary_nav_setup' ) ) :
 	function generate_secondary_nav_setup() {
@@ -23,10 +26,10 @@ function generate_secondary_nav_enqueue_scripts() {
 endif;
 
 if ( ! function_exists( 'generate_secondary_nav_enqueue_customizer_scripts' ) ) :
-add_action( 'customize_controls_enqueue_scripts', 'generate_secondary_nav_enqueue_customizer_scripts' );
+add_action( 'customize_preview_init', 'generate_secondary_nav_enqueue_customizer_scripts' );
 function generate_secondary_nav_enqueue_customizer_scripts()
 {
-    wp_enqueue_script( 'generate-secondary-nav-customizer', plugin_dir_url( __FILE__ ) . 'js/customizer.js', array(), GENERATE_SECONDARY_NAV_VERSION, true );
+    wp_enqueue_script( 'generate-secondary-nav-customizer', plugin_dir_url( __FILE__ ) . 'js/customizer.js', array( 'jquery', 'customize-preview' ), GENERATE_SECONDARY_NAV_VERSION, true );
 }
 endif;
 
@@ -85,7 +88,6 @@ endif;
 if ( ! function_exists( 'generate_secondary_nav_customize_register' ) ) :
 add_action( 'customize_register', 'generate_secondary_nav_customize_register', 999 );
 function generate_secondary_nav_customize_register( $wp_customize ) {
-
 	$defaults = generate_secondary_nav_get_defaults();
 	
 	if ( $wp_customize->get_panel( 'generate_layout_panel' ) ) {
@@ -145,7 +147,8 @@ function generate_secondary_nav_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['secondary_nav_layout_setting'],
 			'type' => 'option',
-			'sanitize_callback' => 'generate_secondary_nav_sanitize_choices'
+			'sanitize_callback' => 'generate_secondary_nav_sanitize_choices',
+			'transport' => 'postMessage'
 		)
 	);
 	
@@ -176,7 +179,8 @@ function generate_secondary_nav_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['secondary_nav_position_setting'],
 			'type' => 'option',
-			'sanitize_callback' => 'generate_secondary_nav_sanitize_choices'
+			'sanitize_callback' => 'generate_secondary_nav_sanitize_choices',
+			'transport' => 'postMessage'
 		)
 	);
 	
@@ -211,7 +215,8 @@ function generate_secondary_nav_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['secondary_nav_alignment'],
 			'type' => 'option',
-			'sanitize_callback' => 'generate_secondary_nav_sanitize_choices'
+			'sanitize_callback' => 'generate_secondary_nav_sanitize_choices',
+			'transport' => 'postMessage'
 		)
 	);
 	
@@ -235,884 +240,11 @@ function generate_secondary_nav_customize_register( $wp_customize ) {
 		)
 	);
 	
-	if ( class_exists( 'Generate_Spacing_Customize_Misc_Control' ) ) :
+	require_once trailingslashit( dirname(__FILE__) ) . 'customizer/spacing.php';
+	require_once trailingslashit( dirname(__FILE__) ) . 'customizer/colors.php';
+	require_once trailingslashit( dirname(__FILE__) ) . 'customizer/typography.php';
+	require_once trailingslashit( dirname(__FILE__) ) . 'customizer/backgrounds.php';
 	
-		if ( $wp_customize->get_panel( 'generate_spacing_panel' ) ) {
-			$spacing_panel = 'generate_spacing_panel';
-		} else {
-			$spacing_panel = 'secondary_navigation_panel';
-		}
-
-		// Add Navigation section
-		$wp_customize->add_section(
-			// ID
-			'secondary_navigation_spacing_section',
-			// Arguments array
-			array(
-				'title' => __( 'Secondary Navigation', 'generate-secondary-nav' ),
-				'capability' => 'edit_theme_options',
-				'priority' => 16,
-				'panel' => $spacing_panel
-			)
-		);
-		
-		if ( $wp_customize->get_panel( 'generate_layout_panel' ) ) {
-			$secondary_navigation_section = 'secondary_nav_section';
-		} else {
-			$secondary_navigation_section = 'secondary_navigation_spacing_section';
-		}
-		
-		$wp_customize->add_control(
-			new Generate_Spacing_Customize_Misc_Control(
-				$wp_customize,
-				'generate_secondary_navigation_spacing_title',
-				array(
-					'section'  => $secondary_navigation_section,
-					'description'    => __( 'Secondary Menu Items', 'generate-spacing' ),
-					'type'     => 'text',
-					'priority' => 200,
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[secondary_menu_item]', array(
-				'default' => $defaults['secondary_menu_item'],
-				'type' => 'option', 
-				'capability' => 'edit_theme_options',
-				'sanitize_callback' => 'absint'
-			)
-		);
-		
-		$wp_customize->add_control(
-			new Generate_Spacing_Customize_Control(
-				$wp_customize,
-				'generate_secondary_nav_settings[secondary_menu_item]', 
-				array(
-					'description' => __('Left/Right Spacing', 'generate-spacing' ), 
-					'section' => $secondary_navigation_section,
-					'settings' => 'generate_secondary_nav_settings[secondary_menu_item]',
-					'priority' => 220
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[secondary_menu_item_height]', array(
-				'default' => $defaults['secondary_menu_item_height'],
-				'type' => 'option', 
-				'capability' => 'edit_theme_options',
-				'sanitize_callback' => 'absint'
-			)
-		);
-		
-		$wp_customize->add_control(
-			new Generate_Spacing_Customize_Control(
-				$wp_customize,
-				'generate_secondary_nav_settings[secondary_menu_item_height]', 
-				array(
-					'description' => __('Height', 'generate-spacing' ), 
-					'section' => $secondary_navigation_section,
-					'settings' => 'generate_secondary_nav_settings[secondary_menu_item_height]',
-					'priority' => 240
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[secondary_sub_menu_item_height]', array(
-				'default' => $defaults['secondary_sub_menu_item_height'],
-				'type' => 'option', 
-				'capability' => 'edit_theme_options',
-				'sanitize_callback' => 'absint'
-			)
-		);
-		
-		$wp_customize->add_control(
-			new Generate_Spacing_Customize_Control(
-				$wp_customize,
-				'generate_secondary_nav_settings[secondary_sub_menu_item_height]', 
-				array(
-					'label' => __( 'Sub-Menu Item Height', 'generate-spacing' ),
-					'secondary_description' => __( 'The top and bottom spacing of sub-menu items.', 'generate-spacing' ), 
-					'section' => $secondary_navigation_section,
-					'settings' => 'generate_secondary_nav_settings[secondary_sub_menu_item_height]',
-					'priority' => 260
-				)
-			)
-		);
-	
-	endif;
-	
-	if ( defined( 'GENERATE_COLORS_VERSION' ) ) :
-	
-		if ( $wp_customize->get_panel( 'generate_colors_panel' ) ) {
-			$colors_panel = 'generate_colors_panel';
-		} else {
-			$colors_panel = 'secondary_navigation_panel';
-		}
-	
-		// Add Navigation section
-		$wp_customize->add_section(
-			// ID
-			'secondary_navigation_color_section',
-			// Arguments array
-			array(
-				'title' => __( 'Secondary Navigation', 'generate-secondary-nav' ),
-				'capability' => 'edit_theme_options',
-				'priority' => 71,
-				'panel' => $colors_panel
-			)
-		);
-		
-		// Add color settings
-		$secondary_navigation_colors = array();
-		$secondary_navigation_colors[] = array(
-			'slug'=>'navigation_background_color', 
-			'default' => $defaults['navigation_background_color'],
-			'label' => __('Background', 'generate-secondary-nav'),
-			'priority' => 1
-		);
-		$secondary_navigation_colors[] = array(
-			'slug'=>'navigation_text_color', 
-			'default' => $defaults['navigation_text_color'],
-			'label' => __('Text', 'generate-secondary-nav'),
-			'priority' => 2
-		);
-		$secondary_navigation_colors[] = array(
-			'slug'=>'navigation_background_hover_color', 
-			'default' => $defaults['navigation_background_hover_color'],
-			'label' => __('Background Hover', 'generate-secondary-nav'),
-			'priority' => 3
-		);
-		$secondary_navigation_colors[] = array(
-			'slug'=>'navigation_text_hover_color', 
-			'default' => $defaults['navigation_text_hover_color'],
-			'label' => __('Text Hover', 'generate-secondary-nav'),
-			'priority' => 4
-		);
-		$secondary_navigation_colors[] = array(
-			'slug'=>'navigation_background_current_color', 
-			'default' => $defaults['navigation_background_current_color'],
-			'label' => __('Background Current', 'generate-secondary-nav'),
-			'priority' => 5
-		);
-		$secondary_navigation_colors[] = array(
-			'slug'=>'navigation_text_current_color', 
-			'default' => $defaults['navigation_text_current_color'],
-			'label' => __('Text Current', 'generate-secondary-nav'),
-			'priority' => 6
-		);
-		
-		foreach( $secondary_navigation_colors as $color ) {
-			// SETTINGS
-			$wp_customize->add_setting(
-				'generate_secondary_nav_settings[' . $color['slug'] . ']', array(
-					'default' => $color['default'],
-					'type' => 'option', 
-					'capability' => 'edit_theme_options',
-					'sanitize_callback' => 'generate_colors_sanitize_hex_color'
-				)
-			);
-			// CONTROLS
-			$wp_customize->add_control(
-				new WP_Customize_Color_Control(
-					$wp_customize,
-					'secondary_' . $color['slug'], 
-					array(
-						'label' => $color['label'], 
-						'section' => 'secondary_navigation_color_section',
-						'settings' => 'generate_secondary_nav_settings[' . $color['slug'] . ']',
-						'priority' => $color['priority']
-					)
-				)
-			);
-		}
-	
-	
-	
-		// Add Sub-Navigation section
-		$wp_customize->add_section(
-			// ID
-			'secondary_subnavigation_color_section',
-			// Arguments array
-			array(
-				'title' => __( 'Secondary Sub-Navigation', 'generate-secondary-nav' ),
-				'capability' => 'edit_theme_options',
-				'priority' => 72,
-				'panel' => $colors_panel
-			)
-		);
-
-		// Add color settings
-		$subsecondary_navigation_colors = array();
-		$subsecondary_navigation_colors[] = array(
-			'slug'=>'subnavigation_background_color', 
-			'default' => $defaults['subnavigation_background_color'],
-			'label' => __('Background', 'generate-secondary-nav'),
-			'priority' => 1
-		);
-		$subsecondary_navigation_colors[] = array(
-			'slug'=>'subnavigation_text_color', 
-			'default' => $defaults['subnavigation_text_color'],
-			'label' => __('Text', 'generate-secondary-nav'),
-			'priority' => 2
-		);
-		$subsecondary_navigation_colors[] = array(
-			'slug'=>'subnavigation_background_hover_color', 
-			'default' => $defaults['subnavigation_background_hover_color'],
-			'label' => __('Background Hover', 'generate-secondary-nav'),
-			'priority' => 3
-		);
-		$subsecondary_navigation_colors[] = array(
-			'slug'=>'subnavigation_text_hover_color', 
-			'default' => $defaults['subnavigation_text_hover_color'],
-			'label' => __('Text Hover', 'generate-secondary-nav'),
-			'priority' => 4
-		);
-		$subsecondary_navigation_colors[] = array(
-			'slug'=>'subnavigation_background_current_color', 
-			'default' => $defaults['subnavigation_background_current_color'],
-			'label' => __('Background Current', 'generate-secondary-nav'),
-			'priority' => 5
-		);
-		$subsecondary_navigation_colors[] = array(
-			'slug'=>'subnavigation_text_current_color', 
-			'default' => $defaults['subnavigation_text_current_color'],
-			'label' => __('Text Current', 'generate-secondary-nav'),
-			'priority' => 6
-		);
-		foreach( $subsecondary_navigation_colors as $color ) {
-			// SETTINGS
-			$wp_customize->add_setting(
-				'generate_secondary_nav_settings[' . $color['slug'] . ']', array(
-					'default' => $color['default'],
-					'type' => 'option', 
-					'capability' => 'edit_theme_options',
-					'sanitize_callback' => 'generate_colors_sanitize_hex_color'
-				)
-			);
-			// CONTROLS
-			$wp_customize->add_control(
-				new WP_Customize_Color_Control(
-					$wp_customize,
-					'secondary_' . $color['slug'], 
-					array(
-						'label' => $color['label'], 
-						'section' => 'secondary_subnavigation_color_section',
-						'settings' => 'generate_secondary_nav_settings[' . $color['slug'] . ']',
-						'priority' => $color['priority']
-					)
-				)
-			);
-		}
-	
-	endif;
-		
-	if ( defined( 'GENERATE_FONT_VERSION' ) ) :
-	
-		if ( $wp_customize->get_panel( 'generate_typography_panel' ) ) {
-			$typography_panel = 'generate_typography_panel';
-		} else {
-			$typography_panel = 'secondary_navigation_panel';
-		}
-		
-		$wp_customize->add_section(
-			// ID
-			'secondary_font_section',
-			// Arguments array
-			array(
-				'title' => __( 'Secondary Navigation', 'generate-secondary-nav' ),
-				'capability' => 'edit_theme_options',
-				'description' => '',
-				'priority' => 51,
-				'panel' => $typography_panel
-			)
-		);
-		
-		// Add site navigation fonts
-		$wp_customize->add_setting( 
-			'generate_secondary_nav_settings[font_secondary_navigation]', 
-			array(
-				'default' => $defaults['font_secondary_navigation'],
-				'type' => 'option',
-				'sanitize_callback' => 'generate_sanitize_typography'
-			)
-		);
-				
-		$wp_customize->add_control( 
-			new Generate_Google_Font_Dropdown_Custom_Control( 
-				$wp_customize, 
-				'google_font_site_secondary_navigation_control', 
-				array(
-					'label' => __('Secondary navigation','generate-secondary-nav'),
-					'section' => 'secondary_font_section',
-					'settings' => 'generate_secondary_nav_settings[font_secondary_navigation]',
-					'priority' => 120
-				)
-			)
-		);
-			
-		$wp_customize->add_setting( 
-			'generate_secondary_nav_settings[secondary_navigation_font_weight]', 
-			array(
-				'default' => $defaults['secondary_navigation_font_weight'],
-				'type' => 'option',
-				'sanitize_callback' => 'generate_sanitize_font_weight'
-			)
-		);
-				
-		$wp_customize->add_control( 
-			new Generate_Font_Weight_Custom_Control( 
-				$wp_customize, 
-				'secondary_navigation_font_weight_control', 
-				array(
-					'label' => __('Font weight','generate-secondary-nav'),
-					'section' => 'secondary_font_section',
-					'settings' => 'generate_secondary_nav_settings[secondary_navigation_font_weight]',
-					'priority' => 140,
-					'type' => 'weight'
-				)
-			)
-		);
-			
-		$wp_customize->add_setting( 
-			'generate_secondary_nav_settings[secondary_navigation_font_transform]', 
-			array(
-				'default' => $defaults['secondary_navigation_font_transform'],
-				'type' => 'option',
-				'sanitize_callback' => 'generate_sanitize_text_transform'
-			)
-		);
-				
-		$wp_customize->add_control( 
-			new Generate_Text_Transform_Custom_Control( 
-				$wp_customize, 
-				'secondary_navigation_font_transform_control', 
-				array(
-					'label' => __('Text transform','generate-secondary-nav'),
-					'section' => 'secondary_font_section',
-					'settings' => 'generate_secondary_nav_settings[secondary_navigation_font_transform]',
-					'priority' => 160,
-						'type' => 'transform'
-				)
-			)
-		);
-		
-		if ( class_exists( 'Generate_Customize_Slider_Control' ) ) :
-			$wp_customize->add_setting( 
-				'generate_secondary_nav_settings[secondary_navigation_font_size]', 
-				array(
-					'default' => $defaults['secondary_navigation_font_size'],
-					'type' => 'option',
-					'sanitize_callback' => 'absint'
-				)
-			);
-					
-			$wp_customize->add_control( 
-				new Generate_Customize_Slider_Control( 
-					$wp_customize, 
-					'generate_secondary_nav_settings[secondary_navigation_font_size]', 
-					array(
-						'label' => __('Font size','generate-secondary-nav'),
-						'section' => 'secondary_font_section',
-						'settings' => 'generate_secondary_nav_settings[secondary_navigation_font_size]',
-						'priority' => 165
-					)
-				)
-			);
-		endif;
-		
-	endif;
-	
-	if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) && class_exists( 'Generate_Backgrounds_Customize_Misc_Control' ) && class_exists( 'Generate_Background_Upload_Control' ) ) :
-		
-		if ( $wp_customize->get_panel( 'generate_backgrounds_panel' ) ) {
-			$backgrounds_panel = 'generate_backgrounds_panel';
-		} else {
-			$backgrounds_panel = 'secondary_navigation_panel';
-		}
-	
-		$wp_customize->add_section(
-			// ID
-			'secondary_bg_images_section',
-			// Arguments array
-			array(
-				'title' => __( 'Secondary Navigation', 'generate-secondary-nav' ),
-				'capability' => 'edit_theme_options',
-				'description' => '',
-				'panel' => $backgrounds_panel,
-				'priority' => 21
-			)
-		);
-	
-		/**
-		 * Navigation background
-		 */
-		 
-		$wp_customize->add_control(
-			new Generate_Backgrounds_Customize_Misc_Control(
-				$wp_customize,
-				'generate_secondary_backgrounds-nav-heading',
-				array( 
-					'section'  => 'secondary_bg_images_section', 
-					'label' => __( 'Navigation', 'generate-secondary-nav' ), 
-					'type' => 'backgrounds-heading',
-					'priority' => 700 
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[nav_image]', array(
-				'default' => $defaults['nav_image'],
-				'type' => 'option', 
-				'capability' => 'edit_theme_options',
-				'sanitize_callback' => 'esc_url_raw'
-			)
-		);
-		
-		$wp_customize->add_control( 
-			new Generate_Background_Upload_Control( 
-				$wp_customize, 
-				'generate_secondary_backgrounds-nav-image', 
-				array(
-					'section'    => 'secondary_bg_images_section',
-					'settings'   => 'generate_secondary_nav_settings[nav_image]',
-					'priority' => 750,
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[nav_repeat]',
-			array(
-				'default' => $defaults['nav_repeat'],
-				'type' => 'option',
-				'sanitize_callback' => 'generate_secondary_nav_sanitize_choices'
-			)
-		);
-		
-		$wp_customize->add_control(
-			'generate_secondary_nav_settings[nav_repeat]',
-			array(
-				'type' => 'select',
-				'section' => 'secondary_bg_images_section',
-				'choices' => array(
-					'' => __( 'Repeat', 'generate-secondary-nav' ),
-					'repeat-x' => __( 'Repeat x', 'generate-secondary-nav' ),
-					'repeat-y' => __( 'Repeat y', 'generate-secondary-nav' ),
-					'no-repeat' => __( 'No Repeat', 'generate-secondary-nav' )
-				),
-				'settings' => 'generate_secondary_nav_settings[nav_repeat]',
-				'priority' => 800
-			)
-		);
-		
-		/**
-		 * Navigation item background
-		 */
-		 
-		$wp_customize->add_control(
-			new Generate_Backgrounds_Customize_Misc_Control(
-				$wp_customize,
-				'generate_secondary_backgrounds-nav-item-heading',
-				array( 
-					'section'  => 'secondary_bg_images_section', 
-					'label' => __( 'Navigation Item', 'generate-secondary-nav' ), 
-					'type' => 'backgrounds-heading',
-					'priority' => 900 
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[nav_item_image]', array(
-				'default' => $defaults['nav_item_image'],
-				'type' => 'option', 
-				'capability' => 'edit_theme_options',
-				'sanitize_callback' => 'esc_url_raw'
-			)
-		);
-		
-		$wp_customize->add_control( 
-			new Generate_Background_Upload_Control( 
-				$wp_customize, 
-				'generate_secondary_backgrounds-nav-item-image', 
-				array(
-					'section'    => 'secondary_bg_images_section',
-					'settings'   => 'generate_secondary_nav_settings[nav_item_image]',
-					'priority' => 950,
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[nav_item_repeat]',
-			array(
-				'default' => $defaults['nav_item_repeat'],
-				'type' => 'option',
-				'sanitize_callback' => 'generate_secondary_nav_sanitize_choices'
-			)
-		);
-		
-		$wp_customize->add_control(
-			'generate_secondary_nav_settings[nav_item_repeat]',
-			array(
-				'type' => 'select',
-				'section' => 'secondary_bg_images_section',
-				'choices' => array(
-					'' => __( 'Repeat', 'generate-secondary-nav' ),
-					'repeat-x' => __( 'Repeat x', 'generate-secondary-nav' ),
-					'repeat-y' => __( 'Repeat y', 'generate-secondary-nav' ),
-					'no-repeat' => __( 'No Repeat', 'generate-secondary-nav' )
-				),
-				'settings' => 'generate_secondary_nav_settings[nav_item_repeat]',
-				'priority' => 1000
-			)
-		);
-		
-		/**
-		 * Navigation item hover background
-		 */
-		 
-		$wp_customize->add_control(
-			new Generate_Backgrounds_Customize_Misc_Control(
-				$wp_customize,
-				'generate_secondary_backgrounds-nav-item-hover-heading',
-				array( 
-					'section'  => 'secondary_bg_images_section', 
-					'label' => __( 'Navigation Item Hover', 'generate-secondary-nav' ), 
-					'type' => 'backgrounds-heading',
-					'priority' => 1100
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[nav_item_hover_image]', array(
-				'default' => $defaults['nav_item_hover_image'],
-				'type' => 'option', 
-				'capability' => 'edit_theme_options',
-				'sanitize_callback' => 'esc_url_raw'
-			)
-		);
-		
-		$wp_customize->add_control( 
-			new Generate_Background_Upload_Control( 
-				$wp_customize, 
-				'generate_secondary_backgrounds-nav-item-hover-image', 
-				array(
-					'section'    => 'secondary_bg_images_section',
-					'settings'   => 'generate_secondary_nav_settings[nav_item_hover_image]',
-					'priority' => 1150,
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[nav_item_hover_repeat]',
-			array(
-				'default' => $defaults['nav_item_hover_repeat'],
-				'type' => 'option',
-				'sanitize_callback' => 'generate_secondary_nav_sanitize_choices'
-			)
-		);
-		
-		$wp_customize->add_control(
-			'generate_secondary_nav_settings[nav_item_hover_repeat]',
-			array(
-				'type' => 'select',
-				'section' => 'secondary_bg_images_section',
-				'choices' => array(
-					'' => __( 'Repeat', 'generate-secondary-nav' ),
-					'repeat-x' => __( 'Repeat x', 'generate-secondary-nav' ),
-					'repeat-y' => __( 'Repeat y', 'generate-secondary-nav' ),
-					'no-repeat' => __( 'No Repeat', 'generate-secondary-nav' )
-				),
-				'settings' => 'generate_secondary_nav_settings[nav_item_hover_repeat]',
-				'priority' => 1200
-			)
-		);
-		
-		/**
-		 * Navigation item current background
-		 */
-		 
-		$wp_customize->add_control(
-			new Generate_Backgrounds_Customize_Misc_Control(
-				$wp_customize,
-				'generate_secondary_backgrounds-nav-item-current-heading',
-				array( 
-					'section'  => 'secondary_bg_images_section', 
-					'label' => __( 'Navigation Item Current', 'generate-secondary-nav' ), 
-					'type' => 'backgrounds-heading',
-					'priority' => 1300
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[nav_item_current_image]', array(
-				'default' => $defaults['nav_item_current_image'],
-				'type' => 'option', 
-				'capability' => 'edit_theme_options',
-				'sanitize_callback' => 'esc_url_raw'
-			)
-		);
-		
-		$wp_customize->add_control( 
-			new Generate_Background_Upload_Control( 
-				$wp_customize, 
-				'generate_secondary_backgrounds-nav-item-current-image', 
-				array(
-					'section'    => 'secondary_bg_images_section',
-					'settings'   => 'generate_secondary_nav_settings[nav_item_current_image]',
-					'priority' => 1350,
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[nav_item_current_repeat]',
-			array(
-				'default' => $defaults['nav_item_current_repeat'],
-				'type' => 'option',
-				'sanitize_callback' => 'generate_secondary_nav_sanitize_choices'
-			)
-		);
-		
-		$wp_customize->add_control(
-			'generate_secondary_nav_settings[nav_item_current_repeat]',
-			array(
-				'type' => 'select',
-				'section' => 'secondary_bg_images_section',
-				'choices' => array(
-					'' => __( 'Repeat', 'generate-secondary-nav' ),
-					'repeat-x' => __( 'Repeat x', 'generate-secondary-nav' ),
-					'repeat-y' => __( 'Repeat y', 'generate-secondary-nav' ),
-					'no-repeat' => __( 'No Repeat', 'generate-secondary-nav' )
-				),
-				'settings' => 'generate_secondary_nav_settings[nav_item_current_repeat]',
-				'priority' => 1400
-			)
-		);
-		
-		$wp_customize->add_control(
-			new Generate_Backgrounds_Customize_Misc_Control(
-				$wp_customize,
-				'generate_secondary_backgrounds-nav-line',
-				array(
-					'section'  => 'secondary_bg_images_section',
-					'type'     => 'line',
-					'priority' => 1500,
-				)
-			)
-		);
-		
-		$wp_customize->add_section(
-			// ID
-			'secondary_subnav_bg_images_section',
-			// Arguments array
-			array(
-				'title' => __( 'Secondary Sub-Navigation', 'generate-secondary-nav' ),
-				'capability' => 'edit_theme_options',
-				'description' => '',
-				'panel' => $backgrounds_panel,
-				'priority' => 22
-			)
-		);
-		
-		/**
-		 * Sub-Navigation item background
-		 */
-		 
-		$wp_customize->add_control(
-			new Generate_Backgrounds_Customize_Misc_Control(
-				$wp_customize,
-				'generate_secondary_backgrounds-sub-nav-item-heading',
-				array( 
-					'section'  => 'secondary_subnav_bg_images_section', 
-					'label' => __( 'Sub-Navigation Item', 'generate-secondary-nav' ), 
-					'type' => 'backgrounds-heading',
-					'priority' => 1600 
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[sub_nav_item_image]', array(
-				'default' => $defaults['sub_nav_item_image'],
-				'type' => 'option', 
-				'capability' => 'edit_theme_options',
-				'sanitize_callback' => 'esc_url_raw'
-			)
-		);
-		
-		$wp_customize->add_control( 
-			new Generate_Background_Upload_Control( 
-				$wp_customize, 
-				'generate_secondary_backgrounds-sub-nav-item-image', 
-				array(
-					'section'    => 'secondary_subnav_bg_images_section',
-					'settings'   => 'generate_secondary_nav_settings[sub_nav_item_image]',
-					'priority' => 1700,
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[sub_nav_item_repeat]',
-			array(
-				'default' => $defaults['sub_nav_item_repeat'],
-				'type' => 'option',
-				'sanitize_callback' => 'generate_secondary_nav_sanitize_choices'
-			)
-		);
-		
-		$wp_customize->add_control(
-			'generate_secondary_nav_settings[sub_nav_item_repeat]',
-			array(
-				'type' => 'select',
-				'section' => 'secondary_subnav_bg_images_section',
-				'choices' => array(
-					'' => __( 'Repeat', 'generate-secondary-nav' ),
-					'repeat-x' => __( 'Repeat x', 'generate-secondary-nav' ),
-					'repeat-y' => __( 'Repeat y', 'generate-secondary-nav' ),
-					'no-repeat' => __( 'No Repeat', 'generate-secondary-nav' )
-				),
-				'settings' => 'generate_secondary_nav_settings[sub_nav_item_repeat]',
-				'priority' => 1800
-			)
-		);
-		
-		/**
-		 * Sub-Navigation item hover background
-		 */
-		 
-		$wp_customize->add_control(
-			new Generate_Backgrounds_Customize_Misc_Control(
-				$wp_customize,
-				'generate_secondary_backgrounds-sub-nav-item-hover-heading',
-				array( 
-					'section'  => 'secondary_subnav_bg_images_section', 
-					'label' => __( 'Sub-Navigation Item Hover', 'generate-secondary-nav' ), 
-					'type' => 'backgrounds-heading',
-					'priority' => 1900
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[sub_nav_item_hover_image]', array(
-				'default' => $defaults['sub_nav_item_hover_image'],
-				'type' => 'option', 
-				'capability' => 'edit_theme_options',
-				'sanitize_callback' => 'esc_url_raw'
-			)
-		);
-		
-		$wp_customize->add_control( 
-			new Generate_Background_Upload_Control( 
-				$wp_customize, 
-				'generate_secondary_backgrounds-sub-nav-item-hover-image', 
-				array(
-					'section'    => 'secondary_subnav_bg_images_section',
-					'settings'   => 'generate_secondary_nav_settings[sub_nav_item_hover_image]',
-					'priority' => 2000,
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[sub_nav_item_hover_repeat]',
-			array(
-				'default' => $defaults['sub_nav_item_hover_repeat'],
-				'type' => 'option',
-				'sanitize_callback' => 'generate_secondary_nav_sanitize_choices'
-			)
-		);
-		
-		$wp_customize->add_control(
-			'generate_secondary_nav_settings[sub_nav_item_hover_repeat]',
-			array(
-				'type' => 'select',
-				'section' => 'secondary_subnav_bg_images_section',
-				'choices' => array(
-					'' => __( 'Repeat', 'generate-secondary-nav' ),
-					'repeat-x' => __( 'Repeat x', 'generate-secondary-nav' ),
-					'repeat-y' => __( 'Repeat y', 'generate-secondary-nav' ),
-					'no-repeat' => __( 'No Repeat', 'generate-secondary-nav' )
-				),
-				'settings' => 'generate_secondary_nav_settings[sub_nav_item_hover_repeat]',
-				'priority' => 2100
-			)
-		);
-		
-		/**
-		 * Sub-Navigation item current background
-		 */
-		 
-		$wp_customize->add_control(
-			new Generate_Backgrounds_Customize_Misc_Control(
-				$wp_customize,
-				'generate_secondary_backgrounds-sub-nav-item-current-heading',
-				array( 
-					'section'  => 'secondary_subnav_bg_images_section', 
-					'label' => __( 'Sub-Navigation Item Current', 'generate-secondary-nav' ), 
-					'type' => 'backgrounds-heading',
-					'priority' => 2200
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[sub_nav_item_current_image]', array(
-				'default' => $defaults['sub_nav_item_current_image'],
-				'type' => 'option', 
-				'capability' => 'edit_theme_options',
-				'sanitize_callback' => 'esc_url_raw'
-			)
-		);
-		
-		$wp_customize->add_control( 
-			new Generate_Background_Upload_Control( 
-				$wp_customize, 
-				'generate_secondary_backgrounds-sub-nav-item-current-image', 
-				array(
-					'section'    => 'secondary_subnav_bg_images_section',
-					'settings'   => 'generate_secondary_nav_settings[sub_nav_item_current_image]',
-					'priority' => 2300,
-				)
-			)
-		);
-		
-		$wp_customize->add_setting(
-			'generate_secondary_nav_settings[sub_nav_item_current_repeat]',
-			array(
-				'default' => $defaults['sub_nav_item_current_repeat'],
-				'type' => 'option',
-				'sanitize_callback' => 'generate_secondary_nav_sanitize_choices'
-			)
-		);
-		
-		$wp_customize->add_control(
-			'generate_secondary_nav_settings[sub_nav_item_current_repeat]',
-			array(
-				'type' => 'select',
-				'section' => 'secondary_subnav_bg_images_section',
-				'choices' => array(
-					'' => __( 'Repeat', 'generate-secondary-nav' ),
-					'repeat-x' => __( 'Repeat x', 'generate-secondary-nav' ),
-					'repeat-y' => __( 'Repeat y', 'generate-secondary-nav' ),
-					'no-repeat' => __( 'No Repeat', 'generate-secondary-nav' )
-				),
-				'settings' => 'generate_secondary_nav_settings[sub_nav_item_current_repeat]',
-				'priority' => 2400
-			)
-		);
-		
-	endif;
 }
 endif;
 
@@ -1121,17 +253,21 @@ endif;
  * @since 0.1
  */
 if ( ! function_exists( 'generate_display_secondary_google_fonts' ) ) :
-	add_filter('generate_typography_google_fonts','generate_display_secondary_google_fonts', 50);
-	function generate_display_secondary_google_fonts($google_fonts) {
+add_filter('generate_typography_google_fonts','generate_display_secondary_google_fonts', 50);
+function generate_display_secondary_google_fonts($google_fonts) {
+	
+	if ( is_admin() )
+		return;
 		
-		if ( is_admin() )
-			return;
-			
-		$generate_secondary_nav_settings = wp_parse_args( 
-			get_option( 'generate_secondary_nav_settings', array() ), 
-			generate_secondary_nav_get_defaults() 
-		);
-			
+	$generate_secondary_nav_settings = wp_parse_args( 
+		get_option( 'generate_secondary_nav_settings', array() ), 
+		generate_secondary_nav_get_defaults() 
+	);
+	
+	// List our non-Google fonts
+	if ( function_exists( 'generate_typography_default_fonts' ) ) {
+		$not_google = str_replace( ' ', '+', generate_typography_default_fonts() );
+	} else {
 		$not_google = array(
 			'inherit',
 			'Arial,+Helvetica,+sans-serif',
@@ -1148,50 +284,51 @@ if ( ! function_exists( 'generate_display_secondary_google_fonts' ) ) :
 			'Trebuchet+MS,+Helvetica,+sans-serif',
 			'Verdana,+Geneva,+sans-serif'
 		);
-		
-		// Create our Google Fonts array
-		$secondary_google_fonts = array();
-		
-		if ( function_exists( 'generate_get_google_font_variants' ) ) :
-		
-			// If our value is still using the old format, fix it
-			if ( strpos( $generate_secondary_nav_settings[ 'font_secondary_navigation' ], ':' ) !== false )
-				$generate_secondary_nav_settings[ 'font_secondary_navigation' ] = current( explode( ':', $generate_secondary_nav_settings[ 'font_secondary_navigation' ] ) );
-			
-			// Grab the variants using the plain name
-			$variants = generate_get_google_font_variants( $generate_secondary_nav_settings[ 'font_secondary_navigation' ] );
-		
-		else :
-			$variants = '';
-		endif;
-		
-		// Replace the spaces in the names with a plus
-		$value = str_replace( ' ', '+', $generate_secondary_nav_settings[ 'font_secondary_navigation' ] );
-				
-		// If we have variants, add them to our value
-		$value = ! empty( $variants ) ? $value . ':' . $variants : $value;
-				
-		// Add our value to the array
-		$secondary_google_fonts[] = $value;
-		
-		// Ignore any non-Google fonts
-		$secondary_google_fonts = array_diff($secondary_google_fonts, $not_google);
-		
-		// Separate each different font with a bar
-		$secondary_google_fonts = implode('|', $secondary_google_fonts);
-		
-		if ( !empty( $secondary_google_fonts ) ) :
-			$print_secondary_fonts = '|' . $secondary_google_fonts;
-		else : 
-			$print_secondary_fonts = '';
-		endif;
-		
-		// Remove any duplicates
-		$return = $google_fonts . $print_secondary_fonts;
-		$return = implode('|',array_unique(explode('|', $return)));
-		return $return;
-		
 	}
+	
+	// Create our Google Fonts array
+	$secondary_google_fonts = array();
+	
+	if ( function_exists( 'generate_get_google_font_variants' ) ) :
+	
+		// If our value is still using the old format, fix it
+		if ( strpos( $generate_secondary_nav_settings[ 'font_secondary_navigation' ], ':' ) !== false )
+			$generate_secondary_nav_settings[ 'font_secondary_navigation' ] = current( explode( ':', $generate_secondary_nav_settings[ 'font_secondary_navigation' ] ) );
+		
+		// Grab the variants using the plain name
+		$variants = generate_get_google_font_variants( $generate_secondary_nav_settings[ 'font_secondary_navigation' ], 'font_secondary_navigation', generate_secondary_nav_get_defaults() );
+	
+	else :
+		$variants = '';
+	endif;
+	
+	// Replace the spaces in the names with a plus
+	$value = str_replace( ' ', '+', $generate_secondary_nav_settings[ 'font_secondary_navigation' ] );
+			
+	// If we have variants, add them to our value
+	$value = ! empty( $variants ) ? $value . ':' . $variants : $value;
+			
+	// Add our value to the array
+	$secondary_google_fonts[] = $value;
+	
+	// Ignore any non-Google fonts
+	$secondary_google_fonts = array_diff($secondary_google_fonts, $not_google);
+	
+	// Separate each different font with a bar
+	$secondary_google_fonts = implode('|', $secondary_google_fonts);
+	
+	if ( !empty( $secondary_google_fonts ) ) :
+		$print_secondary_fonts = '|' . $secondary_google_fonts;
+	else : 
+		$print_secondary_fonts = '';
+	endif;
+	
+	// Remove any duplicates
+	$return = $google_fonts . $print_secondary_fonts;
+	$return = implode('|',array_unique(explode('|', $return)));
+	return $return;
+	
+}
 endif;
 
 if ( ! function_exists( 'generate_secondary_navigation_customize_preview_css' ) ) :
@@ -1461,202 +598,206 @@ endif;
  * @since 0.1
  */
 if ( !function_exists( 'generate_secondary_nav_css' ) ) :
-	function generate_secondary_nav_css()
-	{
-		
-		$generate_settings = wp_parse_args( 
-			get_option( 'generate_secondary_nav_settings', array() ), 
-			generate_secondary_nav_get_defaults() 
-		);
-		
+function generate_secondary_nav_css()
+{
+	
+	$generate_settings = wp_parse_args( 
+		get_option( 'generate_secondary_nav_settings', array() ), 
+		generate_secondary_nav_get_defaults() 
+	);
+	
+	if ( function_exists( 'generate_spacing_get_defaults' ) ) {
 		$spacing_settings = wp_parse_args( 
 			get_option( 'generate_spacing_settings', array() ), 
 			generate_spacing_get_defaults() 
 		);
+	}
+
+	if ( function_exists( 'generate_get_font_family_css' ) ) :
+		$secondary_nav_family = generate_get_font_family_css( 'font_secondary_navigation', 'generate_secondary_nav_settings', generate_secondary_nav_get_defaults() );
+	else : 
+		$secondary_nav_family = current(explode(':', $generate_settings['font_secondary_navigation']));
+	endif;
 	
-		if ( function_exists( 'generate_get_font_family_css' ) ) :
-			$secondary_nav_family = generate_get_font_family_css( 'font_secondary_navigation', 'generate_secondary_nav_settings', generate_secondary_nav_get_defaults() );
-		else : 
-			$secondary_nav_family = current(explode(':', $generate_settings['font_secondary_navigation']));
-		endif;
+	if ( '""' == $secondary_nav_family ) {
+		$secondary_nav_family = 'inherit';
+	}
+	
+	// Start the magic
+	$visual_css = array (
 		
-		if ( '""' == $secondary_nav_family ) {
-			$secondary_nav_family = 'inherit';
-		}
+		// Navigation background
+		'.secondary-navigation' => array(
+			'background-color' => $generate_settings['navigation_background_color'],
+			'background-image' => !empty( $generate_settings['nav_image'] ) ? 'url(' . $generate_settings['nav_image'] . ')' : '',
+			'background-repeat' => $generate_settings['nav_repeat']
+		),
 		
-		// Start the magic
-		$visual_css = array (
-			
-			// Navigation background
-			'.secondary-navigation' => array(
-				'background-color' => $generate_settings['navigation_background_color'],
-				'background-image' => !empty( $generate_settings['nav_image'] ) ? 'url(' . $generate_settings['nav_image'] . ')' : '',
-				'background-repeat' => $generate_settings['nav_repeat']
-			),
-			
-			'.widget-area .secondary-navigation' => array(
-				'margin-bottom' => ( isset( $spacing_settings['separator'] ) ) ? $spacing_settings['separator'] . 'px' : null,
-			),
-			
-			// Sub-Navigation background
-			'.secondary-navigation ul ul' => array(
-				'background-color' => $generate_settings['subnavigation_background_color'],
-				'top' => ( isset( $generate_settings['secondary_menu_item_height'] ) ) ? $generate_settings['secondary_menu_item_height'] . 'px' : null,
-			),
-			
-			// Navigation text
-			'.secondary-navigation .main-nav ul li a,
-			.secondary-navigation .menu-toggle' => array(
-				'color' => $generate_settings['navigation_text_color'],
-				'font-family' => $secondary_nav_family,
-				'font-weight' => $generate_settings['secondary_navigation_font_weight'],
-				'text-transform' => $generate_settings['secondary_navigation_font_transform'],
-				'font-size' => $generate_settings['secondary_navigation_font_size'] . 'px',
-				'padding-left' => ( isset( $generate_settings['secondary_menu_item'] ) ) ? $generate_settings['secondary_menu_item'] . 'px' : null,
-				'padding-right' => ( isset( $generate_settings['secondary_menu_item'] ) ) ? $generate_settings['secondary_menu_item'] . 'px' : null,
-				'line-height' => ( isset( $generate_settings['secondary_menu_item_height'] ) ) ? $generate_settings['secondary_menu_item_height'] . 'px' : null,
-				'background-image' => !empty( $generate_settings['nav_item_image'] ) ? 'url(' . $generate_settings['nav_item_image'] . ')' : '',
-				'background-repeat' => $generate_settings['nav_item_repeat']
-			),
-			
-			// Mobile menu text
-			'button.secondary-menu-toggle:hover,
-			button.secondary-menu-toggle:focus' => array(
-				'color' => $generate_settings['navigation_text_color']
-			),
-			
-			// Sub-Navigation text
-			'.secondary-navigation .main-nav ul ul li a' => array(
-				'color' => $generate_settings['subnavigation_text_color'],
-				'font-size' => $generate_settings['secondary_navigation_font_size'] - 1 . 'px',
-				'padding-left' => ( isset( $generate_settings['secondary_menu_item'] ) ) ? $generate_settings['secondary_menu_item'] . 'px' : null,
-				'padding-right' => ( isset( $generate_settings['secondary_menu_item'] ) ) ? $generate_settings['secondary_menu_item'] . 'px' : null,
-				'padding-top' => ( isset( $generate_settings['secondary_sub_menu_item_height'] ) ) ? $generate_settings['secondary_sub_menu_item_height'] . 'px' : null,
-				'padding-bottom' => ( isset( $generate_settings['secondary_sub_menu_item_height'] ) ) ? $generate_settings['secondary_sub_menu_item_height'] . 'px' : null,
-				'background-image' => !empty( $generate_settings['sub_nav_item_image'] ) ? 'url(' . $generate_settings['sub_nav_item_image'] . ')' : '',
-				'background-repeat' => $generate_settings['sub_nav_item_repeat']
-			),
-			
-			'nav.secondary-navigation .main-nav ul li.menu-item-has-children > a' => array(
-				'padding-right' => ( isset( $generate_settings['secondary_menu_item'] ) && is_rtl() ) ? $generate_settings['secondary_menu_item'] . 'px' : null
-			),
-			
-			'.secondary-navigation .menu-item-has-children ul .dropdown-menu-toggle' => array (
-				'padding-top' => ( isset( $generate_settings[ 'secondary_sub_menu_item_height' ] ) ) ? $generate_settings[ 'secondary_sub_menu_item_height' ] . 'px' : null,
-				'padding-bottom' => ( isset( $generate_settings[ 'secondary_sub_menu_item_height' ] ) ) ? $generate_settings[ 'secondary_sub_menu_item_height' ] . 'px' : null,
-				'margin-top' => ( isset( $generate_settings[ 'secondary_sub_menu_item_height' ] ) ) ? '-' . $generate_settings[ 'secondary_sub_menu_item_height' ] . 'px' : null,
-			),
-			
-			'.secondary-navigation .menu-item-has-children .dropdown-menu-toggle' => array(
-				'padding-right' => ( isset( $generate_settings['secondary_menu_item'] ) ) ? $generate_settings['secondary_menu_item'] . 'px' : null,
-			),
-			
-			// Navigation background/text on hover
-			'.secondary-navigation .main-nav ul li > a:hover, 
-			.secondary-navigation .main-nav ul li > a:focus, 
-			.secondary-navigation .main-nav ul li.sfHover > a' => array(
-				'color' => $generate_settings['navigation_text_hover_color'],
-				'background-color' => $generate_settings['navigation_background_hover_color'],
-				'background-image' => !empty( $generate_settings['nav_item_hover_image'] ) ? 'url(' . $generate_settings['nav_item_hover_image'] . ')' : '',
-				'background-repeat' => $generate_settings['nav_item_hover_repeat']
-			),
-			
-			// Sub-Navigation background/text on hover
-			'.secondary-navigation .main-nav ul ul li > a:hover,
-			.secondary-navigation .main-nav ul ul li > a:focus,
-			.secondary-navigation .main-nav ul ul li.sfHover > a' => array(
-				'color' => $generate_settings['subnavigation_text_hover_color'],
-				'background-color' => $generate_settings['subnavigation_background_hover_color'],
-				'background-image' => !empty( $generate_settings['sub_nav_item_hover_image'] ) ? 'url(' . $generate_settings['sub_nav_item_hover_image'] . ')' : '',
-				'background-repeat' => $generate_settings['sub_nav_item_hover_repeat']
-			),
-			
-			// Navigation background / text current
-			'.secondary-navigation .main-nav ul .current-menu-item > a, 
-			.secondary-navigation .main-nav ul .current-menu-parent > a, 
-			.secondary-navigation .main-nav ul .current-menu-ancestor > a' => array(
-				'color' => $generate_settings['navigation_text_current_color'],
-				'background-color' => $generate_settings['navigation_background_current_color'],
-				'background-image' => !empty( $generate_settings['nav_item_current_image'] ) ? 'url(' . $generate_settings['nav_item_current_image'] . ')' : '',
-				'background-repeat' => $generate_settings['nav_item_current_repeat']
-			),
-			
-			// Navigation background text current text hover
-			'.secondary-navigation .main-nav ul .current-menu-item > a:hover, 
-			.secondary-navigation .main-nav ul .current-menu-parent > a:hover, 
-			.secondary-navigation .main-nav ul .current-menu-ancestor > a:hover, 
-			.secondary-navigation .main-nav ul .current-menu-item.sfHover > a, 
-			.secondary-navigation .main-nav ul .current-menu-parent.sfHover > a, 
-			.secondary-navigation .main-nav ul .current-menu-ancestor.sfHover > a' => array(
-				'color' => $generate_settings['navigation_text_current_color'],
-				'background-color' => $generate_settings['navigation_background_current_color'],
-				'background-image' => !empty( $generate_settings['nav_item_current_image'] ) ? 'url(' . $generate_settings['nav_item_current_image'] . ')' : '',
-				'background-repeat' => $generate_settings['nav_item_current_repeat']
-			),
-			
-			// Sub-Navigation background / text current
-			'.secondary-navigation .main-nav ul ul .current-menu-item > a, 
-			.secondary-navigation .main-nav ul ul .current-menu-parent > a, 
-			.secondary-navigation .main-nav ul ul .current-menu-ancestor > a' => array(
-				'color' => $generate_settings['subnavigation_text_current_color'],
-				'background-color' => $generate_settings['subnavigation_background_current_color'],
-				'background-image' => !empty( $generate_settings['sub_nav_item_current_image'] ) ? 'url(' . $generate_settings['sub_nav_item_current_image'] . ')' : '',
-				'background-repeat' => $generate_settings['sub_nav_item_current_repeat']
-			),
-			
-			// Sub-Navigation current background / text current
-			'.secondary-navigation .main-nav ul ul .current-menu-item > a:hover, 
-			.secondary-navigation .main-nav ul ul .current-menu-parent > a:hover, 
-			.secondary-navigation .main-nav ul ul .current-menu-ancestor > a:hover,
-			.secondary-navigation .main-nav ul ul .current-menu-item.sfHover > a, 
-			.secondary-navigation .main-nav ul ul .current-menu-parent.sfHover > a, 
-			.secondary-navigation .main-nav ul ul .current-menu-ancestor.sfHover > a' => array(
-				'color' => $generate_settings['subnavigation_text_current_color'],
-				'background-color' => $generate_settings['subnavigation_background_current_color'],
-				'background-image' => !empty( $generate_settings['sub_nav_item_current_image'] ) ? 'url(' . $generate_settings['sub_nav_item_current_image'] . ')' : '',
-				'background-repeat' => $generate_settings['sub_nav_item_current_repeat']
-			)
-			
-		);
+		'.widget-area .secondary-navigation' => array(
+			'margin-bottom' => ( isset( $spacing_settings['separator'] ) ) ? $spacing_settings['separator'] . 'px' : null,
+		),
 		
-		// Output the above CSS
-		$output = '';
-		foreach($visual_css as $k => $properties) {
-			if(!count($properties))
+		// Sub-Navigation background
+		'.secondary-navigation ul ul' => array(
+			'background-color' => $generate_settings['subnavigation_background_color'],
+			'top' => ( isset( $generate_settings['secondary_menu_item_height'] ) ) ? $generate_settings['secondary_menu_item_height'] . 'px' : null,
+		),
+		
+		// Navigation text
+		'.secondary-navigation .main-nav ul li a,
+		.secondary-navigation .menu-toggle' => array(
+			'color' => $generate_settings['navigation_text_color'],
+			'font-family' => $secondary_nav_family,
+			'font-weight' => $generate_settings['secondary_navigation_font_weight'],
+			'text-transform' => $generate_settings['secondary_navigation_font_transform'],
+			'font-size' => $generate_settings['secondary_navigation_font_size'] . 'px',
+			'padding-left' => ( isset( $generate_settings['secondary_menu_item'] ) ) ? $generate_settings['secondary_menu_item'] . 'px' : null,
+			'padding-right' => ( isset( $generate_settings['secondary_menu_item'] ) ) ? $generate_settings['secondary_menu_item'] . 'px' : null,
+			'line-height' => ( isset( $generate_settings['secondary_menu_item_height'] ) ) ? $generate_settings['secondary_menu_item_height'] . 'px' : null,
+			'background-image' => !empty( $generate_settings['nav_item_image'] ) ? 'url(' . $generate_settings['nav_item_image'] . ')' : '',
+			'background-repeat' => $generate_settings['nav_item_repeat']
+		),
+		
+		// Mobile menu text
+		'button.secondary-menu-toggle:hover,
+		button.secondary-menu-toggle:focus' => array(
+			'color' => $generate_settings['navigation_text_color']
+		),
+		
+		// Sub-Navigation text
+		'.secondary-navigation .main-nav ul ul li a' => array(
+			'color' => $generate_settings['subnavigation_text_color'],
+			'font-size' => $generate_settings['secondary_navigation_font_size'] - 1 . 'px',
+			'padding-left' => ( isset( $generate_settings['secondary_menu_item'] ) ) ? $generate_settings['secondary_menu_item'] . 'px' : null,
+			'padding-right' => ( isset( $generate_settings['secondary_menu_item'] ) ) ? $generate_settings['secondary_menu_item'] . 'px' : null,
+			'padding-top' => ( isset( $generate_settings['secondary_sub_menu_item_height'] ) ) ? $generate_settings['secondary_sub_menu_item_height'] . 'px' : null,
+			'padding-bottom' => ( isset( $generate_settings['secondary_sub_menu_item_height'] ) ) ? $generate_settings['secondary_sub_menu_item_height'] . 'px' : null,
+			'background-image' => !empty( $generate_settings['sub_nav_item_image'] ) ? 'url(' . $generate_settings['sub_nav_item_image'] . ')' : '',
+			'background-repeat' => $generate_settings['sub_nav_item_repeat']
+		),
+		
+		'nav.secondary-navigation .main-nav ul li.menu-item-has-children > a' => array(
+			'padding-right' => ( isset( $generate_settings['secondary_menu_item'] ) && is_rtl() ) ? $generate_settings['secondary_menu_item'] . 'px' : null
+		),
+		
+		'.secondary-navigation .menu-item-has-children ul .dropdown-menu-toggle' => array (
+			'padding-top' => ( isset( $generate_settings[ 'secondary_sub_menu_item_height' ] ) ) ? $generate_settings[ 'secondary_sub_menu_item_height' ] . 'px' : null,
+			'padding-bottom' => ( isset( $generate_settings[ 'secondary_sub_menu_item_height' ] ) ) ? $generate_settings[ 'secondary_sub_menu_item_height' ] . 'px' : null,
+			'margin-top' => ( isset( $generate_settings[ 'secondary_sub_menu_item_height' ] ) ) ? '-' . $generate_settings[ 'secondary_sub_menu_item_height' ] . 'px' : null,
+		),
+		
+		'.secondary-navigation .menu-item-has-children .dropdown-menu-toggle' => array(
+			'padding-right' => ( isset( $generate_settings['secondary_menu_item'] ) ) ? $generate_settings['secondary_menu_item'] . 'px' : null,
+		),
+		
+		// Navigation background/text on hover
+		'.secondary-navigation .main-nav ul li > a:hover, 
+		.secondary-navigation .main-nav ul li > a:focus, 
+		.secondary-navigation .main-nav ul li.sfHover > a' => array(
+			'color' => $generate_settings['navigation_text_hover_color'],
+			'background-color' => $generate_settings['navigation_background_hover_color'],
+			'background-image' => !empty( $generate_settings['nav_item_hover_image'] ) ? 'url(' . $generate_settings['nav_item_hover_image'] . ')' : '',
+			'background-repeat' => $generate_settings['nav_item_hover_repeat']
+		),
+		
+		// Sub-Navigation background/text on hover
+		'.secondary-navigation .main-nav ul ul li > a:hover,
+		.secondary-navigation .main-nav ul ul li > a:focus,
+		.secondary-navigation .main-nav ul ul li.sfHover > a' => array(
+			'color' => $generate_settings['subnavigation_text_hover_color'],
+			'background-color' => $generate_settings['subnavigation_background_hover_color'],
+			'background-image' => !empty( $generate_settings['sub_nav_item_hover_image'] ) ? 'url(' . $generate_settings['sub_nav_item_hover_image'] . ')' : '',
+			'background-repeat' => $generate_settings['sub_nav_item_hover_repeat']
+		),
+		
+		// Navigation background / text current
+		'.secondary-navigation .main-nav ul .current-menu-item > a, 
+		.secondary-navigation .main-nav ul .current-menu-parent > a, 
+		.secondary-navigation .main-nav ul .current-menu-ancestor > a' => array(
+			'color' => $generate_settings['navigation_text_current_color'],
+			'background-color' => $generate_settings['navigation_background_current_color'],
+			'background-image' => !empty( $generate_settings['nav_item_current_image'] ) ? 'url(' . $generate_settings['nav_item_current_image'] . ')' : '',
+			'background-repeat' => $generate_settings['nav_item_current_repeat']
+		),
+		
+		// Navigation background text current text hover
+		'.secondary-navigation .main-nav ul .current-menu-item > a:hover, 
+		.secondary-navigation .main-nav ul .current-menu-parent > a:hover, 
+		.secondary-navigation .main-nav ul .current-menu-ancestor > a:hover, 
+		.secondary-navigation .main-nav ul .current-menu-item.sfHover > a, 
+		.secondary-navigation .main-nav ul .current-menu-parent.sfHover > a, 
+		.secondary-navigation .main-nav ul .current-menu-ancestor.sfHover > a' => array(
+			'color' => $generate_settings['navigation_text_current_color'],
+			'background-color' => $generate_settings['navigation_background_current_color'],
+			'background-image' => !empty( $generate_settings['nav_item_current_image'] ) ? 'url(' . $generate_settings['nav_item_current_image'] . ')' : '',
+			'background-repeat' => $generate_settings['nav_item_current_repeat']
+		),
+		
+		// Sub-Navigation background / text current
+		'.secondary-navigation .main-nav ul ul .current-menu-item > a, 
+		.secondary-navigation .main-nav ul ul .current-menu-parent > a, 
+		.secondary-navigation .main-nav ul ul .current-menu-ancestor > a' => array(
+			'color' => $generate_settings['subnavigation_text_current_color'],
+			'background-color' => $generate_settings['subnavigation_background_current_color'],
+			'background-image' => !empty( $generate_settings['sub_nav_item_current_image'] ) ? 'url(' . $generate_settings['sub_nav_item_current_image'] . ')' : '',
+			'background-repeat' => $generate_settings['sub_nav_item_current_repeat']
+		),
+		
+		// Sub-Navigation current background / text current
+		'.secondary-navigation .main-nav ul ul .current-menu-item > a:hover, 
+		.secondary-navigation .main-nav ul ul .current-menu-parent > a:hover, 
+		.secondary-navigation .main-nav ul ul .current-menu-ancestor > a:hover,
+		.secondary-navigation .main-nav ul ul .current-menu-item.sfHover > a, 
+		.secondary-navigation .main-nav ul ul .current-menu-parent.sfHover > a, 
+		.secondary-navigation .main-nav ul ul .current-menu-ancestor.sfHover > a' => array(
+			'color' => $generate_settings['subnavigation_text_current_color'],
+			'background-color' => $generate_settings['subnavigation_background_current_color'],
+			'background-image' => !empty( $generate_settings['sub_nav_item_current_image'] ) ? 'url(' . $generate_settings['sub_nav_item_current_image'] . ')' : '',
+			'background-repeat' => $generate_settings['sub_nav_item_current_repeat']
+		)
+		
+	);
+	
+	// Output the above CSS
+	$output = '';
+	foreach($visual_css as $k => $properties) {
+		if(!count($properties))
+			continue;
+
+		$temporary_output = $k . ' {';
+		$elements_added = 0;
+
+		foreach($properties as $p => $v) {
+			if(empty($v))
 				continue;
 
-			$temporary_output = $k . ' {';
-			$elements_added = 0;
-
-			foreach($properties as $p => $v) {
-				if(empty($v))
-					continue;
-
-				$elements_added++;
-				$temporary_output .= $p . ': ' . $v . '; ';
-			}
-
-			$temporary_output .= "}";
-
-			if($elements_added > 0)
-				$output .= $temporary_output;
+			$elements_added++;
+			$temporary_output .= $p . ': ' . $v . '; ';
 		}
-		
 
-		
-		$output = str_replace(array("\r", "\n", "\t"), '', $output);
-		return $output;
+		$temporary_output .= "}";
+
+		if($elements_added > 0)
+			$output .= $temporary_output;
 	}
 	
-	/**
-	 * Enqueue scripts and styles
-	 */
-	add_action( 'wp_enqueue_scripts', 'generate_secondary_color_scripts', 80 );
-	function generate_secondary_color_scripts() {
 
-		wp_add_inline_style( 'generate-style', generate_secondary_nav_css() );
 	
-	}
+	$output = str_replace(array("\r", "\n", "\t"), '', $output);
+	return $output;
+}
+endif;
+
+if ( ! function_exists( 'generate_secondary_color_scripts' ) ) :
+/**
+ * Enqueue scripts and styles
+ */
+add_action( 'wp_enqueue_scripts', 'generate_secondary_color_scripts', 80 );
+function generate_secondary_color_scripts() {
+
+	wp_add_inline_style( 'generate-style', generate_secondary_nav_css() );
+
+}
 endif;
 
 if ( ! function_exists( 'generate_secondary_navigation_class' ) ) :
@@ -1749,5 +890,23 @@ function generate_secondary_nav_sanitize_choices( $input, $setting ) {
 	// If the input is a valid key, return it;
 	// otherwise, return the default
 	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+}
+endif;
+
+if ( ! function_exists( 'generate_hidden_secondary_navigation' ) && function_exists( 'is_customize_preview' ) ) :
+/**
+ * Adds a hidden navigation if no navigation is set
+ * This allows us to use postMessage to position the navigation when it doesn't exist
+ */
+add_action( 'wp_footer','generate_hidden_secondary_navigation' );
+function generate_hidden_secondary_navigation()
+{
+	if ( is_customize_preview() && function_exists( 'generate_secondary_navigation_position' ) ) {
+		?>
+		<div style="display:none;">
+			<?php generate_secondary_navigation_position(); ?>
+		</div>
+		<?php
+	}
 }
 endif;

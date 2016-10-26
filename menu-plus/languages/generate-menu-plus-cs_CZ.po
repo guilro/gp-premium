@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Generate Menu Plus\n"
-"POT-Creation-Date: 2016-05-07 14:36+0200\n"
-"PO-Revision-Date: 2016-05-07 14:37+0200\n"
+"POT-Creation-Date: 2016-07-24 21:41+0200\n"
+"PO-Revision-Date: 2016-07-24 21:47+0200\n"
 "Last-Translator: Foxtrot <foxtrot@foxtrot.me>\n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: generate-menu-plus.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -20,12 +20,11 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: functions/generate-menu-plus.php:7 functions/generate-menu-plus.php:305
-#: functions/generate-menu-plus.php:329
+#: functions/generate-menu-plus.php:7 functions/generate-menu-plus.php:334
 msgid "Slideout Menu"
 msgstr "Vysouvací menu"
 
-#: functions/generate-menu-plus.php:19 functions/generate-menu-plus.php:587
+#: functions/generate-menu-plus.php:19 functions/generate-menu-plus.php:623
 msgid "Menu"
 msgstr "Menu"
 
@@ -33,88 +32,96 @@ msgstr "Menu"
 msgid "Menu Plus"
 msgstr "Menu plus"
 
-#: functions/generate-menu-plus.php:61
+#: functions/generate-menu-plus.php:73
 msgid "General Settings"
 msgstr "Základní nastavení"
 
-#: functions/generate-menu-plus.php:78
+#: functions/generate-menu-plus.php:91
 msgid "Mobile Menu Label"
-msgstr "Název mobilního menu"
+msgstr "Název menu na mobilu"
 
-#: functions/generate-menu-plus.php:90 functions/generate-menu-plus.php:114
+#: functions/generate-menu-plus.php:103
 msgid "Sticky Menu"
 msgstr "Přilepené menu"
 
-#: functions/generate-menu-plus.php:117 functions/generate-menu-plus.php:332
+#: functions/generate-menu-plus.php:129
+msgid "Sticky Navigation"
+msgstr "Přilepená navigace"
+
+#: functions/generate-menu-plus.php:132 functions/generate-menu-plus.php:363
 msgid "Mobile only"
 msgstr "Pouze na mobilu"
 
-#: functions/generate-menu-plus.php:118 functions/generate-menu-plus.php:333
+#: functions/generate-menu-plus.php:133 functions/generate-menu-plus.php:364
 msgid "Desktop only"
 msgstr "Pouze na počítači"
 
-#: functions/generate-menu-plus.php:119 functions/generate-menu-plus.php:334
+#: functions/generate-menu-plus.php:134 functions/generate-menu-plus.php:365
 msgid "Both"
 msgstr "Obojí"
 
-#: functions/generate-menu-plus.php:120 functions/generate-menu-plus.php:241
-#: functions/generate-menu-plus.php:292 functions/generate-menu-plus.php:335
+#: functions/generate-menu-plus.php:135 functions/generate-menu-plus.php:267
+#: functions/generate-menu-plus.php:320 functions/generate-menu-plus.php:366
 msgid "Disable"
 msgstr "Zakázat"
 
-#: functions/generate-menu-plus.php:145
-msgid "Sticky Menu Effect"
-msgstr "Efekt přilepeného menu"
+#: functions/generate-menu-plus.php:162
+msgid "Sticky Navigation Effect"
+msgstr "Efekt přilepené navigace"
 
-#: functions/generate-menu-plus.php:148
+#: functions/generate-menu-plus.php:165
 msgid "Fade"
 msgstr "Vyblednutí"
 
-#: functions/generate-menu-plus.php:149
+#: functions/generate-menu-plus.php:166
 msgid "Slide"
 msgstr "Vysunutí"
 
-#: functions/generate-menu-plus.php:150
+#: functions/generate-menu-plus.php:167
 msgid "None"
 msgstr "Žádný"
 
-#: functions/generate-menu-plus.php:171
-msgid "Menu Logo"
-msgstr "Logo menu"
+#: functions/generate-menu-plus.php:190
+msgid "Sticky Navigation Logo"
+msgstr "Logo přilepené navigace"
 
-#: functions/generate-menu-plus.php:196
-msgid "Menu Logo Position"
-msgstr "Umístění loga menu"
+#: functions/generate-menu-plus.php:218
+msgid "Sticky Navigation Logo Position"
+msgstr "Umístění loga přilepené navigace"
 
-#: functions/generate-menu-plus.php:199
+#: functions/generate-menu-plus.php:221
 msgid "Sticky Only"
 msgstr "Pouze přilepené"
 
-#: functions/generate-menu-plus.php:200
+#: functions/generate-menu-plus.php:222
 msgid "Sticky + Regular"
 msgstr "Přilepené + normální"
 
-#: functions/generate-menu-plus.php:201
+#: functions/generate-menu-plus.php:223
 msgid "Regular Only"
 msgstr "Pouze normální"
 
-#: functions/generate-menu-plus.php:214 functions/generate-menu-plus.php:238
+#: functions/generate-menu-plus.php:238 functions/generate-menu-plus.php:264
 msgid "Mobile Header"
-msgstr "Mobilní hlavička"
+msgstr "Hlavička na mobilu"
 
-#: functions/generate-menu-plus.php:242 functions/generate-menu-plus.php:291
+#: functions/generate-menu-plus.php:268 functions/generate-menu-plus.php:319
 msgid "Enable"
 msgstr "Povolit"
 
-#: functions/generate-menu-plus.php:263
-msgid "Logo"
-msgstr "Logo"
+#: functions/generate-menu-plus.php:289
+msgid "Mobile Header Logo"
+msgstr "Logo hlavičky na mobilu"
 
-#: functions/generate-menu-plus.php:288
-msgid "Sticky Header"
-msgstr "Přilepená hlavička"
+#: functions/generate-menu-plus.php:316
+msgid "Sticky Mobile Header"
+msgstr "Přilepená hlavička na mobilu"
 
-#: functions/generate-menu-plus.php:630
+#: functions/generate-menu-plus.php:360
+msgid "Slideout Navigation"
+msgstr "Vysouvací navigace"
+
+#: functions/generate-menu-plus.php:666
 msgid "Skip to content"
 msgstr "Přeskočit na obsah"
 
@@ -137,6 +144,21 @@ msgstr "Thomas Usborne"
 #. Author URI of the plugin/theme
 msgid "http://edge22.com"
 msgstr "http://edge22.com"
+
+#~ msgid "Sticky Menu Effect"
+#~ msgstr "Efekt přilepeného menu"
+
+#~ msgid "Menu Logo"
+#~ msgstr "Logo menu"
+
+#~ msgid "Menu Logo Position"
+#~ msgstr "Umístění loga menu"
+
+#~ msgid "Logo"
+#~ msgstr "Logo"
+
+#~ msgid "Sticky Header"
+#~ msgstr "Přilepená hlavička"
 
 #~ msgid ""
 #~ "There is a new version of %1$s available. <a target=\"_blank\" class="

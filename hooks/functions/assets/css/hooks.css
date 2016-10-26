@@ -44,6 +44,12 @@
     top: 20px;
 }
 
+.rtl #gp_hooks_settings .sticky-scroll-box.fixed {
+    position: fixed;
+    left: 18px;
+	right: auto;
+}
+
 #gp_hooks_settings input[type="checkbox"] {
 	margin-top: 1px;
 	margin-right: 0px;

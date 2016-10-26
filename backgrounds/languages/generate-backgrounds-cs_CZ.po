@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Generate Backgrounds\n"
-"POT-Creation-Date: 2015-10-12 15:54+0200\n"
-"PO-Revision-Date: 2015-10-12 15:54+0200\n"
+"POT-Creation-Date: 2016-07-24 20:23+0200\n"
+"PO-Revision-Date: 2016-07-24 21:31+0200\n"
 "Last-Translator: Foxtrot <foxtrot@foxtrot.me>\n"
 "Language-Team: \n"
 "Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 1.8.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -34,153 +34,169 @@ msgstr "Nahrát"
 msgid "Remove"
 msgstr "Odstranit"
 
-#: functions/functions.php:74
+#: functions/functions.php:76 functions/functions.php:85
 msgid "Background Images"
 msgstr "Obrázky na pozadí"
 
-#: functions/functions.php:88
+#: functions/functions.php:94 functions/functions.php:111
 msgid "Body"
 msgstr "Tělo"
 
-#: functions/functions.php:126 functions/functions.php:272
-#: functions/functions.php:418 functions/functions.php:480
-#: functions/functions.php:542 functions/functions.php:604
-#: functions/functions.php:678 functions/functions.php:740
-#: functions/functions.php:802 functions/functions.php:876
-#: functions/functions.php:1022 functions/functions.php:1168
-#: functions/functions.php:1314
+#: functions/functions.php:153 functions/functions.php:311
+#: functions/functions.php:469 functions/functions.php:532
+#: functions/functions.php:595 functions/functions.php:658
+#: functions/functions.php:743 functions/functions.php:806
+#: functions/functions.php:869 functions/functions.php:954
+#: functions/functions.php:1112 functions/functions.php:1270
+#: functions/functions.php:1418
 msgid "Repeat"
 msgstr "Opakovat"
 
-#: functions/functions.php:127 functions/functions.php:273
-#: functions/functions.php:419 functions/functions.php:481
-#: functions/functions.php:543 functions/functions.php:605
-#: functions/functions.php:679 functions/functions.php:741
-#: functions/functions.php:803 functions/functions.php:877
-#: functions/functions.php:1023 functions/functions.php:1169
-#: functions/functions.php:1315
+#: functions/functions.php:154 functions/functions.php:312
+#: functions/functions.php:470 functions/functions.php:533
+#: functions/functions.php:596 functions/functions.php:659
+#: functions/functions.php:744 functions/functions.php:807
+#: functions/functions.php:870 functions/functions.php:955
+#: functions/functions.php:1113 functions/functions.php:1271
+#: functions/functions.php:1419
 msgid "Repeat x"
 msgstr "Opakovat x"
 
-#: functions/functions.php:128 functions/functions.php:274
-#: functions/functions.php:420 functions/functions.php:482
-#: functions/functions.php:544 functions/functions.php:606
-#: functions/functions.php:680 functions/functions.php:742
-#: functions/functions.php:804 functions/functions.php:878
-#: functions/functions.php:1024 functions/functions.php:1170
-#: functions/functions.php:1316
+#: functions/functions.php:155 functions/functions.php:313
+#: functions/functions.php:471 functions/functions.php:534
+#: functions/functions.php:597 functions/functions.php:660
+#: functions/functions.php:745 functions/functions.php:808
+#: functions/functions.php:871 functions/functions.php:956
+#: functions/functions.php:1114 functions/functions.php:1272
+#: functions/functions.php:1420
 msgid "Repeat y"
 msgstr "Opakovat y"
 
-#: functions/functions.php:129 functions/functions.php:275
-#: functions/functions.php:421 functions/functions.php:483
-#: functions/functions.php:545 functions/functions.php:607
-#: functions/functions.php:681 functions/functions.php:743
-#: functions/functions.php:805 functions/functions.php:879
-#: functions/functions.php:1025 functions/functions.php:1171
-#: functions/functions.php:1317
+#: functions/functions.php:156 functions/functions.php:314
+#: functions/functions.php:472 functions/functions.php:535
+#: functions/functions.php:598 functions/functions.php:661
+#: functions/functions.php:746 functions/functions.php:809
+#: functions/functions.php:872 functions/functions.php:957
+#: functions/functions.php:1115 functions/functions.php:1273
+#: functions/functions.php:1421
 msgid "No Repeat"
 msgstr "Neopakovat"
 
-#: functions/functions.php:151 functions/functions.php:297
-#: functions/functions.php:901 functions/functions.php:1047
-#: functions/functions.php:1193 functions/functions.php:1339
+#: functions/functions.php:178 functions/functions.php:336
+#: functions/functions.php:979 functions/functions.php:1137
+#: functions/functions.php:1295 functions/functions.php:1443
 msgid "Size (Auto)"
 msgstr "Velikost (automatická)"
 
-#: functions/functions.php:152 functions/functions.php:298
-#: functions/functions.php:902 functions/functions.php:1048
-#: functions/functions.php:1194 functions/functions.php:1340
+#: functions/functions.php:179 functions/functions.php:337
+#: functions/functions.php:980 functions/functions.php:1138
+#: functions/functions.php:1296 functions/functions.php:1444
 msgid "100% Width"
 msgstr "100% šířka"
 
-#: functions/functions.php:153 functions/functions.php:299
-#: functions/functions.php:903 functions/functions.php:1049
-#: functions/functions.php:1195 functions/functions.php:1341
+#: functions/functions.php:180 functions/functions.php:338
+#: functions/functions.php:981 functions/functions.php:1139
+#: functions/functions.php:1297 functions/functions.php:1445
 msgid "Cover"
 msgstr "Pokrýt"
 
-#: functions/functions.php:154 functions/functions.php:300
-#: functions/functions.php:904 functions/functions.php:1050
-#: functions/functions.php:1196 functions/functions.php:1342
+#: functions/functions.php:181 functions/functions.php:339
+#: functions/functions.php:982 functions/functions.php:1140
+#: functions/functions.php:1298 functions/functions.php:1446
 msgid "Contain"
 msgstr "Omezit"
 
-#: functions/functions.php:176 functions/functions.php:322
-#: functions/functions.php:926 functions/functions.php:1072
-#: functions/functions.php:1218 functions/functions.php:1364
+#: functions/functions.php:203 functions/functions.php:361
+#: functions/functions.php:1004 functions/functions.php:1162
+#: functions/functions.php:1320 functions/functions.php:1468
 msgid "Attachment"
 msgstr "Přichycení"
 
-#: functions/functions.php:177 functions/functions.php:323
-#: functions/functions.php:927 functions/functions.php:1073
-#: functions/functions.php:1219 functions/functions.php:1365
+#: functions/functions.php:204 functions/functions.php:362
+#: functions/functions.php:1005 functions/functions.php:1163
+#: functions/functions.php:1321 functions/functions.php:1469
 msgid "Fixed"
 msgstr "Pevné"
 
-#: functions/functions.php:178 functions/functions.php:324
-#: functions/functions.php:928 functions/functions.php:1074
-#: functions/functions.php:1220 functions/functions.php:1366
+#: functions/functions.php:205 functions/functions.php:363
+#: functions/functions.php:1006 functions/functions.php:1164
+#: functions/functions.php:1322 functions/functions.php:1470
 msgid "Local"
 msgstr "Místní"
 
-#: functions/functions.php:179 functions/functions.php:325
-#: functions/functions.php:929 functions/functions.php:1075
-#: functions/functions.php:1221 functions/functions.php:1367
+#: functions/functions.php:206 functions/functions.php:364
+#: functions/functions.php:1007 functions/functions.php:1165
+#: functions/functions.php:1323 functions/functions.php:1471
 msgid "Inherit"
 msgstr "Zděděné"
 
-#: functions/functions.php:203 functions/functions.php:349
-#: functions/functions.php:953 functions/functions.php:1099
-#: functions/functions.php:1245 functions/functions.php:1391
+#: functions/functions.php:231 functions/functions.php:389
+#: functions/functions.php:1032 functions/functions.php:1190
+#: functions/functions.php:1348 functions/functions.php:1496
 msgid "Position"
 msgstr "Umístění"
 
-#: functions/functions.php:230
+#: functions/functions.php:251 functions/functions.php:268
 msgid "Header"
 msgstr "Hlavička"
 
-#: functions/functions.php:376
+#: functions/functions.php:409
+msgid "Primary Navigation"
+msgstr "Primární navigace"
+
+#: functions/functions.php:426
 msgid "Navigation"
 msgstr "Navigace"
 
-#: functions/functions.php:438
+#: functions/functions.php:489
 msgid "Navigation Item"
 msgstr "Položka navigace"
 
-#: functions/functions.php:500
+#: functions/functions.php:552
 msgid "Navigation Item Hover"
 msgstr "Položka navigace při přejetí myší"
 
-#: functions/functions.php:562
+#: functions/functions.php:615
 msgid "Navigation Item Current"
 msgstr "Aktuální položka navigace"
 
-#: functions/functions.php:636
+#: functions/functions.php:683
+msgid "Primary Sub-Navigation"
+msgstr "Primární sub-navigace"
+
+#: functions/functions.php:700
 msgid "Sub-Navigation Item"
-msgstr "Položka pod-navigace"
+msgstr "Položka sub-navigace"
 
-#: functions/functions.php:698
+#: functions/functions.php:763
 msgid "Sub-Navigation Item Hover"
-msgstr "Položka pod-navigace při přejetí myší"
+msgstr "Položka sub-navigace při přejetí myší"
 
-#: functions/functions.php:760
+#: functions/functions.php:826
 msgid "Sub-Navigation Item Current"
-msgstr "Aktuální položka pod-navigace"
+msgstr "Aktuální položka sub-navigace"
 
-#: functions/functions.php:834
+#: functions/functions.php:894 functions/functions.php:911
 msgid "Content"
 msgstr "Obsah"
 
-#: functions/functions.php:980
+#: functions/functions.php:1052
+msgid "Sidebar"
+msgstr "Postranní panel"
+
+#: functions/functions.php:1069
 msgid "Sidebar Widgets"
 msgstr "Widgety v postranních panelech"
 
-#: functions/functions.php:1126
+#: functions/functions.php:1210
+msgid "Footer"
+msgstr "Patička"
+
+#: functions/functions.php:1227
 msgid "Footer Widget Area"
 msgstr "Oblast widgetů patičky"
 
-#: functions/functions.php:1272
+#: functions/functions.php:1375
 msgid "Footer Area"
 msgstr "Oblast patičky"
 

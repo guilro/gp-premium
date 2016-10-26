@@ -5,6 +5,9 @@ Author: Thomas Usborne
 Author URI: http://edge22.com
 */
 
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 // Define the version
 if ( ! defined( 'GENERATE_COLORS_VERSION' ) )
 	define( 'GENERATE_COLORS_VERSION', GP_PREMIUM_VERSION );

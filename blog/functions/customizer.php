@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_blog_customize_register' ) ) :
 add_action( 'customize_register', 'generate_blog_customize_register', 99 );
 function generate_blog_customize_register( $wp_customize ) {
@@ -13,7 +16,7 @@ function generate_blog_customize_register( $wp_customize ) {
 			'priority'       => 35,
 			'capability'     => 'edit_theme_options',
 			'theme_supports' => '',
-			'title'          => __( 'Blog','generate' ),
+			'title'          => __( 'Blog','generate-blog' ),
 			'description'    => ''
 		) );
 		
@@ -24,6 +27,13 @@ function generate_blog_customize_register( $wp_customize ) {
 	
 	endif;
 	
+	if ( method_exists( $wp_customize,'register_control_type' ) ) {
+		$wp_customize->register_control_type( 'Generate_Blog_Customize_Control' );
+		$wp_customize->register_control_type( 'Generate_Blog_Number_Customize_Control' );
+		$wp_customize->register_control_type( 'Generate_Post_Image_Save' );
+		$wp_customize->register_control_type( 'Generate_Blog_Text_Control' );
+	}
+	
 	// Blog content
 	$wp_customize->add_section(
 		// ID
@@ -33,8 +43,7 @@ function generate_blog_customize_register( $wp_customize ) {
 			'title' => __( 'Blog Content', 'generate-blog' ),
 			'capability' => 'edit_theme_options',
 			'priority' => 10,
-			'panel' => 'generate_blog_panel',
-			'active_callback' => 'generate_blog_is_posts_page_single'
+			'panel' => 'generate_blog_panel'
 		)
 	);
 	
@@ -46,14 +55,18 @@ function generate_blog_customize_register( $wp_customize ) {
 			'sanitize_callback' => 'absint'
 		)
 	);
-		 
+	
 	$wp_customize->add_control(
-		'blog_excerpt_length_control', array(
-			'label' => __('Excerpt Length', 'generate-blog'),
-			'section' => 'blog_content_section',
-			'settings' => 'generate_blog_settings[excerpt_length]',
-			'priority' => 10,
-			'active_callback' => 'generate_blog_is_excerpt'
+		new Generate_Blog_Number_Customize_Control(
+			$wp_customize,
+			'blog_excerpt_length_control', array(
+				'label' => __('Excerpt Length', 'generate-blog'),
+				'section' => 'blog_content_section',
+				'settings' => 'generate_blog_settings[excerpt_length]',
+				'priority' => 10,
+				'active_callback' => 'generate_blog_is_excerpt',
+				'type' => 'gp-blog-number'
+			)
 		)
 	);
 	
@@ -84,8 +97,7 @@ function generate_blog_customize_register( $wp_customize ) {
 			'title' => __( 'Masonry', 'generate-blog' ),
 			'capability' => 'edit_theme_options',
 			'priority' => 20,
-			'panel' => 'generate_blog_panel',
-			'active_callback' => 'generate_blog_is_posts_page'
+			'panel' => 'generate_blog_panel'
 		)
 	);
 	
@@ -228,8 +240,7 @@ function generate_blog_customize_register( $wp_customize ) {
 			'title' => __( 'Post Image', 'generate-blog' ),
 			'capability' => 'edit_theme_options',
 			'priority' => 30,
-			'panel' => 'generate_blog_panel',
-			'active_callback' => 'generate_blog_is_posts_page'
+			'panel' => 'generate_blog_panel'
 		)
 	);
 	
@@ -344,7 +355,8 @@ function generate_blog_customize_register( $wp_customize ) {
 				'section' => 'blog_post_image_section',
 				'settings' => 'generate_blog_settings[post_image_width]',
 				'priority' => 67,
-				'placeholder' => __('Auto','generate-blog')
+				'placeholder' => __('Auto','generate-blog'),
+				'type' => 'gp-post-image-size'
 			)
 		)
 	);
@@ -367,7 +379,8 @@ function generate_blog_customize_register( $wp_customize ) {
 				'section' => 'blog_post_image_section',
 				'settings' => 'generate_blog_settings[post_image_height]',
 				'priority' => 68,
-				'placeholder' => __('Auto','generate-blog')
+				'placeholder' => __('Auto','generate-blog'),
+				'type' => 'gp-post-image-size'
 			)
 		)
 	);
@@ -379,7 +392,8 @@ function generate_blog_customize_register( $wp_customize ) {
 			array(
 				'section'     => 'blog_post_image_section',
 				'label'			=> false,
-				'priority'    => 69
+				'priority'    => 69,
+				'type' => 'post_image_save'
 			)
 		)
 	);
@@ -535,8 +549,7 @@ function generate_blog_customize_register( $wp_customize ) {
 			),
 			// This last one must match setting ID from above
 			'settings' => 'generate_blog_settings[comments]',
-			'priority' => 100,
-			'active_callback' => 'generate_blog_is_posts_page'
+			'priority' => 100
 		)
 	);
 	
@@ -549,19 +562,18 @@ function generate_blog_customize_register( $wp_customize ) {
 			'title' => __( 'Columns', 'generate-blog' ),
 			'capability' => 'edit_theme_options',
 			'priority' => 10,
-			'panel' => 'generate_blog_panel',
-			'active_callback' => 'generate_blog_is_posts_page'
+			'panel' => 'generate_blog_panel'
 		)
 	);
 	
-	if ( class_exists( 'Generate_Customize_Misc_Control' ) ) :
+	if ( class_exists( 'Generate_Blog_Text_Control' ) ) :
 	$wp_customize->add_control(
-		new Generate_Customize_Misc_Control(
+		new Generate_Blog_Text_Control(
 			$wp_customize,
 			'columns_masonry_note',
 			array(
 				'section'     => 'blog_columns_section',
-				'type'        => 'text',
+				'type'        => 'blog_text',
 				'description' => __( 'Masonry is enabled. These settings will be ignored.','generate-blog' ),
 				'priority'    => 0,
 				'active_callback' => 'generate_masonry_callback'
@@ -721,12 +733,15 @@ endif;
 if ( ! function_exists( 'generate_blog_is_excerpt' ) ) :
 function generate_blog_is_excerpt()
 {
+	if ( ! function_exists( 'generate_get_defaults' ) )
+		return;
+	
 	$generate_settings = wp_parse_args( 
 		get_option( 'generate_settings', array() ), 
 		generate_get_defaults() 
 	);
 	
-	return ( 'excerpt' == $generate_settings['post_content'] && generate_blog_is_posts_page() ) ? true : false;
+	return ( 'excerpt' == $generate_settings['post_content'] ) ? true : false;
 }
 endif;
 

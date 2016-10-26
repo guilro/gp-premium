@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 // Include our image resizer
 if ( ! defined( 'GP_IMAGE_RESIZER' ) && ! class_exists( 'GP_Resize' ) )
 	require plugin_dir_path( __FILE__ ) . 'aq_resizer.php';
@@ -17,14 +20,6 @@ require plugin_dir_path( __FILE__ ) . 'blog-page-header.php';
 
 // Include our Post Image area
 require plugin_dir_path( __FILE__ ) . 'post-image.php';
-
-if ( ! function_exists( 'generate_page_header_admin_enqueue' ) ) :
-add_action('admin_enqueue_scripts','generate_page_header_admin_enqueue');
-function generate_page_header_admin_enqueue() {
-	wp_enqueue_script('wp-color-picker');
-    wp_enqueue_style( 'wp-color-picker' );
-}
-endif;
 
 if ( ! function_exists( 'generate_combined_page_header_start' ) ) :
 add_action( 'generate_inside_merged_page_header','generate_combined_page_header_start', 0 );
@@ -107,6 +102,7 @@ function generate_page_header_enqueue()
 			wp_script_add_data( 'generate-flexibility', 'conditional', 'lt IE 9' );
 		endif;
 	endif;
+	
 	if ( '' !== $page_header_content )
 		wp_enqueue_style( 'generate-page-header', plugin_dir_url( __FILE__ ) . 'css/page-header-min.css', array(), GENERATE_PAGE_HEADER_VERSION );
 }
@@ -127,6 +123,7 @@ function generate_page_header_css()
 		$image_background_fixed = ( !empty( $options['page_header_add_parallax'] ) ) ? $options['page_header_add_parallax'] : '';
 		$image_background_alignment = ( !empty( $options['page_header_text_alignment'] ) ) ? $options['page_header_text_alignment'] : '';
 		$image_background_spacing = ( !empty( $options['page_header_padding'] ) ) ? $options['page_header_padding'] : '';
+		$image_background_spacing_unit = ( !empty( $options['page_header_padding_unit'] ) ) ? $options['page_header_padding_unit'] : '';
 		$image_background_color = ( !empty( $options['page_header_background_color'] ) ) ? $options['page_header_background_color'] : '';
 		$image_background_text_color = ( !empty( $options['page_header_text_color'] ) ) ? $options['page_header_text_color'] : '';
 		$image_background_link_color = ( !empty( $options['page_header_link_color'] ) ) ? $options['page_header_link_color'] : '';
@@ -149,12 +146,14 @@ function generate_page_header_css()
 		$page_header_video_overlay = ( !empty( $options['page_header_video_overlay'] ) ) ? $options['page_header_video_overlay'] : '';
 	else :
 		global $post;
+		$featured_image = get_post_thumbnail_id( get_the_ID(), 'full' );
 		$header_content = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-content', true ) : '';
 		$image_background = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-image-background', true ) : '';
 		$image_background_type = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-image-background-type', true ) : '';
 		$image_background_fixed = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-image-background-fixed', true ) : '';
 		$image_background_alignment = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-image-background-alignment', true ) : '';
 		$image_background_spacing = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-image-background-spacing', true ) : '';
+		$image_background_spacing_unit = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-image-background-spacing-unit', true ) : '';
 		$image_background_color = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-image-background-color', true ) : '';
 		$image_background_text_color = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-image-background-text-color', true ) : '';
 		$image_background_link_color = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-image-background-link-color', true ) : '';
@@ -175,6 +174,9 @@ function generate_page_header_css()
 		$page_header_video_ogv = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-video-ogv', true ) : '';
 		$page_header_video_webm = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-video-webm', true ) : '';
 		$page_header_video_overlay = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-video-overlay', true ) : '';
+	
+		if ( '' == $page_header_image_custom && $featured_image )
+			$page_header_image_custom = wp_get_attachment_url( $featured_image );
 	endif;
 	
 	// If we don't have any content, we don't need any of the below
@@ -196,6 +198,8 @@ function generate_page_header_css()
 	} else {
 		$background_color = null;
 	}
+	
+	$padding_unit = ( '%' == $image_background_spacing_unit || 'percent' == $image_background_spacing_unit ) ? '%' : 'px';
 	
 	$space = ' ';
 
@@ -231,8 +235,8 @@ function generate_page_header_css()
 		
 		'.generate-inside-combined-content, .generate-inside-page-header-content' => array(
 			'text-align' => ( !empty( $image_background_alignment ) ) ? $image_background_alignment : null,
-			'padding-top' => ( !empty( $image_background_spacing ) ) ? $image_background_spacing . 'px' : null,
-			'padding-bottom' => ( !empty( $image_background_spacing ) ) ? $image_background_spacing . 'px' : null,
+			'padding-top' => ( !empty( $image_background_spacing ) ) ? $image_background_spacing . $padding_unit : null,
+			'padding-bottom' => ( !empty( $image_background_spacing ) ) ? $image_background_spacing . $padding_unit : null,
 			'color' => ( !empty( $image_background_text_color ) ) ? $image_background_text_color : null,
 		),
 		
@@ -355,8 +359,11 @@ function generate_page_header()
 	if ( '' == $generate_page_header_settings['page_header_position'] ) :
 		$generate_page_header_settings['page_header_position'] = 'above-content';
 	endif;
+	
+	global $post;
+	$combine = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-combine', true ) : '';
 
-	if ( is_page() && 'above-content' == $generate_page_header_settings['page_header_position'] ) :
+	if ( is_page() && 'above-content' == $generate_page_header_settings['page_header_position'] || ( is_page() && 'inside-content' == $generate_page_header_settings[ 'page_header_position' ] && '' !== $combine ) ) :
 		
 		generate_page_header_area('page-header-image', 'page-header-content');
 	
@@ -377,6 +384,14 @@ if ( ! function_exists( 'generate_page_header_combined' ) ) :
 add_action( 'generate_before_header','generate_page_header_combined', 5 );
 function generate_page_header_combined()
 {
+	$generate_page_header_settings = wp_parse_args( 
+		get_option( 'generate_page_header_settings', array() ), 
+		generate_page_header_get_defaults() 
+	);
+	
+	if ( 'hide' == $generate_page_header_settings['post_header_position'] && is_single() )
+		return;
+	
 	generate_page_header_area_start_container( 'page-header-image', 'page-header-content' );
 	generate_blog_page_header_area_start_container( 'page-header-image', 'page-header-content' );
 }
@@ -399,8 +414,11 @@ function generate_page_header_inside()
 	if ( '' == $generate_page_header_settings['page_header_position'] ) :
 		$generate_page_header_settings['page_header_position'] = 'above-content';
 	endif;
+	
+	global $post;
+	$combine = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-combine', true ) : '';
 
-	if ( is_page() && 'inside-content' == $generate_page_header_settings['page_header_position'] ) :
+	if ( is_page() && 'inside-content' == $generate_page_header_settings['page_header_position'] && '' == $combine ) :
 		
 		generate_page_header_area('page-header-image', 'page-header-content');
 	
@@ -422,12 +440,18 @@ function generate_page_header_single()
 		get_option( 'generate_page_header_settings', array() ), 
 		generate_page_header_get_defaults() 
 	);
+	
+	if ( 'hide' == $generate_page_header_settings['post_header_position'] )
+		return;
 		
 	if ( '' == $generate_page_header_settings['post_header_position'] ) :
 		$generate_page_header_settings['post_header_position'] = 'inside-content';
 	endif;
+	
+	global $post;
+	$combine = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-combine', true ) : '';
 
-	if ( is_single() && 'inside-content' == $generate_page_header_settings['post_header_position'] ) :
+	if ( is_single() && 'inside-content' == $generate_page_header_settings['post_header_position'] && '' == $combine ) :
 
 		generate_page_header_area('page-header-image-single', 'page-header-content-single');
 	
@@ -448,8 +472,14 @@ function generate_page_header_single_below_title()
 		get_option( 'generate_page_header_settings', array() ), 
 		generate_page_header_get_defaults() 
 	);
+	
+	if ( 'hide' == $generate_page_header_settings['post_header_position'] )
+		return;
+	
+	global $post;
+	$combine = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-combine', true ) : '';
 
-	if ( is_single() && 'below-title' == $generate_page_header_settings['post_header_position'] ) :
+	if ( is_single() && 'below-title' == $generate_page_header_settings['post_header_position'] && '' == $combine ) :
 	
 		generate_page_header_area('page-header-image-single page-header-below-title', 'page-header-content-single page-header-below-title');
 	
@@ -471,13 +501,17 @@ function generate_page_header_single_above()
 		generate_page_header_get_defaults() 
 	);
 	
-	
+	if ( 'hide' == $generate_page_header_settings['post_header_position'] )
+		return;
 		
 	if ( '' == $generate_page_header_settings['post_header_position'] ) :
 		$generate_page_header_settings['post_header_position'] = 'inside-content';
 	endif;
+	
+	global $post;
+	$combine = ( isset( $post ) ) ? get_post_meta( $post->ID, '_meta-generate-page-header-combine', true ) : '';
 
-	if ( is_single() && 'above-content' == $generate_page_header_settings['post_header_position'] ) :
+	if ( is_single() && 'above-content' == $generate_page_header_settings['post_header_position'] || ( is_single() && ( 'inside-content' == $generate_page_header_settings[ 'post_header_position' ] || 'below-title' == $generate_page_header_settings[ 'post_header_position' ] ) && '' !== $combine ) ) :
 	
 		generate_page_header_area('page-header-image-single', 'page-header-content-single');
 
@@ -510,6 +544,7 @@ function generate_page_header_get_defaults()
 		'page_header_container_type' => '',
 		'page_header_text_alignment' => 'left',
 		'page_header_padding' => '',
+		'page_header_padding_unit' => '',
 		'page_header_background_color' => '',
 		'page_header_text_color' => '',
 		'page_header_link_color' => '',
@@ -608,7 +643,8 @@ function generate_page_header_customize_register( $wp_customize ) {
 			'choices' => array(
 				'above-content' => __( 'Above Content Area', 'generate-page-header' ),
 				'inside-content' => __( 'Inside Content Area', 'generate-page-header' ),
-				'below-title' => __( 'Below Post Title', 'generate-page-header' )
+				'below-title' => __( 'Below Post Title', 'generate-page-header' ),
+				'hide'			=> __( 'Hide','generate-page-header' )
 			),
 			// This last one must match setting ID from above
 			'settings' => 'generate_page_header_settings[post_header_position]',
@@ -616,14 +652,6 @@ function generate_page_header_customize_register( $wp_customize ) {
 		)
 	);
 }
-endif;
-
-if ( ! function_exists( 'generate_page_header_admin_style' ) ) :
-	add_action( 'admin_head','generate_page_header_admin_style' );
-	function generate_page_header_admin_style()
-	{
-		echo '<style>.appearance_page_page_header #footer-upgrade {display: none;}</style>';
-	}
 endif;
 
 if ( ! function_exists( 'generate_get_attachment_id_by_url' ) ) :
@@ -791,7 +819,7 @@ function generate_page_header_logo_exists()
 		);
 	endif;
 	
-	if ( function_exists( 'generate_construct_logo' ) && ( '' !== $generate_settings[ 'logo' ] || '' !== get_theme_mod( 'custom_logo' ) ) )
+	if ( function_exists( 'generate_construct_logo' ) && ( '' !== $generate_settings[ 'logo' ] || get_theme_mod( 'custom_logo' ) ) )
 		return true;
 	
 	return false;

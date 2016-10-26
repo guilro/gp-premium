@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 $wp_customize->add_section(
 	// ID
 	'generate_spacing_footer',
@@ -36,7 +39,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['footer_widget_container_top'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -59,7 +63,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['footer_widget_container_right'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -82,7 +87,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['footer_widget_container_bottom'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -105,7 +111,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['footer_widget_container_left'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -143,7 +150,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['footer_top'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -166,7 +174,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['footer_right'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -189,7 +198,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['footer_bottom'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -212,7 +222,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['footer_left'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 

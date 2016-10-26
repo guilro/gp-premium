@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_license_errors' ) ) :
 /*
 * Set up errors and messages
@@ -69,7 +72,7 @@ if ( ! function_exists( 'generate_super_package_addons' ) ) :
 		?>
 		<div class="postbox generate-metabox">
 			<h3 class="hndle"><?php _e('GP Premium','gp-premium'); ?> <?php echo $version; ?></h3>
-			<div class="inside">
+			<div class="inside" style="margin:0;padding:0;">
 				<div class="premium-addons">
 					<form method="post">
 						<div class="add-on gp-clear addon-container grid-parent" style="background:#EFEFEF;border-left:5px solid #DDD;padding-left:10px !important;">
@@ -81,7 +84,7 @@ if ( ! function_exists( 'generate_super_package_addons' ) ) :
 									<option value="deactivate-selected"><?php _e( 'Deactivate' ) ;?></option>
 								</select>
 								<?php wp_nonce_field( 'gp_premium_bulk_action_nonce', 'gp_premium_bulk_action_nonce' ); ?>
-								<input type="submit" style="font-weight:bold;" name="generate_multi_activate" class="mass-activate-button" value="<?php _e( 'Apply' ); ?>" />
+								<input type="submit" name="generate_multi_activate" class="button mass-activate-button" value="<?php _e( 'Apply' ); ?>" />
 							</div>
 						</div>
 						<?php
@@ -146,16 +149,7 @@ if ( ! function_exists( 'generate_super_package_addons' ) ) :
 			}
 			.mass-activate-button,
 			.mass-activate-button:visited {
-				background:#FFF !important;
-				border-bottom: 2px solid #ddd !important;
 				height: 35px !important;
-				position: relative;
-				bottom: -1px;
-				padding: 0 15px !important;
-			}
-			.mass-activate-button:hover {
-				color:#000 !important;
-				border-color: #ccc !important;
 			}
 			input#generate-select-all,
 			.addon-checkbox {
@@ -460,8 +454,8 @@ function generate_activation_styles()
 				font-weight: bold;
 				padding-left: 10px !important;
 			}
-			.premium-addons input[type="submit"],
-			.premium-addons input[type="submit"]:visited {
+			.premium-addons .addon-action input[type="submit"],
+			.premium-addons .addon-action input[type="submit"]:visited {
 				background: none;
 				border: 0;
 				color: #0d72b2;
@@ -472,8 +466,8 @@ function generate_activation_styles()
 				-webkit-box-shadow: 0 0 0 transparent;
 				box-shadow: 0 0 0 transparent;
 			}
-			.premium-addons input[type="submit"]:hover,
-			.premium-addons input[type="submit"]:focus {
+			.premium-addons .addon-action input[type="submit"]:hover,
+			.premium-addons .addon-action input[type="submit"]:focus {
 				background: none;
 				border: 0;
 				color: #0f92e5;

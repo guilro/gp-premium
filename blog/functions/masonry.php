@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_blog_get_masonry' ) ) :
 function generate_blog_get_masonry()
 {

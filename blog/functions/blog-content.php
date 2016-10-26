@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_excerpt_length' ) ) :
 add_filter( 'excerpt_length', 'generate_excerpt_length', 999 );
 function generate_excerpt_length( $length ) {
@@ -72,9 +75,11 @@ function generate_blog_css()
 	$bottom_spacing = ( function_exists('generate_spacing_get_defaults') ) ? $spacing_settings['content_bottom'] : 40;
 	
 	if ( 'true' == generate_blog_get_masonry() ) {
-		$return .= '.masonry-post .inside-article, .masonry-enabled .page-header {margin: 0 ' . $separator . 'px 0 0}';
-		$return .= '.no-sidebar .masonry-container {margin-right: -' . $separator . 'px;}';
-		$return .= '.masonry-load-more, .page-header {margin-bottom: ' . $separator . 'px;margin-right: ' . $separator . 'px}';
+		$return .= '.no-sidebar .masonry-post .inside-article, .no-sidebar .masonry-enabled .page-header {margin: 0 0 0 ' . $separator . 'px}';
+		$return .= 'body:not(.no-sidebar) .masonry-post .inside-article, body:not(.no-sidebar) .masonry-enabled .page-header {margin: 0 ' . $separator . 'px 0 0}';
+		$return .= '.no-sidebar .masonry-container {margin-left: -' . $separator . 'px;}';
+		$return .= '.separate-containers .site-main > .masonry-load-more, .page-header {margin-bottom: ' . $separator . 'px;margin-right: ' . $separator . 'px}';
+		$return .= '.separate-containers .site-main .masonry-container > article {margin-bottom: ' . $separator . 'px;}';
 	}
 	
 	if ( 'false' == $generate_blog_settings['post_image'] ) :

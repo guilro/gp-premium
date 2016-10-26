@@ -1,0 +1,1 @@
+})(jQuery, Generate_Sections);

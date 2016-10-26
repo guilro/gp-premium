@@ -9,6 +9,9 @@
  *
  * @package Generate
  */
+ 
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 get_header(); 
 $sections = ( isset( $post ) ) ? get_post_meta( $post->ID, '_generate_sections', TRUE) : '';
@@ -111,7 +114,5 @@ $sidebars = apply_filters( 'generate_sections_sidebars', false );
 	</div><!-- #primary -->
 
 <?php
-if ( $sidebars) :
-	do_action('generate_sidebars');
-endif;
+if ( $sidebars) do_action('generate_sidebars');
 get_footer();

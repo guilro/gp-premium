@@ -292,6 +292,10 @@
 			parent = body;
 		}
 		
+		if ( body.hasClass( 'nav-right-sidebar' ) || body.hasClass( 'nav-left-sidebar' ) ) {
+			parent = $( '.site-content' );
+		}
+		
 		if ( ! settings.disable && ! settings.query ) {
 			settings.menu.stick_in_parent({
 				offset_top: settings.offset,
@@ -343,5 +347,162 @@
 				}
 			});
 		}
+		
+		if ( navigator.userAgent.match( /(iPod|iPhone|iPad)/ ) ) {
+			/* cache dom references */ 
+			var $body = jQuery('body'); 
+
+			/* bind events */
+			jQuery(document)
+			.on('focus', '.is_stuck .search-field', function() {
+				$body.addClass('fixfixed');
+				settings.menu.trigger("sticky_kit:detach");
+				
+			})
+			.on('blur', '.search-field', function() {
+				$body.removeClass('fixfixed');
+				settings.menu.stick_in_parent({
+					offset_top: 0
+				});
+			});
+		}
 	};
 }( jQuery ));
+
+/**
+ * Initiate sticky menu based on options
+ */
+jQuery( document ).ready( function($) {
+	var body = $( 'body' );
+	var navigation = $( '#site-navigation' );
+	
+	if ( body.hasClass( 'nav-right-sidebar' ) || body.hasClass( 'nav-left-sidebar' ) ) {
+		navigation = $( '.gen-sidebar-nav' );
+	}
+	
+	if ( body.hasClass( 'sticky-menu-no-transition' ) ) {
+		if ( body.hasClass( 'mobile-sticky-menu' ) ) {
+			if ( body.hasClass( 'admin-bar' ) ) {
+				// Disable on anything but mobile
+				jQuery( navigation ).GenerateSimpleSticky({
+					query: '(min-width: 768px)',
+					disable: true
+				});
+				
+				// Update offset for admin bar between these widths
+				jQuery( navigation ).GenerateSimpleSticky({
+					query: '(min-width: 601px) and (max-width: 767px)'
+				});
+				
+				// No offset below 600px as admin bar isn't sticky
+				jQuery( navigation ).GenerateSimpleSticky({
+					query: '(max-width: 600px)',
+					offset: 0
+				});
+			} else {
+				// Disable on anything but mobile
+				jQuery( navigation ).GenerateSimpleSticky({
+					query: '(min-width: 768px)',
+					disable: true
+				});
+				
+				// Enable on mobile with no offset
+				jQuery( navigation ).GenerateSimpleSticky({
+					query: '(max-width: 767px)',
+					offset: 0
+				});
+			}
+		}
+		
+		if ( body.hasClass( 'desktop-sticky-menu' ) ) {
+			if ( body.hasClass( 'admin-bar' ) ) {
+				// Apply admin bar offset above 783px
+				jQuery( navigation ).GenerateSimpleSticky({
+					query: '(min-width: 783px)'
+				});
+				
+				// Apply admin bar offset between these widths
+				jQuery( navigation ).GenerateSimpleSticky({
+					query: '(min-width: 768px) and (max-width: 782px)'
+				});
+				
+				// Disable on mobile
+				jQuery( navigation ).GenerateSimpleSticky({
+					query: '(max-width: 767px)',
+					disable: true
+				});
+			} else {
+				// Enable on desktop
+				jQuery( navigation ).GenerateSimpleSticky({
+					query: '(min-width: 768px)',
+					offset: 0
+				});
+				
+				// Disable on mobile
+				jQuery( navigation ).GenerateSimpleSticky({
+					query: '(max-width: 767px)',
+					disable: true
+				});
+			}
+		}
+		
+		if ( body.hasClass( 'both-sticky-menu' ) ) {
+			if ( body.hasClass( 'admin-bar' ) ) {
+				// Apply admin bar offset above 783px
+				jQuery( navigation ).GenerateSimpleSticky({
+					query: '(min-width: 783px)'
+				});
+				
+				// Update admin bar offset between these widths
+				jQuery( navigation ).GenerateSimpleSticky({
+					query: '(min-width: 768px) and (max-width: 782px)'
+				});
+				
+				// Update admin bar offset between these widths
+				jQuery( navigation ).GenerateSimpleSticky({
+					query: '(min-width: 601px) and (max-width: 767px)'
+				});
+				
+				// No offset needed below 600px
+				jQuery( navigation ).GenerateSimpleSticky({
+					query: '(max-width: 600px)',
+					offset: 0
+				});
+			} else {
+				// No offset needed
+				jQuery( navigation ).GenerateSimpleSticky({
+					query: false,
+					offset: 0
+				});
+			}
+		}
+	}
+});
+
+/**
+ * Initiate sticky mobile header based on options
+ */
+jQuery( document ).ready( function($) {
+	var body = $( 'body' );
+	
+	if ( body.hasClass( 'mobile-header' ) && body.hasClass( 'mobile-header-sticky' ) ) {
+		if ( body.hasClass( 'admin-bar' ) ) {
+			// Update admin bar offset between these widths
+			jQuery( '#mobile-header' ).GenerateSimpleSticky({
+				query: '(min-width: 601px) and (max-width: 768px)'
+			});
+			
+			// No admin bar offset needed below 600px
+			jQuery( '#mobile-header' ).GenerateSimpleSticky({
+				query: '(max-width: 600px)',
+				offset: 0
+			});
+		} else {
+			// No offset needed when admin bar isn't showing
+			jQuery( '#mobile-header' ).GenerateSimpleSticky({
+				query: '(max-width: 768px)',
+				offset: 0
+			});
+		}
+	}
+});

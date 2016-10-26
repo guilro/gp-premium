@@ -24,4 +24,19 @@
 		} );
 	} );
 	
+	$( 'body' ).on( 'generate_spacing_updated', function() {
+		if ( $( '.masonry-container' )[0] ) {
+			var $initiate = jQuery('.masonry-container').imagesLoaded( function() {
+				$container = jQuery('.masonry-container');
+				if (jQuery($container).length) {
+					$container.masonry({
+						columnWidth: '.grid-sizer',
+						itemSelector: '.masonry-post',
+						stamp: '.page-header'
+					});
+				}
+			});
+		}
+	});
+	
 } )( jQuery );

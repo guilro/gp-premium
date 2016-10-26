@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 // Add Header section
 $wp_customize->add_section(
 	'generate_spacing_header',
@@ -35,7 +38,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['header_top'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -58,7 +62,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['header_right'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -81,7 +86,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['header_bottom'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 
@@ -104,7 +110,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['header_left'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 

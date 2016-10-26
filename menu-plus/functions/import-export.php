@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_menu_plus_reset_settings' ) ) :
 /**
  * Reset customizer settings

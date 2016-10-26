@@ -1,9 +1,3 @@
-.secondary-navigation a {
-	-webkit-transition:padding 0s ease-in-out;
-	-moz-transition:padding 0s ease-in-out;
-	-o-transition:padding 0s ease-in-out;
-	transition: padding 0s ease-in-out;
-}
 .secondary-navigation {
 	clear: both;
 }

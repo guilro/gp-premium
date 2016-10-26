@@ -1,83 +1,102 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+// Load functions built to migrate old options
+require_once trailingslashit( dirname(__FILE__) ) . 'migration.php';
+
+if ( !function_exists('generate_get_default_fonts') ) :
 /**
  * Set default options
  */
-if ( !function_exists('generate_get_default_fonts') ) :
-	function generate_get_default_fonts()
-	{
-		$generate_font_defaults = array(
-			'font_body' => 'Open Sans',
-			'body_font_weight' => 'normal',
-			'body_font_transform' => 'none',
-			'body_font_size' => '17',
-			'font_site_title' => 'inherit',
-			'site_title_font_weight' => 'bold',
-			'site_title_font_transform' => 'none',
-			'site_title_font_size' => '45',
-			'mobile_site_title_font_size' => '30',
-			'font_site_tagline' => 'inherit',
-			'site_tagline_font_weight' => 'normal',
-			'site_tagline_font_transform' => 'none',
-			'site_tagline_font_size' => '15',
-			'font_navigation' => 'inherit',
-			'navigation_font_weight' => 'normal',
-			'navigation_font_transform' => 'none',
-			'navigation_font_size' => '15',
-			'font_widget_title' => 'inherit',
-			'widget_title_font_weight' => 'normal',
-			'widget_title_font_transform' => 'none',
-			'widget_title_font_size' => '20',
-			'widget_content_font_size' => '17',
-			'font_heading_1' => 'inherit',
-			'heading_1_weight' => '300',
-			'heading_1_transform' => 'none',
-			'heading_1_font_size' => '40',
-			'mobile_heading_1_font_size' => '30',
-			'font_heading_2' => 'inherit',
-			'heading_2_weight' => '300',
-			'heading_2_transform' => 'none',
-			'heading_2_font_size' => '30',
-			'mobile_heading_2_font_size' => '25',
-			'font_heading_3' => 'inherit',
-			'heading_3_weight' => 'normal',
-			'heading_3_transform' => 'none',
-			'heading_3_font_size' => '20',
-			'font_heading_4' => 'inherit',
-			'heading_4_weight' => 'normal',
-			'heading_4_transform' => 'none',
-			'heading_4_font_size' => '15',
-			'footer_font_size' => '16'
-		);
-		
-		return apply_filters( 'generate_font_option_defaults', $generate_font_defaults );
-	}
+function generate_get_default_fonts()
+{
+	$generate_font_defaults = array(
+		'font_body' => 'Open Sans',
+		'font_body_category' => 'sans-serif',
+		'font_body_variants' => '300,300italic,regular,italic,600,600italic,700,700italic,800,800italic',
+		'body_font_weight' => 'normal',
+		'body_font_transform' => 'none',
+		'body_font_size' => '17',
+		'font_site_title' => 'inherit',
+		'font_site_title_category' => '',
+		'font_site_title_variants' => '',
+		'site_title_font_weight' => 'bold',
+		'site_title_font_transform' => 'none',
+		'site_title_font_size' => '45',
+		'mobile_site_title_font_size' => '30',
+		'font_site_tagline' => 'inherit',
+		'font_site_tagline_category' => '',
+		'font_site_tagline_variants' => '',
+		'site_tagline_font_weight' => 'normal',
+		'site_tagline_font_transform' => 'none',
+		'site_tagline_font_size' => '15',
+		'font_navigation' => 'inherit',
+		'font_navigation_category' => '',
+		'font_navigation_variants' => '',
+		'navigation_font_weight' => 'normal',
+		'navigation_font_transform' => 'none',
+		'navigation_font_size' => '15',
+		'font_widget_title' => 'inherit',
+		'font_widget_title_category' => '',
+		'font_widget_title_variants' => '',
+		'widget_title_font_weight' => 'normal',
+		'widget_title_font_transform' => 'none',
+		'widget_title_font_size' => '20',
+		'widget_content_font_size' => '17',
+		'font_heading_1' => 'inherit',
+		'font_heading_1_category' => '',
+		'font_heading_1_variants' => '',
+		'heading_1_weight' => '300',
+		'heading_1_transform' => 'none',
+		'heading_1_font_size' => '40',
+		'mobile_heading_1_font_size' => '30',
+		'font_heading_2' => 'inherit',
+		'font_heading_2_category' => '',
+		'font_heading_2_variants' => '',
+		'heading_2_weight' => '300',
+		'heading_2_transform' => 'none',
+		'heading_2_font_size' => '30',
+		'mobile_heading_2_font_size' => '25',
+		'font_heading_3' => 'inherit',
+		'font_heading_3_category' => '',
+		'font_heading_3_variants' => '',
+		'heading_3_weight' => 'normal',
+		'heading_3_transform' => 'none',
+		'heading_3_font_size' => '20',
+		'footer_font_size' => '16'
+	);
+	
+	return apply_filters( 'generate_font_option_defaults', $generate_font_defaults );
+}
 endif;
 
 if ( ! function_exists( 'generate_fonts_customize_register' ) ) :
 add_action( 'customize_register', 'generate_fonts_customize_register' );
 function generate_fonts_customize_register( $wp_customize ) {
 		
-	//require_once dirname(__FILE__) . '/customizer/get-fonts.php';
-	require_once dirname(__FILE__) . '/customizer/control.php';
-	
+	require_once trailingslashit( dirname(__FILE__) ) . 'customizer/control.php';
 	$defaults = generate_get_default_fonts();
 	
-	if ( class_exists( 'WP_Customize_Panel' ) ) :
+	if ( method_exists( $wp_customize,'register_control_type' ) ) {
+		$wp_customize->register_control_type( 'Generate_Google_Font_Dropdown_Custom_Control' );
+		$wp_customize->register_control_type( 'Generate_Select_Control' );
+		$wp_customize->register_control_type( 'Generate_Customize_Slider_Control' );
+		$wp_customize->register_control_type( 'Generate_Hidden_Input_Control' );
+	}
 	
-			$wp_customize->add_panel( 'generate_typography_panel', array(
-				'priority'       => 30,
-				'capability'     => 'edit_theme_options',
-				'theme_supports' => '',
-				'title'          => __( 'Typography','generate-typography' ),
-				'description'    => '',
-			) );
-		
-		endif;
+	if ( class_exists( 'WP_Customize_Panel' ) ) :
+		$wp_customize->add_panel( 'generate_typography_panel', array(
+			'priority'       => 30,
+			'capability'     => 'edit_theme_options',
+			'theme_supports' => '',
+			'title'          => __( 'Typography','generate-typography' ),
+			'description'    => '',
+		) );
+	endif;
 
 	$wp_customize->add_section(
-		// ID
 		'font_section',
-		// Arguments array
 		array(
 			'title' => __( 'Body', 'generate-typography' ),
 			'capability' => 'edit_theme_options',
@@ -111,24 +130,78 @@ function generate_fonts_customize_register( $wp_customize ) {
 	);
 	
 	$wp_customize->add_setting( 
-		'generate_settings[body_font_weight]', 
+		'font_body_category', 
 		array(
-			'default' => $defaults['body_font_weight'],
-			'type' => 'option',
-			'sanitize_callback' => 'generate_sanitize_font_weight'
+			'default' => '',
+			'sanitize_callback' => 'sanitize_text_field'
 		)
 	);
 		
 	$wp_customize->add_control( 
-		new Generate_Font_Weight_Custom_Control( 
+		new Generate_Hidden_Input_Control( 
 			$wp_customize, 
-			'body_font_weight_control', 
+			'font_body_category', 
+			array(
+				'section' => 'font_section',
+				'settings' => 'font_body_category',
+				'type' => 'gp-hidden-input'
+			)
+		)
+	);
+	
+	$wp_customize->add_setting( 
+		'font_body_variants', 
+		array(
+			'default' => '',
+			'sanitize_callback' => 'sanitize_text_field'
+		)
+	);
+		
+	$wp_customize->add_control( 
+		new Generate_Hidden_Input_Control( 
+			$wp_customize, 
+			'font_body_variants', 
+			array(
+				'section' => 'font_section',
+				'settings' => 'font_body_variants',
+				'type' => 'gp-hidden-input'
+			)
+		)
+	);
+	
+	$wp_customize->add_setting( 
+		'generate_settings[body_font_weight]', 
+		array(
+			'default' => $defaults['body_font_weight'],
+			'type' => 'option',
+			'sanitize_callback' => 'generate_sanitize_choices',
+			'transport' => 'postMessage'
+		)
+	);
+		
+	$wp_customize->add_control( 
+		new Generate_Select_Control( 
+			$wp_customize, 
+			'generate_settings[body_font_weight]', 
 			array(
 				'label' => __('Font weight','generate-typography'),
 				'section' => 'font_section',
 				'settings' => 'generate_settings[body_font_weight]',
 				'priority' => 20,
-				'type' => 'weight'
+				'type' => 'gp-typography-select',
+				'choices' => array(
+					'normal' => 'normal',
+					'bold' => 'bold',
+					'100' => '100',
+					'200' => '200',
+					'300' => '300',
+					'400' => '400',
+					'500' => '500',
+					'600' => '600',
+					'700' => '700',
+					'800' => '800',
+					'900' => '900'
+				)
 			)
 		)
 	);
@@ -138,20 +211,27 @@ function generate_fonts_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['body_font_transform'],
 			'type' => 'option',
-			'sanitize_callback' => 'generate_sanitize_text_transform'
+			'sanitize_callback' => 'generate_sanitize_text_transform',
+			'transport' => 'postMessage'
 		)
 	);
 		
 	$wp_customize->add_control( 
-		new Generate_Text_Transform_Custom_Control( 
+		new Generate_Select_Control( 
 			$wp_customize, 
-			'body_font_transform_control', 
+			'generate_settings[body_font_transform]', 
 			array(
 				'label' => __('Text transform','generate-typography'),
 				'section' => 'font_section',
 				'settings' => 'generate_settings[body_font_transform]',
 				'priority' => 30,
-				'type' => 'transform'
+				'type' => 'gp-typography-select',
+				'choices' => array(
+					'none' => 'none',
+					'capitalize' => 'capitalize',
+					'uppercase' => 'uppercase',
+					'lowercase' => 'lowercase'
+				)
 			)
 		)
 	);
@@ -161,7 +241,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['body_font_size'],
 			'type' => 'option',
-			'sanitize_callback' => 'absint'
+			'sanitize_callback' => 'absint',
+			'transport' => 'postMessage'
 		)
 	);
 		
@@ -173,15 +254,14 @@ function generate_fonts_customize_register( $wp_customize ) {
 				'label' => __('Font size','generate-typography'),
 				'section' => 'font_section',
 				'settings' => 'generate_settings[body_font_size]',
-				'priority' => 40
+				'priority' => 40,
+				'type' => 'gp-typography-slider'
 			)
 		)
 	);
 	
 	$wp_customize->add_section(
-		// ID
 		'font_header_section',
-		// Arguments array
 		array(
 			'title' => __( 'Header', 'generate-typography' ),
 			'capability' => 'edit_theme_options',
@@ -215,24 +295,80 @@ function generate_fonts_customize_register( $wp_customize ) {
 	);
 	
 	$wp_customize->add_setting( 
-		'generate_settings[site_title_font_weight]', 
+		'font_site_title_category', 
 		array(
-			'default' => $defaults['site_title_font_weight'],
-			'type' => 'option',
-			'sanitize_callback' => 'generate_sanitize_font_weight'
+			'default' => '',
+			'sanitize_callback' => 'sanitize_text_field'
 		)
 	);
 		
 	$wp_customize->add_control( 
-		new Generate_Font_Weight_Custom_Control( 
+		new Generate_Hidden_Input_Control( 
 			$wp_customize, 
-			'site_title_font_weight_control', 
+			'font_site_title_category', 
+			array(
+				'section' => 'font_header_section',
+				'settings' => 'font_site_title_category',
+				'type' => 'gp-hidden-input',
+				'priority' => 50
+			)
+		)
+	);
+	
+	$wp_customize->add_setting( 
+		'font_site_title_variants', 
+		array(
+			'default' => '',
+			'sanitize_callback' => 'sanitize_text_field'
+		)
+	);
+		
+	$wp_customize->add_control( 
+		new Generate_Hidden_Input_Control( 
+			$wp_customize, 
+			'font_site_title_variants', 
+			array(
+				'section' => 'font_header_section',
+				'settings' => 'font_site_title_variants',
+				'type' => 'gp-hidden-input',
+				'priority' => 50
+			)
+		)
+	);
+	
+	$wp_customize->add_setting( 
+		'generate_settings[site_title_font_weight]', 
+		array(
+			'default' => $defaults['site_title_font_weight'],
+			'type' => 'option',
+			'sanitize_callback' => 'generate_sanitize_choices',
+			'transport' => 'postMessage'
+		)
+	);
+		
+	$wp_customize->add_control( 
+		new Generate_Select_Control( 
+			$wp_customize, 
+			'generate_settings[site_title_font_weight]', 
 			array(
 				'label' => __('Font weight','generate-typography'),
 				'section' => 'font_header_section',
 				'settings' => 'generate_settings[site_title_font_weight]',
 				'priority' => 60,
-				'type' => 'weight'
+				'type' => 'gp-typography-select',
+				'choices' => array(
+					'normal' => 'normal',
+					'bold' => 'bold',
+					'100' => '100',
+					'200' => '200',
+					'300' => '300',
+					'400' => '400',
+					'500' => '500',
+					'600' => '600',
+					'700' => '700',
+					'800' => '800',
+					'900' => '900'
+				)
 			)
 		)
 	);
@@ -242,20 +378,27 @@ function generate_fonts_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['site_title_font_transform'],
 			'type' => 'option',
-			'sanitize_callback' => 'generate_sanitize_text_transform'
+			'sanitize_callback' => 'generate_sanitize_choices',
+			'transport' => 'postMessage'
 		)
 	);
 		
 	$wp_customize->add_control( 
-		new Generate_Text_Transform_Custom_Control( 
+		new Generate_Select_Control( 
 			$wp_customize, 
-			'site_title_font_transform_control', 
+			'generate_settings[site_title_font_transform]', 
 			array(
 				'label' => __('Text transform','generate-typography'),
 				'section' => 'font_header_section',
 				'settings' => 'generate_settings[site_title_font_transform]',
 				'priority' => 70,
-				'type' => 'transform'
+				'type' => 'gp-typography-select',
+				'choices' => array(
+					'none' => 'none',
+					'capitalize' => 'capitalize',
+					'uppercase' => 'uppercase',
+					'lowercase' => 'lowercase'
+				)
 			)
 		)
 	);
@@ -265,7 +408,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['site_title_font_size'],
 			'type' => 'option',
-			'sanitize_callback' => 'absint'
+			'sanitize_callback' => 'absint',
+			'transport' => 'postMessage'
 		)
 	);
 		
@@ -277,7 +421,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 				'label' => __('Font size','generate-typography'),
 				'section' => 'font_header_section',
 				'settings' => 'generate_settings[site_title_font_size]',
-				'priority' => 75
+				'priority' => 75,
+				'type' => 'gp-typography-slider'
 			)
 		)
 	);
@@ -306,24 +451,80 @@ function generate_fonts_customize_register( $wp_customize ) {
 	);
 	
 	$wp_customize->add_setting( 
-		'generate_settings[site_tagline_font_weight]', 
+		'font_site_tagline_category', 
 		array(
-			'default' => $defaults['site_tagline_font_weight'],
-			'type' => 'option',
-			'sanitize_callback' => 'generate_sanitize_font_weight'
+			'default' => '',
+			'sanitize_callback' => 'sanitize_text_field'
 		)
 	);
 		
 	$wp_customize->add_control( 
-		new Generate_Font_Weight_Custom_Control( 
+		new Generate_Hidden_Input_Control( 
 			$wp_customize, 
-			'site_tagline_font_weight_control', 
+			'font_site_tagline_category', 
+			array(
+				'section' => 'font_header_section',
+				'settings' => 'font_site_tagline_category',
+				'type' => 'gp-hidden-input',
+				'priority' => 80
+			)
+		)
+	);
+	
+	$wp_customize->add_setting( 
+		'font_site_tagline_variants', 
+		array(
+			'default' => '',
+			'sanitize_callback' => 'sanitize_text_field'
+		)
+	);
+		
+	$wp_customize->add_control( 
+		new Generate_Hidden_Input_Control( 
+			$wp_customize, 
+			'font_site_tagline_variants', 
+			array(
+				'section' => 'font_header_section',
+				'settings' => 'font_site_tagline_variants',
+				'type' => 'gp-hidden-input',
+				'priority' => 80
+			)
+		)
+	);
+	
+	$wp_customize->add_setting( 
+		'generate_settings[site_tagline_font_weight]', 
+		array(
+			'default' => $defaults['site_tagline_font_weight'],
+			'type' => 'option',
+			'sanitize_callback' => 'generate_sanitize_choices',
+			'transport' => 'postMessage'
+		)
+	);
+		
+	$wp_customize->add_control( 
+		new Generate_Select_Control( 
+			$wp_customize, 
+			'generate_settings[site_tagline_font_weight]', 
 			array(
 				'label' => __('Font weight','generate-typography'),
 				'section' => 'font_header_section',
 				'settings' => 'generate_settings[site_tagline_font_weight]',
 				'priority' => 90,
-				'type' => 'weight'
+				'type' => 'gp-typography-select',
+				'choices' => array(
+					'normal' => 'normal',
+					'bold' => 'bold',
+					'100' => '100',
+					'200' => '200',
+					'300' => '300',
+					'400' => '400',
+					'500' => '500',
+					'600' => '600',
+					'700' => '700',
+					'800' => '800',
+					'900' => '900'
+				)
 			)
 		)
 	);
@@ -333,20 +534,27 @@ function generate_fonts_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['site_tagline_font_transform'],
 			'type' => 'option',
-			'sanitize_callback' => 'generate_sanitize_text_transform'
+			'sanitize_callback' => 'generate_sanitize_choices',
+			'transport' => 'postMessage'
 		)
 	);
 		
 	$wp_customize->add_control( 
-		new Generate_Text_Transform_Custom_Control( 
+		new Generate_Select_Control( 
 			$wp_customize, 
-			'site_tagline_font_transform_control', 
+			'generate_settings[site_tagline_font_transform]', 
 			array(
 				'label' => __('Text transform','generate-typography'),
 				'section' => 'font_header_section',
 				'settings' => 'generate_settings[site_tagline_font_transform]',
 				'priority' => 100,
-				'type' => 'transform'
+				'type' => 'gp-typography-select',
+				'choices' => array(
+					'none' => 'none',
+					'capitalize' => 'capitalize',
+					'uppercase' => 'uppercase',
+					'lowercase' => 'lowercase'
+				)
 			)
 		)
 	);
@@ -356,7 +564,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['site_tagline_font_size'],
 			'type' => 'option',
-			'sanitize_callback' => 'absint'
+			'sanitize_callback' => 'absint',
+			'transport' => 'postMessage'
 		)
 	);
 		
@@ -368,15 +577,14 @@ function generate_fonts_customize_register( $wp_customize ) {
 				'label' => __('Font size','generate-typography'),
 				'section' => 'font_header_section',
 				'settings' => 'generate_settings[site_tagline_font_size]',
-				'priority' => 105
+				'priority' => 105,
+				'type' => 'gp-typography-slider'
 			)
 		)
 	);
 	
 	$wp_customize->add_section(
-		// ID
 		'font_navigation_section',
-		// Arguments array
 		array(
 			'title' => __( 'Primary Navigation', 'generate-typography' ),
 			'capability' => 'edit_theme_options',
@@ -410,24 +618,80 @@ function generate_fonts_customize_register( $wp_customize ) {
 	);
 	
 	$wp_customize->add_setting( 
-		'generate_settings[navigation_font_weight]', 
+		'font_navigation_category', 
 		array(
-			'default' => $defaults['navigation_font_weight'],
-			'type' => 'option',
-			'sanitize_callback' => 'generate_sanitize_font_weight'
+			'default' => '',
+			'sanitize_callback' => 'sanitize_text_field'
 		)
 	);
 		
 	$wp_customize->add_control( 
-		new Generate_Font_Weight_Custom_Control( 
+		new Generate_Hidden_Input_Control( 
 			$wp_customize, 
-			'navigation_font_weight_control', 
+			'font_navigation_category', 
+			array(
+				'section' => 'font_navigation_section',
+				'settings' => 'font_navigation_category',
+				'type' => 'gp-hidden-input',
+				'priority' => 120
+			)
+		)
+	);
+	
+	$wp_customize->add_setting( 
+		'font_navigation_variants', 
+		array(
+			'default' => '',
+			'sanitize_callback' => 'sanitize_text_field'
+		)
+	);
+		
+	$wp_customize->add_control( 
+		new Generate_Hidden_Input_Control( 
+			$wp_customize, 
+			'font_navigation_variants', 
+			array(
+				'section' => 'font_navigation_section',
+				'settings' => 'font_navigation_variants',
+				'type' => 'gp-hidden-input',
+				'priority' => 120
+			)
+		)
+	);
+	
+	$wp_customize->add_setting( 
+		'generate_settings[navigation_font_weight]', 
+		array(
+			'default' => $defaults['navigation_font_weight'],
+			'type' => 'option',
+			'sanitize_callback' => 'generate_sanitize_choices',
+			'transport' => 'postMessage'
+		)
+	);
+		
+	$wp_customize->add_control( 
+		new Generate_Select_Control( 
+			$wp_customize, 
+			'generate_settings[navigation_font_weight]', 
 			array(
 				'label' => __('Font weight','generate-typography'),
 				'section' => 'font_navigation_section',
 				'settings' => 'generate_settings[navigation_font_weight]',
 				'priority' => 140,
-				'type' => 'weight'
+				'type' => 'gp-typography-select',
+				'choices' => array(
+					'normal' => 'normal',
+					'bold' => 'bold',
+					'100' => '100',
+					'200' => '200',
+					'300' => '300',
+					'400' => '400',
+					'500' => '500',
+					'600' => '600',
+					'700' => '700',
+					'800' => '800',
+					'900' => '900'
+				)
 			)
 		)
 	);
@@ -437,20 +701,27 @@ function generate_fonts_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['navigation_font_transform'],
 			'type' => 'option',
-			'sanitize_callback' => 'generate_sanitize_text_transform'
+			'sanitize_callback' => 'generate_sanitize_text_transform',
+			'transport' => 'postMessage'
 		)
 	);
 		
 	$wp_customize->add_control( 
-		new Generate_Text_Transform_Custom_Control( 
+		new Generate_Select_Control( 
 			$wp_customize, 
-			'navigation_font_transform_control', 
+			'generate_settings[navigation_font_transform]', 
 			array(
 				'label' => __('Text transform','generate-typography'),
 				'section' => 'font_navigation_section',
 				'settings' => 'generate_settings[navigation_font_transform]',
 				'priority' => 160,
-				'type' => 'transform'
+				'type' => 'gp-typography-select',
+				'choices' => array(
+					'none' => 'none',
+					'capitalize' => 'capitalize',
+					'uppercase' => 'uppercase',
+					'lowercase' => 'lowercase'
+				)
 			)
 		)
 	);
@@ -460,7 +731,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['navigation_font_size'],
 			'type' => 'option',
-			'sanitize_callback' => 'absint'
+			'sanitize_callback' => 'absint',
+			'transport' => 'postMessage'
 		)
 	);
 		
@@ -472,7 +744,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 				'label' => __('Font size','generate-typography'),
 				'section' => 'font_navigation_section',
 				'settings' => 'generate_settings[navigation_font_size]',
-				'priority' => 165
+				'priority' => 165,
+				'type' => 'gp-typography-slider'
 			)
 		)
 	);
@@ -570,24 +843,80 @@ function generate_fonts_customize_register( $wp_customize ) {
 		);
 		
 		$wp_customize->add_setting( 
-			'generate_settings[' . $heading['weight_slug'] . ']',  
+			$heading['font_slug'] . '_category', 
 			array(
-				'default' => $heading['weight_default'],
-				'type' => 'option',
-				'sanitize_callback' => 'generate_sanitize_font_weight'
+				'default' => '',
+				'sanitize_callback' => 'sanitize_text_field'
 			)
 		);
 			
 		$wp_customize->add_control( 
-			new Generate_Font_Weight_Custom_Control( 
+			new Generate_Hidden_Input_Control( 
 				$wp_customize, 
-				$heading['weight_slug'] . '_control', 
+				$heading['font_slug'] . '_category',
+				array(
+					'section' => 'font_content_section',
+					'settings' => $heading['font_slug'] . '_category',
+					'type' => 'gp-hidden-input',
+					'priority' => $heading['font_priority']
+				)
+			)
+		);
+		
+		$wp_customize->add_setting( 
+			$heading['font_slug'] . '_variants',
+			array(
+				'default' => '',
+				'sanitize_callback' => 'sanitize_text_field'
+			)
+		);
+			
+		$wp_customize->add_control( 
+			new Generate_Hidden_Input_Control( 
+				$wp_customize, 
+				$heading['font_slug'] . '_variants', 
+				array(
+					'section' => 'font_content_section',
+					'settings' => $heading['font_slug'] . '_variants',
+					'type' => 'gp-hidden-input',
+					'priority' => $heading['font_priority']
+				)
+			)
+		);
+		
+		$wp_customize->add_setting( 
+			'generate_settings[' . $heading['weight_slug'] . ']',  
+			array(
+				'default' => $heading['weight_default'],
+				'type' => 'option',
+				'sanitize_callback' => 'generate_sanitize_choices',
+				'transport' => 'postMessage'
+			)
+		);
+			
+		$wp_customize->add_control( 
+			new Generate_Select_Control( 
+				$wp_customize, 
+				'generate_settings[' . $heading['weight_slug'] . ']', 
 				array(
 					'label' => $heading['weight_label'],
 					'section' => 'font_content_section',
 					'settings' => 'generate_settings[' . $heading['weight_slug'] . ']',
 					'priority' => $heading['weight_priority'],
-					'type' => 'weight'
+					'type' => 'gp-typography-select',
+					'choices' => array(
+						'normal' => 'normal',
+						'bold' => 'bold',
+						'100' => '100',
+						'200' => '200',
+						'300' => '300',
+						'400' => '400',
+						'500' => '500',
+						'600' => '600',
+						'700' => '700',
+						'800' => '800',
+						'900' => '900'
+					)
 				)
 			)
 		);
@@ -597,20 +926,27 @@ function generate_fonts_customize_register( $wp_customize ) {
 			array(
 				'default' => $heading['transform_default'],
 				'type' => 'option',
-				'sanitize_callback' => 'generate_sanitize_text_transform'
+				'sanitize_callback' => 'generate_sanitize_choices',
+				'transport' => 'postMessage'
 			)
 		);
 			
 		$wp_customize->add_control( 
-			new Generate_Text_Transform_Custom_Control( 
+			new Generate_Select_Control( 
 				$wp_customize, 
-				$heading['transform_slug'] . '_control', 
+				'generate_settings[' . $heading['transform_slug'] . ']',
 				array(
 					'label' => $heading['transform_label'],
 					'section' => 'font_content_section',
 					'settings' => 'generate_settings[' . $heading['transform_slug'] . ']',
 					'priority' => $heading['transform_priority'],
-					'type' => 'transform'
+					'type' => 'gp-typography-select',
+					'choices' => array(
+						'none' => 'none',
+						'capitalize' => 'capitalize',
+						'uppercase' => 'uppercase',
+						'lowercase' => 'lowercase'
+					)
 				)
 			)
 		);
@@ -620,7 +956,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 			array(
 				'default' => $heading['size_default'],
 				'type' => 'option',
-				'sanitize_callback' => 'absint'
+				'sanitize_callback' => 'absint',
+				'transport' => 'postMessage'
 			)
 		);
 			
@@ -632,7 +969,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 					'label' => $heading['size_label'],
 					'section' => 'font_content_section',
 					'settings' => 'generate_settings[' . $heading['size_slug'] . ']',
-					'priority' => $heading['size_priority']
+					'priority' => $heading['size_priority'],
+					'type' => 'gp-typography-slider'
 				)
 			)
 		);
@@ -676,24 +1014,80 @@ function generate_fonts_customize_register( $wp_customize ) {
 	);
 	
 	$wp_customize->add_setting( 
-		'generate_settings[widget_title_font_weight]', 
+		'font_widget_title_category', 
 		array(
-			'default' => $defaults['widget_title_font_weight'],
-			'type' => 'option',
-			'sanitize_callback' => 'generate_sanitize_font_weight'
+			'default' => '',
+			'sanitize_callback' => 'sanitize_text_field'
 		)
 	);
 		
 	$wp_customize->add_control( 
-		new Generate_Font_Weight_Custom_Control( 
+		new Generate_Hidden_Input_Control( 
 			$wp_customize, 
-			'widget_title_font_weight_control', 
+			'font_widget_title_category', 
+			array(
+				'section' => 'font_widget_section',
+				'settings' => 'font_widget_title_category',
+				'type' => 'gp-hidden-input',
+				'priority' => 185
+			)
+		)
+	);
+	
+	$wp_customize->add_setting( 
+		'font_widget_title_variants', 
+		array(
+			'default' => '',
+			'sanitize_callback' => 'sanitize_text_field'
+		)
+	);
+		
+	$wp_customize->add_control( 
+		new Generate_Hidden_Input_Control( 
+			$wp_customize, 
+			'font_widget_title_variants', 
+			array(
+				'section' => 'font_widget_section',
+				'settings' => 'font_widget_title_variants',
+				'type' => 'gp-hidden-input',
+				'priority' => 185
+			)
+		)
+	);
+	
+	$wp_customize->add_setting( 
+		'generate_settings[widget_title_font_weight]', 
+		array(
+			'default' => $defaults['widget_title_font_weight'],
+			'type' => 'option',
+			'sanitize_callback' => 'generate_sanitize_choices',
+			'transport' => 'postMessage'
+		)
+	);
+		
+	$wp_customize->add_control( 
+		new Generate_Select_Control( 
+			$wp_customize, 
+			'generate_settings[widget_title_font_weight]', 
 			array(
 				'label' => __('Font weight','generate-typography'),
 				'section' => 'font_widget_section',
 				'settings' => 'generate_settings[widget_title_font_weight]',
 				'priority' => 200,
-				'type' => 'weight'
+				'type' => 'gp-typography-select',
+				'choices' => array(
+					'normal' => 'normal',
+					'bold' => 'bold',
+					'100' => '100',
+					'200' => '200',
+					'300' => '300',
+					'400' => '400',
+					'500' => '500',
+					'600' => '600',
+					'700' => '700',
+					'800' => '800',
+					'900' => '900'
+				)
 			)
 		)
 	);
@@ -703,20 +1097,27 @@ function generate_fonts_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['widget_title_font_transform'],
 			'type' => 'option',
-			'sanitize_callback' => 'generate_sanitize_text_transform'
+			'sanitize_callback' => 'generate_sanitize_choices',
+			'transport' => 'postMessage'
 		)
 	);
 		
 	$wp_customize->add_control( 
-		new Generate_Text_Transform_Custom_Control( 
+		new Generate_Select_Control( 
 			$wp_customize, 
-			'widget_title_font_transform_control', 
+			'generate_settings[widget_title_font_transform]', 
 			array(
 				'label' => __('Text transform','generate-typography'),
 				'section' => 'font_widget_section',
 				'settings' => 'generate_settings[widget_title_font_transform]',
 				'priority' => 220,
-				'type' => 'transform'
+				'type' => 'gp-typography-select',
+				'choices' => array(
+					'none' => 'none',
+					'capitalize' => 'capitalize',
+					'uppercase' => 'uppercase',
+					'lowercase' => 'lowercase'
+				)
 			)
 		)
 	);
@@ -726,7 +1127,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['widget_title_font_size'],
 			'type' => 'option',
-			'sanitize_callback' => 'absint'
+			'sanitize_callback' => 'absint',
+			'transport' => 'postMessage'
 		)
 	);
 		
@@ -738,7 +1140,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 				'label' => __('Font size','generate-typography'),
 				'section' => 'font_widget_section',
 				'settings' => 'generate_settings[widget_title_font_size]',
-				'priority' => 240
+				'priority' => 240,
+				'type' => 'gp-typography-slider'
 			)
 		)
 	);
@@ -748,7 +1151,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['widget_content_font_size'],
 			'type' => 'option',
-			'sanitize_callback' => 'absint'
+			'sanitize_callback' => 'absint',
+			'transport' => 'postMessage'
 		)
 	);
 		
@@ -760,7 +1164,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 				'label' => __('Content font size','generate-typography'),
 				'section' => 'font_widget_section',
 				'settings' => 'generate_settings[widget_content_font_size]',
-				'priority' => 240
+				'priority' => 240,
+				'type' => 'gp-typography-slider'
 			)
 		)
 	);
@@ -783,7 +1188,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['footer_font_size'],
 			'type' => 'option',
-			'sanitize_callback' => 'absint'
+			'sanitize_callback' => 'absint',
+			'transport' => 'postMessage'
 		)
 	);
 		
@@ -795,7 +1201,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 				'label' => __('Footer font size','generate-typography'),
 				'section' => 'font_footer_section',
 				'settings' => 'generate_settings[footer_font_size]',
-				'priority' => 240
+				'priority' => 240,
+				'type' => 'gp-typography-slider'
 			)
 		)
 	);
@@ -817,7 +1224,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['mobile_site_title_font_size'],
 			'type' => 'option',
-			'sanitize_callback' => 'absint'
+			'sanitize_callback' => 'absint',
+			'transport' => 'postMessage'
 		)
 	);
 		
@@ -828,7 +1236,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 			array(
 				'label' => __('Site title font size','generate-typography'),
 				'section' => 'mobile_typography',
-				'settings' => 'generate_settings[mobile_site_title_font_size]'
+				'settings' => 'generate_settings[mobile_site_title_font_size]',
+				'type' => 'gp-typography-slider'
 			)
 		)
 	);
@@ -838,7 +1247,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['mobile_heading_1_font_size'],
 			'type' => 'option',
-			'sanitize_callback' => 'absint'
+			'sanitize_callback' => 'absint',
+			'transport' => 'postMessage'
 		)
 	);
 		
@@ -849,7 +1259,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 			array(
 				'label' => __('H1 font size','generate-typography'),
 				'section' => 'mobile_typography',
-				'settings' => 'generate_settings[mobile_heading_1_font_size]'
+				'settings' => 'generate_settings[mobile_heading_1_font_size]',
+				'type' => 'gp-typography-slider'
 			)
 		)
 	);
@@ -859,7 +1270,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['mobile_heading_2_font_size'],
 			'type' => 'option',
-			'sanitize_callback' => 'absint'
+			'sanitize_callback' => 'absint',
+			'transport' => 'postMessage'
 		)
 	);
 		
@@ -870,7 +1282,8 @@ function generate_fonts_customize_register( $wp_customize ) {
 			array(
 				'label' => __('H2 font size','generate-typography'),
 				'section' => 'mobile_typography',
-				'settings' => 'generate_settings[mobile_heading_2_font_size]'
+				'settings' => 'generate_settings[mobile_heading_2_font_size]',
+				'type' => 'gp-typography-slider'
 			)
 		)
 	);
@@ -878,105 +1291,91 @@ function generate_fonts_customize_register( $wp_customize ) {
 }
 endif;
 
+if ( !function_exists('generate_display_google_fonts') ) :
 /** 
  * Enqueue Google Fonts
  * @since 0.1
  */
-if ( !function_exists('generate_display_google_fonts') ) :
-	add_action('wp_enqueue_scripts','generate_display_google_fonts', 0);
-	function generate_display_google_fonts($google_fonts) {
+add_action('wp_enqueue_scripts','generate_display_google_fonts', 0);
+function generate_display_google_fonts($google_fonts) {
+	
+	if ( is_admin() )
+		return;
 		
-		if ( is_admin() )
-			return;
-			
-		$generate_settings = wp_parse_args( 
-			get_option( 'generate_settings', array() ), 
-			generate_get_default_fonts() 
-		);
-			
-		$not_google = array(
-			'inherit',
-			'Arial,+Helvetica,+sans-serif',
-			'Century+Gothic',
-			'Comic+Sans+MS',
-			'Courier+New',
-			'Georgia,+Times+New+Roman,+Times,+serif',
-			'Helvetica',
-			'Impact',
-			'Lucida+Console',
-			'Lucida+Sans+Unicode',
-			'Palatino+Linotype',
-			'Tahoma,+Geneva,+sans-serif',
-			'Trebuchet+MS,+Helvetica,+sans-serif',
-			'Verdana,+Geneva,+sans-serif'
-		);
+	$generate_settings = wp_parse_args( 
+		get_option( 'generate_settings', array() ), 
+		generate_get_default_fonts() 
+	);
 		
-		// Grab our font family settings
-		$font_settings = array(
-			'font_body',
-			'font_site_title',
-			'font_site_tagline',
-			'font_navigation',
-			'font_widget_title',
-			'font_heading_1',
-			'font_heading_2',
-			'font_heading_3'
-		);
+	// List our non-Google fonts
+	$not_google = str_replace( ' ', '+', generate_typography_default_fonts() );
+	
+	// Grab our font family settings
+	$font_settings = array(
+		'font_body',
+		'font_site_title',
+		'font_site_tagline',
+		'font_navigation',
+		'font_widget_title',
+		'font_heading_1',
+		'font_heading_2',
+		'font_heading_3'
+	);
+	
+	// Create our Google Fonts array
+	$google_fonts = array();
+	if ( ! empty( $font_settings ) ) :
+	
+		foreach ( $font_settings as $key ) {
 		
-		// Create our Google Fonts array
-		$google_fonts = array();
-		if ( ! empty( $font_settings ) ) :
+			// If our value is still using the old format, fix it
+			if ( strpos( $generate_settings[$key], ':' ) !== false )
+				$generate_settings[$key] = current( explode( ':', $generate_settings[$key] ) );
 		
-			foreach ( $font_settings as $key ) {
+			// Replace the spaces in the names with a plus
+			$value = str_replace( ' ', '+', $generate_settings[$key] );
 			
-				// If our value is still using the old format, fix it
-				if ( strpos( $generate_settings[$key], ':' ) !== false )
-					$generate_settings[$key] = current( explode( ':', $generate_settings[$key] ) );
+			// Grab the variants using the plain name
+			$variants = generate_get_google_font_variants( $generate_settings[$key], $key, generate_get_default_fonts() );
 			
-				// Replace the spaces in the names with a plus
-				$value = str_replace( ' ', '+', $generate_settings[$key] );
-				
-				// Grab the variants using the plain name
-				$variants = generate_get_google_font_variants( $generate_settings[$key] );
-				
-				// If we have variants, add them to our value
-				$value = ! empty( $variants ) ? $value . ':' . $variants : $value;
-				
-				// Make sure we don't add the same font twice
-				if( ! in_array( $value, $google_fonts ) ) {
-					$google_fonts[] = $value;
-				}
-				
+			// If we have variants, add them to our value
+			$value = ! empty( $variants ) ? $value . ':' . $variants : $value;
+			
+			// Make sure we don't add the same font twice
+			if( ! in_array( $value, $google_fonts ) ) {
+				$google_fonts[] = $value;
 			}
 			
-		endif;
-
-		// Ignore any non-Google fonts
-		$google_fonts = array_diff($google_fonts, $not_google);
-		
-		// Separate each different font with a bar
-		$google_fonts = implode('|', $google_fonts);
-		
-		// Apply a filter to the output
-		$google_fonts = apply_filters( 'generate_typography_google_fonts', $google_fonts );
-		
-		// Get the subset
-		$subset = apply_filters( 'generate_fonts_subset','' );
-		
-		// Set up our arguments
-		$font_args = array();
-		$font_args[ 'family' ] = $google_fonts;
-		if ( '' !== $subset )
-			$font_args[ 'subset' ] = urlencode( $subset );
-		
-		// Create our URL using the arguments
-        $fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
-		
-		// Enqueue our fonts
-		if ( $google_fonts ) { 
-			wp_enqueue_style('generate-fonts', $fonts_url, array(), null, 'all' );
 		}
+		
+	endif;
+
+	// Ignore any non-Google fonts
+	$google_fonts = array_diff($google_fonts, $not_google);
+	
+	// Separate each different font with a bar
+	$google_fonts = implode('|', $google_fonts);
+	
+	// Apply a filter to the output
+	$google_fonts = apply_filters( 'generate_typography_google_fonts', $google_fonts );
+	
+	// Get the subset
+	$subset = apply_filters( 'generate_fonts_subset','' );
+	
+	// Set up our arguments
+	$font_args = array();
+	$font_args[ 'family' ] = $google_fonts;
+	if ( '' !== $subset )
+		$font_args[ 'subset' ] = urlencode( $subset );
+	
+	// Create our URL using the arguments
+	$fonts_url = add_query_arg( $font_args, '//fonts.googleapis.com/css' );
+	
+	// Enqueue our fonts
+	if ( $google_fonts ) { 
+		wp_enqueue_style('generate-fonts', $fonts_url, array(), null, 'all' );
 	}
+}
 endif;
 
 /**
@@ -984,161 +1383,160 @@ endif;
  * @since 0.1
  */
 if ( !function_exists('generate_font_css') ) :
-	function generate_font_css()
-	{
-		$generate_settings = wp_parse_args( 
-			get_option( 'generate_settings', array() ), 
-			generate_get_default_fonts() 
-		);
+function generate_font_css()
+{
+	$generate_settings = wp_parse_args( 
+		get_option( 'generate_settings', array() ), 
+		generate_get_default_fonts() 
+	);
+	
+	// Get our sub-navigation font size
+	$subnav_font_size = $generate_settings['navigation_font_size'] >= 17 ? $generate_settings['navigation_font_size'] - 3 : $generate_settings['navigation_font_size'] - 1;
+	
+	// Create all of our font family entries
+	$body_family = generate_get_font_family_css( 'font_body', 'generate_settings', generate_get_default_fonts() );
+	$site_title_family = generate_get_font_family_css( 'font_site_title', 'generate_settings', generate_get_default_fonts() );
+	$site_tagline_family = generate_get_font_family_css( 'font_site_tagline', 'generate_settings', generate_get_default_fonts() );
+	$navigation_family = generate_get_font_family_css( 'font_navigation', 'generate_settings', generate_get_default_fonts() );
+	$widget_family = generate_get_font_family_css( 'font_widget_title', 'generate_settings', generate_get_default_fonts() );
+	$h1_family = generate_get_font_family_css( 'font_heading_1', 'generate_settings', generate_get_default_fonts() );
+	$h2_family = generate_get_font_family_css( 'font_heading_2', 'generate_settings', generate_get_default_fonts() );
+	$h3_family = generate_get_font_family_css( 'font_heading_3', 'generate_settings', generate_get_default_fonts() );
+	
+	// Start the magic
+	$visual_css = array (
+	
+		// Body font
+		'body, button, input, select, textarea' => array(
+			'font-family' => $body_family,
+			'font-weight' => 'normal' == $generate_settings['body_font_weight'] ? '' : $generate_settings['body_font_weight'],
+			'text-transform' => 'none' == $generate_settings['body_font_transform'] ? '' : $generate_settings['body_font_transform'],
+			'font-size' => $generate_settings['body_font_size'] . 'px'
+		),
 		
-		// Get our sub-navigation font size
-		$subnav_font_size = $generate_settings['navigation_font_size'] >= 17 ? $generate_settings['navigation_font_size'] - 3 : $generate_settings['navigation_font_size'] - 1;
+		// Main title font
+		'.main-title' => array(
+			'font-family' => $site_title_family,
+			'font-weight' => 'normal' == $generate_settings['site_title_font_weight'] ? '' : $generate_settings['site_title_font_weight'],
+			'text-transform' => 'none' == $generate_settings['site_title_font_transform'] ? '' : $generate_settings['site_title_font_transform'],
+			'font-size' => $generate_settings['site_title_font_size'] . 'px'
+		),
 		
-		// Create all of our font family entries
-		$body_family = generate_get_font_family_css( 'font_body', 'generate_settings', generate_get_default_fonts() );
-		$site_title_family = generate_get_font_family_css( 'font_site_title', 'generate_settings', generate_get_default_fonts() );
-		$site_tagline_family = generate_get_font_family_css( 'font_site_tagline', 'generate_settings', generate_get_default_fonts() );
-		$navigation_family = generate_get_font_family_css( 'font_navigation', 'generate_settings', generate_get_default_fonts() );
-		$widget_family = generate_get_font_family_css( 'font_widget_title', 'generate_settings', generate_get_default_fonts() );
-		$h1_family = generate_get_font_family_css( 'font_heading_1', 'generate_settings', generate_get_default_fonts() );
-		$h2_family = generate_get_font_family_css( 'font_heading_2', 'generate_settings', generate_get_default_fonts() );
-		$h3_family = generate_get_font_family_css( 'font_heading_3', 'generate_settings', generate_get_default_fonts() );
+		// Main tagline font
+		'.site-description' => array(
+			'font-family' => $site_tagline_family,
+			'font-weight' => 'normal' == $generate_settings['site_tagline_font_weight'] ? '' : $generate_settings['site_tagline_font_weight'],
+			'text-transform' => 'none' == $generate_settings['site_tagline_font_transform'] ? '' : $generate_settings['site_tagline_font_transform'],
+			'font-size' => $generate_settings['site_tagline_font_size'] . 'px'
+		),
 		
-		// Start the magic
-		$visual_css = array (
+		// Navigation font
+		'.main-navigation a, .menu-toggle' => array(
+			'font-family' => $navigation_family,
+			'font-weight' => 'normal' == $generate_settings['navigation_font_weight'] ? '' : $generate_settings['navigation_font_weight'],
+			'text-transform' => 'none' == $generate_settings['navigation_font_transform'] ? '' : $generate_settings['navigation_font_transform'],
+			'font-size' => $generate_settings['navigation_font_size'] . 'px'
+		),
 		
-			// Body font
-			'body, button, input, select, textarea' => array(
-				'font-family' => $body_family,
-				'font-weight' => 'normal' == $generate_settings['body_font_weight'] ? '' : $generate_settings['body_font_weight'],
-				'text-transform' => 'none' == $generate_settings['body_font_transform'] ? '' : $generate_settings['body_font_transform'],
-				'font-size' => $generate_settings['body_font_size'] . 'px'
-			),
-			
-			// Main title font
-			'.main-title' => array(
-				'font-family' => $site_title_family,
-				'font-weight' => 'normal' == $generate_settings['site_title_font_weight'] ? '' : $generate_settings['site_title_font_weight'],
-				'text-transform' => 'none' == $generate_settings['site_title_font_transform'] ? '' : $generate_settings['site_title_font_transform'],
-				'font-size' => $generate_settings['site_title_font_size'] . 'px'
-			),
-			
-			// Main tagline font
-			'.site-description' => array(
-				'font-family' => $site_tagline_family,
-				'font-weight' => 'normal' == $generate_settings['site_tagline_font_weight'] ? '' : $generate_settings['site_tagline_font_weight'],
-				'text-transform' => 'none' == $generate_settings['site_tagline_font_transform'] ? '' : $generate_settings['site_tagline_font_transform'],
-				'font-size' => $generate_settings['site_tagline_font_size'] . 'px'
-			),
-			
-			// Navigation font
-			'.main-navigation a, .menu-toggle' => array(
-				'font-family' => $navigation_family,
-				'font-weight' => 'normal' == $generate_settings['navigation_font_weight'] ? '' : $generate_settings['navigation_font_weight'],
-				'text-transform' => 'none' == $generate_settings['navigation_font_transform'] ? '' : $generate_settings['navigation_font_transform'],
-				'font-size' => $generate_settings['navigation_font_size'] . 'px'
-			),
-			
-			'.main-navigation .main-nav ul ul li a' => array(
-				'font-size' => $subnav_font_size . 'px'
-			),
-			
-			// Widget title font
-			'.widget-title' => array(
-				'font-family' => $widget_family,
-				'font-weight' => 'normal' == $generate_settings['widget_title_font_weight'] ? '' : $generate_settings['widget_title_font_weight'],
-				'text-transform' => 'none' == $generate_settings['widget_title_font_transform'] ? '' : $generate_settings['widget_title_font_transform'],
-				'font-size' => $generate_settings['widget_title_font_size'] . 'px'
-			),
-			
-			// Widget font size
-			'.sidebar .widget, .footer-widgets .widget' => array(
-				'font-size' => $generate_settings['widget_content_font_size'] . 'px'
-			),
-			
-			// Heading 1 font
-			'h1' => array(
-				'font-family' => $h1_family,
-				'font-weight' => 'normal' == $generate_settings['heading_1_weight'] ? '' : $generate_settings['heading_1_weight'],
-				'text-transform' => 'none' == $generate_settings['heading_1_transform'] ? '' : $generate_settings['heading_1_transform'],
-				'font-size' => $generate_settings['heading_1_font_size'] . 'px'
-			),
-			
-			// Heading 2 font
-			'h2' => array(
-				'font-family' => $h2_family,
-				'font-weight' => 'normal' == $generate_settings['heading_2_weight'] ? '' : $generate_settings['heading_2_weight'],
-				'text-transform' => 'none' == $generate_settings['heading_2_transform'] ? '' : $generate_settings['heading_2_transform'],
-				'font-size' => $generate_settings['heading_2_font_size'] . 'px'
-			),
-			
-			// Heading 3 font
-			'h3' => array(
-				'font-family' => $h3_family,
-				'font-weight' => 'normal' == $generate_settings['heading_3_weight'] ? '' : $generate_settings['heading_3_weight'],
-				'text-transform' => 'none' == $generate_settings['heading_3_transform'] ? '' : $generate_settings['heading_3_transform'],
-				'font-size' => $generate_settings['heading_3_font_size'] . 'px'
-			),
-			
-			// Footer font
-			'.site-info' => array(
-				'font-size' => $generate_settings['footer_font_size'] . 'px'
-			)
-			
-		);
+		'.main-navigation .main-nav ul ul li a' => array(
+			'font-size' => $subnav_font_size . 'px'
+		),
 		
-		// Output the above CSS
-		$output = '';
-		foreach($visual_css as $k => $properties) {
-			if(!count($properties))
+		// Widget title font
+		'.widget-title' => array(
+			'font-family' => $widget_family,
+			'font-weight' => 'normal' == $generate_settings['widget_title_font_weight'] ? '' : $generate_settings['widget_title_font_weight'],
+			'text-transform' => 'none' == $generate_settings['widget_title_font_transform'] ? '' : $generate_settings['widget_title_font_transform'],
+			'font-size' => $generate_settings['widget_title_font_size'] . 'px'
+		),
+		
+		// Widget font size
+		'.sidebar .widget, .footer-widgets .widget' => array(
+			'font-size' => $generate_settings['widget_content_font_size'] . 'px'
+		),
+		
+		// Heading 1 font
+		'h1' => array(
+			'font-family' => $h1_family,
+			'font-weight' => 'normal' == $generate_settings['heading_1_weight'] ? '' : $generate_settings['heading_1_weight'],
+			'text-transform' => 'none' == $generate_settings['heading_1_transform'] ? '' : $generate_settings['heading_1_transform'],
+			'font-size' => $generate_settings['heading_1_font_size'] . 'px'
+		),
+		
+		// Heading 2 font
+		'h2' => array(
+			'font-family' => $h2_family,
+			'font-weight' => 'normal' == $generate_settings['heading_2_weight'] ? '' : $generate_settings['heading_2_weight'],
+			'text-transform' => 'none' == $generate_settings['heading_2_transform'] ? '' : $generate_settings['heading_2_transform'],
+			'font-size' => $generate_settings['heading_2_font_size'] . 'px'
+		),
+		
+		// Heading 3 font
+		'h3' => array(
+			'font-family' => $h3_family,
+			'font-weight' => 'normal' == $generate_settings['heading_3_weight'] ? '' : $generate_settings['heading_3_weight'],
+			'text-transform' => 'none' == $generate_settings['heading_3_transform'] ? '' : $generate_settings['heading_3_transform'],
+			'font-size' => $generate_settings['heading_3_font_size'] . 'px'
+		),
+		
+		// Footer font
+		'.site-info' => array(
+			'font-size' => $generate_settings['footer_font_size'] . 'px'
+		)
+		
+	);
+	
+	// Output the above CSS
+	$output = '';
+	foreach($visual_css as $k => $properties) {
+		if(!count($properties))
+			continue;
+
+		$temporary_output = $k . ' {';
+		$elements_added = 0;
+
+		foreach($properties as $p => $v) {
+			if(empty($v))
 				continue;
 
-			$temporary_output = $k . ' {';
-			$elements_added = 0;
-
-			foreach($properties as $p => $v) {
-				if(empty($v))
-					continue;
-
-				$elements_added++;
-				$temporary_output .= $p . ': ' . $v . '; ';
-			}
-
-			$temporary_output .= "}";
-
-			if($elements_added > 0)
-				$output .= $temporary_output;
+			$elements_added++;
+			$temporary_output .= $p . ': ' . $v . '; ';
 		}
-		$mobile = apply_filters( 'generate_mobile_breakpoint', '768px' );
-		$mobile_site_title = ( isset( $generate_settings[ 'mobile_site_title_font_size' ] ) ) ? $generate_settings[ 'mobile_site_title_font_size' ] : '30';
-		$mobile_h1 = ( isset( $generate_settings[ 'mobile_heading_1_font_size' ] ) ) ? $generate_settings[ 'mobile_heading_1_font_size' ] : '30';
-		$mobile_h2 = ( isset( $generate_settings[ 'mobile_heading_2_font_size' ] ) ) ? $generate_settings[ 'mobile_heading_2_font_size' ] : '25';
-		$output .= '@media (max-width:' . $mobile . ') {
-			.main-title {
-				font-size: ' . $mobile_site_title . 'px;
-			}
-			h1 {
-				font-size: ' . $mobile_h1 . 'px;
-			}
-			
-			h2 {
-				font-size: ' . $mobile_h2 . 'px;
-			}
-		}';
-		$output = str_replace(array("\r", "\n", "\t"), '', $output);
-		return $output;
-	}
-	
-	/**
-	 * Enqueue scripts and styles
-	 */
-	add_action( 'wp_enqueue_scripts', 'generate_typography_scripts', 50 );
-	function generate_typography_scripts() {
 
-		wp_add_inline_style( 'generate-style', generate_font_css() );
-	
+		$temporary_output .= "}";
+
+		if($elements_added > 0)
+			$output .= $temporary_output;
 	}
-	
+	$mobile = apply_filters( 'generate_mobile_breakpoint', '768px' );
+	$mobile_site_title = ( isset( $generate_settings[ 'mobile_site_title_font_size' ] ) ) ? $generate_settings[ 'mobile_site_title_font_size' ] : '30';
+	$mobile_h1 = ( isset( $generate_settings[ 'mobile_heading_1_font_size' ] ) ) ? $generate_settings[ 'mobile_heading_1_font_size' ] : '30';
+	$mobile_h2 = ( isset( $generate_settings[ 'mobile_heading_2_font_size' ] ) ) ? $generate_settings[ 'mobile_heading_2_font_size' ] : '25';
+	$output .= '@media (max-width:' . $mobile . ') {
+		.main-title {
+			font-size: ' . $mobile_site_title . 'px;
+		}
+		h1 {
+			font-size: ' . $mobile_h1 . 'px;
+		}
+		
+		h2 {
+			font-size: ' . $mobile_h2 . 'px;
+		}
+	}';
+	$output = str_replace(array("\r", "\n", "\t"), '', $output);
+	return $output;
+}
+
+/**
+ * Enqueue scripts and styles
+ */
+add_action( 'wp_enqueue_scripts', 'generate_typography_scripts', 50 );
+function generate_typography_scripts() {
+
+	wp_add_inline_style( 'generate-style', generate_font_css() );
+
+}
 endif;
 
 if ( !function_exists('generate_fonts_customize_preview_css') ) :
@@ -1146,6 +1544,9 @@ add_action('customize_controls_print_styles', 'generate_fonts_customize_preview_
 function generate_fonts_customize_preview_css() {
 	?>
 	<style>
+		.slider-input {
+			height: auto !important;
+		}
 		.customize-control.customize-control-weight,
 		.customize-control.customize-control-transform {
 			float: left;
@@ -1166,84 +1567,22 @@ function generate_fonts_customize_preview_css() {
 			padding-top: 20px;
 			margin-top: 15px;
 		}
-		
+		.customize-control-gp-hidden-input {display:none !important;}
 	</style>
 	<?php
 }
 endif;
 
-if ( ! function_exists( 'generate_typography_convert_values' ) ) :
-add_action('admin_init', 'generate_typography_convert_values');
-function generate_typography_convert_values()
-{
-	// If we've already ran this function, bail
-	if ( 'true' == get_option( 'generate_update_premium_typography' ) )
-		return;
-	
-	// Get all settings
-	$generate_settings = wp_parse_args( 
-		get_option( 'generate_settings', array() ), 
-		generate_get_default_fonts() 
-	);
-	
-	// Get our font family keys
-	$font_settings = array(
-		'font_body',
-		'font_site_title',
-		'font_site_tagline',
-		'font_navigation',
-		'font_widget_title',
-		'font_heading_1',
-		'font_heading_2',
-		'font_heading_3'
-	);
-	
-	// Create our new empty array
-	$new_settings = array();
-	
-	// For each font family key
-	foreach( $font_settings as $key ) {
-			
-		// Get the value of each key
-		$value = $generate_settings[$key];
-			
-		// If our value has : in it and is not empty
-		if ( strpos( $value, ':' ) !== false && ! empty( $value ) ) :
-			
-			// Remove the : and anything past it
-			$value = current( explode( ':', $value ) );
-			
-			// Populate our new array with our new value
-			$new_settings[ $key ] = $value;
-			
-		endif;
-	}
-	
-	// If our new array isn't empty, update the options
-	if ( ! empty( $new_settings ) ) :
-		$generate_new_typography_settings = wp_parse_args( $new_settings, $generate_settings );
-		update_option( 'generate_settings', $generate_new_typography_settings );
-	endif;
-	
-	// All done, set an option so we don't have to do this again
-	update_option( 'generate_update_premium_typography','true' );
-}
-endif;
-
-if ( ! function_exists( 'generate_all_google_fonts' ) ) :
+if ( ! function_exists( 'generate_get_all_google_fonts' ) ) :
 /**
- * Store all Google Fonts in generate_all_google_fonts transient
+ * Return an array of all of our Google Fonts
  * @since 1.3.0
  */
-add_action( 'init','generate_all_google_fonts' );
-function generate_all_google_fonts()
+function generate_get_all_google_fonts( $amount = 'all' )
 {
-	// Bail if we already have our list of fonts
-	if ( get_transient('generate_all_google_fonts') )
-		return;
-	
 	// Our big list Google Fonts
-	$content = json_decode('[{"family":"ABeeZee","category":"sans-serif","variants":["regular","italic"]},{"family":"Abel","category":"sans-serif","variants":["regular"]},{"family":"Abril Fatface","category":"display","variants":["regular"]},{"family":"Aclonica","category":"sans-serif","variants":["regular"]},{"family":"Acme","category":"sans-serif","variants":["regular"]},{"family":"Actor","category":"sans-serif","variants":["regular"]},{"family":"Adamina","category":"serif","variants":["regular"]},{"family":"Advent Pro","category":"sans-serif","variants":["100","200","300","regular","500","600","700"]},{"family":"Aguafina Script","category":"handwriting","variants":["regular"]},{"family":"Akronim","category":"display","variants":["regular"]},{"family":"Aladin","category":"handwriting","variants":["regular"]},{"family":"Aldrich","category":"sans-serif","variants":["regular"]},{"family":"Alef","category":"sans-serif","variants":["regular","700"]},{"family":"Alegreya","category":"serif","variants":["regular","italic","700","700italic","900","900italic"]},{"family":"Alegreya SC","category":"serif","variants":["regular","italic","700","700italic","900","900italic"]},{"family":"Alegreya Sans","category":"sans-serif","variants":["100","100italic","300","300italic","regular","italic","500","500italic","700","700italic","800","800italic","900","900italic"]},{"family":"Alegreya Sans SC","category":"sans-serif","variants":["100","100italic","300","300italic","regular","italic","500","500italic","700","700italic","800","800italic","900","900italic"]},{"family":"Alex Brush","category":"handwriting","variants":["regular"]},{"family":"Alfa Slab One","category":"display","variants":["regular"]},{"family":"Alice","category":"serif","variants":["regular"]},{"family":"Alike","category":"serif","variants":["regular"]},{"family":"Alike Angular","category":"serif","variants":["regular"]},{"family":"Allan","category":"display","variants":["regular","700"]},{"family":"Allerta","category":"sans-serif","variants":["regular"]},{"family":"Allerta Stencil","category":"sans-serif","variants":["regular"]},{"family":"Allura","category":"handwriting","variants":["regular"]},{"family":"Almendra","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Almendra Display","category":"display","variants":["regular"]},{"family":"Almendra SC","category":"serif","variants":["regular"]},{"family":"Amarante","category":"display","variants":["regular"]},{"family":"Amaranth","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Amatic SC","category":"handwriting","variants":["regular","700"]},{"family":"Amethysta","category":"serif","variants":["regular"]},{"family":"Amiri","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Amita","category":"handwriting","variants":["regular","700"]},{"family":"Anaheim","category":"sans-serif","variants":["regular"]},{"family":"Andada","category":"serif","variants":["regular"]},{"family":"Andika","category":"sans-serif","variants":["regular"]},{"family":"Angkor","category":"display","variants":["regular"]},{"family":"Annie Use Your Telescope","category":"handwriting","variants":["regular"]},{"family":"Anonymous Pro","category":"monospace","variants":["regular","italic","700","700italic"]},{"family":"Antic","category":"sans-serif","variants":["regular"]},{"family":"Antic Didone","category":"serif","variants":["regular"]},{"family":"Antic Slab","category":"serif","variants":["regular"]},{"family":"Anton","category":"sans-serif","variants":["regular"]},{"family":"Arapey","category":"serif","variants":["regular","italic"]},{"family":"Arbutus","category":"display","variants":["regular"]},{"family":"Arbutus Slab","category":"serif","variants":["regular"]},{"family":"Architects Daughter","category":"handwriting","variants":["regular"]},{"family":"Archivo Black","category":"sans-serif","variants":["regular"]},{"family":"Archivo Narrow","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Arimo","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Arizonia","category":"handwriting","variants":["regular"]},{"family":"Armata","category":"sans-serif","variants":["regular"]},{"family":"Artifika","category":"serif","variants":["regular"]},{"family":"Arvo","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Arya","category":"sans-serif","variants":["regular","700"]},{"family":"Asap","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Asset","category":"display","variants":["regular"]},{"family":"Astloch","category":"display","variants":["regular","700"]},{"family":"Asul","category":"sans-serif","variants":["regular","700"]},{"family":"Atomic Age","category":"display","variants":["regular"]},{"family":"Aubrey","category":"display","variants":["regular"]},{"family":"Audiowide","category":"display","variants":["regular"]},{"family":"Autour One","category":"display","variants":["regular"]},{"family":"Average","category":"serif","variants":["regular"]},{"family":"Average Sans","category":"sans-serif","variants":["regular"]},{"family":"Averia Gruesa Libre","category":"display","variants":["regular"]},{"family":"Averia Libre","category":"display","variants":["300","300italic","regular","italic","700","700italic"]},{"family":"Averia Sans Libre","category":"display","variants":["300","300italic","regular","italic","700","700italic"]},{"family":"Averia Serif Libre","category":"display","variants":["300","300italic","regular","italic","700","700italic"]},{"family":"Bad Script","category":"handwriting","variants":["regular"]},{"family":"Balthazar","category":"serif","variants":["regular"]},{"family":"Bangers","category":"display","variants":["regular"]},{"family":"Basic","category":"sans-serif","variants":["regular"]},{"family":"Battambang","category":"display","variants":["regular","700"]},{"family":"Baumans","category":"display","variants":["regular"]},{"family":"Bayon","category":"display","variants":["regular"]},{"family":"Belgrano","category":"serif","variants":["regular"]},{"family":"Belleza","category":"sans-serif","variants":["regular"]},{"family":"BenchNine","category":"sans-serif","variants":["300","regular","700"]},{"family":"Bentham","category":"serif","variants":["regular"]},{"family":"Berkshire Swash","category":"handwriting","variants":["regular"]},{"family":"Bevan","category":"display","variants":["regular"]},{"family":"Bigelow Rules","category":"display","variants":["regular"]},{"family":"Bigshot One","category":"display","variants":["regular"]},{"family":"Bilbo","category":"handwriting","variants":["regular"]},{"family":"Bilbo Swash Caps","category":"handwriting","variants":["regular"]},{"family":"Biryani","category":"sans-serif","variants":["200","300","regular","600","700","800","900"]},{"family":"Bitter","category":"serif","variants":["regular","italic","700"]},{"family":"Black Ops One","category":"display","variants":["regular"]},{"family":"Bokor","category":"display","variants":["regular"]},{"family":"Bonbon","category":"handwriting","variants":["regular"]},{"family":"Boogaloo","category":"display","variants":["regular"]},{"family":"Bowlby One","category":"display","variants":["regular"]},{"family":"Bowlby One SC","category":"display","variants":["regular"]},{"family":"Brawler","category":"serif","variants":["regular"]},{"family":"Bree Serif","category":"serif","variants":["regular"]},{"family":"Bubblegum Sans","category":"display","variants":["regular"]},{"family":"Bubbler One","category":"sans-serif","variants":["regular"]},{"family":"Buda","category":"display","variants":["300"]},{"family":"Buenard","category":"serif","variants":["regular","700"]},{"family":"Butcherman","category":"display","variants":["regular"]},{"family":"Butterfly Kids","category":"handwriting","variants":["regular"]},{"family":"Cabin","category":"sans-serif","variants":["regular","italic","500","500italic","600","600italic","700","700italic"]},{"family":"Cabin Condensed","category":"sans-serif","variants":["regular","500","600","700"]},{"family":"Cabin Sketch","category":"display","variants":["regular","700"]},{"family":"Caesar Dressing","category":"display","variants":["regular"]},{"family":"Cagliostro","category":"sans-serif","variants":["regular"]},{"family":"Calligraffitti","category":"handwriting","variants":["regular"]},{"family":"Cambay","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Cambo","category":"serif","variants":["regular"]},{"family":"Candal","category":"sans-serif","variants":["regular"]},{"family":"Cantarell","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Cantata One","category":"serif","variants":["regular"]},{"family":"Cantora One","category":"sans-serif","variants":["regular"]},{"family":"Capriola","category":"sans-serif","variants":["regular"]},{"family":"Cardo","category":"serif","variants":["regular","italic","700"]},{"family":"Carme","category":"sans-serif","variants":["regular"]},{"family":"Carrois Gothic","category":"sans-serif","variants":["regular"]},{"family":"Carrois Gothic SC","category":"sans-serif","variants":["regular"]},{"family":"Carter One","category":"display","variants":["regular"]},{"family":"Caudex","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Cedarville Cursive","category":"handwriting","variants":["regular"]},{"family":"Ceviche One","category":"display","variants":["regular"]},{"family":"Changa One","category":"display","variants":["regular","italic"]},{"family":"Chango","category":"display","variants":["regular"]},{"family":"Chau Philomene One","category":"sans-serif","variants":["regular","italic"]},{"family":"Chela One","category":"display","variants":["regular"]},{"family":"Chelsea Market","category":"display","variants":["regular"]},{"family":"Chenla","category":"display","variants":["regular"]},{"family":"Cherry Cream Soda","category":"display","variants":["regular"]},{"family":"Cherry Swash","category":"display","variants":["regular","700"]},{"family":"Chewy","category":"display","variants":["regular"]},{"family":"Chicle","category":"display","variants":["regular"]},{"family":"Chivo","category":"sans-serif","variants":["regular","italic","900","900italic"]},{"family":"Cinzel","category":"serif","variants":["regular","700","900"]},{"family":"Cinzel Decorative","category":"display","variants":["regular","700","900"]},{"family":"Clicker Script","category":"handwriting","variants":["regular"]},{"family":"Coda","category":"display","variants":["regular","800"]},{"family":"Coda Caption","category":"sans-serif","variants":["800"]},{"family":"Codystar","category":"display","variants":["300","regular"]},{"family":"Combo","category":"display","variants":["regular"]},{"family":"Comfortaa","category":"display","variants":["300","regular","700"]},{"family":"Coming Soon","category":"handwriting","variants":["regular"]},{"family":"Concert One","category":"display","variants":["regular"]},{"family":"Condiment","category":"handwriting","variants":["regular"]},{"family":"Content","category":"display","variants":["regular","700"]},{"family":"Contrail One","category":"display","variants":["regular"]},{"family":"Convergence","category":"sans-serif","variants":["regular"]},{"family":"Cookie","category":"handwriting","variants":["regular"]},{"family":"Copse","category":"serif","variants":["regular"]},{"family":"Corben","category":"display","variants":["regular","700"]},{"family":"Courgette","category":"handwriting","variants":["regular"]},{"family":"Cousine","category":"monospace","variants":["regular","italic","700","700italic"]},{"family":"Coustard","category":"serif","variants":["regular","900"]},{"family":"Covered By Your Grace","category":"handwriting","variants":["regular"]},{"family":"Crafty Girls","category":"handwriting","variants":["regular"]},{"family":"Creepster","category":"display","variants":["regular"]},{"family":"Crete Round","category":"serif","variants":["regular","italic"]},{"family":"Crimson Text","category":"serif","variants":["regular","italic","600","600italic","700","700italic"]},{"family":"Croissant One","category":"display","variants":["regular"]},{"family":"Crushed","category":"display","variants":["regular"]},{"family":"Cuprum","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Cutive","category":"serif","variants":["regular"]},{"family":"Cutive Mono","category":"monospace","variants":["regular"]},{"family":"Damion","category":"handwriting","variants":["regular"]},{"family":"Dancing Script","category":"handwriting","variants":["regular","700"]},{"family":"Dangrek","category":"display","variants":["regular"]},{"family":"Dawning of a New Day","category":"handwriting","variants":["regular"]},{"family":"Days One","category":"sans-serif","variants":["regular"]},{"family":"Dekko","category":"handwriting","variants":["regular"]},{"family":"Delius","category":"handwriting","variants":["regular"]},{"family":"Delius Swash Caps","category":"handwriting","variants":["regular"]},{"family":"Delius Unicase","category":"handwriting","variants":["regular","700"]},{"family":"Della Respira","category":"serif","variants":["regular"]},{"family":"Denk One","category":"sans-serif","variants":["regular"]},{"family":"Devonshire","category":"handwriting","variants":["regular"]},{"family":"Dhurjati","category":"sans-serif","variants":["regular"]},{"family":"Didact Gothic","category":"sans-serif","variants":["regular"]},{"family":"Diplomata","category":"display","variants":["regular"]},{"family":"Diplomata SC","category":"display","variants":["regular"]},{"family":"Domine","category":"serif","variants":["regular","700"]},{"family":"Donegal One","category":"serif","variants":["regular"]},{"family":"Doppio One","category":"sans-serif","variants":["regular"]},{"family":"Dorsa","category":"sans-serif","variants":["regular"]},{"family":"Dosis","category":"sans-serif","variants":["200","300","regular","500","600","700","800"]},{"family":"Dr Sugiyama","category":"handwriting","variants":["regular"]},{"family":"Droid Sans","category":"sans-serif","variants":["regular","700"]},{"family":"Droid Sans Mono","category":"monospace","variants":["regular"]},{"family":"Droid Serif","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Duru Sans","category":"sans-serif","variants":["regular"]},{"family":"Dynalight","category":"display","variants":["regular"]},{"family":"EB Garamond","category":"serif","variants":["regular"]},{"family":"Eagle Lake","category":"handwriting","variants":["regular"]},{"family":"Eater","category":"display","variants":["regular"]},{"family":"Economica","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Eczar","category":"serif","variants":["regular","500","600","700","800"]},{"family":"Ek Mukta","category":"sans-serif","variants":["200","300","regular","500","600","700","800"]},{"family":"Electrolize","category":"sans-serif","variants":["regular"]},{"family":"Elsie","category":"display","variants":["regular","900"]},{"family":"Elsie Swash Caps","category":"display","variants":["regular","900"]},{"family":"Emblema One","category":"display","variants":["regular"]},{"family":"Emilys Candy","category":"display","variants":["regular"]},{"family":"Engagement","category":"handwriting","variants":["regular"]},{"family":"Englebert","category":"sans-serif","variants":["regular"]},{"family":"Enriqueta","category":"serif","variants":["regular","700"]},{"family":"Erica One","category":"display","variants":["regular"]},{"family":"Esteban","category":"serif","variants":["regular"]},{"family":"Euphoria Script","category":"handwriting","variants":["regular"]},{"family":"Ewert","category":"display","variants":["regular"]},{"family":"Exo","category":"sans-serif","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"]},{"family":"Exo 2","category":"sans-serif","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"]},{"family":"Expletus Sans","category":"display","variants":["regular","italic","500","500italic","600","600italic","700","700italic"]},{"family":"Fanwood Text","category":"serif","variants":["regular","italic"]},{"family":"Fascinate","category":"display","variants":["regular"]},{"family":"Fascinate Inline","category":"display","variants":["regular"]},{"family":"Faster One","category":"display","variants":["regular"]},{"family":"Fasthand","category":"serif","variants":["regular"]},{"family":"Fauna One","category":"serif","variants":["regular"]},{"family":"Federant","category":"display","variants":["regular"]},{"family":"Federo","category":"sans-serif","variants":["regular"]},{"family":"Felipa","category":"handwriting","variants":["regular"]},{"family":"Fenix","category":"serif","variants":["regular"]},{"family":"Finger Paint","category":"display","variants":["regular"]},{"family":"Fira Mono","category":"monospace","variants":["regular","700"]},{"family":"Fira Sans","category":"sans-serif","variants":["300","300italic","regular","italic","500","500italic","700","700italic"]},{"family":"Fjalla One","category":"sans-serif","variants":["regular"]},{"family":"Fjord One","category":"serif","variants":["regular"]},{"family":"Flamenco","category":"display","variants":["300","regular"]},{"family":"Flavors","category":"display","variants":["regular"]},{"family":"Fondamento","category":"handwriting","variants":["regular","italic"]},{"family":"Fontdiner Swanky","category":"display","variants":["regular"]},{"family":"Forum","category":"display","variants":["regular"]},{"family":"Francois One","category":"sans-serif","variants":["regular"]},{"family":"Freckle Face","category":"display","variants":["regular"]},{"family":"Fredericka the Great","category":"display","variants":["regular"]},{"family":"Fredoka One","category":"display","variants":["regular"]},{"family":"Freehand","category":"display","variants":["regular"]},{"family":"Fresca","category":"sans-serif","variants":["regular"]},{"family":"Frijole","category":"display","variants":["regular"]},{"family":"Fruktur","category":"display","variants":["regular"]},{"family":"Fugaz One","category":"display","variants":["regular"]},{"family":"GFS Didot","category":"serif","variants":["regular"]},{"family":"GFS Neohellenic","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Gabriela","category":"serif","variants":["regular"]},{"family":"Gafata","category":"sans-serif","variants":["regular"]},{"family":"Galdeano","category":"sans-serif","variants":["regular"]},{"family":"Galindo","category":"display","variants":["regular"]},{"family":"Gentium Basic","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Gentium Book Basic","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Geo","category":"sans-serif","variants":["regular","italic"]},{"family":"Geostar","category":"display","variants":["regular"]},{"family":"Geostar Fill","category":"display","variants":["regular"]},{"family":"Germania One","category":"display","variants":["regular"]},{"family":"Gidugu","category":"sans-serif","variants":["regular"]},{"family":"Gilda Display","category":"serif","variants":["regular"]},{"family":"Give You Glory","category":"handwriting","variants":["regular"]},{"family":"Glass Antiqua","category":"display","variants":["regular"]},{"family":"Glegoo","category":"serif","variants":["regular","700"]},{"family":"Gloria Hallelujah","category":"handwriting","variants":["regular"]},{"family":"Goblin One","category":"display","variants":["regular"]},{"family":"Gochi Hand","category":"handwriting","variants":["regular"]},{"family":"Gorditas","category":"display","variants":["regular","700"]},{"family":"Goudy Bookletter 1911","category":"serif","variants":["regular"]},{"family":"Graduate","category":"display","variants":["regular"]},{"family":"Grand Hotel","category":"handwriting","variants":["regular"]},{"family":"Gravitas One","category":"display","variants":["regular"]},{"family":"Great Vibes","category":"handwriting","variants":["regular"]},{"family":"Griffy","category":"display","variants":["regular"]},{"family":"Gruppo","category":"display","variants":["regular"]},{"family":"Gudea","category":"sans-serif","variants":["regular","italic","700"]},{"family":"Gurajada","category":"serif","variants":["regular"]},{"family":"Habibi","category":"serif","variants":["regular"]},{"family":"Halant","category":"serif","variants":["300","regular","500","600","700"]},{"family":"Hammersmith One","category":"sans-serif","variants":["regular"]},{"family":"Hanalei","category":"display","variants":["regular"]},{"family":"Hanalei Fill","category":"display","variants":["regular"]},{"family":"Handlee","category":"handwriting","variants":["regular"]},{"family":"Hanuman","category":"serif","variants":["regular","700"]},{"family":"Happy Monkey","category":"display","variants":["regular"]},{"family":"Headland One","category":"serif","variants":["regular"]},{"family":"Henny Penny","category":"display","variants":["regular"]},{"family":"Herr Von Muellerhoff","category":"handwriting","variants":["regular"]},{"family":"Hind","category":"sans-serif","variants":["300","regular","500","600","700"]},{"family":"Holtwood One SC","category":"serif","variants":["regular"]},{"family":"Homemade Apple","category":"handwriting","variants":["regular"]},{"family":"Homenaje","category":"sans-serif","variants":["regular"]},{"family":"IM Fell DW Pica","category":"serif","variants":["regular","italic"]},{"family":"IM Fell DW Pica SC","category":"serif","variants":["regular"]},{"family":"IM Fell Double Pica","category":"serif","variants":["regular","italic"]},{"family":"IM Fell Double Pica SC","category":"serif","variants":["regular"]},{"family":"IM Fell English","category":"serif","variants":["regular","italic"]},{"family":"IM Fell English SC","category":"serif","variants":["regular"]},{"family":"IM Fell French Canon","category":"serif","variants":["regular","italic"]},{"family":"IM Fell French Canon SC","category":"serif","variants":["regular"]},{"family":"IM Fell Great Primer","category":"serif","variants":["regular","italic"]},{"family":"IM Fell Great Primer SC","category":"serif","variants":["regular"]},{"family":"Iceberg","category":"display","variants":["regular"]},{"family":"Iceland","category":"display","variants":["regular"]},{"family":"Imprima","category":"sans-serif","variants":["regular"]},{"family":"Inconsolata","category":"monospace","variants":["regular","700"]},{"family":"Inder","category":"sans-serif","variants":["regular"]},{"family":"Indie Flower","category":"handwriting","variants":["regular"]},{"family":"Inika","category":"serif","variants":["regular","700"]},{"family":"Inknut Antiqua","category":"serif","variants":["300","regular","500","600","700","800","900"]},{"family":"Irish Grover","category":"display","variants":["regular"]},{"family":"Istok Web","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Italiana","category":"serif","variants":["regular"]},{"family":"Italianno","category":"handwriting","variants":["regular"]},{"family":"Jacques Francois","category":"serif","variants":["regular"]},{"family":"Jacques Francois Shadow","category":"display","variants":["regular"]},{"family":"Jaldi","category":"sans-serif","variants":["regular","700"]},{"family":"Jim Nightshade","category":"handwriting","variants":["regular"]},{"family":"Jockey One","category":"sans-serif","variants":["regular"]},{"family":"Jolly Lodger","category":"display","variants":["regular"]},{"family":"Josefin Sans","category":"sans-serif","variants":["100","100italic","300","300italic","regular","italic","600","600italic","700","700italic"]},{"family":"Josefin Slab","category":"serif","variants":["100","100italic","300","300italic","regular","italic","600","600italic","700","700italic"]},{"family":"Joti One","category":"display","variants":["regular"]},{"family":"Judson","category":"serif","variants":["regular","italic","700"]},{"family":"Julee","category":"handwriting","variants":["regular"]},{"family":"Julius Sans One","category":"sans-serif","variants":["regular"]},{"family":"Junge","category":"serif","variants":["regular"]},{"family":"Jura","category":"sans-serif","variants":["300","regular","500","600"]},{"family":"Just Another Hand","category":"handwriting","variants":["regular"]},{"family":"Just Me Again Down Here","category":"handwriting","variants":["regular"]},{"family":"Kalam","category":"handwriting","variants":["300","regular","700"]},{"family":"Kameron","category":"serif","variants":["regular","700"]},{"family":"Kantumruy","category":"sans-serif","variants":["300","regular","700"]},{"family":"Karla","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Karma","category":"serif","variants":["300","regular","500","600","700"]},{"family":"Kaushan Script","category":"handwriting","variants":["regular"]},{"family":"Kavoon","category":"display","variants":["regular"]},{"family":"Kdam Thmor","category":"display","variants":["regular"]},{"family":"Keania One","category":"display","variants":["regular"]},{"family":"Kelly Slab","category":"display","variants":["regular"]},{"family":"Kenia","category":"display","variants":["regular"]},{"family":"Khand","category":"sans-serif","variants":["300","regular","500","600","700"]},{"family":"Khmer","category":"display","variants":["regular"]},{"family":"Khula","category":"sans-serif","variants":["300","regular","600","700","800"]},{"family":"Kite One","category":"sans-serif","variants":["regular"]},{"family":"Knewave","category":"display","variants":["regular"]},{"family":"Kotta One","category":"serif","variants":["regular"]},{"family":"Koulen","category":"display","variants":["regular"]},{"family":"Kranky","category":"display","variants":["regular"]},{"family":"Kreon","category":"serif","variants":["300","regular","700"]},{"family":"Kristi","category":"handwriting","variants":["regular"]},{"family":"Krona One","category":"sans-serif","variants":["regular"]},{"family":"Kurale","category":"serif","variants":["regular"]},{"family":"La Belle Aurore","category":"handwriting","variants":["regular"]},{"family":"Laila","category":"serif","variants":["300","regular","500","600","700"]},{"family":"Lakki Reddy","category":"handwriting","variants":["regular"]},{"family":"Lancelot","category":"display","variants":["regular"]},{"family":"Lateef","category":"handwriting","variants":["regular"]},{"family":"Lato","category":"sans-serif","variants":["100","100italic","300","300italic","regular","italic","700","700italic","900","900italic"]},{"family":"League Script","category":"handwriting","variants":["regular"]},{"family":"Leckerli One","category":"handwriting","variants":["regular"]},{"family":"Ledger","category":"serif","variants":["regular"]},{"family":"Lekton","category":"sans-serif","variants":["regular","italic","700"]},{"family":"Lemon","category":"display","variants":["regular"]},{"family":"Libre Baskerville","category":"serif","variants":["regular","italic","700"]},{"family":"Life Savers","category":"display","variants":["regular","700"]},{"family":"Lilita One","category":"display","variants":["regular"]},{"family":"Lily Script One","category":"display","variants":["regular"]},{"family":"Limelight","category":"display","variants":["regular"]},{"family":"Linden Hill","category":"serif","variants":["regular","italic"]},{"family":"Lobster","category":"display","variants":["regular"]},{"family":"Lobster Two","category":"display","variants":["regular","italic","700","700italic"]},{"family":"Londrina Outline","category":"display","variants":["regular"]},{"family":"Londrina Shadow","category":"display","variants":["regular"]},{"family":"Londrina Sketch","category":"display","variants":["regular"]},{"family":"Londrina Solid","category":"display","variants":["regular"]},{"family":"Lora","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Love Ya Like A Sister","category":"display","variants":["regular"]},{"family":"Loved by the King","category":"handwriting","variants":["regular"]},{"family":"Lovers Quarrel","category":"handwriting","variants":["regular"]},{"family":"Luckiest Guy","category":"display","variants":["regular"]},{"family":"Lusitana","category":"serif","variants":["regular","700"]},{"family":"Lustria","category":"serif","variants":["regular"]},{"family":"Macondo","category":"display","variants":["regular"]},{"family":"Macondo Swash Caps","category":"display","variants":["regular"]},{"family":"Magra","category":"sans-serif","variants":["regular","700"]},{"family":"Maiden Orange","category":"display","variants":["regular"]},{"family":"Mako","category":"sans-serif","variants":["regular"]},{"family":"Mallanna","category":"sans-serif","variants":["regular"]},{"family":"Mandali","category":"sans-serif","variants":["regular"]},{"family":"Marcellus","category":"serif","variants":["regular"]},{"family":"Marcellus SC","category":"serif","variants":["regular"]},{"family":"Marck Script","category":"handwriting","variants":["regular"]},{"family":"Margarine","category":"display","variants":["regular"]},{"family":"Marko One","category":"serif","variants":["regular"]},{"family":"Marmelad","category":"sans-serif","variants":["regular"]},{"family":"Martel","category":"serif","variants":["200","300","regular","600","700","800","900"]},{"family":"Martel Sans","category":"sans-serif","variants":["200","300","regular","600","700","800","900"]},{"family":"Marvel","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Mate","category":"serif","variants":["regular","italic"]},{"family":"Mate SC","category":"serif","variants":["regular"]},{"family":"Maven Pro","category":"sans-serif","variants":["regular","500","700","900"]},{"family":"McLaren","category":"display","variants":["regular"]},{"family":"Meddon","category":"handwriting","variants":["regular"]},{"family":"MedievalSharp","category":"display","variants":["regular"]},{"family":"Medula One","category":"display","variants":["regular"]},{"family":"Megrim","category":"display","variants":["regular"]},{"family":"Meie Script","category":"handwriting","variants":["regular"]},{"family":"Merienda","category":"handwriting","variants":["regular","700"]},{"family":"Merienda One","category":"handwriting","variants":["regular"]},{"family":"Merriweather","category":"serif","variants":["300","300italic","regular","italic","700","700italic","900","900italic"]},{"family":"Merriweather Sans","category":"sans-serif","variants":["300","300italic","regular","italic","700","700italic","800","800italic"]},{"family":"Metal","category":"display","variants":["regular"]},{"family":"Metal Mania","category":"display","variants":["regular"]},{"family":"Metamorphous","category":"display","variants":["regular"]},{"family":"Metrophobic","category":"sans-serif","variants":["regular"]},{"family":"Michroma","category":"sans-serif","variants":["regular"]},{"family":"Milonga","category":"display","variants":["regular"]},{"family":"Miltonian","category":"display","variants":["regular"]},{"family":"Miltonian Tattoo","category":"display","variants":["regular"]},{"family":"Miniver","category":"display","variants":["regular"]},{"family":"Miss Fajardose","category":"handwriting","variants":["regular"]},{"family":"Modak","category":"display","variants":["regular"]},{"family":"Modern Antiqua","category":"display","variants":["regular"]},{"family":"Molengo","category":"sans-serif","variants":["regular"]},{"family":"Molle","category":"handwriting","variants":["italic"]},{"family":"Monda","category":"sans-serif","variants":["regular","700"]},{"family":"Monofett","category":"display","variants":["regular"]},{"family":"Monoton","category":"display","variants":["regular"]},{"family":"Monsieur La Doulaise","category":"handwriting","variants":["regular"]},{"family":"Montaga","category":"serif","variants":["regular"]},{"family":"Montez","category":"handwriting","variants":["regular"]},{"family":"Montserrat","category":"sans-serif","variants":["regular","700"]},{"family":"Montserrat Alternates","category":"sans-serif","variants":["regular","700"]},{"family":"Montserrat Subrayada","category":"sans-serif","variants":["regular","700"]},{"family":"Moul","category":"display","variants":["regular"]},{"family":"Moulpali","category":"display","variants":["regular"]},{"family":"Mountains of Christmas","category":"display","variants":["regular","700"]},{"family":"Mouse Memoirs","category":"sans-serif","variants":["regular"]},{"family":"Mr Bedfort","category":"handwriting","variants":["regular"]},{"family":"Mr Dafoe","category":"handwriting","variants":["regular"]},{"family":"Mr De Haviland","category":"handwriting","variants":["regular"]},{"family":"Mrs Saint Delafield","category":"handwriting","variants":["regular"]},{"family":"Mrs Sheppards","category":"handwriting","variants":["regular"]},{"family":"Muli","category":"sans-serif","variants":["300","300italic","regular","italic"]},{"family":"Mystery Quest","category":"display","variants":["regular"]},{"family":"NTR","category":"sans-serif","variants":["regular"]},{"family":"Neucha","category":"handwriting","variants":["regular"]},{"family":"Neuton","category":"serif","variants":["200","300","regular","italic","700","800"]},{"family":"New Rocker","category":"display","variants":["regular"]},{"family":"News Cycle","category":"sans-serif","variants":["regular","700"]},{"family":"Niconne","category":"handwriting","variants":["regular"]},{"family":"Nixie One","category":"display","variants":["regular"]},{"family":"Nobile","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Nokora","category":"serif","variants":["regular","700"]},{"family":"Norican","category":"handwriting","variants":["regular"]},{"family":"Nosifer","category":"display","variants":["regular"]},{"family":"Nothing You Could Do","category":"handwriting","variants":["regular"]},{"family":"Noticia Text","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Noto Sans","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Noto Serif","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Nova Cut","category":"display","variants":["regular"]},{"family":"Nova Flat","category":"display","variants":["regular"]},{"family":"Nova Mono","category":"monospace","variants":["regular"]},{"family":"Nova Oval","category":"display","variants":["regular"]},{"family":"Nova Round","category":"display","variants":["regular"]},{"family":"Nova Script","category":"display","variants":["regular"]},{"family":"Nova Slim","category":"display","variants":["regular"]},{"family":"Nova Square","category":"display","variants":["regular"]},{"family":"Numans","category":"sans-serif","variants":["regular"]},{"family":"Nunito","category":"sans-serif","variants":["300","regular","700"]},{"family":"Odor Mean Chey","category":"display","variants":["regular"]},{"family":"Offside","category":"display","variants":["regular"]},{"family":"Old Standard TT","category":"serif","variants":["regular","italic","700"]},{"family":"Oldenburg","category":"display","variants":["regular"]},{"family":"Oleo Script","category":"display","variants":["regular","700"]},{"family":"Oleo Script Swash Caps","category":"display","variants":["regular","700"]},{"family":"Open Sans","category":"sans-serif","variants":["300","300italic","regular","italic","600","600italic","700","700italic","800","800italic"]},{"family":"Open Sans Condensed","category":"sans-serif","variants":["300","300italic","700"]},{"family":"Oranienbaum","category":"serif","variants":["regular"]},{"family":"Orbitron","category":"sans-serif","variants":["regular","500","700","900"]},{"family":"Oregano","category":"display","variants":["regular","italic"]},{"family":"Orienta","category":"sans-serif","variants":["regular"]},{"family":"Original Surfer","category":"display","variants":["regular"]},{"family":"Oswald","category":"sans-serif","variants":["300","regular","700"]},{"family":"Over the Rainbow","category":"handwriting","variants":["regular"]},{"family":"Overlock","category":"display","variants":["regular","italic","700","700italic","900","900italic"]},{"family":"Overlock SC","category":"display","variants":["regular"]},{"family":"Ovo","category":"serif","variants":["regular"]},{"family":"Oxygen","category":"sans-serif","variants":["300","regular","700"]},{"family":"Oxygen Mono","category":"monospace","variants":["regular"]},{"family":"PT Mono","category":"monospace","variants":["regular"]},{"family":"PT Sans","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"PT Sans Caption","category":"sans-serif","variants":["regular","700"]},{"family":"PT Sans Narrow","category":"sans-serif","variants":["regular","700"]},{"family":"PT Serif","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"PT Serif Caption","category":"serif","variants":["regular","italic"]},{"family":"Pacifico","category":"handwriting","variants":["regular"]},{"family":"Palanquin","category":"sans-serif","variants":["100","200","300","regular","500","600","700"]},{"family":"Palanquin Dark","category":"sans-serif","variants":["regular","500","600","700"]},{"family":"Paprika","category":"display","variants":["regular"]},{"family":"Parisienne","category":"handwriting","variants":["regular"]},{"family":"Passero One","category":"display","variants":["regular"]},{"family":"Passion One","category":"display","variants":["regular","700","900"]},{"family":"Pathway Gothic One","category":"sans-serif","variants":["regular"]},{"family":"Patrick Hand","category":"handwriting","variants":["regular"]},{"family":"Patrick Hand SC","category":"handwriting","variants":["regular"]},{"family":"Patua One","category":"display","variants":["regular"]},{"family":"Paytone One","category":"sans-serif","variants":["regular"]},{"family":"Peddana","category":"serif","variants":["regular"]},{"family":"Peralta","category":"display","variants":["regular"]},{"family":"Permanent Marker","category":"handwriting","variants":["regular"]},{"family":"Petit Formal Script","category":"handwriting","variants":["regular"]},{"family":"Petrona","category":"serif","variants":["regular"]},{"family":"Philosopher","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Piedra","category":"display","variants":["regular"]},{"family":"Pinyon Script","category":"handwriting","variants":["regular"]},{"family":"Pirata One","category":"display","variants":["regular"]},{"family":"Plaster","category":"display","variants":["regular"]},{"family":"Play","category":"sans-serif","variants":["regular","700"]},{"family":"Playball","category":"display","variants":["regular"]},{"family":"Playfair Display","category":"serif","variants":["regular","italic","700","700italic","900","900italic"]},{"family":"Playfair Display SC","category":"serif","variants":["regular","italic","700","700italic","900","900italic"]},{"family":"Podkova","category":"serif","variants":["regular","700"]},{"family":"Poiret One","category":"display","variants":["regular"]},{"family":"Poller One","category":"display","variants":["regular"]},{"family":"Poly","category":"serif","variants":["regular","italic"]},{"family":"Pompiere","category":"display","variants":["regular"]},{"family":"Pontano Sans","category":"sans-serif","variants":["regular"]},{"family":"Poppins","category":"sans-serif","variants":["300","regular","500","600","700"]},{"family":"Port Lligat Sans","category":"sans-serif","variants":["regular"]},{"family":"Port Lligat Slab","category":"serif","variants":["regular"]},{"family":"Pragati Narrow","category":"sans-serif","variants":["regular","700"]},{"family":"Prata","category":"serif","variants":["regular"]},{"family":"Preahvihear","category":"display","variants":["regular"]},{"family":"Press Start 2P","category":"display","variants":["regular"]},{"family":"Princess Sofia","category":"handwriting","variants":["regular"]},{"family":"Prociono","category":"serif","variants":["regular"]},{"family":"Prosto One","category":"display","variants":["regular"]},{"family":"Puritan","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Purple Purse","category":"display","variants":["regular"]},{"family":"Quando","category":"serif","variants":["regular"]},{"family":"Quantico","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Quattrocento","category":"serif","variants":["regular","700"]},{"family":"Quattrocento Sans","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Questrial","category":"sans-serif","variants":["regular"]},{"family":"Quicksand","category":"sans-serif","variants":["300","regular","700"]},{"family":"Quintessential","category":"handwriting","variants":["regular"]},{"family":"Qwigley","category":"handwriting","variants":["regular"]},{"family":"Racing Sans One","category":"display","variants":["regular"]},{"family":"Radley","category":"serif","variants":["regular","italic"]},{"family":"Rajdhani","category":"sans-serif","variants":["300","regular","500","600","700"]},{"family":"Raleway","category":"sans-serif","variants":["100","200","300","regular","500","600","700","800","900"]},{"family":"Raleway Dots","category":"display","variants":["regular"]},{"family":"Ramabhadra","category":"sans-serif","variants":["regular"]},{"family":"Ramaraja","category":"serif","variants":["regular"]},{"family":"Rambla","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Rammetto One","category":"display","variants":["regular"]},{"family":"Ranchers","category":"display","variants":["regular"]},{"family":"Rancho","category":"handwriting","variants":["regular"]},{"family":"Ranga","category":"display","variants":["regular","700"]},{"family":"Rationale","category":"sans-serif","variants":["regular"]},{"family":"Ravi Prakash","category":"display","variants":["regular"]},{"family":"Redressed","category":"handwriting","variants":["regular"]},{"family":"Reenie Beanie","category":"handwriting","variants":["regular"]},{"family":"Revalia","category":"display","variants":["regular"]},{"family":"Rhodium Libre","category":"serif","variants":["regular"]},{"family":"Ribeye","category":"display","variants":["regular"]},{"family":"Ribeye Marrow","category":"display","variants":["regular"]},{"family":"Righteous","category":"display","variants":["regular"]},{"family":"Risque","category":"display","variants":["regular"]},{"family":"Roboto","category":"sans-serif","variants":["100","100italic","300","300italic","regular","italic","500","500italic","700","700italic","900","900italic"]},{"family":"Roboto Condensed","category":"sans-serif","variants":["300","300italic","regular","italic","700","700italic"]},{"family":"Roboto Mono","category":"monospace","variants":["100","100italic","300","300italic","regular","italic","500","500italic","700","700italic"]},{"family":"Roboto Slab","category":"serif","variants":["100","300","regular","700"]},{"family":"Rochester","category":"handwriting","variants":["regular"]},{"family":"Rock Salt","category":"handwriting","variants":["regular"]},{"family":"Rokkitt","category":"serif","variants":["regular","700"]},{"family":"Romanesco","category":"handwriting","variants":["regular"]},{"family":"Ropa Sans","category":"sans-serif","variants":["regular","italic"]},{"family":"Rosario","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Rosarivo","category":"serif","variants":["regular","italic"]},{"family":"Rouge Script","category":"handwriting","variants":["regular"]},{"family":"Rozha One","category":"serif","variants":["regular"]},{"family":"Rubik Mono One","category":"sans-serif","variants":["regular"]},{"family":"Rubik One","category":"sans-serif","variants":["regular"]},{"family":"Ruda","category":"sans-serif","variants":["regular","700","900"]},{"family":"Rufina","category":"serif","variants":["regular","700"]},{"family":"Ruge Boogie","category":"handwriting","variants":["regular"]},{"family":"Ruluko","category":"sans-serif","variants":["regular"]},{"family":"Rum Raisin","category":"sans-serif","variants":["regular"]},{"family":"Ruslan Display","category":"display","variants":["regular"]},{"family":"Russo One","category":"sans-serif","variants":["regular"]},{"family":"Ruthie","category":"handwriting","variants":["regular"]},{"family":"Rye","category":"display","variants":["regular"]},{"family":"Sacramento","category":"handwriting","variants":["regular"]},{"family":"Sail","category":"display","variants":["regular"]},{"family":"Salsa","category":"display","variants":["regular"]},{"family":"Sanchez","category":"serif","variants":["regular","italic"]},{"family":"Sancreek","category":"display","variants":["regular"]},{"family":"Sansita One","category":"display","variants":["regular"]},{"family":"Sarina","category":"display","variants":["regular"]},{"family":"Sarpanch","category":"sans-serif","variants":["regular","500","600","700","800","900"]},{"family":"Satisfy","category":"handwriting","variants":["regular"]},{"family":"Scada","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Scheherazade","category":"serif","variants":["regular"]},{"family":"Schoolbell","category":"handwriting","variants":["regular"]},{"family":"Seaweed Script","category":"display","variants":["regular"]},{"family":"Sevillana","category":"display","variants":["regular"]},{"family":"Seymour One","category":"sans-serif","variants":["regular"]},{"family":"Shadows Into Light","category":"handwriting","variants":["regular"]},{"family":"Shadows Into Light Two","category":"handwriting","variants":["regular"]},{"family":"Shanti","category":"sans-serif","variants":["regular"]},{"family":"Share","category":"display","variants":["regular","italic","700","700italic"]},{"family":"Share Tech","category":"sans-serif","variants":["regular"]},{"family":"Share Tech Mono","category":"monospace","variants":["regular"]},{"family":"Shojumaru","category":"display","variants":["regular"]},{"family":"Short Stack","category":"handwriting","variants":["regular"]},{"family":"Siemreap","category":"display","variants":["regular"]},{"family":"Sigmar One","category":"display","variants":["regular"]},{"family":"Signika","category":"sans-serif","variants":["300","regular","600","700"]},{"family":"Signika Negative","category":"sans-serif","variants":["300","regular","600","700"]},{"family":"Simonetta","category":"display","variants":["regular","italic","900","900italic"]},{"family":"Sintony","category":"sans-serif","variants":["regular","700"]},{"family":"Sirin Stencil","category":"display","variants":["regular"]},{"family":"Six Caps","category":"sans-serif","variants":["regular"]},{"family":"Skranji","category":"display","variants":["regular","700"]},{"family":"Slabo 13px","category":"serif","variants":["regular"]},{"family":"Slabo 27px","category":"serif","variants":["regular"]},{"family":"Slackey","category":"display","variants":["regular"]},{"family":"Smokum","category":"display","variants":["regular"]},{"family":"Smythe","category":"display","variants":["regular"]},{"family":"Sniglet","category":"display","variants":["regular","800"]},{"family":"Snippet","category":"sans-serif","variants":["regular"]},{"family":"Snowburst One","category":"display","variants":["regular"]},{"family":"Sofadi One","category":"display","variants":["regular"]},{"family":"Sofia","category":"handwriting","variants":["regular"]},{"family":"Sonsie One","category":"display","variants":["regular"]},{"family":"Sorts Mill Goudy","category":"serif","variants":["regular","italic"]},{"family":"Source Code Pro","category":"monospace","variants":["200","300","regular","500","600","700","900"]},{"family":"Source Sans Pro","category":"sans-serif","variants":["200","200italic","300","300italic","regular","italic","600","600italic","700","700italic","900","900italic"]},{"family":"Source Serif Pro","category":"serif","variants":["regular","600","700"]},{"family":"Special Elite","category":"display","variants":["regular"]},{"family":"Spicy Rice","category":"display","variants":["regular"]},{"family":"Spinnaker","category":"sans-serif","variants":["regular"]},{"family":"Spirax","category":"display","variants":["regular"]},{"family":"Squada One","category":"display","variants":["regular"]},{"family":"Sree Krushnadevaraya","category":"serif","variants":["regular"]},{"family":"Stalemate","category":"handwriting","variants":["regular"]},{"family":"Stalinist One","category":"display","variants":["regular"]},{"family":"Stardos Stencil","category":"display","variants":["regular","700"]},{"family":"Stint Ultra Condensed","category":"display","variants":["regular"]},{"family":"Stint Ultra Expanded","category":"display","variants":["regular"]},{"family":"Stoke","category":"serif","variants":["300","regular"]},{"family":"Strait","category":"sans-serif","variants":["regular"]},{"family":"Sue Ellen Francisco","category":"handwriting","variants":["regular"]},{"family":"Sumana","category":"serif","variants":["regular","700"]},{"family":"Sunshiney","category":"handwriting","variants":["regular"]},{"family":"Supermercado One","category":"display","variants":["regular"]},{"family":"Suranna","category":"serif","variants":["regular"]},{"family":"Suravaram","category":"serif","variants":["regular"]},{"family":"Suwannaphum","category":"display","variants":["regular"]},{"family":"Swanky and Moo Moo","category":"handwriting","variants":["regular"]},{"family":"Syncopate","category":"sans-serif","variants":["regular","700"]},{"family":"Tangerine","category":"handwriting","variants":["regular","700"]},{"family":"Taprom","category":"display","variants":["regular"]},{"family":"Tauri","category":"sans-serif","variants":["regular"]},{"family":"Teko","category":"sans-serif","variants":["300","regular","500","600","700"]},{"family":"Telex","category":"sans-serif","variants":["regular"]},{"family":"Tenali Ramakrishna","category":"sans-serif","variants":["regular"]},{"family":"Tenor Sans","category":"sans-serif","variants":["regular"]},{"family":"Text Me One","category":"sans-serif","variants":["regular"]},{"family":"The Girl Next Door","category":"handwriting","variants":["regular"]},{"family":"Tienne","category":"serif","variants":["regular","700","900"]},{"family":"Tillana","category":"handwriting","variants":["regular","500","600","700","800"]},{"family":"Timmana","category":"sans-serif","variants":["regular"]},{"family":"Tinos","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Titan One","category":"display","variants":["regular"]},{"family":"Titillium Web","category":"sans-serif","variants":["200","200italic","300","300italic","regular","italic","600","600italic","700","700italic","900"]},{"family":"Trade Winds","category":"display","variants":["regular"]},{"family":"Trocchi","category":"serif","variants":["regular"]},{"family":"Trochut","category":"display","variants":["regular","italic","700"]},{"family":"Trykker","category":"serif","variants":["regular"]},{"family":"Tulpen One","category":"display","variants":["regular"]},{"family":"Ubuntu","category":"sans-serif","variants":["300","300italic","regular","italic","500","500italic","700","700italic"]},{"family":"Ubuntu Condensed","category":"sans-serif","variants":["regular"]},{"family":"Ubuntu Mono","category":"monospace","variants":["regular","italic","700","700italic"]},{"family":"Ultra","category":"serif","variants":["regular"]},{"family":"Uncial Antiqua","category":"display","variants":["regular"]},{"family":"Underdog","category":"display","variants":["regular"]},{"family":"Unica One","category":"display","variants":["regular"]},{"family":"UnifrakturCook","category":"display","variants":["700"]},{"family":"UnifrakturMaguntia","category":"display","variants":["regular"]},{"family":"Unkempt","category":"display","variants":["regular","700"]},{"family":"Unlock","category":"display","variants":["regular"]},{"family":"Unna","category":"serif","variants":["regular"]},{"family":"VT323","category":"monospace","variants":["regular"]},{"family":"Vampiro One","category":"display","variants":["regular"]},{"family":"Varela","category":"sans-serif","variants":["regular"]},{"family":"Varela Round","category":"sans-serif","variants":["regular"]},{"family":"Vast Shadow","category":"display","variants":["regular"]},{"family":"Vesper Libre","category":"serif","variants":["regular","500","700","900"]},{"family":"Vibur","category":"handwriting","variants":["regular"]},{"family":"Vidaloka","category":"serif","variants":["regular"]},{"family":"Viga","category":"sans-serif","variants":["regular"]},{"family":"Voces","category":"display","variants":["regular"]},{"family":"Volkhov","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Vollkorn","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Voltaire","category":"sans-serif","variants":["regular"]},{"family":"Waiting for the Sunrise","category":"handwriting","variants":["regular"]},{"family":"Wallpoet","category":"display","variants":["regular"]},{"family":"Walter Turncoat","category":"handwriting","variants":["regular"]},{"family":"Warnes","category":"display","variants":["regular"]},{"family":"Wellfleet","category":"display","variants":["regular"]},{"family":"Wendy One","category":"sans-serif","variants":["regular"]},{"family":"Wire One","category":"sans-serif","variants":["regular"]},{"family":"Yanone Kaffeesatz","category":"sans-serif","variants":["200","300","regular","700"]},{"family":"Yantramanav","category":"sans-serif","variants":["100","300","regular","500","700","900"]},{"family":"Yellowtail","category":"handwriting","variants":["regular"]},{"family":"Yeseva One","category":"display","variants":["regular"]},{"family":"Yesteryear","category":"handwriting","variants":["regular"]},{"family":"Zeyada","category":"handwriting","variants":["regular"]}]');
+	// We use json_decode to reduce PHP memory usage
+	$content = json_decode( '[{"family":"Open Sans","category":"sans-serif","variants":["300","300italic","regular","italic","600","600italic","700","700italic","800","800italic"]},{"family":"Roboto","category":"sans-serif","variants":["100","100italic","300","300italic","regular","italic","500","500italic","700","700italic","900","900italic"]},{"family":"Slabo 27px","category":"serif","variants":["regular"]},{"family":"Lato","category":"sans-serif","variants":["100","100italic","300","300italic","regular","italic","700","700italic","900","900italic"]},{"family":"Oswald","category":"sans-serif","variants":["300","regular","700"]},{"family":"Roboto Condensed","category":"sans-serif","variants":["300","300italic","regular","italic","700","700italic"]},{"family":"Source Sans Pro","category":"sans-serif","variants":["200","200italic","300","300italic","regular","italic","600","600italic","700","700italic","900","900italic"]},{"family":"Montserrat","category":"sans-serif","variants":["regular","700"]},{"family":"Raleway","category":"sans-serif","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"]},{"family":"PT Sans","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Roboto Slab","category":"serif","variants":["100","300","regular","700"]},{"family":"Droid Sans","category":"sans-serif","variants":["regular","700"]},{"family":"Open Sans Condensed","category":"sans-serif","variants":["300","300italic","700"]},{"family":"Lora","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Ubuntu","category":"sans-serif","variants":["300","300italic","regular","italic","500","500italic","700","700italic"]},{"family":"Droid Serif","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Merriweather","category":"serif","variants":["300","300italic","regular","italic","700","700italic","900","900italic"]},{"family":"Arimo","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Noto Sans","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"PT Sans Narrow","category":"sans-serif","variants":["regular","700"]},{"family":"Titillium Web","category":"sans-serif","variants":["200","200italic","300","300italic","regular","italic","600","600italic","700","700italic","900"]},{"family":"Playfair Display","category":"serif","variants":["regular","italic","700","700italic","900","900italic"]},{"family":"PT Serif","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Muli","category":"sans-serif","variants":["300","300italic","regular","italic"]},{"family":"Fjalla One","category":"sans-serif","variants":["regular"]},{"family":"Indie Flower","category":"handwriting","variants":["regular"]},{"family":"Inconsolata","category":"monospace","variants":["regular","700"]},{"family":"Dosis","category":"sans-serif","variants":["200","300","regular","500","600","700","800"]},{"family":"Bitter","category":"serif","variants":["regular","italic","700"]},{"family":"Oxygen","category":"sans-serif","variants":["300","regular","700"]},{"family":"Cabin","category":"sans-serif","variants":["regular","italic","500","500italic","600","600italic","700","700italic"]},{"family":"Lobster","category":"display","variants":["regular"]},{"family":"Noto Serif","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Arvo","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Hind","category":"sans-serif","variants":["300","regular","500","600","700"]},{"family":"Yanone Kaffeesatz","category":"sans-serif","variants":["200","300","regular","700"]},{"family":"Alegreya Sans","category":"sans-serif","variants":["100","100italic","300","300italic","regular","italic","500","500italic","700","700italic","800","800italic","900","900italic"]},{"family":"Poiret One","category":"display","variants":["regular"]},{"family":"Catamaran","category":"sans-serif","variants":["100","200","300","regular","500","600","700","800","900"]},{"family":"Bree Serif","category":"serif","variants":["regular"]},{"family":"Nunito","category":"sans-serif","variants":["300","regular","700"]},{"family":"Poppins","category":"sans-serif","variants":["300","regular","500","600","700"]},{"family":"Merriweather Sans","category":"sans-serif","variants":["300","300italic","regular","italic","700","700italic","800","800italic"]},{"family":"Libre Baskerville","category":"serif","variants":["regular","italic","700"]},{"family":"Anton","category":"sans-serif","variants":["regular"]},{"family":"Abel","category":"sans-serif","variants":["regular"]},{"family":"Josefin Sans","category":"sans-serif","variants":["100","100italic","300","300italic","regular","italic","600","600italic","700","700italic"]},{"family":"Asap","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Ubuntu Condensed","category":"sans-serif","variants":["regular"]},{"family":"Exo 2","category":"sans-serif","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"]},{"family":"Crimson Text","category":"serif","variants":["regular","italic","600","600italic","700","700italic"]},{"family":"Quicksand","category":"sans-serif","variants":["300","regular","700"]},{"family":"Archivo Narrow","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Passion One","category":"display","variants":["regular","700","900"]},{"family":"Pacifico","category":"handwriting","variants":["regular"]},{"family":"Varela Round","category":"sans-serif","variants":["regular"]},{"family":"Sigmar One","category":"display","variants":["regular"]},{"family":"Dancing Script","category":"handwriting","variants":["regular","700"]},{"family":"Karla","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Francois One","category":"sans-serif","variants":["regular"]},{"family":"Cuprum","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Signika","category":"sans-serif","variants":["300","regular","600","700"]},{"family":"Shadows Into Light","category":"handwriting","variants":["regular"]},{"family":"Candal","category":"sans-serif","variants":["regular"]},{"family":"Exo","category":"sans-serif","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"]},{"family":"Questrial","category":"sans-serif","variants":["regular"]},{"family":"Vollkorn","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Play","category":"sans-serif","variants":["regular","700"]},{"family":"PT Sans Caption","category":"sans-serif","variants":["regular","700"]},{"family":"Fira Sans","category":"sans-serif","variants":["300","300italic","regular","italic","500","500italic","700","700italic"]},{"family":"Maven Pro","category":"sans-serif","variants":["regular","500","700","900"]},{"family":"Orbitron","category":"sans-serif","variants":["regular","500","700","900"]},{"family":"Roboto Mono","category":"monospace","variants":["100","100italic","300","300italic","regular","italic","500","500italic","700","700italic"]},{"family":"Abril Fatface","category":"display","variants":["regular"]},{"family":"Alegreya","category":"serif","variants":["regular","italic","700","700italic","900","900italic"]},{"family":"Rokkitt","category":"serif","variants":["regular","700"]},{"family":"Amatic SC","category":"handwriting","variants":["regular","700"]},{"family":"Pathway Gothic One","category":"sans-serif","variants":["regular"]},{"family":"Yellowtail","category":"handwriting","variants":["regular"]},{"family":"Patua One","category":"display","variants":["regular"]},{"family":"Crete Round","category":"serif","variants":["regular","italic"]},{"family":"Rubik","category":"sans-serif","variants":["300","300italic","regular","italic","500","500italic","700","700italic","900","900italic"]},{"family":"Monda","category":"sans-serif","variants":["regular","700"]},{"family":"Work Sans","category":"sans-serif","variants":["100","200","300","regular","500","600","700","800","900"]},{"family":"Gloria Hallelujah","category":"handwriting","variants":["regular"]},{"family":"EB Garamond","category":"serif","variants":["regular"]},{"family":"Architects Daughter","category":"handwriting","variants":["regular"]},{"family":"Righteous","category":"display","variants":["regular"]},{"family":"Comfortaa","category":"display","variants":["300","regular","700"]},{"family":"ABeeZee","category":"sans-serif","variants":["regular","italic"]},{"family":"Josefin Slab","category":"serif","variants":["100","100italic","300","300italic","regular","italic","600","600italic","700","700italic"]},{"family":"Sanchez","category":"serif","variants":["regular","italic"]},{"family":"Pontano Sans","category":"sans-serif","variants":["regular"]},{"family":"Kaushan Script","category":"handwriting","variants":["regular"]},{"family":"Ropa Sans","category":"sans-serif","variants":["regular","italic"]},{"family":"Russo One","category":"sans-serif","variants":["regular"]},{"family":"Noticia Text","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Quattrocento Sans","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Lobster Two","category":"display","variants":["regular","italic","700","700italic"]},{"family":"Chewy","category":"display","variants":["regular"]},{"family":"Acme","category":"sans-serif","variants":["regular"]},{"family":"News Cycle","category":"sans-serif","variants":["regular","700"]},{"family":"Hammersmith One","category":"sans-serif","variants":["regular"]},{"family":"Source Code Pro","category":"monospace","variants":["200","300","regular","500","600","700","900"]},{"family":"Istok Web","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Domine","category":"serif","variants":["regular","700"]},{"family":"Old Standard TT","category":"serif","variants":["regular","italic","700"]},{"family":"Cinzel","category":"serif","variants":["regular","700","900"]},{"family":"Economica","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Gudea","category":"sans-serif","variants":["regular","italic","700"]},{"family":"Kreon","category":"serif","variants":["300","regular","700"]},{"family":"Courgette","category":"handwriting","variants":["regular"]},{"family":"BenchNine","category":"sans-serif","variants":["300","regular","700"]},{"family":"Satisfy","category":"handwriting","variants":["regular"]},{"family":"Ruda","category":"sans-serif","variants":["regular","700","900"]},{"family":"Armata","category":"sans-serif","variants":["regular"]},{"family":"Alfa Slab One","category":"display","variants":["regular"]},{"family":"Archivo Black","category":"sans-serif","variants":["regular"]},{"family":"Coming Soon","category":"handwriting","variants":["regular"]},{"family":"Tinos","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Voltaire","category":"sans-serif","variants":["regular"]},{"family":"Quattrocento","category":"serif","variants":["regular","700"]},{"family":"Vidaloka","category":"serif","variants":["regular"]},{"family":"Permanent Marker","category":"handwriting","variants":["regular"]},{"family":"Arapey","category":"serif","variants":["regular","italic"]},{"family":"Handlee","category":"handwriting","variants":["regular"]},{"family":"Varela","category":"sans-serif","variants":["regular"]},{"family":"Covered By Your Grace","category":"handwriting","variants":["regular"]},{"family":"Cabin Condensed","category":"sans-serif","variants":["regular","500","600","700"]},{"family":"Playfair Display SC","category":"serif","variants":["regular","italic","700","700italic","900","900italic"]},{"family":"Didact Gothic","category":"sans-serif","variants":["regular"]},{"family":"Source Serif Pro","category":"serif","variants":["regular","600","700"]},{"family":"Bangers","category":"display","variants":["regular"]},{"family":"Oleo Script","category":"display","variants":["regular","700"]},{"family":"Cookie","category":"handwriting","variants":["regular"]},{"family":"Philosopher","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Cantarell","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Fredoka One","category":"display","variants":["regular"]},{"family":"Cardo","category":"serif","variants":["regular","italic","700"]},{"family":"Bevan","category":"display","variants":["regular"]},{"family":"Playball","category":"display","variants":["regular"]},{"family":"Antic Slab","category":"serif","variants":["regular"]},{"family":"Great Vibes","category":"handwriting","variants":["regular"]},{"family":"Rock Salt","category":"handwriting","variants":["regular"]},{"family":"Boogaloo","category":"display","variants":["regular"]},{"family":"Kanit","category":"sans-serif","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"]},{"family":"Days One","category":"sans-serif","variants":["regular"]},{"family":"Droid Sans Mono","category":"monospace","variants":["regular"]},{"family":"Sintony","category":"sans-serif","variants":["regular","700"]},{"family":"Luckiest Guy","category":"display","variants":["regular"]},{"family":"Amiri","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Andada","category":"serif","variants":["regular"]},{"family":"Audiowide","category":"display","variants":["regular"]},{"family":"Tangerine","category":"handwriting","variants":["regular","700"]},{"family":"Shadows Into Light Two","category":"handwriting","variants":["regular"]},{"family":"Ek Mukta","category":"sans-serif","variants":["200","300","regular","500","600","700","800"]},{"family":"Actor","category":"sans-serif","variants":["regular"]},{"family":"Bad Script","category":"handwriting","variants":["regular"]},{"family":"Glegoo","category":"serif","variants":["regular","700"]},{"family":"Nobile","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Special Elite","category":"display","variants":["regular"]},{"family":"Antic","category":"sans-serif","variants":["regular"]},{"family":"Volkhov","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Niconne","category":"handwriting","variants":["regular"]},{"family":"Teko","category":"sans-serif","variants":["300","regular","500","600","700"]},{"family":"Signika Negative","category":"sans-serif","variants":["300","regular","600","700"]},{"family":"Changa One","category":"display","variants":["regular","italic"]},{"family":"Rambla","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Paytone One","category":"sans-serif","variants":["regular"]},{"family":"Rancho","category":"handwriting","variants":["regular"]},{"family":"Cambay","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Gentium Book Basic","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Sorts Mill Goudy","category":"serif","variants":["regular","italic"]},{"family":"Scada","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Molengo","category":"sans-serif","variants":["regular"]},{"family":"Montez","category":"handwriting","variants":["regular"]},{"family":"Neuton","category":"serif","variants":["200","300","regular","italic","700","800"]},{"family":"Rajdhani","category":"sans-serif","variants":["300","regular","500","600","700"]},{"family":"Khand","category":"sans-serif","variants":["300","regular","500","600","700"]},{"family":"Damion","category":"handwriting","variants":["regular"]},{"family":"Amaranth","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Patrick Hand","category":"handwriting","variants":["regular"]},{"family":"Khula","category":"sans-serif","variants":["300","regular","600","700","800"]},{"family":"Homenaje","category":"sans-serif","variants":["regular"]},{"family":"Alice","category":"serif","variants":["regular"]},{"family":"Homemade Apple","category":"handwriting","variants":["regular"]},{"family":"Fugaz One","category":"display","variants":["regular"]},{"family":"Prompt","category":"sans-serif","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"]},{"family":"Fauna One","category":"serif","variants":["regular"]},{"family":"Sacramento","category":"handwriting","variants":["regular"]},{"family":"Hind Siliguri","category":"sans-serif","variants":["300","regular","500","600","700"]},{"family":"Marck Script","category":"handwriting","variants":["regular"]},{"family":"Nothing You Could Do","category":"handwriting","variants":["regular"]},{"family":"Alex Brush","category":"handwriting","variants":["regular"]},{"family":"Kalam","category":"handwriting","variants":["300","regular","700"]},{"family":"Alegreya Sans SC","category":"sans-serif","variants":["100","100italic","300","300italic","regular","italic","500","500italic","700","700italic","800","800italic","900","900italic"]},{"family":"Cantata One","category":"serif","variants":["regular"]},{"family":"Jura","category":"sans-serif","variants":["300","regular","500","600"]},{"family":"Calligraffitti","category":"handwriting","variants":["regular"]},{"family":"Copse","category":"serif","variants":["regular"]},{"family":"Pinyon Script","category":"handwriting","variants":["regular"]},{"family":"Gentium Basic","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Enriqueta","category":"serif","variants":["regular","700"]},{"family":"Syncopate","category":"sans-serif","variants":["regular","700"]},{"family":"Share","category":"display","variants":["regular","italic","700","700italic"]},{"family":"Hind Vadodara","category":"sans-serif","variants":["300","regular","500","600","700"]},{"family":"Convergence","category":"sans-serif","variants":["regular"]},{"family":"Hanuman","category":"serif","variants":["regular","700"]},{"family":"Basic","category":"sans-serif","variants":["regular"]},{"family":"Mate","category":"serif","variants":["regular","italic"]},{"family":"Aldrich","category":"sans-serif","variants":["regular"]},{"family":"Ubuntu Mono","category":"monospace","variants":["regular","italic","700","700italic"]},{"family":"Cherry Cream Soda","category":"display","variants":["regular"]},{"family":"Coda","category":"display","variants":["regular","800"]},{"family":"Ultra","category":"serif","variants":["regular"]},{"family":"PT Mono","category":"monospace","variants":["regular"]},{"family":"Viga","category":"sans-serif","variants":["regular"]},{"family":"Montserrat Alternates","category":"sans-serif","variants":["regular","700"]},{"family":"Marmelad","category":"sans-serif","variants":["regular"]},{"family":"Allura","category":"handwriting","variants":["regular"]},{"family":"Neucha","category":"handwriting","variants":["regular"]},{"family":"Squada One","category":"display","variants":["regular"]},{"family":"Electrolize","category":"sans-serif","variants":["regular"]},{"family":"Quantico","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Julius Sans One","category":"sans-serif","variants":["regular"]},{"family":"Kameron","category":"serif","variants":["regular","700"]},{"family":"Adamina","category":"serif","variants":["regular"]},{"family":"Allerta Stencil","category":"sans-serif","variants":["regular"]},{"family":"Cabin Sketch","category":"display","variants":["regular","700"]},{"family":"Ceviche One","category":"display","variants":["regular"]},{"family":"Prata","category":"serif","variants":["regular"]},{"family":"Carme","category":"sans-serif","variants":["regular"]},{"family":"PT Serif Caption","category":"serif","variants":["regular","italic"]},{"family":"Sarala","category":"sans-serif","variants":["regular","700"]},{"family":"Jaldi","category":"sans-serif","variants":["regular","700"]},{"family":"Schoolbell","category":"handwriting","variants":["regular"]},{"family":"Advent Pro","category":"sans-serif","variants":["100","200","300","regular","500","600","700"]},{"family":"Chivo","category":"sans-serif","variants":["regular","italic","900","900italic"]},{"family":"Freckle Face","category":"display","variants":["regular"]},{"family":"Yantramanav","category":"sans-serif","variants":["100","300","regular","500","700","900"]},{"family":"Doppio One","category":"sans-serif","variants":["regular"]},{"family":"Gochi Hand","category":"handwriting","variants":["regular"]},{"family":"Average","category":"serif","variants":["regular"]},{"family":"Unica One","category":"display","variants":["regular"]},{"family":"Lusitana","category":"serif","variants":["regular","700"]},{"family":"Nixie One","category":"display","variants":["regular"]},{"family":"Michroma","category":"sans-serif","variants":["regular"]},{"family":"Puritan","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Reenie Beanie","category":"handwriting","variants":["regular"]},{"family":"Contrail One","category":"display","variants":["regular"]},{"family":"Allerta","category":"sans-serif","variants":["regular"]},{"family":"Just Another Hand","category":"handwriting","variants":["regular"]},{"family":"Marvel","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Pragati Narrow","category":"sans-serif","variants":["regular","700"]},{"family":"Parisienne","category":"handwriting","variants":["regular"]},{"family":"Bubblegum Sans","category":"display","variants":["regular"]},{"family":"Telex","category":"sans-serif","variants":["regular"]},{"family":"Aclonica","category":"sans-serif","variants":["regular"]},{"family":"Average Sans","category":"sans-serif","variants":["regular"]},{"family":"Jockey One","category":"sans-serif","variants":["regular"]},{"family":"Rochester","category":"handwriting","variants":["regular"]},{"family":"Spinnaker","category":"sans-serif","variants":["regular"]},{"family":"Lustria","category":"serif","variants":["regular"]},{"family":"Waiting for the Sunrise","category":"handwriting","variants":["regular"]},{"family":"Limelight","category":"display","variants":["regular"]},{"family":"Merienda","category":"handwriting","variants":["regular","700"]},{"family":"Cutive","category":"serif","variants":["regular"]},{"family":"Sree Krushnadevaraya","category":"serif","variants":["regular"]},{"family":"Alef","category":"sans-serif","variants":["regular","700"]},{"family":"Port Lligat Slab","category":"serif","variants":["regular"]},{"family":"Annie Use Your Telescope","category":"handwriting","variants":["regular"]},{"family":"Overlock","category":"display","variants":["regular","italic","700","700italic","900","900italic"]},{"family":"Denk One","category":"sans-serif","variants":["regular"]},{"family":"Walter Turncoat","category":"handwriting","variants":["regular"]},{"family":"Monoton","category":"display","variants":["regular"]},{"family":"Crafty Girls","category":"handwriting","variants":["regular"]},{"family":"Carrois Gothic","category":"sans-serif","variants":["regular"]},{"family":"Marcellus","category":"serif","variants":["regular"]},{"family":"Marcellus SC","category":"serif","variants":["regular"]},{"family":"Goudy Bookletter 1911","category":"serif","variants":["regular"]},{"family":"Sansita One","category":"display","variants":["regular"]},{"family":"Yesteryear","category":"handwriting","variants":["regular"]},{"family":"Magra","category":"sans-serif","variants":["regular","700"]},{"family":"Berkshire Swash","category":"handwriting","variants":["regular"]},{"family":"Chelsea Market","category":"display","variants":["regular"]},{"family":"Black Ops One","category":"display","variants":["regular"]},{"family":"Leckerli One","category":"handwriting","variants":["regular"]},{"family":"Oxygen Mono","category":"monospace","variants":["regular"]},{"family":"Oranienbaum","category":"serif","variants":["regular"]},{"family":"Martel","category":"serif","variants":["200","300","regular","600","700","800","900"]},{"family":"Six Caps","category":"sans-serif","variants":["regular"]},{"family":"Arbutus Slab","category":"serif","variants":["regular"]},{"family":"Press Start 2P","category":"display","variants":["regular"]},{"family":"Coustard","category":"serif","variants":["regular","900"]},{"family":"Halant","category":"serif","variants":["300","regular","500","600","700"]},{"family":"Rosario","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Fontdiner Swanky","category":"display","variants":["regular"]},{"family":"Belleza","category":"sans-serif","variants":["regular"]},{"family":"Caudex","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Fredericka the Great","category":"display","variants":["regular"]},{"family":"Alegreya SC","category":"serif","variants":["regular","italic","700","700italic","900","900italic"]},{"family":"Grand Hotel","category":"handwriting","variants":["regular"]},{"family":"Fanwood Text","category":"serif","variants":["regular","italic"]},{"family":"Radley","category":"serif","variants":["regular","italic"]},{"family":"Anonymous Pro","category":"monospace","variants":["regular","italic","700","700italic"]},{"family":"Tauri","category":"sans-serif","variants":["regular"]},{"family":"Carter One","category":"display","variants":["regular"]},{"family":"Merienda One","category":"handwriting","variants":["regular"]},{"family":"Trocchi","category":"serif","variants":["regular"]},{"family":"Forum","category":"display","variants":["regular"]},{"family":"Sue Ellen Francisco","category":"handwriting","variants":["regular"]},{"family":"Duru Sans","category":"sans-serif","variants":["regular"]},{"family":"Racing Sans One","category":"display","variants":["regular"]},{"family":"Lateef","category":"handwriting","variants":["regular"]},{"family":"Metrophobic","category":"sans-serif","variants":["regular"]},{"family":"Short Stack","category":"handwriting","variants":["regular"]},{"family":"Graduate","category":"display","variants":["regular"]},{"family":"Cinzel Decorative","category":"display","variants":["regular","700","900"]},{"family":"Corben","category":"display","variants":["regular","700"]},{"family":"Fenix","category":"serif","variants":["regular"]},{"family":"Mako","category":"sans-serif","variants":["regular"]},{"family":"Anaheim","category":"sans-serif","variants":["regular"]},{"family":"Gilda Display","category":"serif","variants":["regular"]},{"family":"Capriola","category":"sans-serif","variants":["regular"]},{"family":"Allan","category":"display","variants":["regular","700"]},{"family":"Lilita One","category":"display","variants":["regular"]},{"family":"Petit Formal Script","category":"handwriting","variants":["regular"]},{"family":"Italianno","category":"handwriting","variants":["regular"]},{"family":"Inder","category":"sans-serif","variants":["regular"]},{"family":"Gruppo","category":"display","variants":["regular"]},{"family":"Oleo Script Swash Caps","category":"display","variants":["regular","700"]},{"family":"Strait","category":"sans-serif","variants":["regular"]},{"family":"Slackey","category":"display","variants":["regular"]},{"family":"Cousine","category":"monospace","variants":["regular","italic","700","700italic"]},{"family":"Tenor Sans","category":"sans-serif","variants":["regular"]},{"family":"Caveat","category":"handwriting","variants":["regular","700"]},{"family":"Clicker Script","category":"handwriting","variants":["regular"]},{"family":"Unkempt","category":"display","variants":["regular","700"]},{"family":"Timmana","category":"sans-serif","variants":["regular"]},{"family":"VT323","category":"monospace","variants":["regular"]},{"family":"Baumans","category":"display","variants":["regular"]},{"family":"Cutive Mono","category":"monospace","variants":["regular"]},{"family":"Rufina","category":"serif","variants":["regular","700"]},{"family":"Frijole","category":"display","variants":["regular"]},{"family":"Quando","category":"serif","variants":["regular"]},{"family":"Kelly Slab","category":"display","variants":["regular"]},{"family":"Andika","category":"sans-serif","variants":["regular"]},{"family":"Alike","category":"serif","variants":["regular"]},{"family":"Libre Franklin","category":"sans-serif","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"]},{"family":"Eczar","category":"serif","variants":["regular","500","600","700","800"]},{"family":"Lemon","category":"display","variants":["regular"]},{"family":"Crushed","category":"display","variants":["regular"]},{"family":"Delius","category":"handwriting","variants":["regular"]},{"family":"Cherry Swash","category":"display","variants":["regular","700"]},{"family":"Slabo 13px","category":"serif","variants":["regular"]},{"family":"Pompiere","category":"display","variants":["regular"]},{"family":"Lekton","category":"sans-serif","variants":["regular","italic","700"]},{"family":"Brawler","category":"serif","variants":["regular"]},{"family":"Ovo","category":"serif","variants":["regular"]},{"family":"Bowlby One SC","category":"display","variants":["regular"]},{"family":"Aladin","category":"handwriting","variants":["regular"]},{"family":"Oregano","category":"display","variants":["regular","italic"]},{"family":"Judson","category":"serif","variants":["regular","italic","700"]},{"family":"Finger Paint","category":"display","variants":["regular"]},{"family":"Wire One","category":"sans-serif","variants":["regular"]},{"family":"The Girl Next Door","category":"handwriting","variants":["regular"]},{"family":"Concert One","category":"display","variants":["regular"]},{"family":"Happy Monkey","category":"display","variants":["regular"]},{"family":"Prosto One","category":"display","variants":["regular"]},{"family":"Love Ya Like A Sister","category":"display","variants":["regular"]},{"family":"NTR","category":"sans-serif","variants":["regular"]},{"family":"Give You Glory","category":"handwriting","variants":["regular"]},{"family":"Bentham","category":"serif","variants":["regular"]},{"family":"Quintessential","category":"handwriting","variants":["regular"]},{"family":"Orienta","category":"sans-serif","variants":["regular"]},{"family":"Nova Square","category":"display","variants":["regular"]},{"family":"Sniglet","category":"display","variants":["regular","800"]},{"family":"Poly","category":"serif","variants":["regular","italic"]},{"family":"Simonetta","category":"display","variants":["regular","italic","900","900italic"]},{"family":"Gravitas One","category":"display","variants":["regular"]},{"family":"Cairo","category":"sans-serif","variants":["200","300","regular","600","700","900"]},{"family":"IM Fell DW Pica","category":"serif","variants":["regular","italic"]},{"family":"Headland One","category":"serif","variants":["regular"]},{"family":"Karma","category":"serif","variants":["300","regular","500","600","700"]},{"family":"Zeyada","category":"handwriting","variants":["regular"]},{"family":"Herr Von Muellerhoff","category":"handwriting","variants":["regular"]},{"family":"Expletus Sans","category":"display","variants":["regular","italic","500","500italic","600","600italic","700","700italic"]},{"family":"Shojumaru","category":"display","variants":["regular"]},{"family":"Knewave","category":"display","variants":["regular"]},{"family":"Just Me Again Down Here","category":"handwriting","variants":["regular"]},{"family":"Mr Dafoe","category":"handwriting","variants":["regular"]},{"family":"Skranji","category":"display","variants":["regular","700"]},{"family":"Fira Mono","category":"monospace","variants":["regular","700"]},{"family":"Londrina Solid","category":"display","variants":["regular"]},{"family":"GFS Didot","category":"serif","variants":["regular"]},{"family":"Yeseva One","category":"display","variants":["regular"]},{"family":"La Belle Aurore","category":"handwriting","variants":["regular"]},{"family":"Stardos Stencil","category":"display","variants":["regular","700"]},{"family":"Kranky","category":"display","variants":["regular"]},{"family":"IM Fell English","category":"serif","variants":["regular","italic"]},{"family":"Kotta One","category":"serif","variants":["regular"]},{"family":"Qwigley","category":"handwriting","variants":["regular"]},{"family":"Bilbo Swash Caps","category":"handwriting","variants":["regular"]},{"family":"Lily Script One","category":"display","variants":["regular"]},{"family":"Imprima","category":"sans-serif","variants":["regular"]},{"family":"Biryani","category":"sans-serif","variants":["200","300","regular","600","700","800","900"]},{"family":"Arizonia","category":"handwriting","variants":["regular"]},{"family":"Dorsa","category":"sans-serif","variants":["regular"]},{"family":"Megrim","category":"display","variants":["regular"]},{"family":"Gafata","category":"sans-serif","variants":["regular"]},{"family":"Salsa","category":"display","variants":["regular"]},{"family":"UnifrakturMaguntia","category":"display","variants":["regular"]},{"family":"Holtwood One SC","category":"serif","variants":["regular"]},{"family":"Belgrano","category":"serif","variants":["regular"]},{"family":"Gabriela","category":"serif","variants":["regular"]},{"family":"Engagement","category":"handwriting","variants":["regular"]},{"family":"Carrois Gothic SC","category":"sans-serif","variants":["regular"]},{"family":"Khmer","category":"display","variants":["regular"]},{"family":"Norican","category":"handwriting","variants":["regular"]},{"family":"Loved by the King","category":"handwriting","variants":["regular"]},{"family":"Shanti","category":"sans-serif","variants":["regular"]},{"family":"Kurale","category":"serif","variants":["regular"]},{"family":"Fjord One","category":"serif","variants":["regular"]},{"family":"Rationale","category":"sans-serif","variants":["regular"]},{"family":"Voces","category":"display","variants":["regular"]},{"family":"Angkor","category":"display","variants":["regular"]},{"family":"Kristi","category":"handwriting","variants":["regular"]},{"family":"Ramabhadra","category":"sans-serif","variants":["regular"]},{"family":"Caesar Dressing","category":"display","variants":["regular"]},{"family":"Suwannaphum","category":"display","variants":["regular"]},{"family":"Itim","category":"handwriting","variants":["regular"]},{"family":"Federo","category":"sans-serif","variants":["regular"]},{"family":"Tienne","category":"serif","variants":["regular","700","900"]},{"family":"Share Tech","category":"sans-serif","variants":["regular"]},{"family":"IM Fell English SC","category":"serif","variants":["regular"]},{"family":"Patrick Hand SC","category":"handwriting","variants":["regular"]},{"family":"Martel Sans","category":"sans-serif","variants":["200","300","regular","600","700","800","900"]},{"family":"Chonburi","category":"display","variants":["regular"]},{"family":"Seaweed Script","category":"display","variants":["regular"]},{"family":"Delius Swash Caps","category":"handwriting","variants":["regular"]},{"family":"Mountains of Christmas","category":"display","variants":["regular","700"]},{"family":"Palanquin","category":"sans-serif","variants":["100","200","300","regular","500","600","700"]},{"family":"Aguafina Script","category":"handwriting","variants":["regular"]},{"family":"Londrina Outline","category":"display","variants":["regular"]},{"family":"Mouse Memoirs","category":"sans-serif","variants":["regular"]},{"family":"Italiana","category":"serif","variants":["regular"]},{"family":"Titan One","category":"display","variants":["regular"]},{"family":"Over the Rainbow","category":"handwriting","variants":["regular"]},{"family":"Bowlby One","category":"display","variants":["regular"]},{"family":"Dawning of a New Day","category":"handwriting","variants":["regular"]},{"family":"Life Savers","category":"display","variants":["regular","700"]},{"family":"Fondamento","category":"handwriting","variants":["regular","italic"]},{"family":"Podkova","category":"serif","variants":["regular","700"]},{"family":"Chau Philomene One","category":"sans-serif","variants":["regular","italic"]},{"family":"Sail","category":"display","variants":["regular"]},{"family":"Raleway Dots","category":"display","variants":["regular"]},{"family":"Cantora One","category":"sans-serif","variants":["regular"]},{"family":"Meddon","category":"handwriting","variants":["regular"]},{"family":"Mr De Haviland","category":"handwriting","variants":["regular"]},{"family":"Stalemate","category":"handwriting","variants":["regular"]},{"family":"Averia Serif Libre","category":"display","variants":["300","300italic","regular","italic","700","700italic"]},{"family":"Geo","category":"sans-serif","variants":["regular","italic"]},{"family":"Share Tech Mono","category":"monospace","variants":["regular"]},{"family":"Vast Shadow","category":"display","variants":["regular"]},{"family":"Euphoria Script","category":"handwriting","variants":["regular"]},{"family":"Cambo","category":"serif","variants":["regular"]},{"family":"Mate SC","category":"serif","variants":["regular"]},{"family":"Amethysta","category":"serif","variants":["regular"]},{"family":"Balthazar","category":"serif","variants":["regular"]},{"family":"Bokor","category":"display","variants":["regular"]},{"family":"McLaren","category":"display","variants":["regular"]},{"family":"Rouge Script","category":"handwriting","variants":["regular"]},{"family":"Nova Mono","category":"monospace","variants":["regular"]},{"family":"Ledger","category":"serif","variants":["regular"]},{"family":"Unna","category":"serif","variants":["regular"]},{"family":"Cedarville Cursive","category":"handwriting","variants":["regular"]},{"family":"Sofia","category":"handwriting","variants":["regular"]},{"family":"Rammetto One","category":"display","variants":["regular"]},{"family":"IM Fell Double Pica","category":"serif","variants":["regular","italic"]},{"family":"Junge","category":"serif","variants":["regular"]},{"family":"Codystar","category":"display","variants":["300","regular"]},{"family":"Trirong","category":"serif","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"]},{"family":"Englebert","category":"sans-serif","variants":["regular"]},{"family":"Amarante","category":"display","variants":["regular"]},{"family":"Averia Sans Libre","category":"display","variants":["300","300italic","regular","italic","700","700italic"]},{"family":"Poller One","category":"display","variants":["regular"]},{"family":"Ruthie","category":"handwriting","variants":["regular"]},{"family":"Maiden Orange","category":"display","variants":["regular"]},{"family":"Buenard","category":"serif","variants":["regular","700"]},{"family":"Kite One","category":"sans-serif","variants":["regular"]},{"family":"Battambang","category":"display","variants":["regular","700"]},{"family":"Metamorphous","category":"display","variants":["regular"]},{"family":"Milonga","category":"display","variants":["regular"]},{"family":"Chicle","category":"display","variants":["regular"]},{"family":"Flamenco","category":"display","variants":["300","regular"]},{"family":"IM Fell French Canon","category":"serif","variants":["regular","italic"]},{"family":"Moul","category":"display","variants":["regular"]},{"family":"Stint Ultra Expanded","category":"display","variants":["regular"]},{"family":"Rye","category":"display","variants":["regular"]},{"family":"Mallanna","category":"sans-serif","variants":["regular"]},{"family":"Medula One","category":"display","variants":["regular"]},{"family":"Esteban","category":"serif","variants":["regular"]},{"family":"Inika","category":"serif","variants":["regular","700"]},{"family":"Gurajada","category":"serif","variants":["regular"]},{"family":"Stoke","category":"serif","variants":["300","regular"]},{"family":"Stint Ultra Condensed","category":"display","variants":["regular"]},{"family":"Ramaraja","category":"serif","variants":["regular"]},{"family":"Revalia","category":"display","variants":["regular"]},{"family":"Oldenburg","category":"display","variants":["regular"]},{"family":"Condiment","category":"handwriting","variants":["regular"]},{"family":"Donegal One","category":"serif","variants":["regular"]},{"family":"Rosarivo","category":"serif","variants":["regular","italic"]},{"family":"Dynalight","category":"display","variants":["regular"]},{"family":"IM Fell DW Pica SC","category":"serif","variants":["regular"]},{"family":"Heebo","category":"sans-serif","variants":["100","300","regular","500","700","800","900"]},{"family":"Suez One","category":"serif","variants":["regular"]},{"family":"Numans","category":"sans-serif","variants":["regular"]},{"family":"Prociono","category":"serif","variants":["regular"]},{"family":"Ruslan Display","category":"display","variants":["regular"]},{"family":"Artifika","category":"serif","variants":["regular"]},{"family":"Scheherazade","category":"serif","variants":["regular","700"]},{"family":"Assistant","category":"sans-serif","variants":["200","300","regular","600","700","800"]},{"family":"Chango","category":"display","variants":["regular"]},{"family":"Krona One","category":"sans-serif","variants":["regular"]},{"family":"Henny Penny","category":"display","variants":["regular"]},{"family":"Delius Unicase","category":"handwriting","variants":["regular","700"]},{"family":"Coda Caption","category":"sans-serif","variants":["800"]},{"family":"Monofett","category":"display","variants":["regular"]},{"family":"Offside","category":"display","variants":["regular"]},{"family":"Text Me One","category":"sans-serif","variants":["regular"]},{"family":"IM Fell Double Pica SC","category":"serif","variants":["regular"]},{"family":"Sunshiney","category":"handwriting","variants":["regular"]},{"family":"Swanky and Moo Moo","category":"handwriting","variants":["regular"]},{"family":"Creepster","category":"display","variants":["regular"]},{"family":"Tulpen One","category":"display","variants":["regular"]},{"family":"Sancreek","category":"display","variants":["regular"]},{"family":"Wallpoet","category":"display","variants":["regular"]},{"family":"Kavoon","category":"display","variants":["regular"]},{"family":"Linden Hill","category":"serif","variants":["regular","italic"]},{"family":"Habibi","category":"serif","variants":["regular"]},{"family":"MedievalSharp","category":"display","variants":["regular"]},{"family":"League Script","category":"handwriting","variants":["regular"]},{"family":"Suranna","category":"serif","variants":["regular"]},{"family":"Miniver","category":"display","variants":["regular"]},{"family":"Trade Winds","category":"display","variants":["regular"]},{"family":"Nokora","category":"serif","variants":["regular","700"]},{"family":"IM Fell Great Primer","category":"serif","variants":["regular","italic"]},{"family":"Piedra","category":"display","variants":["regular"]},{"family":"Ruluko","category":"sans-serif","variants":["regular"]},{"family":"Overlock SC","category":"display","variants":["regular"]},{"family":"Almendra","category":"serif","variants":["regular","italic","700","700italic"]},{"family":"Iceland","category":"display","variants":["regular"]},{"family":"Vibur","category":"handwriting","variants":["regular"]},{"family":"IM Fell French Canon SC","category":"serif","variants":["regular"]},{"family":"IM Fell Great Primer SC","category":"serif","variants":["regular"]},{"family":"Buda","category":"display","variants":["300"]},{"family":"Sumana","category":"serif","variants":["regular","700"]},{"family":"Averia Libre","category":"display","variants":["300","300italic","regular","italic","700","700italic"]},{"family":"Paprika","category":"display","variants":["regular"]},{"family":"Glass Antiqua","category":"display","variants":["regular"]},{"family":"Montserrat Subrayada","category":"sans-serif","variants":["regular","700"]},{"family":"Caveat Brush","category":"handwriting","variants":["regular"]},{"family":"Wendy One","category":"sans-serif","variants":["regular"]},{"family":"Rubik One","category":"sans-serif","variants":["regular"]},{"family":"Sonsie One","category":"display","variants":["regular"]},{"family":"Port Lligat Sans","category":"sans-serif","variants":["regular"]},{"family":"Nova Round","category":"display","variants":["regular"]},{"family":"Cagliostro","category":"sans-serif","variants":["regular"]},{"family":"Faster One","category":"display","variants":["regular"]},{"family":"Alike Angular","category":"serif","variants":["regular"]},{"family":"Redressed","category":"handwriting","variants":["regular"]},{"family":"Odor Mean Chey","category":"display","variants":["regular"]},{"family":"Elsie","category":"display","variants":["regular","900"]},{"family":"Bilbo","category":"handwriting","variants":["regular"]},{"family":"Irish Grover","category":"display","variants":["regular"]},{"family":"Ribeye","category":"display","variants":["regular"]},{"family":"Snippet","category":"sans-serif","variants":["regular"]},{"family":"Mystery Quest","category":"display","variants":["regular"]},{"family":"Mrs Saint Delafield","category":"handwriting","variants":["regular"]},{"family":"Akronim","category":"display","variants":["regular"]},{"family":"Dr Sugiyama","category":"handwriting","variants":["regular"]},{"family":"New Rocker","category":"display","variants":["regular"]},{"family":"Bigshot One","category":"display","variants":["regular"]},{"family":"Julee","category":"handwriting","variants":["regular"]},{"family":"Mandali","category":"sans-serif","variants":["regular"]},{"family":"Sarpanch","category":"sans-serif","variants":["regular","500","600","700","800","900"]},{"family":"Galindo","category":"display","variants":["regular"]},{"family":"Nosifer","category":"display","variants":["regular"]},{"family":"Della Respira","category":"serif","variants":["regular"]},{"family":"Meie Script","category":"handwriting","variants":["regular"]},{"family":"Antic Didone","category":"serif","variants":["regular"]},{"family":"Nova Slim","category":"display","variants":["regular"]},{"family":"Wellfleet","category":"display","variants":["regular"]},{"family":"Cormorant Garamond","category":"serif","variants":["300","300italic","regular","italic","500","500italic","600","600italic","700","700italic"]},{"family":"Asul","category":"sans-serif","variants":["regular","700"]},{"family":"Miltonian Tattoo","category":"display","variants":["regular"]},{"family":"Margarine","category":"display","variants":["regular"]},{"family":"Croissant One","category":"display","variants":["regular"]},{"family":"Bubbler One","category":"sans-serif","variants":["regular"]},{"family":"UnifrakturCook","category":"display","variants":["700"]},{"family":"Peralta","category":"display","variants":["regular"]},{"family":"Iceberg","category":"display","variants":["regular"]},{"family":"Sarina","category":"display","variants":["regular"]},{"family":"Jacques Francois","category":"serif","variants":["regular"]},{"family":"El Messiri","category":"sans-serif","variants":["regular","500","600","700"]},{"family":"Content","category":"display","variants":["regular","700"]},{"family":"Nova Flat","category":"display","variants":["regular"]},{"family":"Pirata One","category":"display","variants":["regular"]},{"family":"Trykker","category":"serif","variants":["regular"]},{"family":"Emilys Candy","category":"display","variants":["regular"]},{"family":"Autour One","category":"display","variants":["regular"]},{"family":"Germania One","category":"display","variants":["regular"]},{"family":"Rozha One","category":"serif","variants":["regular"]},{"family":"Palanquin Dark","category":"sans-serif","variants":["regular","500","600","700"]},{"family":"Miriam Libre","category":"sans-serif","variants":["regular","700"]},{"family":"Pattaya","category":"sans-serif","variants":["regular"]},{"family":"Frank Ruhl Libre","category":"sans-serif","variants":["300","regular","500","700","900"]},{"family":"Athiti","category":"sans-serif","variants":["200","300","regular","500","600","700"]},{"family":"GFS Neohellenic","category":"sans-serif","variants":["regular","italic","700","700italic"]},{"family":"Petrona","category":"serif","variants":["regular"]},{"family":"Montaga","category":"serif","variants":["regular"]},{"family":"Monsieur La Doulaise","category":"handwriting","variants":["regular"]},{"family":"Lovers Quarrel","category":"handwriting","variants":["regular"]},{"family":"Snowburst One","category":"display","variants":["regular"]},{"family":"Warnes","category":"display","variants":["regular"]},{"family":"Dekko","category":"handwriting","variants":["regular"]},{"family":"Smythe","category":"display","variants":["regular"]},{"family":"Joti One","category":"display","variants":["regular"]},{"family":"Passero One","category":"display","variants":["regular"]},{"family":"Laila","category":"serif","variants":["300","regular","500","600","700"]},{"family":"Astloch","category":"display","variants":["regular","700"]},{"family":"Kenia","category":"display","variants":["regular"]},{"family":"Keania One","category":"display","variants":["regular"]},{"family":"Original Surfer","category":"display","variants":["regular"]},{"family":"Vesper Libre","category":"serif","variants":["regular","500","700","900"]},{"family":"Asset","category":"display","variants":["regular"]},{"family":"Nova Oval","category":"display","variants":["regular"]},{"family":"Spicy Rice","category":"display","variants":["regular"]},{"family":"Fascinate","category":"display","variants":["regular"]},{"family":"Modern Antiqua","category":"display","variants":["regular"]},{"family":"Kadwa","category":"serif","variants":["regular","700"]},{"family":"Galada","category":"display","variants":["regular"]},{"family":"Eagle Lake","category":"handwriting","variants":["regular"]},{"family":"Fresca","category":"sans-serif","variants":["regular"]},{"family":"Diplomata","category":"display","variants":["regular"]},{"family":"Purple Purse","category":"display","variants":["regular"]},{"family":"Atomic Age","category":"display","variants":["regular"]},{"family":"Vampiro One","category":"display","variants":["regular"]},{"family":"Sura","category":"serif","variants":["regular","700"]},{"family":"Fascinate Inline","category":"display","variants":["regular"]},{"family":"Trochut","category":"display","variants":["regular","italic","700"]},{"family":"Ribeye Marrow","category":"display","variants":["regular"]},{"family":"Gorditas","category":"display","variants":["regular","700"]},{"family":"Jomhuria","category":"display","variants":["regular"]},{"family":"Ranchers","category":"display","variants":["regular"]},{"family":"Griffy","category":"display","variants":["regular"]},{"family":"Lancelot","category":"display","variants":["regular"]},{"family":"Freehand","category":"display","variants":["regular"]},{"family":"Bungee","category":"display","variants":["regular"]},{"family":"Koulen","category":"display","variants":["regular"]},{"family":"Amatica SC","category":"display","variants":["regular","700"]},{"family":"Secular One","category":"sans-serif","variants":["regular"]},{"family":"Galdeano","category":"sans-serif","variants":["regular"]},{"family":"Goblin One","category":"display","variants":["regular"]},{"family":"Pridi","category":"serif","variants":["200","300","regular","500","600","700"]},{"family":"Jacques Francois Shadow","category":"display","variants":["regular"]},{"family":"Jolly Lodger","category":"display","variants":["regular"]},{"family":"Cormorant Infant","category":"serif","variants":["300","300italic","regular","italic","500","500italic","600","600italic","700","700italic"]},{"family":"Elsie Swash Caps","category":"display","variants":["regular","900"]},{"family":"Rum Raisin","category":"sans-serif","variants":["regular"]},{"family":"Sofadi One","category":"display","variants":["regular"]},{"family":"Averia Gruesa Libre","category":"display","variants":["regular"]},{"family":"Macondo Swash Caps","category":"display","variants":["regular"]},{"family":"Devonshire","category":"handwriting","variants":["regular"]},{"family":"Londrina Shadow","category":"display","variants":["regular"]},{"family":"Mitr","category":"sans-serif","variants":["200","300","regular","500","600","700"]},{"family":"Taviraj","category":"serif","variants":["100","100italic","200","200italic","300","300italic","regular","italic","500","500italic","600","600italic","700","700italic","800","800italic","900","900italic"]},{"family":"Felipa","category":"handwriting","variants":["regular"]},{"family":"Amiko","category":"sans-serif","variants":["regular","600","700"]},{"family":"Siemreap","category":"display","variants":["regular"]},{"family":"Miltonian","category":"display","variants":["regular"]},{"family":"Nova Script","category":"display","variants":["regular"]},{"family":"Preahvihear","category":"display","variants":["regular"]},{"family":"Romanesco","category":"handwriting","variants":["regular"]},{"family":"Nova Cut","category":"display","variants":["regular"]},{"family":"Arya","category":"sans-serif","variants":["regular","700"]},{"family":"Baloo Tamma","category":"display","variants":["regular"]},{"family":"Dangrek","category":"display","variants":["regular"]},{"family":"Smokum","category":"display","variants":["regular"]},{"family":"David Libre","category":"serif","variants":["regular","500","700"]},{"family":"Baloo Paaji","category":"display","variants":["regular"]},{"family":"Geostar Fill","category":"display","variants":["regular"]},{"family":"Arima Madurai","category":"display","variants":["100","200","300","regular","500","700","800","900"]},{"family":"Metal Mania","category":"display","variants":["regular"]},{"family":"Chenla","category":"display","variants":["regular"]},{"family":"Seymour One","category":"sans-serif","variants":["regular"]},{"family":"Kantumruy","category":"sans-serif","variants":["300","regular","700"]},{"family":"Princess Sofia","category":"handwriting","variants":["regular"]},{"family":"Londrina Sketch","category":"display","variants":["regular"]},{"family":"Mrs Sheppards","category":"handwriting","variants":["regular"]},{"family":"Underdog","category":"display","variants":["regular"]},{"family":"Sirin Stencil","category":"display","variants":["regular"]},{"family":"Rhodium Libre","category":"serif","variants":["regular"]},{"family":"Butterfly Kids","category":"handwriting","variants":["regular"]},{"family":"Molle","category":"handwriting","variants":["italic"]},{"family":"Bonbon","category":"handwriting","variants":["regular"]},{"family":"Ewert","category":"display","variants":["regular"]},{"family":"Bayon","category":"display","variants":["regular"]},{"family":"Bigelow Rules","category":"display","variants":["regular"]},{"family":"Tillana","category":"handwriting","variants":["regular","500","600","700","800"]},{"family":"Taprom","category":"display","variants":["regular"]},{"family":"Rubik Mono One","category":"sans-serif","variants":["regular"]},{"family":"Aubrey","category":"display","variants":["regular"]},{"family":"Harmattan","category":"sans-serif","variants":["regular"]},{"family":"Plaster","category":"display","variants":["regular"]},{"family":"Amita","category":"handwriting","variants":["regular","700"]},{"family":"Spirax","category":"display","variants":["regular"]},{"family":"Geostar","category":"display","variants":["regular"]},{"family":"Federant","category":"display","variants":["regular"]},{"family":"Almendra SC","category":"serif","variants":["regular"]},{"family":"Miss Fajardose","category":"handwriting","variants":["regular"]},{"family":"Metal","category":"display","variants":["regular"]},{"family":"Maitree","category":"serif","variants":["200","300","regular","500","600","700"]},{"family":"Almendra Display","category":"display","variants":["regular"]},{"family":"Marko One","category":"serif","variants":["regular"]},{"family":"Sriracha","category":"handwriting","variants":["regular"]},{"family":"Supermercado One","category":"display","variants":["regular"]},{"family":"Arbutus","category":"display","variants":["regular"]},{"family":"Sevillana","category":"display","variants":["regular"]},{"family":"Combo","category":"display","variants":["regular"]},{"family":"Kdam Thmor","category":"display","variants":["regular"]},{"family":"Hind Guntur","category":"sans-serif","variants":["300","regular","500","600","700"]},{"family":"Baloo Chettan","category":"display","variants":["regular"]},{"family":"Risque","category":"display","variants":["regular"]},{"family":"Hind Madurai","category":"sans-serif","variants":["300","regular","500","600","700"]},{"family":"Uncial Antiqua","category":"display","variants":["regular"]},{"family":"Ravi Prakash","category":"display","variants":["regular"]},{"family":"Ranga","category":"display","variants":["regular","700"]},{"family":"Diplomata SC","category":"display","variants":["regular"]},{"family":"Macondo","category":"display","variants":["regular"]},{"family":"Eater","category":"display","variants":["regular"]},{"family":"Erica One","category":"display","variants":["regular"]},{"family":"Changa","category":"sans-serif","variants":["200","300","regular","500","600","700","800"]},{"family":"Mr Bedfort","category":"handwriting","variants":["regular"]},{"family":"Stalinist One","category":"display","variants":["regular"]},{"family":"Chela One","category":"display","variants":["regular"]},{"family":"Butcherman","category":"display","variants":["regular"]},{"family":"Bungee Shade","category":"display","variants":["regular"]},{"family":"Ruge Boogie","category":"handwriting","variants":["regular"]},{"family":"Cormorant SC","category":"serif","variants":["300","regular","500","600","700"]},{"family":"Lakki Reddy","category":"handwriting","variants":["regular"]},{"family":"Cormorant","category":"serif","variants":["300","300italic","regular","italic","500","500italic","600","600italic","700","700italic"]},{"family":"Reem Kufi","category":"sans-serif","variants":["regular"]},{"family":"Lalezar","category":"display","variants":["regular"]},{"family":"Flavors","category":"display","variants":["regular"]},{"family":"Sahitya","category":"serif","variants":["regular","700"]},{"family":"Katibeh","category":"display","variants":["regular"]},{"family":"Jim Nightshade","category":"handwriting","variants":["regular"]},{"family":"Baloo Thambi","category":"display","variants":["regular"]},{"family":"Space Mono","category":"monospace","variants":["regular","italic","700","700italic"]},{"family":"Yrsa","category":"serif","variants":["300","regular","500","600","700"]},{"family":"Unlock","category":"display","variants":["regular"]},{"family":"Emblema One","category":"display","variants":["regular"]},{"family":"Cormorant Upright","category":"serif","variants":["300","regular","500","600","700"]},{"family":"Moulpali","category":"display","variants":["regular"]},{"family":"Baloo","category":"display","variants":["regular"]},{"family":"Mada","category":"sans-serif","variants":["300","regular","500","900"]},{"family":"Bungee Inline","category":"display","variants":["regular"]},{"family":"Tenali Ramakrishna","category":"sans-serif","variants":["regular"]},{"family":"Fasthand","category":"serif","variants":["regular"]},{"family":"Coiny","category":"display","variants":["regular"]},{"family":"Mukta Vaani","category":"sans-serif","variants":["200","300","regular","500","600","700","800"]},{"family":"Baloo Bhaina","category":"display","variants":["regular"]},{"family":"Dhurjati","category":"sans-serif","variants":["regular"]},{"family":"Inknut Antiqua","category":"serif","variants":["300","regular","500","600","700","800","900"]},{"family":"Scope One","category":"serif","variants":["regular"]},{"family":"Atma","category":"display","variants":["300","regular","500","600","700"]},{"family":"Lemonada","category":"display","variants":["300","regular","600","700"]},{"family":"Baloo Da","category":"display","variants":["regular"]},{"family":"Shrikhand","category":"display","variants":["regular"]},{"family":"Fruktur","category":"display","variants":["regular"]},{"family":"Mirza","category":"display","variants":["regular","500","600","700"]},{"family":"BioRhyme","category":"serif","variants":["200","300","regular","700","800"]},{"family":"Gidugu","category":"sans-serif","variants":["regular"]},{"family":"Farsan","category":"display","variants":["regular"]},{"family":"Asar","category":"serif","variants":["regular"]},{"family":"Rakkas","category":"display","variants":["regular"]},{"family":"Proza Libre","category":"sans-serif","variants":["regular","italic","500","500italic","600","600italic","700","700italic","800","800italic"]},{"family":"Baloo Bhai","category":"display","variants":["regular"]},{"family":"Suravaram","category":"serif","variants":["regular"]},{"family":"Yatra One","category":"display","variants":["regular"]},{"family":"Hanalei","category":"display","variants":["regular"]},{"family":"Mogra","category":"display","variants":["regular"]},{"family":"Rasa","category":"serif","variants":["300","regular","500","600","700"]},{"family":"Aref Ruqaa","category":"serif","variants":["regular","700"]},{"family":"Pavanam","category":"sans-serif","variants":["regular"]},{"family":"Hanalei Fill","category":"display","variants":["regular"]},{"family":"BioRhyme Expanded","category":"serif","variants":["200","300","regular","700","800"]},{"family":"Chathura","category":"sans-serif","variants":["100","300","regular","700","800"]},{"family":"Peddana","category":"serif","variants":["regular"]},{"family":"Cormorant Unicase","category":"serif","variants":["300","regular","500","600","700"]},{"family":"Bungee Hairline","category":"display","variants":["regular"]},{"family":"Kumar One Outline","category":"display","variants":["regular"]},{"family":"Modak","category":"display","variants":["regular"]},{"family":"Kavivanar","category":"handwriting","variants":["regular"]},{"family":"Bungee Outline","category":"display","variants":["regular"]},{"family":"Kumar One","category":"display","variants":["regular"]},{"family":"Meera Inimai","category":"sans-serif","variants":["regular"]}]' );
 	
 	// Loop through them and put what we need into our fonts array
 	$fonts = array();
@@ -1257,17 +1596,51 @@ function generate_all_google_fonts()
 		);
 		
 		// Create an ID using our font family name
-		$id				= strtolower( str_replace( ' ', '_', $item->family ) );
+		$id = strtolower( str_replace( ' ', '_', $item->family ) );
 		
 		// Add our attributes to our new array
-		$fonts[ $id ] 	= $atts;
+		$fonts[ $id ] = $atts;
 	}
 	
-	// Filter to allow us to modify the fonts array before saving the transient
-	$fonts = apply_filters( 'generate_google_fonts_array', $fonts );
-				
-	// Set transient for google fonts
-	set_transient( 'generate_all_google_fonts', $fonts, 14 * DAY_IN_SECONDS );
+	if ( 'all' !== $amount )
+		$fonts = array_slice( $fonts, 0, $amount );
+	
+	// Alphabetize our fonts
+	$alphabetize = apply_filters( 'generate_alphabetize_google_fonts', true );
+	if ( $alphabetize ) asort( $fonts );
+	
+	// Filter to allow us to modify the fonts array
+	return apply_filters( 'generate_google_fonts_array', $fonts );
+}
+endif;
+
+if ( ! function_exists( 'generate_get_all_google_fonts_ajax' ) ) :
+/**
+ * Return an array of all of our Google Fonts
+ * @since 1.3.0
+ */
+add_action( 'wp_ajax_generate_get_all_google_fonts_ajax', 'generate_get_all_google_fonts_ajax' );
+function generate_get_all_google_fonts_ajax()
+{
+	// Bail if the nonce doesn't check out
+	if ( ! isset( $_POST[ 'gp_customize_nonce' ] ) || ! wp_verify_nonce( $_POST[ 'gp_customize_nonce' ], 'gp_customize_nonce' ) )
+		wp_die();
+	
+	// Do another nonce check
+	check_ajax_referer( 'gp_customize_nonce', 'gp_customize_nonce' );
+	
+	// Bail if user can't edit theme options
+	if ( ! current_user_can( 'edit_theme_options' ) )
+		wp_die();
+	
+	// Get all of our fonts
+	$fonts = generate_get_all_google_fonts();
+	
+	// Send all of our fonts in JSON format
+	echo wp_json_encode( $fonts );
+	
+	// Exit
+	die();
 }
 endif;
 
@@ -1277,11 +1650,24 @@ if ( ! function_exists( 'generate_get_google_font_variants' ) ) :
  * Example: generate_get_google_font_variation( 'Open Sans' )
  * @since 1.3.0
  */
-function generate_get_google_font_variants( $font )
+function generate_get_google_font_variants( $font, $key = '', $default = '' )
 {
+	// Don't need variants if we're using a system font
+	if ( in_array( $font, generate_typography_default_fonts() ) )
+		return;
+	
+	// Return if we have our variants saved
+	if ( '' !== $key && get_theme_mod( $key . '_variants' ) ) return get_theme_mod( $key . '_variants' );
+	
+	// Make sure we have defaults
+	if ( '' == $default ) $default = generate_get_default_fonts();
+	
+	// If our default font is selected and the category isn't saved, we already know the category
+	if ( $default[ $key ] == $font ) return $default[ $key . '_variants' ];
 	
 	// Grab all of our fonts
-	$fonts = ( get_transient('generate_all_google_fonts') ? get_transient('generate_all_google_fonts') : array() );
+	// It's a big list, so hopefully we're not even still reading
+	$fonts = generate_get_all_google_fonts();
 	
 	// Get the ID from our font
 	$id = strtolower( str_replace( ' ', '_', $font ) );
@@ -1299,7 +1685,7 @@ function generate_get_google_font_variants( $font )
 		foreach ( $variants as $variant ) {
 			$output[] = $variant;
 		}
-		return implode(',', $output);
+		return implode(',', apply_filters( 'generate_typography_variants', $output ));
 	endif;
 	
 }
@@ -1311,11 +1697,24 @@ if ( ! function_exists( 'generate_get_google_font_category' ) ) :
  * Example: generate_get_google_font_category( 'Open Sans' )
  * @since 1.3.0
  */
-function generate_get_google_font_category( $font )
+function generate_get_google_font_category( $font, $key = '', $default = '' )
 {
+	// Don't need a category if we're using a system font
+	if ( in_array( $font, generate_typography_default_fonts() ) )
+		return;
+	
+	// Return if we have our variants saved
+	if ( '' !== $key && get_theme_mod( $key . '_category' ) ) return ', ' . get_theme_mod( $key . '_category' );
+	
+	// Make sure we have defaults
+	if ( '' == $default ) $default = generate_get_default_fonts();
+	
+	// If our default font is selected and the category isn't saved, we already know the category
+	if ( $default[ $key ] == $font ) return ', ' . $default[ $key . '_category' ];
 	
 	// Get all of our fonts
-	$fonts = ( get_transient('generate_all_google_fonts') ? get_transient('generate_all_google_fonts') : array() );
+	// It's a big list, so hopefully we're not even still reading
+	$fonts = generate_get_all_google_fonts();
 	
 	// Get the ID from our font
 	$id = strtolower( str_replace( ' ', '_', $font ) );
@@ -1352,6 +1751,7 @@ function generate_get_font_family_css( $font, $settings, $default )
 		'Georgia, Times New Roman, Times, serif',
 		'Helvetica',
 		'Impact',
+		'Segoe UI, Helvetica Neue, Helvetica, sans-serif',
 		'Tahoma, Geneva, sans-serif',
 		'Trebuchet MS, Helvetica, sans-serif',
 		'Verdana, Geneva, sans-serif'
@@ -1370,7 +1770,7 @@ function generate_get_font_family_css( $font, $settings, $default )
 		$wrapper_end = null;
 	else :
 		$wrapper_start = '"';
-		$wrapper_end = '"' . generate_get_google_font_category( $font_family );
+		$wrapper_end = '"' . generate_get_google_font_category( $font_family, $font, $default );
 	endif;
 	
 	// Output the CSS
@@ -1379,54 +1779,72 @@ function generate_get_font_family_css( $font, $settings, $default )
 }
 endif;
 
-if ( ! function_exists( 'generate_typography_convert_secondary_nav_values' ) ) :
-/**
- * Take the old secondary navigation font value and strip it of variants
- * This should only run once
- * @since 1.3.0
- */
-add_action('admin_init', 'generate_typography_convert_secondary_nav_values');
-function generate_typography_convert_secondary_nav_values()
+if ( ! function_exists( 'generate_typography_customizer_live_preview' ) ) :
+add_action( 'customize_preview_init', 'generate_typography_customizer_live_preview' );
+function generate_typography_customizer_live_preview()
 {
-	
-	// Bail if Secondary Nav isn't active
-	if ( ! function_exists( 'generate_secondary_nav_get_defaults' ) )
-		return;
-	
-	// If we've done this before, bail
-	if ( 'true' == get_option( 'generate_update_secondary_typography' ) )
-		return;
-	
-	// Get all settings
-	$generate_secondary_nav_settings = wp_parse_args( 
-		get_option( 'generate_secondary_nav_settings', array() ), 
-		generate_secondary_nav_get_defaults() 
+	wp_enqueue_script( 
+		  'generate-typography-customizer',
+		  trailingslashit( plugin_dir_url( __FILE__ ) ) . '/customizer/js/customizer.js',
+		  array( 'jquery','customize-preview' ),
+		  GENERATE_FONT_VERSION,
+		  true
+	);
+}
+endif;
+
+if ( ! function_exists( 'generate_typography_default_fonts' ) ) :
+function generate_typography_default_fonts() {
+	$fonts = array(
+		'inherit',
+		'Arial, Helvetica, sans-serif',
+		'Century Gothic',
+		'Comic Sans MS',
+		'Courier New',
+		'Georgia, Times New Roman, Times, serif',
+		'Helvetica',
+		'Impact',
+		'Lucida Console',
+		'Lucida Sans Unicode',
+		'Palatino Linotype',
+		'Segoe UI, Helvetica Neue, Helvetica, sans-serif',
+		'Tahoma, Geneva, sans-serif',
+		'Trebuchet MS, Helvetica, sans-serif',
+		'Verdana, Geneva, sans-serif'
 	);
 	
-	// Get our secondary nav font family setting
-	$value = $generate_secondary_nav_settings[ 'font_secondary_navigation' ];
+	return apply_filters( 'generate_typography_default_fonts', $fonts );
+}
+endif;
+
+if ( ! function_exists( 'generate_sanitize_typography' ) ) :
+/**
+ * Sanitize typography dropdown
+ * @since 1.1.10
+ */
+function generate_sanitize_typography( $input ) 
+{
+
+	// Grab all of our fonts
+	$fonts = generate_get_all_google_fonts();
 	
-	// Create a new, empty array
-	$new_settings = array();
+	// Loop through all of them and grab their names
+	$font_names = array();
+	foreach ( $fonts as $k => $fam ) {
+		$font_names[] = $fam['name'];
+	}
 	
-	// If our value has : in it, and isn't empty
-	if ( strpos( $value, ':' ) !== false && ! empty( $value ) ) :
-		
-		// Remove the : and anything past it
-		$value = current( explode( ':', $value ) );
-		
-		// Populate our new array with our new, clean value
-		$new_settings[ 'font_secondary_navigation' ] = $value;
-		
-	endif;
+	// Get all non-Google font names
+	$not_google = generate_typography_default_fonts();
+
+	// Merge them both into one array
+	$valid = array_merge( $font_names, $not_google );
 	
-	// Update our options if our new array isn't empty
-	if ( ! empty( $new_settings ) ) :
-		$generate_new_typography_settings = wp_parse_args( $new_settings, $generate_secondary_nav_settings );
-		update_option( 'generate_secondary_nav_settings', $generate_new_typography_settings );
-	endif;
-	
-	// All done, set an option so we don't go through this again
-	update_option( 'generate_update_secondary_typography','true' );
+	// Sanitize
+    if ( in_array( $input, $valid ) ) {
+        return $input;
+    } else {
+        return 'Open Sans';
+    }
 }
 endif;

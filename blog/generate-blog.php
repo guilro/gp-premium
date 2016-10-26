@@ -4,6 +4,9 @@ Add-on Name: Generate Blog
 Author: Thomas Usborne
 Author URI: http://edge22.com
 */
+
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
 	
 // Define the version
 if ( ! defined( 'GENERATE_BLOG_VERSION' ) )

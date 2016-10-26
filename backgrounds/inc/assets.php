@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_backgrounds_init' ) ) :
 	add_action('init', 'generate_backgrounds_init');
 	function generate_backgrounds_init() {

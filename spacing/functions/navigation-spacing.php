@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 $wp_customize->add_section(
 	// ID
 	'generate_spacing_navigation',
@@ -35,7 +38,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['menu_item'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 // CONTROLS
@@ -57,7 +61,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['menu_item_height'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 // CONTROLS
@@ -79,7 +84,8 @@ $wp_customize->add_setting(
 		'default' => $defaults['sub_menu_item_height'],
 		'type' => 'option', 
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'absint'
+		'sanitize_callback' => 'absint',
+		'transport' => 'postMessage'
 	)
 );
 // CONTROLS

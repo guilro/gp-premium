@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_backgrounds_add_export' ) ) :
 	add_action('generate_add_export_items','generate_backgrounds_add_export');
 	function generate_backgrounds_add_export()

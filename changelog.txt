@@ -1,5 +1,59 @@
 == changelog ==
 
+= 1.2.91 =
+* Menu Plus: Fix bug where navigation logo wasn't displaying when effect is set to None
+* Menu Plus: Fix bug where mobile header javascript was showing up when it shouldn't
+* Sections: Add Shortcodes Ultimate compatibility
+* Page Header: Fix Italian translation
+* Page Header: Only show metabox on public post types
+* Page Header: Fully re-design metabox
+* Page Header: Add padding unit option (px or %)
+* Blog: Make excerpt length value update immediately in Customizer
+* Blog: Improve masonry functionality
+* Russian translations updated - massive thanks to Alexey!
+
+= 1.2.90 =
+* Prevent direct access to all files
+* All Czech translations updated (thanks Ondrej!)
+* Copyright: Improve Customizer experience
+* Sections: Completely re-designed and re-built Sections
+* Sections: Section content is now saved into your default editor on update/save. 
+	- This prevents theme-lock, meaning your content will still exist even if you remove Sections.
+* Sections: Send to default editor button removed as the before removes the need for it
+* Sections: Add bottom & top padding unit option (px or %)
+* Page Header: Add generate_page_header_video_loop filter to disable looping of the page header video
+* Page Header: Add option to remove the page header from single posts
+* Page Header: Make number only inputs only accepts numbers
+* Page Header: Force page header above the content if merged option is set
+* Page Header: Disable automatic check for background video posters if no image is set
+* Page Header: Use featured image as background image if no page header image is set
+* Spacing: Remove duplicate menu item height CSS
+* Spacing: Make inputs number only
+* Spacing: All options are now instant preview
+* Blog: Make post image sizes and excerpt length inputs number only
+* Blog: Force full width masonry items on mobile
+* Blog: Show Blog panel even when we're not viewing the blog in the Customizer
+* Menu Plus: Reduce space between menu toggle and search icon on mobile with menu logo enabled
+* Menu Plus: Show navigation logo option and navigation logo position option even if sticky navigation isn't enabled
+* Menu Plus: Optimize javascript and put it all in files instead of in wp_footer
+* Menu Plus: Allow navigation logo to show in sidebar navigation causing a sidebar logo effect
+* Menu Plus: Float mobile header to the right on RTL installations
+* Typography: Add new filter: generate_typography_variants
+* Typography: Make font size, weight and decoration instant preview
+* Typography: Only show top 200 popular Google Fonts in Customizer (increases Customizer performance)
+* Typography: generate_number_of_fonts filter added so you can choose how many fonts to include in the Customizer list
+* Typography: Remove 2 database queries
+* Typography: Add Segoe UI font to default list
+* Typography: Revamp how Google fonts get their category and variants (increase front end performance)
+* Colors: Make all colors instant preview
+* Secondary Navigation: Colors are now instant preview
+* Secondary Navigation: Typography font weight, transform and size are now instant preview
+* Secondary Navigation: Layout options are now instant preview
+* Hooks: Disable spell check in hook textareas
+* Hooks: Fix floating box issue on RTL installations
+* Backgrounds: Use default WordPress image uploader customizer control
+* Customizer: All Customizer controls are now rendered in javascript/json - big +1 for performance
+
 = 1.2.89 =
 * Fix translations
 * GP Hooks: Add new filter: generate_hooks_capability - change the capability for users who can edit hooks

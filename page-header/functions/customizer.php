@@ -1,10 +1,17 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_page_header_blog_customizer' ) ) :
 add_action( 'customize_register', 'generate_page_header_blog_customizer', 99 );
 function generate_page_header_blog_customizer( $wp_customize ) {
 	$defaults = generate_page_header_get_defaults();
 	$dir = plugin_dir_path( __FILE__ );
 	require_once $dir . 'controls.php';
+	
+	if ( method_exists( $wp_customize,'register_control_type' ) ) {
+		$wp_customize->register_control_type( 'Generate_Blog_Page_Header_Image_Save' );
+	}
 	
 	$wp_customize->add_panel( 'generate_blog_page_header_panel', array(
 		'priority'       => 40,
@@ -69,7 +76,7 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		$wp_customize,
 		'generate_page_header_options[page_header_url]',
 		array(
-			'label' => __('Page Header Link', 'generate-page-header'),
+			'label' => __('Image link', 'generate-page-header'),
 			'description'    => __( 'Make your page header image clickable by adding a URL. (optional)', 'generate-page-header' ),
 			'section' => 'page_header_blog_image_settings',
 			'settings' => 'generate_page_header_options[page_header_url]',
@@ -93,7 +100,7 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		// Arguments array
 		array(
 			'type' => 'select',
-			'label' => __( 'Hard Crop', 'generate-page-header' ),
+			'label' => __( 'Resize image', 'generate-page-header' ),
 			'description'    => __( 'Turn hard cropping or of off.', 'generate-page-header' ),
 			'section' => 'page_header_blog_image_settings',
 			'choices' => array(
@@ -120,11 +127,11 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		$wp_customize,
 		'generate_page_header_options[page_header_image_width]',
 		array(
-			'label' => __('Image Width', 'generate-page-header'),
+			'label' => __('Image width', 'generate-page-header'),
 			'description'    => __( 'Choose your image width in pixels. (integer only, default is 1200)', 'generate-page-header' ),
 			'section' => 'page_header_blog_image_settings',
 			'settings' => 'generate_page_header_options[page_header_image_width]',
-			'type' => 'text',
+			'type' => 'number',
 			'active_callback' => 'generate_page_header_blog_crop_exists'
 		)
 	));
@@ -143,11 +150,11 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		$wp_customize,
 		'generate_page_header_options[page_header_image_height]',
 		array(
-			'label' => __('Image Height', 'generate-page-header'),
+			'label' => __('Image height', 'generate-page-header'),
 			'description'    => __( 'Choose your image height in pixels. Use "0" or leave blank for proportional resizing. (integer only, default is 0) ', 'generate-page-header' ),
 			'section' => 'page_header_blog_image_settings',
 			'settings' => 'generate_page_header_options[page_header_image_height]',
-			'type' => 'text',
+			'type' => 'number',
 			'active_callback' => 'generate_page_header_blog_crop_exists'
 		)
 	));
@@ -159,7 +166,8 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 			array(
 				'section'     => 'page_header_blog_image_settings',
 				'label'			=> false,
-				'active_callback' => 'generate_page_header_blog_crop_exists'
+				'active_callback' => 'generate_page_header_blog_crop_exists',
+				'type' => 'page_header_image_save'
 			)
 		)
 	);
@@ -461,8 +469,8 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 			'description'    => __( 'Choose whether the page header is contained or fluid.', 'generate-page-header' ),
 			'section' => 'page_header_blog_content_settings',
 			'choices' => array(
-				'contained' => __( 'Contained', 'generate-page-header' ),
-				'fluid' => __( 'Fluid', 'generate-page-header' )
+				'' => __( 'Contained', 'generate-page-header' ),
+				'fluid' => __( 'Full width', 'generate-page-header' )
 			),
 			'settings' => 'generate_page_header_options[page_header_container_type]',
 			'active_callback' => 'generate_page_header_blog_content_exists'
@@ -509,13 +517,37 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'generate_page_header_options[page_header_padding]',
 		array(
 			'label' => __('Top/Bottom Padding', 'generate-page-header'),
-			'description' => __( 'Choose your content padding in pixels. This will add space above and below your content. (integer only) ', 'generate-page-header' ),
+			'description' => __( 'This will add space above and below your content. (integer only) ', 'generate-page-header' ),
 			'section' => 'page_header_blog_content_settings',
 			'settings' => 'generate_page_header_options[page_header_padding]',
 			'type' => 'text',
 			'active_callback' => 'generate_page_header_blog_content_exists'
 		)
 	));
+	
+	$wp_customize->add_setting( 
+		'generate_page_header_options[page_header_padding_unit]', 
+		array(
+			'default' => $defaults['page_header_padding_unit'],
+			'type' => 'option',
+			'sanitize_callback' => 'generate_page_header_sanitize_choices'
+		)
+	);
+	
+	$wp_customize->add_control(
+		'generate_page_header_options[page_header_padding_unit]',
+		array(
+			'type' => 'select',
+			'label' => __( 'Padding Unit', 'generate-page-header' ),
+			'section' => 'page_header_blog_content_settings',
+			'choices' => array(
+				'' => 'px',
+				'percent'   => '%'
+			),
+			'settings' => 'generate_page_header_options[page_header_padding_unit]',
+			'active_callback' => 'generate_page_header_blog_content_exists'
+		)
+	);
 	
 	$wp_customize->add_setting(
 		'generate_page_header_options[page_header_background_color]', array(

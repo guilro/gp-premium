@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_typography_init' ) ) :
 add_action('init', 'generate_typography_init');
 function generate_typography_init() {

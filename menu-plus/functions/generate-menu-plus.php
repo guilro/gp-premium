@@ -1,4 +1,7 @@
 <?php
+// No direct access, please
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 if ( ! function_exists( 'generate_menu_plus_setup' ) ) :
 add_action( 'after_setup_theme','generate_menu_plus_setup' );
 function generate_menu_plus_setup()
@@ -46,7 +49,7 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 				'priority'       => 50,
 				'capability'     => 'edit_theme_options',
 				'theme_supports' => '',
-				'title'          => __( 'Menu Plus','generate' ),
+				'title'          => __( 'Menu Plus','generate-menu-plus' ),
 				'description'    => '',
 			) );
 		}
@@ -187,10 +190,9 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 			$wp_customize,
 			'generate_menu_plus_settings[sticky_menu_logo]',
 			array(
-				'label' => __('Sticky Navigation Logo','generate'),
+				'label' => __('Navigation Logo','generate-menu-plus'),
 				'section' => $sticky_menu_section,
 				'settings' => 'generate_menu_plus_settings[sticky_menu_logo]',
-				'active_callback' => 'generate_sticky_navigation_activated',
 				'priority' => 115
 			)
 		)
@@ -215,16 +217,15 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 		// Arguments array
 		array(
 			'type' => 'select',
-			'label' => __( 'Sticky Navigation Logo Position', 'generate-menu-plus' ),
+			'label' => __( 'Navigation Logo Position', 'generate-menu-plus' ),
 			'section' => $sticky_menu_section,
 			'choices' => array(
-				'sticky-menu' => __( 'Sticky Only', 'generate-menu-plus' ),
-				'menu' => __( 'Sticky + Regular', 'generate-menu-plus' ),
-				'regular-menu' => __( 'Regular Only', 'generate-menu-plus' )
+				'sticky-menu' => __( 'Sticky', 'generate-menu-plus' ),
+				'menu' => __( 'Sticky + Static', 'generate-menu-plus' ),
+				'regular-menu' => __( 'Static', 'generate-menu-plus' )
 			),
 			// This last one must match setting ID from above
 			'settings' => 'generate_menu_plus_settings[sticky_menu_logo_position]',
-			'active_callback' => 'generate_sticky_navigation_activated',
 			'priority' => 120
 		)
 	);
@@ -286,7 +287,7 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 			$wp_customize,
 			'generate_menu_plus_settings[mobile_header_logo]',
 			array(
-				'label' => __('Mobile Header Logo','generate'),
+				'label' => __('Mobile Header Logo','generate-menu-plus'),
 				'section' => $header_section,
 				'settings' => 'generate_menu_plus_settings[mobile_header_logo]',
 				'active_callback' => 'generate_mobile_header_activated'
@@ -419,7 +420,7 @@ function generate_menu_plus_enqueue_css()
 	endif;
 	
 	// Add regular menu logo styling
-	if ( '' !== $generate_menu_plus_settings['sticky_menu_logo'] && 'regular-menu' == $generate_menu_plus_settings['sticky_menu_logo_position'] ) :
+	if ( '' !== $generate_menu_plus_settings['sticky_menu_logo'] ) :
 		wp_enqueue_style( 'generate-menu-logo', plugin_dir_url( __FILE__ ) . 'css/menu-logo.min.css', array(), GENERATE_MENU_PLUS_VERSION );
 	endif;
 	
@@ -456,9 +457,9 @@ function generate_menu_plus_enqueue_js()
 	// Add sticky menu script
 	if ( 'false' !== $generate_menu_plus_settings['sticky_menu'] && 'none' !== $generate_menu_plus_settings['sticky_menu_effect'] ) :
 		if ( 'enable' == $generate_settings['nav_search'] ) {
-			$array = array( 'generate-classie', 'generate-navigation-search' );
+			$array = array( 'jquery', 'generate-classie', 'generate-navigation-search' );
 		} else {
-			$array = array( 'generate-classie' );
+			$array = array( 'jquery', 'generate-classie' );
 		}
 		wp_enqueue_script( 'generate-classie', plugin_dir_url( __FILE__ ) . 'js/classie.min.js', array(), GENERATE_MENU_PLUS_VERSION, true );
 		wp_enqueue_script( 'generate-advanced-sticky', plugin_dir_url( __FILE__ ) . 'js/advanced-sticky.min.js', $array, GENERATE_MENU_PLUS_VERSION, true );
@@ -466,7 +467,7 @@ function generate_menu_plus_enqueue_js()
 	
 	// Add sticky menu script
 	if ( ( 'false' !== $generate_menu_plus_settings['sticky_menu'] && 'none' == $generate_menu_plus_settings['sticky_menu_effect'] ) || 'enable' == $generate_menu_plus_settings['mobile_header_sticky'] ) :
-		wp_enqueue_script( 'generate-sticky', plugin_dir_url( __FILE__ ) . 'js/sticky.min.js', array(), GENERATE_MENU_PLUS_VERSION, true );
+		wp_enqueue_script( 'generate-sticky', plugin_dir_url( __FILE__ ) . 'js/sticky.min.js', array( 'jquery' ), GENERATE_MENU_PLUS_VERSION, true );
 		if ( function_exists( 'wp_script_add_data' ) ) :
 			wp_enqueue_script( 'generate-sticky-matchMedia', plugin_dir_url( __FILE__ ) . 'js/matchMedia.min.js', array(), GENERATE_MENU_PLUS_VERSION, true );
 			wp_script_add_data( 'generate-sticky-matchMedia', 'conditional', 'lt IE 10' );
@@ -479,9 +480,30 @@ function generate_menu_plus_enqueue_js()
 	endif;
 	
 	if ( 'mobile' == $generate_menu_plus_settings['slideout_menu'] || 'both' == $generate_menu_plus_settings['slideout_menu'] ) :
-		wp_enqueue_script( 'generate-sliiide-navigation', plugin_dir_url( __FILE__ ) . 'js/navigation.min.js', array(), GENERATE_MENU_PLUS_VERSION, true );
+		wp_enqueue_script( 'generate-sliiide-navigation', plugin_dir_url( __FILE__ ) . 'js/navigation.min.js', array( 'jquery' ), GENERATE_MENU_PLUS_VERSION, true );
 	endif;
 	
+}
+endif;
+
+if ( ! function_exists( 'generate_menu_plus_mobile_header_js' ) ) :
+/**
+ * Enqueue scripts
+ */
+add_action( 'wp_enqueue_scripts','generate_menu_plus_mobile_header_js', 15 );
+function generate_menu_plus_mobile_header_js()
+{
+	if ( function_exists( 'wp_add_inline_script' ) ) :
+	
+		$generate_menu_plus_settings = wp_parse_args( 
+			get_option( 'generate_menu_plus_settings', array() ), 
+			generate_menu_plus_get_defaults() 
+		);
+	
+		if ( 'enable' == $generate_menu_plus_settings[ 'mobile_header' ] && ( 'desktop' == $generate_menu_plus_settings[ 'slideout_menu' ] || 'false' == $generate_menu_plus_settings[ 'slideout_menu' ] ) ) :
+			wp_add_inline_script( 'generate-navigation', 'jQuery( document ).ready( function( $ ) {$( "#mobile-header .menu-toggle" ).GenerateMobileMenu();});' );
+		endif;
+	endif;
 }
 endif;
 
@@ -531,7 +553,7 @@ function generate_menu_plus_inline_css()
 	$menu_height = ( function_exists('generate_spacing_get_defaults') ) ? $spacing_settings['menu_item_height'] : 60;
 	
 	$return = '';
-	$return .= '@media (max-width: ' . ( $generate_settings['container_width'] + 10 ) . 'px) {.main-navigation .sticky-logo {margin-left: 10px;}}';
+	$return .= '@media (max-width: ' . ( $generate_settings['container_width'] + 10 ) . 'px) {.main-navigation .sticky-logo {margin-left: 10px;}body.sticky-menu-logo.nav-float-left .main-navigation .site-logo.sticky-logo {margin-right:10px;}}';
 	$return .= '.sidebar .navigation-clone .grid-container {max-width: ' . $generate_settings['container_width'] . 'px;}';
 	
 	if ( 'contained-nav' == $generate_settings['nav_layout_setting'] && 'false' !== $generate_menu_plus_settings['sticky_menu'] ) :
@@ -559,6 +581,10 @@ if ( ! function_exists( 'generate_menu_plus_mobile_menu_script' ) ) :
 add_action( 'wp_footer','generate_menu_plus_mobile_menu_script' );
 function generate_menu_plus_mobile_menu_script()
 {
+	// No need for this if wp_add_inline_script() exists
+	if ( function_exists( 'wp_add_inline_script' ) )
+		return;
+	
 	$generate_menu_plus_settings = wp_parse_args( 
 		get_option( 'generate_menu_plus_settings', array() ), 
 		generate_menu_plus_get_defaults() 
@@ -568,32 +594,6 @@ function generate_menu_plus_mobile_menu_script()
 		<script>
 			jQuery( document ).ready( function( $ ) {
 				$( '#mobile-header .menu-toggle' ).GenerateMobileMenu();
-			});
-		</script>
-	<?php }
-	
-	if ( 'enable' == $generate_menu_plus_settings[ 'mobile_header_sticky' ] ) { ?>
-		<script>
-			jQuery( document ).ready( function( $ ) {
-				
-				jQuery( '#mobile-header' ).GenerateSimpleSticky({
-					query: '(min-width: 783px)',
-					disable: true
-				});
-					
-				jQuery( '#mobile-header' ).GenerateSimpleSticky({
-					query: '(min-width: 769px) and (max-width: 782px)',
-					disable: true
-				});
-				
-				jQuery( '#mobile-header' ).GenerateSimpleSticky({
-					query: '(min-width: 601px) and (max-width: 768px)'
-				});
-				
-				jQuery( '#mobile-header' ).GenerateSimpleSticky({
-					query: '(max-width: 600px)',
-					offset: 0
-				});
 			});
 		</script>
 	<?php }
@@ -620,7 +620,7 @@ function generate_menu_plus_mobile_header()
 			<?php do_action( 'generate_inside_mobile_header' ); ?>
 			<button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false">
 				<?php do_action( 'generate_inside_mobile_header_menu' ); ?>
-				<span class="mobile-menu"><?php echo apply_filters('generate_mobile_menu_label', __( 'Menu', 'generate' ) ); ?></span>
+				<span class="mobile-menu"><?php echo apply_filters('generate_mobile_menu_label', __( 'Menu', 'generatepress' ) ); ?></span>
 			</button>
 			<?php 
 			wp_nav_menu( 
@@ -663,7 +663,7 @@ function generate_slideout_navigation()
 	<nav itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope" id="generate-slideout-menu" <?php generate_slideout_navigation_class(); ?>>
 		<div class="inside-navigation grid-container grid-parent">
 			<?php do_action( 'generate_inside_slideout_navigation' ); ?>
-			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'generate' ); ?>"><?php _e( 'Skip to content', 'generate' ); ?></a></div>
+			<div class="screen-reader-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'generatepress' ); ?>"><?php _e( 'Skip to content', 'generatepress' ); ?></a></div>
 			<?php 
 			wp_nav_menu( 
 				array( 
@@ -889,6 +889,10 @@ function generate_slideout_body_classes( $classes )
 		$classes[] = 'desktop-sticky-menu';
 	endif;
 	
+	if ( 'true' == $generate_menu_plus_settings['sticky_menu'] ) :
+		$classes[] = 'both-sticky-menu';
+	endif;
+	
 	if ( 'enable' == $generate_menu_plus_settings['mobile_header'] ) :
 		$classes[] = 'mobile-header';
 	endif;
@@ -968,9 +972,6 @@ function generate_menu_plus_sticky_logo()
 	
 	if ( '' == $generate_menu_plus_settings['sticky_menu_logo'] )
 		return;
-	
-	if ( 'false' == $generate_menu_plus_settings['sticky_menu'] && 'regular-menu' !== $generate_menu_plus_settings['sticky_menu_logo_position'] )
-		return;
 		 
 	?>
 	<div class="site-logo sticky-logo">
@@ -1002,120 +1003,6 @@ function generate_menu_plus_mobile_header_logo()
 		<a href="<?php echo apply_filters( 'generate_logo_href' , esc_url( home_url( '/' ) ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img class="header-image" src="<?php echo $generate_menu_plus_settings['mobile_header_logo']; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
 	</div>
 	<?php
-}
-endif;
-
-if ( ! function_exists( 'generate_sticky_menu_js_new' ) ) :
-add_action( 'wp_footer','generate_sticky_menu_js_new' );
-function generate_sticky_menu_js_new()
-{
-	$generate_menu_plus_settings = wp_parse_args( 
-		get_option( 'generate_menu_plus_settings', array() ), 
-		generate_menu_plus_get_defaults() 
-	);
-	
-	if ( function_exists( 'generate_get_defaults' ) ) :
-		$generate_settings = wp_parse_args( 
-			get_option( 'generate_settings', array() ), 
-			generate_get_defaults() 
-		);
-	endif;
-	
-	if ( 'false' == $generate_menu_plus_settings[ 'sticky_menu' ] )
-		return;
-		
-	if ( 'none' !== $generate_menu_plus_settings[ 'sticky_menu_effect' ] )
-		return;
-		
-?>
-	
-<script type="text/javascript">		
-	jQuery( window ).load( function( $ ) {
-		<?php if ( 'nav-right-sidebar' == $generate_settings[ 'nav_position_setting' ] || 'nav-left-sidebar' == $generate_settings[ 'nav_position_setting' ] ) : ?>
-			var navigation = jQuery( ".gen-sidebar-nav" );
-		<?php else : ?>
-			var navigation = jQuery( "#site-navigation" );
-		<?php endif; ?>
-		
-
-		<?php if ( 'mobile' == $generate_menu_plus_settings['sticky_menu'] ) : ?>				
-			jQuery( navigation ).GenerateSimpleSticky({
-				query: '(min-width: 783px)',
-				disable: true
-			});
-				
-			jQuery( navigation ).GenerateSimpleSticky({
-				query: '(min-width: 768px) and (max-width: 782px)',
-				disable: true
-			});
-			
-			jQuery( navigation ).GenerateSimpleSticky({
-				query: '(min-width: 601px) and (max-width: 767px)'
-			});
-			
-			jQuery( navigation ).GenerateSimpleSticky({
-				query: '(max-width: 600px)',
-				offset: 0
-			});
-		<?php endif;
-		
-		if ( 'desktop' == $generate_menu_plus_settings['sticky_menu'] ) : ?>
-			jQuery( navigation ).GenerateSimpleSticky({
-				query: '(min-width: 783px)'
-			});
-			
-			jQuery( navigation ).GenerateSimpleSticky({
-				query: '(min-width: 768px) and (max-width: 782px)'
-			});
-			
-			jQuery( navigation ).GenerateSimpleSticky({
-				query: '(max-width: 767px)',
-				disable: true
-			});
-		<?php endif;
-		
-		if ( 'true' == $generate_menu_plus_settings['sticky_menu'] ) : ?>
-			jQuery( navigation ).GenerateSimpleSticky({
-				query: '(min-width: 783px)'
-			});
-			
-			jQuery( navigation ).GenerateSimpleSticky({
-				query: '(min-width: 768px) and (max-width: 782px)'
-			});
-			
-			jQuery( navigation ).GenerateSimpleSticky({
-				query: '(min-width: 601px) and (max-width: 767px)'
-			});
-			
-			jQuery( navigation ).GenerateSimpleSticky({
-				query: '(max-width: 600px)',
-				offset: 0
-			});
-		<?php endif; ?>
-			
-		jQuery( document ).ready( function( $ ) {
-			if ( navigator.userAgent.match( /(iPod|iPhone|iPad)/ ) ) {
-				/* cache dom references */ 
-				var $body = jQuery('body'); 
-
-				/* bind events */
-				jQuery(document)
-				.on('focus', '.is_stuck .search-field', function() {
-					$body.addClass('fixfixed');
-					navigation.trigger("sticky_kit:detach");
-					
-				})
-				.on('blur', '.search-field', function() {
-					$body.removeClass('fixfixed');
-					navigation.stick_in_parent({
-						offset_top: 0
-					});
-				});
-			}
-		});
-	});
-</script>
-<?php
 }
 endif;
 
