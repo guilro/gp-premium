@@ -1,0 +1,657 @@
+# Translation by Alexey Chumakov, 2015-2016
+# Feel free to forward any issues or suggestions on translation to Alexey Chumakov
+# (**) comments indicate places for future improvement.
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Page Header\n"
+"POT-Creation-Date: 2016-11-11 14:14+0300\n"
+"PO-Revision-Date: 2016-11-11 14:14+0300\n"
+"Last-Translator: Alexey Chumakov <alex@chumakov.ru>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ../../../gp-premium/page-header\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ../inc\n"
+
+#: ../inc/EDD_SL_Plugin_Updater.php:196
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr "Доступна новая версия %1$s. %2$sПосмотреть подробности %3$s%4$s."
+
+#: ../inc/EDD_SL_Plugin_Updater.php:204
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+"Доступна новая версия %1$s. %2$sПосмотреть подробности %3$s%4$s или "
+"%5$sобновить сейчас%6$s."
+
+#: ../inc/EDD_SL_Plugin_Updater.php:358
+msgid "You do not have permission to install plugin updates"
+msgstr "У вас нет прав для установки обновлений плагинов"
+
+#: ../inc/EDD_SL_Plugin_Updater.php:358
+msgid "Error"
+msgstr "Ошибка"
+
+#: ../inc/activation.php:13
+msgid "Add-on deactivated."
+msgstr "Дополнение деактивировано."
+
+#: ../inc/activation.php:17
+msgid "Add-on activated."
+msgstr "Дополнение активировано."
+
+#: ../inc/activation.php:58
+msgid "GP Premium"
+msgstr "Дополнения GP Premium"
+
+#: ../inc/activation.php:66
+msgid "Bulk Actions"
+msgstr "Пакетные операции"
+
+#: ../inc/activation.php:67 ../inc/activation.php:101
+msgid "Activate"
+msgstr "Активировать"
+
+#: ../inc/activation.php:68 ../inc/activation.php:88
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: ../inc/activation.php:71
+msgid "Apply"
+msgstr "Применить"
+
+#: ../inc/activation.php:427
+msgid "Enter valid license key for automatic updates."
+msgstr "Для автоматического обновления укажите действующий ключ лицензии."
+
+#: ../inc/verify.php:88
+msgid "License deactivated."
+msgstr "Лицензия деактивирована."
+
+#: ../inc/verify.php:92
+msgid "License activated."
+msgstr "Лицензия активирована."
+
+#: ../inc/verify.php:125
+#, php-format
+msgid "Updates %s"
+msgstr "Обновления %s"
+
+#: ../inc/verify.php:125
+msgid "Help"
+msgstr "Справка"
+
+#: ../inc/verify.php:150
+msgid "License Key"
+msgstr "Лицензионный ключ"
+
+#: ../inc/verify.php:155
+msgid "Update"
+msgstr "Обновить"
+
+#: ../inc/verify.php:244
+#, php-format
+msgid "Your license key expired on %s."
+msgstr "Ваш лицензионный ключ истек %s."
+
+#: ../inc/verify.php:251
+msgid "Your license key has been disabled."
+msgstr "Ваш лицензионный ключ заблокирован."
+
+#: ../inc/verify.php:256
+msgid "Invalid license."
+msgstr "Недействительная лицензия."
+
+#: ../inc/verify.php:262
+msgid "Your license is not active for this URL."
+msgstr "Ваша лицензия не активна для этого URL."
+
+#: ../inc/verify.php:267
+#, php-format
+msgid "This appears to be an invalid license key for %s."
+msgstr "Похоже, это не действующий лицензионный ключ для %s."
+
+#: ../inc/verify.php:272
+msgid "Your license key has reached its activation limit."
+msgstr "Ваш лицензионный ключ достиг предела активаций."
+
+#: ../inc/verify.php:277
+msgid "An error occurred, please try again."
+msgstr "Произошла ошибка, пожалуйста, попробуйте ещё раз."
+
+#: functions/controls.php:12
+msgid "Apply image sizes"
+msgstr "Применить размеры изображений"
+
+#: functions/customizer.php:20
+msgid "Blog Page Header"
+msgstr "Шапка страницы блога"
+
+#: functions/customizer.php:35 functions/metabox.php:161
+msgid "Page Header Image"
+msgstr "Изображение для шапки страницы"
+
+#: functions/customizer.php:56 functions/metabox.php:126
+msgid "Image"
+msgstr "Изображение"
+
+#: functions/customizer.php:57
+msgid "Upload an image to be used as your page header."
+msgstr "Загрузить изображение для шапки страницы"
+
+#: functions/customizer.php:77 functions/metabox.php:173
+msgid "Image link"
+msgstr ""
+
+#: functions/customizer.php:78
+msgid "Make your page header image clickable by adding a URL. (optional)"
+msgstr ""
+"Сделать изображение шапки страницы кликабельным, добавив URL (необязательно)"
+
+#: functions/customizer.php:101 functions/metabox.php:178
+msgid "Resize image"
+msgstr ""
+
+#: functions/customizer.php:102
+msgid "Turn hard cropping or of off."
+msgstr "Включить или выключить жесткую обрезку"
+
+#: functions/customizer.php:105 functions/customizer.php:319
+#: functions/customizer.php:344 functions/customizer.php:369
+#: functions/customizer.php:394 functions/customizer.php:419
+#: functions/customizer.php:444 functions/customizer.php:663
+#: functions/customizer.php:687 functions/customizer.php:754
+#: functions/metabox.php:181
+msgid "Enable"
+msgstr "Включить"
+
+#: functions/customizer.php:106 functions/customizer.php:320
+#: functions/customizer.php:345 functions/customizer.php:370
+#: functions/customizer.php:395 functions/customizer.php:420
+#: functions/customizer.php:445 functions/customizer.php:664
+#: functions/customizer.php:688 functions/customizer.php:755
+#: functions/metabox.php:180
+msgid "Disable"
+msgstr "Выключить"
+
+#: functions/customizer.php:128 functions/metabox.php:187
+msgid "Image width"
+msgstr ""
+
+#: functions/customizer.php:129
+msgid "Choose your image width in pixels. (integer only, default is 1200)"
+msgstr ""
+"Укажите ширину изображения в пикселах (только целое число, по умолчанию 1200)"
+
+#: functions/customizer.php:151 functions/metabox.php:192
+msgid "Image height"
+msgstr ""
+
+#: functions/customizer.php:152
+msgid ""
+"Choose your image height in pixels. Use \"0\" or leave blank for "
+"proportional resizing. (integer only, default is 0) "
+msgstr ""
+"Укажите высоту изображения в пикселах. Укажите \"0\" или оставьте пустым для "
+"пропорционального масштабирования. (только целое, 0 по умолчанию)"
+
+#: functions/customizer.php:178 functions/metabox.php:287
+#: functions/metabox.php:294 functions/metabox.php:301
+msgid "Page Header Video"
+msgstr "Видео шапки"
+
+#: functions/customizer.php:199
+msgid "Video Background URL (MP4 only)"
+msgstr "URL видеозадника (только MP4)"
+
+#: functions/customizer.php:220
+msgid "Video Background URL (OGV only)"
+msgstr "URL видеозадника (только OGV)"
+
+#: functions/customizer.php:241
+msgid "Video Background URL (WEBM only)"
+msgstr "URL видеозадника (только WEBM)"
+
+#: functions/customizer.php:262
+msgid "Overlay Color"
+msgstr "Цвет наложения"
+
+#: functions/customizer.php:274
+msgid "Page Header Content"
+msgstr "Содержимое шапки"
+
+#: functions/customizer.php:294 functions/metabox.php:127
+msgid "Content"
+msgstr "Содержимое"
+
+#: functions/customizer.php:295
+msgid "Add your content to the page header. HTML and shortcodes allowed."
+msgstr ""
+"Добавьте свое содержимое в шапку страницы. Можно использовать HTML и "
+"шорткоды."
+
+#: functions/customizer.php:315
+msgid "Add Paragraphs"
+msgstr "Добавление тегов абзаца"
+
+#: functions/customizer.php:316
+msgid "Wrap your text in paragraph tags automatically."
+msgstr "Автоматически заключить текст в теги абзаца"
+
+#: functions/customizer.php:340
+msgid "Add Padding"
+msgstr "Добавление отступов"
+
+#: functions/customizer.php:341
+msgid "Add padding around your content."
+msgstr "Добавить отступы вокруг содержимого"
+
+#: functions/customizer.php:365
+msgid "Image Background"
+msgstr "Изображение как фон"
+
+#: functions/customizer.php:366
+msgid ""
+"Use the image uploaded above as a background image for your content. "
+"(requires image uploaded above)"
+msgstr ""
+"Использовать загруженное изображение как фон для содержимого (требуется "
+"загрузить изображение выше)"
+
+#: functions/customizer.php:390
+msgid "Parallax Background"
+msgstr "Параллаксный фон"
+
+#: functions/customizer.php:391
+msgid ""
+"Add a cool parallax effect to your background image. (requires the image "
+"background option to be checked)"
+msgstr ""
+"Добавить крутой параллаксный эффект к фоновому изображению (флажок "
+"\"Использовать как фон\" нужно включить)"
+
+#: functions/customizer.php:415
+msgid "Full Screen"
+msgstr "На весь экран"
+
+#: functions/customizer.php:416
+msgid "Make your page header content area full screen."
+msgstr "Расширить область содержимого шапки страницы на весь экран"
+
+#: functions/customizer.php:440
+msgid "Vertical Center"
+msgstr "Вертикальная центровка"
+
+#: functions/customizer.php:441
+msgid "Center your page header content vertically."
+msgstr "Центровать содержимое шапки страницы по вертикали"
+
+#: functions/customizer.php:465
+msgid "Container Type"
+msgstr "Тип блока"
+
+#: functions/customizer.php:466
+msgid "Choose whether the page header is contained or fluid."
+msgstr "Выберите ограниченный или резиновый вариант шапки страницы"
+
+#: functions/customizer.php:469 functions/metabox.php:236
+msgid "Contained"
+msgstr "Ограниченный"
+
+#: functions/customizer.php:470 functions/metabox.php:237
+msgid "Full width"
+msgstr ""
+
+#: functions/customizer.php:490
+msgid "Text Alignment"
+msgstr "Выравнивание текста"
+
+#: functions/customizer.php:491
+msgid "Choose the horizontal alignment of your content."
+msgstr "Выберите вариант выравнивания содержимого по горизонтали"
+
+#: functions/customizer.php:494 functions/metabox.php:244
+msgid "Left"
+msgstr "Влево"
+
+#: functions/customizer.php:495 functions/metabox.php:245
+msgid "Center"
+msgstr "По центру"
+
+#: functions/customizer.php:496 functions/metabox.php:246
+msgid "Right"
+msgstr "Вправо"
+
+#: functions/customizer.php:516
+msgid "Top/Bottom Padding"
+msgstr "Отступ сверху/снизу"
+
+#: functions/customizer.php:517
+msgid "This will add space above and below your content. (integer only) "
+msgstr ""
+
+#: functions/customizer.php:538
+msgid "Padding Unit"
+msgstr ""
+
+#: functions/customizer.php:562
+msgid "Background Color"
+msgstr "Цвет фона"
+
+#: functions/customizer.php:583
+msgid "Text Color"
+msgstr "Цвет текста"
+
+#: functions/customizer.php:604
+msgid "Link Color"
+msgstr "Цвет ссылок"
+
+#: functions/customizer.php:625
+msgid "Link Color Hover"
+msgstr "Ссылки — наведение"
+
+#: functions/customizer.php:638
+msgid "Page Header Advanced"
+msgstr "Шапка страницы — расширенные"
+
+#: functions/customizer.php:659 functions/metabox.php:336
+msgid "Merge with site header"
+msgstr "Объединить с шапкой сайта"
+
+#: functions/customizer.php:683 functions/metabox.php:342
+msgid "Place content behind header (sliders etc..)"
+msgstr "Поместить содержимое за шапку (слайдеры и т.п.)"
+
+#: functions/customizer.php:708 functions/metabox.php:347
+msgid "Site title"
+msgstr "Название сайта"
+
+#: functions/customizer.php:729 functions/metabox.php:352
+msgid "Site tagline"
+msgstr "Краткое описание сайта"
+
+#: functions/customizer.php:750 functions/metabox.php:357
+msgid "Transparent navigation"
+msgstr "Прозрачное меню"
+
+#: functions/customizer.php:775 functions/metabox.php:363
+msgid "Navigation text"
+msgstr "Текст мено"
+
+#: functions/customizer.php:796 functions/metabox.php:368
+msgid "Navigation background hover"
+msgstr "Фон — наведение"
+
+#: functions/customizer.php:817 functions/metabox.php:373
+msgid "Navigation text hover"
+msgstr "Текст — наведение"
+
+#: functions/customizer.php:838 functions/metabox.php:378
+msgid "Navigation background current"
+msgstr "Фон — текущий пункт"
+
+#: functions/customizer.php:859 functions/metabox.php:383
+msgid "Navigation text current"
+msgstr "Текст — текущий пункт"
+
+#: functions/customizer.php:872
+msgid "Page Header Logo"
+msgstr "Логотип шапки страницы"
+
+#: functions/customizer.php:893 functions/metabox.php:130
+msgid "Logo"
+msgstr "Логотип"
+
+#: functions/customizer.php:894
+msgid "Replace your logo on the blog."
+msgstr "Заменить ваш логотип в блоге."
+
+#: functions/functions.php:586 functions/metabox.php:19
+msgid "Page Header"
+msgstr "Шапка страницы"
+
+#: functions/functions.php:614
+msgid "Page Header Position"
+msgstr "Положение шапки страницы"
+
+#: functions/functions.php:617 functions/functions.php:647
+msgid "Above Content Area"
+msgstr "Над областью содержимого"
+
+#: functions/functions.php:618 functions/functions.php:648
+msgid "Inside Content Area"
+msgstr "Внутри области содержимого"
+
+#: functions/functions.php:644
+msgid "Single Post Header Position"
+msgstr "Положение шапки записи"
+
+#: functions/functions.php:649
+msgid "Below Post Title"
+msgstr "Под заголовком записи"
+
+#: functions/functions.php:650
+msgid "Hide"
+msgstr "Скрыть"
+
+#: functions/ie.php:17
+msgid "Warning: This will delete your settings."
+msgstr "Внимание: ваши настройки будут удалены."
+
+#: functions/ie.php:19
+msgid "Delete Page Header Customizer Settings"
+msgstr "Удалить настройки шапки страницы"
+
+#: functions/ie.php:56
+msgid "Export Page Header Customizer Settings"
+msgstr "Экспортировать настройки шапки страницы"
+
+#: functions/metabox.php:128
+msgid "Background Video"
+msgstr ""
+
+#: functions/metabox.php:132
+msgid "Advanced"
+msgstr ""
+
+#: functions/metabox.php:136
+msgid "Add to excerpt"
+msgstr ""
+
+#: functions/metabox.php:152
+msgid ""
+"Currently using your <a href=\"#\" class=\"generate-featured-image"
+"\">featured image</a>."
+msgstr ""
+
+#: functions/metabox.php:161
+msgid "Insert Image"
+msgstr "Вставить изображение"
+
+#: functions/metabox.php:162
+msgid "Choose Image"
+msgstr ""
+
+#: functions/metabox.php:165
+msgid "Remove Image"
+msgstr ""
+
+#: functions/metabox.php:169
+msgid "Or you can <a href=\"#\">set the featured image</a>."
+msgstr ""
+
+#: functions/metabox.php:195
+msgid "Use \"0\" or leave blank for proportional resizing."
+msgstr ""
+"Укажите \"0\" или оставьте пустым для пропорционального масштабирования."
+
+#: functions/metabox.php:203
+msgid "HTML and shortcodes allowed."
+msgstr "Можно использовать HTML и шорткоды."
+
+#: functions/metabox.php:208
+msgid "Automatically add paragraphs"
+msgstr "Автоматически добавить теги абзаца"
+
+#: functions/metabox.php:212
+msgid "Add padding"
+msgstr "Добавить отступы"
+
+#: functions/metabox.php:216
+msgid "Add background image"
+msgstr "Добавить фоновое изображение"
+
+#: functions/metabox.php:220
+msgid "Parallax effect"
+msgstr "Эффект параллакса"
+
+#: functions/metabox.php:224
+msgid "Fullscreen"
+msgstr "Полный экран"
+
+#: functions/metabox.php:228
+msgid "Vertical center content"
+msgstr "Центрировать содержимое по вертикали"
+
+#: functions/metabox.php:234
+msgid "Container type"
+msgstr "Тип блока"
+
+#: functions/metabox.php:242
+msgid "Text alignment"
+msgstr "Выравнивание текста"
+
+#: functions/metabox.php:251
+msgid "Top/Bottom padding"
+msgstr "Отступы сверху/снизу"
+
+#: functions/metabox.php:261
+msgid "Background color"
+msgstr "Цвет фона"
+
+#: functions/metabox.php:266
+msgid "Text color"
+msgstr "Цвет текста"
+
+#: functions/metabox.php:271
+msgid "Link color"
+msgstr "Цвет ссылок"
+
+#: functions/metabox.php:276
+msgid "Link color hover"
+msgstr "Цвет ссылок — наведение"
+
+#: functions/metabox.php:285
+msgid "MP4 file"
+msgstr ""
+
+#: functions/metabox.php:287 functions/metabox.php:294
+#: functions/metabox.php:301
+msgid "Insert Video"
+msgstr "Вставить видео"
+
+#: functions/metabox.php:288 functions/metabox.php:295
+#: functions/metabox.php:302
+msgid "Choose Video"
+msgstr ""
+
+#: functions/metabox.php:292
+msgid "OGV file"
+msgstr ""
+
+#: functions/metabox.php:299
+msgid "WEBM file"
+msgstr ""
+
+#: functions/metabox.php:306
+msgid "Overlay color"
+msgstr "Цвет наложения"
+
+#: functions/metabox.php:312
+msgid "Overwrite your site-wide logo/header on this page."
+msgstr ""
+
+#: functions/metabox.php:319
+msgid "Header / Logo"
+msgstr "Шапка / логотип"
+
+#: functions/metabox.php:319
+msgid "Insert Logo"
+msgstr ""
+
+#: functions/metabox.php:320
+msgid "Choose Logo"
+msgstr ""
+
+#: functions/metabox.php:330
+msgid "Remove Logo"
+msgstr ""
+
+#~ msgid "Page Header Link"
+#~ msgstr "Ссылка для шапки страницы"
+
+#~ msgid "Hard Crop"
+#~ msgstr "Жесткая обрезка"
+
+#~ msgid "Image Width"
+#~ msgstr "Ширина изображения"
+
+#~ msgid "Image Height"
+#~ msgstr "Высота изображения"
+
+#~ msgid "Fluid"
+#~ msgstr "Резиновый"
+
+#~ msgid ""
+#~ "Choose your content padding in pixels. This will add space above and "
+#~ "below your content. (integer only) "
+#~ msgstr ""
+#~ "Укажите величину отступа содержимого в пикселах. Это приведет к "
+#~ "добавлению отступа над и под вашим содержимым (только целое число)"
+
+#~ msgid "Image Settings"
+#~ msgstr "Параметры изображения"
+
+#~ msgid "Video Settings"
+#~ msgstr "Параметры видео"
+
+#~ msgid "Content Settings"
+#~ msgstr "Параметры содержимого"
+
+#~ msgid "Logo Settings"
+#~ msgstr "Параметры логотипа"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Расширенные настройки"
+
+#~ msgid "Add Image"
+#~ msgstr "Добавить изображение"
+
+#~ msgid "Video background - MP4 file only"
+#~ msgstr "Видеозадник — только файл MP4"
+
+#~ msgid "Add Video"
+#~ msgstr "Добавить видео"
+
+#~ msgid "Video background - OGV file only"
+#~ msgstr "Видеозадник — только файл OGV"
+
+#~ msgid "Video background - WEBM file only"
+#~ msgstr "Видеозадник — только файл WEBM"
+
+#~ msgid "Add to blog excerpt"
+#~ msgstr "Добавить к отрывку блога"

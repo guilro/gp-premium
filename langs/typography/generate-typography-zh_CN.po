@@ -1,0 +1,134 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Typography\n"
+"POT-Creation-Date: 2016-10-25 12:44-0700\n"
+"PO-Revision-Date: 2016-10-25 12:48-0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/customizer/control.php:27
+msgid "Default fonts"
+msgstr "默认字体"
+
+#: functions/customizer/control.php:28
+msgid "Google fonts"
+msgstr "谷歌字体"
+
+#: functions/customizer/control.php:29
+msgid "Font family"
+msgstr "字体列表"
+
+#: functions/functions.php:93
+msgid "Typography"
+msgstr "字体"
+
+#: functions/functions.php:101 functions/functions.php:124
+msgid "Body"
+msgstr "正文"
+
+#: functions/functions.php:187 functions/functions.php:354
+#: functions/functions.php:510 functions/functions.php:677
+#: functions/functions.php:772 functions/functions.php:790
+#: functions/functions.php:808 functions/functions.php:1073
+msgid "Font weight"
+msgstr "字体粗细"
+
+#: functions/functions.php:224 functions/functions.php:391
+#: functions/functions.php:547 functions/functions.php:714
+#: functions/functions.php:776 functions/functions.php:794
+#: functions/functions.php:812 functions/functions.php:1110
+msgid "Text transform"
+msgstr "文本格式"
+
+#: functions/functions.php:254 functions/functions.php:421
+#: functions/functions.php:577 functions/functions.php:744
+#: functions/functions.php:1140
+msgid "Font size"
+msgstr "字体大小"
+
+#: functions/functions.php:266
+msgid "Header"
+msgstr "页眉"
+
+#: functions/functions.php:289
+msgid "Site title"
+msgstr "站点标题"
+
+#: functions/functions.php:445
+msgid "Site tagline"
+msgstr "站点副标题"
+
+#: functions/functions.php:589
+msgid "Primary Navigation"
+msgstr "主导航"
+
+#: functions/functions.php:612
+msgid "Site navigation"
+msgstr "站点导航"
+
+#: functions/functions.php:758
+msgid "Content"
+msgstr "内容"
+
+#: functions/functions.php:768
+msgid "Heading 1 (H1)"
+msgstr "标题1"
+
+#: functions/functions.php:780 functions/functions.php:798
+#: functions/functions.php:816
+msgid "Font-size"
+msgstr "字体大小"
+
+#: functions/functions.php:786
+msgid "Heading 2 (H2)"
+msgstr "标题2"
+
+#: functions/functions.php:804
+msgid "Heading 3 (H3)"
+msgstr "标题3"
+
+#: functions/functions.php:985
+msgid "Widgets"
+msgstr "小工具"
+
+#: functions/functions.php:1008
+msgid "Widget titles"
+msgstr "小工具标题"
+
+#: functions/functions.php:1164
+msgid "Content font size"
+msgstr "内容字体大小"
+
+#: functions/functions.php:1178
+msgid "Footer"
+msgstr "页脚"
+
+#: functions/functions.php:1201
+msgid "Footer font size"
+msgstr "页脚字体大小"
+
+#: functions/functions.php:1215
+msgid "Mobile"
+msgstr "便携设备"
+
+#: functions/functions.php:1237
+msgid "Site title font size"
+msgstr "站点标题字体大小"
+
+#: functions/functions.php:1260
+msgid "H1 font size"
+msgstr "标题1字体大小"
+
+#: functions/functions.php:1283
+msgid "H2 font size"
+msgstr "标题2字体大小"

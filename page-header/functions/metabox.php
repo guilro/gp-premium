@@ -16,7 +16,7 @@ function add_generate_page_header_meta_box() {
 		if ( 'attachment' !== $type ) {
 			add_meta_box(  
 				'generate_page_header_meta_box', // $id  
-				__('Page Header','generate-page-header'), // $title   
+				__('Page Header','page-header'), // $title   
 				'show_generate_page_header_meta_box', // $callback  
 				$type, // $page  
 				'normal', // $context  
@@ -123,17 +123,17 @@ function show_generate_page_header_meta_box( $post ) {
 	</script>
 	<div id="generate-tabs-container">
 		<ul class="generate-tabs-menu">
-			<li class="generate-current image-settings"><a href="#generate-tab-1"><?php _e( 'Image','generate-page-header' ); ?></a></li>
-			<li class="content-settings"><a href="#generate-tab-2"><?php _e( 'Content','generate-page-header' ); ?></a></li>
-			<li class="video-settings generate-page-header-content-required" style="display:none;"><a href="#generate-tab-3"><?php _e( 'Background Video','generate-page-header' ); ?></a></li>
+			<li class="generate-current image-settings"><a href="#generate-tab-1"><?php _e( 'Image','page-header' ); ?></a></li>
+			<li class="content-settings"><a href="#generate-tab-2"><?php _e( 'Content','page-header' ); ?></a></li>
+			<li class="video-settings generate-page-header-content-required" style="display:none;"><a href="#generate-tab-3"><?php _e( 'Background Video','page-header' ); ?></a></li>
 			<?php if ( generate_page_header_logo_exists() ) : ?>
-				<li class="logo-settings"><a href="#generate-tab-4"><?php _e( 'Logo','generate-page-header' ); ?></a></li>
+				<li class="logo-settings"><a href="#generate-tab-4"><?php _e( 'Logo','page-header' ); ?></a></li>
 			<?php endif; ?>
-			<li class="advanced-settings generate-page-header-content-required" style="display:none"><a href="<?php if ( generate_page_header_logo_exists() ) : ?>#generate-tab-5<?php else : ?>#generate-tab-4<?php endif; ?>"><?php _e( 'Advanced','generate-page-header' ); ?></a></li>
+			<li class="advanced-settings generate-page-header-content-required" style="display:none"><a href="<?php if ( generate_page_header_logo_exists() ) : ?>#generate-tab-5<?php else : ?>#generate-tab-4<?php endif; ?>"><?php _e( 'Advanced','page-header' ); ?></a></li>
 			<?php if ( 'post' == get_post_type() && !is_single() ) { ?>
 				<div class="show-in-excerpt" <?php echo $show_excerpt_option; ?>>
 					<p>
-						<label for="_meta-generate-page-header-add-to-excerpt"><strong><?php _e('Add to excerpt','generate-page-header');?></strong></label><br />
+						<label for="_meta-generate-page-header-add-to-excerpt"><strong><?php _e('Add to excerpt','page-header');?></strong></label><br />
 						<input class="add-to-excerpt" type="checkbox" name="_meta-generate-page-header-add-to-excerpt" id="_meta-generate-page-header-add-to-excerpt" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-add-to-excerpt'] ) ) checked( $stored_meta['_meta-generate-page-header-add-to-excerpt'][0], 'yes' ); ?> />
 					</p>
 				</div>
@@ -149,7 +149,7 @@ function show_generate_page_header_meta_box( $post ) {
 				?>
 				<div class="featured-image-message" <?php echo $show_featured_image_message; ?>>
 					<p class="description">
-						<?php _e( 'Currently using your <a href="#" class="generate-featured-image">featured image</a>.','generate-page-header' ); ?>
+						<?php _e( 'Currently using your <a href="#" class="generate-featured-image">featured image</a>.','page-header' ); ?>
 					</p>
 				</div>
 				<div id="preview-image" class="generate-page-header-image">
@@ -158,41 +158,41 @@ function show_generate_page_header_meta_box( $post ) {
 					<?php } ?>
 				</div>
 				<input data-prev="true" id="upload_image" type="hidden" name="_meta-generate-page-header-image" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-image'][0]); ?>" />			   
-				<button class="generate-upload-file button" type="button" data-type="image" data-title="<?php _e( 'Page Header Image','generate-page-header' );?>" data-insert="<?php _e( 'Insert Image','generate-page-header'); ?>" data-prev="true">
-					<?php _e('Choose Image','generate-page-header') ;?>
+				<button class="generate-upload-file button" type="button" data-type="image" data-title="<?php _e( 'Page Header Image','page-header' );?>" data-insert="<?php _e( 'Insert Image','page-header'); ?>" data-prev="true">
+					<?php _e('Choose Image','page-header') ;?>
 				</button>
 				<button class="generate-page-header-remove-image button" type="button" <?php echo $remove_button; ?> data-input="#upload_image" data-input-id="#_meta-generate-page-header-image-id" data-prev=".generate-page-header-image">
-					<?php _e('Remove Image','generate-page-header') ;?>
+					<?php _e('Remove Image','page-header') ;?>
 				</button>
 				<input class="image-id" id="_meta-generate-page-header-image-id" type="hidden" name="_meta-generate-page-header-image-id" value="<?php echo $stored_meta['_meta-generate-page-header-image-id'][0]; ?>" />
 				<div class="generate-page-header-set-featured-image" <?php echo $no_image_selected; ?>>
-					<p class="description"><?php _e( 'Or you can <a href="#">set the featured image</a>.','generate-page-header' ); ?></p>
+					<p class="description"><?php _e( 'Or you can <a href="#">set the featured image</a>.','page-header' ); ?></p>
 				</div>
 				<div class="page-header-image-settings" <?php echo $show_image_settings; ?>>
 					<p>
-						<label for="_meta-generate-page-header-image-link" class="example-row-title"><strong><?php _e('Image link','generate-page-header');?></strong></label><br />
+						<label for="_meta-generate-page-header-image-link" class="example-row-title"><strong><?php _e('Image link','page-header');?></strong></label><br />
 						<input class="widefat" style="max-width:350px;" placeholder="http://" id="_meta-generate-page-header-image-link" type="text" name="_meta-generate-page-header-image-link" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-image-link'][0]); ?>" />
 					</p>
 					
 					<p>
-						<label for="_meta-generate-page-header-enable-image-crop" class="example-row-title"><strong><?php _e('Resize image','generate-page-header');?></strong></label><br />
+						<label for="_meta-generate-page-header-enable-image-crop" class="example-row-title"><strong><?php _e('Resize image','page-header');?></strong></label><br />
 						<select name="_meta-generate-page-header-enable-image-crop" id="_meta-generate-page-header-enable-image-crop">
-							<option value="" <?php selected( $stored_meta['_meta-generate-page-header-enable-image-crop'][0], '' ); ?>><?php _e('Disable','generate-page-header');?></option>
-							<option value="enable" <?php selected( $stored_meta['_meta-generate-page-header-enable-image-crop'][0], 'enable' ); ?>><?php _e('Enable','generate-page-header');?></option>
+							<option value="" <?php selected( $stored_meta['_meta-generate-page-header-enable-image-crop'][0], '' ); ?>><?php _e('Disable','page-header');?></option>
+							<option value="enable" <?php selected( $stored_meta['_meta-generate-page-header-enable-image-crop'][0], 'enable' ); ?>><?php _e('Enable','page-header');?></option>
 						</select>
 					</p>
 					
 					<div id="crop-enabled" style="display:none">					
 						<p>
-							<label for="_meta-generate-page-header-image-width" class="example-row-title"><strong><?php _e('Image width','generate-page-header');?></strong></label><br />
+							<label for="_meta-generate-page-header-image-width" class="example-row-title"><strong><?php _e('Image width','page-header');?></strong></label><br />
 							<input style="width:45px" type="text" name="_meta-generate-page-header-image-width" id="_meta-generate-page-header-image-width" value="<?php echo intval( $stored_meta['_meta-generate-page-header-image-width'][0] ); ?>" /><label for="_meta-generate-page-header-image-width"><span class="pixels">px</span></label>
 						</p>
 						
 						<p style="margin-bottom:0;">
-							<label for="_meta-generate-page-header-image-height" class="example-row-title"><strong><?php _e('Image height','generate-page-header');?></strong></label><br />
+							<label for="_meta-generate-page-header-image-height" class="example-row-title"><strong><?php _e('Image height','page-header');?></strong></label><br />
 							<input placeholder="" style="width:45px" type="text" name="_meta-generate-page-header-image-height" id="_meta-generate-page-header-image-height" value="<?php echo intval( $stored_meta['_meta-generate-page-header-image-height'][0] ); ?>" />
 							<label for="_meta-generate-page-header-image-height"><span class="pixels">px</span></label>
-							<span class="description" style="display:block;"><?php _e('Use "0" or leave blank for proportional resizing.','generate-page-header');?></span>
+							<span class="description" style="display:block;"><?php _e('Use "0" or leave blank for proportional resizing.','page-header');?></span>
 						</p>
 					</div>
 				</div>
@@ -200,55 +200,55 @@ function show_generate_page_header_meta_box( $post ) {
 			<div id="generate-tab-2" class="generate-tab-content">
 				
 				<textarea style="width:100%;min-height:200px;" name="_meta-generate-page-header-content" id="_meta-generate-page-header-content"><?php echo esc_html($stored_meta['_meta-generate-page-header-content'][0]); ?></textarea>
-				<p class="description" style="margin:0;"><?php _e('HTML and shortcodes allowed.','generate-page-header');?></p>
+				<p class="description" style="margin:0;"><?php _e('HTML and shortcodes allowed.','page-header');?></p>
 				
 				<div class="generate-page-header-content-required content-settings-area" style="margin-top:12px;">
 					<div class="page-header-column">
 						<p>
-							<label for="_meta-generate-page-header-content-autop"><strong><?php _e('Automatically add paragraphs','generate-page-header');?></strong></label><br />
+							<label for="_meta-generate-page-header-content-autop"><strong><?php _e('Automatically add paragraphs','page-header');?></strong></label><br />
 							<input type="checkbox" name="_meta-generate-page-header-content-autop" id="_meta-generate-page-header-content-autop" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-content-autop'] ) ) checked( $stored_meta['_meta-generate-page-header-content-autop'][0], 'yes' ); ?> /> 
 						</p>
 						<p>
-							<label for="_meta-generate-page-header-content-padding"><?php _e('Add padding','generate-page-header');?></label><br />
+							<label for="_meta-generate-page-header-content-padding"><?php _e('Add padding','page-header');?></label><br />
 							<input type="checkbox" name="_meta-generate-page-header-content-padding" id="_meta-generate-page-header-content-padding" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-content-padding'] ) ) checked( $stored_meta['_meta-generate-page-header-content-padding'][0], 'yes' ); ?> /> 
 						</p>
 						<p>
-							<label for="_meta-generate-page-header-image-background"><?php _e('Add background image','generate-page-header');?></label><br />
+							<label for="_meta-generate-page-header-image-background"><?php _e('Add background image','page-header');?></label><br />
 							<input class="image-background" type="checkbox" name="_meta-generate-page-header-image-background" id="_meta-generate-page-header-image-background" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-image-background'] ) ) checked( $stored_meta['_meta-generate-page-header-image-background'][0], 'yes' ); ?> /> 
 						</p>
 						<p class="parallax">
-							<label for="_meta-generate-page-header-image-background-fixed"><?php _e('Parallax effect','generate-page-header');?></label><br />
+							<label for="_meta-generate-page-header-image-background-fixed"><?php _e('Parallax effect','page-header');?></label><br />
 							<input type="checkbox" name="_meta-generate-page-header-image-background-fixed" id="_meta-generate-page-header-image-background-fixed" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-image-background-fixed'] ) ) checked( $stored_meta['_meta-generate-page-header-image-background-fixed'][0], 'yes' ); ?> /> 
 						</p>
 						<p class="fullscreen">
-							<label for="_meta-generate-page-header-full-screen"><?php _e('Fullscreen','generate-page-header');?></label><br />
+							<label for="_meta-generate-page-header-full-screen"><?php _e('Fullscreen','page-header');?></label><br />
 							<input type="checkbox" name="_meta-generate-page-header-full-screen" id="_meta-generate-page-header-full-screen" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-full-screen'] ) ) checked( $stored_meta['_meta-generate-page-header-full-screen'][0], 'yes' ); ?> /> 
 						</p>
 						<p class="vertical-center">
-							<label for="_meta-generate-page-header-vertical-center"><?php _e('Vertical center content','generate-page-header');?></label><br />
+							<label for="_meta-generate-page-header-vertical-center"><?php _e('Vertical center content','page-header');?></label><br />
 							<input type="checkbox" name="_meta-generate-page-header-vertical-center" id="_meta-generate-page-header-vertical-center" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-vertical-center'] ) ) checked( $stored_meta['_meta-generate-page-header-vertical-center'][0], 'yes' ); ?> />
 						</p>
 					</div>
 					<div class="page-header-column">
 						<p>
-							<label for="_meta-generate-page-header-image-background-type" class="example-row-title"><strong><?php _e('Container type','generate-page-header');?></strong></label><br />
+							<label for="_meta-generate-page-header-image-background-type" class="example-row-title"><strong><?php _e('Container type','page-header');?></strong></label><br />
 							<select name="_meta-generate-page-header-image-background-type" id="_meta-generate-page-header-image-background-type">
-								<option value="" <?php selected( $stored_meta['_meta-generate-page-header-image-background-type'][0], '' ); ?>><?php _e('Contained','generate-page-header');?></option>
-								<option value="fluid" <?php selected( $stored_meta['_meta-generate-page-header-image-background-type'][0], 'fluid' ); ?>><?php _e('Full width','generate-page-header');?></option>
+								<option value="" <?php selected( $stored_meta['_meta-generate-page-header-image-background-type'][0], '' ); ?>><?php _e('Contained','page-header');?></option>
+								<option value="fluid" <?php selected( $stored_meta['_meta-generate-page-header-image-background-type'][0], 'fluid' ); ?>><?php _e('Full width','page-header');?></option>
 							</select>
 						</p>
 
 						<p>
-							<label for="_meta-generate-page-header-image-background-alignment" class="example-row-title"><strong><?php _e('Text alignment','generate-page-header');?></strong></label><br />
+							<label for="_meta-generate-page-header-image-background-alignment" class="example-row-title"><strong><?php _e('Text alignment','page-header');?></strong></label><br />
 							<select name="_meta-generate-page-header-image-background-alignment" id="_meta-generate-page-header-image-background-alignment">
-								<option value="" <?php selected( $stored_meta['_meta-generate-page-header-image-background-alignment'][0], '' ); ?>><?php _e('Left','generate-page-header');?></option>
-								<option value="center" <?php selected( $stored_meta['_meta-generate-page-header-image-background-alignment'][0], 'center' ); ?>><?php _e('Center','generate-page-header');?></option>
-								<option value="right" <?php selected( $stored_meta['_meta-generate-page-header-image-background-alignment'][0], 'right' ); ?>><?php _e('Right','generate-page-header');?></option>
+								<option value="" <?php selected( $stored_meta['_meta-generate-page-header-image-background-alignment'][0], '' ); ?>><?php _e('Left','page-header');?></option>
+								<option value="center" <?php selected( $stored_meta['_meta-generate-page-header-image-background-alignment'][0], 'center' ); ?>><?php _e('Center','page-header');?></option>
+								<option value="right" <?php selected( $stored_meta['_meta-generate-page-header-image-background-alignment'][0], 'right' ); ?>><?php _e('Right','page-header');?></option>
 							</select>
 						</p>
 						
 						<p>
-							<label for="_meta-generate-page-header-image-background-spacing" class="example-row-title"><strong><?php _e('Top/Bottom padding','generate-page-header');?></strong></label><br />
+							<label for="_meta-generate-page-header-image-background-spacing" class="example-row-title"><strong><?php _e('Top/Bottom padding','page-header');?></strong></label><br />
 							<input placeholder="" style="width:45px" type="text" name="_meta-generate-page-header-image-background-spacing" id="_meta-generate-page-header-image-background-spacing" value="<?php echo $stored_meta['_meta-generate-page-header-image-background-spacing'][0]; ?>" />
 							<select name="_meta-generate-page-header-image-background-spacing-unit" id="_meta-generate-page-header-image-background-spacing-unit">
 								<option value="" <?php selected( $stored_meta['_meta-generate-page-header-image-background-spacing-unit'][0], '' ); ?>>px</option>
@@ -258,22 +258,22 @@ function show_generate_page_header_meta_box( $post ) {
 					</div>
 					<div class="page-header-column last">
 						<p>
-							<label for="_meta-generate-page-header-image-background-color" class="example-row-title"><strong><?php _e('Background color','generate-page-header');?></strong></label><br />
+							<label for="_meta-generate-page-header-image-background-color" class="example-row-title"><strong><?php _e('Background color','page-header');?></strong></label><br />
 							<input class="color-picker" style="width:45px" type="text" name="_meta-generate-page-header-image-background-color" id="_meta-generate-page-header-image-background-color" value="<?php echo $stored_meta['_meta-generate-page-header-image-background-color'][0]; ?>" />
 						</p>
 						
 						<p>
-							<label for="_meta-generate-page-header-image-background-text-color" class="example-row-title"><strong><?php _e('Text color','generate-page-header');?></strong></label><br />
+							<label for="_meta-generate-page-header-image-background-text-color" class="example-row-title"><strong><?php _e('Text color','page-header');?></strong></label><br />
 							<input class="color-picker" style="width:45px" type="text" name="_meta-generate-page-header-image-background-text-color" id="_meta-generate-page-header-image-background-text-color" value="<?php echo $stored_meta['_meta-generate-page-header-image-background-text-color'][0]; ?>" />
 						</p>
 						
 						<p>
-							<label for="_meta-generate-page-header-image-background-link-color" class="example-row-title"><strong><?php _e('Link color','generate-page-header');?></strong></label><br />
+							<label for="_meta-generate-page-header-image-background-link-color" class="example-row-title"><strong><?php _e('Link color','page-header');?></strong></label><br />
 							<input class="color-picker" style="width:45px" type="text" name="_meta-generate-page-header-image-background-link-color" id="_meta-generate-page-header-image-background-link-color" value="<?php echo $stored_meta['_meta-generate-page-header-image-background-link-color'][0]; ?>" />
 						</p>
 						
 						<p>
-							<label for="_meta-generate-page-header-image-background-link-color-hover" class="example-row-title"><strong><?php _e('Link color hover','generate-page-header');?></strong></label><br />
+							<label for="_meta-generate-page-header-image-background-link-color-hover" class="example-row-title"><strong><?php _e('Link color hover','page-header');?></strong></label><br />
 							<input class="color-picker" style="width:45px" type="text" name="_meta-generate-page-header-image-background-link-color-hover" id="_meta-generate-page-header-image-background-link-color-hover" value="<?php echo $stored_meta['_meta-generate-page-header-image-background-link-color-hover'][0]; ?>" />
 						</p>
 					</div>
@@ -282,42 +282,42 @@ function show_generate_page_header_meta_box( $post ) {
 			</div>
 			<div id="generate-tab-3" class="generate-tab-content generate-video-tab generate-page-header-content-required" style="display:none">
 				<p style="margin-top:0;">
-					<label for="_meta-generate-page-header-video" class="example-row-title"><strong><?php _e('MP4 file','generate-page-header');?></strong></label><br />
+					<label for="_meta-generate-page-header-video" class="example-row-title"><strong><?php _e('MP4 file','page-header');?></strong></label><br />
 					<input placeholder="http://" class="widefat" style="max-width:350px" id="_meta-generate-page-header-video" type="text" name="_meta-generate-page-header-video" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-video'][0]); ?>" />			   
-					<button class="generate-upload-file button" type="button" data-type="video" data-title="<?php _e( 'Page Header Video','generate-page-header' );?>" data-insert="<?php _e( 'Insert Video','generate-page-header'); ?>" data-prev="false">
-						<?php _e('Choose Video','generate-page-header') ;?>
+					<button class="generate-upload-file button" type="button" data-type="video" data-title="<?php _e( 'Page Header Video','page-header' );?>" data-insert="<?php _e( 'Insert Video','page-header'); ?>" data-prev="false">
+						<?php _e('Choose Video','page-header') ;?>
 					</button>
 				</p>
 				<p>
-					<label for="_meta-generate-page-header-video-ogv" class="example-row-title"><strong><?php _e('OGV file','generate-page-header');?></strong></label><br />
+					<label for="_meta-generate-page-header-video-ogv" class="example-row-title"><strong><?php _e('OGV file','page-header');?></strong></label><br />
 					<input placeholder="http://" class="widefat" style="max-width:350px" id="_meta-generate-page-header-video-ogv" type="text" name="_meta-generate-page-header-video-ogv" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-video-ogv'][0]); ?>" />			   
-					<button class="generate-upload-file button" type="button" data-type="video" data-title="<?php _e( 'Page Header Video','generate-page-header' );?>" data-insert="<?php _e( 'Insert Video','generate-page-header'); ?>" data-prev="false">
-						<?php _e('Choose Video','generate-page-header') ;?>
+					<button class="generate-upload-file button" type="button" data-type="video" data-title="<?php _e( 'Page Header Video','page-header' );?>" data-insert="<?php _e( 'Insert Video','page-header'); ?>" data-prev="false">
+						<?php _e('Choose Video','page-header') ;?>
 					</button>
 				</p>
 				<p>
-					<label for="_meta-generate-page-header-video-webm" class="example-row-title"><strong><?php _e('WEBM file','generate-page-header');?></strong></label><br />
+					<label for="_meta-generate-page-header-video-webm" class="example-row-title"><strong><?php _e('WEBM file','page-header');?></strong></label><br />
 					<input placeholder="http://" class="widefat" style="max-width:350px" id="_meta-generate-page-header-video-webm" type="text" name="_meta-generate-page-header-video-webm" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-video-webm'][0]); ?>" />			   
-					<button class="generate-upload-file button" type="button" data-type="video" data-title="<?php _e( 'Page Header Video','generate-page-header' );?>" data-insert="<?php _e( 'Insert Video','generate-page-header'); ?>" data-prev="false">
-						<?php _e('Choose Video','generate-page-header') ;?>
+					<button class="generate-upload-file button" type="button" data-type="video" data-title="<?php _e( 'Page Header Video','page-header' );?>" data-insert="<?php _e( 'Insert Video','page-header'); ?>" data-prev="false">
+						<?php _e('Choose Video','page-header') ;?>
 					</button>
 				</p>
 				<p>
-					<label for="_meta-generate-page-header-video-overlay" class="example-row-title"><strong><?php _e('Overlay color','generate-page-header');?></strong></label><br />
+					<label for="_meta-generate-page-header-video-overlay" class="example-row-title"><strong><?php _e('Overlay color','page-header');?></strong></label><br />
 					<input class="color-picker" style="width:45px" type="text" name="_meta-generate-page-header-video-overlay" id="_meta-generate-page-header-video-overlay" value="<?php echo $stored_meta['_meta-generate-page-header-video-overlay'][0]; ?>" />
 				</p>
 			</div>
 			<?php if ( generate_page_header_logo_exists() ) : ?>
 				<div id="generate-tab-4" class="generate-tab-content">
-					<p class="description" style="margin-top:0;"><?php _e( 'Overwrite your site-wide logo/header on this page.','generate-page-header' ); ?></p>
+					<p class="description" style="margin-top:0;"><?php _e( 'Overwrite your site-wide logo/header on this page.','page-header' ); ?></p>
 					<div id="preview-image" class="generate-logo-image">
 						<?php if( $stored_meta['_meta-generate-page-header-logo'][0] != "") { ?>
 							<img class="saved-image" src="<?php echo $stored_meta['_meta-generate-page-header-logo'][0];?>" width="100" style="margin-bottom:12px;" />
 						<?php } ?>
 					</div>
 					<input style="width:350px" id="_meta-generate-page-header-logo" type="hidden" name="_meta-generate-page-header-logo" value="<?php echo esc_url($stored_meta['_meta-generate-page-header-logo'][0]); ?>" />			   
-					<button class="generate-upload-file button" type="button" data-type="image" data-title="<?php _e( 'Header / Logo','generate-page-header' );?>" data-insert="<?php _e( 'Insert Logo','generate-page-header'); ?>" data-prev="true">
-						<?php _e('Choose Logo','generate-page-header') ;?>
+					<button class="generate-upload-file button" type="button" data-type="image" data-title="<?php _e( 'Header / Logo','page-header' );?>" data-insert="<?php _e( 'Insert Logo','page-header'); ?>" data-prev="true">
+						<?php _e('Choose Logo','page-header') ;?>
 					</button>
 					<input class="image-id" id="_meta-generate-page-header-logo-id" type="hidden" name="_meta-generate-page-header-logo-id" value="<?php echo $stored_meta['_meta-generate-page-header-logo-id'][0]; ?>" />
 					<?php if( $stored_meta['_meta-generate-page-header-logo'][0] != "") {
@@ -327,60 +327,60 @@ function show_generate_page_header_meta_box( $post ) {
 					}
 					?>
 					<button class="generate-page-header-remove-image button" type="button" <?php echo $remove_button; ?> data-input="#_meta-generate-page-header-logo" data-input-id="_meta-generate-page-header-logo-id" data-prev=".generate-logo-image">
-						<?php _e('Remove Logo','generate-page-header') ;?>
+						<?php _e('Remove Logo','page-header') ;?>
 					</button>
 				</div>
 			<?php endif; ?>
 			<div id="<?php if ( generate_page_header_logo_exists() ) : ?>generate-tab-5<?php else : ?>generate-tab-4<?php endif; ?>" class="generate-tab-content generate-page-header-content-required" style="display:none">
 				<p style="margin-top:0;">
-					<label for="_meta-generate-page-header-combine"><?php _e('Merge with site header','generate-page-header');?></label><br />
+					<label for="_meta-generate-page-header-combine"><?php _e('Merge with site header','page-header');?></label><br />
 					<input type="checkbox" name="_meta-generate-page-header-combine" id="_meta-generate-page-header-combine" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-combine'] ) ) checked( $stored_meta['_meta-generate-page-header-combine'][0], 'yes' ); ?> /> 
 				</p>
 				
 				<div class="combination-options">
 					<p class="absolute-position">
-						<label for="_meta-generate-page-header-absolute-position"><?php _e('Place content behind header (sliders etc..)','generate-page-header');?></label><br />
+						<label for="_meta-generate-page-header-absolute-position"><?php _e('Place content behind header (sliders etc..)','page-header');?></label><br />
 						<input type="checkbox" name="_meta-generate-page-header-absolute-position" id="_meta-generate-page-header-absolute-position" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-absolute-position'] ) ) checked( $stored_meta['_meta-generate-page-header-absolute-position'][0], 'yes' ); ?> /> 
 					</p>
 				
 					<p>
-						<label for="_meta-generate-page-header-site-title" class="example-row-title"><strong><?php _e('Site title','generate-page-header');?></strong></label><br />
+						<label for="_meta-generate-page-header-site-title" class="example-row-title"><strong><?php _e('Site title','page-header');?></strong></label><br />
 						<input class="color-picker" style="width:45px" type="text" name="_meta-generate-page-header-site-title" id="_meta-generate-page-header-site-title" value="<?php echo $stored_meta['_meta-generate-page-header-site-title'][0]; ?>" />
 					</p>
 					
 					<p>
-						<label for="_meta-generate-page-header-site-tagline" class="example-row-title"><strong><?php _e('Site tagline','generate-page-header');?></strong></label><br />
+						<label for="_meta-generate-page-header-site-tagline" class="example-row-title"><strong><?php _e('Site tagline','page-header');?></strong></label><br />
 						<input class="color-picker" style="width:45px" type="text" name="_meta-generate-page-header-site-tagline" id="_meta-generate-page-header-site-tagline" value="<?php echo $stored_meta['_meta-generate-page-header-site-tagline'][0]; ?>" />
 					</p>
 					
 					<p>
-						<label for="_meta-generate-page-header-transparent-navigation"><?php _e('Transparent navigation','generate-page-header');?></label><br />
+						<label for="_meta-generate-page-header-transparent-navigation"><?php _e('Transparent navigation','page-header');?></label><br />
 						<input type="checkbox" name="_meta-generate-page-header-transparent-navigation" id="_meta-generate-page-header-transparent-navigation" value="yes" <?php if ( isset ( $stored_meta['_meta-generate-page-header-transparent-navigation'] ) ) checked( $stored_meta['_meta-generate-page-header-transparent-navigation'][0], 'yes' ); ?> /> 
 					</p>
 					
 					<div class="navigation-colors">
 						<p>
-							<label for="_meta-generate-page-header-navigation-text" class="example-row-title"><strong><?php _e('Navigation text','generate-page-header');?></strong></label><br />
+							<label for="_meta-generate-page-header-navigation-text" class="example-row-title"><strong><?php _e('Navigation text','page-header');?></strong></label><br />
 							<input class="color-picker" style="width:45px" type="text" name="_meta-generate-page-header-navigation-text" id="_meta-generate-page-header-navigation-text" value="<?php echo $stored_meta['_meta-generate-page-header-navigation-text'][0]; ?>" />
 						</p>
 						
 						<p>
-							<label for="_meta-generate-page-header-navigation-background-hover" class="example-row-title"><strong><?php _e('Navigation background hover','generate-page-header');?></strong></label><br />
+							<label for="_meta-generate-page-header-navigation-background-hover" class="example-row-title"><strong><?php _e('Navigation background hover','page-header');?></strong></label><br />
 							<input class="color-picker" style="width:45px" type="text" name="_meta-generate-page-header-navigation-background-hover" id="_meta-generate-page-header-navigation-background-hover" value="<?php echo $stored_meta['_meta-generate-page-header-navigation-background-hover'][0]; ?>" />
 						</p>
 						
 						<p>
-							<label for="_meta-generate-page-header-navigation-text-hover" class="example-row-title"><strong><?php _e('Navigation text hover','generate-page-header');?></strong></label><br />
+							<label for="_meta-generate-page-header-navigation-text-hover" class="example-row-title"><strong><?php _e('Navigation text hover','page-header');?></strong></label><br />
 							<input class="color-picker" style="width:45px" type="text" name="_meta-generate-page-header-navigation-text-hover" id="_meta-generate-page-header-navigation-text-hover" value="<?php echo $stored_meta['_meta-generate-page-header-navigation-text-hover'][0]; ?>" />
 						</p>
 						
 						<p>
-							<label for="_meta-generate-page-header-navigation-background-current" class="example-row-title"><strong><?php _e('Navigation background current','generate-page-header');?></strong></label><br />
+							<label for="_meta-generate-page-header-navigation-background-current" class="example-row-title"><strong><?php _e('Navigation background current','page-header');?></strong></label><br />
 							<input class="color-picker" style="width:45px" type="text" name="_meta-generate-page-header-navigation-background-current" id="_meta-generate-page-header-navigation-background-current" value="<?php echo $stored_meta['_meta-generate-page-header-navigation-background-current'][0]; ?>" />
 						</p>
 						
 						<p>
-							<label for="_meta-generate-page-header-navigation-text-current" class="example-row-title"><strong><?php _e('Navigation text current','generate-page-header');?></strong></label><br />
+							<label for="_meta-generate-page-header-navigation-text-current" class="example-row-title"><strong><?php _e('Navigation text current','page-header');?></strong></label><br />
 							<input class="color-picker" style="width:45px" type="text" name="_meta-generate-page-header-navigation-text-current" id="_meta-generate-page-header-navigation-text-current" value="<?php echo $stored_meta['_meta-generate-page-header-navigation-text-current'][0]; ?>" />
 						</p>
 					</div>

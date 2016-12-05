@@ -18,6 +18,12 @@
 	.mobile-header-navigation.is_stuck {
 		box-shadow:0 2px 2px -2px rgba(0, 0, 0, .2);
 	}
+	.sticky-menu-logo:not(.mobile-header-logo) .main-navigation.is_stuck .menu-toggle {
+		display: inline-block;
+		float: left;
+		clear: none;
+		width:auto;
+	}
 	.mobile-header-logo .mobile-header-navigation .menu-toggle {
 		display: inline-block;
 		float: right;
@@ -34,7 +40,6 @@
 		margin-right: 10px;
 		margin-left: 10px;
 	}
-	.nav-float-left .mobile-header-navigation .mobile-header-logo,
 	.rtl .mobile-header-navigation .mobile-header-logo {
 		float: right;
 	}

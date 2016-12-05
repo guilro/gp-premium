@@ -393,7 +393,8 @@ function generate_blog_customize_register( $wp_customize ) {
 				'section'     => 'blog_post_image_section',
 				'label'			=> false,
 				'priority'    => 69,
-				'type' => 'post_image_save'
+				'type' => 'post_image_save',
+				'settings' => ( isset( $wp_customize->selective_refresh ) ) ? array() : 'blogname'
 			)
 		)
 	);
@@ -576,7 +577,8 @@ function generate_blog_customize_register( $wp_customize ) {
 				'type'        => 'blog_text',
 				'description' => __( 'Masonry is enabled. These settings will be ignored.','generate-blog' ),
 				'priority'    => 0,
-				'active_callback' => 'generate_masonry_callback'
+				'active_callback' => 'generate_masonry_callback',
+				'settings' => ( isset( $wp_customize->selective_refresh ) ) ? array() : 'blogname'
 			)
 		)
 	);

@@ -25,7 +25,7 @@ if ( ! function_exists( 'generate_combined_page_header_start' ) ) :
 add_action( 'generate_inside_merged_page_header','generate_combined_page_header_start', 0 );
 function generate_combined_page_header_start()
 {
-	if ( is_home() ) :
+	if ( generate_get_blog_page_header() ) :
 		$options = get_option( 'generate_page_header_options', '' );
 		$combine = ( !empty( $options['page_header_combine'] ) ) ? $options['page_header_combine'] : '';
 		$absolute = ( !empty( $options['page_header_absolute_position'] ) ) ? $options['page_header_absolute_position'] : '';
@@ -49,7 +49,7 @@ if ( ! function_exists( 'generate_combined_page_header_end' ) ) :
 add_action( 'generate_after_header','generate_combined_page_header_end', 9 );
 function generate_combined_page_header_end()
 {
-	if ( is_home() ) :
+	if ( generate_get_blog_page_header() ) :
 		$options = get_option( 'generate_page_header_options', '' );
 		$combine = ( !empty( $options['page_header_combine'] ) ) ? $options['page_header_combine'] : '';
 		$absolute = ( !empty( $options['page_header_absolute_position'] ) ) ? $options['page_header_absolute_position'] : '';
@@ -73,7 +73,7 @@ if ( ! function_exists( 'generate_page_header_enqueue' ) ) :
 add_action( 'wp_enqueue_scripts','generate_page_header_enqueue' );
 function generate_page_header_enqueue()
 {
-	if ( is_home() ) :
+	if ( generate_get_blog_page_header() ) :
 		$options = get_option( 'generate_page_header_options', '' );
 		$image_background_fixed = ( !empty( $options['page_header_add_parallax'] ) ) ? $options['page_header_add_parallax'] : '';
 		$fullscreen = ( !empty( $options['page_header_full_screen'] ) ) ? $options['page_header_full_screen'] : '';
@@ -115,7 +115,7 @@ endif;
 if ( !function_exists( 'generate_page_header_css' ) ) :
 function generate_page_header_css()
 {
-	if ( is_home() ) :
+	if ( generate_get_blog_page_header() ) :
 		$options = get_option( 'generate_page_header_options', '' );
 		$header_content = ( !empty( $options['page_header_content'] ) ) ? $options['page_header_content'] : '';
 		$image_background = ( !empty( $options['page_header_image_background'] ) ) ? $options['page_header_image_background'] : '';
@@ -211,8 +211,10 @@ function generate_page_header_css()
 			'background-color' => ( 'fluid' == $image_background_type ) ? $background_color : null,
 			'background-image' => ( 'fluid' == $image_background_type && !empty( $image_background ) && false == $video ) ? 'url(' . $page_header_image_custom . ')' : null,
 			'background-size' => ( 'fluid' == $image_background_type && !empty( $image_background ) ) ? 'cover' : null,
-			'background-attachment' => ( 'fluid' == $image_background_type && !empty( $image_background ) && !empty( $image_background_fixed ) ) ? 'fixed' : null,
-			'background-position' => ( 'fluid' == $image_background_type && !empty( $image_background ) && !empty( $image_background_fixed ) ) ? 'center top' : null,
+			'background-position' => ( 'fluid' == $image_background_type && !empty( $image_background ) && !empty( $image_background_fixed ) ) ? 'center top' : null
+		),
+		
+		'.generate-combined-page-header' => array(
 			'height' => ( '' !== $combine && '' !== $fullscreen ) ? '100vh !important' : null
 		),
 		
@@ -369,7 +371,7 @@ function generate_page_header()
 	
 	endif;
 	
-	if ( is_home() ) :
+	if ( generate_get_blog_page_header() ) :
 		
 		generate_blog_page_header_area('page-header-image', 'page-header-content');
 	
@@ -580,7 +582,7 @@ function generate_page_header_customize_register( $wp_customize ) {
 		$wp_customize->add_section(
 			'generate_layout_page_header',
 			array(
-				'title' => __( 'Page Header', 'generate-page-header' ),
+				'title' => __( 'Page Header','page-header' ),
 				'capability' => 'edit_theme_options',
 				'priority' => 35,
 				'panel' => 'generate_layout_panel'
@@ -608,11 +610,11 @@ function generate_page_header_customize_register( $wp_customize ) {
 		// Arguments array
 		array(
 			'type' => 'select',
-			'label' => __( 'Page Header Position', 'generate-page-header' ),
+			'label' => __( 'Page Header Position','page-header' ),
 			'section' => $section,
 			'choices' => array(
-				'above-content' => __( 'Above Content Area', 'generate-page-header' ),
-				'inside-content' => __( 'Inside Content Area', 'generate-page-header' )
+				'above-content' => __( 'Above Content Area','page-header' ),
+				'inside-content' => __( 'Inside Content Area','page-header' )
 			),
 			// This last one must match setting ID from above
 			'settings' => 'generate_page_header_settings[page_header_position]',
@@ -638,13 +640,13 @@ function generate_page_header_customize_register( $wp_customize ) {
 		// Arguments array
 		array(
 			'type' => 'select',
-			'label' => __( 'Single Post Header Position', 'generate-page-header' ),
+			'label' => __( 'Single Post Header Position','page-header' ),
 			'section' => $section,
 			'choices' => array(
-				'above-content' => __( 'Above Content Area', 'generate-page-header' ),
-				'inside-content' => __( 'Inside Content Area', 'generate-page-header' ),
-				'below-title' => __( 'Below Post Title', 'generate-page-header' ),
-				'hide'			=> __( 'Hide','generate-page-header' )
+				'above-content' => __( 'Above Content Area','page-header' ),
+				'inside-content' => __( 'Inside Content Area','page-header' ),
+				'below-title' => __( 'Below Post Title','page-header' ),
+				'hide'			=> __( 'Hide','page-header' )
 			),
 			// This last one must match setting ID from above
 			'settings' => 'generate_page_header_settings[post_header_position]',
@@ -778,7 +780,7 @@ if ( ! function_exists( 'generate_page_header_replace_logo' ) ) :
 function generate_page_header_replace_logo()
 {
 	if ( generate_page_header_logo_exists() ) {
-		if ( is_home() ) :
+		if ( generate_get_blog_page_header() ) :
 			$options = get_option( 'generate_page_header_options', '' );
 			$logo = ( !empty( $options['page_header_logo'] ) ) ? $options['page_header_logo'] : '';
 		else :
@@ -795,7 +797,7 @@ if ( ! function_exists( 'generate_page_header_setup' ) ) :
 add_action( 'wp','generate_page_header_setup' );
 function generate_page_header_setup()
 {
-	if ( is_home() ) :
+	if ( generate_get_blog_page_header() ) :
 		$options = get_option( 'generate_page_header_options', '' );
 		$logo = ( !empty( $options['page_header_logo'] ) ) ? $options['page_header_logo'] : '';
 	else :

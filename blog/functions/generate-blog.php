@@ -96,6 +96,7 @@ function generate_blog_post_classes( $classes )
 		$classes[] = 'grid-' . generate_blog_get_column_count();
 		$classes[] = 'tablet-grid-50';
 		$classes[] = 'mobile-grid-100';
+		$classes[] = 'grid-parent';
 		
 		if ( $wp_query->current_post == 0 && $paged == 1 && $generate_blog_settings['featured_column'] ) :
 			$classes[] = 'featured-column';

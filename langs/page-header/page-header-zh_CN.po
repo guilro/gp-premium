@@ -1,0 +1,543 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Page Header\n"
+"POT-Creation-Date: 2016-10-25 12:11-0700\n"
+"PO-Revision-Date: 2016-10-25 12:24-0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: inc/admin-page-framework\n"
+
+#: functions/controls.php:12
+msgid "Apply image sizes"
+msgstr "应用图像尺寸"
+
+#: functions/customizer.php:20
+msgid "Blog Page Header"
+msgstr "文章页页眉"
+
+#: functions/customizer.php:36 functions/metabox.php:140
+msgid "Page Header Image"
+msgstr "页面页眉图像"
+
+#: functions/customizer.php:58 functions/metabox.php:124
+msgid "Image"
+msgstr "图像"
+
+#: functions/customizer.php:59
+msgid "Upload an image to be used as your page header."
+msgstr "上传图像用于页面页眉"
+
+#: functions/customizer.php:79 functions/metabox.php:155
+msgid "Image link"
+msgstr "图像链接"
+
+#: functions/customizer.php:80
+msgid "Make your page header image clickable by adding a URL. (optional)"
+msgstr "给页面页眉图像添加URL"
+
+#: functions/customizer.php:103 functions/metabox.php:160
+msgid "Resize image"
+msgstr "调整图像大小"
+
+#: functions/customizer.php:104
+msgid "Turn hard cropping or of off."
+msgstr "强制剪裁或关闭"
+
+#: functions/customizer.php:107 functions/customizer.php:322
+#: functions/customizer.php:347 functions/customizer.php:372
+#: functions/customizer.php:397 functions/customizer.php:422
+#: functions/customizer.php:447 functions/customizer.php:666
+#: functions/customizer.php:690 functions/customizer.php:757
+#: functions/metabox.php:163
+msgid "Enable"
+msgstr "启用"
+
+#: functions/customizer.php:108 functions/customizer.php:323
+#: functions/customizer.php:348 functions/customizer.php:373
+#: functions/customizer.php:398 functions/customizer.php:423
+#: functions/customizer.php:448 functions/customizer.php:667
+#: functions/customizer.php:691 functions/customizer.php:758
+#: functions/metabox.php:162
+msgid "Disable"
+msgstr "关闭"
+
+#: functions/customizer.php:130 functions/metabox.php:169
+msgid "Image width"
+msgstr "图像宽度"
+
+#: functions/customizer.php:131
+msgid "Choose your image width in pixels. (integer only, default is 1200)"
+msgstr "使用px设置图像宽度（填写整数，默认1200）"
+
+#: functions/customizer.php:153 functions/metabox.php:174
+msgid "Image height"
+msgstr "图像高度"
+
+#: functions/customizer.php:154
+msgid ""
+"Choose your image height in pixels. Use \"0\" or leave blank for "
+"proportional resizing. (integer only, default is 0) "
+msgstr "使用px设置图像高度，填写 \"0\" 或者留白维持原比例"
+
+#: functions/customizer.php:180 functions/metabox.php:275
+#: functions/metabox.php:282 functions/metabox.php:289
+msgid "Page Header Video"
+msgstr "页面页眉视频"
+
+#: functions/customizer.php:201
+msgid "Video Background URL (MP4 only)"
+msgstr "背景视频URL（MP4格式）"
+
+#: functions/customizer.php:222
+msgid "Video Background URL (OGV only)"
+msgstr "背景视频URL（OGV格式）"
+
+#: functions/customizer.php:243
+msgid "Video Background URL (WEBM only)"
+msgstr "背景视频URL（WEBM格式）"
+
+#: functions/customizer.php:264
+msgid "Overlay Color"
+msgstr "覆盖颜色"
+
+#: functions/customizer.php:276
+msgid "Page Header Content"
+msgstr "页面页眉内容"
+
+#: functions/customizer.php:297 functions/metabox.php:125
+msgid "Content"
+msgstr "内容"
+
+#: functions/customizer.php:298
+msgid "Add your content to the page header. HTML and shortcodes allowed."
+msgstr "给页面页眉添加内容，允许HTML和短代码"
+
+#: functions/customizer.php:318
+msgid "Add Paragraphs"
+msgstr "添加段落"
+
+#: functions/customizer.php:319
+msgid "Wrap your text in paragraph tags automatically."
+msgstr "自动生成段落标签"
+
+#: functions/customizer.php:343
+msgid "Add Padding"
+msgstr "添加内边距"
+
+#: functions/customizer.php:344
+msgid "Add padding around your content."
+msgstr "内容周围添加内边距"
+
+#: functions/customizer.php:368
+msgid "Image Background"
+msgstr "图像背景"
+
+#: functions/customizer.php:369
+msgid ""
+"Use the image uploaded above as a background image for your content. "
+"(requires image uploaded above)"
+msgstr "使用上传的图像作为内容背景图像"
+
+#: functions/customizer.php:393
+msgid "Parallax Background"
+msgstr "视差背景"
+
+#: functions/customizer.php:394
+msgid ""
+"Add a cool parallax effect to your background image. (requires the image "
+"background option to be checked)"
+msgstr "给背景图像添加视差效果"
+
+#: functions/customizer.php:418
+msgid "Full Screen"
+msgstr "全屏"
+
+#: functions/customizer.php:419
+msgid "Make your page header content area full screen."
+msgstr "全屏显示页面页眉内容区域"
+
+#: functions/customizer.php:443
+msgid "Vertical Center"
+msgstr "垂直居中"
+
+#: functions/customizer.php:444
+msgid "Center your page header content vertically."
+msgstr "页面页眉内容垂直居中"
+
+#: functions/customizer.php:468
+msgid "Container Type"
+msgstr "主体类型"
+
+#: functions/customizer.php:469
+msgid "Choose whether the page header is contained or fluid."
+msgstr "选择页面页眉平铺或者流动"
+
+#: functions/customizer.php:472 functions/metabox.php:224
+msgid "Contained"
+msgstr "平铺"
+
+#: functions/customizer.php:473 functions/metabox.php:225
+msgid "Full width"
+msgstr "拉伸"
+
+#: functions/customizer.php:493
+msgid "Text Alignment"
+msgstr "文本位置"
+
+#: functions/customizer.php:494
+msgid "Choose the horizontal alignment of your content."
+msgstr "设置内容水平位置"
+
+#: functions/customizer.php:497 functions/metabox.php:232
+msgid "Left"
+msgstr "左侧"
+
+#: functions/customizer.php:498 functions/metabox.php:233
+msgid "Center"
+msgstr "中间"
+
+#: functions/customizer.php:499 functions/metabox.php:234
+msgid "Right"
+msgstr "右侧"
+
+#: functions/customizer.php:519
+msgid "Top/Bottom Padding"
+msgstr "顶部/底部 内边距"
+
+#: functions/customizer.php:520
+msgid "This will add space above and below your content. (integer only) "
+msgstr "将在内容上下增加间距（填写整数）"
+
+#: functions/customizer.php:541
+msgid "Padding Unit"
+msgstr "内边距单元"
+
+#: functions/customizer.php:565
+msgid "Background Color"
+msgstr "背景颜色"
+
+#: functions/customizer.php:586
+msgid "Text Color"
+msgstr "文本颜色"
+
+#: functions/customizer.php:607
+msgid "Link Color"
+msgstr "链接颜色"
+
+#: functions/customizer.php:628
+msgid "Link Color Hover"
+msgstr "划过链接颜色"
+
+#: functions/customizer.php:641
+msgid "Page Header Advanced"
+msgstr "页面页眉高级设置"
+
+#: functions/customizer.php:662 functions/metabox.php:324
+msgid "Merge with site header"
+msgstr "合并站点页眉"
+
+#: functions/customizer.php:686 functions/metabox.php:330
+msgid "Place content behind header (sliders etc..)"
+msgstr "内容置于页眉之后"
+
+#: functions/customizer.php:711 functions/metabox.php:335
+msgid "Site title"
+msgstr "站点标题"
+
+#: functions/customizer.php:732 functions/metabox.php:340
+msgid "Site tagline"
+msgstr "站点副标题"
+
+#: functions/customizer.php:753 functions/metabox.php:345
+msgid "Transparent navigation"
+msgstr "透明导航"
+
+#: functions/customizer.php:778 functions/metabox.php:351
+msgid "Navigation text"
+msgstr "导航文本"
+
+#: functions/customizer.php:799 functions/metabox.php:356
+msgid "Navigation background hover"
+msgstr "划过导航背景"
+
+#: functions/customizer.php:820 functions/metabox.php:361
+msgid "Navigation text hover"
+msgstr "划过导航文本"
+
+#: functions/customizer.php:841 functions/metabox.php:366
+msgid "Navigation background current"
+msgstr "导航背景流动"
+
+#: functions/customizer.php:862 functions/metabox.php:371
+msgid "Navigation text current"
+msgstr "导航文本流动"
+
+#: functions/customizer.php:875
+msgid "Page Header Logo"
+msgstr "页面页眉图标"
+
+#: functions/customizer.php:897 functions/metabox.php:128
+msgid "Logo"
+msgstr "图标"
+
+#: functions/customizer.php:898
+msgid "Replace your logo on the blog."
+msgstr "替换图标"
+
+#: functions/functions.php:583 functions/metabox.php:19
+msgid "Page Header"
+msgstr "页面页眉"
+
+#: functions/functions.php:611
+msgid "Page Header Position"
+msgstr "页面页眉位置"
+
+#: functions/functions.php:614 functions/functions.php:644
+msgid "Above Content Area"
+msgstr "内容区域以上"
+
+#: functions/functions.php:615 functions/functions.php:645
+msgid "Inside Content Area"
+msgstr "内容区域中"
+
+#: functions/functions.php:641
+msgid "Single Post Header Position"
+msgstr "单篇文章页眉位置"
+
+#: functions/functions.php:646
+msgid "Below Post Title"
+msgstr "文章标题以下"
+
+#: functions/functions.php:647
+msgid "Hide"
+msgstr ""
+
+#: functions/ie.php:17
+msgid "Warning: This will delete your settings."
+msgstr ""
+
+#: functions/ie.php:19
+msgid "Delete Page Header Customizer Settings"
+msgstr "删除页面页眉自定义设置"
+
+#: functions/ie.php:56
+msgid "Export Page Header Customizer Settings"
+msgstr "导出页面页眉自定义设置"
+
+#: functions/metabox.php:126
+msgid "Background Video"
+msgstr "背景视频"
+
+#: functions/metabox.php:130
+msgid "Advanced"
+msgstr "高级设置"
+
+#: functions/metabox.php:140
+msgid "Insert Image"
+msgstr "插入图像"
+
+#: functions/metabox.php:141
+msgid "Choose Image"
+msgstr "选择图像"
+
+#: functions/metabox.php:150
+msgid "Remove Image"
+msgstr "移除图像"
+
+#: functions/metabox.php:176
+msgid "Use \"0\" or leave blank for proportional resizing."
+msgstr "填写 \"0\" 或者留白维持原比例"
+
+#: functions/metabox.php:183
+msgid "HTML and shortcodes allowed."
+msgstr "允许HTML和短代码"
+
+#: functions/metabox.php:188
+msgid "Automatically add paragraphs"
+msgstr "自动添加段落"
+
+#: functions/metabox.php:192
+msgid "Add padding"
+msgstr "添加内边距"
+
+#: functions/metabox.php:196
+msgid "Add background image"
+msgstr "添加背景图像"
+
+#: functions/metabox.php:200
+msgid "Parallax effect"
+msgstr "视差效果"
+
+#: functions/metabox.php:204
+msgid "Fullscreen"
+msgstr "全屏"
+
+#: functions/metabox.php:208
+msgid "Vertical center content"
+msgstr "垂直居中内容"
+
+#: functions/metabox.php:214
+msgid "Add to excerpt"
+msgstr ""
+
+#: functions/metabox.php:222
+msgid "Container type"
+msgstr "主体类型"
+
+#: functions/metabox.php:230
+msgid "Text alignment"
+msgstr "文本位置"
+
+#: functions/metabox.php:239
+msgid "Top/Bottom padding"
+msgstr "顶部/底部内边距"
+
+#: functions/metabox.php:249
+msgid "Background color"
+msgstr "背景颜色"
+
+#: functions/metabox.php:254
+msgid "Text color"
+msgstr "文本颜色"
+
+#: functions/metabox.php:259
+msgid "Link color"
+msgstr "链接颜色"
+
+#: functions/metabox.php:264
+msgid "Link color hover"
+msgstr "链接划过颜色"
+
+#: functions/metabox.php:273
+msgid "MP4 file"
+msgstr "MP4格式"
+
+#: functions/metabox.php:275 functions/metabox.php:282
+#: functions/metabox.php:289
+msgid "Insert Video"
+msgstr "插入视频"
+
+#: functions/metabox.php:276 functions/metabox.php:283
+#: functions/metabox.php:290
+msgid "Choose Video"
+msgstr "选择视频"
+
+#: functions/metabox.php:280
+msgid "OGV file"
+msgstr "OGV格式"
+
+#: functions/metabox.php:287
+msgid "WEBM file"
+msgstr "WEBM格式"
+
+#: functions/metabox.php:294
+msgid "Overlay color"
+msgstr "覆盖颜色"
+
+#: functions/metabox.php:300
+msgid "Overwrite your site-wide logo/header on this page."
+msgstr "用全局 图标/页眉 覆盖这个页面"
+
+#: functions/metabox.php:307
+msgid "Header / Logo"
+msgstr "页眉/图标"
+
+#: functions/metabox.php:307
+msgid "Insert Logo"
+msgstr "插入图标"
+
+#: functions/metabox.php:308
+msgid "Choose Logo"
+msgstr "选择图标"
+
+#: functions/metabox.php:318
+msgid "Remove Logo"
+msgstr "移除图标"
+
+#: inc/EDD_SL_Plugin_Updater.php:196
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr ""
+
+#: inc/EDD_SL_Plugin_Updater.php:204
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+
+#: inc/EDD_SL_Plugin_Updater.php:358
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+
+#: inc/EDD_SL_Plugin_Updater.php:358
+msgid "Error"
+msgstr ""
+
+#: inc/verify.php:88
+msgid "License deactivated."
+msgstr ""
+
+#: inc/verify.php:92
+msgid "License activated."
+msgstr ""
+
+#: inc/verify.php:125
+#, php-format
+msgid "Updates %s"
+msgstr ""
+
+#: inc/verify.php:125
+msgid "Help"
+msgstr ""
+
+#: inc/verify.php:150
+msgid "License Key"
+msgstr ""
+
+#: inc/verify.php:155
+msgid "Update"
+msgstr ""
+
+#: inc/verify.php:240
+#, php-format
+msgid "Your license key expired on %s."
+msgstr ""
+
+#: inc/verify.php:247
+msgid "Your license key has been disabled."
+msgstr ""
+
+#: inc/verify.php:252
+msgid "Invalid license."
+msgstr ""
+
+#: inc/verify.php:258
+msgid "Your license is not active for this URL."
+msgstr ""
+
+#: inc/verify.php:263
+#, php-format
+msgid "This appears to be an invalid license key for %s."
+msgstr ""
+
+#: inc/verify.php:268
+msgid "Your license key has reached its activation limit."
+msgstr "许可证达到激活上限"
+
+#: inc/verify.php:273
+msgid "An error occurred, please try again."
+msgstr "发生错误，请重试"

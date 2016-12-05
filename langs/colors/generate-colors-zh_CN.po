@@ -1,0 +1,183 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Colors\n"
+"POT-Creation-Date: 2016-10-25 11:50-0700\n"
+"PO-Revision-Date: 2016-10-25 11:55-0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/functions.php:85
+msgid "Colors"
+msgstr "颜色"
+
+#: functions/functions.php:97
+msgid "Header"
+msgstr "页眉"
+
+#: functions/functions.php:109 functions/functions.php:187
+#: functions/functions.php:265 functions/functions.php:342
+#: functions/functions.php:462 functions/functions.php:534
+#: functions/functions.php:708
+msgid "Background"
+msgstr "背景"
+
+#: functions/functions.php:115 functions/functions.php:193
+#: functions/functions.php:271 functions/functions.php:348
+#: functions/functions.php:468 functions/functions.php:540
+#: functions/functions.php:714
+msgid "Text"
+msgstr "文本"
+
+#: functions/functions.php:121 functions/functions.php:354
+#: functions/functions.php:474 functions/functions.php:546
+#: functions/functions.php:720
+msgid "Link"
+msgstr "链接"
+
+#: functions/functions.php:127 functions/functions.php:360
+#: functions/functions.php:480 functions/functions.php:552
+#: functions/functions.php:726
+msgid "Link Hover"
+msgstr "划过链接"
+
+#: functions/functions.php:133
+msgid "Site Title"
+msgstr "站点标题"
+
+#: functions/functions.php:139
+msgid "Tagline"
+msgstr "广告语"
+
+#: functions/functions.php:175
+msgid "Primary Navigation"
+msgstr "主导航"
+
+#: functions/functions.php:199 functions/functions.php:277
+msgid "Background Hover"
+msgstr "背景划过"
+
+#: functions/functions.php:205 functions/functions.php:283
+msgid "Text Hover"
+msgstr "文本划过"
+
+#: functions/functions.php:211 functions/functions.php:289
+msgid "Background Current"
+msgstr "背景当前"
+
+#: functions/functions.php:217 functions/functions.php:295
+msgid "Text Current"
+msgstr "文本当前"
+
+#: functions/functions.php:253
+msgid "Primary Sub-Navigation"
+msgstr "主子导航"
+
+#: functions/functions.php:330
+msgid "Content"
+msgstr "内容"
+
+#: functions/functions.php:366
+msgid "Content Title"
+msgstr "内容标题"
+
+#: functions/functions.php:372
+msgid "Blog Post Title"
+msgstr "文章标题"
+
+#: functions/functions.php:378
+msgid "Blog Post Title Hover"
+msgstr "文章标题划过"
+
+#: functions/functions.php:384
+msgid "Entry Meta Text"
+msgstr "进入功能文本"
+
+#: functions/functions.php:390
+msgid "Entry Meta Links"
+msgstr "进入功能链接"
+
+#: functions/functions.php:396
+msgid "Entry Meta Links Hover"
+msgstr "划过进入功能链接"
+
+#: functions/functions.php:402
+msgid "Heading 1 (H1) Color"
+msgstr "标题 1 (H1) 颜色"
+
+#: functions/functions.php:408
+msgid "Heading 2 (H2) Color"
+msgstr "标题 2 (H2) 颜色"
+
+#: functions/functions.php:414
+msgid "Heading 3 (H3) Color"
+msgstr "标题 3 (H3) 颜色"
+
+#: functions/functions.php:450
+msgid "Sidebar Widgets"
+msgstr "边栏小工具"
+
+#: functions/functions.php:486 functions/functions.php:558
+msgid "Widget Title"
+msgstr "小工具标题"
+
+#: functions/functions.php:522
+msgid "Footer Widgets"
+msgstr "页脚小工具"
+
+#: functions/functions.php:594
+msgid "Forms"
+msgstr "表格"
+
+#: functions/functions.php:606
+msgid "Form Background"
+msgstr "表格背景"
+
+#: functions/functions.php:612
+msgid "Form Text"
+msgstr "表格文本"
+
+#: functions/functions.php:618
+msgid "Form Background Focus/Hover"
+msgstr "表格背景 聚焦/划过"
+
+#: functions/functions.php:624
+msgid "Form Text Focus/Hover"
+msgstr "表格文本 聚焦/划过"
+
+#: functions/functions.php:630
+msgid "Form Border"
+msgstr "表格边框"
+
+#: functions/functions.php:636
+msgid "Form Border Focus/Hover"
+msgstr "表格边框 聚焦/划过"
+
+#: functions/functions.php:642
+msgid "Form Button"
+msgstr "表格按钮"
+
+#: functions/functions.php:648
+msgid "Form Button Focus/Hover"
+msgstr "表格按钮 聚焦/划过"
+
+#: functions/functions.php:654
+msgid "Form Button Text"
+msgstr "表格按钮文本"
+
+#: functions/functions.php:660
+msgid "Form Button Text Focus/Hover"
+msgstr "表格按钮文本 聚焦/划过"
+
+#: functions/functions.php:696
+msgid "Footer"
+msgstr "页脚"

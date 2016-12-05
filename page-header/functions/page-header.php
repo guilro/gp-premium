@@ -281,7 +281,7 @@ function generate_page_header_area_start_container($image_class, $content_class)
 			'<div %1$s class="%2$s">
 				<div %3$s class="inside-page-header-container inside-content-header generate-merged-header %4$s %5$s">',
 			( 'fluid' == $page_header_container_type ) ? $video : null,
-			$content_class . $parallax . $full_screen . $vertical_center_container . ' generate-page-header generate-content-header',
+			$content_class . $parallax . $full_screen . $vertical_center_container . ' generate-page-header generate-content-header generate-combined-page-header',
 			( 'fluid' !== $page_header_container_type ) ? $video : null,
 			$vertical_center,
 			( 'fluid' !== $page_header_container_type ) ? 'grid-container grid-parent' : ''

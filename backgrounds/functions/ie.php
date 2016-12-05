@@ -11,7 +11,7 @@ if ( ! function_exists( 'generate_backgrounds_add_export' ) ) :
 			<p><input type="hidden" name="generate_backgrounds_export_action" value="export_backgrounds_settings" /></p>
 			<p>
 				<?php wp_nonce_field( 'generate_backgrounds_export_nonce', 'generate_backgrounds_export_nonce' ); ?>
-				<?php submit_button( __( 'Export Backgrounds Customizer Settings', 'generate-backgrounds' ), 'button-primary', 'submit', false ); ?>
+				<?php submit_button( __( 'Export Backgrounds Customizer Settings', 'backgrounds' ), 'button-primary', 'submit', false ); ?>
 			</p>
 		</form>
 		<?php
@@ -60,9 +60,9 @@ function generate_backgrounds_reset_settings()
 		<p><input type="hidden" name="generate_backgrounds_reset_customizer" value="generate_backgrounds_reset_customizer_settings" /></p>
 		<p>
 			<?php 
-			$warning = 'return confirm("' . __( 'Warning: This will delete your settings.','generate-backgrounds' ) . '")';
+			$warning = 'return confirm("' . __( 'Warning: This will delete your settings.','backgrounds' ) . '")';
 			wp_nonce_field( 'generate_backgrounds_reset_customizer_nonce', 'generate_backgrounds_reset_customizer_nonce' );
-			submit_button( __( 'Delete Backgrounds Customizer Settings', 'generate-backgrounds' ), 'spacing-button', 'spacing-submit', false, array( 'onclick' => $warning ) ); ?>
+			submit_button( __( 'Delete Backgrounds Customizer Settings', 'backgrounds' ), 'spacing-button', 'spacing-submit', false, array( 'onclick' => $warning ) ); ?>
 		</p>
 	</form>
 	<?php

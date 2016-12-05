@@ -106,15 +106,15 @@ function generate_sections_print_templates() {
 	<script type="text/html" id="tmpl-generate-sections-edit-content">
 		<div data-id="content" class="panel generate-section-content">
 		
-			<div class="grid-100 section-title">
+			<div class="gs-grid-100 section-title">
 					<label for="title"><?php _e( 'Section Label','generate-sections' );?></label>
 			
 					<p>
-						<input type="text" class="grid-50" name="title" placeholder="{{{ generate_sections_metabox_i18n.default_title }}}" id="title" value="{{{ data.title }}}"/>
+						<input type="text" name="title" placeholder="{{{ generate_sections_metabox_i18n.default_title }}}" id="title" value="{{{ data.title }}}"/>
 					</p>
 				</div>
 		
-			<div class="grid-100 wp-core-ui wp-editor-wrap">
+			<div class="gs-grid-100 wp-core-ui wp-editor-wrap">
 					
 				<div class="postarea wp-editor-expand">
 		
@@ -156,8 +156,8 @@ function generate_sections_print_templates() {
 	<script type="text/html" id="tmpl-generate-sections-edit-style">
 	
 	<div data-id="style" class="panel generate-section-settings">
-			<div class="grid-container grid-parent">
-				<div class="grid-33">
+			<div class="gs-grid-container gs-grid-parent">
+				<div class="gs-grid-33">
 					<h3><?php _e( 'Layout','generate-sections' ); ?></h3>
 					<label for="box_type"><?php _e('Box Type','generate-sections');?></label>
 					
@@ -201,7 +201,7 @@ function generate_sections_print_templates() {
 						</select>
 					</p>
 				</div>
-				<div class="grid-33">
+				<div class="gs-grid-33">
 					<h3><?php _e( 'Colors','generate-sections' ); ?></h3>
 					<label for="background_color"><?php _e( 'Background Color','generate-sections' );?></label>
 					<p>
@@ -226,7 +226,7 @@ function generate_sections_print_templates() {
 						<input class="generate-sections-color" type="text" name="link_color_hover" id="link_color_hover" value="{{{ data.link_color_hover }}}"/>
 					</p>
 				</div>
-				<div class="grid-33">
+				<div class="gs-grid-33">
 					<h3><?php _e( 'Background','generate-sections' ); ?></h3>
 					<label for="generate-sections-background-image"><?php _e( 'Background Image','generate-sections' );?></label>
 					<p id="generate-section-image-preview"></p>

@@ -14,9 +14,9 @@ function generate_menu_plus_reset_settings()
 		<p><input type="hidden" name="generate_menu_plus_reset_customizer" value="generate_menu_plus_reset_customizer_settings" /></p>
 		<p>
 			<?php 
-			$warning = 'return confirm("' . __( 'Warning: This will delete your settings.','generate-menu-plus' ) . '")';
+			$warning = 'return confirm("' . __( 'Warning: This will delete your settings.','menu-plus' ) . '")';
 			wp_nonce_field( 'generate_menu_plus_reset_customizer_nonce', 'generate_menu_plus_reset_customizer_nonce' );
-			submit_button( __( 'Delete Menu Plus Customizer Settings', 'generate-menu-plus' ), 'menu-plus-button', 'menu-plus-submit', false, array( 'onclick' => $warning ) ); 
+			submit_button( __( 'Delete Menu Plus Customizer Settings', 'menu-plus' ), 'menu-plus-button', 'menu-plus-submit', false, array( 'onclick' => $warning ) ); 
 			?>
 		</p>
 	</form>
@@ -53,7 +53,7 @@ if ( ! function_exists( 'generate_menu_plus_add_export' ) ) :
 			<p><input type="hidden" name="generate_menu_plus_export_action" value="export_menu_plus_settings" /></p>
 			<p>
 				<?php wp_nonce_field( 'generate_menu_plus_export_nonce', 'generate_menu_plus_export_nonce' ); ?>
-				<?php submit_button( __( 'Export Menu Plus Customizer Settings', 'generate-menu-plus' ), 'button-primary', 'submit', false ); ?>
+				<?php submit_button( __( 'Export Menu Plus Customizer Settings', 'menu-plus' ), 'button-primary', 'submit', false ); ?>
 			</p>
 		</form>
 		<?php

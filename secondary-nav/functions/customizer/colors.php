@@ -13,7 +13,7 @@ if ( defined( 'GENERATE_COLORS_VERSION' ) ) :
 		'secondary_navigation_color_section',
 		// Arguments array
 		array(
-			'title' => __( 'Secondary Navigation', 'generate-secondary-nav' ),
+			'title' => __( 'Secondary Navigation','secondary-nav' ),
 			'capability' => 'edit_theme_options',
 			'priority' => 71,
 			'panel' => $colors_panel
@@ -25,37 +25,37 @@ if ( defined( 'GENERATE_COLORS_VERSION' ) ) :
 	$secondary_navigation_colors[] = array(
 		'slug'=>'navigation_background_color', 
 		'default' => $defaults['navigation_background_color'],
-		'label' => __('Background', 'generate-secondary-nav'),
+		'label' => __('Background','secondary-nav'),
 		'priority' => 1
 	);
 	$secondary_navigation_colors[] = array(
 		'slug'=>'navigation_text_color', 
 		'default' => $defaults['navigation_text_color'],
-		'label' => __('Text', 'generate-secondary-nav'),
+		'label' => __('Text','secondary-nav'),
 		'priority' => 2
 	);
 	$secondary_navigation_colors[] = array(
 		'slug'=>'navigation_background_hover_color', 
 		'default' => $defaults['navigation_background_hover_color'],
-		'label' => __('Background Hover', 'generate-secondary-nav'),
+		'label' => __('Background Hover','secondary-nav'),
 		'priority' => 3
 	);
 	$secondary_navigation_colors[] = array(
 		'slug'=>'navigation_text_hover_color', 
 		'default' => $defaults['navigation_text_hover_color'],
-		'label' => __('Text Hover', 'generate-secondary-nav'),
+		'label' => __('Text Hover','secondary-nav'),
 		'priority' => 4
 	);
 	$secondary_navigation_colors[] = array(
 		'slug'=>'navigation_background_current_color', 
 		'default' => $defaults['navigation_background_current_color'],
-		'label' => __('Background Current', 'generate-secondary-nav'),
+		'label' => __('Background Current','secondary-nav'),
 		'priority' => 5
 	);
 	$secondary_navigation_colors[] = array(
 		'slug'=>'navigation_text_current_color', 
 		'default' => $defaults['navigation_text_current_color'],
-		'label' => __('Text Current', 'generate-secondary-nav'),
+		'label' => __('Text Current','secondary-nav'),
 		'priority' => 6
 	);
 	
@@ -93,7 +93,7 @@ if ( defined( 'GENERATE_COLORS_VERSION' ) ) :
 		'secondary_subnavigation_color_section',
 		// Arguments array
 		array(
-			'title' => __( 'Secondary Sub-Navigation', 'generate-secondary-nav' ),
+			'title' => __( 'Secondary Sub-Navigation','secondary-nav' ),
 			'capability' => 'edit_theme_options',
 			'priority' => 72,
 			'panel' => $colors_panel
@@ -105,37 +105,37 @@ if ( defined( 'GENERATE_COLORS_VERSION' ) ) :
 	$subsecondary_navigation_colors[] = array(
 		'slug'=>'subnavigation_background_color', 
 		'default' => $defaults['subnavigation_background_color'],
-		'label' => __('Background', 'generate-secondary-nav'),
+		'label' => __('Background','secondary-nav'),
 		'priority' => 1
 	);
 	$subsecondary_navigation_colors[] = array(
 		'slug'=>'subnavigation_text_color', 
 		'default' => $defaults['subnavigation_text_color'],
-		'label' => __('Text', 'generate-secondary-nav'),
+		'label' => __('Text','secondary-nav'),
 		'priority' => 2
 	);
 	$subsecondary_navigation_colors[] = array(
 		'slug'=>'subnavigation_background_hover_color', 
 		'default' => $defaults['subnavigation_background_hover_color'],
-		'label' => __('Background Hover', 'generate-secondary-nav'),
+		'label' => __('Background Hover','secondary-nav'),
 		'priority' => 3
 	);
 	$subsecondary_navigation_colors[] = array(
 		'slug'=>'subnavigation_text_hover_color', 
 		'default' => $defaults['subnavigation_text_hover_color'],
-		'label' => __('Text Hover', 'generate-secondary-nav'),
+		'label' => __('Text Hover','secondary-nav'),
 		'priority' => 4
 	);
 	$subsecondary_navigation_colors[] = array(
 		'slug'=>'subnavigation_background_current_color', 
 		'default' => $defaults['subnavigation_background_current_color'],
-		'label' => __('Background Current', 'generate-secondary-nav'),
+		'label' => __('Background Current','secondary-nav'),
 		'priority' => 5
 	);
 	$subsecondary_navigation_colors[] = array(
 		'slug'=>'subnavigation_text_current_color', 
 		'default' => $defaults['subnavigation_text_current_color'],
-		'label' => __('Text Current', 'generate-secondary-nav'),
+		'label' => __('Text Current','secondary-nav'),
 		'priority' => 6
 	);
 	foreach( $subsecondary_navigation_colors as $color ) {

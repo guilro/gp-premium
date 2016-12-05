@@ -1,0 +1,55 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Disable Elements\n"
+"POT-Creation-Date: 2016-10-26 13:39-0700\n"
+"PO-Revision-Date: 2015-05-19 10:38-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: langs\n"
+"X-Poedit-SearchPath-1: disable-elements\n"
+
+#: disable-elements/functions/functions.php:82
+msgid "Disable Elements"
+msgstr ""
+
+#: disable-elements/functions/functions.php:177
+#: disable-elements/functions/functions.php:179
+msgid "Header"
+msgstr ""
+
+#: disable-elements/functions/functions.php:181
+#: disable-elements/functions/functions.php:183
+msgid "Primary Navigation"
+msgstr ""
+
+#: disable-elements/functions/functions.php:186
+#: disable-elements/functions/functions.php:188
+msgid "Secondary Navigation"
+msgstr ""
+
+#: disable-elements/functions/functions.php:191
+#: disable-elements/functions/functions.php:193
+msgid "Post Image / Page Header"
+msgstr ""
+
+#: disable-elements/functions/functions.php:195
+#: disable-elements/functions/functions.php:197
+msgid "Content Title"
+msgstr ""
+
+#: disable-elements/functions/functions.php:199
+#: disable-elements/functions/functions.php:201
+msgid "Footer"
+msgstr ""

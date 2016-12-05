@@ -1,0 +1,332 @@
+# Translation by Alexey Chumakov, 2015-2016
+# Feel free to forward any issues or suggestions on translation to Alexey Chumakov
+# (**) comments indicate places for future improvement.
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Sections\n"
+"POT-Creation-Date: 2016-11-11 14:14+0300\n"
+"PO-Revision-Date: 2016-11-11 14:14+0300\n"
+"Last-Translator: Alexey Chumakov <alex@chumakov.ru>\n"
+"Language-Team: \n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ../../../gp-premium/sections\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ../inc\n"
+
+#: ../inc/EDD_SL_Plugin_Updater.php:196
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr "Доступна новая версия %1$s. %2$sПосмотреть подробности %3$s%4$s."
+
+#: ../inc/EDD_SL_Plugin_Updater.php:204
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+"Доступна новая версия %1$s. %2$sПосмотреть подробности %3$s%4$s или "
+"%5$sобновить сейчас%6$s."
+
+#: ../inc/EDD_SL_Plugin_Updater.php:358
+msgid "You do not have permission to install plugin updates"
+msgstr "У вас нет прав для установки обновлений плагинов"
+
+#: ../inc/EDD_SL_Plugin_Updater.php:358
+msgid "Error"
+msgstr "Ошибка"
+
+#: ../inc/activation.php:13
+msgid "Add-on deactivated."
+msgstr "Дополнение деактивировано."
+
+#: ../inc/activation.php:17
+msgid "Add-on activated."
+msgstr "Дополнение активировано."
+
+#: ../inc/activation.php:58
+msgid "GP Premium"
+msgstr "Дополнения GP Premium"
+
+#: ../inc/activation.php:66
+msgid "Bulk Actions"
+msgstr "Пакетные операции"
+
+#: ../inc/activation.php:67 ../inc/activation.php:101
+msgid "Activate"
+msgstr "Активировать"
+
+#: ../inc/activation.php:68 ../inc/activation.php:88
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: ../inc/activation.php:71 functions/metaboxes/views/sections-template.php:80
+msgid "Apply"
+msgstr "Применить"
+
+#: ../inc/activation.php:427
+msgid "Enter valid license key for automatic updates."
+msgstr "Для автоматического обновления укажите действующий ключ лицензии."
+
+#: ../inc/verify.php:88
+msgid "License deactivated."
+msgstr "Лицензия деактивирована."
+
+#: ../inc/verify.php:92
+msgid "License activated."
+msgstr "Лицензия активирована."
+
+#: ../inc/verify.php:125
+#, php-format
+msgid "Updates %s"
+msgstr "Обновления %s"
+
+#: ../inc/verify.php:125
+msgid "Help"
+msgstr "Справка"
+
+#: ../inc/verify.php:150
+msgid "License Key"
+msgstr "Лицензионный ключ"
+
+#: ../inc/verify.php:155
+msgid "Update"
+msgstr "Обновить"
+
+#: ../inc/verify.php:244
+#, php-format
+msgid "Your license key expired on %s."
+msgstr "Ваш лицензионный ключ истек %s."
+
+#: ../inc/verify.php:251
+msgid "Your license key has been disabled."
+msgstr "Ваш лицензионный ключ заблокирован."
+
+#: ../inc/verify.php:256
+msgid "Invalid license."
+msgstr "Недействительная лицензия."
+
+#: ../inc/verify.php:262
+msgid "Your license is not active for this URL."
+msgstr "Ваша лицензия не активна для этого URL."
+
+#: ../inc/verify.php:267
+#, php-format
+msgid "This appears to be an invalid license key for %s."
+msgstr "Похоже, это не действующий лицензионный ключ для %s."
+
+#: ../inc/verify.php:272
+msgid "Your license key has reached its activation limit."
+msgstr "Ваш лицензионный ключ достиг предела активаций."
+
+#: ../inc/verify.php:277
+msgid "An error occurred, please try again."
+msgstr "Произошла ошибка, пожалуйста, попробуйте ещё раз."
+
+#: functions/_deprecated-functions.php:26
+msgid "Error: Content already detected in default editor."
+msgstr "Ошибка: в редакторе по умолчанию уже есть содержимое."
+
+#: functions/_deprecated-functions.php:27
+msgid ""
+"Please activate the \"Visual\" tab in your main editor before transferring "
+"content."
+msgstr ""
+"Пожалуйста, до переноса содержимого откройте вкладку \"Визуально\" основного "
+"редактора."
+
+#: functions/metaboxes/metabox-functions.php:47
+msgid "Use Sections"
+msgstr "Использовать секции"
+
+#: functions/metaboxes/metabox-functions.php:48
+msgid "Sections"
+msgstr "Секции"
+
+#: functions/metaboxes/metabox-functions.php:205
+msgid "This action can not be undone, are you sure?"
+msgstr "Это действие нельзя отменить; вы уверены?"
+
+#: functions/metaboxes/metabox-functions.php:208
+msgid "Section"
+msgstr "Секция"
+
+#: functions/metaboxes/metabox-functions.php:209
+#: functions/metaboxes/metabox-functions.php:212
+msgid "Content"
+msgstr "Содержимое"
+
+#: functions/metaboxes/metabox-functions.php:211
+msgid "Settings"
+msgstr "Настройки"
+
+#: functions/metaboxes/metabox-functions.php:217
+msgid "Section Background"
+msgstr "Фон секции"
+
+#: functions/metaboxes/metabox-functions.php:218
+msgid "Set as Section Background"
+msgstr "Установить как фон секции"
+
+#: functions/metaboxes/metabox-functions.php:222
+msgid "Insert into Section"
+msgstr "Вставить в секцию"
+
+#: functions/metaboxes/metabox-functions.php:223
+#: functions/metaboxes/views/sections-template.php:74
+msgid "Edit Section"
+msgstr "Редактировать секцию"
+
+#: functions/metaboxes/views/sections-template.php:35
+msgid "Click to edit"
+msgstr "Нажмите, чтобы редактировать"
+
+#: functions/metaboxes/views/sections-template.php:37
+msgid "Click to edit content"
+msgstr "Нажмите, чтобы редактировать содержимое"
+
+#: functions/metaboxes/views/sections-template.php:38
+msgid "Click to edit settings"
+msgstr "Нажмите, чтобы изменить параметры"
+
+#: functions/metaboxes/views/sections-template.php:39
+msgid "Click and drag to sort"
+msgstr "Нажмите и тащите, чтобы упорядочить"
+
+#: functions/metaboxes/views/sections-template.php:40
+msgid "Click to remove"
+msgstr "Нажмите, чтобы убрать"
+
+#: functions/metaboxes/views/sections-template.php:54
+msgid "Add Section"
+msgstr "Добавить секцию"
+
+#: functions/metaboxes/views/sections-template.php:55
+msgid "Remove Sections"
+msgstr "Удалить секции"
+
+#: functions/metaboxes/views/sections-template.php:69
+msgid "Close"
+msgstr "Закрыть"
+
+#: functions/metaboxes/views/sections-template.php:81
+msgid "Cancel"
+msgstr "Отмена"
+
+#: functions/metaboxes/views/sections-template.php:110
+msgid "Section Label"
+msgstr "Метка секции"
+
+#: functions/metaboxes/views/sections-template.php:126
+msgid "Add Media"
+msgstr "Добавить медиафайл"
+
+#: functions/metaboxes/views/sections-template.php:131
+msgid "Visual"
+msgstr "Визуально"
+
+#: functions/metaboxes/views/sections-template.php:132
+msgctxt "Name for the Text editor tab (formerly HTML)"
+msgid "Text"
+msgstr "Текст"
+
+#: functions/metaboxes/views/sections-template.php:161
+msgid "Layout"
+msgstr "Разметка"
+
+#: functions/metaboxes/views/sections-template.php:162
+msgid "Box Type"
+msgstr "Тип блока"
+
+#: functions/metaboxes/views/sections-template.php:166
+#: functions/metaboxes/views/sections-template.php:176
+msgid "Full Width"
+msgstr "Во всю ширину"
+
+#: functions/metaboxes/views/sections-template.php:167
+#: functions/metaboxes/views/sections-template.php:175
+msgid "Contained"
+msgstr "Ограниченный"
+
+#: functions/metaboxes/views/sections-template.php:171
+msgid "Inner Box Type"
+msgstr "Тип внутреннего блока"
+
+#: functions/metaboxes/views/sections-template.php:180
+msgid "Custom Classes"
+msgstr "Настраиваемые классы"
+
+#: functions/metaboxes/views/sections-template.php:186
+msgid "Top Padding"
+msgstr "Отступ сверху"
+
+#: functions/metaboxes/views/sections-template.php:195
+msgid "Bottom Padding"
+msgstr "Отступ снизу"
+
+#: functions/metaboxes/views/sections-template.php:205
+msgid "Colors"
+msgstr "Цвета"
+
+#: functions/metaboxes/views/sections-template.php:206
+msgid "Background Color"
+msgstr "Цвет фона"
+
+#: functions/metaboxes/views/sections-template.php:211
+msgid "Text Color"
+msgstr "Цвет текста"
+
+#: functions/metaboxes/views/sections-template.php:217
+msgid "Link Color"
+msgstr "Цвет ссылок"
+
+#: functions/metaboxes/views/sections-template.php:223
+msgid "Link Color Hover"
+msgstr "Цвет ссылок — наведение"
+
+#: functions/metaboxes/views/sections-template.php:230
+msgid "Background"
+msgstr "Фон"
+
+#: functions/metaboxes/views/sections-template.php:231
+#: functions/metaboxes/views/sections-template.php:236
+msgid "Background Image"
+msgstr "Фоновое изображение"
+
+#: functions/metaboxes/views/sections-template.php:236
+msgid "Upload"
+msgstr "Загрузить"
+
+#: functions/metaboxes/views/sections-template.php:237
+msgid "Remove"
+msgstr "Убрать"
+
+#: functions/metaboxes/views/sections-template.php:241
+msgid "Parallax Effect"
+msgstr "Эффект параллакса"
+
+#: functions/metaboxes/views/sections-template.php:244
+msgid "Disable"
+msgstr "Отключить"
+
+#: functions/metaboxes/views/sections-template.php:245
+msgid "Enable"
+msgstr "Включить"
+
+#: functions/metaboxes/views/sections.php:8
+msgid "Javascript must be enabled to use Generate Sections"
+msgstr "Для использования Generate Sections нужно включить Javascript."
+
+#: functions/templates/template.php:103
+msgid "No sections added!"
+msgstr "Не добавлено ни одной секции."

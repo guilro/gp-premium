@@ -7,7 +7,7 @@ if ( ! function_exists( 'generate_secondary_nav_setup' ) ) :
 	function generate_secondary_nav_setup() {
 
 		register_nav_menus( array(
-			'secondary' => __( 'Secondary Menu', 'generate-secondary-nav' ),
+			'secondary' => __( 'Secondary Menu','secondary-nav' ),
 		) );
 
 	}
@@ -42,6 +42,7 @@ function generate_secondary_nav_get_defaults()
 	$generate_defaults = array(
 		'secondary_nav_mobile_label' => 'Menu',
 		'secondary_nav_layout_setting' => 'secondary-fluid-nav',
+		'secondary_nav_inner_width' => 'contained',
 		'secondary_nav_position_setting' => 'secondary-nav-above-header',
 		'secondary_nav_alignment' => 'right',
 		'navigation_background_color' => '#636363',
@@ -102,7 +103,7 @@ function generate_secondary_nav_customize_register( $wp_customize ) {
 			'priority'       => 100,
 			'capability'     => 'edit_theme_options',
 			'theme_supports' => '',
-			'title'          => __( 'Secondary Navigation', 'generate-secondary-nav' ),
+			'title'          => __( 'Secondary Navigation','secondary-nav' ),
 			'description'    => '',
 		) );
 	
@@ -114,7 +115,7 @@ function generate_secondary_nav_customize_register( $wp_customize ) {
 		'secondary_nav_section',
 		// Arguments array
 		array(
-			'title' => __( 'Secondary Navigation', 'generate-secondary-nav' ),
+			'title' => __( 'Secondary Navigation','secondary-nav' ),
 			'capability' => 'edit_theme_options',
 			'priority' => 31,
 			'panel' => $layout_panel
@@ -132,7 +133,7 @@ function generate_secondary_nav_customize_register( $wp_customize ) {
 		 
 	$wp_customize->add_control(
 		'secondary_nav_mobile_label_control', array(
-			'label' => __('Mobile Menu Label', 'generate-secondary-nav'),
+			'label' => __('Mobile Menu Label','secondary-nav'),
 			'section' => 'secondary_nav_section',
 			'settings' => 'generate_secondary_nav_settings[secondary_nav_mobile_label]',
 			'priority' => 10
@@ -159,14 +160,46 @@ function generate_secondary_nav_customize_register( $wp_customize ) {
 		// Arguments array
 		array(
 			'type' => 'select',
-			'label' => __( 'Navigation Layout', 'generate-secondary-nav' ),
+			'label' => __( 'Navigation Width','secondary-nav' ),
 			'section' => 'secondary_nav_section',
 			'choices' => array(
-				'secondary-fluid-nav' => __( 'Fluid / Full Width', 'generate-secondary-nav' ),
-				'secondary-contained-nav' => __( 'Contained', 'generate-secondary-nav' )
+				'secondary-fluid-nav' => __( 'Full','secondary-nav' ),
+				'secondary-contained-nav' => __( 'Contained','secondary-nav' )
 			),
 			// This last one must match setting ID from above
 			'settings' => 'generate_secondary_nav_settings[secondary_nav_layout_setting]',
+			'priority' => 15
+		)
+	);
+	
+	// Add navigation setting
+	$wp_customize->add_setting(
+		// ID
+		'generate_secondary_nav_settings[secondary_nav_inner_width]',
+		// Arguments array
+		array(
+			'default' => $defaults['secondary_nav_inner_width'],
+			'type' => 'option',
+			'sanitize_callback' => 'generate_secondary_nav_sanitize_choices',
+			'transport' => 'postMessage'
+		)
+	);
+	
+	// Add navigation control
+	$wp_customize->add_control(
+		// ID
+		'generate_secondary_nav_settings[secondary_nav_inner_width]',
+		// Arguments array
+		array(
+			'type' => 'select',
+			'label' => __( 'Inner Navigation Width','secondary-nav' ),
+			'section' => 'secondary_nav_section',
+			'choices' => array(
+				'full-width' => __( 'Full','secondary-nav' ),
+				'contained' => __( 'Contained','secondary-nav' )
+			),
+			// This last one must match setting ID from above
+			'settings' => 'generate_secondary_nav_settings[secondary_nav_inner_width]',
 			'priority' => 15
 		)
 	);
@@ -191,15 +224,15 @@ function generate_secondary_nav_customize_register( $wp_customize ) {
 		// Arguments array
 		array(
 			'type' => 'select',
-			'label' => __( 'Navigation Position', 'generate-secondary-nav' ),
+			'label' => __( 'Navigation Position','secondary-nav' ),
 			'section' => 'secondary_nav_section',
 			'choices' => array(
-				'secondary-nav-below-header' => __( 'Below Header', 'generate-secondary-nav' ),
-				'secondary-nav-above-header' => __( 'Above Header', 'generate-secondary-nav' ),
-				'secondary-nav-float-right' => __( 'Float Right', 'generate-secondary-nav' ),
-				'secondary-nav-left-sidebar' => __( 'Left Sidebar', 'generate-secondary-nav' ),
-				'secondary-nav-right-sidebar' => __( 'Right Sidebar', 'generate-secondary-nav' ),
-				'' => __( 'No Navigation', 'generate-secondary-nav' )
+				'secondary-nav-below-header' => __( 'Below Header','secondary-nav' ),
+				'secondary-nav-above-header' => __( 'Above Header','secondary-nav' ),
+				'secondary-nav-float-right' => __( 'Float Right','secondary-nav' ),
+				'secondary-nav-left-sidebar' => __( 'Left Sidebar','secondary-nav' ),
+				'secondary-nav-right-sidebar' => __( 'Right Sidebar','secondary-nav' ),
+				'' => __( 'No Navigation','secondary-nav' )
 			),
 			// This last one must match setting ID from above
 			'settings' => 'generate_secondary_nav_settings[secondary_nav_position_setting]',
@@ -227,12 +260,12 @@ function generate_secondary_nav_customize_register( $wp_customize ) {
 		// Arguments array
 		array(
 			'type' => 'select',
-			'label' => __( 'Navigation Alignment', 'generate-secondary-nav' ),
+			'label' => __( 'Navigation Alignment','secondary-nav' ),
 			'section' => 'secondary_nav_section',
 			'choices' => array(
-				'left' => __( 'Left', 'generate-secondary-nav' ),
-				'center' => __( 'Center', 'generate-secondary-nav' ),
-				'right' => __( 'Right', 'generate-secondary-nav' )
+				'left' => __( 'Left','secondary-nav' ),
+				'center' => __( 'Center','secondary-nav' ),
+				'right' => __( 'Right','secondary-nav' )
 			),
 			// This last one must match setting ID from above
 			'settings' => 'generate_secondary_nav_settings[secondary_nav_alignment]',
@@ -464,7 +497,7 @@ function generate_secondary_navigation_position()
 	if ( has_nav_menu( 'secondary' ) ) :
 		?>
 		<nav itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope" id="secondary-navigation" <?php generate_secondary_navigation_class(); ?>>
-			<div class="inside-navigation grid-container grid-parent">
+			<div <?php generate_inside_secondary_navigation_class(); ?>>
 				<?php do_action('generate_inside_secondary_navigation'); ?>
 				<button class="menu-toggle secondary-menu-toggle">
 					<?php do_action( 'generate_inside_secondary_mobile_menu' ); ?>
@@ -585,6 +618,33 @@ function generate_secondary_navigation_classes( $classes )
 	$nav_layout = $generate_settings['secondary_nav_layout_setting'];
 	
 	if ( $nav_layout == 'secondary-contained-nav' ) :
+		$classes[] = 'grid-container';
+		$classes[] = 'grid-parent';
+	endif;
+
+	return $classes;
+	
+}
+endif;
+
+if ( ! function_exists( 'generate_inside_secondary_navigation_classes' ) ) :
+/**
+ * Adds custom classes to the inner navigation
+ * @since 1.3.41
+ */
+add_filter( 'generate_inside_secondary_navigation_class', 'generate_inside_secondary_navigation_classes');
+function generate_inside_secondary_navigation_classes( $classes )
+{
+	
+	$classes[] = 'inside-navigation';
+	// Get theme options
+	$generate_settings = wp_parse_args( 
+		get_option( 'generate_secondary_nav_settings', array() ), 
+		generate_secondary_nav_get_defaults() 
+	);
+	$inner_nav_width = $generate_settings['secondary_nav_inner_width'];
+	
+	if ( $inner_nav_width !== 'full-width' ) :
 		$classes[] = 'grid-container';
 		$classes[] = 'grid-parent';
 	endif;
@@ -871,6 +931,31 @@ function generate_get_secondary_menu_class( $class = '' ) {
 	$classes = array_map('esc_attr', $classes);
 
 	return apply_filters('generate_secondary_menu_class', $classes, $class);
+}
+endif;
+
+if ( ! function_exists( 'generate_inside_secondary_navigation_class' ) ) :
+/**
+ * Display the classes for the inner navigation.
+ *
+ * @since 0.1
+ * @param string|array $class One or more classes to add to the class list.
+ */
+function generate_inside_secondary_navigation_class( $class = '' ) {
+	$classes = array();
+
+	if ( !empty($class) ) {
+		if ( !is_array( $class ) )
+			$class = preg_split('#\s+#', $class);
+		$classes = array_merge($classes, $class);
+	}
+
+	$classes = array_map('esc_attr', $classes);
+
+	$return = apply_filters('generate_inside_secondary_navigation_class', $classes, $class);
+	
+	// Separates classes with a single space, collates classes for post DIV
+	echo 'class="' . join( ' ', $return ) . '"';
 }
 endif;
 

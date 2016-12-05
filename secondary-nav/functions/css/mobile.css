@@ -1,11 +1,3 @@
-@media (max-width: 1024px) {
-	.secondary-nav-float-right .secondary-navigation {
-		float: none;
-		margin-bottom: 15px;
-		margin-top: 0;
-	}
-}
-
 @media (max-width: 768px) {
 	.secondary-navigation .menu-toggle {
 		text-align: center;

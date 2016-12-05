@@ -2,11 +2,19 @@
 // No direct access, please
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+if ( ! function_exists( 'generate_get_blog_page_header' ) ) :
+function generate_get_blog_page_header()
+{
+	$page_header = ( is_home() ) ? true : false;
+	return apply_filters( 'generate_get_blog_page_header', $page_header );
+}
+endif;
+
 if ( ! function_exists( 'generate_blog_page_header_area_start_container' ) ) :
 function generate_blog_page_header_area_start_container($image_class, $content_class)
 {
 	// Don't run the function unless we're on the blog
-	if ( ! is_home() )
+	if ( ! generate_get_blog_page_header() )
 		return;
 	
 	$options = get_option( 'generate_page_header_options' );
@@ -96,7 +104,7 @@ function generate_blog_page_header_area($image_class, $content_class)
 {
 
 	// Don't run the function unless we're on the blog
-	if ( ! is_home() )
+	if ( ! generate_get_blog_page_header() )
 		return;
 		
 	$options = get_option( 'generate_page_header_options' );

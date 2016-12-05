@@ -80,7 +80,7 @@ function generate_backgrounds_customize( $wp_customize )
 			$wp_customize->add_panel( 'generate_backgrounds_panel', array(
 				'capability'     => 'edit_theme_options',
 				'theme_supports' => '',
-				'title'          => __( 'Background Images','generate-backgrounds' ),
+				'title'          => __( 'Background Images','backgrounds' ),
 				'priority'		 => 55
 			) );
 		}
@@ -89,7 +89,7 @@ function generate_backgrounds_customize( $wp_customize )
 	$wp_customize->add_section(
 		'backgrounds_section',
 		array(
-			'title' => __( 'Background Images', 'generate-backgrounds' ),
+			'title' => __( 'Background Images','backgrounds' ),
 			'capability' => 'edit_theme_options',
 			'priority' => 50
 		)
@@ -98,7 +98,7 @@ function generate_backgrounds_customize( $wp_customize )
 	$wp_customize->add_section(
 		'generate_backgrounds_body',
 		array(
-			'title' => __( 'Body', 'generate-backgrounds' ),
+			'title' => __( 'Body','backgrounds' ),
 			'capability' => 'edit_theme_options',
 			'priority' => 5,
 			'panel' => 'generate_backgrounds_panel'
@@ -125,7 +125,7 @@ function generate_backgrounds_customize( $wp_customize )
 			array(
 				'section'    => 'generate_backgrounds_body',
 				'settings'   => 'generate_background_settings[body_image]',
-				'label' => __( 'Body','generate-backgrounds' )
+				'label' => __( 'Body','backgrounds' )
 			)
 		)
 	);
@@ -145,10 +145,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_body',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-backgrounds' ),
-				'repeat-x' => __( 'Repeat x', 'generate-backgrounds' ),
-				'repeat-y' => __( 'Repeat y', 'generate-backgrounds' ),
-				'no-repeat' => __( 'No Repeat', 'generate-backgrounds' )
+				'' => __( 'Repeat','backgrounds' ),
+				'repeat-x' => __( 'Repeat x','backgrounds' ),
+				'repeat-y' => __( 'Repeat y','backgrounds' ),
+				'no-repeat' => __( 'No Repeat','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[body_repeat]',
 			'priority' => 50
@@ -170,10 +170,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_body',
 			'choices' => array(
-				'' => __( 'Size (Auto)', 'generate-backgrounds' ),
-				'100%' => __( '100% Width', 'generate-backgrounds' ),
-				'cover' => __( 'Cover', 'generate-backgrounds' ),
-				'contain' => __( 'Contain', 'generate-backgrounds' )
+				'' => __( 'Size (Auto)','backgrounds' ),
+				'100%' => __( '100% Width','backgrounds' ),
+				'cover' => __( 'Cover','backgrounds' ),
+				'contain' => __( 'Contain','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[body_size]',
 			'priority' => 100
@@ -195,10 +195,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_body',
 			'choices' => array(
-				'' => __( 'Attachment', 'generate-backgrounds' ),
-				'fixed' => __( 'Fixed', 'generate-backgrounds' ),
-				'local' => __( 'Local', 'generate-backgrounds' ),
-				'inherit' => __( 'Inherit', 'generate-backgrounds' )
+				'' => __( 'Attachment','backgrounds' ),
+				'fixed' => __( 'Fixed','backgrounds' ),
+				'local' => __( 'Local','backgrounds' ),
+				'inherit' => __( 'Inherit','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[body_attachment]',
 			'priority' => 150
@@ -223,7 +223,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'settings'   => 'generate_background_settings[body_position]',
 				'priority' => 200,
 				'label' => 'left top, x% y%, xpos ypos (px)',
-				'placeholder' => __('Position','generate-backgrounds')
+				'placeholder' => __('Position','backgrounds')
 			)
 		)
 	);
@@ -231,7 +231,7 @@ function generate_backgrounds_customize( $wp_customize )
 	$wp_customize->add_section(
 		'generate_backgrounds_header',
 		array(
-			'title' => __( 'Header', 'generate-backgrounds' ),
+			'title' => __( 'Header','backgrounds' ),
 			'capability' => 'edit_theme_options',
 			'priority' => 10,
 			'panel' => 'generate_backgrounds_panel'
@@ -259,7 +259,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'section'    => 'generate_backgrounds_header',
 				'settings'   => 'generate_background_settings[header_image]',
 				'priority' => 350,
-				'label' => __( 'Header', 'generate-backgrounds' ),
+				'label' => __( 'Header','backgrounds' ),
 			)
 		)
 	);
@@ -279,10 +279,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_header',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-backgrounds' ),
-				'repeat-x' => __( 'Repeat x', 'generate-backgrounds' ),
-				'repeat-y' => __( 'Repeat y', 'generate-backgrounds' ),
-				'no-repeat' => __( 'No Repeat', 'generate-backgrounds' )
+				'' => __( 'Repeat','backgrounds' ),
+				'repeat-x' => __( 'Repeat x','backgrounds' ),
+				'repeat-y' => __( 'Repeat y','backgrounds' ),
+				'no-repeat' => __( 'No Repeat','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[header_repeat]',
 			'priority' => 400
@@ -304,10 +304,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_header',
 			'choices' => array(
-				'' => __( 'Size (Auto)', 'generate-backgrounds' ),
-				'100%' => __( '100% Width', 'generate-backgrounds' ),
-				'cover' => __( 'Cover', 'generate-backgrounds' ),
-				'contain' => __( 'Contain', 'generate-backgrounds' )
+				'' => __( 'Size (Auto)','backgrounds' ),
+				'100%' => __( '100% Width','backgrounds' ),
+				'cover' => __( 'Cover','backgrounds' ),
+				'contain' => __( 'Contain','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[header_size]',
 			'priority' => 450
@@ -329,10 +329,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_header',
 			'choices' => array(
-				'' => __( 'Attachment', 'generate-backgrounds' ),
-				'fixed' => __( 'Fixed', 'generate-backgrounds' ),
-				'local' => __( 'Local', 'generate-backgrounds' ),
-				'inherit' => __( 'Inherit', 'generate-backgrounds' )
+				'' => __( 'Attachment','backgrounds' ),
+				'fixed' => __( 'Fixed','backgrounds' ),
+				'local' => __( 'Local','backgrounds' ),
+				'inherit' => __( 'Inherit','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[header_attachment]',
 			'priority' => 500
@@ -357,7 +357,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'settings'   => 'generate_background_settings[header_position]',
 				'priority' => 550,
 				'label' => 'left top, x% y%, xpos ypos (px)',
-				'placeholder' => __('Position','generate-backgrounds')
+				'placeholder' => __('Position','backgrounds')
 			)
 		)
 	);
@@ -365,7 +365,7 @@ function generate_backgrounds_customize( $wp_customize )
 	$wp_customize->add_section(
 		'generate_backgrounds_navigation',
 		array(
-			'title' => __( 'Primary Navigation', 'generate-backgrounds' ),
+			'title' => __( 'Primary Navigation','backgrounds' ),
 			'capability' => 'edit_theme_options',
 			'priority' => 15,
 			'panel' => 'generate_backgrounds_panel'
@@ -393,7 +393,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'section'    => 'generate_backgrounds_navigation',
 				'settings'   => 'generate_background_settings[nav_image]',
 				'priority' => 750,
-				'label' => __( 'Navigation', 'generate-backgrounds' ), 
+				'label' => __( 'Navigation','backgrounds' ), 
 			)
 		)
 	);
@@ -413,10 +413,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_navigation',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-backgrounds' ),
-				'repeat-x' => __( 'Repeat x', 'generate-backgrounds' ),
-				'repeat-y' => __( 'Repeat y', 'generate-backgrounds' ),
-				'no-repeat' => __( 'No Repeat', 'generate-backgrounds' )
+				'' => __( 'Repeat','backgrounds' ),
+				'repeat-x' => __( 'Repeat x','backgrounds' ),
+				'repeat-y' => __( 'Repeat y','backgrounds' ),
+				'no-repeat' => __( 'No Repeat','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[nav_repeat]',
 			'priority' => 800
@@ -444,7 +444,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'section'    => 'generate_backgrounds_navigation',
 				'settings'   => 'generate_background_settings[nav_item_image]',
 				'priority' => 950,
-				'label' => __( 'Navigation Item', 'generate-backgrounds' ), 
+				'label' => __( 'Navigation Item','backgrounds' ), 
 			)
 		)
 	);
@@ -464,10 +464,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_navigation',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-backgrounds' ),
-				'repeat-x' => __( 'Repeat x', 'generate-backgrounds' ),
-				'repeat-y' => __( 'Repeat y', 'generate-backgrounds' ),
-				'no-repeat' => __( 'No Repeat', 'generate-backgrounds' )
+				'' => __( 'Repeat','backgrounds' ),
+				'repeat-x' => __( 'Repeat x','backgrounds' ),
+				'repeat-y' => __( 'Repeat y','backgrounds' ),
+				'no-repeat' => __( 'No Repeat','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[nav_item_repeat]',
 			'priority' => 1000
@@ -495,7 +495,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'section'    => 'generate_backgrounds_navigation',
 				'settings'   => 'generate_background_settings[nav_item_hover_image]',
 				'priority' => 1150,
-				'label' => __( 'Navigation Item Hover', 'generate-backgrounds' ),
+				'label' => __( 'Navigation Item Hover','backgrounds' ),
 			)
 		)
 	);
@@ -515,10 +515,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_navigation',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-backgrounds' ),
-				'repeat-x' => __( 'Repeat x', 'generate-backgrounds' ),
-				'repeat-y' => __( 'Repeat y', 'generate-backgrounds' ),
-				'no-repeat' => __( 'No Repeat', 'generate-backgrounds' )
+				'' => __( 'Repeat','backgrounds' ),
+				'repeat-x' => __( 'Repeat x','backgrounds' ),
+				'repeat-y' => __( 'Repeat y','backgrounds' ),
+				'no-repeat' => __( 'No Repeat','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[nav_item_hover_repeat]',
 			'priority' => 1200
@@ -546,7 +546,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'section'    => 'generate_backgrounds_navigation',
 				'settings'   => 'generate_background_settings[nav_item_current_image]',
 				'priority' => 1350,
-				'label' => __( 'Navigation Item Current', 'generate-backgrounds' ),
+				'label' => __( 'Navigation Item Current','backgrounds' ),
 			)
 		)
 	);
@@ -566,10 +566,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_navigation',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-backgrounds' ),
-				'repeat-x' => __( 'Repeat x', 'generate-backgrounds' ),
-				'repeat-y' => __( 'Repeat y', 'generate-backgrounds' ),
-				'no-repeat' => __( 'No Repeat', 'generate-backgrounds' )
+				'' => __( 'Repeat','backgrounds' ),
+				'repeat-x' => __( 'Repeat x','backgrounds' ),
+				'repeat-y' => __( 'Repeat y','backgrounds' ),
+				'no-repeat' => __( 'No Repeat','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[nav_item_current_repeat]',
 			'priority' => 1400
@@ -579,7 +579,7 @@ function generate_backgrounds_customize( $wp_customize )
 	$wp_customize->add_section(
 		'generate_backgrounds_subnavigation',
 		array(
-			'title' => __( 'Primary Sub-Navigation', 'generate-backgrounds' ),
+			'title' => __( 'Primary Sub-Navigation','backgrounds' ),
 			'capability' => 'edit_theme_options',
 			'priority' => 20,
 			'panel' => 'generate_backgrounds_panel'
@@ -607,7 +607,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'section'    => 'generate_backgrounds_subnavigation',
 				'settings'   => 'generate_background_settings[sub_nav_item_image]',
 				'priority' => 1700,
-				'label' => __( 'Sub-Navigation Item', 'generate-backgrounds' ), 
+				'label' => __( 'Sub-Navigation Item','backgrounds' ), 
 			)
 		)
 	);
@@ -627,10 +627,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_subnavigation',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-backgrounds' ),
-				'repeat-x' => __( 'Repeat x', 'generate-backgrounds' ),
-				'repeat-y' => __( 'Repeat y', 'generate-backgrounds' ),
-				'no-repeat' => __( 'No Repeat', 'generate-backgrounds' )
+				'' => __( 'Repeat','backgrounds' ),
+				'repeat-x' => __( 'Repeat x','backgrounds' ),
+				'repeat-y' => __( 'Repeat y','backgrounds' ),
+				'no-repeat' => __( 'No Repeat','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[sub_nav_item_repeat]',
 			'priority' => 1800
@@ -658,7 +658,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'section'    => 'generate_backgrounds_subnavigation',
 				'settings'   => 'generate_background_settings[sub_nav_item_hover_image]',
 				'priority' => 2000,
-				'label' => __( 'Sub-Navigation Item Hover', 'generate-backgrounds' ), 
+				'label' => __( 'Sub-Navigation Item Hover','backgrounds' ), 
 			)
 		)
 	);
@@ -678,10 +678,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_subnavigation',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-backgrounds' ),
-				'repeat-x' => __( 'Repeat x', 'generate-backgrounds' ),
-				'repeat-y' => __( 'Repeat y', 'generate-backgrounds' ),
-				'no-repeat' => __( 'No Repeat', 'generate-backgrounds' )
+				'' => __( 'Repeat','backgrounds' ),
+				'repeat-x' => __( 'Repeat x','backgrounds' ),
+				'repeat-y' => __( 'Repeat y','backgrounds' ),
+				'no-repeat' => __( 'No Repeat','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[sub_nav_item_hover_repeat]',
 			'priority' => 2100
@@ -709,7 +709,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'section'    => 'generate_backgrounds_subnavigation',
 				'settings'   => 'generate_background_settings[sub_nav_item_current_image]',
 				'priority' => 2300,
-				'label' => __( 'Sub-Navigation Item Current', 'generate-backgrounds' ), 
+				'label' => __( 'Sub-Navigation Item Current','backgrounds' ), 
 			)
 		)
 	);
@@ -729,10 +729,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_subnavigation',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-backgrounds' ),
-				'repeat-x' => __( 'Repeat x', 'generate-backgrounds' ),
-				'repeat-y' => __( 'Repeat y', 'generate-backgrounds' ),
-				'no-repeat' => __( 'No Repeat', 'generate-backgrounds' )
+				'' => __( 'Repeat','backgrounds' ),
+				'repeat-x' => __( 'Repeat x','backgrounds' ),
+				'repeat-y' => __( 'Repeat y','backgrounds' ),
+				'no-repeat' => __( 'No Repeat','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[sub_nav_item_current_repeat]',
 			'priority' => 2400
@@ -742,7 +742,7 @@ function generate_backgrounds_customize( $wp_customize )
 	$wp_customize->add_section(
 		'generate_backgrounds_content',
 		array(
-			'title' => __( 'Content', 'generate-backgrounds' ),
+			'title' => __( 'Content','backgrounds' ),
 			'capability' => 'edit_theme_options',
 			'priority' => 25,
 			'panel' => 'generate_backgrounds_panel'
@@ -770,7 +770,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'section'    => 'generate_backgrounds_content',
 				'settings'   => 'generate_background_settings[content_image]',
 				'priority' => 2700,
-				'label' => __( 'Content', 'generate-backgrounds' ), 
+				'label' => __( 'Content','backgrounds' ), 
 			)
 		)
 	);
@@ -790,10 +790,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_content',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-backgrounds' ),
-				'repeat-x' => __( 'Repeat x', 'generate-backgrounds' ),
-				'repeat-y' => __( 'Repeat y', 'generate-backgrounds' ),
-				'no-repeat' => __( 'No Repeat', 'generate-backgrounds' )
+				'' => __( 'Repeat','backgrounds' ),
+				'repeat-x' => __( 'Repeat x','backgrounds' ),
+				'repeat-y' => __( 'Repeat y','backgrounds' ),
+				'no-repeat' => __( 'No Repeat','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[content_repeat]',
 			'priority' => 2800
@@ -815,10 +815,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_content',
 			'choices' => array(
-				'' => __( 'Size (Auto)', 'generate-backgrounds' ),
-				'100%' => __( '100% Width', 'generate-backgrounds' ),
-				'cover' => __( 'Cover', 'generate-backgrounds' ),
-				'contain' => __( 'Contain', 'generate-backgrounds' )
+				'' => __( 'Size (Auto)','backgrounds' ),
+				'100%' => __( '100% Width','backgrounds' ),
+				'cover' => __( 'Cover','backgrounds' ),
+				'contain' => __( 'Contain','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[content_size]',
 			'priority' => 2900
@@ -840,10 +840,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_content',
 			'choices' => array(
-				'' => __( 'Attachment', 'generate-backgrounds' ),
-				'fixed' => __( 'Fixed', 'generate-backgrounds' ),
-				'local' => __( 'Local', 'generate-backgrounds' ),
-				'inherit' => __( 'Inherit', 'generate-backgrounds' )
+				'' => __( 'Attachment','backgrounds' ),
+				'fixed' => __( 'Fixed','backgrounds' ),
+				'local' => __( 'Local','backgrounds' ),
+				'inherit' => __( 'Inherit','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[content_attachment]',
 			'priority' => 3000
@@ -868,7 +868,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'settings'   => 'generate_background_settings[content_position]',
 				'priority' => 3100,
 				'label' => 'left top, x% y%, xpos ypos (px)',
-				'placeholder' => __('Position','generate-backgrounds')
+				'placeholder' => __('Position','backgrounds')
 			)
 		)
 	);
@@ -876,7 +876,7 @@ function generate_backgrounds_customize( $wp_customize )
 	$wp_customize->add_section(
 		'generate_backgrounds_sidebars',
 		array(
-			'title' => __( 'Sidebar', 'generate-backgrounds' ),
+			'title' => __( 'Sidebar','backgrounds' ),
 			'capability' => 'edit_theme_options',
 			'priority' => 25,
 			'panel' => 'generate_backgrounds_panel'
@@ -904,7 +904,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'section'    => 'generate_backgrounds_sidebars',
 				'settings'   => 'generate_background_settings[sidebar_widget_image]',
 				'priority' => 3400,
-				'label' => __( 'Sidebar Widgets', 'generate-backgrounds' ),
+				'label' => __( 'Sidebar Widgets','backgrounds' ),
 			)
 		)
 	);
@@ -924,10 +924,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_sidebars',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-backgrounds' ),
-				'repeat-x' => __( 'Repeat x', 'generate-backgrounds' ),
-				'repeat-y' => __( 'Repeat y', 'generate-backgrounds' ),
-				'no-repeat' => __( 'No Repeat', 'generate-backgrounds' )
+				'' => __( 'Repeat','backgrounds' ),
+				'repeat-x' => __( 'Repeat x','backgrounds' ),
+				'repeat-y' => __( 'Repeat y','backgrounds' ),
+				'no-repeat' => __( 'No Repeat','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[sidebar_widget_repeat]',
 			'priority' => 3500
@@ -949,10 +949,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_sidebars',
 			'choices' => array(
-				'' => __( 'Size (Auto)', 'generate-backgrounds' ),
-				'100%' => __( '100% Width', 'generate-backgrounds' ),
-				'cover' => __( 'Cover', 'generate-backgrounds' ),
-				'contain' => __( 'Contain', 'generate-backgrounds' )
+				'' => __( 'Size (Auto)','backgrounds' ),
+				'100%' => __( '100% Width','backgrounds' ),
+				'cover' => __( 'Cover','backgrounds' ),
+				'contain' => __( 'Contain','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[sidebar_widget_size]',
 			'priority' => 3600
@@ -974,10 +974,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_sidebars',
 			'choices' => array(
-				'' => __( 'Attachment', 'generate-backgrounds' ),
-				'fixed' => __( 'Fixed', 'generate-backgrounds' ),
-				'local' => __( 'Local', 'generate-backgrounds' ),
-				'inherit' => __( 'Inherit', 'generate-backgrounds' )
+				'' => __( 'Attachment','backgrounds' ),
+				'fixed' => __( 'Fixed','backgrounds' ),
+				'local' => __( 'Local','backgrounds' ),
+				'inherit' => __( 'Inherit','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[sidebar_widget_attachment]',
 			'priority' => 3700
@@ -1002,7 +1002,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'settings'   => 'generate_background_settings[sidebar_widget_position]',
 				'priority' => 3800,
 				'label' => 'left top, x% y%, xpos ypos (px)',
-				'placeholder' => __('Position','generate-backgrounds')
+				'placeholder' => __('Position','backgrounds')
 			)
 		)
 	);
@@ -1010,7 +1010,7 @@ function generate_backgrounds_customize( $wp_customize )
 	$wp_customize->add_section(
 		'generate_backgrounds_footer',
 		array(
-			'title' => __( 'Footer', 'generate-backgrounds' ),
+			'title' => __( 'Footer','backgrounds' ),
 			'capability' => 'edit_theme_options',
 			'priority' => 30,
 			'panel' => 'generate_backgrounds_panel'
@@ -1038,7 +1038,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'section'    => 'generate_backgrounds_footer',
 				'settings'   => 'generate_background_settings[footer_widget_image]',
 				'priority' => 4100,
-				'label' => __( 'Footer Widget Area', 'generate-backgrounds' ), 
+				'label' => __( 'Footer Widget Area','backgrounds' ), 
 			)
 		)
 	);
@@ -1058,10 +1058,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_footer',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-backgrounds' ),
-				'repeat-x' => __( 'Repeat x', 'generate-backgrounds' ),
-				'repeat-y' => __( 'Repeat y', 'generate-backgrounds' ),
-				'no-repeat' => __( 'No Repeat', 'generate-backgrounds' )
+				'' => __( 'Repeat','backgrounds' ),
+				'repeat-x' => __( 'Repeat x','backgrounds' ),
+				'repeat-y' => __( 'Repeat y','backgrounds' ),
+				'no-repeat' => __( 'No Repeat','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[footer_widget_repeat]',
 			'priority' => 4200
@@ -1083,10 +1083,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_footer',
 			'choices' => array(
-				'' => __( 'Size (Auto)', 'generate-backgrounds' ),
-				'100%' => __( '100% Width', 'generate-backgrounds' ),
-				'cover' => __( 'Cover', 'generate-backgrounds' ),
-				'contain' => __( 'Contain', 'generate-backgrounds' )
+				'' => __( 'Size (Auto)','backgrounds' ),
+				'100%' => __( '100% Width','backgrounds' ),
+				'cover' => __( 'Cover','backgrounds' ),
+				'contain' => __( 'Contain','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[footer_widget_size]',
 			'priority' => 4300
@@ -1108,10 +1108,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_footer',
 			'choices' => array(
-				'' => __( 'Attachment', 'generate-backgrounds' ),
-				'fixed' => __( 'Fixed', 'generate-backgrounds' ),
-				'local' => __( 'Local', 'generate-backgrounds' ),
-				'inherit' => __( 'Inherit', 'generate-backgrounds' )
+				'' => __( 'Attachment','backgrounds' ),
+				'fixed' => __( 'Fixed','backgrounds' ),
+				'local' => __( 'Local','backgrounds' ),
+				'inherit' => __( 'Inherit','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[footer_widget_attachment]',
 			'priority' => 4400
@@ -1136,7 +1136,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'settings'   => 'generate_background_settings[footer_widget_position]',
 				'priority' => 4500,
 				'label' => 'left top, x% y%, xpos ypos (px)',
-				'placeholder' => __('Position','generate-backgrounds')
+				'placeholder' => __('Position','backgrounds')
 			)
 		)
 	);
@@ -1162,7 +1162,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'section'    => 'generate_backgrounds_footer',
 				'settings'   => 'generate_background_settings[footer_image]',
 				'priority' => 4800,
-				'label' => __( 'Footer Area', 'generate-backgrounds' ), 
+				'label' => __( 'Footer Area','backgrounds' ), 
 			)
 		)
 	);
@@ -1182,10 +1182,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_footer',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-backgrounds' ),
-				'repeat-x' => __( 'Repeat x', 'generate-backgrounds' ),
-				'repeat-y' => __( 'Repeat y', 'generate-backgrounds' ),
-				'no-repeat' => __( 'No Repeat', 'generate-backgrounds' )
+				'' => __( 'Repeat','backgrounds' ),
+				'repeat-x' => __( 'Repeat x','backgrounds' ),
+				'repeat-y' => __( 'Repeat y','backgrounds' ),
+				'no-repeat' => __( 'No Repeat','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[footer_repeat]',
 			'priority' => 4900
@@ -1207,10 +1207,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_footer',
 			'choices' => array(
-				'' => __( 'Size (Auto)', 'generate-backgrounds' ),
-				'100%' => __( '100% Width', 'generate-backgrounds' ),
-				'cover' => __( 'Cover', 'generate-backgrounds' ),
-				'contain' => __( 'Contain', 'generate-backgrounds' )
+				'' => __( 'Size (Auto)','backgrounds' ),
+				'100%' => __( '100% Width','backgrounds' ),
+				'cover' => __( 'Cover','backgrounds' ),
+				'contain' => __( 'Contain','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[footer_size]',
 			'priority' => 5000
@@ -1232,10 +1232,10 @@ function generate_backgrounds_customize( $wp_customize )
 			'type' => 'select',
 			'section' => 'generate_backgrounds_footer',
 			'choices' => array(
-				'' => __( 'Attachment', 'generate-backgrounds' ),
-				'fixed' => __( 'Fixed', 'generate-backgrounds' ),
-				'local' => __( 'Local', 'generate-backgrounds' ),
-				'inherit' => __( 'Inherit', 'generate-backgrounds' )
+				'' => __( 'Attachment','backgrounds' ),
+				'fixed' => __( 'Fixed','backgrounds' ),
+				'local' => __( 'Local','backgrounds' ),
+				'inherit' => __( 'Inherit','backgrounds' )
 			),
 			'settings' => 'generate_background_settings[footer_attachment]',
 			'priority' => 5100
@@ -1260,7 +1260,7 @@ function generate_backgrounds_customize( $wp_customize )
 				'settings'   => 'generate_background_settings[footer_position]',
 				'priority' => 5200,
 				'label' => 'left top, x% y%, xpos ypos (px)',
-				'placeholder' => __('Position','generate-backgrounds')
+				'placeholder' => __('Position','backgrounds')
 			)
 		)
 	);

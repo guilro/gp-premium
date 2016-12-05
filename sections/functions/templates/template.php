@@ -48,7 +48,7 @@ $sidebars = apply_filters( 'generate_sections_sidebars', false );
 						$inner_box_type 	= ( isset( $section['inner_box_type'] ) ) ? $section['inner_box_type'] : 'contained';
 						$custom_classes 	= ( isset( $section['custom_classes'] ) ) ? $section['custom_classes'] : '';
 						$parallax_effect 	= ( isset( $section['parallax_effect'] ) ) ? $section['parallax_effect'] : '';
-						$content 			= ( isset( $section['content'] ) ) ? $section['content'] : '';
+						$content 			= ( isset( $section['content'] ) ) ? apply_filters( 'generate_the_section_content', $section['content'] ) : '';
 
 						// Set up parallax
 						$parallax = ( 'enable' == $parallax_effect ) ? ' enable-parallax' : '';

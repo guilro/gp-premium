@@ -14,9 +14,9 @@ function generate_ph_reset_settings()
 		<p><input type="hidden" name="generate_ph_reset_customizer" value="generate_ph_reset_customizer_settings" /></p>
 		<p>
 			<?php 
-			$warning = 'return confirm("' . __( 'Warning: This will delete your settings.','generate-page-header' ) . '")';
+			$warning = 'return confirm("' . __( 'Warning: This will delete your settings.','page-header' ) . '")';
 			wp_nonce_field( 'generate_ph_reset_customizer_nonce', 'generate_ph_reset_customizer_nonce' );
-			submit_button( __( 'Delete Page Header Customizer Settings', 'generate-page-header' ), 'ph-button', 'ph-submit', false, array( 'onclick' => $warning ) ); 
+			submit_button( __( 'Delete Page Header Customizer Settings','page-header' ), 'ph-button', 'ph-submit', false, array( 'onclick' => $warning ) ); 
 			?>
 		</p>
 	</form>
@@ -53,7 +53,7 @@ if ( ! function_exists( 'generate_ph_add_export' ) ) :
 			<p><input type="hidden" name="generate_ph_export_action" value="export_ph_settings" /></p>
 			<p>
 				<?php wp_nonce_field( 'generate_ph_export_nonce', 'generate_ph_export_nonce' ); ?>
-				<?php submit_button( __( 'Export Page Header Customizer Settings', 'generate-page-header' ), 'button-primary', 'submit', false ); ?>
+				<?php submit_button( __( 'Export Page Header Customizer Settings','page-header' ), 'button-primary', 'submit', false ); ?>
 			</p>
 		</form>
 		<?php

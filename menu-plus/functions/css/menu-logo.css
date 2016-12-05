@@ -5,11 +5,13 @@
 	margin-right: 10px;
 }
 
-.menu-logo-enabled #site-navigation.grid-container .sticky-logo {
+.menu-logo-enabled #site-navigation.grid-container .sticky-logo,
+.menu-logo-enabled #site-navigation .inside-navigation:not(.grid-container) .sticky-logo {
 	margin-left: 10px;
 }
 
-.nav-float-left.menu-logo-enabled #site-navigation.grid-container .sticky-logo {
+.nav-float-left.menu-logo-enabled #site-navigation.grid-container .sticky-logo,
+.nav-float-left.menu-logo-enabled #site-navigation .inside-navigation:not(.grid-container) .sticky-logo {
 	margin-right: 10px;
 }
 

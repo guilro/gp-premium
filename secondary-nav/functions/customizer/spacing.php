@@ -13,7 +13,7 @@ if ( class_exists( 'Generate_Spacing_Customize_Control' ) ) :
 		'secondary_navigation_spacing_section',
 		// Arguments array
 		array(
-			'title' => __( 'Secondary Navigation', 'generate-secondary-nav' ),
+			'title' => __( 'Secondary Navigation','secondary-nav' ),
 			'capability' => 'edit_theme_options',
 			'priority' => 16,
 			'panel' => $spacing_panel
@@ -32,7 +32,7 @@ if ( class_exists( 'Generate_Spacing_Customize_Control' ) ) :
 			'generate_secondary_navigation_spacing_title',
 			array(
 				'section'  => $secondary_navigation_section,
-				'description'    => __( 'Secondary Menu Items', 'generate-secondary-nav' ),
+				'description'    => __( 'Secondary Menu Items','secondary-nav' ),
 				'type'     => 'text',
 				'priority' => 200,
 			)
@@ -54,7 +54,7 @@ if ( class_exists( 'Generate_Spacing_Customize_Control' ) ) :
 			$wp_customize,
 			'generate_secondary_nav_settings[secondary_menu_item]', 
 			array(
-				'description' => __('Left/Right Spacing', 'generate-secondary-nav' ), 
+				'description' => __('Left/Right Spacing','secondary-nav' ), 
 				'section' => $secondary_navigation_section,
 				'settings' => 'generate_secondary_nav_settings[secondary_menu_item]',
 				'priority' => 220
@@ -77,7 +77,7 @@ if ( class_exists( 'Generate_Spacing_Customize_Control' ) ) :
 			$wp_customize,
 			'generate_secondary_nav_settings[secondary_menu_item_height]', 
 			array(
-				'description' => __('Height', 'generate-secondary-nav' ), 
+				'description' => __('Height','secondary-nav' ), 
 				'section' => $secondary_navigation_section,
 				'settings' => 'generate_secondary_nav_settings[secondary_menu_item_height]',
 				'priority' => 240
@@ -100,8 +100,8 @@ if ( class_exists( 'Generate_Spacing_Customize_Control' ) ) :
 			$wp_customize,
 			'generate_secondary_nav_settings[secondary_sub_menu_item_height]', 
 			array(
-				'label' => __( 'Sub-Menu Item Height', 'generate-secondary-nav' ),
-				'secondary_description' => __( 'The top and bottom spacing of sub-menu items.', 'generate-secondary-nav' ), 
+				'label' => __( 'Sub-Menu Item Height','secondary-nav' ),
+				'secondary_description' => __( 'The top and bottom spacing of sub-menu items.','secondary-nav' ), 
 				'section' => $secondary_navigation_section,
 				'settings' => 'generate_secondary_nav_settings[secondary_sub_menu_item_height]',
 				'priority' => 260

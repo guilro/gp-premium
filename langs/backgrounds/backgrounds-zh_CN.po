@@ -1,0 +1,195 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Backgrounds\n"
+"POT-Creation-Date: 2016-10-25 11:36-0700\n"
+"PO-Revision-Date: 2016-10-25 11:44-0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/functions.php:83 functions/functions.php:92
+msgid "Background Images"
+msgstr "背景图像"
+
+#: functions/functions.php:101 functions/functions.php:128
+msgid "Body"
+msgstr "正文"
+
+#: functions/functions.php:148 functions/functions.php:282
+#: functions/functions.php:416 functions/functions.php:467
+#: functions/functions.php:518 functions/functions.php:569
+#: functions/functions.php:630 functions/functions.php:681
+#: functions/functions.php:732 functions/functions.php:793
+#: functions/functions.php:927 functions/functions.php:1061
+#: functions/functions.php:1185
+msgid "Repeat"
+msgstr "铺满"
+
+#: functions/functions.php:149 functions/functions.php:283
+#: functions/functions.php:417 functions/functions.php:468
+#: functions/functions.php:519 functions/functions.php:570
+#: functions/functions.php:631 functions/functions.php:682
+#: functions/functions.php:733 functions/functions.php:794
+#: functions/functions.php:928 functions/functions.php:1062
+#: functions/functions.php:1186
+msgid "Repeat x"
+msgstr "横向铺满"
+
+#: functions/functions.php:150 functions/functions.php:284
+#: functions/functions.php:418 functions/functions.php:469
+#: functions/functions.php:520 functions/functions.php:571
+#: functions/functions.php:632 functions/functions.php:683
+#: functions/functions.php:734 functions/functions.php:795
+#: functions/functions.php:929 functions/functions.php:1063
+#: functions/functions.php:1187
+msgid "Repeat y"
+msgstr "纵向铺满"
+
+#: functions/functions.php:151 functions/functions.php:285
+#: functions/functions.php:419 functions/functions.php:470
+#: functions/functions.php:521 functions/functions.php:572
+#: functions/functions.php:633 functions/functions.php:684
+#: functions/functions.php:735 functions/functions.php:796
+#: functions/functions.php:930 functions/functions.php:1064
+#: functions/functions.php:1188
+msgid "No Repeat"
+msgstr "无铺满"
+
+#: functions/functions.php:173 functions/functions.php:307
+#: functions/functions.php:818 functions/functions.php:952
+#: functions/functions.php:1086 functions/functions.php:1210
+msgid "Size (Auto)"
+msgstr "大小（自动）"
+
+#: functions/functions.php:174 functions/functions.php:308
+#: functions/functions.php:819 functions/functions.php:953
+#: functions/functions.php:1087 functions/functions.php:1211
+msgid "100% Width"
+msgstr "100% 宽度"
+
+#: functions/functions.php:175 functions/functions.php:309
+#: functions/functions.php:820 functions/functions.php:954
+#: functions/functions.php:1088 functions/functions.php:1212
+msgid "Cover"
+msgstr "覆盖"
+
+#: functions/functions.php:176 functions/functions.php:310
+#: functions/functions.php:821 functions/functions.php:955
+#: functions/functions.php:1089 functions/functions.php:1213
+msgid "Contain"
+msgstr "平铺"
+
+#: functions/functions.php:198 functions/functions.php:332
+#: functions/functions.php:843 functions/functions.php:977
+#: functions/functions.php:1111 functions/functions.php:1235
+msgid "Attachment"
+msgstr "Attachment效果"
+
+#: functions/functions.php:199 functions/functions.php:333
+#: functions/functions.php:844 functions/functions.php:978
+#: functions/functions.php:1112 functions/functions.php:1236
+msgid "Fixed"
+msgstr "Fixed效果"
+
+#: functions/functions.php:200 functions/functions.php:334
+#: functions/functions.php:845 functions/functions.php:979
+#: functions/functions.php:1113 functions/functions.php:1237
+msgid "Local"
+msgstr "Local效果"
+
+#: functions/functions.php:201 functions/functions.php:335
+#: functions/functions.php:846 functions/functions.php:980
+#: functions/functions.php:1114 functions/functions.php:1238
+msgid "Inherit"
+msgstr "Inherit效果"
+
+#: functions/functions.php:226 functions/functions.php:360
+#: functions/functions.php:871 functions/functions.php:1005
+#: functions/functions.php:1139 functions/functions.php:1263
+msgid "Position"
+msgstr "位置"
+
+#: functions/functions.php:234 functions/functions.php:262
+msgid "Header"
+msgstr "页眉"
+
+#: functions/functions.php:368
+msgid "Primary Navigation"
+msgstr "主导航"
+
+#: functions/functions.php:396
+msgid "Navigation"
+msgstr "导航"
+
+#: functions/functions.php:447
+msgid "Navigation Item"
+msgstr "导航项"
+
+#: functions/functions.php:498
+msgid "Navigation Item Hover"
+msgstr "划过导航项"
+
+#: functions/functions.php:549
+msgid "Navigation Item Current"
+msgstr "导航项流动"
+
+#: functions/functions.php:582
+msgid "Primary Sub-Navigation"
+msgstr "主子导航"
+
+#: functions/functions.php:610
+msgid "Sub-Navigation Item"
+msgstr "子导航项"
+
+#: functions/functions.php:661
+msgid "Sub-Navigation Item Hover"
+msgstr "划过子导航项"
+
+#: functions/functions.php:712
+msgid "Sub-Navigation Item Current"
+msgstr "子导航项流动"
+
+#: functions/functions.php:745 functions/functions.php:773
+msgid "Content"
+msgstr "内容"
+
+#: functions/functions.php:879
+msgid "Sidebar"
+msgstr "边栏"
+
+#: functions/functions.php:907
+msgid "Sidebar Widgets"
+msgstr "边栏小工具"
+
+#: functions/functions.php:1013
+msgid "Footer"
+msgstr "页脚"
+
+#: functions/functions.php:1041
+msgid "Footer Widget Area"
+msgstr "页脚小工具区域"
+
+#: functions/functions.php:1165
+msgid "Footer Area"
+msgstr "页脚区域"
+
+#: functions/ie.php:14
+msgid "Export Backgrounds Customizer Settings"
+msgstr "导出背景自定义设置"
+
+#: functions/ie.php:63
+msgid "Warning: This will delete your settings."
+msgstr "警告：这将删除你的设置"
+
+#: functions/ie.php:65
+msgid "Delete Backgrounds Customizer Settings"
+msgstr "删除背景自定义设置"

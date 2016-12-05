@@ -260,6 +260,8 @@ function generate_sections_filter()
 	add_filter( 'generate_section_content', 'shortcode_unautop'  );
 	add_filter( 'generate_section_content', 'prepend_attachment' );
 	add_filter( 'generate_section_content', 'do_shortcode');
+	
+	add_filter( 'generate_the_section_content', array($GLOBALS['wp_embed'], 'autoembed'), 9 );
 }
 endif;
 

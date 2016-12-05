@@ -1,0 +1,233 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Secondary Navigation\n"
+"POT-Creation-Date: 2016-10-25 12:24-0700\n"
+"PO-Revision-Date: 2016-10-25 12:31-0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/customizer/backgrounds.php:15 functions/customizer/colors.php:16
+#: functions/customizer/spacing.php:16 functions/customizer/typography.php:15
+#: functions/functions.php:105 functions/functions.php:117
+msgid "Secondary Navigation"
+msgstr "副导航"
+
+#: functions/customizer/backgrounds.php:44
+msgid "Navigation"
+msgstr "导航"
+
+#: functions/customizer/backgrounds.php:64
+#: functions/customizer/backgrounds.php:115
+#: functions/customizer/backgrounds.php:166
+#: functions/customizer/backgrounds.php:217
+#: functions/customizer/backgrounds.php:281
+#: functions/customizer/backgrounds.php:332
+#: functions/customizer/backgrounds.php:383
+msgid "Repeat"
+msgstr "铺满"
+
+#: functions/customizer/backgrounds.php:65
+#: functions/customizer/backgrounds.php:116
+#: functions/customizer/backgrounds.php:167
+#: functions/customizer/backgrounds.php:218
+#: functions/customizer/backgrounds.php:282
+#: functions/customizer/backgrounds.php:333
+#: functions/customizer/backgrounds.php:384
+msgid "Repeat x"
+msgstr "横向铺满"
+
+#: functions/customizer/backgrounds.php:66
+#: functions/customizer/backgrounds.php:117
+#: functions/customizer/backgrounds.php:168
+#: functions/customizer/backgrounds.php:219
+#: functions/customizer/backgrounds.php:283
+#: functions/customizer/backgrounds.php:334
+#: functions/customizer/backgrounds.php:385
+msgid "Repeat y"
+msgstr "纵向铺满"
+
+#: functions/customizer/backgrounds.php:67
+#: functions/customizer/backgrounds.php:118
+#: functions/customizer/backgrounds.php:169
+#: functions/customizer/backgrounds.php:220
+#: functions/customizer/backgrounds.php:284
+#: functions/customizer/backgrounds.php:335
+#: functions/customizer/backgrounds.php:386
+msgid "No Repeat"
+msgstr "无铺满"
+
+#: functions/customizer/backgrounds.php:95
+msgid "Navigation Item"
+msgstr "导航项"
+
+#: functions/customizer/backgrounds.php:146
+msgid "Navigation Item Hover"
+msgstr "划过导航项"
+
+#: functions/customizer/backgrounds.php:197
+msgid "Navigation Item Current"
+msgstr "导航项流动"
+
+#: functions/customizer/backgrounds.php:232 functions/customizer/colors.php:96
+msgid "Secondary Sub-Navigation"
+msgstr "副子导航"
+
+#: functions/customizer/backgrounds.php:261
+msgid "Sub-Navigation Item"
+msgstr "子导航项"
+
+#: functions/customizer/backgrounds.php:312
+msgid "Sub-Navigation Item Hover"
+msgstr "划过子导航项"
+
+#: functions/customizer/backgrounds.php:363
+msgid "Sub-Navigation Item Current"
+msgstr "子导航项流动"
+
+#: functions/customizer/colors.php:28 functions/customizer/colors.php:108
+msgid "Background"
+msgstr "背景"
+
+#: functions/customizer/colors.php:34 functions/customizer/colors.php:114
+msgid "Text"
+msgstr "文本"
+
+#: functions/customizer/colors.php:40 functions/customizer/colors.php:120
+msgid "Background Hover"
+msgstr "背景划过"
+
+#: functions/customizer/colors.php:46 functions/customizer/colors.php:126
+msgid "Text Hover"
+msgstr "文本划过"
+
+#: functions/customizer/colors.php:52 functions/customizer/colors.php:132
+msgid "Background Current"
+msgstr "背景当前"
+
+#: functions/customizer/colors.php:58 functions/customizer/colors.php:138
+msgid "Text Current"
+msgstr "文本当前"
+
+#: functions/customizer/spacing.php:35
+msgid "Secondary Menu Items"
+msgstr "副菜单项"
+
+#: functions/customizer/spacing.php:57
+msgid "Left/Right Spacing"
+msgstr "左侧/右侧空间"
+
+#: functions/customizer/spacing.php:80
+msgid "Height"
+msgstr "高度"
+
+#: functions/customizer/spacing.php:103
+msgid "Sub-Menu Item Height"
+msgstr "子菜单项高度"
+
+#: functions/customizer/spacing.php:104
+msgid "The top and bottom spacing of sub-menu items."
+msgstr "子菜单项顶部和底部的空间"
+
+#: functions/customizer/typography.php:38
+msgid "Secondary navigation"
+msgstr "副导航"
+
+#: functions/customizer/typography.php:105
+#: functions/customizer/typography.php:132
+msgid "Font weight"
+msgstr "字体粗细"
+
+#: functions/customizer/typography.php:158
+#: functions/customizer/typography.php:178
+msgid "Text transform"
+msgstr "文本格式"
+
+#: functions/customizer/typography.php:204
+msgid "Font size"
+msgstr "字体大小"
+
+#: functions/functions.php:10
+msgid "Secondary Menu"
+msgstr "副菜单"
+
+#: functions/functions.php:135
+msgid "Mobile Menu Label"
+msgstr "便携设备菜单标签"
+
+#: functions/functions.php:162
+msgid "Navigation Layout"
+msgstr "导航布局"
+
+#: functions/functions.php:165
+msgid "Fluid / Full Width"
+msgstr "流动/拉伸"
+
+#: functions/functions.php:166
+msgid "Contained"
+msgstr "平铺"
+
+#: functions/functions.php:194
+msgid "Navigation Position"
+msgstr "导航位置"
+
+#: functions/functions.php:197
+msgid "Below Header"
+msgstr "页眉以下"
+
+#: functions/functions.php:198
+msgid "Above Header"
+msgstr "页眉以上"
+
+#: functions/functions.php:199
+msgid "Float Right"
+msgstr "右侧悬浮"
+
+#: functions/functions.php:200
+msgid "Left Sidebar"
+msgstr "左边栏"
+
+#: functions/functions.php:201
+msgid "Right Sidebar"
+msgstr "右边栏"
+
+#: functions/functions.php:202
+msgid "No Navigation"
+msgstr "无导航"
+
+#: functions/functions.php:230
+msgid "Navigation Alignment"
+msgstr "导航位置"
+
+#: functions/functions.php:233
+msgid "Left"
+msgstr "左侧"
+
+#: functions/functions.php:234
+msgid "Center"
+msgstr "中间"
+
+#: functions/functions.php:235
+msgid "Right"
+msgstr "右侧"
+
+#: functions/ie.php:17
+msgid "Warning: This will delete your settings."
+msgstr "警告：这将删除你的设置"
+
+#: functions/ie.php:19
+msgid "Delete Secondary Navigation Customizer Settings"
+msgstr "删除副导航自定义设置"
+
+#: functions/ie.php:55
+msgid "Export Secondary Navigation Customizer Settings"
+msgstr "导出副导航自定义设置"

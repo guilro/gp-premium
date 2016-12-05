@@ -69,11 +69,6 @@ function generate_blog_post_image()
 		if ( is_woocommerce() )
 			return;
 	endif;
-		
-	$generate_settings = wp_parse_args( 
-		get_option( 'generate_blog_settings', array() ), 
-		generate_blog_get_defaults() 
-	);
 	
 	$image_atts = generate_get_blog_image_attributes();
 	$image_id = get_post_thumbnail_id( get_the_ID(), 'full' );
@@ -102,8 +97,7 @@ function generate_blog_post_image()
 		if ( $width_upscale && $image_atts[ 'height' ] == 9999 || $height_upscale && $image_atts[ 'width' ] == 9999 )
 			$image_atts = array();
 	endif;
-	
-	global $post;
+
 	if ( ! is_singular() && ! is_404() ) {
 	?>
 		<div class="post-image">

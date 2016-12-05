@@ -174,6 +174,10 @@ function generate_process_license_key( $id, $download, $license_key_status, $lic
 		if( ! check_admin_referer( 'generate_license_key_' . $id . '_nonce', 'generate_license_key_' . $id . '_nonce' ) ) 	
 			return;
 		
+		// If we're not an administrator, bail.
+		if ( ! current_user_can( 'administrator' ) )
+			return;
+		
 		// Grab the value being saved
 		$new = $_POST['generate_license_key_' . $id];
 		
@@ -200,7 +204,7 @@ function generate_process_license_key( $id, $download, $license_key_status, $lic
 		endif;
 		
 		// If we don't have a value (it's been cleared), run deactivation.
-		if ( '' == $new & 'valid' == get_option( $license_key_status ) ) :
+		if ( '' == $new && 'valid' == get_option( $license_key_status ) ) :
 			$api_params = array( 
 				'edd_action' => 'deactivate_license', 
 				'license' => $old, 

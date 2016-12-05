@@ -11,6 +11,7 @@ function gp_premium_typography_live_update( id, selector, property, unit, settin
 					jQuery( 'style#' + id ).not( ':last' ).remove();
 				}, 1000);
 			}
+			setTimeout("jQuery('body').trigger('generate_spacing_updated');", 1000);
 		} );
 	} );
 }
@@ -19,6 +20,8 @@ function gp_premium_typography_live_update( id, selector, property, unit, settin
  * Body font size, weight and transform
  */
 gp_premium_typography_live_update( 'body_font_size', 'body, button, input, select, textarea', 'font-size', 'px' );
+gp_premium_typography_live_update( 'body_line_height', 'body', 'line-height', '' );
+gp_premium_typography_live_update( 'paragraph_margin', 'p', 'margin-bottom', 'em' );
 gp_premium_typography_live_update( 'body_font_weight', 'body, button, input, select, textarea', 'font-weight' );
 gp_premium_typography_live_update( 'body_font_transform', 'body, button, input, select, textarea', 'text-transform' );
 

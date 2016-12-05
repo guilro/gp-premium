@@ -1,0 +1,173 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Spacing\n"
+"POT-Creation-Date: 2016-10-25 12:39-0700\n"
+"PO-Revision-Date: 2016-10-25 12:44-0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/content-spacing.php:10
+msgid "Content"
+msgstr "内容"
+
+#: functions/content-spacing.php:29
+msgid "Content Padding"
+msgstr "内容内边距"
+
+#: functions/content-spacing.php:52 functions/footer-spacing.php:52
+#: functions/footer-spacing.php:163 functions/header-spacing.php:51
+#: functions/sidebar-spacing.php:52
+msgid "Top"
+msgstr "顶部"
+
+#: functions/content-spacing.php:76 functions/footer-spacing.php:76
+#: functions/footer-spacing.php:187 functions/header-spacing.php:75
+#: functions/sidebar-spacing.php:76
+msgid "Right"
+msgstr "右侧"
+
+#: functions/content-spacing.php:100 functions/footer-spacing.php:100
+#: functions/footer-spacing.php:211 functions/header-spacing.php:99
+#: functions/sidebar-spacing.php:100
+msgid "Bottom"
+msgstr "底部"
+
+#: functions/content-spacing.php:124 functions/footer-spacing.php:124
+#: functions/footer-spacing.php:235 functions/header-spacing.php:123
+#: functions/sidebar-spacing.php:124
+msgid "Left"
+msgstr "左侧"
+
+#: functions/content-spacing.php:147
+msgid "Separating Space"
+msgstr "间距"
+
+#: functions/content-spacing.php:151
+msgid ""
+"The spacing between elements when \"Content Layout\" is set to \"Separate "
+"Containers\"."
+msgstr "多段式元素间距"
+
+#: functions/footer-spacing.php:10
+msgid "Footer"
+msgstr "页脚"
+
+#: functions/footer-spacing.php:29
+msgid "Footer Widget Area Padding"
+msgstr "页脚小工具区域内边距"
+
+#: functions/footer-spacing.php:140
+msgid "Footer Padding"
+msgstr "页脚内边距"
+
+#: functions/functions.php:63
+msgid "Spacing"
+msgstr "间距"
+
+#: functions/functions.php:64
+msgid "Change the spacing for various elements using pixels."
+msgstr "使用px设置间距"
+
+#: functions/header-spacing.php:9
+msgid "Header"
+msgstr "页眉"
+
+#: functions/header-spacing.php:28
+msgid "Header Padding"
+msgstr "页眉内边距"
+
+#: functions/ie.php:18
+msgid "Warning: This will delete your settings."
+msgstr "警告：这将删除你的设置"
+
+#: functions/ie.php:20
+msgid "Delete Spacing Customizer Settings"
+msgstr "删除间距自定义设置"
+
+#: functions/ie.php:57
+msgid "Export Spacing Customizer Settings"
+msgstr "导出间距自定义设置"
+
+#: functions/navigation-spacing.php:10
+msgid "Primary Navigation"
+msgstr "主导航"
+
+#: functions/navigation-spacing.php:29
+msgid "Primary Menu Items"
+msgstr "主菜单项"
+
+#: functions/navigation-spacing.php:51
+msgid "Left/Right Spacing"
+msgstr "左侧/右侧空间"
+
+#: functions/navigation-spacing.php:74
+msgid "Height"
+msgstr "高度"
+
+#: functions/navigation-spacing.php:97
+msgid "Sub-Menu Item Height"
+msgstr "子菜单项高度"
+
+#: functions/navigation-spacing.php:98
+msgid "The top and bottom spacing of sub-menu items."
+msgstr "子菜单项顶部和底部的空间"
+
+#: functions/sidebar-spacing.php:10
+msgid "Sidebars"
+msgstr "边栏"
+
+#: functions/sidebar-spacing.php:29
+msgid "Widget Padding"
+msgstr "小工具内边距"
+
+#: functions/sidebar-spacing.php:154
+msgid "Left Sidebar Width"
+msgstr "左边栏宽度"
+
+#: functions/sidebar-spacing.php:157 functions/sidebar-spacing.php:195
+msgid "15%"
+msgstr ""
+
+#: functions/sidebar-spacing.php:158 functions/sidebar-spacing.php:196
+msgid "20%"
+msgstr ""
+
+#: functions/sidebar-spacing.php:159 functions/sidebar-spacing.php:197
+msgid "25%"
+msgstr ""
+
+#: functions/sidebar-spacing.php:160 functions/sidebar-spacing.php:198
+msgid "30%"
+msgstr ""
+
+#: functions/sidebar-spacing.php:161 functions/sidebar-spacing.php:199
+msgid "35%"
+msgstr ""
+
+#: functions/sidebar-spacing.php:162 functions/sidebar-spacing.php:200
+msgid "40%"
+msgstr ""
+
+#: functions/sidebar-spacing.php:163 functions/sidebar-spacing.php:201
+msgid "45%"
+msgstr ""
+
+#: functions/sidebar-spacing.php:164 functions/sidebar-spacing.php:202
+msgid "50%"
+msgstr ""
+
+#: functions/sidebar-spacing.php:192
+msgid "Right Sidebar Width"
+msgstr "右边栏宽度"

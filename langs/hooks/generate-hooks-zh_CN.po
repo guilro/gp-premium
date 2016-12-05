@@ -1,0 +1,135 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Hooks\n"
+"POT-Creation-Date: 2016-10-25 12:01-0700\n"
+"PO-Revision-Date: 2016-10-25 12:05-0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/functions.php:59 functions/functions.php:84
+#: functions/functions.php:366
+msgid "GP Hooks"
+msgstr "挂钩"
+
+#: functions/functions.php:100
+msgid "wp_head"
+msgstr ""
+
+#: functions/functions.php:108
+msgid "Before Header"
+msgstr "页眉之前"
+
+#: functions/functions.php:116
+msgid "Before Header Content"
+msgstr "页眉内容之前"
+
+#: functions/functions.php:124
+msgid "After Header Content"
+msgstr "页眉内容之后"
+
+#: functions/functions.php:132
+msgid "After Header"
+msgstr "页眉之后"
+
+#: functions/functions.php:140
+msgid "Inside Content Container"
+msgstr "内容区域中"
+
+#: functions/functions.php:148
+msgid "Before Content"
+msgstr "内容之前"
+
+#: functions/functions.php:156
+msgid "After Entry Title"
+msgstr "条目标题之后"
+
+#: functions/functions.php:164
+msgid "After Content"
+msgstr "内容之后"
+
+#: functions/functions.php:172
+msgid "Before Right Sidebar Content"
+msgstr "右边栏内容之前"
+
+#: functions/functions.php:180
+msgid "After Right Sidebar Content"
+msgstr "右边栏内容之后"
+
+#: functions/functions.php:188
+msgid "Before Left Sidebar Content"
+msgstr "左边栏内容之前"
+
+#: functions/functions.php:196
+msgid "After Left Sidebar Content"
+msgstr "左边栏内容之后"
+
+#: functions/functions.php:204
+msgid "Before Footer"
+msgstr "页脚之前"
+
+#: functions/functions.php:212
+msgid "After Footer Widgets"
+msgstr "页脚小工具之后"
+
+#: functions/functions.php:220
+msgid "Before Footer Content"
+msgstr "页脚内容之前"
+
+#: functions/functions.php:228
+msgid "After Footer Content"
+msgstr "页脚内容之后"
+
+#: functions/functions.php:236
+msgid "wp_footer"
+msgstr ""
+
+#: functions/functions.php:319
+msgid "Execute PHP"
+msgstr "执行PHP"
+
+#: functions/functions.php:320
+msgid "Disable Hook"
+msgstr "关闭挂钩"
+
+#: functions/functions.php:368
+msgid ""
+"Use these fields to insert anything you like throughout GeneratePress. "
+"Shortcodes are allowed, and you can even use PHP if you check the Execute "
+"PHP checkboxes."
+msgstr "这个区域可输入多种形式，允许短代码、甚至是PHP"
+
+#: functions/functions.php:370
+msgid "Show all"
+msgstr "显示全部"
+
+#: functions/functions.php:381
+msgid "Save Hooks"
+msgstr "保存挂钩"
+
+#: functions/functions.php:451
+msgid "Hooks saved."
+msgstr "挂钩已保存"
+
+#: functions/ie.php:59
+msgid "Export GP Hooks"
+msgstr "导出挂钩设置"
+
+#: functions/ie.php:109
+msgid "Warning: This will delete your settings."
+msgstr "警告：这将删除你的设置"
+
+#: functions/ie.php:111
+msgid "Delete GP Hooks"
+msgstr "删除挂钩设置"

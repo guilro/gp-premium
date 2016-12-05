@@ -17,9 +17,8 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'priority'       => 40,
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
-		'title'          => __( 'Blog Page Header','generate-page-header' ),
-		'description'    => '',
-		'active_callback' => 'generate_page_header_is_posts_page'
+		'title'          => __( 'Blog Page Header','page-header' ),
+		'description'    => ''
 	) );
 	
 	if ( $wp_customize->get_panel( 'generate_blog_panel' ) ) {
@@ -33,11 +32,10 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'page_header_blog_image_settings',
 		// Arguments array
 		array(
-			'title' => __( 'Page Header Image', 'generate-page-header' ),
+			'title' => __( 'Page Header Image','page-header' ),
 			'capability' => 'edit_theme_options',
 			'panel' => $blog_panel,
-			'priority' => 5,
-			'active_callback' => 'generate_page_header_is_posts_page'
+			'priority' => 5
 		)
 	);
 	
@@ -55,8 +53,8 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 			$wp_customize,
 			'generate_page_header_options[page_header_image]',
 			array(
-				'label' => __('Image','generate-page-header'),
-				'description' => __( 'Upload an image to be used as your page header.', 'generate-page-header' ),
+				'label' => __('Image','page-header'),
+				'description' => __( 'Upload an image to be used as your page header.','page-header' ),
 				'section' => 'page_header_blog_image_settings',
 				'settings' => 'generate_page_header_options[page_header_image]'
 			)
@@ -76,8 +74,8 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		$wp_customize,
 		'generate_page_header_options[page_header_url]',
 		array(
-			'label' => __('Image link', 'generate-page-header'),
-			'description'    => __( 'Make your page header image clickable by adding a URL. (optional)', 'generate-page-header' ),
+			'label' => __('Image link','page-header'),
+			'description'    => __( 'Make your page header image clickable by adding a URL. (optional)','page-header' ),
 			'section' => 'page_header_blog_image_settings',
 			'settings' => 'generate_page_header_options[page_header_url]',
 			'type' => 'text',
@@ -100,12 +98,12 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		// Arguments array
 		array(
 			'type' => 'select',
-			'label' => __( 'Resize image', 'generate-page-header' ),
-			'description'    => __( 'Turn hard cropping or of off.', 'generate-page-header' ),
+			'label' => __( 'Resize image','page-header' ),
+			'description'    => __( 'Turn hard cropping or of off.','page-header' ),
 			'section' => 'page_header_blog_image_settings',
 			'choices' => array(
-				'enable' => __( 'Enable', 'generate-page-header' ),
-				'disable' => __( 'Disable', 'generate-page-header' )
+				'enable' => __( 'Enable','page-header' ),
+				'disable' => __( 'Disable','page-header' )
 			),
 			// This last one must match setting ID from above
 			'settings' => 'generate_page_header_options[page_header_hard_crop]',
@@ -127,8 +125,8 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		$wp_customize,
 		'generate_page_header_options[page_header_image_width]',
 		array(
-			'label' => __('Image width', 'generate-page-header'),
-			'description'    => __( 'Choose your image width in pixels. (integer only, default is 1200)', 'generate-page-header' ),
+			'label' => __('Image width','page-header'),
+			'description'    => __( 'Choose your image width in pixels. (integer only, default is 1200)','page-header' ),
 			'section' => 'page_header_blog_image_settings',
 			'settings' => 'generate_page_header_options[page_header_image_width]',
 			'type' => 'number',
@@ -150,8 +148,8 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		$wp_customize,
 		'generate_page_header_options[page_header_image_height]',
 		array(
-			'label' => __('Image height', 'generate-page-header'),
-			'description'    => __( 'Choose your image height in pixels. Use "0" or leave blank for proportional resizing. (integer only, default is 0) ', 'generate-page-header' ),
+			'label' => __('Image height','page-header'),
+			'description'    => __( 'Choose your image height in pixels. Use "0" or leave blank for proportional resizing. (integer only, default is 0) ','page-header' ),
 			'section' => 'page_header_blog_image_settings',
 			'settings' => 'generate_page_header_options[page_header_image_height]',
 			'type' => 'number',
@@ -167,7 +165,8 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 				'section'     => 'page_header_blog_image_settings',
 				'label'			=> false,
 				'active_callback' => 'generate_page_header_blog_crop_exists',
-				'type' => 'page_header_image_save'
+				'type' => 'page_header_image_save',
+				'settings' => ( isset( $wp_customize->selective_refresh ) ) ? array() : 'blogname'
 			)
 		)
 	);
@@ -177,10 +176,10 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'page_header_blog_video_settings',
 		// Arguments array
 		array(
-			'title' => __( 'Page Header Video', 'generate-page-header' ),
+			'title' => __( 'Page Header Video','page-header' ),
 			'capability' => 'edit_theme_options',
 			'panel' => $blog_panel,
-			'active_callback' => 'generate_page_header_is_posts_page_has_content',
+			'active_callback' => 'generate_page_header_blog_content_exists',
 			'priority' => 6
 		)
 	);
@@ -198,8 +197,8 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		$wp_customize,
 		'generate_page_header_options[page_header_video]',
 		array(
-			'label' => __('Video Background URL (MP4 only)', 'generate-page-header'),
-			//'description'    => __( 'Make your page header image clickable by adding a URL. (optional)', 'generate-page-header' ),
+			'label' => __('Video Background URL (MP4 only)','page-header'),
+			//'description'    => __( 'Make your page header image clickable by adding a URL. (optional)','page-header' ),
 			'section' => 'page_header_blog_video_settings',
 			'settings' => 'generate_page_header_options[page_header_video]',
 			'type' => 'text'
@@ -219,8 +218,8 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		$wp_customize,
 		'generate_page_header_options[page_header_video_ogv]',
 		array(
-			'label' => __('Video Background URL (OGV only)', 'generate-page-header'),
-			//'description'    => __( 'Make your page header image clickable by adding a URL. (optional)', 'generate-page-header' ),
+			'label' => __('Video Background URL (OGV only)','page-header'),
+			//'description'    => __( 'Make your page header image clickable by adding a URL. (optional)','page-header' ),
 			'section' => 'page_header_blog_video_settings',
 			'settings' => 'generate_page_header_options[page_header_video_ogv]',
 			'type' => 'text'
@@ -240,8 +239,8 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		$wp_customize,
 		'generate_page_header_options[page_header_video_webm]',
 		array(
-			'label' => __('Video Background URL (WEBM only)', 'generate-page-header'),
-			//'description'    => __( 'Make your page header image clickable by adding a URL. (optional)', 'generate-page-header' ),
+			'label' => __('Video Background URL (WEBM only)','page-header'),
+			//'description'    => __( 'Make your page header image clickable by adding a URL. (optional)','page-header' ),
 			'section' => 'page_header_blog_video_settings',
 			'settings' => 'generate_page_header_options[page_header_video_webm]',
 			'type' => 'text'
@@ -261,7 +260,7 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 			$wp_customize,
 			'generate_page_header_options[page_header_video_overlay]', 
 			array(
-				'label' => __( 'Overlay Color', 'generate-page-header' ), 
+				'label' => __( 'Overlay Color','page-header' ), 
 				'section' => 'page_header_blog_video_settings',
 				'settings' => 'generate_page_header_options[page_header_video_overlay]'
 			)
@@ -273,11 +272,10 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'page_header_blog_content_settings',
 		// Arguments array
 		array(
-			'title' => __( 'Page Header Content', 'generate-page-header' ),
+			'title' => __( 'Page Header Content','page-header' ),
 			'capability' => 'edit_theme_options',
 			'panel' => $blog_panel,
-			'priority' => 7,
-			'active_callback' => 'generate_page_header_is_posts_page'
+			'priority' => 7
 		)
 	);
 	
@@ -294,8 +292,8 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		$wp_customize,
 		'generate_page_header_options[page_header_content]',
 		array(
-			'label' => __('Content', 'generate-page-header'),
-			'description' => __( 'Add your content to the page header. HTML and shortcodes allowed.', 'generate-page-header' ),
+			'label' => __('Content','page-header'),
+			'description' => __( 'Add your content to the page header. HTML and shortcodes allowed.','page-header' ),
 			'section' => 'page_header_blog_content_settings',
 			'settings' => 'generate_page_header_options[page_header_content]',
 			'type' => 'textarea',
@@ -315,12 +313,12 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'generate_page_header_options[page_header_add_paragraphs]',
 		array(
 			'type' => 'select',
-			'label' => __( 'Add Paragraphs', 'generate-page-header' ),
-			'description'    => __( 'Wrap your text in paragraph tags automatically.', 'generate-page-header' ),
+			'label' => __( 'Add Paragraphs','page-header' ),
+			'description'    => __( 'Wrap your text in paragraph tags automatically.','page-header' ),
 			'section' => 'page_header_blog_content_settings',
 			'choices' => array(
-				'1' => __( 'Enable', 'generate-page-header' ),
-				'0' => __( 'Disable', 'generate-page-header' )
+				'1' => __( 'Enable','page-header' ),
+				'0' => __( 'Disable','page-header' )
 			),
 			'settings' => 'generate_page_header_options[page_header_add_paragraphs]',
 			'active_callback' => 'generate_page_header_blog_content_exists'
@@ -340,12 +338,12 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'generate_page_header_options[page_header_add_padding]',
 		array(
 			'type' => 'select',
-			'label' => __( 'Add Padding', 'generate-page-header' ),
-			'description'    => __( 'Add padding around your content.', 'generate-page-header' ),
+			'label' => __( 'Add Padding','page-header' ),
+			'description'    => __( 'Add padding around your content.','page-header' ),
 			'section' => 'page_header_blog_content_settings',
 			'choices' => array(
-				'1' => __( 'Enable', 'generate-page-header' ),
-				'0' => __( 'Disable', 'generate-page-header' )
+				'1' => __( 'Enable','page-header' ),
+				'0' => __( 'Disable','page-header' )
 			),
 			'settings' => 'generate_page_header_options[page_header_add_padding]',
 			'active_callback' => 'generate_page_header_blog_content_exists'
@@ -365,12 +363,12 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'generate_page_header_options[page_header_image_background]',
 		array(
 			'type' => 'select',
-			'label' => __( 'Image Background', 'generate-page-header' ),
-			'description'    => __( 'Use the image uploaded above as a background image for your content. (requires image uploaded above)', 'generate-page-header' ),
+			'label' => __( 'Image Background','page-header' ),
+			'description'    => __( 'Use the image uploaded above as a background image for your content. (requires image uploaded above)','page-header' ),
 			'section' => 'page_header_blog_content_settings',
 			'choices' => array(
-				'1' => __( 'Enable', 'generate-page-header' ),
-				'0' => __( 'Disable', 'generate-page-header' )
+				'1' => __( 'Enable','page-header' ),
+				'0' => __( 'Disable','page-header' )
 			),
 			'settings' => 'generate_page_header_options[page_header_image_background]',
 			'active_callback' => 'generate_page_header_blog_content_exists'
@@ -390,12 +388,12 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'generate_page_header_options[page_header_add_parallax]',
 		array(
 			'type' => 'select',
-			'label' => __( 'Parallax Background', 'generate-page-header' ),
-			'description'    => __( 'Add a cool parallax effect to your background image. (requires the image background option to be checked)', 'generate-page-header' ),
+			'label' => __( 'Parallax Background','page-header' ),
+			'description'    => __( 'Add a cool parallax effect to your background image. (requires the image background option to be checked)','page-header' ),
 			'section' => 'page_header_blog_content_settings',
 			'choices' => array(
-				'1' => __( 'Enable', 'generate-page-header' ),
-				'0' => __( 'Disable', 'generate-page-header' )
+				'1' => __( 'Enable','page-header' ),
+				'0' => __( 'Disable','page-header' )
 			),
 			'settings' => 'generate_page_header_options[page_header_add_parallax]',
 			'active_callback' => 'generate_page_header_blog_content_exists'
@@ -415,12 +413,12 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'generate_page_header_options[page_header_full_screen]',
 		array(
 			'type' => 'select',
-			'label' => __( 'Full Screen', 'generate-page-header' ),
-			'description'    => __( 'Make your page header content area full screen.', 'generate-page-header' ),
+			'label' => __( 'Full Screen','page-header' ),
+			'description'    => __( 'Make your page header content area full screen.','page-header' ),
 			'section' => 'page_header_blog_content_settings',
 			'choices' => array(
-				'1' => __( 'Enable', 'generate-page-header' ),
-				'0' => __( 'Disable', 'generate-page-header' )
+				'1' => __( 'Enable','page-header' ),
+				'0' => __( 'Disable','page-header' )
 			),
 			'settings' => 'generate_page_header_options[page_header_full_screen]',
 			'active_callback' => 'generate_page_header_blog_content_exists'
@@ -440,12 +438,12 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'generate_page_header_options[page_header_vertical_center]',
 		array(
 			'type' => 'select',
-			'label' => __( 'Vertical Center', 'generate-page-header' ),
-			'description'    => __( 'Center your page header content vertically.', 'generate-page-header' ),
+			'label' => __( 'Vertical Center','page-header' ),
+			'description'    => __( 'Center your page header content vertically.','page-header' ),
 			'section' => 'page_header_blog_content_settings',
 			'choices' => array(
-				'1' => __( 'Enable', 'generate-page-header' ),
-				'0' => __( 'Disable', 'generate-page-header' )
+				'1' => __( 'Enable','page-header' ),
+				'0' => __( 'Disable','page-header' )
 			),
 			'settings' => 'generate_page_header_options[page_header_vertical_center]',
 			'active_callback' => 'generate_page_header_blog_content_exists'
@@ -465,12 +463,12 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'generate_page_header_options[page_header_container_type]',
 		array(
 			'type' => 'select',
-			'label' => __( 'Container Type', 'generate-page-header' ),
-			'description'    => __( 'Choose whether the page header is contained or fluid.', 'generate-page-header' ),
+			'label' => __( 'Container Type','page-header' ),
+			'description'    => __( 'Choose whether the page header is contained or fluid.','page-header' ),
 			'section' => 'page_header_blog_content_settings',
 			'choices' => array(
-				'' => __( 'Contained', 'generate-page-header' ),
-				'fluid' => __( 'Full width', 'generate-page-header' )
+				'' => __( 'Contained','page-header' ),
+				'fluid' => __( 'Full width','page-header' )
 			),
 			'settings' => 'generate_page_header_options[page_header_container_type]',
 			'active_callback' => 'generate_page_header_blog_content_exists'
@@ -490,13 +488,13 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'generate_page_header_options[page_header_text_alignment]',
 		array(
 			'type' => 'select',
-			'label' => __( 'Text Alignment', 'generate-page-header' ),
-			'description'    => __( 'Choose the horizontal alignment of your content.', 'generate-page-header' ),
+			'label' => __( 'Text Alignment','page-header' ),
+			'description'    => __( 'Choose the horizontal alignment of your content.','page-header' ),
 			'section' => 'page_header_blog_content_settings',
 			'choices' => array(
-				'left' => __( 'Left', 'generate-page-header' ),
-				'center'   => __( 'Center', 'generate-page-header' ),
-				'right'   => __( 'Right', 'generate-page-header' )
+				'left' => __( 'Left','page-header' ),
+				'center'   => __( 'Center','page-header' ),
+				'right'   => __( 'Right','page-header' )
 			),
 			'settings' => 'generate_page_header_options[page_header_text_alignment]',
 			'active_callback' => 'generate_page_header_blog_content_exists'
@@ -516,8 +514,8 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		$wp_customize,
 		'generate_page_header_options[page_header_padding]',
 		array(
-			'label' => __('Top/Bottom Padding', 'generate-page-header'),
-			'description' => __( 'This will add space above and below your content. (integer only) ', 'generate-page-header' ),
+			'label' => __('Top/Bottom Padding','page-header'),
+			'description' => __( 'This will add space above and below your content. (integer only) ','page-header' ),
 			'section' => 'page_header_blog_content_settings',
 			'settings' => 'generate_page_header_options[page_header_padding]',
 			'type' => 'text',
@@ -538,7 +536,7 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'generate_page_header_options[page_header_padding_unit]',
 		array(
 			'type' => 'select',
-			'label' => __( 'Padding Unit', 'generate-page-header' ),
+			'label' => __( 'Padding Unit','page-header' ),
 			'section' => 'page_header_blog_content_settings',
 			'choices' => array(
 				'' => 'px',
@@ -562,7 +560,7 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 			$wp_customize,
 			'generate_page_header_options[page_header_background_color]', 
 			array(
-				'label' => __( 'Background Color', 'generate-page-header' ), 
+				'label' => __( 'Background Color','page-header' ), 
 				'section' => 'page_header_blog_content_settings',
 				'settings' => 'generate_page_header_options[page_header_background_color]',
 				'active_callback' => 'generate_page_header_blog_content_exists'
@@ -583,7 +581,7 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 			$wp_customize,
 			'generate_page_header_options[page_header_text_color]', 
 			array(
-				'label' => __( 'Text Color', 'generate-page-header' ), 
+				'label' => __( 'Text Color','page-header' ), 
 				'section' => 'page_header_blog_content_settings',
 				'settings' => 'generate_page_header_options[page_header_text_color]',
 				'active_callback' => 'generate_page_header_blog_content_exists'
@@ -604,7 +602,7 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 			$wp_customize,
 			'generate_page_header_options[page_header_link_color]', 
 			array(
-				'label' => __( 'Link Color', 'generate-page-header' ), 
+				'label' => __( 'Link Color','page-header' ), 
 				'section' => 'page_header_blog_content_settings',
 				'settings' => 'generate_page_header_options[page_header_link_color]',
 				'active_callback' => 'generate_page_header_blog_content_exists'
@@ -625,7 +623,7 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 			$wp_customize,
 			'generate_page_header_options[page_header_link_color_hover]', 
 			array(
-				'label' => __( 'Link Color Hover', 'generate-page-header' ), 
+				'label' => __( 'Link Color Hover','page-header' ), 
 				'section' => 'page_header_blog_content_settings',
 				'settings' => 'generate_page_header_options[page_header_link_color_hover]',
 				'active_callback' => 'generate_page_header_blog_content_exists'
@@ -638,10 +636,10 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'page_header_blog_advanced_settings',
 		// Arguments array
 		array(
-			'title' => __( 'Page Header Advanced', 'generate-page-header' ),
+			'title' => __( 'Page Header Advanced','page-header' ),
 			'capability' => 'edit_theme_options',
 			'panel' => $blog_panel,
-			'active_callback' => 'generate_page_header_is_posts_page_has_content',
+			'active_callback' => 'generate_page_header_blog_content_exists',
 			'priority' => 8
 		)
 	);
@@ -659,12 +657,12 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'generate_page_header_options[page_header_combine]',
 		array(
 			'type' => 'select',
-			'label' => __( 'Merge with site header', 'generate-page-header' ),
-			//'description'    => __( 'Use the image uploaded above as a background image for your content. (requires image uploaded above)', 'generate-page-header' ),
+			'label' => __( 'Merge with site header','page-header' ),
+			//'description'    => __( 'Use the image uploaded above as a background image for your content. (requires image uploaded above)','page-header' ),
 			'section' => 'page_header_blog_advanced_settings',
 			'choices' => array(
-				'1' => __( 'Enable', 'generate-page-header' ),
-				'' => __( 'Disable', 'generate-page-header' )
+				'1' => __( 'Enable','page-header' ),
+				'' => __( 'Disable','page-header' )
 			),
 			'settings' => 'generate_page_header_options[page_header_combine]'
 		)
@@ -683,12 +681,12 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'generate_page_header_options[page_header_absolute_position]',
 		array(
 			'type' => 'select',
-			'label' => __( 'Place content behind header (sliders etc..)', 'generate-page-header' ),
-			//'description'    => __( 'Use the image uploaded above as a background image for your content. (requires image uploaded above)', 'generate-page-header' ),
+			'label' => __( 'Place content behind header (sliders etc..)','page-header' ),
+			//'description'    => __( 'Use the image uploaded above as a background image for your content. (requires image uploaded above)','page-header' ),
 			'section' => 'page_header_blog_advanced_settings',
 			'choices' => array(
-				'1' => __( 'Enable', 'generate-page-header' ),
-				'' => __( 'Disable', 'generate-page-header' )
+				'1' => __( 'Enable','page-header' ),
+				'' => __( 'Disable','page-header' )
 			),
 			'settings' => 'generate_page_header_options[page_header_absolute_position]',
 			'active_callback' => 'generate_page_header_blog_combined'
@@ -708,7 +706,7 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 			$wp_customize,
 			'generate_page_header_options[page_header_site_title]', 
 			array(
-				'label' => __( 'Site title', 'generate-page-header' ), 
+				'label' => __( 'Site title','page-header' ), 
 				'section' => 'page_header_blog_advanced_settings',
 				'settings' => 'generate_page_header_options[page_header_site_title]',
 				'active_callback' => 'generate_page_header_blog_combined'
@@ -729,7 +727,7 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 			$wp_customize,
 			'generate_page_header_options[page_header_site_tagline]', 
 			array(
-				'label' => __( 'Site tagline', 'generate-page-header' ), 
+				'label' => __( 'Site tagline','page-header' ), 
 				'section' => 'page_header_blog_advanced_settings',
 				'settings' => 'generate_page_header_options[page_header_site_tagline]',
 				'active_callback' => 'generate_page_header_blog_combined'
@@ -750,12 +748,12 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'generate_page_header_options[page_header_transparent_navigation]',
 		array(
 			'type' => 'select',
-			'label' => __( 'Transparent navigation', 'generate-page-header' ),
-			//'description'    => __( 'Use the image uploaded above as a background image for your content. (requires image uploaded above)', 'generate-page-header' ),
+			'label' => __( 'Transparent navigation','page-header' ),
+			//'description'    => __( 'Use the image uploaded above as a background image for your content. (requires image uploaded above)','page-header' ),
 			'section' => 'page_header_blog_advanced_settings',
 			'choices' => array(
-				'1' => __( 'Enable', 'generate-page-header' ),
-				'' => __( 'Disable', 'generate-page-header' )
+				'1' => __( 'Enable','page-header' ),
+				'' => __( 'Disable','page-header' )
 			),
 			'settings' => 'generate_page_header_options[page_header_transparent_navigation]',
 			'active_callback' => 'generate_page_header_blog_combined'
@@ -775,7 +773,7 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 			$wp_customize,
 			'generate_page_header_options[page_header_navigation_text]', 
 			array(
-				'label' => __( 'Navigation text', 'generate-page-header' ), 
+				'label' => __( 'Navigation text','page-header' ), 
 				'section' => 'page_header_blog_advanced_settings',
 				'settings' => 'generate_page_header_options[page_header_navigation_text]',
 				'active_callback' => 'generate_page_header_blog_combined'
@@ -796,7 +794,7 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 			$wp_customize,
 			'generate_page_header_options[page_header_navigation_background_hover]', 
 			array(
-				'label' => __( 'Navigation background hover', 'generate-page-header' ), 
+				'label' => __( 'Navigation background hover','page-header' ), 
 				'section' => 'page_header_blog_advanced_settings',
 				'settings' => 'generate_page_header_options[page_header_navigation_background_hover]',
 				'active_callback' => 'generate_page_header_blog_combined'
@@ -817,7 +815,7 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 			$wp_customize,
 			'generate_page_header_options[page_header_navigation_text_hover]', 
 			array(
-				'label' => __( 'Navigation text hover', 'generate-page-header' ), 
+				'label' => __( 'Navigation text hover','page-header' ), 
 				'section' => 'page_header_blog_advanced_settings',
 				'settings' => 'generate_page_header_options[page_header_navigation_text_hover]',
 				'active_callback' => 'generate_page_header_blog_combined'
@@ -838,7 +836,7 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 			$wp_customize,
 			'generate_page_header_options[page_header_navigation_background_current]', 
 			array(
-				'label' => __( 'Navigation background current', 'generate-page-header' ), 
+				'label' => __( 'Navigation background current','page-header' ), 
 				'section' => 'page_header_blog_advanced_settings',
 				'settings' => 'generate_page_header_options[page_header_navigation_background_current]',
 				'active_callback' => 'generate_page_header_blog_combined'
@@ -859,7 +857,7 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 			$wp_customize,
 			'generate_page_header_options[page_header_navigation_text_current]', 
 			array(
-				'label' => __( 'Navigation text current', 'generate-page-header' ), 
+				'label' => __( 'Navigation text current','page-header' ), 
 				'section' => 'page_header_blog_advanced_settings',
 				'settings' => 'generate_page_header_options[page_header_navigation_text_current]',
 				'active_callback' => 'generate_page_header_blog_combined'
@@ -872,11 +870,10 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 		'page_header_blog_logo_settings',
 		// Arguments array
 		array(
-			'title' => __( 'Page Header Logo', 'generate-page-header' ),
+			'title' => __( 'Page Header Logo','page-header' ),
 			'capability' => 'edit_theme_options',
 			'panel' => $blog_panel,
-			'priority' => 9,
-			'active_callback' => 'generate_page_header_is_posts_page'
+			'priority' => 9
 		)
 	);
 	
@@ -894,8 +891,8 @@ function generate_page_header_blog_customizer( $wp_customize ) {
 			$wp_customize,
 			'generate_page_header_options[page_header_logo]',
 			array(
-				'label' => __('Logo','generate-page-header'),
-				'description' => __( 'Replace your logo on the blog.', 'generate-page-header' ),
+				'label' => __('Logo','page-header'),
+				'description' => __( 'Replace your logo on the blog.','page-header' ),
 				'section' => 'page_header_blog_logo_settings',
 				'settings' => 'generate_page_header_options[page_header_logo]',
 				'active_callback' => 'generate_page_header_logo_exists'
@@ -981,21 +978,6 @@ function generate_page_header_is_posts_page()
 	$blog = ( is_home() || is_archive() || is_attachment() || is_tax() ) ? true : false;
 	
 	return $blog;
-}
-endif;
-
-if ( ! function_exists( 'generate_page_header_is_posts_page_has_content' ) ) :
-function generate_page_header_is_posts_page_has_content()
-{
-	$options = get_option( 'generate_page_header_options', generate_page_header_get_defaults() );
-	
-	$blog = ( is_home() || is_archive() || is_attachment() || is_tax() ) ? true : false;
-	
-	if ( isset( $options[ 'page_header_content' ] ) && '' !== $options[ 'page_header_content' ] && $blog ) {
-		return true;
-	}
-	
-	return false;
 }
 endif;
 

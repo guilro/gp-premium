@@ -1,5 +1,5 @@
 <?php
-if ( defined( 'GENERATE_FONT_VERSION' ) && class_exists( 'Generate_Google_Font_Dropdown_Custom_Control' ) ) :
+if ( defined( 'GENERATE_FONT_VERSION' ) && class_exists( 'Generate_Google_Font_Dropdown_Custom_Control' ) && function_exists( 'generate_premium_sanitize_typography' ) ) :
 	
 	if ( $wp_customize->get_panel( 'generate_typography_panel' ) ) {
 		$typography_panel = 'generate_typography_panel';
@@ -12,7 +12,7 @@ if ( defined( 'GENERATE_FONT_VERSION' ) && class_exists( 'Generate_Google_Font_D
 		'secondary_font_section',
 		// Arguments array
 		array(
-			'title' => __( 'Secondary Navigation', 'generate-secondary-nav' ),
+			'title' => __( 'Secondary Navigation','secondary-nav' ),
 			'capability' => 'edit_theme_options',
 			'description' => '',
 			'priority' => 51,
@@ -26,7 +26,7 @@ if ( defined( 'GENERATE_FONT_VERSION' ) && class_exists( 'Generate_Google_Font_D
 		array(
 			'default' => $defaults['font_secondary_navigation'],
 			'type' => 'option',
-			'sanitize_callback' => 'generate_sanitize_typography'
+			'sanitize_callback' => 'generate_premium_sanitize_typography'
 		)
 	);
 			
@@ -35,7 +35,7 @@ if ( defined( 'GENERATE_FONT_VERSION' ) && class_exists( 'Generate_Google_Font_D
 			$wp_customize, 
 			'google_font_site_secondary_navigation_control', 
 			array(
-				'label' => __('Secondary navigation','generate-secondary-nav'),
+				'label' => __('Secondary navigation','secondary-nav'),
 				'section' => 'secondary_font_section',
 				'settings' => 'generate_secondary_nav_settings[font_secondary_navigation]',
 				'priority' => 120
@@ -102,7 +102,7 @@ if ( defined( 'GENERATE_FONT_VERSION' ) && class_exists( 'Generate_Google_Font_D
 				$wp_customize, 
 				'generate_secondary_nav_settings[secondary_navigation_font_weight]', 
 				array(
-					'label' => __('Font weight','generate-secondary-nav'),
+					'label' => __('Font weight','secondary-nav'),
 					'section' => 'secondary_font_section',
 					'settings' => 'generate_secondary_nav_settings[secondary_navigation_font_weight]',
 					'priority' => 140,
@@ -129,7 +129,7 @@ if ( defined( 'GENERATE_FONT_VERSION' ) && class_exists( 'Generate_Google_Font_D
 				$wp_customize, 
 				'secondary_navigation_font_weight_control', 
 				array(
-					'label' => __('Font weight','generate-secondary-nav'),
+					'label' => __('Font weight','secondary-nav'),
 					'section' => 'secondary_font_section',
 					'settings' => 'generate_secondary_nav_settings[secondary_navigation_font_weight]',
 					'priority' => 140,
@@ -155,7 +155,7 @@ if ( defined( 'GENERATE_FONT_VERSION' ) && class_exists( 'Generate_Google_Font_D
 				$wp_customize, 
 				'generate_secondary_nav_settings[secondary_navigation_font_transform]', 
 				array(
-					'label' => __('Text transform','generate-secondary-nav'),
+					'label' => __('Text transform','secondary-nav'),
 					'section' => 'secondary_font_section',
 					'settings' => 'generate_secondary_nav_settings[secondary_navigation_font_transform]',
 					'priority' => 160,
@@ -175,7 +175,7 @@ if ( defined( 'GENERATE_FONT_VERSION' ) && class_exists( 'Generate_Google_Font_D
 				$wp_customize, 
 				'secondary_navigation_font_transform_control', 
 				array(
-					'label' => __('Text transform','generate-secondary-nav'),
+					'label' => __('Text transform','secondary-nav'),
 					'section' => 'secondary_font_section',
 					'settings' => 'generate_secondary_nav_settings[secondary_navigation_font_transform]',
 					'priority' => 160,
@@ -201,10 +201,13 @@ if ( defined( 'GENERATE_FONT_VERSION' ) && class_exists( 'Generate_Google_Font_D
 				$wp_customize, 
 				'generate_secondary_nav_settings[secondary_navigation_font_size]', 
 				array(
-					'label' => __('Font size','generate-secondary-nav'),
+					'label' => __('Font size','secondary-nav'),
 					'section' => 'secondary_font_section',
 					'settings' => 'generate_secondary_nav_settings[secondary_navigation_font_size]',
-					'priority' => 165
+					'priority' => 165,
+					'type' => 'gp-typography-slider',
+					'default_value' => $defaults['secondary_navigation_font_size'],
+					'unit' => 'px'
 				)
 			)
 		);

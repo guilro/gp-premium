@@ -1,0 +1,324 @@
+# Translation by Alexey Chumakov, 2015-2016
+# Feel free to forward any issues or suggestions on translation to Alexey Chumakov
+# (**) comments indicate places for future improvement.
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Backgrounds\n"
+"POT-Creation-Date: 2016-11-11 14:08+0300\n"
+"PO-Revision-Date: 2016-11-11 14:08+0300\n"
+"Last-Translator: Alexey Chumakov <alex@chumakov.ru>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ../../../gp-premium/backgrounds\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ../inc\n"
+
+#: ../inc/EDD_SL_Plugin_Updater.php:196
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr "Доступна новая версия %1$s. %2$sПосмотреть подробности %3$s%4$s."
+
+#: ../inc/EDD_SL_Plugin_Updater.php:204
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+"Доступна новая версия %1$s. %2$sПосмотреть подробности %3$s%4$s или "
+"%5$sобновить сейчас%6$s."
+
+#: ../inc/EDD_SL_Plugin_Updater.php:358
+msgid "You do not have permission to install plugin updates"
+msgstr "У вас нет прав для установки обновлений плагинов"
+
+#: ../inc/EDD_SL_Plugin_Updater.php:358
+msgid "Error"
+msgstr "Ошибка"
+
+#: ../inc/activation.php:13
+msgid "Add-on deactivated."
+msgstr "Дополнение деактивировано."
+
+#: ../inc/activation.php:17
+msgid "Add-on activated."
+msgstr "Дополнение активировано."
+
+#: ../inc/activation.php:58
+msgid "GP Premium"
+msgstr "Дополнения GP Premium"
+
+#: ../inc/activation.php:66
+msgid "Bulk Actions"
+msgstr "Пакетные операции"
+
+#: ../inc/activation.php:67 ../inc/activation.php:101
+msgid "Activate"
+msgstr "Активировать"
+
+#: ../inc/activation.php:68 ../inc/activation.php:88
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: ../inc/activation.php:71
+msgid "Apply"
+msgstr "Применить"
+
+#: ../inc/activation.php:427
+msgid "Enter valid license key for automatic updates."
+msgstr "Для автоматического обновления укажите действующий ключ лицензии."
+
+#: ../inc/verify.php:88
+msgid "License deactivated."
+msgstr "Лицензия деактивирована."
+
+#: ../inc/verify.php:92
+msgid "License activated."
+msgstr "Лицензия активирована."
+
+#: ../inc/verify.php:125
+#, php-format
+msgid "Updates %s"
+msgstr "Обновления %s"
+
+#: ../inc/verify.php:125
+msgid "Help"
+msgstr "Справка"
+
+#: ../inc/verify.php:150
+msgid "License Key"
+msgstr "Лицензионный ключ"
+
+#: ../inc/verify.php:155
+msgid "Update"
+msgstr "Обновить"
+
+#: ../inc/verify.php:244
+#, php-format
+msgid "Your license key expired on %s."
+msgstr "Ваш лицензионный ключ истек %s."
+
+#: ../inc/verify.php:251
+msgid "Your license key has been disabled."
+msgstr "Ваш лицензионный ключ заблокирован."
+
+#: ../inc/verify.php:256
+msgid "Invalid license."
+msgstr "Недействительная лицензия."
+
+#: ../inc/verify.php:262
+msgid "Your license is not active for this URL."
+msgstr "Ваша лицензия не активна для этого URL."
+
+#: ../inc/verify.php:267
+#, php-format
+msgid "This appears to be an invalid license key for %s."
+msgstr "Похоже, это не действующий лицензионный ключ для %s."
+
+#: ../inc/verify.php:272
+msgid "Your license key has reached its activation limit."
+msgstr "Ваш лицензионный ключ достиг предела активаций."
+
+#: ../inc/verify.php:277
+msgid "An error occurred, please try again."
+msgstr "Произошла ошибка, пожалуйста, попробуйте ещё раз."
+
+#: functions/functions.php:83 functions/functions.php:92
+msgid "Background Images"
+msgstr "Фоновые изображения"
+
+#: functions/functions.php:101 functions/functions.php:128
+msgid "Body"
+msgstr "Тело страницы"
+
+#: functions/functions.php:148 functions/functions.php:282
+#: functions/functions.php:416 functions/functions.php:467
+#: functions/functions.php:518 functions/functions.php:569
+#: functions/functions.php:630 functions/functions.php:681
+#: functions/functions.php:732 functions/functions.php:793
+#: functions/functions.php:927 functions/functions.php:1061
+#: functions/functions.php:1185
+msgid "Repeat"
+msgstr "Повторять"
+
+#: functions/functions.php:149 functions/functions.php:283
+#: functions/functions.php:417 functions/functions.php:468
+#: functions/functions.php:519 functions/functions.php:570
+#: functions/functions.php:631 functions/functions.php:682
+#: functions/functions.php:733 functions/functions.php:794
+#: functions/functions.php:928 functions/functions.php:1062
+#: functions/functions.php:1186
+msgid "Repeat x"
+msgstr "Горизонтально"
+
+#: functions/functions.php:150 functions/functions.php:284
+#: functions/functions.php:418 functions/functions.php:469
+#: functions/functions.php:520 functions/functions.php:571
+#: functions/functions.php:632 functions/functions.php:683
+#: functions/functions.php:734 functions/functions.php:795
+#: functions/functions.php:929 functions/functions.php:1063
+#: functions/functions.php:1187
+msgid "Repeat y"
+msgstr "Вертикально"
+
+#: functions/functions.php:151 functions/functions.php:285
+#: functions/functions.php:419 functions/functions.php:470
+#: functions/functions.php:521 functions/functions.php:572
+#: functions/functions.php:633 functions/functions.php:684
+#: functions/functions.php:735 functions/functions.php:796
+#: functions/functions.php:930 functions/functions.php:1064
+#: functions/functions.php:1188
+msgid "No Repeat"
+msgstr "Не повторять"
+
+#: functions/functions.php:173 functions/functions.php:307
+#: functions/functions.php:818 functions/functions.php:952
+#: functions/functions.php:1086 functions/functions.php:1210
+msgid "Size (Auto)"
+msgstr "По размеру (авто)"
+
+#: functions/functions.php:174 functions/functions.php:308
+#: functions/functions.php:819 functions/functions.php:953
+#: functions/functions.php:1087 functions/functions.php:1211
+msgid "100% Width"
+msgstr "100% ширина"
+
+#: functions/functions.php:175 functions/functions.php:309
+#: functions/functions.php:820 functions/functions.php:954
+#: functions/functions.php:1088 functions/functions.php:1212
+msgid "Cover"
+msgstr "Накрыть"
+
+#: functions/functions.php:176 functions/functions.php:310
+#: functions/functions.php:821 functions/functions.php:955
+#: functions/functions.php:1089 functions/functions.php:1213
+msgid "Contain"
+msgstr "Уместить"
+
+#: functions/functions.php:198 functions/functions.php:332
+#: functions/functions.php:843 functions/functions.php:977
+#: functions/functions.php:1111 functions/functions.php:1235
+msgid "Attachment"
+msgstr "Прикрепление"
+
+#: functions/functions.php:199 functions/functions.php:333
+#: functions/functions.php:844 functions/functions.php:978
+#: functions/functions.php:1112 functions/functions.php:1236
+msgid "Fixed"
+msgstr "Фиксированная"
+
+#: functions/functions.php:200 functions/functions.php:334
+#: functions/functions.php:845 functions/functions.php:979
+#: functions/functions.php:1113 functions/functions.php:1237
+msgid "Local"
+msgstr "Локальная"
+
+#: functions/functions.php:201 functions/functions.php:335
+#: functions/functions.php:846 functions/functions.php:980
+#: functions/functions.php:1114 functions/functions.php:1238
+msgid "Inherit"
+msgstr "Наследовать"
+
+#: functions/functions.php:226 functions/functions.php:360
+#: functions/functions.php:871 functions/functions.php:1005
+#: functions/functions.php:1139 functions/functions.php:1263
+msgid "Position"
+msgstr "Позиция"
+
+#: functions/functions.php:234 functions/functions.php:262
+msgid "Header"
+msgstr "Шапка"
+
+#: functions/functions.php:368
+msgid "Primary Navigation"
+msgstr "Основное меню"
+
+#: functions/functions.php:396
+msgid "Navigation"
+msgstr "Меню"
+
+#: functions/functions.php:447
+msgid "Navigation Item"
+msgstr "Пункт меню"
+
+#: functions/functions.php:498
+msgid "Navigation Item Hover"
+msgstr "Пункт меню — наведение"
+
+#: functions/functions.php:549
+msgid "Navigation Item Current"
+msgstr "Пункт меню — текущий"
+
+#: functions/functions.php:582
+msgid "Primary Sub-Navigation"
+msgstr "Основное подменю"
+
+#: functions/functions.php:610
+msgid "Sub-Navigation Item"
+msgstr "Пункт подменю"
+
+#: functions/functions.php:661
+msgid "Sub-Navigation Item Hover"
+msgstr "Пункт подменю — наведение"
+
+#: functions/functions.php:712
+msgid "Sub-Navigation Item Current"
+msgstr "Пункт подменю — текущий"
+
+#: functions/functions.php:745 functions/functions.php:773
+msgid "Content"
+msgstr "Содержимое"
+
+#: functions/functions.php:879
+msgid "Sidebar"
+msgstr "Боковик"
+
+#: functions/functions.php:907
+msgid "Sidebar Widgets"
+msgstr "Виджеты боковика"
+
+#: functions/functions.php:1013
+msgid "Footer"
+msgstr "Подвал"
+
+#: functions/functions.php:1041
+msgid "Footer Widget Area"
+msgstr "Область виджетов подвала"
+
+#: functions/functions.php:1165
+msgid "Footer Area"
+msgstr "Область подвала"
+
+#: functions/ie.php:14
+msgid "Export Backgrounds Customizer Settings"
+msgstr "Экспортировать настройки фонов"
+
+#: functions/ie.php:63
+msgid "Warning: This will delete your settings."
+msgstr "Внимание: ваши настройки будут удалены."
+
+#: functions/ie.php:65
+msgid "Delete Backgrounds Customizer Settings"
+msgstr "Удалить настройки фонов"
+
+#~ msgid "Select Image"
+#~ msgstr "Выбрать изображение"
+
+#~ msgid "Use Image"
+#~ msgstr "Использовать изображение"
+
+#~ msgid "Upload"
+#~ msgstr "Загрузить"
+
+#~ msgid "Remove"
+#~ msgstr "Убрать"

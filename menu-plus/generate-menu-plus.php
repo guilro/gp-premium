@@ -20,8 +20,8 @@ require plugin_dir_path( __FILE__ ) . 'functions/import-export.php';
 
 // Set up language files
 if ( ! function_exists( 'generate_menu_plus_init' ) ) :
-add_action('init', 'generate_menu_plus_init');
+add_action('plugins_loaded', 'generate_menu_plus_init');
 function generate_menu_plus_init() {
-	load_plugin_textdomain( 'generate-menu-plus', false, 'gp-premium/menu-plus/languages' );
+	load_plugin_textdomain( 'menu-plus', false, 'gp-premium/langs/menu-plus/' );
 }
 endif;

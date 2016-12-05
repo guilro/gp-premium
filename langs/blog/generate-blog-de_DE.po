@@ -1,0 +1,284 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Blog\n"
+"POT-Creation-Date: 2016-11-13 10:17+0100\n"
+"PO-Revision-Date: 2016-11-13 10:17+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/controls.php:40
+msgid "Apply image sizes"
+msgstr "Übernehme Bildgrößen"
+
+#: functions/customizer.php:19
+msgid "Blog"
+msgstr "Blog"
+
+#: functions/customizer.php:42
+msgid "Blog Content"
+msgstr "Blog-Inhalte"
+
+#: functions/customizer.php:60
+msgid "Excerpt Length"
+msgstr "﻿Blog-Auszugslänge"
+
+#: functions/customizer.php:80
+msgid "Read more label"
+msgstr "Weiterlesen-Label"
+
+#: functions/customizer.php:93 functions/customizer.php:118
+msgid "Masonry"
+msgstr "Kacheln"
+
+#: functions/customizer.php:121 functions/customizer.php:603
+#: functions/customizer.php:667
+msgid "Enable"
+msgstr "Aktivieren"
+
+#: functions/customizer.php:122 functions/customizer.php:604
+#: functions/customizer.php:668
+msgid "Disable"
+msgstr "Deaktivieren"
+
+#: functions/customizer.php:149
+msgid "Masonry Block Width"
+msgstr "Gekachelte Block Breite"
+
+#: functions/customizer.php:152 functions/customizer.php:184
+#: functions/masonry.php:85
+msgid "Small"
+msgstr "Klein"
+
+#: functions/customizer.php:153 functions/customizer.php:185
+#: functions/masonry.php:86
+msgid "Medium"
+msgstr "Mittel"
+
+#: functions/customizer.php:154 functions/customizer.php:186
+#: functions/masonry.php:87
+msgid "Large"
+msgstr "Groß"
+
+#: functions/customizer.php:181
+msgid "Masonry Most Recent Width"
+msgstr "Block Breite des neuesten Eintr&auml;gs"
+
+#: functions/customizer.php:205
+msgid "Masonry Load More Text"
+msgstr "Weitere Elemente laden - Text"
+
+#: functions/customizer.php:223
+msgid "Masonry Loading Text"
+msgstr "Anzuzeigender Text beim Laden"
+
+#: functions/customizer.php:236 functions/customizer.php:261
+msgid "Post Image"
+msgstr "Beitragsbild"
+
+#: functions/customizer.php:264 functions/customizer.php:419
+#: functions/customizer.php:450 functions/customizer.php:481
+#: functions/customizer.php:512 functions/customizer.php:543
+msgid "Show"
+msgstr "Anzeigen"
+
+#: functions/customizer.php:265 functions/customizer.php:420
+#: functions/customizer.php:451 functions/customizer.php:482
+#: functions/customizer.php:513 functions/customizer.php:544
+msgid "Hide"
+msgstr "Verbergen"
+
+#: functions/customizer.php:292
+msgid "Post Image Position"
+msgstr "Position des Beitragsbilds"
+
+#: functions/customizer.php:295
+msgid "Below Header"
+msgstr "Unter dem Header"
+
+#: functions/customizer.php:296
+msgid "Above Header"
+msgstr "Über dem Header"
+
+#: functions/customizer.php:323
+msgid "Post Image Alignment"
+msgstr "Ausrichtung des Beitragsbilds"
+
+#: functions/customizer.php:326
+msgid "Center"
+msgstr "Mittig"
+
+#: functions/customizer.php:327
+msgid "Left"
+msgstr "Links"
+
+#: functions/customizer.php:328
+msgid "Right"
+msgstr "Rechts"
+
+#: functions/customizer.php:350
+msgid "Post Image Width"
+msgstr "Breite des Beitragsbilds"
+
+#: functions/customizer.php:354 functions/customizer.php:378
+msgid "Auto"
+msgstr "Auto"
+
+#: functions/customizer.php:374
+msgid "Post Image Height"
+msgstr "Höhe des Beitragsbilds"
+
+#: functions/customizer.php:416
+msgid "Date"
+msgstr "Datum"
+
+#: functions/customizer.php:447
+msgid "Author"
+msgstr "Autor"
+
+#: functions/customizer.php:478
+msgid "Categories"
+msgstr "Kategorien"
+
+#: functions/customizer.php:509
+msgid "Tags"
+msgstr "Tags"
+
+#: functions/customizer.php:540
+msgid "Comment Link"
+msgstr "Kommentar-Link"
+
+#: functions/customizer.php:558 functions/customizer.php:631
+msgid "Columns"
+msgstr "Spalten"
+
+#: functions/customizer.php:573
+msgid "Masonry is enabled. These settings will be ignored."
+msgstr "Masonry ist aktiviert. Diese Einstellungen werden ignoriert."
+
+#: functions/customizer.php:600
+msgid "Column Layout"
+msgstr "Spaltenlayout"
+
+#: functions/customizer.php:664
+msgid "First Post Full Width"
+msgstr "Erster Beitrag in voller Breite"
+
+#: functions/defaults.php:14
+msgid "Read more..."
+msgstr "Weiterlesen ..."
+
+#: functions/defaults.php:18
+msgid "+ More"
+msgstr "+ Weitere"
+
+#: functions/defaults.php:19
+msgid "Loading..."
+msgstr "Lädt ..."
+
+#: functions/ie.php:17
+msgid "Warning: This will delete your settings."
+msgstr "Warnung: Ihre Einstellungen werden gelöscht."
+
+#: functions/ie.php:19
+msgid "Delete Blog Customizer Settings"
+msgstr "Blog-Einstellungen löschen"
+
+#: functions/ie.php:56
+msgid "Export Blog Customizer Settings"
+msgstr "Blog-Exporteinstellungen"
+
+#: functions/masonry.php:55 functions/masonry.php:82
+msgid "Masonry Post Width"
+msgstr "Gekachelte Block Breite"
+
+#: functions/masonry.php:84
+msgid "Global setting"
+msgstr "Globale Einstellung"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+#~ msgstr ""
+#~ "Es ist eine neue Version von %1$sverfügbar. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">Zeige Details der Version %3$s </a>."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+#~ "\">update now</a>."
+#~ msgstr ""
+#~ "Neue Version von %1$s verfügbar. <a target=\"_blank\" class=\"thickbox\" "
+#~ "href=\"%2$s\">Details zu Version %3$s anzeigen</a> oder <a href=\"%4$s"
+#~ "\">Jetzt updaten</a>."
+
+#~ msgid "You do not have permission to install plugin updates"
+#~ msgstr "Sie haben keine Berechtigung Plugin-Updates zu installieren"
+
+#~ msgid "Error"
+#~ msgstr "Fehler"
+
+#~ msgid ""
+#~ "Want updates served directly to your Dashboard? Activate the email you "
+#~ "purchased your add-ons with here."
+#~ msgstr ""
+#~ "Möchtest Du die Updates direkt auf dem Dashboard? Aktiviere Deine E-Mail "
+#~ "mit der Du bezahlt hast."
+
+#~ msgid "Email"
+#~ msgstr "E-Mail"
+
+#~ msgid "Deactivate Email"
+#~ msgstr "E-Mail deaktivieren"
+
+#~ msgid "Activate Email"
+#~ msgstr "E-Mail aktivieren"
+
+#~ msgid "Save Email"
+#~ msgstr "E-Mail speichern"
+
+#~ msgid "Enable All Updates"
+#~ msgstr "Alle Updates aktivieren"
+
+#~ msgid "Disable Updates"
+#~ msgstr "Updates deaktivieren"
+
+#~ msgid "Enable Updates"
+#~ msgstr "Updates aktivieren"
+
+#~ msgid "Email activation failed. This email does not exist in our records."
+#~ msgstr ""
+#~ "Email-Aktivierung ist fehlgeschlagen. Diese e-Mail ist nicht in unseren "
+#~ "Aufzeichnungen vorhanden."
+
+#~ msgid "Email activated."
+#~ msgstr "E-Mail aktiviert."
+
+#~ msgid "Email deactivated."
+#~ msgstr "E-Mail deaktiviert."
+
+#~ msgid "License failed."
+#~ msgstr "Lizenz ungültig oder nicht vorhanden."
+
+#~ msgid "License activated."
+#~ msgstr "Lizenz aktiviert."
+
+#~ msgid "Licenses activated."
+#~ msgstr "Lizenzen aktiviert."
+
+#~ msgid "Deactivation failed."
+#~ msgstr "Deaktivierung ist fehlgeschlagen."
+
+#~ msgid "License deactivated."
+#~ msgstr "Lizenz deaktiviert."

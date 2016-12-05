@@ -224,9 +224,15 @@
           }
         }
       };
+	  // Only fire resize event if the width changes
+	  // Changed by Tom
+	  var window_width = jQuery( window ).width();
       recalc_and_tick = function() {
-        recalc();
-        return tick();
+		if ( jQuery( window ).width() != window_width ) {
+			recalc();
+			return tick();
+		}
+		window_width = jQuery( window ).width();
       };
       detach = function() {
         detached = true;

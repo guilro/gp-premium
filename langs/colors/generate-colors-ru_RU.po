@@ -1,0 +1,324 @@
+# Translation by Alexey Chumakov, 2015-2016
+# Feel free to forward any issues or suggestions on translation to Alexey Chumakov
+# (**) comments indicate places for future improvement.
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Colors\n"
+"POT-Creation-Date: 2016-11-11 14:09+0300\n"
+"PO-Revision-Date: 2016-11-11 14:09+0300\n"
+"Last-Translator: Alexey Chumakov <alex@chumakov.ru>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ../../../gp-premium/colors\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ../inc\n"
+
+#: ../inc/EDD_SL_Plugin_Updater.php:196
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr "Доступна новая версия %1$s. %2$sПосмотреть подробности %3$s%4$s."
+
+#: ../inc/EDD_SL_Plugin_Updater.php:204
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+"Доступна новая версия %1$s. %2$sПосмотреть подробности %3$s%4$s или "
+"%5$sобновить сейчас%6$s."
+
+#: ../inc/EDD_SL_Plugin_Updater.php:358
+msgid "You do not have permission to install plugin updates"
+msgstr "У вас нет прав для установки обновлений плагинов"
+
+#: ../inc/EDD_SL_Plugin_Updater.php:358
+msgid "Error"
+msgstr "Ошибка"
+
+#: ../inc/activation.php:13
+msgid "Add-on deactivated."
+msgstr "Дополнение деактивировано."
+
+#: ../inc/activation.php:17
+msgid "Add-on activated."
+msgstr "Дополнение активировано."
+
+#: ../inc/activation.php:58
+msgid "GP Premium"
+msgstr "Дополнения GP Premium"
+
+#: ../inc/activation.php:66
+msgid "Bulk Actions"
+msgstr "Пакетные операции"
+
+#: ../inc/activation.php:67 ../inc/activation.php:101
+msgid "Activate"
+msgstr "Активировать"
+
+#: ../inc/activation.php:68 ../inc/activation.php:88
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: ../inc/activation.php:71
+msgid "Apply"
+msgstr "Применить"
+
+#: ../inc/activation.php:427
+msgid "Enter valid license key for automatic updates."
+msgstr "Для автоматического обновления укажите действующий ключ лицензии."
+
+#: ../inc/verify.php:88
+msgid "License deactivated."
+msgstr "Лицензия деактивирована."
+
+#: ../inc/verify.php:92
+msgid "License activated."
+msgstr "Лицензия активирована."
+
+#: ../inc/verify.php:125
+#, php-format
+msgid "Updates %s"
+msgstr "Обновления %s"
+
+#: ../inc/verify.php:125
+msgid "Help"
+msgstr "Справка"
+
+#: ../inc/verify.php:150
+msgid "License Key"
+msgstr "Лицензионный ключ"
+
+#: ../inc/verify.php:155
+msgid "Update"
+msgstr "Обновить"
+
+#: ../inc/verify.php:244
+#, php-format
+msgid "Your license key expired on %s."
+msgstr "Ваш лицензионный ключ истек %s."
+
+#: ../inc/verify.php:251
+msgid "Your license key has been disabled."
+msgstr "Ваш лицензионный ключ заблокирован."
+
+#: ../inc/verify.php:256
+msgid "Invalid license."
+msgstr "Недействительная лицензия."
+
+#: ../inc/verify.php:262
+msgid "Your license is not active for this URL."
+msgstr "Ваша лицензия не активна для этого URL."
+
+#: ../inc/verify.php:267
+#, php-format
+msgid "This appears to be an invalid license key for %s."
+msgstr "Похоже, это не действующий лицензионный ключ для %s."
+
+#: ../inc/verify.php:272
+msgid "Your license key has reached its activation limit."
+msgstr "Ваш лицензионный ключ достиг предела активаций."
+
+#: ../inc/verify.php:277
+msgid "An error occurred, please try again."
+msgstr "Произошла ошибка, пожалуйста, попробуйте ещё раз."
+
+#: functions/functions.php:85
+msgid "Colors"
+msgstr "Цвета"
+
+#: functions/functions.php:97
+msgid "Header"
+msgstr "Шапка"
+
+#: functions/functions.php:109 functions/functions.php:187
+#: functions/functions.php:265 functions/functions.php:342
+#: functions/functions.php:462 functions/functions.php:534
+#: functions/functions.php:708
+msgid "Background"
+msgstr "Фон"
+
+#: functions/functions.php:115 functions/functions.php:193
+#: functions/functions.php:271 functions/functions.php:348
+#: functions/functions.php:468 functions/functions.php:540
+#: functions/functions.php:714
+msgid "Text"
+msgstr "Текст"
+
+#: functions/functions.php:121 functions/functions.php:354
+#: functions/functions.php:474 functions/functions.php:546
+#: functions/functions.php:720
+msgid "Link"
+msgstr "Ссылка"
+
+#: functions/functions.php:127 functions/functions.php:360
+#: functions/functions.php:480 functions/functions.php:552
+#: functions/functions.php:726
+msgid "Link Hover"
+msgstr "Ссылка — наведение"
+
+#: functions/functions.php:133
+msgid "Site Title"
+msgstr "Название сайта"
+
+#: functions/functions.php:139
+msgid "Tagline"
+msgstr "Краткое описание"
+
+#: functions/functions.php:175
+msgid "Primary Navigation"
+msgstr "Основное меню"
+
+#: functions/functions.php:199 functions/functions.php:277
+msgid "Background Hover"
+msgstr "Фон — наведение"
+
+#: functions/functions.php:205 functions/functions.php:283
+msgid "Text Hover"
+msgstr "Текст — наведение"
+
+#: functions/functions.php:211 functions/functions.php:289
+msgid "Background Current"
+msgstr "Фон — текущий пункт"
+
+#: functions/functions.php:217 functions/functions.php:295
+msgid "Text Current"
+msgstr "Текст — текущий пункт"
+
+#: functions/functions.php:253
+msgid "Primary Sub-Navigation"
+msgstr "Основное подменю"
+
+#: functions/functions.php:330
+msgid "Content"
+msgstr "Содержимое"
+
+#: functions/functions.php:366
+msgid "Content Title"
+msgstr "Заголовок содержимого"
+
+#: functions/functions.php:372
+msgid "Blog Post Title"
+msgstr "Заголовок записи"
+
+#: functions/functions.php:378
+msgid "Blog Post Title Hover"
+msgstr "Заголовок записи — наведение"
+
+#: functions/functions.php:384
+msgid "Entry Meta Text"
+msgstr "Текст мета"
+
+#: functions/functions.php:390
+msgid "Entry Meta Links"
+msgstr "Ссылки мета"
+
+#: functions/functions.php:396
+msgid "Entry Meta Links Hover"
+msgstr "Ссылки мета — наведение"
+
+#: functions/functions.php:402
+msgid "Heading 1 (H1) Color"
+msgstr "Цвет заголовка 1 (H1)"
+
+#: functions/functions.php:408
+msgid "Heading 2 (H2) Color"
+msgstr "Цвет заголовка 2 (H2)"
+
+#: functions/functions.php:414
+msgid "Heading 3 (H3) Color"
+msgstr "Цвет заголовка 3 (H3)"
+
+#: functions/functions.php:450
+msgid "Sidebar Widgets"
+msgstr "Виджеты боковика"
+
+#: functions/functions.php:486 functions/functions.php:558
+msgid "Widget Title"
+msgstr "Заголовок виджета"
+
+#: functions/functions.php:522
+msgid "Footer Widgets"
+msgstr "Виджеты подвала"
+
+#: functions/functions.php:594
+msgid "Forms"
+msgstr "Формы"
+
+#: functions/functions.php:606
+msgid "Form Background"
+msgstr "Фон формы"
+
+#: functions/functions.php:612
+msgid "Form Text"
+msgstr "Текст формы"
+
+#: functions/functions.php:618
+msgid "Form Background Focus/Hover"
+msgstr "Фокус/наведение фона формы"
+
+#: functions/functions.php:624
+msgid "Form Text Focus/Hover"
+msgstr "Фокус/наведение текста формы"
+
+#: functions/functions.php:630
+msgid "Form Border"
+msgstr "Рамка формы"
+
+#: functions/functions.php:636
+msgid "Form Border Focus/Hover"
+msgstr "Фокус/наведение рамки формы"
+
+#: functions/functions.php:642
+msgid "Form Button"
+msgstr "Кнопка формы"
+
+#: functions/functions.php:648
+msgid "Form Button Focus/Hover"
+msgstr "Фокус/наведение кнопки формы"
+
+#: functions/functions.php:654
+msgid "Form Button Text"
+msgstr "Текст кнопки формы"
+
+#: functions/functions.php:660
+msgid "Form Button Text Focus/Hover"
+msgstr "Фокус/наведение текста кнопки формы"
+
+#: functions/functions.php:696
+msgid "Footer"
+msgstr "Подвал"
+
+#~ msgid "Header Colors"
+#~ msgstr "Цвета шапки"
+
+#~ msgid "Navigation Colors"
+#~ msgstr "Цвета меню"
+
+#~ msgid "Sub-Navigation Colors"
+#~ msgstr "Цвета подменю"
+
+#~ msgid "Content Colors"
+#~ msgstr "Цвета содержимого"
+
+#~ msgid "Sidebar Widget Colors"
+#~ msgstr "Цвета виджетов боковика"
+
+#~ msgid "Footer Widget Colors"
+#~ msgstr "Цвета виджетов подвала"
+
+#~ msgid "Footer Colors"
+#~ msgstr "Цвета подвала"
+
+#~ msgid "Form Colors"
+#~ msgstr "Цвета форм"

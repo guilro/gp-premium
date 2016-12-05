@@ -82,21 +82,14 @@ function generate_blog_columns_css()
 		);
 	endif;
 	
-	if ( function_exists( 'generate_get_defaults' ) ) :
-		$generate_settings = wp_parse_args( 
-			get_option( 'generate_settings', array() ), 
-			generate_get_defaults() 
-		);
-	endif;
-	
 	$separator = ( function_exists('generate_spacing_get_defaults') ) ? $spacing_settings['separator'] : 20;
+	
 	$return = '';
 	if ( generate_blog_get_columns() ) :
-		$return .= '.generate-columns-activated .generate-columns-container {margin-left:-' . $separator / 2 . 'px;margin-right:-' . $separator / 2 . 'px}';
-		$return .= '.generate-columns-activated .page-header,.generate-columns-activated .paging-navigation {margin-left:' . $separator / 2 . 'px;margin-right:' . $separator / 2 . 'px}';
-		$return .= '.generate-columns {padding-left:' . $separator / 2 . 'px;padding-right:' . $separator / 2 . 'px}';
-		$return .= '.separate-containers .site-main .generate-columns-container > .generate-columns {margin-bottom:' . $separator . 'px;}';
-		$return .= '@media (max-width: ' . ( $generate_settings['container_width'] + 10 ) . 'px) {.generate-columns-activated .generate-columns-container{margin-left:0;margin-right:0;}}';
+		$return .= '.generate-columns {margin-bottom: ' . $separator . 'px;padding-left: ' . $separator . 'px;}';
+		$return .= '.generate-columns-container {margin-left: -' . $separator . 'px;}';
+		$return .= '.page-header {margin-bottom: ' . $separator . 'px;margin-left: ' . $separator . 'px}';
+		$return .= '.separate-containers .generate-columns-container > .paging-navigation {margin-left: ' . $separator . 'px;}';
 	endif;
 	
 	return $return;

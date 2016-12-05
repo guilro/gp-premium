@@ -756,7 +756,7 @@ var Generate_Sections = {
 			generateHideSections();
 		}
 		
-		jQuery('body').delegate('.use-sections-switch', 'lcs-statuschange', function() {
+		jQuery( document ).on('lcs-statuschange', '.use-sections-switch', function( e ) {
 			var status = (jQuery(this).is(':checked')) ? 'checked' : 'unchecked';
 			if ( 'checked' == status ) {
 				generateShowSections();
@@ -782,7 +782,17 @@ var Generate_Sections = {
                 'opacity': '1',
                 'height': 'auto'
             });
-
+			
+			// Remove and add the default editor - this removes any visible toolbars etc..
+			// We need to set a timeout for this to work
+			// if (typeof tinyMCE != "undefined") {
+				// tinyMCE.EditorManager.execCommand("mceRemoveEditor", true, "content");
+				// $( '.use-sections-cover' ).css( 'z-index','10000' );
+				// setTimeout('tinyMCE.EditorManager.execCommand("mceAddEditor", true, "content");', 1);
+				// setTimeout('jQuery( ".use-sections-cover" ).css( "z-index","-1" );', 1000);
+			// }
+			
+			// Set a trigger
             $('body').trigger('generate_show_sections');
 
         }

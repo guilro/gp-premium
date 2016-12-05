@@ -11,9 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 // Define the version
 if ( ! defined( 'GENERATE_PAGE_HEADER_VERSION' ) )
 	define( 'GENERATE_PAGE_HEADER_VERSION', GP_PREMIUM_VERSION );
-	
-// Include functions identical between standalone addon and GP Premium
-require plugin_dir_path( __FILE__ ) . 'inc/assets.php';
+
+if ( ! function_exists( 'generate_page_header_init' ) ) :
+add_action('plugins_loaded', 'generate_page_header_init');
+function generate_page_header_init() {
+	load_plugin_textdomain( 'page-header', false, 'gp-premium/langs/page-header/' );
+}
+endif;
 
 // Include assets unique to this addon
 require plugin_dir_path( __FILE__ ) . 'functions/functions.php';

@@ -61,7 +61,6 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Generate_Post_Image_Save' ) ) {
 	class Generate_Post_Image_Save extends WP_Customize_Control {
 		public $type = 'post_image_save';
-		public $settings = 'blogname';
 		
 		public function to_json() {
 			parent::to_json();
@@ -79,7 +78,6 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Generate_Post_Im
 if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Generate_Blog_Text_Control' ) ) {
 	class Generate_Blog_Text_Control extends WP_Customize_Control {
 		public $type = 'blog_text';
-		public $settings = 'blogname';
 		public $description = '';
 		public function to_json() {
 			parent::to_json();

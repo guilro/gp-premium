@@ -1,0 +1,123 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Disable Elements\n"
+"POT-Creation-Date: 2016-10-25 11:57-0700\n"
+"PO-Revision-Date: 2016-10-25 12:01-0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/functions.php:81
+msgid "Disable Elements"
+msgstr "取消元素"
+
+#: functions/functions.php:176 functions/functions.php:178
+msgid "Header"
+msgstr "页眉"
+
+#: functions/functions.php:180 functions/functions.php:182
+msgid "Primary Navigation"
+msgstr "主导航"
+
+#: functions/functions.php:185 functions/functions.php:187
+msgid "Secondary Navigation"
+msgstr "副导航"
+
+#: functions/functions.php:190 functions/functions.php:192
+msgid "Post Image / Page Header"
+msgstr "文章图像/文章页眉"
+
+#: functions/functions.php:194 functions/functions.php:196
+msgid "Content Title"
+msgstr "内容标题"
+
+#: functions/functions.php:198 functions/functions.php:200
+msgid "Footer"
+msgstr "页脚"
+
+#: inc/EDD_SL_Plugin_Updater.php:196
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr "新版本%1$s可用 %2$s查看版本 %3$s 详细%4$s"
+
+#: inc/EDD_SL_Plugin_Updater.php:204
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr "新版本%1$s可用 %2$s查看版本 %3$s 详细%4$s 或者 %5$s现在更新%6$s"
+
+#: inc/EDD_SL_Plugin_Updater.php:358
+msgid "You do not have permission to install plugin updates"
+msgstr "没有安装插件更新的权限"
+
+#: inc/EDD_SL_Plugin_Updater.php:358
+msgid "Error"
+msgstr "错误"
+
+#: inc/verify.php:88
+msgid "License deactivated."
+msgstr "许可证已注销"
+
+#: inc/verify.php:92
+msgid "License activated."
+msgstr "许可证已激活"
+
+#: inc/verify.php:125
+#, php-format
+msgid "Updates %s"
+msgstr "更新 %s"
+
+#: inc/verify.php:125
+msgid "Help"
+msgstr "帮助"
+
+#: inc/verify.php:150
+msgid "License Key"
+msgstr "许可证"
+
+#: inc/verify.php:155
+msgid "Update"
+msgstr "更新"
+
+#: inc/verify.php:240
+#, php-format
+msgid "Your license key expired on %s."
+msgstr "许可证到期：%s."
+
+#: inc/verify.php:247
+msgid "Your license key has been disabled."
+msgstr "许可证失效"
+
+#: inc/verify.php:252
+msgid "Invalid license."
+msgstr "无效的许可证"
+
+#: inc/verify.php:258
+msgid "Your license is not active for this URL."
+msgstr "许可证未对这个URL未激活"
+
+#: inc/verify.php:263
+#, php-format
+msgid "This appears to be an invalid license key for %s."
+msgstr "无效的许可证：%s."
+
+#: inc/verify.php:268
+msgid "Your license key has reached its activation limit."
+msgstr "许可证达到激活上限"
+
+#: inc/verify.php:273
+msgid "An error occurred, please try again."
+msgstr "发生错误，请重试"

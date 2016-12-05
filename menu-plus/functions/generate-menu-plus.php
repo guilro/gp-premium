@@ -7,7 +7,7 @@ add_action( 'after_setup_theme','generate_menu_plus_setup' );
 function generate_menu_plus_setup()
 {
 	register_nav_menus( array(
-		'slideout' => __( 'Slideout Menu', 'generate-menu-plus' ),
+		'slideout' => __( 'Slideout Menu','menu-plus' ),
 	) );
 	
 }
@@ -19,7 +19,7 @@ if ( ! function_exists( 'generate_menu_plus_get_defaults' ) ) :
 function generate_menu_plus_get_defaults()
 {
 	$generate_menu_plus_get_defaults = array(
-		'mobile_menu_label' => __( 'Menu','generate-menu-plus' ),
+		'mobile_menu_label' => __( 'Menu','menu-plus' ),
 		'sticky_menu' => 'false',
 		'sticky_menu_effect' => 'fade',
 		'sticky_menu_logo' => '',
@@ -49,7 +49,7 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 				'priority'       => 50,
 				'capability'     => 'edit_theme_options',
 				'theme_supports' => '',
-				'title'          => __( 'Menu Plus','generate-menu-plus' ),
+				'title'          => __( 'Menu Plus','menu-plus' ),
 				'description'    => '',
 			) );
 		}
@@ -73,7 +73,7 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 		'menu_plus_section',
 		// Arguments array
 		array(
-			'title' => __( 'General Settings', 'generate-menu-plus' ),
+			'title' => __( 'General Settings','menu-plus' ),
 			'capability' => 'edit_theme_options',
 			'panel' => 'generate_menu_plus'
 		)
@@ -91,7 +91,7 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 		 
 	$wp_customize->add_control(
 		'mobile_menu_label_control', array(
-			'label' => __('Mobile Menu Label', 'generate-menu-plus'),
+			'label' => __('Mobile Menu Label','menu-plus'),
 			'section' => $navigation_section,
 			'settings' => 'generate_menu_plus_settings[mobile_menu_label]'
 		)
@@ -103,7 +103,7 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 		'menu_plus_sticky_menu',
 		// Arguments array
 		array(
-			'title' => __( 'Sticky Menu', 'generate-menu-plus' ),
+			'title' => __( 'Sticky Menu','menu-plus' ),
 			'capability' => 'edit_theme_options',
 			'panel' => $panel,
 			'priority' => 17
@@ -129,13 +129,13 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 		// Arguments array
 		array(
 			'type' => 'select',
-			'label' => __( 'Sticky Navigation', 'generate-menu-plus' ),
+			'label' => __( 'Sticky Navigation','menu-plus' ),
 			'section' => $sticky_menu_section,
 			'choices' => array(
-				'mobile' => __( 'Mobile only', 'generate-menu-plus' ),
-				'desktop' => __( 'Desktop only', 'generate-menu-plus' ),
-				'true' => __( 'Both', 'generate-menu-plus' ),
-				'false' => __( 'Disable', 'generate-menu-plus' )
+				'mobile' => __( 'Mobile only','menu-plus' ),
+				'desktop' => __( 'Desktop only','menu-plus' ),
+				'true' => __( 'Both','menu-plus' ),
+				'false' => __( 'Disable','menu-plus' )
 			),
 			// This last one must match setting ID from above
 			'settings' => 'generate_menu_plus_settings[sticky_menu]',
@@ -162,12 +162,12 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 		// Arguments array
 		array(
 			'type' => 'select',
-			'label' => __( 'Sticky Navigation Effect', 'generate-menu-plus' ),
+			'label' => __( 'Sticky Navigation Effect','menu-plus' ),
 			'section' => $sticky_menu_section,
 			'choices' => array(
-				'fade' => __( 'Fade', 'generate-menu-plus' ),
-				'slide' => __( 'Slide', 'generate-menu-plus' ),
-				'none' => __( 'None', 'generate-menu-plus' )
+				'fade' => __( 'Fade','menu-plus' ),
+				'slide' => __( 'Slide','menu-plus' ),
+				'none' => __( 'None','menu-plus' )
 			),
 			// This last one must match setting ID from above
 			'settings' => 'generate_menu_plus_settings[sticky_menu_effect]',
@@ -190,7 +190,7 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 			$wp_customize,
 			'generate_menu_plus_settings[sticky_menu_logo]',
 			array(
-				'label' => __('Navigation Logo','generate-menu-plus'),
+				'label' => __('Navigation Logo','menu-plus'),
 				'section' => $sticky_menu_section,
 				'settings' => 'generate_menu_plus_settings[sticky_menu_logo]',
 				'priority' => 115
@@ -217,12 +217,12 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 		// Arguments array
 		array(
 			'type' => 'select',
-			'label' => __( 'Navigation Logo Position', 'generate-menu-plus' ),
+			'label' => __( 'Navigation Logo Position','menu-plus' ),
 			'section' => $sticky_menu_section,
 			'choices' => array(
-				'sticky-menu' => __( 'Sticky', 'generate-menu-plus' ),
-				'menu' => __( 'Sticky + Static', 'generate-menu-plus' ),
-				'regular-menu' => __( 'Static', 'generate-menu-plus' )
+				'sticky-menu' => __( 'Sticky','menu-plus' ),
+				'menu' => __( 'Sticky + Static','menu-plus' ),
+				'regular-menu' => __( 'Static','menu-plus' )
 			),
 			// This last one must match setting ID from above
 			'settings' => 'generate_menu_plus_settings[sticky_menu_logo_position]',
@@ -236,7 +236,7 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 		'menu_plus_mobile_header',
 		// Arguments array
 		array(
-			'title' => __( 'Mobile Header', 'generate-menu-plus' ),
+			'title' => __( 'Mobile Header','menu-plus' ),
 			'capability' => 'edit_theme_options',
 			'panel' => $panel,
 			'priority' => 11
@@ -262,11 +262,11 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 		// Arguments array
 		array(
 			'type' => 'select',
-			'label' => __( 'Mobile Header', 'generate-menu-plus' ),
+			'label' => __( 'Mobile Header','menu-plus' ),
 			'section' => $header_section,
 			'choices' => array(
-				'disable' => __( 'Disable', 'generate-menu-plus' ),
-				'enable' => __( 'Enable', 'generate-menu-plus' )
+				'disable' => __( 'Disable','menu-plus' ),
+				'enable' => __( 'Enable','menu-plus' )
 			),
 			// This last one must match setting ID from above
 			'settings' => 'generate_menu_plus_settings[mobile_header]',
@@ -287,7 +287,7 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 			$wp_customize,
 			'generate_menu_plus_settings[mobile_header_logo]',
 			array(
-				'label' => __('Mobile Header Logo','generate-menu-plus'),
+				'label' => __('Mobile Header Logo','menu-plus'),
 				'section' => $header_section,
 				'settings' => 'generate_menu_plus_settings[mobile_header_logo]',
 				'active_callback' => 'generate_mobile_header_activated'
@@ -314,11 +314,11 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 		// Arguments array
 		array(
 			'type' => 'select',
-			'label' => __( 'Sticky Mobile Header', 'generate-menu-plus' ),
+			'label' => __( 'Sticky Mobile Header','menu-plus' ),
 			'section' => $header_section,
 			'choices' => array(
-				'enable' => __( 'Enable', 'generate-menu-plus' ),
-				'disable' => __( 'Disable', 'generate-menu-plus' )
+				'enable' => __( 'Enable','menu-plus' ),
+				'disable' => __( 'Disable','menu-plus' )
 			),
 			// This last one must match setting ID from above
 			'settings' => 'generate_menu_plus_settings[mobile_header_sticky]',
@@ -332,7 +332,7 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 		'menu_plus_slideout_menu',
 		// Arguments array
 		array(
-			'title' => __( 'Slideout Menu', 'generate-menu-plus' ),
+			'title' => __( 'Slideout Menu','menu-plus' ),
 			'capability' => 'edit_theme_options',
 			'panel' => $panel,
 			'priority' => 19
@@ -358,13 +358,13 @@ function generate_menu_plus_customize_register( $wp_customize ) {
 		// Arguments array
 		array(
 			'type' => 'select',
-			'label' => __( 'Slideout Navigation', 'generate-menu-plus' ),
+			'label' => __( 'Slideout Navigation','menu-plus' ),
 			'section' => $navigation_section,
 			'choices' => array(
-				'mobile' => __( 'Mobile only', 'generate-menu-plus' ),
-				'desktop' => __( 'Desktop only', 'generate-menu-plus' ),
-				'both' => __( 'Both', 'generate-menu-plus' ),
-				'false' => __( 'Disable', 'generate-menu-plus' )
+				'mobile' => __( 'Mobile only','menu-plus' ),
+				'desktop' => __( 'Desktop only','menu-plus' ),
+				'both' => __( 'Both','menu-plus' ),
+				'false' => __( 'Disable','menu-plus' )
 			),
 			// This last one must match setting ID from above
 			'settings' => 'generate_menu_plus_settings[slideout_menu]',
@@ -975,7 +975,7 @@ function generate_menu_plus_sticky_logo()
 		 
 	?>
 	<div class="site-logo sticky-logo">
-		<a href="<?php echo apply_filters( 'generate_logo_href' , esc_url( home_url( '/' ) ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img class="header-image" src="<?php echo $generate_menu_plus_settings['sticky_menu_logo']; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
+		<a href="<?php echo apply_filters( 'generate_logo_href' , esc_url( home_url( '/' ) ) ); ?>" title="<?php echo esc_attr( apply_filters( 'generate_logo_title', get_bloginfo( 'name', 'display' ) ) ); ?>" rel="home"><img class="header-image" src="<?php echo $generate_menu_plus_settings['sticky_menu_logo']; ?>" alt="<?php echo esc_attr( apply_filters( 'generate_logo_title', get_bloginfo( 'name', 'display' ) ) ); ?>" /></a>
 	</div>
 	<?php
 }
@@ -1000,7 +1000,7 @@ function generate_menu_plus_mobile_header_logo()
 		 
 	?>
 	<div class="site-logo mobile-header-logo">
-		<a href="<?php echo apply_filters( 'generate_logo_href' , esc_url( home_url( '/' ) ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img class="header-image" src="<?php echo $generate_menu_plus_settings['mobile_header_logo']; ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" /></a>
+		<a href="<?php echo apply_filters( 'generate_logo_href' , esc_url( home_url( '/' ) ) ); ?>" title="<?php echo esc_attr( apply_filters( 'generate_logo_title', get_bloginfo( 'name', 'display' ) ) ); ?>" rel="home"><img class="header-image" src="<?php echo $generate_menu_plus_settings['mobile_header_logo']; ?>" alt="<?php echo esc_attr( apply_filters( 'generate_logo_title', get_bloginfo( 'name', 'display' ) ) ); ?>" /></a>
 	</div>
 	<?php
 }

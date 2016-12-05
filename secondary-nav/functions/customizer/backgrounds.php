@@ -12,7 +12,7 @@ if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) ) :
 		'secondary_bg_images_section',
 		// Arguments array
 		array(
-			'title' => __( 'Secondary Navigation', 'generate-secondary-nav' ),
+			'title' => __( 'Secondary Navigation','secondary-nav' ),
 			'capability' => 'edit_theme_options',
 			'description' => '',
 			'panel' => $backgrounds_panel,
@@ -41,7 +41,7 @@ if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) ) :
 				'section'    => 'secondary_bg_images_section',
 				'settings'   => 'generate_secondary_nav_settings[nav_image]',
 				'priority' => 750,
-				'label' => __( 'Navigation', 'generate-secondary-nav' ), 
+				'label' => __( 'Navigation','secondary-nav' ), 
 			)
 		)
 	);
@@ -61,10 +61,10 @@ if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) ) :
 			'type' => 'select',
 			'section' => 'secondary_bg_images_section',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-secondary-nav' ),
-				'repeat-x' => __( 'Repeat x', 'generate-secondary-nav' ),
-				'repeat-y' => __( 'Repeat y', 'generate-secondary-nav' ),
-				'no-repeat' => __( 'No Repeat', 'generate-secondary-nav' )
+				'' => __( 'Repeat','secondary-nav' ),
+				'repeat-x' => __( 'Repeat x','secondary-nav' ),
+				'repeat-y' => __( 'Repeat y','secondary-nav' ),
+				'no-repeat' => __( 'No Repeat','secondary-nav' )
 			),
 			'settings' => 'generate_secondary_nav_settings[nav_repeat]',
 			'priority' => 800
@@ -92,7 +92,7 @@ if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) ) :
 				'section'    => 'secondary_bg_images_section',
 				'settings'   => 'generate_secondary_nav_settings[nav_item_image]',
 				'priority' => 950,
-				'label' => __( 'Navigation Item', 'generate-secondary-nav' ),
+				'label' => __( 'Navigation Item','secondary-nav' ),
 			)
 		)
 	);
@@ -112,10 +112,10 @@ if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) ) :
 			'type' => 'select',
 			'section' => 'secondary_bg_images_section',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-secondary-nav' ),
-				'repeat-x' => __( 'Repeat x', 'generate-secondary-nav' ),
-				'repeat-y' => __( 'Repeat y', 'generate-secondary-nav' ),
-				'no-repeat' => __( 'No Repeat', 'generate-secondary-nav' )
+				'' => __( 'Repeat','secondary-nav' ),
+				'repeat-x' => __( 'Repeat x','secondary-nav' ),
+				'repeat-y' => __( 'Repeat y','secondary-nav' ),
+				'no-repeat' => __( 'No Repeat','secondary-nav' )
 			),
 			'settings' => 'generate_secondary_nav_settings[nav_item_repeat]',
 			'priority' => 1000
@@ -143,7 +143,7 @@ if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) ) :
 				'section'    => 'secondary_bg_images_section',
 				'settings'   => 'generate_secondary_nav_settings[nav_item_hover_image]',
 				'priority' => 1150,
-				'label' => __( 'Navigation Item Hover', 'generate-secondary-nav' ), 
+				'label' => __( 'Navigation Item Hover','secondary-nav' ), 
 			)
 		)
 	);
@@ -163,10 +163,10 @@ if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) ) :
 			'type' => 'select',
 			'section' => 'secondary_bg_images_section',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-secondary-nav' ),
-				'repeat-x' => __( 'Repeat x', 'generate-secondary-nav' ),
-				'repeat-y' => __( 'Repeat y', 'generate-secondary-nav' ),
-				'no-repeat' => __( 'No Repeat', 'generate-secondary-nav' )
+				'' => __( 'Repeat','secondary-nav' ),
+				'repeat-x' => __( 'Repeat x','secondary-nav' ),
+				'repeat-y' => __( 'Repeat y','secondary-nav' ),
+				'no-repeat' => __( 'No Repeat','secondary-nav' )
 			),
 			'settings' => 'generate_secondary_nav_settings[nav_item_hover_repeat]',
 			'priority' => 1200
@@ -194,7 +194,7 @@ if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) ) :
 				'section'    => 'secondary_bg_images_section',
 				'settings'   => 'generate_secondary_nav_settings[nav_item_current_image]',
 				'priority' => 1350,
-				'label' => __( 'Navigation Item Current', 'generate-secondary-nav' ), 
+				'label' => __( 'Navigation Item Current','secondary-nav' ), 
 			)
 		)
 	);
@@ -214,10 +214,10 @@ if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) ) :
 			'type' => 'select',
 			'section' => 'secondary_bg_images_section',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-secondary-nav' ),
-				'repeat-x' => __( 'Repeat x', 'generate-secondary-nav' ),
-				'repeat-y' => __( 'Repeat y', 'generate-secondary-nav' ),
-				'no-repeat' => __( 'No Repeat', 'generate-secondary-nav' )
+				'' => __( 'Repeat','secondary-nav' ),
+				'repeat-x' => __( 'Repeat x','secondary-nav' ),
+				'repeat-y' => __( 'Repeat y','secondary-nav' ),
+				'no-repeat' => __( 'No Repeat','secondary-nav' )
 			),
 			'settings' => 'generate_secondary_nav_settings[nav_item_current_repeat]',
 			'priority' => 1400
@@ -229,7 +229,7 @@ if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) ) :
 		'secondary_subnav_bg_images_section',
 		// Arguments array
 		array(
-			'title' => __( 'Secondary Sub-Navigation', 'generate-secondary-nav' ),
+			'title' => __( 'Secondary Sub-Navigation','secondary-nav' ),
 			'capability' => 'edit_theme_options',
 			'description' => '',
 			'panel' => $backgrounds_panel,
@@ -258,7 +258,7 @@ if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) ) :
 				'section'    => 'secondary_subnav_bg_images_section',
 				'settings'   => 'generate_secondary_nav_settings[sub_nav_item_image]',
 				'priority' => 1700,
-				'label' => __( 'Sub-Navigation Item', 'generate-secondary-nav' ), 
+				'label' => __( 'Sub-Navigation Item','secondary-nav' ), 
 			)
 		)
 	);
@@ -278,10 +278,10 @@ if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) ) :
 			'type' => 'select',
 			'section' => 'secondary_subnav_bg_images_section',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-secondary-nav' ),
-				'repeat-x' => __( 'Repeat x', 'generate-secondary-nav' ),
-				'repeat-y' => __( 'Repeat y', 'generate-secondary-nav' ),
-				'no-repeat' => __( 'No Repeat', 'generate-secondary-nav' )
+				'' => __( 'Repeat','secondary-nav' ),
+				'repeat-x' => __( 'Repeat x','secondary-nav' ),
+				'repeat-y' => __( 'Repeat y','secondary-nav' ),
+				'no-repeat' => __( 'No Repeat','secondary-nav' )
 			),
 			'settings' => 'generate_secondary_nav_settings[sub_nav_item_repeat]',
 			'priority' => 1800
@@ -309,7 +309,7 @@ if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) ) :
 				'section'    => 'secondary_subnav_bg_images_section',
 				'settings'   => 'generate_secondary_nav_settings[sub_nav_item_hover_image]',
 				'priority' => 2000,
-				'label' => __( 'Sub-Navigation Item Hover', 'generate-secondary-nav' ), 
+				'label' => __( 'Sub-Navigation Item Hover','secondary-nav' ), 
 			)
 		)
 	);
@@ -329,10 +329,10 @@ if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) ) :
 			'type' => 'select',
 			'section' => 'secondary_subnav_bg_images_section',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-secondary-nav' ),
-				'repeat-x' => __( 'Repeat x', 'generate-secondary-nav' ),
-				'repeat-y' => __( 'Repeat y', 'generate-secondary-nav' ),
-				'no-repeat' => __( 'No Repeat', 'generate-secondary-nav' )
+				'' => __( 'Repeat','secondary-nav' ),
+				'repeat-x' => __( 'Repeat x','secondary-nav' ),
+				'repeat-y' => __( 'Repeat y','secondary-nav' ),
+				'no-repeat' => __( 'No Repeat','secondary-nav' )
 			),
 			'settings' => 'generate_secondary_nav_settings[sub_nav_item_hover_repeat]',
 			'priority' => 2100
@@ -360,7 +360,7 @@ if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) ) :
 				'section'    => 'secondary_subnav_bg_images_section',
 				'settings'   => 'generate_secondary_nav_settings[sub_nav_item_current_image]',
 				'priority' => 2300,
-				'label' => __( 'Sub-Navigation Item Current', 'generate-secondary-nav' ), 
+				'label' => __( 'Sub-Navigation Item Current','secondary-nav' ), 
 			)
 		)
 	);
@@ -380,10 +380,10 @@ if ( defined( 'GENERATE_BACKGROUNDS_VERSION' ) ) :
 			'type' => 'select',
 			'section' => 'secondary_subnav_bg_images_section',
 			'choices' => array(
-				'' => __( 'Repeat', 'generate-secondary-nav' ),
-				'repeat-x' => __( 'Repeat x', 'generate-secondary-nav' ),
-				'repeat-y' => __( 'Repeat y', 'generate-secondary-nav' ),
-				'no-repeat' => __( 'No Repeat', 'generate-secondary-nav' )
+				'' => __( 'Repeat','secondary-nav' ),
+				'repeat-x' => __( 'Repeat x','secondary-nav' ),
+				'repeat-y' => __( 'Repeat y','secondary-nav' ),
+				'no-repeat' => __( 'No Repeat','secondary-nav' )
 			),
 			'settings' => 'generate_secondary_nav_settings[sub_nav_item_current_repeat]',
 			'priority' => 2400

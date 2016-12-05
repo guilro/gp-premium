@@ -14,9 +14,9 @@ function generate_secondary_nav_reset_settings()
 		<p><input type="hidden" name="generate_secondary_nav_reset_customizer" value="generate_secondary_nav_reset_customizer_settings" /></p>
 		<p>
 			<?php 
-			$warning = 'return confirm("' . __( 'Warning: This will delete your settings.','generate-secondary-nav' ) . '")';
+			$warning = 'return confirm("' . __( 'Warning: This will delete your settings.','secondary-nav' ) . '")';
 			wp_nonce_field( 'generate_secondary_nav_reset_customizer_nonce', 'generate_secondary_nav_reset_customizer_nonce' );
-			submit_button( __( 'Delete Secondary Navigation Customizer Settings', 'generate-secondary-nav' ), 'sn-button', 'sn-submit', false, array( 'onclick' => $warning ) ); ?>
+			submit_button( __( 'Delete Secondary Navigation Customizer Settings','secondary-nav' ), 'sn-button', 'sn-submit', false, array( 'onclick' => $warning ) ); ?>
 		</p>
 	</form>
 	<?php
@@ -52,7 +52,7 @@ if ( ! function_exists( 'generate_secondary_nav_add_export' ) ) :
 			<p><input type="hidden" name="generate_secondary_nav_export_action" value="export_secondary_nav_settings" /></p>
 			<p>
 				<?php wp_nonce_field( 'generate_secondary_nav_export_nonce', 'generate_secondary_nav_export_nonce' ); ?>
-				<?php submit_button( __( 'Export Secondary Navigation Customizer Settings', 'generate-secondary-nav' ), 'button-primary', 'submit', false ); ?>
+				<?php submit_button( __( 'Export Secondary Navigation Customizer Settings','secondary-nav' ), 'button-primary', 'submit', false ); ?>
 			</p>
 		</form>
 		<?php

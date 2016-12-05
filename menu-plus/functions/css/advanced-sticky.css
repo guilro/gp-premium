@@ -148,7 +148,7 @@
 	display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768.1px) {
 	.mobile-sticky-menu .main-navigation.navigation-clone {
 		display:none !important;
 	}
@@ -160,7 +160,7 @@
 	}
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768.1px) {
 	.nav-float-right .navigation-clone.main-navigation .menu > li {
 		float: none;
 		display: inline-block;

@@ -1,0 +1,323 @@
+# Translation by Alexey Chumakov, 2015-2016
+# Feel free to forward any issues or suggestions on translation to Alexey Chumakov
+# (**) comments indicate places for future improvement.
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Blog\n"
+"POT-Creation-Date: 2016-11-11 14:09+0300\n"
+"PO-Revision-Date: 2016-11-11 14:09+0300\n"
+"Last-Translator: Alexey Chumakov <alex@chumakov.ru>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ../../../gp-premium/blog\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ../inc\n"
+
+#: ../inc/EDD_SL_Plugin_Updater.php:196
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr "Доступна новая версия %1$s. %2$sПосмотреть подробности %3$s%4$s."
+
+#: ../inc/EDD_SL_Plugin_Updater.php:204
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+"Доступна новая версия %1$s. %2$sПосмотреть подробности %3$s%4$s или "
+"%5$sобновить сейчас%6$s."
+
+#: ../inc/EDD_SL_Plugin_Updater.php:358
+msgid "You do not have permission to install plugin updates"
+msgstr "У вас нет прав для установки обновлений плагинов"
+
+#: ../inc/EDD_SL_Plugin_Updater.php:358
+msgid "Error"
+msgstr "Ошибка"
+
+#: ../inc/activation.php:13
+msgid "Add-on deactivated."
+msgstr "Дополнение деактивировано."
+
+#: ../inc/activation.php:17
+msgid "Add-on activated."
+msgstr "Дополнение активировано."
+
+#: ../inc/activation.php:58
+msgid "GP Premium"
+msgstr "Дополнения GP Premium"
+
+#: ../inc/activation.php:66
+msgid "Bulk Actions"
+msgstr "Пакетные операции"
+
+#: ../inc/activation.php:67 ../inc/activation.php:101
+msgid "Activate"
+msgstr "Активировать"
+
+#: ../inc/activation.php:68 ../inc/activation.php:88
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: ../inc/activation.php:71
+msgid "Apply"
+msgstr "Применить"
+
+#: ../inc/activation.php:427
+msgid "Enter valid license key for automatic updates."
+msgstr "Для автоматического обновления укажите действующий ключ лицензии."
+
+#: ../inc/verify.php:88
+msgid "License deactivated."
+msgstr "Лицензия деактивирована."
+
+#: ../inc/verify.php:92
+msgid "License activated."
+msgstr "Лицензия активирована."
+
+#: ../inc/verify.php:125
+#, php-format
+msgid "Updates %s"
+msgstr "Обновления %s"
+
+#: ../inc/verify.php:125
+msgid "Help"
+msgstr "Справка"
+
+#: ../inc/verify.php:150
+msgid "License Key"
+msgstr "Лицензионный ключ"
+
+#: ../inc/verify.php:155
+msgid "Update"
+msgstr "Обновить"
+
+#: ../inc/verify.php:244
+#, php-format
+msgid "Your license key expired on %s."
+msgstr "Ваш лицензионный ключ истек %s."
+
+#: ../inc/verify.php:251
+msgid "Your license key has been disabled."
+msgstr "Ваш лицензионный ключ заблокирован."
+
+#: ../inc/verify.php:256
+msgid "Invalid license."
+msgstr "Недействительная лицензия."
+
+#: ../inc/verify.php:262
+msgid "Your license is not active for this URL."
+msgstr "Ваша лицензия не активна для этого URL."
+
+#: ../inc/verify.php:267
+#, php-format
+msgid "This appears to be an invalid license key for %s."
+msgstr "Похоже, это не действующий лицензионный ключ для %s."
+
+#: ../inc/verify.php:272
+msgid "Your license key has reached its activation limit."
+msgstr "Ваш лицензионный ключ достиг предела активаций."
+
+#: ../inc/verify.php:277
+msgid "An error occurred, please try again."
+msgstr "Произошла ошибка, пожалуйста, попробуйте ещё раз."
+
+#: functions/controls.php:68
+msgid "Apply image sizes"
+msgstr "Применить размеры"
+
+#: functions/customizer.php:19
+msgid "Blog"
+msgstr "Блог"
+
+#: functions/customizer.php:43
+msgid "Blog Content"
+msgstr "Содержимое блога"
+
+#: functions/customizer.php:63
+msgid "Excerpt Length"
+msgstr "Длина отрывка"
+
+#: functions/customizer.php:84
+msgid "Read more label"
+msgstr "Метка \"ещё...\""
+
+#: functions/customizer.php:97 functions/customizer.php:122
+msgid "Masonry"
+msgstr "Мозаика"
+
+#: functions/customizer.php:125 functions/customizer.php:607
+#: functions/customizer.php:671
+msgid "Enable"
+msgstr "Включить"
+
+#: functions/customizer.php:126 functions/customizer.php:608
+#: functions/customizer.php:672
+msgid "Disable"
+msgstr "Выключить"
+
+#: functions/customizer.php:153
+msgid "Masonry Block Width"
+msgstr "Ширина блока"
+
+#: functions/customizer.php:156 functions/customizer.php:188
+#: functions/masonry.php:85
+msgid "Small"
+msgstr "Малый"
+
+#: functions/customizer.php:157 functions/customizer.php:189
+#: functions/masonry.php:86
+msgid "Medium"
+msgstr "Средний"
+
+#: functions/customizer.php:158 functions/customizer.php:190
+#: functions/masonry.php:87
+msgid "Large"
+msgstr "Большой"
+
+#: functions/customizer.php:185
+msgid "Masonry Most Recent Width"
+msgstr "Ширина самых свежих"
+
+#: functions/customizer.php:209
+msgid "Masonry Load More Text"
+msgstr "Текст \"ещё\" в мозаике"
+
+#: functions/customizer.php:227
+msgid "Masonry Loading Text"
+msgstr "Текст загрузки мозаики"
+
+#: functions/customizer.php:240 functions/customizer.php:265
+msgid "Post Image"
+msgstr "Изображение к записи"
+
+#: functions/customizer.php:268 functions/customizer.php:423
+#: functions/customizer.php:454 functions/customizer.php:485
+#: functions/customizer.php:516 functions/customizer.php:547
+msgid "Show"
+msgstr "Показать"
+
+#: functions/customizer.php:269 functions/customizer.php:424
+#: functions/customizer.php:455 functions/customizer.php:486
+#: functions/customizer.php:517 functions/customizer.php:548
+msgid "Hide"
+msgstr "Скрыть"
+
+#: functions/customizer.php:296
+msgid "Post Image Position"
+msgstr "Положение изображения"
+
+#: functions/customizer.php:299
+msgid "Below Header"
+msgstr "Под шапкой"
+
+#: functions/customizer.php:300
+msgid "Above Header"
+msgstr "Над шапкой"
+
+#: functions/customizer.php:327
+msgid "Post Image Alignment"
+msgstr "Выравнивание изображения"
+
+#: functions/customizer.php:330
+msgid "Center"
+msgstr "По центру"
+
+#: functions/customizer.php:331
+msgid "Left"
+msgstr "Влево"
+
+#: functions/customizer.php:332
+msgid "Right"
+msgstr "Вправо"
+
+#: functions/customizer.php:354
+msgid "Post Image Width"
+msgstr "Ширина изображения"
+
+#: functions/customizer.php:358 functions/customizer.php:382
+msgid "Auto"
+msgstr "Авто"
+
+#: functions/customizer.php:378
+msgid "Post Image Height"
+msgstr "Высота изображения"
+
+#: functions/customizer.php:420
+msgid "Date"
+msgstr "Дата"
+
+#: functions/customizer.php:451
+msgid "Author"
+msgstr "Автор"
+
+#: functions/customizer.php:482
+msgid "Categories"
+msgstr "Рубрики"
+
+#: functions/customizer.php:513
+msgid "Tags"
+msgstr "Метки"
+
+#: functions/customizer.php:544
+msgid "Comment Link"
+msgstr "Ссылка \"комментировать\""
+
+#: functions/customizer.php:562 functions/customizer.php:635
+msgid "Columns"
+msgstr "Столбцы"
+
+#: functions/customizer.php:577
+msgid "Masonry is enabled. These settings will be ignored."
+msgstr "Включена мозаика. Настройки игнорируются."
+
+#: functions/customizer.php:604
+msgid "Column Layout"
+msgstr "В несколько столбцов"
+
+#: functions/customizer.php:668
+msgid "First Post Full Width"
+msgstr "Первая запись на всю ширину"
+
+#: functions/defaults.php:14
+msgid "Read more..."
+msgstr "Подробнее..."
+
+#: functions/defaults.php:18
+msgid "+ More"
+msgstr "+ Ещё"
+
+#: functions/defaults.php:19
+msgid "Loading..."
+msgstr "Загрузка ..."
+
+#: functions/ie.php:17
+msgid "Warning: This will delete your settings."
+msgstr "Внимание: ваши настройки будут удалены."
+
+#: functions/ie.php:19
+msgid "Delete Blog Customizer Settings"
+msgstr "Удалить настройки блога"
+
+#: functions/ie.php:56
+msgid "Export Blog Customizer Settings"
+msgstr "Экспортировать настройки блога"
+
+#: functions/masonry.php:55 functions/masonry.php:82
+msgid "Masonry Post Width"
+msgstr "Ширина записи в мозаике"
+
+#: functions/masonry.php:84
+msgid "Global setting"
+msgstr "По умолчанию"

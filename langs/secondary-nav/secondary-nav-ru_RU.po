@@ -1,0 +1,360 @@
+# Translation by Alexey Chumakov, 2015-2016
+# Feel free to forward any issues or suggestions on translation to Alexey Chumakov
+# (**) comments indicate places for future improvement.
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Secondary Navigation\n"
+"POT-Creation-Date: 2016-11-11 14:14+0300\n"
+"PO-Revision-Date: 2016-11-11 14:14+0300\n"
+"Last-Translator: Alexey Chumakov <alex@chumakov.ru>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ../../../gp-premium/secondary-nav\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ../inc\n"
+
+#: ../inc/EDD_SL_Plugin_Updater.php:196
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr "Доступна новая версия %1$s. %2$sПосмотреть подробности %3$s%4$s."
+
+#: ../inc/EDD_SL_Plugin_Updater.php:204
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+"Доступна новая версия %1$s. %2$sПосмотреть подробности %3$s%4$s или "
+"%5$sобновить сейчас%6$s."
+
+#: ../inc/EDD_SL_Plugin_Updater.php:358
+msgid "You do not have permission to install plugin updates"
+msgstr "У вас нет прав для установки обновлений плагинов"
+
+#: ../inc/EDD_SL_Plugin_Updater.php:358
+msgid "Error"
+msgstr "Ошибка"
+
+#: ../inc/activation.php:13
+msgid "Add-on deactivated."
+msgstr "Дополнение деактивировано."
+
+#: ../inc/activation.php:17
+msgid "Add-on activated."
+msgstr "Дополнение активировано."
+
+#: ../inc/activation.php:58
+msgid "GP Premium"
+msgstr "Дополнения GP Premium"
+
+#: ../inc/activation.php:66
+msgid "Bulk Actions"
+msgstr "Пакетные операции"
+
+#: ../inc/activation.php:67 ../inc/activation.php:101
+msgid "Activate"
+msgstr "Активировать"
+
+#: ../inc/activation.php:68 ../inc/activation.php:88
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: ../inc/activation.php:71
+msgid "Apply"
+msgstr "Применить"
+
+#: ../inc/activation.php:427
+msgid "Enter valid license key for automatic updates."
+msgstr "Для автоматического обновления укажите действующий ключ лицензии."
+
+#: ../inc/verify.php:88
+msgid "License deactivated."
+msgstr "Лицензия деактивирована."
+
+#: ../inc/verify.php:92
+msgid "License activated."
+msgstr "Лицензия активирована."
+
+#: ../inc/verify.php:125
+#, php-format
+msgid "Updates %s"
+msgstr "Обновления %s"
+
+#: ../inc/verify.php:125
+msgid "Help"
+msgstr "Справка"
+
+#: ../inc/verify.php:150
+msgid "License Key"
+msgstr "Лицензионный ключ"
+
+#: ../inc/verify.php:155
+msgid "Update"
+msgstr "Обновить"
+
+#: ../inc/verify.php:244
+#, php-format
+msgid "Your license key expired on %s."
+msgstr "Ваш лицензионный ключ истек %s."
+
+#: ../inc/verify.php:251
+msgid "Your license key has been disabled."
+msgstr "Ваш лицензионный ключ заблокирован."
+
+#: ../inc/verify.php:256
+msgid "Invalid license."
+msgstr "Недействительная лицензия."
+
+#: ../inc/verify.php:262
+msgid "Your license is not active for this URL."
+msgstr "Ваша лицензия не активна для этого URL."
+
+#: ../inc/verify.php:267
+#, php-format
+msgid "This appears to be an invalid license key for %s."
+msgstr "Похоже, это не действующий лицензионный ключ для %s."
+
+#: ../inc/verify.php:272
+msgid "Your license key has reached its activation limit."
+msgstr "Ваш лицензионный ключ достиг предела активаций."
+
+#: ../inc/verify.php:277
+msgid "An error occurred, please try again."
+msgstr "Произошла ошибка, пожалуйста, попробуйте ещё раз."
+
+#: functions/customizer/backgrounds.php:15 functions/customizer/colors.php:16
+#: functions/customizer/spacing.php:16 functions/customizer/typography.php:15
+#: functions/functions.php:106 functions/functions.php:118
+msgid "Secondary Navigation"
+msgstr "Дополнительное меню"
+
+#: functions/customizer/backgrounds.php:44
+msgid "Navigation"
+msgstr "Меню"
+
+#: functions/customizer/backgrounds.php:64
+#: functions/customizer/backgrounds.php:115
+#: functions/customizer/backgrounds.php:166
+#: functions/customizer/backgrounds.php:217
+#: functions/customizer/backgrounds.php:281
+#: functions/customizer/backgrounds.php:332
+#: functions/customizer/backgrounds.php:383
+msgid "Repeat"
+msgstr "Повторять"
+
+#: functions/customizer/backgrounds.php:65
+#: functions/customizer/backgrounds.php:116
+#: functions/customizer/backgrounds.php:167
+#: functions/customizer/backgrounds.php:218
+#: functions/customizer/backgrounds.php:282
+#: functions/customizer/backgrounds.php:333
+#: functions/customizer/backgrounds.php:384
+msgid "Repeat x"
+msgstr "Горизонтально"
+
+#: functions/customizer/backgrounds.php:66
+#: functions/customizer/backgrounds.php:117
+#: functions/customizer/backgrounds.php:168
+#: functions/customizer/backgrounds.php:219
+#: functions/customizer/backgrounds.php:283
+#: functions/customizer/backgrounds.php:334
+#: functions/customizer/backgrounds.php:385
+msgid "Repeat y"
+msgstr "Вертикально"
+
+#: functions/customizer/backgrounds.php:67
+#: functions/customizer/backgrounds.php:118
+#: functions/customizer/backgrounds.php:169
+#: functions/customizer/backgrounds.php:220
+#: functions/customizer/backgrounds.php:284
+#: functions/customizer/backgrounds.php:335
+#: functions/customizer/backgrounds.php:386
+msgid "No Repeat"
+msgstr "Не повторять"
+
+#: functions/customizer/backgrounds.php:95
+msgid "Navigation Item"
+msgstr "Пункт меню"
+
+#: functions/customizer/backgrounds.php:146
+msgid "Navigation Item Hover"
+msgstr "Пункт меню — наведение"
+
+#: functions/customizer/backgrounds.php:197
+msgid "Navigation Item Current"
+msgstr "Пункт меню — текущий"
+
+#: functions/customizer/backgrounds.php:232 functions/customizer/colors.php:96
+msgid "Secondary Sub-Navigation"
+msgstr "Дополнительное подменю"
+
+#: functions/customizer/backgrounds.php:261
+msgid "Sub-Navigation Item"
+msgstr "Пункт подменю"
+
+#: functions/customizer/backgrounds.php:312
+msgid "Sub-Navigation Item Hover"
+msgstr "Пункт подменю — наведение"
+
+#: functions/customizer/backgrounds.php:363
+msgid "Sub-Navigation Item Current"
+msgstr "Пункт подменю — текущий"
+
+#: functions/customizer/colors.php:28 functions/customizer/colors.php:108
+msgid "Background"
+msgstr "Фон"
+
+#: functions/customizer/colors.php:34 functions/customizer/colors.php:114
+msgid "Text"
+msgstr "Текст"
+
+#: functions/customizer/colors.php:40 functions/customizer/colors.php:120
+msgid "Background Hover"
+msgstr "Фон — наведение"
+
+#: functions/customizer/colors.php:46 functions/customizer/colors.php:126
+msgid "Text Hover"
+msgstr "Текст — наведение"
+
+#: functions/customizer/colors.php:52 functions/customizer/colors.php:132
+msgid "Background Current"
+msgstr "Фон — текущий пункт"
+
+#: functions/customizer/colors.php:58 functions/customizer/colors.php:138
+msgid "Text Current"
+msgstr "Текст — текущий пункт"
+
+#: functions/customizer/spacing.php:35
+msgid "Secondary Menu Items"
+msgstr "Пункты дополнительного меню"
+
+#: functions/customizer/spacing.php:57
+msgid "Left/Right Spacing"
+msgstr "Отступы слева/справа"
+
+#: functions/customizer/spacing.php:80
+msgid "Height"
+msgstr "Высота"
+
+#: functions/customizer/spacing.php:103
+msgid "Sub-Menu Item Height"
+msgstr "Высота пункта подменю"
+
+#: functions/customizer/spacing.php:104
+msgid "The top and bottom spacing of sub-menu items."
+msgstr "Верхний/нижний отступ пунктов подменю"
+
+#: functions/customizer/typography.php:38
+msgid "Secondary navigation"
+msgstr "Дополнительное меню"
+
+#: functions/customizer/typography.php:105
+#: functions/customizer/typography.php:132
+msgid "Font weight"
+msgstr "Насыщенность"
+
+#: functions/customizer/typography.php:158
+#: functions/customizer/typography.php:178
+msgid "Text transform"
+msgstr "Эффект"
+
+#: functions/customizer/typography.php:204
+msgid "Font size"
+msgstr "Размер"
+
+#: functions/functions.php:10
+msgid "Secondary Menu"
+msgstr "Дополнительное меню"
+
+#: functions/functions.php:136
+msgid "Mobile Menu Label"
+msgstr "Метка мобильного меню"
+
+#: functions/functions.php:163
+msgid "Navigation Width"
+msgstr ""
+
+#: functions/functions.php:166 functions/functions.php:198
+msgid "Full"
+msgstr ""
+
+#: functions/functions.php:167 functions/functions.php:199
+msgid "Contained"
+msgstr "Ограниченная"
+
+#: functions/functions.php:195
+msgid "Inner Navigation Width"
+msgstr ""
+
+#: functions/functions.php:227
+msgid "Navigation Position"
+msgstr "Расположение"
+
+#: functions/functions.php:230
+msgid "Below Header"
+msgstr "Под шапкой"
+
+#: functions/functions.php:231
+msgid "Above Header"
+msgstr "Над шапкой"
+
+#: functions/functions.php:232
+msgid "Float Right"
+msgstr "Плавающее вправо"
+
+#: functions/functions.php:233
+msgid "Left Sidebar"
+msgstr "В левом боковике"
+
+#: functions/functions.php:234
+msgid "Right Sidebar"
+msgstr "В правом боковике"
+
+#: functions/functions.php:235
+msgid "No Navigation"
+msgstr "Без меню"
+
+#: functions/functions.php:263
+msgid "Navigation Alignment"
+msgstr "Выравнивание"
+
+#: functions/functions.php:266
+msgid "Left"
+msgstr "Влево"
+
+#: functions/functions.php:267
+msgid "Center"
+msgstr "По центру"
+
+#: functions/functions.php:268
+msgid "Right"
+msgstr "Вправо"
+
+#: functions/ie.php:17
+msgid "Warning: This will delete your settings."
+msgstr "Внимание: ваши настройки будут удалены."
+
+#: functions/ie.php:19
+msgid "Delete Secondary Navigation Customizer Settings"
+msgstr "Удалить настройки дополнительного меню"
+
+#: functions/ie.php:55
+msgid "Export Secondary Navigation Customizer Settings"
+msgstr "Экспортировать настройки дополнительного меню"
+
+#~ msgid "Navigation Layout"
+#~ msgstr "Разметка меню"
+
+#~ msgid "Fluid / Full Width"
+#~ msgstr "Резиновая / во всю ширину"

@@ -11,9 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 // Define the version
 if ( ! defined( 'GENERATE_BLOG_VERSION' ) )
 	define( 'GENERATE_BLOG_VERSION', GP_PREMIUM_VERSION );
-	
-// Include assets unique to this addon
-require plugin_dir_path( __FILE__ ) . 'inc/assets.php';
+
+if ( ! function_exists( 'generate_blog_init' ) ) :
+add_action('plugins_loaded', 'generate_blog_init');
+function generate_blog_init() {
+	load_plugin_textdomain( 'generate-blog', false, 'gp-premium/langs/blog/' );
+}
+endif;
 
 // Include functions identical between standalone addon and GP Premium
 require plugin_dir_path( __FILE__ ) . 'functions/generate-blog.php';

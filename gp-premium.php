@@ -3,7 +3,7 @@
 Plugin Name: GP Premium
 Plugin URI: https://generatepress.com
 Description: The entire bundle of GeneratePress add-ons. To enable your needed add-ons, go to "Appearance > GeneratePress".
-Version: 1.2.91
+Version: 1.2.92
 Author: Tom Usborne
 Author URI: https://tomusborne.com
 License: GNU General Public License v2 or later
@@ -14,68 +14,117 @@ Text Domain: gp-premium
 // No direct access, please
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'GP_PREMIUM_VERSION', '1.2.91');
-require plugin_dir_path( __FILE__ ) . 'inc/activation.php';
+// Set our version
+define( 'GP_PREMIUM_VERSION', '1.2.92' );
+
+if ( ! function_exists( 'generatepress_is_module_active' ) ) :
+/**
+ * Check to see if an add-ons is active
+ * module: Check the database entry
+ * definition: Check to see if defined in wp-config.php
+ **/
+function generatepress_is_module_active( $module, $definition )
+{
+	// If we don't have the module or definition, bail.
+	if ( ! $module && ! $definition )
+		return false;
+	
+	// If our module is active, return true.
+	if ( 'activated' == get_option( $module ) || defined( $definition ) )
+		return true;
+	
+	// Not active? Return false.
+	return false;
+}
+endif;
 
 if ( ! function_exists( 'generate_package_setup' ) ) :
+/**
+ * Set up our translations
+ **/
 add_action( 'plugins_loaded', 'generate_package_setup' );
 function generate_package_setup() {
-  load_plugin_textdomain( 'gp-premium', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' ); 
+	load_plugin_textdomain( 'gp-premium', false, 'gp-premium/langs/' );
 }
 endif;
 
-if ( ! function_exists( 'generate_premium_setup' ) ) :
-add_action( 'after_setup_theme','generate_premium_setup' );
-function generate_premium_setup()
-{
-	add_filter('widget_text', 'do_shortcode');
+// Backgrounds
+if ( generatepress_is_module_active( 'generate_package_backgrounds', 'GENERATE_BACKGROUNDS' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'backgrounds/generate-backgrounds.php';
 }
-endif;
 
-if ( 'activated' == get_option( 'generate_package_backgrounds' ) || defined( 'GENERATE_BACKGROUNDS' ) )
-	require plugin_dir_path( __FILE__ ) . 'backgrounds/generate-backgrounds.php';
+// Blog
+if ( generatepress_is_module_active( 'generate_package_blog', 'GENERATE_BLOG' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'blog/generate-blog.php';
+}
 
-if ( 'activated' == get_option( 'generate_package_blog' ) || defined( 'GENERATE_BLOG' ) )
-	require plugin_dir_path( __FILE__ ) . 'blog/generate-blog.php';
+// Colors
+if ( generatepress_is_module_active( 'generate_package_colors', 'GENERATE_COLORS' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'colors/generate-colors.php';
+}
 
-if ( 'activated' == get_option( 'generate_package_colors' ) || defined( 'GENERATE_COLORS' ) )
-	require plugin_dir_path( __FILE__ ) . 'colors/generate-colors.php';
+// Copyright
+if ( generatepress_is_module_active( 'generate_package_copyright', 'GENERATE_COPYRIGHT' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'copyright/generate-copyright.php';
+}
+
+// Disable Elements
+if ( generatepress_is_module_active( 'generate_package_disable_elements', 'GENERATE_DISABLE_ELEMENTS' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'disable-elements/generate-disable-elements.php';
+}
+
+// Hooks
+if ( generatepress_is_module_active( 'generate_package_hooks', 'GENERATE_HOOKS' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'hooks/generate-hooks.php';
+}
+
+// Import/Export
+if ( generatepress_is_module_active( 'generate_package_import_export', 'GENERATE_IMPORT_EXPORT' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'import-export/generate-ie.php';
+}
+
+// Page Header
+if ( generatepress_is_module_active( 'generate_package_page_header', 'GENERATE_PAGE_HEADER' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'page-header/generate-page-header.php';
+}
+
+// Secondary Navigation
+if ( generatepress_is_module_active( 'generate_package_secondary_nav', 'GENERATE_SECONDARY_NAV' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'secondary-nav/generate-secondary-nav.php';
+}
+
+// Spacing
+if ( generatepress_is_module_active( 'generate_package_spacing', 'GENERATE_SPACING' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'spacing/generate-spacing.php';
+}
+
+// Typography	
+if ( generatepress_is_module_active( 'generate_package_typography', 'GENERATE_TYPOGRAPHY' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'typography/generate-fonts.php';
+}
+
+// Sections
+if ( generatepress_is_module_active( 'generate_package_sections', 'GENERATE_SECTIONS' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'sections/generate-sections.php';
+}
+
+// Menu Plus
+if ( generatepress_is_module_active( 'generate_package_menu_plus', 'GENERATE_MENU_PLUS' ) ) {
+	require_once plugin_dir_path( __FILE__ ) . 'menu-plus/generate-menu-plus.php';
+}
+
+// License key activation
+require_once plugin_dir_path( __FILE__ ) . 'inc/activation.php';
 	
-if ( 'activated' == get_option( 'generate_package_copyright' ) || defined( 'GENERATE_COPYRIGHT' ) )
-	require plugin_dir_path( __FILE__ ) . 'copyright/generate-copyright.php';
-	
-if ( 'activated' == get_option( 'generate_package_disable_elements' ) || defined( 'GENERATE_DISABLE_ELEMENTS' ) )
-	require plugin_dir_path( __FILE__ ) . 'disable-elements/generate-disable-elements.php';
-	
-if ( 'activated' == get_option( 'generate_package_hooks' ) || defined( 'GENERATE_HOOKS' ) )
-	require plugin_dir_path( __FILE__ ) . 'hooks/generate-hooks.php';
-	
-if ( 'activated' == get_option( 'generate_package_import_export' ) || defined( 'GENERATE_IMPORT_EXPORT' ) )
-	require plugin_dir_path( __FILE__ ) . 'import-export/generate-ie.php';
-	
-if ( 'activated' == get_option( 'generate_package_page_header' ) || defined( 'GENERATE_PAGE_HEADER' ) )
-	require plugin_dir_path( __FILE__ ) . 'page-header/generate-page-header.php';
-	
-if ( 'activated' == get_option( 'generate_package_secondary_nav' ) || defined( 'GENERATE_SECONDARY_NAV' ) )
-	require plugin_dir_path( __FILE__ ) . 'secondary-nav/generate-secondary-nav.php';
-	
-if ( 'activated' == get_option( 'generate_package_spacing' ) || defined( 'GENERATE_SPACING' ) )
-	require plugin_dir_path( __FILE__ ) . 'spacing/generate-spacing.php';
-	
-if ( 'activated' == get_option( 'generate_package_typography' ) || defined( 'GENERATE_TYPOGRAPHY' ) )
-	require plugin_dir_path( __FILE__ ) . 'typography/generate-fonts.php';
-	
-if ( 'activated' == get_option( 'generate_package_sections' ) || defined( 'GENERATE_SECTIONS' ) )
-	require plugin_dir_path( __FILE__ ) . 'sections/generate-sections.php';
-	
-if ( 'activated' == get_option( 'generate_package_menu_plus' ) || defined( 'GENERATE_MENU_PLUS' ) )
-	require plugin_dir_path( __FILE__ ) . 'menu-plus/generate-menu-plus.php';
-	
+// Load EDD SL Plugin Updater
 if( !class_exists( 'EDD_SL_Plugin_Updater' ) ) {
-	// load our custom updater if it doesn't already exist
 	include( dirname( __FILE__ ) . '/inc/EDD_SL_Plugin_Updater.php' );
 }
 
+if ( ! function_exists( 'generate_premium_updater' ) ) :
+/**
+ * Set up the updater
+ **/
 add_action( 'admin_init', 'generate_premium_updater', 0 );
 function generate_premium_updater()
 {
@@ -92,3 +141,15 @@ function generate_premium_updater()
 		)
 	);
 }
+endif;
+
+if ( ! function_exists( 'generate_premium_setup' ) ) :
+/**
+ * Add useful functions to GP Premium
+ **/
+add_action( 'after_setup_theme','generate_premium_setup' );
+function generate_premium_setup()
+{
+	add_filter('widget_text', 'do_shortcode');
+}
+endif;

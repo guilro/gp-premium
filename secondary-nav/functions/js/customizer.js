@@ -6,11 +6,27 @@
 		value.bind( function( newval ) {
 			if ( 'secondary-fluid-nav' == newval ) {
 				$( '.secondary-navigation' ).removeClass( 'grid-container' ).removeClass( 'grid-parent' );
-				$( '.secondary-navigation .inside-navigation' ).addClass( 'grid-container' ).addClass( 'grid-parent' );
+				if ( 'full-width' !== wp.customize.value('generate_secondary_nav_settings[secondary_nav_inner_width]')() ) {
+					$( '.secondary-navigation .inside-navigation' ).addClass( 'grid-container' ).addClass( 'grid-parent' );
+				}
 			}
 			if ( 'secondary-contained-nav' == newval ) {
 				jQuery( '.secondary-navigation' ).addClass( 'grid-container' ).addClass( 'grid-parent' );
 				jQuery( '.secondary-navigation .inside-navigation' ).removeClass( 'grid-container' ).removeClass( 'grid-parent' );
+			}
+		} );
+	} );
+	
+	/** 
+	 * Inner navigation width
+	 */
+	wp.customize( 'generate_secondary_nav_settings[secondary_nav_inner_width]', function( value ) {
+		value.bind( function( newval ) {
+			if ( 'full-width' == newval ) {
+				$( '.secondary-navigation .inside-navigation' ).removeClass( 'grid-container' ).removeClass( 'grid-parent' );
+			}
+			if ( 'contained' == newval ) {
+				$( '.secondary-navigation .inside-navigation' ).addClass( 'grid-container' ).addClass( 'grid-parent' );
 			}
 		} );
 	} );
@@ -33,9 +49,11 @@
 				return false;
 			}
 			var classes = [ 'secondary-nav-below-header', 'secondary-nav-above-header', 'secondary-nav-float-right', 'secondary-nav-float-left', 'secondary-nav-left-sidebar', 'secondary-nav-right-sidebar' ];
-			$.each( classes, function( i, v ) {
-				$( 'body' ).removeClass( v );
-			});
+			if ( 'secondary-nav-left-sidebar' !== newval && 'secondary-nav-right-sidebar' !== newval ) {
+				$.each( classes, function( i, v ) {
+					$( 'body' ).removeClass( v );
+				});
+			}
 			$( 'body' ).addClass( newval );
 			if ( 'secondary-nav-below-header' == newval ) {
 				if ( $( 'body' ).hasClass( 'nav-below-header' ) ) {
@@ -54,7 +72,7 @@
 				$( '#secondary-navigation' ).appendTo( '.inside-header' ).show();
 			}
 			if ( '' == newval ) {
-				if ( $( '.gen-sidebar-secondary-nav' ) ) {
+				if ( $( '.gen-sidebar-secondary-nav' ).length ) {
 					wp.customize.preview.send( 'refresh' );
 				} else {
 					$( '#secondary-navigation' ).hide();

@@ -1,0 +1,253 @@
+# Translation by Alexey Chumakov, 2015-2016
+# Feel free to forward any issues or suggestions on translation to Alexey Chumakov
+# (**) comments indicate places for future improvement.
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Hooks\n"
+"POT-Creation-Date: 2016-11-11 14:13+0300\n"
+"PO-Revision-Date: 2016-11-11 14:13+0300\n"
+"Last-Translator: Alexey Chumakov <alex@chumakov.ru>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ../../../gp-premium/hooks\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ../inc\n"
+
+#: ../inc/EDD_SL_Plugin_Updater.php:196
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr "Доступна новая версия %1$s. %2$sПосмотреть подробности %3$s%4$s."
+
+#: ../inc/EDD_SL_Plugin_Updater.php:204
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+"Доступна новая версия %1$s. %2$sПосмотреть подробности %3$s%4$s или "
+"%5$sобновить сейчас%6$s."
+
+#: ../inc/EDD_SL_Plugin_Updater.php:358
+msgid "You do not have permission to install plugin updates"
+msgstr "У вас нет прав для установки обновлений плагинов"
+
+#: ../inc/EDD_SL_Plugin_Updater.php:358
+msgid "Error"
+msgstr "Ошибка"
+
+#: ../inc/activation.php:13
+msgid "Add-on deactivated."
+msgstr "Дополнение деактивировано."
+
+#: ../inc/activation.php:17
+msgid "Add-on activated."
+msgstr "Дополнение активировано."
+
+#: ../inc/activation.php:58
+msgid "GP Premium"
+msgstr "Дополнения GP Premium"
+
+#: ../inc/activation.php:66
+msgid "Bulk Actions"
+msgstr "Пакетные операции"
+
+#: ../inc/activation.php:67 ../inc/activation.php:101
+msgid "Activate"
+msgstr "Активировать"
+
+#: ../inc/activation.php:68 ../inc/activation.php:88
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: ../inc/activation.php:71
+msgid "Apply"
+msgstr "Применить"
+
+#: ../inc/activation.php:427
+msgid "Enter valid license key for automatic updates."
+msgstr "Для автоматического обновления укажите действующий ключ лицензии."
+
+#: ../inc/verify.php:88
+msgid "License deactivated."
+msgstr "Лицензия деактивирована."
+
+#: ../inc/verify.php:92
+msgid "License activated."
+msgstr "Лицензия активирована."
+
+#: ../inc/verify.php:125
+#, php-format
+msgid "Updates %s"
+msgstr "Обновления %s"
+
+#: ../inc/verify.php:125
+msgid "Help"
+msgstr "Справка"
+
+#: ../inc/verify.php:150
+msgid "License Key"
+msgstr "Лицензионный ключ"
+
+#: ../inc/verify.php:155
+msgid "Update"
+msgstr "Обновить"
+
+#: ../inc/verify.php:244
+#, php-format
+msgid "Your license key expired on %s."
+msgstr "Ваш лицензионный ключ истек %s."
+
+#: ../inc/verify.php:251
+msgid "Your license key has been disabled."
+msgstr "Ваш лицензионный ключ заблокирован."
+
+#: ../inc/verify.php:256
+msgid "Invalid license."
+msgstr "Недействительная лицензия."
+
+#: ../inc/verify.php:262
+msgid "Your license is not active for this URL."
+msgstr "Ваша лицензия не активна для этого URL."
+
+#: ../inc/verify.php:267
+#, php-format
+msgid "This appears to be an invalid license key for %s."
+msgstr "Похоже, это не действующий лицензионный ключ для %s."
+
+#: ../inc/verify.php:272
+msgid "Your license key has reached its activation limit."
+msgstr "Ваш лицензионный ключ достиг предела активаций."
+
+#: ../inc/verify.php:277
+msgid "An error occurred, please try again."
+msgstr "Произошла ошибка, пожалуйста, попробуйте ещё раз."
+
+#: functions/functions.php:59 functions/functions.php:84
+#: functions/functions.php:366
+msgid "GP Hooks"
+msgstr "Хуки GP"
+
+#: functions/functions.php:100
+msgid "wp_head"
+msgstr "wp_head"
+
+#: functions/functions.php:108
+msgid "Before Header"
+msgstr "Перед шапкой"
+
+#: functions/functions.php:116
+msgid "Before Header Content"
+msgstr "Перед содержимым шапки"
+
+#: functions/functions.php:124
+msgid "After Header Content"
+msgstr "После содержимого шапки"
+
+#: functions/functions.php:132
+msgid "After Header"
+msgstr "После шапки"
+
+#: functions/functions.php:140
+msgid "Inside Content Container"
+msgstr "Внутри блока содержимого"
+
+#: functions/functions.php:148
+msgid "Before Content"
+msgstr "Перед содержимым"
+
+#: functions/functions.php:156
+msgid "After Entry Title"
+msgstr "После заголовка элемента"
+
+#: functions/functions.php:164
+msgid "After Content"
+msgstr "После содержимого"
+
+# Long text here could make right dropdown too wide to display.
+#: functions/functions.php:172
+msgid "Before Right Sidebar Content"
+msgstr "Перед сод. правого боковика"
+
+#: functions/functions.php:180
+msgid "After Right Sidebar Content"
+msgstr "После сод. правого боковика"
+
+#: functions/functions.php:188
+msgid "Before Left Sidebar Content"
+msgstr "Перед сод. левого боковика"
+
+#: functions/functions.php:196
+msgid "After Left Sidebar Content"
+msgstr "После сод. левого боковика"
+
+#: functions/functions.php:204
+msgid "Before Footer"
+msgstr "Перед подвалом"
+
+#: functions/functions.php:212
+msgid "After Footer Widgets"
+msgstr "После виджетов подвала"
+
+#: functions/functions.php:220
+msgid "Before Footer Content"
+msgstr "Перед содержимым подвала"
+
+#: functions/functions.php:228
+msgid "After Footer Content"
+msgstr "После содержимого подвала"
+
+#: functions/functions.php:236
+msgid "wp_footer"
+msgstr "wp_footer"
+
+#: functions/functions.php:319
+msgid "Execute PHP"
+msgstr "Исполнять код PHP"
+
+#: functions/functions.php:320
+msgid "Disable Hook"
+msgstr "Отключить хук"
+
+#: functions/functions.php:368
+msgid ""
+"Use these fields to insert anything you like throughout GeneratePress. "
+"Shortcodes are allowed, and you can even use PHP if you check the Execute "
+"PHP checkboxes."
+msgstr ""
+"Вставляйте любые хуки через эти поля средствами GeneratePress. Можно "
+"использовать шорткоды, и даже код PHP, отметив флажки \"Исполнять PHP\"."
+
+#: functions/functions.php:370
+msgid "Show all"
+msgstr "Показать все"
+
+#: functions/functions.php:381
+msgid "Save Hooks"
+msgstr "Сохранить хуки"
+
+#: functions/functions.php:451
+msgid "Hooks saved."
+msgstr "Хуки сохранены."
+
+#: functions/ie.php:59
+msgid "Export GP Hooks"
+msgstr "Экспортировать хуки GP"
+
+#: functions/ie.php:109
+msgid "Warning: This will delete your settings."
+msgstr "Внимание: ваши настройки будут удалены."
+
+#: functions/ie.php:111
+msgid "Delete GP Hooks"
+msgstr "Удалить хуки GP"

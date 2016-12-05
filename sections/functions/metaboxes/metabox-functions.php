@@ -136,7 +136,6 @@ function generate_sections_metabox_scripts( $hook ){
 		$post_type = $screen->id;
 
 		if ( in_array( $post_type, (array) $post_types ) ){
-			wp_enqueue_style( 'generate-style-grid', get_template_directory_uri() . '/css/unsemantic-grid.css', false, GENERATE_VERSION, 'all' );
 			wp_enqueue_style( 'generate-sections-metabox', plugin_dir_url( __FILE__ ) . 'css/generate-sections-metabox.css', false, GENERATE_SECTIONS_VERSION );
 			wp_enqueue_style( 'generate-lc-switch', plugin_dir_url( __FILE__ ) . 'css/lc_switch.css', false, GENERATE_SECTIONS_VERSION );
 			
@@ -155,13 +154,32 @@ function generate_sections_metabox_scripts( $hook ){
 			
 			// special script for dealing with repeating textareas- needs to run AFTER all the tinyMCE init scripts, so make 'editor' a requirement
 			wp_enqueue_script( 'generate-sections-metabox', plugin_dir_url( __FILE__ ) . 'js/generate-sections-metabox.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-mouse', 'jquery-ui-sortable', 'editor', 'media-upload', 'wp-color-picker' ), GENERATE_SECTIONS_VERSION, true );
-			wp_enqueue_script( 'generate-lc-switch', plugin_dir_url( __FILE__ ) . 'js/lc_switch.min.js', array( 'jquery' ), GENERATE_SECTIONS_VERSION, true );
-			wp_add_inline_script( 'generate-lc-switch', 'jQuery(document).ready(function($) { $(".use-sections-switch").lc_switch("","");});' );
-			
+			wp_enqueue_script( 'generate-lc-switch', plugin_dir_url( __FILE__ ) . 'js/lc_switch.js', array( 'jquery' ), GENERATE_SECTIONS_VERSION, true );
+			if ( function_exists( 'wp_add_inline_script' ) ) {
+				wp_add_inline_script( 'generate-lc-switch', 'jQuery(document).ready(function($) { $(".use-sections-switch").lc_switch("","");});' );
+			}
 		}
 	
 	}
 	
+}
+endif;
+
+if ( ! function_exists( 'generate_sections_admin_footer_scripts' ) ) :
+add_action( 'admin_footer','generate_sections_admin_footer_scripts' );
+function generate_sections_admin_footer_scripts()
+{
+	// We don't need this if wp_add_inline_script exists
+	if ( function_exists( 'wp_add_inline_script' ) )
+		return;
+	
+	?>
+	<script>
+		if ( typeof lc_switch !== 'undefined' ) {
+			jQuery(document).ready(function($) { $(".use-sections-switch").lc_switch("","");});
+		}
+	</script>
+	<?php
 }
 endif;
 

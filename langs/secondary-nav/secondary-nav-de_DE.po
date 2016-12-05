@@ -1,0 +1,343 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Secondary Navigation\n"
+"POT-Creation-Date: 2016-11-13 10:49+0100\n"
+"PO-Revision-Date: 2016-11-13 10:50+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/customizer/backgrounds.php:15 functions/customizer/colors.php:16
+#: functions/customizer/spacing.php:16 functions/customizer/typography.php:15
+#: functions/functions.php:105 functions/functions.php:117
+msgid "Secondary Navigation"
+msgstr "Sekundäre Navigation"
+
+#: functions/customizer/backgrounds.php:44
+msgid "Navigation"
+msgstr "Navigation"
+
+#: functions/customizer/backgrounds.php:64
+#: functions/customizer/backgrounds.php:115
+#: functions/customizer/backgrounds.php:166
+#: functions/customizer/backgrounds.php:217
+#: functions/customizer/backgrounds.php:281
+#: functions/customizer/backgrounds.php:332
+#: functions/customizer/backgrounds.php:383
+msgid "Repeat"
+msgstr "Wiederholen"
+
+#: functions/customizer/backgrounds.php:65
+#: functions/customizer/backgrounds.php:116
+#: functions/customizer/backgrounds.php:167
+#: functions/customizer/backgrounds.php:218
+#: functions/customizer/backgrounds.php:282
+#: functions/customizer/backgrounds.php:333
+#: functions/customizer/backgrounds.php:384
+msgid "Repeat x"
+msgstr "Wiederholen x"
+
+#: functions/customizer/backgrounds.php:66
+#: functions/customizer/backgrounds.php:117
+#: functions/customizer/backgrounds.php:168
+#: functions/customizer/backgrounds.php:219
+#: functions/customizer/backgrounds.php:283
+#: functions/customizer/backgrounds.php:334
+#: functions/customizer/backgrounds.php:385
+msgid "Repeat y"
+msgstr "Wiederholen y"
+
+#: functions/customizer/backgrounds.php:67
+#: functions/customizer/backgrounds.php:118
+#: functions/customizer/backgrounds.php:169
+#: functions/customizer/backgrounds.php:220
+#: functions/customizer/backgrounds.php:284
+#: functions/customizer/backgrounds.php:335
+#: functions/customizer/backgrounds.php:386
+msgid "No Repeat"
+msgstr "Keine Wiederholung"
+
+#: functions/customizer/backgrounds.php:95
+msgid "Navigation Item"
+msgstr "Navigationspunkt"
+
+#: functions/customizer/backgrounds.php:146
+msgid "Navigation Item Hover"
+msgstr "bei Mauskontakt"
+
+#: functions/customizer/backgrounds.php:197
+msgid "Navigation Item Current"
+msgstr "aktives Navigationselement"
+
+#: functions/customizer/backgrounds.php:232 functions/customizer/colors.php:96
+msgid "Secondary Sub-Navigation"
+msgstr "Sekundäre Sub-Navigation"
+
+#: functions/customizer/backgrounds.php:261
+msgid "Sub-Navigation Item"
+msgstr "Subnavigation-Element"
+
+#: functions/customizer/backgrounds.php:312
+msgid "Sub-Navigation Item Hover"
+msgstr "aktives Subnavigationselement"
+
+#: functions/customizer/backgrounds.php:363
+msgid "Sub-Navigation Item Current"
+msgstr "aktives Subnavigationselement"
+
+#: functions/customizer/colors.php:28 functions/customizer/colors.php:108
+msgid "Background"
+msgstr "Hintergrund"
+
+#: functions/customizer/colors.php:34 functions/customizer/colors.php:114
+msgid "Text"
+msgstr "Text"
+
+#: functions/customizer/colors.php:40 functions/customizer/colors.php:120
+msgid "Background Hover"
+msgstr "Hintergrund bei Mouse over"
+
+#: functions/customizer/colors.php:46 functions/customizer/colors.php:126
+msgid "Text Hover"
+msgstr "Text bei Mauskontakt"
+
+#: functions/customizer/colors.php:52 functions/customizer/colors.php:132
+msgid "Background Current"
+msgstr "Hintergrund aktuell"
+
+#: functions/customizer/colors.php:58 functions/customizer/colors.php:138
+msgid "Text Current"
+msgstr "Text aktuell"
+
+#: functions/customizer/spacing.php:35
+msgid "Secondary Menu Items"
+msgstr "Sekundäre Menüelemente"
+
+#: functions/customizer/spacing.php:57
+msgid "Left/Right Spacing"
+msgstr "Linker/Rechter Abstand"
+
+#: functions/customizer/spacing.php:80
+msgid "Height"
+msgstr "Höhe"
+
+#: functions/customizer/spacing.php:103
+msgid "Sub-Menu Item Height"
+msgstr "Höhe der sekundären Untermenü-Elemente"
+
+#: functions/customizer/spacing.php:104
+msgid "The top and bottom spacing of sub-menu items."
+msgstr "Der oberen und unteren Abstand der untergeordneten Menüelemente."
+
+#: functions/customizer/typography.php:38
+msgid "Secondary navigation"
+msgstr "Sekundäre Navigation"
+
+#: functions/customizer/typography.php:105
+#: functions/customizer/typography.php:132
+msgid "Font weight"
+msgstr "Schriftschnitt"
+
+#: functions/customizer/typography.php:158
+#: functions/customizer/typography.php:178
+msgid "Text transform"
+msgstr "Text Umwandlung"
+
+#: functions/customizer/typography.php:204
+msgid "Font size"
+msgstr "Schriftgröße"
+
+#: functions/functions.php:10
+msgid "Secondary Menu"
+msgstr "Sekundäres Menü"
+
+#: functions/functions.php:135
+msgid "Mobile Menu Label"
+msgstr "Beschriftung für mobile Navigation"
+
+#: functions/functions.php:162
+msgid "Navigation Layout"
+msgstr "Layout der Navigation"
+
+#: functions/functions.php:165
+msgid "Fluid / Full Width"
+msgstr "Flexible / volle Breite"
+
+#: functions/functions.php:166
+msgid "Contained"
+msgstr "Enthalten"
+
+#: functions/functions.php:194
+msgid "Navigation Position"
+msgstr "Position der Navigation"
+
+#: functions/functions.php:197
+msgid "Below Header"
+msgstr "Unter dem Header"
+
+#: functions/functions.php:198
+msgid "Above Header"
+msgstr "Über dem Header"
+
+#: functions/functions.php:199
+msgid "Float Right"
+msgstr "Float rechts"
+
+#: functions/functions.php:200
+msgid "Left Sidebar"
+msgstr "Linke Seitenleiste"
+
+#: functions/functions.php:201
+msgid "Right Sidebar"
+msgstr "Rechte Seitenleiste"
+
+#: functions/functions.php:202
+msgid "No Navigation"
+msgstr "Keine Navigation"
+
+#: functions/functions.php:230
+msgid "Navigation Alignment"
+msgstr "Ausrichtung der Navigation"
+
+#: functions/functions.php:233
+msgid "Left"
+msgstr "Links"
+
+#: functions/functions.php:234
+msgid "Center"
+msgstr "Mittig"
+
+#: functions/functions.php:235
+msgid "Right"
+msgstr "Rechts"
+
+#: functions/ie.php:17
+msgid "Warning: This will delete your settings."
+msgstr "Warnung. Die Einstellungen werden gelöscht."
+
+#: functions/ie.php:19
+msgid "Delete Secondary Navigation Customizer Settings"
+msgstr "Lösche Einstellungen der sekundären Navigation"
+
+#: functions/ie.php:55
+msgid "Export Secondary Navigation Customizer Settings"
+msgstr "Exportiere Einstellungen der sekundären Navigation"
+
+#~ msgid "Mobile Label"
+#~ msgstr "Beschriftung für mobile Navigation"
+
+#~ msgid "Secondary Navigation Spacing"
+#~ msgstr "Abstände der sekundären Navigation"
+
+#~ msgid "These options control the size of your secondary menu items."
+#~ msgstr "Diese Optionen steuern die Größe Ihrer sekundären Menü-Elemente."
+
+#~ msgid "Secondary Sub-menu Item Height"
+#~ msgstr "Höhe der sekundären Untermenü-Elemente"
+
+#~ msgid "The top and bottom spacing of secondary sub-menu items."
+#~ msgstr ""
+#~ "Der oberen und unteren Abstand der sekundären untergeordneten "
+#~ "Menüelemente."
+
+#~ msgid "Secondary Navigation Colors"
+#~ msgstr "Farben der sekundären Navigation"
+
+#~ msgid "Secondary Sub-Navigation Colors"
+#~ msgstr "Farben der sekundären Subnavigation"
+
+#~ msgid "Secondary Navigation Typography"
+#~ msgstr "Schriftart der sekundären Subnavigation"
+
+#~ msgid "Secondary Background Images"
+#~ msgstr "Sekundäre Hintergrundbilder"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+#~ msgstr ""
+#~ "Neue Version von %1$s verfügbar. <a target=\\“_blank\\“ class=\\“thickbox"
+#~ "\\“ href=\\“%2$s\\“>Details zu Version %3$s anzeigen</a>."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+#~ "\">update now</a>."
+#~ msgstr ""
+#~ "Neue Version von %1$s verfügbar. <a target=\"_blank\" class=\"thickbox\" "
+#~ "href=\"%2$s\">Details zu Version %3$s anzeigen</a> oder <a href=\"%4$s"
+#~ "\">Jetzt updaten</a>."
+
+#~ msgid "You do not have permission to install plugin updates"
+#~ msgstr "Sie haben keine Berechtigung Plugin-Updates zu installieren"
+
+#~ msgid "Error"
+#~ msgstr "Fehler"
+
+#~ msgid "Skip to content"
+#~ msgstr "Direkt zum Inhalt"
+
+#~ msgid ""
+#~ "Want updates served directly to your Dashboard? Activate the email you "
+#~ "purchased your add-ons with here."
+#~ msgstr ""
+#~ "Möchtest Du die Updates direkt auf dem Dashboard? Aktiviere Deine E-Mail "
+#~ "mit der Du bezahlt hast."
+
+#~ msgid "Email"
+#~ msgstr "E-Mail"
+
+#~ msgid "Deactivate Email"
+#~ msgstr "E-Mail deaktivieren"
+
+#~ msgid "Activate Email"
+#~ msgstr "E-Mail aktivieren"
+
+#~ msgid "Save Email"
+#~ msgstr "E-Mail speichern"
+
+#~ msgid "Enable All Updates"
+#~ msgstr "Alle Updates aktivieren"
+
+#~ msgid "Disable Updates"
+#~ msgstr "Updates deaktivieren"
+
+#~ msgid "Enable Updates"
+#~ msgstr "Updates aktivieren"
+
+#~ msgid "Email activation failed. This email does not exist in our records."
+#~ msgstr ""
+#~ "Email-Aktivierung ist fehlgeschlagen. Diese e-Mail ist nicht in unseren "
+#~ "Aufzeichnungen vorhanden."
+
+#~ msgid "Email activated."
+#~ msgstr "E-Mail aktiviert."
+
+#~ msgid "Email deactivated."
+#~ msgstr "E-Mail deaktiviert."
+
+#~ msgid "License failed."
+#~ msgstr "Lizenz ungültig oder nicht vorhanden."
+
+#~ msgid "License activated."
+#~ msgstr "Lizenz aktiviert."
+
+#~ msgid "Licenses activated."
+#~ msgstr "Lizenzen aktiviert."
+
+#~ msgid "Deactivation failed."
+#~ msgstr "Deaktivierung ist fehlgeschlagen."
+
+#~ msgid "License deactivated."
+#~ msgstr "Lizenz deaktiviert."

@@ -21,21 +21,46 @@ function generate_blog_css()
 		generate_blog_get_defaults() 
 	);
 	
-	if ( function_exists( 'generate_spacing_get_defaults' ) ) :
-	
-		$spacing_settings = wp_parse_args( 
-			get_option( 'generate_spacing_settings', array() ), 
-			generate_spacing_get_defaults() 
-		);
-		
-	endif;
-	
 	global $post;
 	
 	// Get disable headline meta
 	$disable_headline = ( isset( $post ) ) ? get_post_meta( $post->ID, '_generate-disable-headline', true ) : '';
 	
 	$return = '';
+	
+	if ( 'false' == $generate_blog_settings['categories'] && 'false' == $generate_blog_settings['comments'] && 'false' == $generate_blog_settings['tags'] ) :
+		$return .= '.blog footer.entry-meta, .archive footer.entry-meta {display:none;}';
+	endif;
+	
+	if ( 'false' == $generate_blog_settings['date'] && 'false' == $generate_blog_settings['author'] && $disable_headline ) :
+		$return .= '.single .entry-header{display:none;}.single .entry-content {margin-top:0;}';
+	endif;
+	
+	if ( 'false' == $generate_blog_settings['date'] && 'false' == $generate_blog_settings['author'] ) :
+		$return .= '.entry-header .entry-meta {display:none;}';
+	endif;
+	
+	if ( function_exists( 'generate_spacing_get_defaults' ) ) :
+		$spacing_settings = wp_parse_args( 
+			get_option( 'generate_spacing_settings', array() ), 
+			generate_spacing_get_defaults() 
+		);
+	endif;
+	
+	$separator = ( function_exists('generate_spacing_get_defaults') ) ? $spacing_settings['separator'] : 20;
+	
+	if ( 'true' == generate_blog_get_masonry() ) {
+		$return .= '.masonry-post .inside-article {margin-left: ' . $separator . 'px}';
+		$return .= '.masonry-container > article {margin-bottom: ' . $separator . 'px;}';
+		$return .= '.masonry-container {margin-left: -' . $separator . 'px;}';
+		$return .= '.page-header {margin-bottom: ' . $separator . 'px;margin-left: ' . $separator . 'px}';
+		$return .= '.separate-containers .site-main > .masonry-load-more {margin-bottom: ' . $separator . 'px;}';
+	}
+	
+	if ( 'false' == $generate_blog_settings['post_image'] ) :
+		$return .= '.post-image {display:none;}';
+	endif;
+	
 	$elements = array(
 		1 => array(
 			'id' => 'date',
@@ -58,33 +83,6 @@ function generate_blog_css()
 			'class' => 'tags-links'
 		)
 	);
-	
-	if ( 'false' == $generate_blog_settings['categories'] && 'false' == $generate_blog_settings['comments'] && 'false' == $generate_blog_settings['tags'] ) :
-		$return .= '.blog footer.entry-meta, .archive footer.entry-meta {display:none;}';
-	endif;
-	
-	if ( 'false' == $generate_blog_settings['date'] && 'false' == $generate_blog_settings['author'] && $disable_headline ) :
-		$return .= '.single .entry-header{display:none;}.single .entry-content {margin-top:0;}';
-	endif;
-	
-	if ( 'false' == $generate_blog_settings['date'] && 'false' == $generate_blog_settings['author'] ) :
-		$return .= '.entry-header .entry-meta {display:none;}';
-	endif;
-	
-	$separator = ( function_exists('generate_spacing_get_defaults') ) ? $spacing_settings['separator'] : 20;
-	$bottom_spacing = ( function_exists('generate_spacing_get_defaults') ) ? $spacing_settings['content_bottom'] : 40;
-	
-	if ( 'true' == generate_blog_get_masonry() ) {
-		$return .= '.no-sidebar .masonry-post .inside-article, .no-sidebar .masonry-enabled .page-header {margin: 0 0 0 ' . $separator . 'px}';
-		$return .= 'body:not(.no-sidebar) .masonry-post .inside-article, body:not(.no-sidebar) .masonry-enabled .page-header {margin: 0 ' . $separator . 'px 0 0}';
-		$return .= '.no-sidebar .masonry-container {margin-left: -' . $separator . 'px;}';
-		$return .= '.separate-containers .site-main > .masonry-load-more, .page-header {margin-bottom: ' . $separator . 'px;margin-right: ' . $separator . 'px}';
-		$return .= '.separate-containers .site-main .masonry-container > article {margin-bottom: ' . $separator . 'px;}';
-	}
-	
-	if ( 'false' == $generate_blog_settings['post_image'] ) :
-		$return .= '.post-image {display:none;}';
-	endif;
 	
 	foreach ( $elements as $element ) {
 		if ( 'false' == $generate_blog_settings[$element['id']] ) :

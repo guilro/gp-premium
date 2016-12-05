@@ -1,0 +1,252 @@
+# Translation by Alexey Chumakov, 2015-2016
+# Feel free to forward any issues or suggestions on translation to Alexey Chumakov
+# (**) comments indicate places for future improvement.
+# Note: Please DO NOT UPDATE this file from .POT until update of functions.php
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Typography\n"
+"POT-Creation-Date: 2016-11-11 14:14+0300\n"
+"PO-Revision-Date: 2016-11-11 14:15+0300\n"
+"Last-Translator: Alexey Chumakov <alex@chumakov.ru>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ../../../gp-premium/typography\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ../inc\n"
+
+#: ../inc/EDD_SL_Plugin_Updater.php:196
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s."
+msgstr "Доступна новая версия %1$s. %2$sПосмотреть подробности %3$s%4$s."
+
+#: ../inc/EDD_SL_Plugin_Updater.php:204
+#, php-format
+msgid ""
+"There is a new version of %1$s available. %2$sView version %3$s details%4$s "
+"or %5$supdate now%6$s."
+msgstr ""
+"Доступна новая версия %1$s. %2$sПосмотреть подробности %3$s%4$s или "
+"%5$sобновить сейчас%6$s."
+
+#: ../inc/EDD_SL_Plugin_Updater.php:358
+msgid "You do not have permission to install plugin updates"
+msgstr "У вас нет прав для установки обновлений плагинов"
+
+#: ../inc/EDD_SL_Plugin_Updater.php:358
+msgid "Error"
+msgstr "Ошибка"
+
+#: ../inc/activation.php:13
+msgid "Add-on deactivated."
+msgstr "Дополнение деактивировано."
+
+#: ../inc/activation.php:17
+msgid "Add-on activated."
+msgstr "Дополнение активировано."
+
+#: ../inc/activation.php:58
+msgid "GP Premium"
+msgstr "Дополнения GP Premium"
+
+#: ../inc/activation.php:66
+msgid "Bulk Actions"
+msgstr "Пакетные операции"
+
+#: ../inc/activation.php:67 ../inc/activation.php:101
+msgid "Activate"
+msgstr "Активировать"
+
+#: ../inc/activation.php:68 ../inc/activation.php:88
+msgid "Deactivate"
+msgstr "Деактивировать"
+
+#: ../inc/activation.php:71
+msgid "Apply"
+msgstr "Применить"
+
+#: ../inc/activation.php:427
+msgid "Enter valid license key for automatic updates."
+msgstr "Для автоматического обновления укажите действующий ключ лицензии."
+
+#: ../inc/verify.php:88
+msgid "License deactivated."
+msgstr "Лицензия деактивирована."
+
+#: ../inc/verify.php:92
+msgid "License activated."
+msgstr "Лицензия активирована."
+
+#: ../inc/verify.php:125
+#, php-format
+msgid "Updates %s"
+msgstr "Обновления %s"
+
+#: ../inc/verify.php:125
+msgid "Help"
+msgstr "Справка"
+
+#: ../inc/verify.php:150
+msgid "License Key"
+msgstr "Лицензионный ключ"
+
+#: ../inc/verify.php:155
+msgid "Update"
+msgstr "Обновить"
+
+#: ../inc/verify.php:244
+#, php-format
+msgid "Your license key expired on %s."
+msgstr "Ваш лицензионный ключ истек %s."
+
+#: ../inc/verify.php:251
+msgid "Your license key has been disabled."
+msgstr "Ваш лицензионный ключ заблокирован."
+
+#: ../inc/verify.php:256
+msgid "Invalid license."
+msgstr "Недействительная лицензия."
+
+#: ../inc/verify.php:262
+msgid "Your license is not active for this URL."
+msgstr "Ваша лицензия не активна для этого URL."
+
+#: ../inc/verify.php:267
+#, php-format
+msgid "This appears to be an invalid license key for %s."
+msgstr "Похоже, это не действующий лицензионный ключ для %s."
+
+#: ../inc/verify.php:272
+msgid "Your license key has reached its activation limit."
+msgstr "Ваш лицензионный ключ достиг предела активаций."
+
+#: ../inc/verify.php:277
+msgid "An error occurred, please try again."
+msgstr "Произошла ошибка, пожалуйста, попробуйте ещё раз."
+
+#: functions/customizer/control.php:27
+msgid "Default fonts"
+msgstr "Шрифты по умолчанию"
+
+#: functions/customizer/control.php:28
+msgid "Google fonts"
+msgstr "Шрифты Google"
+
+#: functions/customizer/control.php:29
+msgid "Font family"
+msgstr "Гарнитура"
+
+#: functions/functions.php:93
+msgid "Typography"
+msgstr "Типографика"
+
+#: functions/functions.php:101 functions/functions.php:124
+msgid "Body"
+msgstr "Тело страницы"
+
+#: functions/functions.php:187 functions/functions.php:354
+#: functions/functions.php:510 functions/functions.php:677
+#: functions/functions.php:772 functions/functions.php:790
+#: functions/functions.php:808 functions/functions.php:1073
+msgid "Font weight"
+msgstr "Насыщенность"
+
+#: functions/functions.php:224 functions/functions.php:391
+#: functions/functions.php:547 functions/functions.php:714
+#: functions/functions.php:776 functions/functions.php:794
+#: functions/functions.php:812 functions/functions.php:1110
+msgid "Text transform"
+msgstr "Эффект"
+
+#: functions/functions.php:254 functions/functions.php:421
+#: functions/functions.php:577 functions/functions.php:744
+#: functions/functions.php:1140
+msgid "Font size"
+msgstr "Размер"
+
+#: functions/functions.php:266
+msgid "Header"
+msgstr "Шапка"
+
+#: functions/functions.php:289
+msgid "Site title"
+msgstr "Заголовок сайта"
+
+#: functions/functions.php:445
+msgid "Site tagline"
+msgstr "Краткое описание сайта"
+
+#: functions/functions.php:589
+msgid "Primary Navigation"
+msgstr "Основное меню"
+
+#: functions/functions.php:612
+msgid "Site navigation"
+msgstr "Меню сайта"
+
+#: functions/functions.php:758
+msgid "Content"
+msgstr "Содержимое"
+
+#: functions/functions.php:768
+msgid "Heading 1 (H1)"
+msgstr "Заголовок 1 (H1)"
+
+#: functions/functions.php:780 functions/functions.php:798
+#: functions/functions.php:816
+msgid "Font-size"
+msgstr "Размер шрифта"
+
+#: functions/functions.php:786
+msgid "Heading 2 (H2)"
+msgstr "Заголовок 2 (H2)"
+
+#: functions/functions.php:804
+msgid "Heading 3 (H3)"
+msgstr "Заголовок 3 (H3)"
+
+#: functions/functions.php:985
+msgid "Widgets"
+msgstr "Виджеты"
+
+#: functions/functions.php:1008
+msgid "Widget titles"
+msgstr "Названия виджетов"
+
+#: functions/functions.php:1164
+msgid "Content font size"
+msgstr "Размер шрифта содержимого"
+
+#: functions/functions.php:1178
+msgid "Footer"
+msgstr "Подвал"
+
+#: functions/functions.php:1201
+msgid "Footer font size"
+msgstr "Размер шрифта подвала"
+
+#: functions/functions.php:1215
+msgid "Mobile"
+msgstr "Мобильный вид"
+
+#: functions/functions.php:1237
+msgid "Site title font size"
+msgstr "Размер шрифта названия сайта"
+
+#: functions/functions.php:1260
+msgid "H1 font size"
+msgstr "Размер шрифта H1"
+
+#: functions/functions.php:1283
+msgid "H2 font size"
+msgstr "Размер шрифта H2"

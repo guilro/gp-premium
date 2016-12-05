@@ -79,7 +79,7 @@ function generate_add_de_meta_box() {
 		if ( 'attachment' !== $type ) {
 			add_meta_box(  
 				'generate_de_meta_box', // $id  
-				__('Disable Elements','generate-disable-elements'), // $title   
+				__('Disable Elements','disable-elements'), // $title   
 				'generate_show_de_meta_box', // $callback  
 				$type, // $page  
 				'side', // $context  
@@ -174,31 +174,31 @@ function generate_show_de_meta_box( $post ) {
  
     <p>
 		<div class="generate_disable_elements">
-			<label for="meta-generate-disable-header" style="display:block;margin-bottom:3px;" title="<?php _e('Header','generate-disable-elements');?>">
+			<label for="meta-generate-disable-header" style="display:block;margin-bottom:3px;" title="<?php _e('Header','disable-elements');?>">
 				<input type="checkbox" name="_generate-disable-header" id="meta-generate-disable-header" value="true" <?php checked( $stored_meta['_generate-disable-header'][0], 'true' ); ?>>
-				<?php _e('Header','generate-disable-elements');?>
+				<?php _e('Header','disable-elements');?>
 			</label>
-			<label for="meta-generate-disable-nav" style="display:block;margin-bottom:3px;" title="<?php _e('Primary Navigation','generate-disable-elements');?>">
+			<label for="meta-generate-disable-nav" style="display:block;margin-bottom:3px;" title="<?php _e('Primary Navigation','disable-elements');?>">
 				<input type="checkbox" name="_generate-disable-nav" id="meta-generate-disable-nav" value="true" <?php checked( $stored_meta['_generate-disable-nav'][0], 'true' ); ?>>
-				<?php _e('Primary Navigation','generate-disable-elements');?>
+				<?php _e('Primary Navigation','disable-elements');?>
 			</label>
 			<?php if ( function_exists( 'generate_secondary_nav_setup' ) ) : ?>
-				<label for="meta-generate-disable-secondary-nav" style="display:block;margin-bottom:3px;" title="<?php _e('Secondary Navigation','generate-disable-elements');?>">
+				<label for="meta-generate-disable-secondary-nav" style="display:block;margin-bottom:3px;" title="<?php _e('Secondary Navigation','disable-elements');?>">
 					<input type="checkbox" name="_generate-disable-secondary-nav" id="meta-generate-disable-secondary-nav" value="true" <?php checked( $stored_meta['_generate-disable-secondary-nav'][0], 'true' ); ?>>
-					<?php _e('Secondary Navigation','generate-disable-elements');?>
+					<?php _e('Secondary Navigation','disable-elements');?>
 				</label>
 			<?php endif; ?>
-			<label for="meta-generate-disable-post-image" style="display:block;margin-bottom:3px;" title="<?php _e('Post Image / Page Header','generate-disable-elements');?>">
+			<label for="meta-generate-disable-post-image" style="display:block;margin-bottom:3px;" title="<?php _e('Post Image / Page Header','disable-elements');?>">
 				<input type="checkbox" name="_generate-disable-post-image" id="meta-generate-disable-post-image" value="true" <?php checked( $stored_meta['_generate-disable-post-image'][0], 'true' ); ?>>
-				<?php _e('Post Image / Page Header','generate-disable-elements');?>
+				<?php _e('Post Image / Page Header','disable-elements');?>
 			</label>
-			<label for="meta-generate-disable-headline" style="display:block;margin-bottom:3px;" title="<?php _e('Content Title','generate-disable-elements');?>">
+			<label for="meta-generate-disable-headline" style="display:block;margin-bottom:3px;" title="<?php _e('Content Title','disable-elements');?>">
 				<input type="checkbox" name="_generate-disable-headline" id="meta-generate-disable-headline" value="true" <?php checked( $stored_meta['_generate-disable-headline'][0], 'true' ); ?>>
-				<?php _e('Content Title','generate-disable-elements');?>
+				<?php _e('Content Title','disable-elements');?>
 			</label>
-			<label for="meta-generate-disable-footer" style="display:block;margin-bottom:3px;" title="<?php _e('Footer','generate-disable-elements');?>">
+			<label for="meta-generate-disable-footer" style="display:block;margin-bottom:3px;" title="<?php _e('Footer','disable-elements');?>">
 				<input type="checkbox" name="_generate-disable-footer" id="meta-generate-disable-footer" value="true" <?php checked( $stored_meta['_generate-disable-footer'][0], 'true' ); ?>>
-				<?php _e('Footer','generate-disable-elements');?>
+				<?php _e('Footer','disable-elements');?>
 			</label>
 		</div>
 	</p>

@@ -1,0 +1,197 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Copyright\n"
+"POT-Creation-Date: 2016-11-13 10:19+0100\n"
+"PO-Revision-Date: 2016-11-13 10:20+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/control.php:23
+msgid "<code>%current_year%</code> to update year automatically."
+msgstr "<code>%current_year%</code> aktualisiert das Jahr automatisch."
+
+#: functions/control.php:24
+msgid "<code>%copy%</code> to include the copyright symbol."
+msgstr "<code>%copy%</code> fügt das Copyright-Symbol automatisch ein."
+
+#: functions/control.php:25
+msgid "HTML is allowed."
+msgstr "HTML ist erlaubt."
+
+#: functions/control.php:26
+msgid "Shortcodes are allowed."
+msgstr "Shortcodes sind erlaubt."
+
+#: functions/functions.php:15
+msgid "Copyright"
+msgstr "Copyright"
+
+#~ msgid ""
+#~ "Use <code>%current_year%</code> to include the current year dynamically."
+#~ msgstr ""
+#~ "Verwende <code>%current_year%</code> um das laufende Jahr dynamisch "
+#~ "einzufügen."
+
+#~ msgid "Use <code>%copy%</code> to include the copyright symbol."
+#~ msgstr "Verwende <code>%copy%</code> um das Copyright-Symbol anzuzeigen."
+
+#~ msgid "Save Copyright"
+#~ msgstr "Copyright speichern"
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a>."
+#~ msgstr ""
+#~ "Es ist eine neue Version von %1$sverfügbar. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">Zeige Details der Version %3$s </a>."
+
+#~ msgid ""
+#~ "There is a new version of %1$s available. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">View version %3$s details</a> or <a href=\"%4$s"
+#~ "\">update now</a>."
+#~ msgstr ""
+#~ "Es ist eine neue Version von %1$s verfügbar. <a target=\"_blank\" class="
+#~ "\"thickbox\" href=\"%2$s\">Zeige Details zu Version %3$s </a> or <a href="
+#~ "\"%4$s\">aktualisiere jetzt.</a>."
+
+#~ msgid "You do not have permission to install plugin updates"
+#~ msgstr "Sie haben keine Berechtigung Plugin-Updates zu installieren"
+
+#~ msgid "Error"
+#~ msgstr "Fehler"
+
+#~ msgid ""
+#~ "Want updates served directly to your Dashboard? Activate the email you "
+#~ "purchased your add-ons with here."
+#~ msgstr ""
+#~ "Möchtest Du die Updates direkt auf dem Dashboard? Aktiviere Deine E-Mail "
+#~ "mit der Du bezahlt hast."
+
+#~ msgid "Email"
+#~ msgstr "E-Mail"
+
+#~ msgid "Deactivate Email"
+#~ msgstr "E-Mail deaktivieren"
+
+#~ msgid "Activate Email"
+#~ msgstr "E-Mail aktivieren"
+
+#~ msgid "Save Email"
+#~ msgstr "E-Mail speichern"
+
+#~ msgid "Enable All Updates"
+#~ msgstr "Alle Updates aktivieren"
+
+#~ msgid "Disable Updates"
+#~ msgstr "Updates deaktivieren"
+
+#~ msgid "Enable Updates"
+#~ msgstr "Updates aktivieren"
+
+#~ msgid "Email activation failed. This email does not exist in our records."
+#~ msgstr ""
+#~ "Email-Aktivierung ist fehlgeschlagen. Diese e-Mail ist nicht in unseren "
+#~ "Aufzeichnungen vorhanden."
+
+#~ msgid "Email activated."
+#~ msgstr "E-Mail aktiviert."
+
+#~ msgid "Email deactivated."
+#~ msgstr "E-Mail deaktiviert."
+
+#~ msgid "License failed."
+#~ msgstr "Lizenz ungültig oder nicht vorhanden."
+
+#~ msgid "License activated."
+#~ msgstr "Lizenz aktiviert."
+
+#~ msgid "Licenses activated."
+#~ msgstr "Lizenzen aktiviert."
+
+#~ msgid "Deactivation failed."
+#~ msgstr "Deaktivierung ist fehlgeschlagen."
+
+#~ msgid "License deactivated."
+#~ msgstr "Lizenz deaktiviert."
+
+#~ msgid "Add a custom copyright line."
+#~ msgstr "Fügen Sie eine benutzerdefinierte copyright-Zeile ein."
+
+#~ msgid "verified"
+#~ msgstr "bestätigt"
+
+#~ msgid "Deactivate"
+#~ msgstr "Deaktivieren"
+
+#~ msgid "unverified"
+#~ msgstr "Ungeprüft"
+
+#~ msgid "Activate"
+#~ msgstr "Aktivieren"
+
+#~ msgid "Copyright Installed"
+#~ msgstr "Copyright installiert"
+
+#~ msgid "Please enter your license key in order to use this plugin."
+#~ msgstr ""
+#~ "Bitte geben Sie Ihren Lizenzschlüssel ein um das Plugin zu installieren."
+
+#~ msgid "Deactivate License"
+#~ msgstr "Lizenz deaktivieren"
+
+#~ msgid "active"
+#~ msgstr "aktiv"
+
+#~ msgid "Activate License"
+#~ msgstr "Lizenz aktivieren"
+
+#~ msgid "inactive"
+#~ msgstr "inaktiv"
+
+#~ msgid "Generate Copyright License Key"
+#~ msgstr "Copyright-Lizenz-Schlüssel generieren"
+
+#~ msgid ""
+#~ "Activate your addons by entering the email you purchased them with below. "
+#~ "Save and verify, then your purchased addons will appear below for "
+#~ "activation."
+#~ msgstr ""
+#~ "Aktivieren Sie Ihre Addons durch Eingabe der e-Mail, die Sie beim Kauf "
+#~ "genutzt haben. Speichern Sie zur Überprüfung und anschließend stehen die "
+#~ "gekauften Addons zur Verfügung."
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "Action"
+#~ msgstr "Aktion"
+
+#~ msgid "Refresh"
+#~ msgstr "Aktualisieren"
+
+#~ msgid "Verify Email"
+#~ msgstr "E-Mail bestätigen"
+
+#~ msgid "Activate All"
+#~ msgstr "Alle aktivieren"
+
+#~ msgid "Product"
+#~ msgstr "Produkt"
+
+#~ msgid "Version"
+#~ msgstr "Version"
+
+#~ msgid "Once Every 3 Days"
+#~ msgstr "Einmal alle 3 Tage"

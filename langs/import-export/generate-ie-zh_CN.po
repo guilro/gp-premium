@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Generate Import Export\n"
+"POT-Creation-Date: 2016-10-25 12:05-0700\n"
+"PO-Revision-Date: 2016-10-25 12:06-0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/functions.php:11
+msgid "Import / Export"
+msgstr "导入/导出"
+
+#: functions/functions.php:13
+#, php-format
+msgid ""
+"<strong>Export</strong> your settings set in the <a href=\"%s\">Customizer</"
+"a>."
+msgstr "<strong>导出</strong>在<a href=\"%s\">自定义</a>中所做的设置"
+
+#: functions/functions.php:18
+msgid "Export Default Customizer Settings"
+msgstr "导出默认自定义设置"
+
+#: functions/functions.php:26
+msgid ""
+"<strong>Import</strong> your settings by uploading your exported .json file."
+msgstr "通过上传已经导出的.json文件<strong>导入</strong>设置 "
+
+#: functions/functions.php:34
+msgid "Import Settings"
+msgstr "导入设置"
+
+#: functions/functions.php:98
+msgid "Please upload a valid .json file"
+msgstr "请上传可用的.json文件"
+
+#: functions/functions.php:104
+msgid "Please upload a file to import"
+msgstr "请上传文件以导入设置"
